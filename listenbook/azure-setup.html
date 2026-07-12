@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ListenBook — Premium voice: free Azure key</title>
+  <style>
+    body{max-width:800px;margin:40px auto;padding:0 16px;
+         font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.6;color:#1c1c1e}
+    h1,h2{line-height:1.25}
+    table{border-collapse:collapse;width:100%;margin:1em 0}
+    th,td{border:1px solid #ccc;padding:8px;text-align:left;vertical-align:top}
+    th{background:#f2f2f7}
+    code{background:#f2f2f7;padding:2px 4px;border-radius:4px}
+    blockquote{border-left:4px solid #d1d1d6;margin:1em 0;padding:.5em 1em;
+               background:#f9f9fb;color:#3a3a3c}
+    a{color:#0a66c2}
+    img{max-width:100%;border:1px solid #d1d1d6;border-radius:8px;margin:.5em 0}
+    .warn{border-left:4px solid #ff9f0a;background:#fff8ec;padding:.5em 1em;margin:1em 0}
+    .lang{font-size:.9em;color:#6e6e73}
+    footer{margin-top:48px;padding-top:16px;border-top:1px solid #d1d1d6;
+           font-size:.9em;color:#6e6e73}
+  </style>
+</head>
+<body>
+  <main>
+<p class="lang"><strong>EN</strong> · <a href="azure-setup.ru.html">RU</a> · <a href="azure-setup.es.html">ES</a></p>
+<h1>Premium voice: your free Azure key</h1>
+<p>The premium voice <strong>Dmitry</strong> in ListenBook uses your own
+<strong>free</strong> Microsoft Azure key (Free F0 tier: ~500,000 characters per month —
+about one novel). The key is stored <strong>only on your device</strong> (in the Keychain)
+and never leaves it except for synthesis requests to Azure. Generated chapters stay
+in your library forever and play offline.</p>
+<p><strong>You'll need:</strong> an email address and about 10 minutes. Microsoft may ask for
+a bank card to verify your identity — you won't be charged; the Free F0 tier is free
+and doesn't expire.</p>
+
+<h2>Step 1. Create a free Azure account</h2>
+<p>Open <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, press
+<strong>Try Azure for free</strong>, and sign in with any Microsoft account (or create one),
+following the sign-up prompts. New accounts also get $200 of credit for 30 days —
+not needed for this: Free F0 is free on its own.</p>
+<img src="img/azure/01-azure-signup.png" alt="Azure free account sign-up page">
+
+<h2>Step 2. Create a "Speech service" resource (Free F0 tier)</h2>
+<div class="warn"><strong>Important:</strong> create the classic
+<strong>"Speech service"</strong> resource. Do not create an "AI Foundry" resource —
+Foundry has <strong>no free tier</strong>; it uses the paid S0 tier from the first request.</div>
+<p>The fast path is the <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices">direct
+link to the creation form</a>. Or manually: <a href="https://portal.azure.com">portal.azure.com</a> →
+<strong>Create a resource</strong> → search for <strong>Speech service</strong>.</p>
+<!-- screenshot pending (after a live walkthrough): <img src="img/azure/02-create-resource-search.png" alt="Searching for Speech service in the Azure Marketplace"> -->
+<p>In the creation form:</p>
+<ul>
+  <li><strong>Resource group</strong> — "Create new", any name (e.g. <code>listenbook</code>);</li>
+  <li><strong>Region</strong> — the closest to you (e.g. <code>East US</code>). <strong>Remember it</strong> — the app needs it;</li>
+  <li><strong>Name</strong> — any available name;</li>
+  <li><strong>Pricing tier</strong> — must be <strong>Free F0</strong>.</li>
+</ul>
+<p>Press <strong>Review + create</strong> → <strong>Create</strong> and wait for "Your deployment is complete".</p>
+<!-- screenshot pending: <img src="img/azure/03-create-speech-form.png" alt="Speech service creation form with the Free F0 tier"> -->
+<!-- screenshot pending: <img src="img/azure/04-deployment-complete.png" alt="Deployment complete"> -->
+
+<h2>Step 3. Copy Key 1 and Region</h2>
+<p>Press <strong>Go to resource</strong>, then in the <strong>Resource Management</strong>
+section on the left open <strong>Keys and Endpoint</strong>. Copy <strong>Key 1</strong>
+(the copy button next to the field) and note the <strong>Location/Region</strong>
+(e.g. <code>eastus</code>).</p>
+<!-- screenshot pending: <img src="img/azure/05-keys-and-endpoint.png" alt="Keys and Endpoint page"> -->
+<blockquote>Don't share the key with anyone. If it leaks, the same page has a
+Regenerate button.</blockquote>
+
+<h2>Step 4. Paste the key into ListenBook</h2>
+<p>In the app: <strong>Settings → Cloud voice (beta)</strong> → paste the key and region →
+<strong>Verify and save</strong>. A green "Key works" will appear — done: when importing a
+text book, choose the "Dmitry (cloud)" voice.</p>
+<!-- screenshot pending: <img src="img/azure/06-app-settings.png" alt="ListenBook settings screen showing the 'Key works' status"> -->
+
+<h2>Troubleshooting</h2>
+<table>
+  <tr><th>Message</th><th>Cause and fix</th></tr>
+  <tr><td>Invalid key or region</td><td>The key wasn't copied in full, or the region doesn't
+      match the resource's region. The region is written as one lowercase word:
+      <code>eastus</code>, not "East US".</td></tr>
+  <tr><td>Monthly free quota is used up</td><td>The F0 tier gives ~500,000 characters per month.
+      It resets next month, or continue with the free local voice.</td></tr>
+  <tr><td>Too many requests</td><td>The free tier allows at most 20 requests per minute.
+      The app waits and resumes automatically; this is normal for long books.</td></tr>
+  <tr><td>Connection failed</td><td>Check your internet connection and the region.</td></tr>
+</table>
+  </main>
+  <footer>
+    <p>Guide verified: July 2026. Microsoft may change Azure tier limits —
+    current values: <a href="https://azure.microsoft.com/pricing/details/speech/">Azure Speech pricing page</a>.</p>
+    <p><a href="index.html">← ListenBook</a> · OWN PLACE LLC · <a href="mailto:contact@ownplace.net">contact@ownplace.net</a></p>
+  </footer>
+</body>
+</html>
