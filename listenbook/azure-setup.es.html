@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ListenBook — Voz premium: clave gratuita de Azure</title>
+  <style>
+    body{max-width:800px;margin:40px auto;padding:0 16px;
+         font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+         line-height:1.6;color:#1c1c1e}
+    h1,h2{line-height:1.25}
+    table{border-collapse:collapse;width:100%;margin:1em 0}
+    th,td{border:1px solid #ccc;padding:8px;text-align:left;vertical-align:top}
+    th{background:#f2f2f7}
+    code{background:#f2f2f7;padding:2px 4px;border-radius:4px}
+    blockquote{border-left:4px solid #d1d1d6;margin:1em 0;padding:.5em 1em;
+               background:#f9f9fb;color:#3a3a3c}
+    a{color:#0a66c2}
+    img{max-width:100%;border:1px solid #d1d1d6;border-radius:8px;margin:.5em 0}
+    .warn{border-left:4px solid #ff9f0a;background:#fff8ec;padding:.5em 1em;margin:1em 0}
+    .lang{font-size:.9em;color:#6e6e73}
+    footer{margin-top:48px;padding-top:16px;border-top:1px solid #d1d1d6;
+           font-size:.9em;color:#6e6e73}
+  </style>
+</head>
+<body>
+  <main>
+<p class="lang"><a href="azure-setup.html">EN</a> · <a href="azure-setup.ru.html">RU</a> · <strong>ES</strong></p>
+<h1>Voz premium: tu clave gratuita de Azure</h1>
+<p>La voz premium <strong>Dmitry</strong> de ListenBook usa tu propia clave
+<strong>gratuita</strong> de Microsoft Azure (nivel Free F0: ~500 000 caracteres al mes —
+aproximadamente una novela). La clave se guarda <strong>solo en tu dispositivo</strong>
+(en el Llavero) y no sale de él salvo para las solicitudes de síntesis a Azure.
+Los capítulos generados permanecen en tu biblioteca para siempre y se reproducen
+sin conexión.</p>
+<p><strong>Necesitarás:</strong> un correo electrónico y unos 10 minutos. Microsoft puede
+pedir una tarjeta bancaria para verificar tu identidad — no se te cobrará; el nivel
+Free F0 es gratuito y no caduca.</p>
+
+<h2>Paso 1. Crea una cuenta gratuita de Azure</h2>
+<p>Abre <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, pulsa
+<strong>Try Azure for free</strong> e inicia sesión con cualquier cuenta de Microsoft
+(o crea una), siguiendo las indicaciones de registro. Las cuentas nuevas también reciben
+$200 de crédito por 30 días — no hace falta para esto: Free F0 es gratuito por sí mismo.</p>
+<img src="img/azure/01-azure-signup.png" alt="Página de creación de cuenta gratuita de Azure">
+
+<h2>Paso 2. Crea un recurso "Speech service" (nivel Free F0)</h2>
+<div class="warn"><strong>Importante:</strong> crea el recurso clásico
+<strong>"Speech service"</strong>. No crees un recurso "AI Foundry": Foundry
+<strong>no tiene nivel gratuito</strong>; usa el nivel de pago S0 desde la primera solicitud.</div>
+<p>El camino rápido es el <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices">enlace
+directo al formulario de creación</a>. O manualmente: <a href="https://portal.azure.com">portal.azure.com</a> →
+<strong>Create a resource</strong> → busca <strong>Speech service</strong>.</p>
+<!-- screenshot pending (tras una prueba en vivo): <img src="img/azure/02-create-resource-search.png" alt="Búsqueda de Speech service en Azure Marketplace"> -->
+<p>En el formulario de creación:</p>
+<ul>
+  <li><strong>Resource group</strong> — "Create new", cualquier nombre (p. ej. <code>listenbook</code>);</li>
+  <li><strong>Region</strong> — la más cercana a ti (p. ej. <code>East US</code>). <strong>Recuérdala</strong> — la app la necesita;</li>
+  <li><strong>Name</strong> — cualquier nombre libre;</li>
+  <li><strong>Pricing tier</strong> — obligatoriamente <strong>Free F0</strong>.</li>
+</ul>
+<p>Pulsa <strong>Review + create</strong> → <strong>Create</strong> y espera a "Your deployment is complete".</p>
+<!-- screenshot pending: <img src="img/azure/03-create-speech-form.png" alt="Formulario de creación de Speech service con el nivel Free F0"> -->
+<!-- screenshot pending: <img src="img/azure/04-deployment-complete.png" alt="Implementación completada"> -->
+
+<h2>Paso 3. Copia Key 1 y Region</h2>
+<p>Pulsa <strong>Go to resource</strong>, y en la sección <strong>Resource Management</strong>
+de la izquierda abre <strong>Keys and Endpoint</strong>. Copia <strong>Key 1</strong>
+(el botón de copiar junto al campo) y anota <strong>Location/Region</strong>
+(p. ej. <code>eastus</code>).</p>
+<!-- screenshot pending: <img src="img/azure/05-keys-and-endpoint.png" alt="Página Keys and Endpoint"> -->
+<blockquote>No compartas la clave con nadie. Si se filtra, en la misma página hay un
+botón Regenerate.</blockquote>
+
+<h2>Paso 4. Pega la clave en ListenBook</h2>
+<p>En la app: <strong>Ajustes → Voz en la nube (beta)</strong> → pega la clave y la región →
+<strong>Verificar y guardar</strong>. Aparecerá un "La clave funciona" en verde — listo:
+al importar un libro de texto, elige la voz "Dmitry (nube)".</p>
+<!-- screenshot pending: <img src="img/azure/06-app-settings.png" alt="Pantalla de ajustes de ListenBook con el estado 'La clave funciona'"> -->
+
+<h2>Si algo no funciona</h2>
+<table>
+  <tr><th>Mensaje</th><th>Causa y solución</th></tr>
+  <tr><td>Clave o región no válida</td><td>La clave no se copió por completo, o la región
+      no coincide con la del recurso. La región se escribe en minúsculas y sin espacios:
+      <code>eastus</code>, no "East US".</td></tr>
+  <tr><td>Cuota gratuita mensual agotada</td><td>El nivel F0 ofrece ~500 000 caracteres al mes.
+      Se restablece el mes siguiente, o continúa con la voz local gratuita.</td></tr>
+  <tr><td>Demasiadas solicitudes</td><td>El nivel gratuito permite un máximo de 20 solicitudes
+      por minuto. La app espera y continúa sola; es normal en libros largos.</td></tr>
+  <tr><td>Error de conexión</td><td>Comprueba tu conexión a internet y la región.</td></tr>
+</table>
+  </main>
+  <footer>
+    <p>Guía verificada: julio de 2026. Microsoft puede cambiar los límites del nivel Azure —
+    valores actuales: <a href="https://azure.microsoft.com/pricing/details/speech/">página de precios de Azure Speech</a>.</p>
+    <p><a href="index.html">← ListenBook</a> · OWN PLACE LLC · <a href="mailto:contact@ownplace.net">contact@ownplace.net</a></p>
+  </footer>
+</body>
+</html>
