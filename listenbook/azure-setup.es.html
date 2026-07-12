@@ -33,9 +33,9 @@ aproximadamente una novela). La clave se guarda <strong>solo en tu dispositivo</
 (en el Llavero) y no sale de él salvo para las solicitudes de síntesis a Azure.
 Los capítulos generados permanecen en tu biblioteca para siempre y se reproducen
 sin conexión.</p>
-<p><strong>Necesitarás:</strong> un correo electrónico y unos 10 minutos. Microsoft puede
-pedir una tarjeta bancaria para verificar tu identidad — no se te cobrará; el nivel
-Free F0 es gratuito y no caduca.</p>
+<p><strong>Necesitarás:</strong> un correo electrónico, una tarjeta bancaria (solo para
+verificar tu identidad — no se te cobrará y no hay pagos automáticos) y unos 10 minutos.
+El nivel Free F0 es gratuito y no caduca.</p>
 
 <h2>Paso 1. Crea una cuenta gratuita de Azure</h2>
 <p>Abre <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, pulsa
@@ -49,9 +49,12 @@ $200 de crédito por 30 días — no hace falta para esto: Free F0 es gratuito p
 <strong>"Speech service"</strong>. No crees un recurso "AI Foundry": Foundry
 <strong>no tiene nivel gratuito</strong>; usa el nivel de pago S0 desde la primera solicitud.</div>
 <p>El camino rápido es el <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices">enlace
-directo al formulario de creación</a>. O manualmente: <a href="https://portal.azure.com">portal.azure.com</a> →
-<strong>Create a resource</strong> → busca <strong>Speech service</strong>.</p>
-<!-- screenshot pending (tras una prueba en vivo): <img src="img/azure/02-create-resource-search.png" alt="Búsqueda de Speech service en Azure Marketplace"> -->
+directo al formulario de creación</a>. O manualmente: en <a href="https://portal.azure.com">portal.azure.com</a>,
+escribe <strong>Speech services</strong> en la <strong>barra de búsqueda superior</strong>,
+elige el servicio "Speech services" en los resultados y pulsa <strong>+&nbsp;Create</strong>.
+(No busques a través de "Create a resource" → Marketplace: ahí aparecen productos de pago
+de terceros y el "Speech service" clásico no está entre ellos.)</p>
+<img src="img/azure/02-portal-search.png" alt="Búsqueda superior del portal de Azure: servicio Speech services">
 <p>En el formulario de creación:</p>
 <ul>
   <li><strong>Resource group</strong> — "Create new", cualquier nombre (p. ej. <code>listenbook</code>);</li>
@@ -60,15 +63,16 @@ directo al formulario de creación</a>. O manualmente: <a href="https://portal.a
   <li><strong>Pricing tier</strong> — obligatoriamente <strong>Free F0</strong>.</li>
 </ul>
 <p>Pulsa <strong>Review + create</strong> → <strong>Create</strong> y espera a "Your deployment is complete".</p>
-<!-- screenshot pending: <img src="img/azure/03-create-speech-form.png" alt="Formulario de creación de Speech service con el nivel Free F0"> -->
-<!-- screenshot pending: <img src="img/azure/04-deployment-complete.png" alt="Implementación completada"> -->
+<img src="img/azure/03-create-speech-form.png" alt="Formulario de creación de Speech service con el nivel Free F0">
+<img src="img/azure/04-deployment-complete.png" alt="Implementación completada">
 
 <h2>Paso 3. Copia Key 1 y Region</h2>
-<p>Pulsa <strong>Go to resource</strong>, y en la sección <strong>Resource Management</strong>
-de la izquierda abre <strong>Keys and Endpoint</strong>. Copia <strong>Key 1</strong>
-(el botón de copiar junto al campo) y anota <strong>Location/Region</strong>
-(p. ej. <code>eastus</code>).</p>
-<!-- screenshot pending: <img src="img/azure/05-keys-and-endpoint.png" alt="Página Keys and Endpoint"> -->
+<p>Pulsa <strong>Go to resource</strong> — la sección <strong>Keys and endpoint</strong> se ve
+directamente en la página del recurso (también está disponible a la izquierda:
+<strong>Resource Management → Keys and Endpoint</strong>). Copia <strong>KEY 1</strong> con el
+botón de copiar junto al campo (no hace falta revelar la clave) y anota
+<strong>Location/Region</strong> (p. ej. <code>eastus</code>).</p>
+<img src="img/azure/05-keys-and-endpoint.png" alt="Sección Keys and endpoint: KEY 1 y Location/Region">
 <blockquote>No compartas la clave con nadie. Si se filtra, en la misma página hay un
 botón Regenerate.</blockquote>
 
@@ -76,7 +80,7 @@ botón Regenerate.</blockquote>
 <p>En la app: <strong>Ajustes → Voz en la nube (beta)</strong> → pega la clave y la región →
 <strong>Verificar y guardar</strong>. Aparecerá un "La clave funciona" en verde — listo:
 al importar un libro de texto, elige la voz "Dmitry (nube)".</p>
-<!-- screenshot pending: <img src="img/azure/06-app-settings.png" alt="Pantalla de ajustes de ListenBook con el estado 'La clave funciona'"> -->
+<img src="img/azure/06-app-settings.png" alt="Pantalla Voz en la nube de ListenBook: campos de clave y región">
 
 <h2>Si algo no funciona</h2>
 <table>

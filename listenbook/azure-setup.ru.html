@@ -32,8 +32,8 @@
 примерно один роман). Ключ хранится <strong>только на вашем устройстве</strong> (в Keychain)
 и никуда не передаётся, кроме запросов синтеза к Azure. Озвученные главы остаются
 в библиотеке навсегда и слушаются офлайн.</p>
-<p><strong>Понадобится:</strong> email, около 10 минут. Microsoft может попросить банковскую
-карту для подтверждения личности — деньги при этом не списываются, а тариф Free F0
+<p><strong>Понадобится:</strong> email, банковская карта (только для подтверждения личности —
+деньги не списываются, автоматических платежей нет) и около 10 минут. Тариф Free F0
 бесплатный без срока действия.</p>
 
 <h2>Шаг 1. Создайте бесплатный аккаунт Azure</h2>
@@ -48,9 +48,12 @@
 <strong>«Speech service»</strong>. Не создавайте ресурс «AI Foundry» — у Foundry
 <strong>нет бесплатного тарифа</strong>, там платный S0 с первого запроса.</div>
 <p>Быстрый путь — <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices">прямая
-ссылка на форму создания</a>. Или вручную: <a href="https://portal.azure.com">portal.azure.com</a> →
-<strong>Create a resource</strong> → в поиске наберите <strong>Speech service</strong>.</p>
-<!-- screenshot pending (после живого прохода): <img src="img/azure/02-create-resource-search.png" alt="Поиск Speech service в Azure Marketplace"> -->
+ссылка на форму создания</a>. Или вручную: на <a href="https://portal.azure.com">portal.azure.com</a>
+в <strong>верхней строке поиска</strong> наберите <strong>Speech services</strong> и выберите сервис
+«Speech services» в результатах, затем нажмите <strong>+&nbsp;Create</strong>.
+(Не ищите через «Create a resource» → Marketplace: там показываются сторонние платные
+продукты, а классического «Speech service» среди них нет.)</p>
+<img src="img/azure/02-portal-search.png" alt="Верхний поиск портала Azure: сервис Speech services">
 <p>В форме создания:</p>
 <ul>
   <li><strong>Resource group</strong> — «Create new», любое имя (например, <code>listenbook</code>);</li>
@@ -59,14 +62,15 @@
   <li><strong>Pricing tier</strong> — обязательно <strong>Free F0</strong>.</li>
 </ul>
 <p>Нажмите <strong>Review + create</strong> → <strong>Create</strong> и дождитесь «Your deployment is complete».</p>
-<!-- screenshot pending: <img src="img/azure/03-create-speech-form.png" alt="Форма создания Speech service с тарифом Free F0"> -->
-<!-- screenshot pending: <img src="img/azure/04-deployment-complete.png" alt="Деплой завершён"> -->
+<img src="img/azure/03-create-speech-form.png" alt="Форма создания Speech service с тарифом Free F0">
+<img src="img/azure/04-deployment-complete.png" alt="Деплой завершён">
 
 <h2>Шаг 3. Скопируйте Key 1 и Region</h2>
-<p>Нажмите <strong>Go to resource</strong>, слева в разделе <strong>Resource Management</strong>
-откройте <strong>Keys and Endpoint</strong>. Скопируйте <strong>Key 1</strong> (кнопка копирования
-справа от поля) и запомните <strong>Location/Region</strong> (например, <code>eastus</code>).</p>
-<!-- screenshot pending: <img src="img/azure/05-keys-and-endpoint.png" alt="Страница Keys and Endpoint"> -->
+<p>Нажмите <strong>Go to resource</strong> — секция <strong>Keys and endpoint</strong> видна прямо
+на странице ресурса (она же доступна слева: <strong>Resource Management → Keys and Endpoint</strong>).
+Скопируйте <strong>KEY 1</strong> кнопкой копирования справа от поля (раскрывать ключ не обязательно)
+и запомните <strong>Location/Region</strong> (например, <code>eastus</code>).</p>
+<img src="img/azure/05-keys-and-endpoint.png" alt="Секция Keys and endpoint: KEY 1 и Location/Region">
 <blockquote>Никому не передавайте ключ. Если ключ «засветился» — на той же странице
 есть кнопка Regenerate.</blockquote>
 
@@ -74,7 +78,7 @@
 <p>В приложении: <strong>Настройки → Облачный голос (бета)</strong> → вставьте ключ и регион →
 <strong>Проверить и сохранить</strong>. Появится зелёное «Ключ работает» — готово: при импорте
 текстовой книги выбирайте голос «Дмитрий (облако)».</p>
-<!-- screenshot pending: <img src="img/azure/06-app-settings.png" alt="Экран настроек ListenBook со статусом «Ключ работает»"> -->
+<img src="img/azure/06-app-settings.png" alt="Экран «Облачный голос» в ListenBook: поля ключа и региона">
 
 <h2>Если что-то не работает</h2>
 <table>

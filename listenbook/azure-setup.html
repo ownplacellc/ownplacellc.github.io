@@ -32,9 +32,9 @@
 about one novel). The key is stored <strong>only on your device</strong> (in the Keychain)
 and never leaves it except for synthesis requests to Azure. Generated chapters stay
 in your library forever and play offline.</p>
-<p><strong>You'll need:</strong> an email address and about 10 minutes. Microsoft may ask for
-a bank card to verify your identity — you won't be charged; the Free F0 tier is free
-and doesn't expire.</p>
+<p><strong>You'll need:</strong> an email address, a bank card (identity verification only —
+you won't be charged, and there are no automatic payments), and about 10 minutes.
+The Free F0 tier is free and doesn't expire.</p>
 
 <h2>Step 1. Create a free Azure account</h2>
 <p>Open <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, press
@@ -48,9 +48,12 @@ not needed for this: Free F0 is free on its own.</p>
 <strong>"Speech service"</strong> resource. Do not create an "AI Foundry" resource —
 Foundry has <strong>no free tier</strong>; it uses the paid S0 tier from the first request.</div>
 <p>The fast path is the <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices">direct
-link to the creation form</a>. Or manually: <a href="https://portal.azure.com">portal.azure.com</a> →
-<strong>Create a resource</strong> → search for <strong>Speech service</strong>.</p>
-<!-- screenshot pending (after a live walkthrough): <img src="img/azure/02-create-resource-search.png" alt="Searching for Speech service in the Azure Marketplace"> -->
+link to the creation form</a>. Or manually: on <a href="https://portal.azure.com">portal.azure.com</a>,
+type <strong>Speech services</strong> in the <strong>top search bar</strong> and pick the
+"Speech services" service in the results, then press <strong>+&nbsp;Create</strong>.
+(Don't search via "Create a resource" → Marketplace: it shows third-party paid
+products, and the classic "Speech service" isn't among them.)</p>
+<img src="img/azure/02-portal-search.png" alt="Azure portal top search: Speech services service">
 <p>In the creation form:</p>
 <ul>
   <li><strong>Resource group</strong> — "Create new", any name (e.g. <code>listenbook</code>);</li>
@@ -59,15 +62,16 @@ link to the creation form</a>. Or manually: <a href="https://portal.azure.com">p
   <li><strong>Pricing tier</strong> — must be <strong>Free F0</strong>.</li>
 </ul>
 <p>Press <strong>Review + create</strong> → <strong>Create</strong> and wait for "Your deployment is complete".</p>
-<!-- screenshot pending: <img src="img/azure/03-create-speech-form.png" alt="Speech service creation form with the Free F0 tier"> -->
-<!-- screenshot pending: <img src="img/azure/04-deployment-complete.png" alt="Deployment complete"> -->
+<img src="img/azure/03-create-speech-form.png" alt="Speech service creation form with the Free F0 tier">
+<img src="img/azure/04-deployment-complete.png" alt="Deployment complete">
 
 <h2>Step 3. Copy Key 1 and Region</h2>
-<p>Press <strong>Go to resource</strong>, then in the <strong>Resource Management</strong>
-section on the left open <strong>Keys and Endpoint</strong>. Copy <strong>Key 1</strong>
-(the copy button next to the field) and note the <strong>Location/Region</strong>
-(e.g. <code>eastus</code>).</p>
-<!-- screenshot pending: <img src="img/azure/05-keys-and-endpoint.png" alt="Keys and Endpoint page"> -->
+<p>Press <strong>Go to resource</strong> — the <strong>Keys and endpoint</strong> section is
+visible right on the resource page (it's also available on the left:
+<strong>Resource Management → Keys and Endpoint</strong>). Copy <strong>KEY 1</strong> with the
+copy button next to the field (no need to reveal the key) and note the
+<strong>Location/Region</strong> (e.g. <code>eastus</code>).</p>
+<img src="img/azure/05-keys-and-endpoint.png" alt="Keys and endpoint section: KEY 1 and Location/Region">
 <blockquote>Don't share the key with anyone. If it leaks, the same page has a
 Regenerate button.</blockquote>
 
@@ -75,7 +79,7 @@ Regenerate button.</blockquote>
 <p>In the app: <strong>Settings → Cloud voice (beta)</strong> → paste the key and region →
 <strong>Verify and save</strong>. A green "Key works" will appear — done: when importing a
 text book, choose the "Dmitry (cloud)" voice.</p>
-<!-- screenshot pending: <img src="img/azure/06-app-settings.png" alt="ListenBook settings screen showing the 'Key works' status"> -->
+<img src="img/azure/06-app-settings.png" alt="Cloud voice screen in ListenBook: key and region fields">
 
 <h2>Troubleshooting</h2>
 <table>
