@@ -1,6 +1,6 @@
 # Privacy Policy for ListenBook
 
-**Effective Date: July 14, 2026**
+**Effective Date: July 15, 2026**
 
 OWN PLACE LLC ("we," "us," or "our"), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
@@ -122,11 +122,11 @@ necessarily expose to the receiving service your IP address, the content of the
 request (for example, a search query), and technical connection data; those
 services process this information under their own policies:
 
-| Feature you choose to use | What is sent | Where it goes |
+| Feature (optional features are marked; cover-art lookup is on by default) | What is sent | Where it goes |
 |---|---|---|
 | LibriVox catalog search/download | Search text (title/author); download requests | librivox.org (feed API) and archive.org (file hosting) |
 | Internet Archive catalog (scope `collection:librivoxaudio`) | Search text; download requests | archive.org |
-| Cover-art lookup | Book title/author | Apple iTunes Search API |
+| Cover-art lookup (**automatic by default**: runs after an import and at launch for books without a cover; can be turned off in Settings → Covers) | Book title/author | Apple iTunes Search API |
 | One-time purchase / restore purchase | Purchase and restore requests | Apple (StoreKit) |
 | Evaluation-period date sync | Evaluation-period start date only | Apple iCloud Key-Value Store |
 | Wi-Fi upload (local web server, port 8080) | Your selected files | **Directly from your computer's browser to your iPhone over your local Wi-Fi network (computer-to-phone).** Not via the cloud and not via any developer server. |
