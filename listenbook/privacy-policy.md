@@ -107,18 +107,20 @@ log remains on your device and is **not automatically transmitted** to OWN PLACE
 LLC. You can optionally export it yourself with "Share diagnostics" in Settings
 (see Section 5).
 
-You can delete this information at any time by deleting content within the
-App or by deleting the App from your device (subject to iCloud sync behavior
-controlled by Apple).
+You can remove an Azure key from the App's Cloud Voice settings. Deleting the
+App removes its local container, but may not remove Keychain items or values
+already synchronized through the iCloud Key-Value Store. The evaluation-period
+start date is intentionally designed to survive reinstallation.
 
 ## 5. Information That Leaves Your Device When You Use Certain Features
 
 Some optional features send limited requests **directly to third parties**.
-These requests never pass through, and are never received or stored by, OWN
-PLACE LLC. Like any Internet communication, such requests necessarily expose
-to the receiving service your IP address, the content of the request (for
-example, a search query), and technical connection data; those services
-process this information under their own policies:
+Except when you deliberately use "Share diagnostics" and select OWN PLACE LLC as
+the recipient, these requests do not pass through, and are not received or
+stored by, OWN PLACE LLC. Like any Internet communication, such requests
+necessarily expose to the receiving service your IP address, the content of the
+request (for example, a search query), and technical connection data; those
+services process this information under their own policies:
 
 | Feature you choose to use | What is sent | Where it goes |
 |---|---|---|
@@ -205,11 +207,12 @@ the rights to: **know/access** the personal information collected;
 **non-discrimination** for exercising these rights.
 
 Because the App does not automatically collect personal information, and the
-only personal information we may hold is what you voluntarily send us in
-support correspondence, in most cases there is little or no personal
-information for us to disclose, delete, correct, sell, share, or limit. You
-may exercise any applicable rights — including requesting access to or
-deletion of your support correspondence — by contacting
+only personal information we may hold is support correspondence or technical
+diagnostic information that you deliberately choose to send us, in most cases
+there is little or no personal information for us to disclose, delete, correct,
+sell, share, or limit. You may exercise any applicable rights — including
+requesting access to or deletion of your support correspondence or diagnostic
+information — by contacting
 contact@ownplace.net, and we will respond consistent with applicable law
 without discrimination.
 
@@ -228,8 +231,9 @@ and to opt out of certain uses of personal information (such as targeted
 advertising, the sale of personal data, or certain profiling). Because the
 App does not automatically collect personal information, the only
 information OWN PLACE LLC is generally able to act upon is support
-correspondence that you voluntarily provide. To make an inquiry or request
-deletion of your support correspondence, contact contact@ownplace.net.
+correspondence or technical diagnostic information that you deliberately choose
+to send us. To make an inquiry or request deletion of your support
+correspondence or diagnostic information, contact contact@ownplace.net.
 
 ## 10. EU / UK (GDPR and UK GDPR)
 
@@ -252,7 +256,7 @@ special-category processing (Art. 9 GDPR).
 
 - You may exercise your data-subject rights (access, rectification, erasure,
   restriction, portability, objection under Arts. 15–22 GDPR / UK GDPR) with
-  respect to any support correspondence we hold by contacting
+  respect to any support correspondence or diagnostic information we hold by contacting
   contact@ownplace.net. You also have the right to lodge a complaint with
   your supervisory authority.
 - Beyond information you deliberately send us, we carry out **no international
