@@ -1,6 +1,6 @@
 # Privacy Policy for ListenBook
 
-**Effective Date: July 10, 2026**
+**Effective Date: July 14, 2026**
 
 OWN PLACE LLC ("we," "us," or "our"), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
@@ -12,7 +12,8 @@ automatically transmit your personal data to OWN PLACE LLC, and we do not
 operate a developer server or backend. This Privacy Policy explains what
 remains on your device and the limited situations in which information you
 request is sent directly to third-party services such as Apple, LibriVox,
-or the Internet Archive.
+the Internet Archive, or — only if you turn on the optional cloud voice —
+Microsoft Azure.
 
 This Policy is available in English (primary). The App interface is available
 in English, Russian, and Spanish. If a translation of this Policy is provided
@@ -108,6 +109,7 @@ process this information under their own policies:
 | One-time purchase / restore purchase | Purchase and restore requests | Apple (StoreKit) |
 | Evaluation-period date sync | Evaluation-period start date only | Apple iCloud Key-Value Store |
 | Wi-Fi upload (local web server, port 8080) | Your selected files | **Directly from your computer's browser to your iPhone over your local Wi-Fi network (computer-to-phone).** Not via the cloud and not via any developer server. |
+| Optional cloud voice (text-to-speech), only if you enable it and enter your own key | The text of the book chapter being converted to audio, plus the Azure key you entered | Microsoft Azure Speech, using **your own Azure account and key** |
 
 **About purchases.** Purchase and restore requests are processed by Apple.
 The App receives on-device entitlement information necessary to unlock
@@ -117,12 +119,27 @@ database of purchases. Apple may provide aggregated sales and financial
 reports through App Store Connect.
 
 **About Wi-Fi upload:** When enabled, the App runs a temporary local web
-server on your device and displays a local network address. You open that
-address in a browser on a computer connected to the same Wi-Fi network and
-upload files. The transfer is strictly computer-to-phone over your local
-Wi-Fi network. This connection is not authenticated, so you should use this
-feature only on a trusted private network (never on public Wi-Fi) and
-disable the server when finished.
+server on your device and displays a local network address that includes a
+one-time access token generated for that session. You open that address in a
+browser on a computer connected to the same Wi-Fi network and upload files.
+The transfer is strictly computer-to-phone over your local Wi-Fi network. A
+device on the same network that does not have the token cannot upload. As a
+precaution you should still use this feature only on a trusted private network
+(never on public Wi-Fi) and disable the server when finished.
+
+**About the optional cloud voice.** ListenBook can turn a text book (EPUB,
+FB2, or TXT) into audio. By default this uses an **on-device Apple voice**, and
+the text never leaves your device. As an option, you can choose a **cloud
+voice** and enter your own Microsoft Azure Speech key (stored only in your
+device Keychain). When the cloud voice is selected, the text of each chapter
+being converted is sent **directly from your device to Microsoft Azure**, using
+**your own Azure account and key**, to generate the speech audio. OWN PLACE LLC
+never receives, stores, or processes this text, and operates no server in this
+path. Per Microsoft's documentation, real-time text-to-speech input and output
+for prebuilt voices is not retained in the service logs; Microsoft processes
+the request under its own terms. This feature is **off unless you deliberately
+add a key and select the cloud voice**; if you prefer that no text leaves your
+device, use the on-device Apple voice.
 
 **Third-party privacy policies.** These providers operate under their own
 terms and privacy policies, which we encourage you to review:
@@ -130,6 +147,7 @@ terms and privacy policies, which we encourage you to review:
 - Apple (StoreKit, iCloud, iTunes Search API): https://www.apple.com/legal/privacy/
 - Internet Archive (archive.org): https://archive.org/about/terms
 - LibriVox (librivox.org): https://librivox.org/pages/privacy/
+- Microsoft (Azure Speech, only if you enable the cloud voice): https://privacy.microsoft.com/privacystatement
 
 We do not control these third parties and are not responsible for their
 practices.

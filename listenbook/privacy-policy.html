@@ -23,7 +23,7 @@
 <body>
   <main>
 <h1>Privacy Policy for ListenBook</h1>
-<p><strong>Effective Date: July 10, 2026</strong></p>
+<p><strong>Effective Date: July 14, 2026</strong></p>
 <p>OWN PLACE LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
 ListenBook application, listed on the Apple App Store as &ldquo;ListenBook
@@ -33,7 +33,8 @@ automatically transmit your personal data to OWN PLACE LLC, and we do not
 operate a developer server or backend. This Privacy Policy explains what
 remains on your device and the limited situations in which information you
 request is sent directly to third-party services such as Apple, LibriVox,
-or the Internet Archive.</p>
+the Internet Archive, or &mdash; only if you turn on the optional cloud voice
+&mdash; Microsoft Azure.</p>
 <p>This Policy is available in English (primary). The App interface is available
 in English, Russian, and Spanish. If a translation of this Policy is provided
 and conflicts with the English version, the English version controls.</p>
@@ -149,6 +150,11 @@ process this information under their own policies:</p>
 <td>Your selected files</td>
 <td><strong>Directly from your computer&rsquo;s browser to your iPhone over your local Wi-Fi network (computer-to-phone).</strong> Not via the cloud and not via any developer server.</td>
 </tr>
+<tr>
+<td>Optional cloud voice (text-to-speech), only if you enable it and enter your own key</td>
+<td>The text of the book chapter being converted to audio, plus the Azure key you entered</td>
+<td>Microsoft Azure Speech, using <strong>your own Azure account and key</strong></td>
+</tr>
 </tbody>
 </table>
 <p><strong>About purchases.</strong> Purchase and restore requests are processed by Apple.
@@ -158,18 +164,34 @@ details or Apple Account credentials and does not maintain a user-level
 database of purchases. Apple may provide aggregated sales and financial
 reports through App Store Connect.</p>
 <p><strong>About Wi-Fi upload:</strong> When enabled, the App runs a temporary local web
-server on your device and displays a local network address. You open that
-address in a browser on a computer connected to the same Wi-Fi network and
-upload files. The transfer is strictly computer-to-phone over your local
-Wi-Fi network. This connection is not authenticated, so you should use this
-feature only on a trusted private network (never on public Wi-Fi) and
-disable the server when finished.</p>
+server on your device and displays a local network address that includes a
+one-time access token generated for that session. You open that address in a
+browser on a computer connected to the same Wi-Fi network and upload files.
+The transfer is strictly computer-to-phone over your local Wi-Fi network. A
+device on the same network that does not have the token cannot upload. As a
+precaution you should still use this feature only on a trusted private network
+(never on public Wi-Fi) and disable the server when finished.</p>
+<p><strong>About the optional cloud voice.</strong> ListenBook can turn a text book
+(EPUB, FB2, or TXT) into audio. By default this uses an <strong>on-device
+Apple voice</strong>, and the text never leaves your device. As an option, you can
+choose a <strong>cloud voice</strong> and enter your own Microsoft Azure Speech key
+(stored only in your device Keychain). When the cloud voice is selected, the
+text of each chapter being converted is sent <strong>directly from your device
+to Microsoft Azure</strong>, using <strong>your own Azure account and key</strong>, to
+generate the speech audio. OWN PLACE LLC never receives, stores, or processes
+this text, and operates no server in this path. Per Microsoft&rsquo;s
+documentation, real-time text-to-speech input and output for prebuilt voices
+is not retained in the service logs; Microsoft processes the request under its
+own terms. This feature is <strong>off unless you deliberately add a key and
+select the cloud voice</strong>; if you prefer that no text leaves your device,
+use the on-device Apple voice.</p>
 <p><strong>Third-party privacy policies.</strong> These providers operate under their own
 terms and privacy policies, which we encourage you to review:</p>
 <ul>
 <li>Apple (StoreKit, iCloud, iTunes Search API): <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
 <li>Internet Archive (archive.org): <a href="https://archive.org/about/terms">https://archive.org/about/terms</a></li>
 <li>LibriVox (librivox.org): <a href="https://librivox.org/pages/privacy/">https://librivox.org/pages/privacy/</a></li>
+<li>Microsoft (Azure Speech, only if you enable the cloud voice): <a href="https://privacy.microsoft.com/privacystatement">https://privacy.microsoft.com/privacystatement</a></li>
 </ul>
 <p>We do not control these third parties and are not responsible for their
 practices.</p>
