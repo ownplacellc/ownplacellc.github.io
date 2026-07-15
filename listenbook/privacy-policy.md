@@ -74,6 +74,14 @@ not through an analytics SDK embedded in the App, and use it only to
 diagnose technical problems and improve the App. You can control this
 sharing in iOS Settings under Privacy & Security → Analytics & Improvements.
 
+Separately and independently of the above, the App may record an on-device
+crash call stack (received from Apple's MetricKit framework) into its own
+**local** diagnostics log described in Section 4. That local log stays on your
+device; it is **not** sent to OWN PLACE LLC automatically, and reaches us only
+if you deliberately export and send it. A crash call stack Apple may provide to
+us through App Store Connect (above) is a different, Apple-controlled mechanism;
+recording a crash stack locally does not mean we automatically receive it.
+
 ## 4. Information Stored Locally on Your Device or in Your Own iCloud
 
 The following is created and stored **on your device**, or synced through
@@ -87,6 +95,17 @@ us). It does not reach OWN PLACE LLC:
   in the **iCloud Key-Value Store**. This value is synced through your Apple
   iCloud account so that reinstalling the App does not restart the evaluation
   period. It contains only a date and is never transmitted to us.
+- Any **Microsoft Azure Speech key** you choose to enter for the optional cloud
+  voice, stored in the iOS **Keychain** on your device and never transmitted to us.
+
+The App also maintains a small, size-limited **technical diagnostics log** in
+its local cache (not in the Files-visible Documents area). It may contain the
+App version, pseudonymous book identifiers, source type, chapter numbers,
+technical error information, and crash call stacks. It is **not intended to
+contain book titles, book text, audio content, Azure keys, or file paths**. The
+log remains on your device and is **not automatically transmitted** to OWN PLACE
+LLC. You can optionally export it yourself with "Share diagnostics" in Settings
+(see Section 5).
 
 You can delete this information at any time by deleting content within the
 App or by deleting the App from your device (subject to iCloud sync behavior
@@ -110,6 +129,7 @@ process this information under their own policies:
 | Evaluation-period date sync | Evaluation-period start date only | Apple iCloud Key-Value Store |
 | Wi-Fi upload (local web server, port 8080) | Your selected files | **Directly from your computer's browser to your iPhone over your local Wi-Fi network (computer-to-phone).** Not via the cloud and not via any developer server. |
 | Optional cloud voice (text-to-speech), only if you enable it and enter your own key | The text of the book chapter being converted to audio, plus the Azure key you entered | Microsoft Azure Speech, using **your own Azure account and key** |
+| "Share diagnostics" (only if you tap it) | A copy of the local technical diagnostics log | Whatever destination you pick in the iOS share sheet (for example Mail, Messages, or Files) |
 
 **About purchases.** Purchase and restore requests are processed by Apple.
 The App receives on-device entitlement information necessary to unlock
@@ -122,10 +142,13 @@ reports through App Store Connect.
 server on your device and displays a local network address that includes a
 one-time access token generated for that session. You open that address in a
 browser on a computer connected to the same Wi-Fi network and upload files.
-The transfer is strictly computer-to-phone over your local Wi-Fi network. A
-device on the same network that does not have the token cannot upload. As a
-precaution you should still use this feature only on a trusted private network
-(never on public Wi-Fi) and disable the server when finished.
+The transfer is strictly computer-to-phone over your local Wi-Fi network.
+Upload requests that do not contain the current session token are rejected.
+The token protects against casual or unauthorized connections, but because the
+local transfer uses HTTP rather than HTTPS, a party capable of observing
+traffic on the local network could potentially obtain it. Use this feature
+only on a trusted private network, keep the displayed address private, and stop
+the server when finished.
 
 **About the optional cloud voice.** ListenBook can turn a text book (EPUB,
 FB2, or TXT) into audio. By default this uses an **on-device Apple voice**, and
@@ -140,6 +163,13 @@ for prebuilt voices is not retained in the service logs; Microsoft processes
 the request under its own terms. This feature is **off unless you deliberately
 add a key and select the cloud voice**; if you prefer that no text leaves your
 device, use the on-device Apple voice.
+
+**About the diagnostics log.** If you choose "Share diagnostics" in Settings,
+iOS displays its standard sharing interface and sends a copy of the technical
+diagnostics log only to the destination you select. OWN PLACE LLC receives the
+log only if you deliberately choose to send it to us. The selected recipient or
+service processes the shared file under its own terms and privacy policy. The
+App does not send this log anywhere on its own.
 
 **Third-party privacy policies.** These providers operate under their own
 terms and privacy policies, which we encourage you to review:
@@ -205,34 +235,48 @@ deletion of your support correspondence, contact contact@ownplace.net.
 
 If the App is available in the European Union, the European Economic Area,
 or the United Kingdom, please note that the App does not automatically
-collect or process personal data. The only personal data OWN PLACE LLC may
-process is support correspondence you voluntarily send to
-contact@ownplace.net; for that limited processing, the legal bases are our
-legitimate interests in responding to your inquiry and providing support
-(Art. 6(1)(f) GDPR) and, where applicable, compliance with legal obligations
-(Art. 6(1)(c) GDPR). We perform no special-category processing (Art. 9
-GDPR).
+collect or process personal data. The personal data OWN PLACE LLC may process
+is generally limited to support correspondence and technical diagnostic
+information that you **deliberately choose to send to us** (for example, by
+emailing contact@ownplace.net or by using "Share diagnostics" and selecting us
+as the recipient). We process that information only to respond to your request,
+diagnose the reported problem, protect our legal rights, and comply with
+applicable legal obligations. We keep it only as long as needed for support and
+investigation and to meet legal obligations; we do **not** use it for
+advertising and do **not** sell it. You may request deletion of information you
+have sent us, subject to anything we are required or permitted to retain by law.
+For this limited processing the legal bases are our legitimate interests in
+responding to your inquiry and providing support (Art. 6(1)(f) GDPR) and, where
+applicable, compliance with legal obligations (Art. 6(1)(c) GDPR). We perform no
+special-category processing (Art. 9 GDPR).
 
 - You may exercise your data-subject rights (access, rectification, erasure,
   restriction, portability, objection under Arts. 15–22 GDPR / UK GDPR) with
   respect to any support correspondence we hold by contacting
   contact@ownplace.net. You also have the right to lodge a complaint with
   your supervisory authority.
-- Beyond such correspondence, we carry out **no international transfers** of
-  personal data. If you email us from outside the United States, your message
-  will be received and processed in the United States. Any data you exchange
-  directly with third parties (Apple, archive.org, librivox.org) is governed
-  by those parties' own policies.
+- Beyond information you deliberately send us, we carry out **no international
+  transfers** of personal data ourselves. If you email us from outside the
+  United States, your message will be received and processed in the United
+  States. Any data you exchange directly with third parties — Apple (including
+  the iTunes Search API used for cover art), archive.org, librivox.org, and
+  Microsoft Azure (only if you enable the cloud voice) — is governed by those
+  parties' own policies and may be processed by them outside your country.
 
 If you are in the EU/UK and have questions, contact contact@ownplace.net.
 
 ## 11. Local Data, Deletion, and Backups
 
-Your audio files, library, bookmarks, playback history, and statistics exist
-**only on your device** (and, where applicable, in your own iCloud). OWN
-PLACE LLC does not keep copies of your files or data and **cannot restore**
-anything that is deleted. Deleting the App may permanently delete your
-imported audiobooks, bookmarks, and listening history stored on the device.
+Audiobooks, covers, playback data, bookmarks, history, and statistics are
+stored **locally in the App's container on your device**. Depending on your
+Apple device and backup settings, some local App data may also be included in an
+Apple-managed device backup. ListenBook does **not operate its own cloud
+synchronization service** for your audiobook library; the only value it places
+in iCloud is the evaluation-period start date, stored separately in the Keychain
+and the iCloud Key-Value Store. OWN PLACE LLC does not keep copies of your files
+or data and **cannot restore** anything that is deleted. Deleting the App may
+permanently delete your imported audiobooks, bookmarks, and listening history
+stored on the device.
 You are solely responsible for maintaining your own backups (for example,
 device backups via iCloud or your computer); the availability and behavior of
 iCloud backups depend on your device settings and on Apple.
@@ -241,9 +285,15 @@ iCloud backups depend on your device settings and on Apple.
 
 Because your data stays on your device or in your own iCloud, its security
 depends primarily on your device passcode and your Apple Account security. The
-evaluation-period start date is stored using the iOS Keychain. No security measure is
-perfect; the local Wi-Fi upload feature is unauthenticated by design and
-should be used only on trusted networks.
+evaluation-period start date, and any Azure Speech key you choose to enter, are
+stored using the iOS Keychain.
+
+When Wi-Fi Upload is enabled, the App generates a fresh one-time access token
+for that server session and rejects upload requests that do not present the
+valid token. The transfer takes place over local HTTP and is not end-to-end
+encrypted. You should use Wi-Fi Upload only on a trusted private network, keep
+the displayed address and token private, and stop the server when the transfer
+is complete. No security measure is perfect.
 
 ## 13. No Tracking, No Cookies, No Advertising
 
@@ -264,11 +314,13 @@ To be direct about tracking:
 
 ## 14. International Transfers
 
-The App does not automatically transfer personal data internationally. If
-you contact us by email, your correspondence is received and processed in
-the United States. Third-party services you choose to use may process
-requests on servers located in the United States or elsewhere under their
-own policies.
+The App does not send personal data to OWN PLACE LLC automatically. When you
+deliberately use an optional third-party feature — such as the Azure cloud
+voice, catalog search, book download, cover-art lookup, StoreKit, or iCloud
+synchronization — the resulting request may be processed by that provider in
+the United States or another country under the provider's own privacy policy.
+If you contact us by email or send us a diagnostics file, that information is
+received and processed in the United States.
 
 ## 15. Changes to This Policy
 
