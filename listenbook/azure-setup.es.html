@@ -35,13 +35,13 @@ Los capítulos generados permanecen en tu biblioteca para siempre y se reproduce
 sin conexión.</p>
 <p><strong>Necesitarás:</strong> un correo electrónico, una tarjeta bancaria (solo para
 verificar tu identidad — no se te cobrará y no hay pagos automáticos) y unos 10 minutos.
-El nivel Free F0 es gratuito y no caduca.</p>
+El nivel Free F0 es gratuito y no caduca, pero lee más abajo sobre los primeros 30 días de la cuenta.</p>
 
 <h2>Paso 1. Crea una cuenta gratuita de Azure</h2>
 <p>Abre <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, pulsa
 <strong>Try Azure for free</strong> e inicia sesión con cualquier cuenta de Microsoft
 (o crea una), siguiendo las indicaciones de registro. Las cuentas nuevas también reciben
-$200 de crédito por 30 días — no hace falta para esto: Free F0 es gratuito por sí mismo.</p>
+$200 de crédito por 30 días — no hace falta para esto: Free F0 es gratuito por sí mismo. Ten en cuenta: la cuenta nueva empieza como una prueba de 30 días — consulta «Después de los primeros 30 días».</p>
 <img src="img/azure/01-azure-signup.png" alt="Página de creación de cuenta gratuita de Azure">
 
 <h2>Paso 2. Crea un recurso "Speech service" (nivel Free F0)</h2>
@@ -82,6 +82,23 @@ botón Regenerate.</blockquote>
 al importar un libro de texto, elige la voz "Dmitry (nube)".</p>
 <img src="img/azure/06-app-settings.png" alt="Pantalla Voz en la nube de ListenBook: campos de clave y región">
 
+
+<h2>Después de los primeros 30 días: un clic gratuito</h2>
+<p>Una cuenta nueva de Azure empieza como una suscripción de prueba de 30 días
+(<strong>Free Trial</strong>). Cuando termina, Microsoft <strong>no</strong> empieza a
+cobrarte: la suscripción entera se pausa y tu clave de voz deja de funcionar hasta que
+conviertas la cuenta en una normal.</p>
+<p>Para que la clave siga funcionando, haz una única mejora gratuita: en el
+<a href="https://portal.azure.com">portal de Azure</a> abre
+<strong>Suscripciones</strong> → tu suscripción → botón <strong>Mejorar
+(Upgrade)</strong> (el portal también muestra un aviso con este botón cuando la prueba
+está por terminar). Elige la opción sin plan de soporte de pago. Tu recurso de voz sigue
+en el nivel gratuito F0, la cuota mensual se sigue renovando y no se cobra nada: solo
+pagarías si tú mismo pasaras el recurso al nivel de pago S0.</p>
+<p>Si no haces la mejora, la voz en la nube simplemente deja de funcionar al terminar la
+prueba: la app sigue funcionando con la voz local gratuita, y puedes hacer la mejora más
+tarde en cualquier momento.</p>
+
 <h2>Si algo no funciona</h2>
 <table>
   <tr><th>Mensaje</th><th>Causa y solución</th></tr>
@@ -90,6 +107,7 @@ al importar un libro de texto, elige la voz "Dmitry (nube)".</p>
       <code>eastus</code>, no "East US".</td></tr>
   <tr><td>Cuota gratuita mensual agotada</td><td>El nivel F0 ofrece ~500 000 caracteres al mes.
       Se restablece el mes siguiente, o continúa con la voz local gratuita.</td></tr>
+  <tr><td>La clave funcionaba, pero dejó de funcionar al cabo de un mes</td><td>Terminó la suscripción de prueba de 30 días y Azure la pausó. Haz la mejora gratuita de un clic (ver «Después de los primeros 30 días») y la clave volverá a funcionar.</td></tr>
   <tr><td>Demasiadas solicitudes</td><td>El nivel gratuito permite un máximo de 20 solicitudes
       por minuto. La app espera y continúa sola; es normal en libros largos.</td></tr>
   <tr><td>Error de conexión</td><td>Comprueba tu conexión a internet y la región.</td></tr>

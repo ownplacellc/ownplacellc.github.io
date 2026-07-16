@@ -34,13 +34,13 @@ and never leaves it except for synthesis requests to Azure. Generated chapters s
 in your library forever and play offline.</p>
 <p><strong>You'll need:</strong> an email address, a bank card (identity verification only —
 you won't be charged, and there are no automatic payments), and about 10 minutes.
-The Free F0 tier is free and doesn't expire.</p>
+The Free F0 tier itself is free with no time limit — but see the note below about the account's first 30 days.</p>
 
 <h2>Step 1. Create a free Azure account</h2>
 <p>Open <a href="https://azure.microsoft.com/free">azure.microsoft.com/free</a>, press
 <strong>Try Azure for free</strong>, and sign in with any Microsoft account (or create one),
 following the sign-up prompts. New accounts also get $200 of credit for 30 days —
-not needed for this: Free F0 is free on its own.</p>
+not needed for this: Free F0 is free on its own. Note that the new account starts as a 30-day Free Trial — see “After the first 30 days” below.</p>
 <img src="img/azure/01-azure-signup.png" alt="Azure free account sign-up page">
 
 <h2>Step 2. Create a "Speech service" resource (Free F0 tier)</h2>
@@ -81,6 +81,22 @@ Regenerate button.</blockquote>
 text book, choose the "Dmitry (cloud)" voice.</p>
 <img src="img/azure/06-app-settings.png" alt="Cloud voice screen in ListenBook: key and region fields">
 
+
+<h2>After the first 30 days: one free click</h2>
+<p>A new Azure account starts as a 30-day <strong>Free Trial</strong> subscription. When the
+trial ends, Microsoft does <strong>not</strong> start charging you — instead the whole
+subscription is paused, and your speech key stops working until you convert the account
+to a regular one.</p>
+<p>To keep the key working, upgrade once — it is free: in the
+<a href="https://portal.azure.com">Azure portal</a> open <strong>Subscriptions</strong> →
+your subscription → press <strong>Upgrade</strong> (the portal also shows a banner with this
+button when the trial is about to end). Choose the option without a paid support plan.
+Your Speech resource stays on the free F0 tier, the monthly free quota keeps resetting,
+and nothing is charged — you would only pay if you yourself moved the resource to the
+paid S0 tier.</p>
+<p>If you skip the upgrade, cloud voice simply stops when the trial ends — the app keeps
+working with the free on-device voice, and you can upgrade later at any time.</p>
+
 <h2>Troubleshooting</h2>
 <table>
   <tr><th>Message</th><th>Cause and fix</th></tr>
@@ -89,6 +105,7 @@ text book, choose the "Dmitry (cloud)" voice.</p>
       <code>eastus</code>, not "East US".</td></tr>
   <tr><td>Monthly free quota is used up</td><td>The F0 tier gives ~500,000 characters per month.
       It resets next month, or continue with the free local voice.</td></tr>
+  <tr><td>The key worked, but stopped after about a month</td><td>Your 30-day Free Trial subscription ended and Azure paused it. Do the free one-click upgrade (see “After the first 30 days”) — the key starts working again.</td></tr>
   <tr><td>Too many requests</td><td>The free tier allows at most 20 requests per minute.
       The app waits and resumes automatically; this is normal for long books.</td></tr>
   <tr><td>Connection failed</td><td>Check your internet connection and the region.</td></tr>
