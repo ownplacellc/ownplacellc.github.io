@@ -1,6 +1,6 @@
 # Privacy Policy for ListenBook
 
-**Effective Date: July 15, 2026**
+**Effective Date: July 20, 2026**
 
 OWN PLACE LLC ("we," "us," or "our"), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
@@ -12,7 +12,7 @@ automatically transmit your personal data to OWN PLACE LLC, and we do not
 operate a developer server or backend. This Privacy Policy explains what
 remains on your device and the limited situations in which information you
 request is sent directly to third-party services such as Apple, LibriVox,
-the Internet Archive, or — only if you turn on the optional cloud voice —
+the Internet Archive, Project Gutenberg, or — only if you turn on the optional cloud voice —
 Microsoft Azure.
 
 This Policy is available in English (primary). The App interface is available
@@ -90,6 +90,8 @@ us). It does not reach OWN PLACE LLC:
 
 - Your imported audio files and book library (covers, titles, progress).
 - Playback positions, bookmarks, playback history, and listening statistics.
+- Reading positions, text highlights, notes, text bookmarks, and reader settings for the built-in reader.
+- **On-device speech recognition.** If you use the optional "turn audiobook into text" feature, Apple's speech recognition runs **entirely on your device**. Your audio and the resulting text stay on the device and are never transmitted to OWN PLACE LLC. Likewise, the optional conversion of unsupported audio formats happens entirely on your device.
 - App settings (skip step, playback behavior, theme, language, etc.).
 - Your **evaluation-period start date**, stored in the iOS **Keychain** and
   in the **iCloud Key-Value Store**. This value is synced through your Apple
@@ -126,6 +128,7 @@ services process this information under their own policies:
 |---|---|---|
 | LibriVox catalog search/download | Search text (title/author); download requests | librivox.org (feed API) and archive.org (file hosting) |
 | Internet Archive catalog (scope `collection:librivoxaudio`) | Search text; download requests | archive.org |
+| Project Gutenberg catalog | Search text; download requests | gutendex.com (catalog API) and gutenberg.org (file hosting) |
 | Cover-art lookup (**automatic by default**: runs after an import and at launch for books without a cover; can be turned off in Settings → Covers) | Book title/author | Apple iTunes Search API |
 | One-time purchase / restore purchase | Purchase and restore requests | Apple (StoreKit) |
 | Evaluation-period date sync | Evaluation-period start date only | Apple iCloud Key-Value Store |
