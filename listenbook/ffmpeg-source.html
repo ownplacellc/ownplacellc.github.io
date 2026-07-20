@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ListenBook — FFmpeg Corresponding Source (LGPL v2.1)</title>
+<style>
+ body{font-family:-apple-system,system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#222;line-height:1.55}
+ h1{font-size:26px} h2{font-size:19px;margin-top:28px}
+ pre{background:#f6f6f6;border:1px solid #e2e2e2;border-radius:10px;padding:14px;overflow-x:auto;font-size:12px;line-height:1.4}
+ code{background:#f2f2f2;border-radius:4px;padding:1px 5px}
+ a{color:#c96a24}
+</style>
+</head>
+<body>
+<h1>FFmpeg Corresponding Source — ListenBook Audiobooks</h1>
+<p>ListenBook Audiobooks (iOS) dynamically links the following libraries from the
+<a href="https://ffmpeg.org">FFmpeg</a> project under the
+<strong>GNU Lesser General Public License v2.1 or later</strong>:
+<code>libavformat</code>, <code>libavcodec</code>, <code>libavutil</code>, <code>libswresample</code>.</p>
+
+<h2>Exact source used</h2>
+<ul>
+<li>Version: <strong>FFmpeg n7.1.5</strong></li>
+<li>Git commit: <code>3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587</code> (tag <code>n7.1.5</code>)</li>
+<li>Source archive (upstream): <a href="https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz">ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz</a></li>
+<li>Same source on GitHub: <a href="https://github.com/FFmpeg/FFmpeg/releases/tag/n7.1.5">github.com/FFmpeg/FFmpeg tag n7.1.5</a></li>
+<li><strong>Modifications: none.</strong> The libraries are built from unmodified upstream source
+    (an empty <code>changes.diff</code> applies). No <code>--enable-gpl</code> or
+    <code>--enable-nonfree</code> options are used.</li>
+</ul>
+
+<h2>Build configuration</h2>
+<pre>tag: n7.1.5
+commit: 3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587
+min_ios: 26.0
+demuxers: ogg,asf,matroska,mov,flac,wav,aiff,ape,tta,wv,dsf,dff,mp3,aac,caf,w64,rm,mpc,mpc8
+decoders: vorbis,opus,flac,alac,wmav1,wmav2,wmapro,wmavoice,wmalossless,ape,tta,wavpack,mp3,mp3float,mp2,mp1,aac,aac_latm,pcm_s16le,pcm_s16be,pcm_s24le,pcm_u8,pcm_f32le,cook,sipr,ra_144,ra_288,musepack7,musepack8,dsd_lsbf,dsd_msbf,dsd_lsbf_planar,dsd_msbf_planar
+parsers: vorbis,opus,flac,aac,aac_latm,mpegaudio,cook
+flags: -fno-stack-check (FFmpeg asm vs clang stack probing on Apple targets)</pre>
+
+<h2>Complete build script</h2>
+<p>This script reproduces the exact binaries shipped in the app
+(dylib → framework → xcframework, dynamic linking, iOS device arm64 + simulator arm64):</p>
+<pre>#!/bin/bash
+# Reproducible FFmpeg build for ListenBook (audit W5-1/W5-2).
+#
+# - Source is pinned to an exact tag AND commit SHA (verified after checkout).
+# - Paths are relative to this script — no hardcoded user directories.
+# - The configure line is recorded next to the outputs.
+# - Only LGPL components are enabled (no --enable-gpl / --enable-nonfree);
+#   audio demuxers/decoders/parsers only, dynamic linking.
+# - `-fno-stack-check`: clang's stack-probing is incompatible with FFmpeg's
+#   hand-written assembly stack usage on Apple targets (link-time/runtime
+#   crashes); every known iOS FFmpeg recipe disables it. Documented, kept.
+#
+# Usage: ./build.sh           # clone+verify, build device+sim, package, install
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")" &amp;&amp; pwd)"
+REPO_ROOT="$(cd "$ROOT/.." &amp;&amp; pwd)"
+cd "$ROOT"
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+
+TAG="n7.1.5"
+# Commit the tag must resolve to (git ls-remote, recorded 2026-07-20) — a
+# moved/replaced tag fails the build instead of silently building other code.
+PINNED_COMMIT="3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587"
+MIN_IOS="26.0"
+
+DEMUXERS="ogg,asf,matroska,mov,flac,wav,aiff,ape,tta,wv,dsf,dff,mp3,aac,caf,w64,rm,mpc,mpc8"
+DECODERS="vorbis,opus,flac,alac,wmav1,wmav2,wmapro,wmavoice,wmalossless,ape,tta,wavpack,mp3,mp3float,mp2,mp1,aac,aac_latm,pcm_s16le,pcm_s16be,pcm_s24le,pcm_u8,pcm_f32le,cook,sipr,ra_144,ra_288,musepack7,musepack8,dsd_lsbf,dsd_msbf,dsd_lsbf_planar,dsd_msbf_planar"
+PARSERS="vorbis,opus,flac,aac,aac_latm,mpegaudio,cook"
+LIBS=(avutil avcodec avformat swresample)
+
+# --- 1. Source: clone shallow at the tag, verify the pinned commit ---
+if [ ! -d ffmpeg ]; then
+  echo ">>> clone FFmpeg $TAG"
+  git clone --depth 1 --branch "$TAG" https://github.com/FFmpeg/FFmpeg.git ffmpeg
+fi
+ACTUAL_COMMIT=$(git -C ffmpeg rev-parse HEAD)
+if [ "$ACTUAL_COMMIT" != "$PINNED_COMMIT" ]; then
+  echo "!!! source pin mismatch: HEAD=$ACTUAL_COMMIT expected=$PINNED_COMMIT" >&amp;2
+  exit 1
+fi
+echo ">>> source verified: $TAG @ $ACTUAL_COMMIT"
+
+CONFIGURE_COMMON=(
+  --enable-cross-compile --target-os=darwin --arch=arm64
+  --enable-shared --disable-static --disable-programs --disable-doc
+  --disable-everything --disable-avdevice --disable-swscale
+  --disable-avfilter --disable-postproc --disable-network
+  --enable-avformat --enable-avcodec --enable-avutil --enable-swresample
+  --enable-protocol=file
+  --enable-demuxer="$DEMUXERS" --enable-decoder="$DECODERS" --enable-parser="$PARSERS"
+)
+
+build_arch () { # $1=sdk $2=minflag $3=outdir
+  local SDK=$1 MINFLAG=$2 OUT=$3
+  local SYSROOT; SYSROOT=$(xcrun -sdk "$SDK" --show-sdk-path)
+  echo ">>> configure ($SDK)"
+  ( cd ffmpeg &amp;&amp; make distclean >/dev/null 2>&amp;1 || true
+    ./configure --prefix="$OUT" \
+      --cc="xcrun -sdk $SDK clang" --as="xcrun -sdk $SDK clang" \
+      --sysroot="$SYSROOT" \
+      --extra-cflags="-arch arm64 $MINFLAG -fno-stack-check" \
+      --extra-ldflags="-arch arm64 $MINFLAG" \
+      "${CONFIGURE_COMMON[@]}" > "$ROOT/configure-$SDK.log" 2>&amp;1
+    make -j"$(sysctl -n hw.ncpu)" > "$ROOT/make-$SDK.log" 2>&amp;1
+    make install >> "$ROOT/make-$SDK.log" 2>&amp;1 )
+  echo ">>> $SDK done"
+}
+
+if [ "${1:-}" != "--package-only" ]; then
+  rm -rf "$ROOT/out"
+  build_arch iphoneos           "-mios-version-min=$MIN_IOS"            "$ROOT/out/ios-arm64"
+  build_arch iphonesimulator    "-mios-simulator-version-min=$MIN_IOS"  "$ROOT/out/sim-arm64"
+fi
+
+# --- 2. Package: dylib -> framework (install names via @rpath) -> xcframework ---
+pick_dylib () { ls "$1"/lib/lib$2.*.dylib | grep -E "lib$2\.[0-9]+\.[0-9]+\.[0-9]+\.dylib" | head -1; }
+
+make_framework () { # $1=srcdir $2=lib $3=fwroot
+  local src fw bin dep oldref
+  src=$(pick_dylib "$1" "$2")
+  fw="$3/lib$2.framework"; rm -rf "$fw"; mkdir -p "$fw"
+  bin="$fw/lib$2"
+  cp "$src" "$bin"
+  install_name_tool -id "@rpath/lib$2.framework/lib$2" "$bin"
+  # Rewrite EVERY sibling reference (absolute build path OR @rpath form) —
+  # absolute paths load on the simulator but crash dyld on a real device.
+  for dep in "${LIBS[@]}"; do
+    oldref=$(otool -L "$bin" | awk '{print $1}' | grep -E "(^|/)lib$dep\.[0-9]+\.dylib$" | head -1 || true)
+    [ -n "$oldref" ] &amp;&amp; install_name_tool -change "$oldref" "@rpath/lib$dep.framework/lib$dep" "$bin"
+  done
+  /usr/libexec/PlistBuddy -c "Add :CFBundleIdentifier string org.ffmpeg.lib$2" \
+    -c "Add :CFBundleExecutable string lib$2" -c "Add :CFBundleName string lib$2" \
+    -c "Add :CFBundlePackageType string FMWK" -c "Add :CFBundleVersion string 1.0" \
+    -c "Add :CFBundleShortVersionString string 1.0" -c "Add :MinimumOSVersion string $MIN_IOS" \
+    "$fw/Info.plist" >/dev/null
+  codesign -f -s - "$bin" >/dev/null 2>&amp;1 || true
+  # Gate: no absolute build paths may survive into the binary (skip otool's
+  # first line — it's the file path itself and would always match).
+  if otool -L "$bin" | tail -n +2 | grep -q "/Users"; then
+    echo "!!! absolute path leaked into lib$2" >&amp;2; exit 1
+  fi
+}
+
+rm -rf "$ROOT/frameworks" "$ROOT/xcframeworks"
+for lib in "${LIBS[@]}"; do
+  make_framework "$ROOT/out/ios-arm64" "$lib" "$ROOT/frameworks/ios-arm64"
+  make_framework "$ROOT/out/sim-arm64" "$lib" "$ROOT/frameworks/sim-arm64"
+done
+mkdir -p "$ROOT/xcframeworks"
+for lib in "${LIBS[@]}"; do
+  xcodebuild -create-xcframework \
+    -framework "$ROOT/frameworks/ios-arm64/lib$lib.framework" \
+    -framework "$ROOT/frameworks/sim-arm64/lib$lib.framework" \
+    -output "$ROOT/xcframeworks/lib$lib.xcframework" > "$ROOT/xcf-$lib.log" 2>&amp;1
+done
+
+# --- 3. Install into Vendor/ + record provenance ---
+VENDOR="$REPO_ROOT/Vendor/FFmpeg"
+rm -rf "$VENDOR/xcframeworks" "$VENDOR/include"
+mkdir -p "$VENDOR/xcframeworks" "$VENDOR/include"
+cp -R "$ROOT/xcframeworks/"*.xcframework "$VENDOR/xcframeworks/"
+for hdr in libavcodec libavformat libavutil libswresample; do
+  cp -R "$ROOT/out/ios-arm64/include/$hdr" "$VENDOR/include/$hdr"
+done
+cp ffmpeg/COPYING.LGPLv2.1 "$VENDOR/COPYING.LGPLv2.1"
+
+# Record the exact configure line and per-framework hashes.
+grep -m1 "configure" "$ROOT/configure-iphoneos.log" > "$VENDOR/CONFIGURE.txt" 2>/dev/null || true
+( cd ffmpeg &amp;&amp; ./configure --help >/dev/null 2>&amp;1 || true )
+{
+  echo "tag: $TAG"
+  echo "commit: $ACTUAL_COMMIT"
+  echo "min_ios: $MIN_IOS"
+  echo "demuxers: $DEMUXERS"
+  echo "decoders: $DECODERS"
+  echo "parsers: $PARSERS"
+  echo "flags: -fno-stack-check (FFmpeg asm vs clang stack probing on Apple targets)"
+} > "$VENDOR/PROVENANCE.txt"
+
+echo ">>> BUILD+PACKAGE+INSTALL OK ($TAG @ $ACTUAL_COMMIT)"</pre>
+
+<h2>License</h2>
+<p>The full LGPL v2.1 text ships inside the app (Settings → Third-party licenses) and is
+available at <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">gnu.org</a>.
+Relinking: because the libraries are dynamically linked, you may replace them in your own
+copy of the app bundle with your own builds of the same library versions.</p>
+<p>Questions or a request for this source by other means: <a href="mailto:contact@ownplace.net">contact@ownplace.net</a>.</p>
+<p><a href="index.html">← ListenBook</a></p>
+</body>
+</html>
