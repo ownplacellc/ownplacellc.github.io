@@ -23,7 +23,7 @@
 <body>
   <main>
 <h1>Privacy Policy for ListenBook</h1>
-<p><strong>Effective Date: July 20, 2026</strong></p>
+<p><strong>Effective Date: July 22, 2026</strong></p>
 <p>OWN PLACE LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
 ListenBook application, listed on the Apple App Store as &ldquo;ListenBook
@@ -34,7 +34,8 @@ operate a developer server or backend. This Privacy Policy explains what
 remains on your device and the limited situations in which information you
 request is sent directly to third-party services such as Apple, LibriVox,
 the Internet Archive, Project Gutenberg, or &mdash; only if you turn on the optional cloud voice
-&mdash; Microsoft Azure.</p>
+or optional cloud AI book creation &mdash; Microsoft Azure or the AI provider whose key you
+enter (Google Gemini by default).</p>
 <p>This Policy is available in English (primary). The App interface is available
 in English, Russian, and Spanish. If a translation of this Policy is provided
 and conflicts with the English version, the English version controls.</p>
@@ -118,19 +119,28 @@ us). It does not reach OWN PLACE LLC:</p>
 <li>Any <strong>Microsoft Azure Speech key</strong> you choose to enter for the optional
   cloud voice, stored in the iOS <strong>Keychain</strong> on your device and never
   transmitted to us.</li>
+<li><strong>On-device AI book creation.</strong> The optional &ldquo;Create with AI&rdquo;
+  feature can write a short book using Apple&rsquo;s on-device model (Apple
+  Intelligence). In this mode your request and the generated text stay
+  entirely on your device.</li>
+<li>Any <strong>cloud AI key</strong> (for example, a Google Gemini API key) you
+  choose to enter for the optional cloud AI book creation, stored in the iOS
+  <strong>Keychain</strong> on your device and never transmitted to us.</li>
 </ul>
 <p>The App also maintains a small, size-limited <strong>technical diagnostics log</strong>
 in its local cache (not in the Files-visible Documents area). It may contain the
 App version, pseudonymous book identifiers, source type, chapter numbers,
 technical error information, and crash call stacks. It is <strong>not intended to
-contain book titles, book text, audio content, Azure keys, or file paths</strong>.
+contain book titles, book text, audio content, Azure or cloud AI keys, or file
+paths</strong>.
 The log remains on your device and is <strong>not automatically transmitted</strong> to
 OWN PLACE LLC. You can optionally export it yourself with &ldquo;Share
 diagnostics&rdquo; in Settings (see Section 5).</p>
-<p>You can remove an Azure key from the App&rsquo;s Cloud Voice settings. Deleting
-the App removes its local container, but may not remove Keychain items or
-values already synchronized through the iCloud Key-Value Store. The
-evaluation-period start date is intentionally designed to survive
+<p>You can remove an Azure key from the App&rsquo;s Cloud Voice settings, and a
+cloud AI key from AI Studio &rarr; Cloud AI key (also reachable from
+Settings). Deleting the App removes its local container, but may not remove
+Keychain items or values already synchronized through the iCloud Key-Value
+Store. The evaluation-period start date is intentionally designed to survive
 reinstallation.</p>
 <h2>5. Information That Leaves Your Device When You Use Certain Features</h2>
 <p>Some optional features send limited requests <strong>directly to third parties</strong>.
@@ -191,6 +201,11 @@ at launch for books without a cover; can be turned off in Settings &rarr; Covers
 <td>Microsoft Azure Speech, using <strong>your own Azure account and key</strong></td>
 </tr>
 <tr>
+<td>Optional cloud AI book creation, only if you enter your own AI key</td>
+<td>Your book request (prompt), the App&rsquo;s generation instructions, and short recaps of previously generated chapters, plus the AI key you entered</td>
+<td>The AI provider you selected &mdash; Google Gemini (default), Groq, Mistral AI, or OpenRouter &mdash; using <strong>your own account and key</strong></td>
+</tr>
+<tr>
 <td>&ldquo;Share diagnostics&rdquo; (only if you tap it)</td>
 <td>A copy of the local technical diagnostics log</td>
 <td>Whatever destination you pick in the iOS share sheet (for example Mail, Messages, or Files)</td>
@@ -228,6 +243,19 @@ is not retained in the service logs; Microsoft processes the request under its
 own terms. This feature is <strong>off unless you deliberately add a key and
 select the cloud voice</strong>; if you prefer that no text leaves your device,
 use the on-device Apple voice.</p>
+<p><strong>About the optional cloud AI book creation.</strong> ListenBook can write a
+short book from your description (&ldquo;Create with AI&rdquo;). By default this runs
+<strong>on your device</strong> using Apple Intelligence, and nothing leaves the
+device. As an option, you can enter your own API key for a cloud AI provider
+(Google Gemini by default; Groq, Mistral AI, or OpenRouter). When the cloud
+engine is used, your book request and the intermediate generation context are
+sent <strong>directly from your device to the provider you selected</strong>, using
+<strong>your own account and key</strong>. OWN PLACE LLC never receives, stores, or
+processes these requests and operates no server in this path. Note that
+<strong>free tiers of such providers may use submitted content to improve their
+services</strong> under the provider&rsquo;s own terms &mdash; review your provider&rsquo;s
+policy before entering a key. The generated book is stored only on your
+device. This feature sends nothing unless you deliberately add a key.</p>
 <p><strong>About the diagnostics log.</strong> If you choose &ldquo;Share diagnostics&rdquo;
 in Settings, iOS displays its standard sharing interface and sends a copy of
 the technical diagnostics log only to the destination you select. OWN PLACE LLC
@@ -241,6 +269,10 @@ terms and privacy policies, which we encourage you to review:</p>
 <li>Internet Archive (archive.org): <a href="https://archive.org/about/terms">https://archive.org/about/terms</a></li>
 <li>LibriVox (librivox.org): <a href="https://librivox.org/pages/privacy/">https://librivox.org/pages/privacy/</a></li>
 <li>Microsoft (Azure Speech, only if you enable the cloud voice): <a href="https://privacy.microsoft.com/privacystatement">https://privacy.microsoft.com/privacystatement</a></li>
+<li>Google (Gemini API, only if you enable cloud AI book creation): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+<li>Groq (only if you select it for cloud AI book creation): <a href="https://groq.com/privacy-policy">https://groq.com/privacy-policy</a></li>
+<li>Mistral AI (only if you select it for cloud AI book creation): <a href="https://mistral.ai/terms">https://mistral.ai/terms</a></li>
+<li>OpenRouter (only if you select it for cloud AI book creation): <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
 </ul>
 <p>We do not control these third parties and are not responsible for their
 practices.</p>
@@ -337,8 +369,8 @@ iCloud backups depend on your device settings and on Apple.</p>
 <h2>12. Security</h2>
 <p>Because your data stays on your device or in your own iCloud, its security
 depends primarily on your device passcode and your Apple Account security. The
-evaluation-period start date, and any Azure Speech key you choose to enter, are
-stored using the iOS Keychain.</p>
+evaluation-period start date, and any Azure Speech or cloud AI key you choose
+to enter, are stored using the iOS Keychain.</p>
 <p>When Wi-Fi Upload is enabled, the App generates a fresh one-time access token
 for that server session and rejects upload requests that do not present the
 valid token. The transfer takes place over local HTTP and is not end-to-end
