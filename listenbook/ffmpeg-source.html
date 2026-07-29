@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ListenBook — FFmpeg Corresponding Source (LGPL v2.1)</title>
+<title>Talefall — FFmpeg Corresponding Source (LGPL v2.1)</title>
 <style>
  body{font-family:-apple-system,system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#222;line-height:1.55}
  h1{font-size:26px} h2{font-size:19px;margin-top:28px}
@@ -13,8 +13,8 @@
 </style>
 </head>
 <body>
-<h1>FFmpeg Corresponding Source — ListenBook Audiobooks</h1>
-<p>ListenBook Audiobooks (iOS) dynamically links the following libraries from the
+<h1>FFmpeg Corresponding Source — Talefall</h1>
+<p>Talefall — Audiobook Player (iOS) dynamically links the following libraries from the
 <a href="https://ffmpeg.org">FFmpeg</a> project under the
 <strong>GNU Lesser General Public License v2.1 or later</strong>:
 <code>libavformat</code>, <code>libavcodec</code>, <code>libavutil</code>, <code>libswresample</code>.</p>
@@ -50,7 +50,7 @@ flags: -fno-stack-check (FFmpeg asm vs clang stack probing on Apple targets)</pr
 <p>This script reproduces the exact binaries shipped in the app
 (dylib → framework → xcframework, dynamic linking, iOS device arm64 + simulator arm64):</p>
 <pre>#!/bin/bash
-# Reproducible FFmpeg build for ListenBook (audit W5-1/W5-2).
+# Reproducible FFmpeg build for Talefall (audit W5-1/W5-2).
 #
 # - Source is pinned to an exact tag AND commit SHA (verified after checkout).
 # - Paths are relative to this script — no hardcoded user directories.
@@ -196,6 +196,6 @@ available at <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">g
 Relinking: because the libraries are dynamically linked, you may replace them in your own
 copy of the app bundle with your own builds of the same library versions.</p>
 <p>Questions or a request for this source by other means: <a href="mailto:contact@ownplace.net">contact@ownplace.net</a>.</p>
-<p><a href="index.html">← ListenBook</a></p>
+<p><a href="index.html">← Talefall</a></p>
 </body>
 </html>

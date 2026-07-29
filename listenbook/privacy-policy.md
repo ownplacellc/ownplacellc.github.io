@@ -1,13 +1,13 @@
-# Privacy Policy for ListenBook
+# Privacy Policy for Talefall
 
 **Effective Date: July 22, 2026**
 
 OWN PLACE LLC ("we," "us," or "our"), a limited liability company organized
 under the laws of the State of Washington, USA, is the developer of the
-ListenBook application, listed on the Apple App Store as "ListenBook
+Talefall application, listed on the Apple App Store as "Talefall
 Audiobooks" (the "App"). Bundle identifier: com.anisimov.audiobooks.
 
-We built ListenBook to be **private by design**. The App does not
+We built Talefall to be **private by design**. The App does not
 automatically transmit your personal data to OWN PLACE LLC, and we do not
 operate a developer server or backend. This Privacy Policy explains what
 remains on your device and the limited situations in which information you
@@ -25,7 +25,7 @@ and conflicts with the English version, the English version controls.
 ## 1. Who We Are and How to Contact Us
 
 - **Developer / data controller (to the extent any applies):** OWN PLACE LLC, State of Washington, USA.
-- **App:** ListenBook ("ListenBook Audiobooks"), iOS 26 or later, iPhone.
+- **App:** Talefall ("Talefall — Audiobook Player"), iOS 26 or later, iPhone.
 - **Contact for privacy questions:** contact@ownplace.net
 
 ## 2. Plain-Language Summary
@@ -164,7 +164,7 @@ traffic on the local network could potentially obtain it. Use this feature
 only on a trusted private network, keep the displayed address private, and stop
 the server when finished.
 
-**About the optional cloud voice.** ListenBook can turn a text book (EPUB,
+**About the optional cloud voice.** Talefall can turn a text book (EPUB,
 FB2, or TXT) into audio. By default this uses an **on-device Apple voice**, and
 the text never leaves your device. As an option, you can choose a **cloud
 voice** and enter your own Microsoft Azure Speech key (stored only in your
@@ -178,7 +178,7 @@ the request under its own terms. This feature is **off unless you deliberately
 add a key and select the cloud voice**; if you prefer that no text leaves your
 device, use the on-device Apple voice.
 
-**About the optional cloud AI book creation.** ListenBook can write a short
+**About the optional cloud AI book creation.** Talefall can write a short
 book from your description ("Create with AI"). By default this runs **on your
 device** using Apple Intelligence, and nothing leaves the device. As an option,
 you can enter your own API key for a cloud AI provider (Google Gemini by
@@ -304,7 +304,7 @@ If you are in the EU/UK and have questions, contact contact@ownplace.net.
 Audiobooks, covers, playback data, bookmarks, history, and statistics are
 stored **locally in the App's container on your device**. Depending on your
 Apple device and backup settings, some local App data may also be included in an
-Apple-managed device backup. ListenBook does **not operate its own cloud
+Apple-managed device backup. Talefall does **not operate its own cloud
 synchronization service** for your audiobook library; the only value it places
 in iCloud is the evaluation-period start date, stored separately in the Keychain
 and the iCloud Key-Value Store. OWN PLACE LLC does not keep copies of your files

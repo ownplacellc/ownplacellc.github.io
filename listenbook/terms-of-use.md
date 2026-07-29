@@ -1,16 +1,16 @@
-# Terms of Use for ListenBook
+# Terms of Use for Talefall
 
 **Effective Date: July 10, 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you" or
 "User") and OWN PLACE LLC ("we," "us," or "our"), a Washington limited
-liability company, and govern your use of the ListenBook application
-("ListenBook Audiobooks," the "App"). By downloading, installing, or using
+liability company, and govern your use of the Talefall application
+("Talefall — Audiobook Player," the "App"). By downloading, installing, or using
 the App, you agree to these Terms. If you do not agree, do not use the App.
 
 ## 1. The App
 
-ListenBook is a native iOS audiobook player. It lets you import your own
+Talefall is a native iOS audiobook player. It lets you import your own
 audio files (MP3, M4A, M4B, AAC, FLAC) and listen with features including
 saved playback position, variable speed, sleep timer, bookmarks, chapter
 navigation, background and lock-screen playback, AirPlay output, listening

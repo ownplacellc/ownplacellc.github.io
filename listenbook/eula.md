@@ -1,8 +1,8 @@
-# End User License Agreement (EULA) for ListenBook
+# End User License Agreement (EULA) for Talefall
 
 **Effective Date: July 10, 2026**
 
-The ListenBook application ("ListenBook Audiobooks"), developed by OWN PLACE
+The Talefall application ("Talefall — Audiobook Player"), developed by OWN PLACE
 LLC, is licensed to you under **Apple's standard Licensed Application End
 User License Agreement (Apple Standard EULA)**:
 
