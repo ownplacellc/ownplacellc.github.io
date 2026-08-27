@@ -33,7 +33,8 @@ issue with the App, and we will help.
 
 ## Evaluation Period
 
-The App includes a **14-day free evaluation period**. You will **not** be
+The App includes a **3-day free evaluation period** (evaluation periods
+started under an earlier version keep their original length). You will **not** be
 charged automatically when it ends. To continue using full functionality, you
 can complete a one-time non-consumable purchase through Apple at the price
 shown in your App Store storefront (current US price: USD $7.99). This is not

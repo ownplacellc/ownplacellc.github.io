@@ -1,6 +1,6 @@
 # Terms of Use for Talefall
 
-**Effective Date: July 10, 2026**
+**Effective Date: August 26, 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you" or
 "User") and OWN PLACE LLC ("we," "us," or "our"), a Washington limited
@@ -35,9 +35,11 @@ terms and may enforce them against you.
 
 ## 3. Purchases, Evaluation Period, and Refunds
 
-- The App is free to download and includes a **14-day free evaluation
+- The App is free to download and includes a **3-day free evaluation
   period**. **You will not be charged automatically when the evaluation
-  period ends.**
+  period ends.** Evaluation periods that began under an earlier version of
+  the App keep the length granted at that time (previously 14 days); a change
+  to the evaluation period never shortens one already running.
 - To continue using the App's full functionality after the evaluation period,
   you must complete a **one-time non-consumable purchase** through Apple, at
   the price displayed by Apple in your App Store storefront. The current
