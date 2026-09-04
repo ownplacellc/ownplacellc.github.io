@@ -32,9 +32,10 @@ com.anisimov.audiobooks.</p>
 under the laws of the State of Washington, USA, and is the developer of the
 App.</p>
 <p>Talefall — Audiobook Player is, first of all, an audiobook player that works
-with your own files, on your own device. <strong>The player's library — what you
-import, listen to, and read — never reaches our server.</strong> That has been true
-since the first version and is still true.</p>
+with your own files, on your own device. <strong>The player does not upload your
+library automatically. Text you explicitly submit for AI Studio narration,
+and content you choose to include in a report or support request, are
+exceptions described in this Policy.</strong></p>
 <p>Since version 1.3 the App also offers an optional, paid <strong>AI Studio</strong>: on
 request, our service writes a <strong>work of fiction</strong> from your description and
 reads it aloud in our own narrator voice, or reads aloud a text book you
@@ -44,9 +45,11 @@ those optional features, where it goes, why, how long it is kept, and what
 never leaves at all.</p>
 <p>Two companion documents are part of our privacy disclosures:</p>
 <ul>
-<li><strong>Consumer Health Data Privacy Policy and AI Safety and Content Policy:</strong>
-  https://ownplacellc.github.io/listenbook/health-and-content-policy.html
+<li><strong>Consumer Health Data Privacy Policy:</strong>
+  https://ownplacellc.github.io/listenbook/consumer-health-data-privacy-policy.html
   (also linked from our home page and from Settings → Privacy in the App)</li>
+<li><strong>AI Safety and Content Policy:</strong>
+  https://ownplacellc.github.io/listenbook/ai-safety-and-content-policy.html</li>
 <li><strong>Where AI Studio is available (Supported Territories):</strong>
   https://ownplacellc.github.io/listenbook/ai-studio-territories.html</li>
 </ul>
@@ -65,7 +68,8 @@ limited by this language-control provision.</p>
   identifier com.anisimov.audiobooks.</li>
 <li><strong>Contact for privacy questions and requests:</strong> contact@ownplace.net;
   telephone +1 (213) 524-8012.</li>
-<li><strong>In-App requests:</strong> Settings → Privacy → Request Data Deletion (Section 10).</li>
+<li><strong>Requests:</strong> email contact@ownplace.net (Section 10). Settings → Privacy →
+  Request Data Deletion in the App prepares that email for you.</li>
 </ul>
 <h2>2. Plain-Language Summary</h2>
 <ul>
@@ -73,8 +77,10 @@ limited by this language-control provision.</p>
   know your name, email, or Apple ID.</li>
 <li><strong>The player is local.</strong> Your audio files, text books, library, playback
   positions, bookmarks, notes, statistics, and settings stay on your device
-  (and in your own iCloud/device backups, which you control). Nothing about
-  what you listen to or read is sent to OWN PLACE LLC.</li>
+  (and in your own iCloud/device backups, which you control). <strong>The player
+  does not upload your library automatically. Text you explicitly submit for
+  AI Studio narration, and content you choose to include in a report or
+  support request, are exceptions described in this Policy.</strong></li>
 <li><strong>If you do not use AI Studio and do not opt in to usage counters, no
   player-library content is sent to OWN PLACE LLC.</strong> The App may still contact
   Apple, GitHub Pages, and the catalog providers for the specific functions
@@ -151,8 +157,9 @@ deliberately submit a title or text to AI Studio for server-based narration.
 We do not collect your playback history, bookmarks, notes, or highlights. We do
 not request health information and do not infer anything about your health,
 beliefs, or personal characteristics from anything you submit; see Section 13
-and our Consumer Health Data Privacy Policy for what happens if you include
-such information in an AI Studio request against our rules.</p>
+and our <a href="consumer-health-data-privacy-policy.html">Consumer Health Data Privacy
+Policy</a> for what happens if you
+include such information in an AI Studio request against our rules.</p>
 <p><strong>If you contact us voluntarily.</strong> If you email contact@ownplace.net, we
 receive your email address and whatever you include in your message. We use
 it only to respond, provide support, act on content or copyright reports,
@@ -160,8 +167,12 @@ protect our legal rights, and comply with legal obligations. We keep support
 correspondence for no longer than <strong>24 months after the last message in the
 thread</strong>, and delete it earlier on request, except where we must retain it to
 document a refund dispute, a content report, or to establish, exercise, or
-defend legal claims. Our business email is processed by our email service
-provider solely to deliver and secure mail.</p>
+defend legal claims. <strong>For consumer health data, retention beyond an
+applicable deletion deadline is permitted only where a specific applicable
+legal obligation or statutory exception authorizes it. A general interest in
+defending possible claims does not by itself override that deadline.</strong> Our
+business email is processed by our email service provider solely to deliver
+and secure mail.</p>
 <p><strong>Apple analytics and diagnostics.</strong> If you have enabled "Share With App
 Developers" in iOS settings, Apple may provide us with privacy-protected,
 aggregated App Store Connect analytics, crash reports, and diagnostics. This
@@ -291,7 +302,7 @@ service.</p>
 <tr>
 <td><strong>AI Studio — write a book</strong> (subscription)</td>
 <td>Your book request ("prompt"), requested length in minutes, an Apple-signed subscription transaction, the App's shared service token, and a random per-order key used to avoid duplicate orders</td>
-<td>Our service on Modal (USA); the request text is forwarded to the language model via OpenRouter (Section 6.3). Our service keeps with the order the request identifiers OpenRouter returns for it, so that a deletion request can be actioned at OpenRouter</td>
+<td>Our service on Modal (USA); the request text is forwarded to the language model via OpenRouter (Section 6.3). While the order exists, our service keeps with it the request identifiers OpenRouter returns; they are deleted together with the order</td>
 <td>To write the book you ordered</td>
 <td>Temporary working storage only, for the time needed to run and deliver the order: encrypted, subject to an application-level time-to-live, and excluded from OWN PLACE LLC's application logs and crash reports; we do not create separate content backups. Text and audio are deleted immediately after delivery of the final chapter is confirmed; if full delivery is not confirmed within seven days after the Service accepts the order, all server-side order content is deleted and the hours are restored (Section 6.4)</td>
 </tr>
@@ -307,7 +318,7 @@ service.</p>
 <td>The passage text and language, plus the same signed transaction and token</td>
 <td>Our service on Modal (USA); our own narrator model only</td>
 <td>To return audio immediately</td>
-<td>Not stored: the text is processed in temporary memory and discarded; only the character count and audio length are logged</td>
+<td>Not retained in our application storage: the text is processed in temporary memory and discarded; only the character count and audio length are logged. Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy</td>
 </tr>
 <tr>
 <td><strong>AI Studio — collecting finished books</strong></td>
@@ -320,7 +331,7 @@ service.</p>
 <td><strong>AI Studio — Report content</strong> (only when you use it)</td>
 <td>The book identifier, the App version, the report category you choose, whatever you add, and the signed transaction (so we can act on your subscription's book). A content report may include the excerpt or chapter you choose to submit for review; reported content is retained separately under the report-retention period. Submitted directly from the App to our service. If submission fails, the App offers email to contact@ownplace.net as a fallback method, in which case we receive what you enter there and your email address</td>
 <td>Our service on Modal (USA); fallback: our mailbox</td>
-<td>To review unsafe or unlawful output and act on it (Section 6.5). Receipt is acknowledged through the reporting channel used</td>
+<td>To review unsafe or unlawful output and act on it (Section 6.5). We review and respond to all content reports in a timely manner; reports involving child exploitation, credible threats, or imminent harm receive immediate priority, and if an investigation requires additional time we inform the reporter through the available reporting channel</td>
 <td>Up to 24 months after the report is resolved, unless needed for legal claims or required to be preserved by law (for example, 18 U.S.C. § 2258A)</td>
 </tr>
 <tr>
@@ -375,8 +386,10 @@ server; the original transaction identifier is stored with your orders, your
 permission records, and your hours ledger as the label of "whose subscription
 paid for this."</p>
 <p>The original transaction identifier is a purchase identifier: it contains no
-name, email, Apple ID, or device identifier, and OWN PLACE LLC has no way to
-map it to a person. Apple can, and Apple treats it under Apple's own privacy
+name, email, Apple ID, or device identifier. <strong>Apple does not provide your
+identity with the transaction identifier. We may associate it with contact
+information you voluntarily provide in support or privacy correspondence.</strong>
+Apple can identify you from it, and Apple treats it under Apple's own privacy
 policy. Because it is a persistent, subscription-level identifier, we treat it
 as personal information (a "User ID" in Apple's App Privacy terminology) and
 every right in Sections 10–14 applies to it.</p>
@@ -439,7 +452,7 @@ hosted by Modal.</p>
 <td>Gateway to the language model that writes the text</td>
 <td>United States (hosted on Google Cloud Platform, US regions)</td>
 <td>Your request text, the requested length and language, and the writing instructions, plans, summaries, and draft chapters our writer program generates along the way. <strong>We do not add an account, device, or subscription identifier to content sent to OpenRouter.</strong> The prompt itself may nevertheless contain personal data if you include it, and OpenRouter and the model provider will process that content</td>
-<td>OpenRouter acts as our processor under the data processing addendum incorporated in its terms: it processes content only on our instructions, encrypts data in transit and at rest, maintains a SOC 2 program, notifies us of a confirmed breach within 72 hours, publishes its subprocessors at trust.openrouter.ai and is responsible for them, and deletes data on our written request. We send every deletion request to OpenRouter the same day it is verified. So that OpenRouter can locate the content, our service stores with each writing-mode order the request identifiers OpenRouter returned for that order; they do not directly identify you but remain linked to the order until the order is deleted. <strong>OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.</strong> The setting operates fail-closed: if no provider with that policy is available, the order is not sent</td>
+<td>OpenRouter acts as our processor under the data processing addendum incorporated in its terms: it processes content only on our instructions, encrypts data in transit and at rest, maintains a SOC 2 program, notifies us of a confirmed breach within 72 hours, publishes its subprocessors at trust.openrouter.ai and is responsible for them, and deletes data on our written request. While an order exists, our service stores with each writing-mode order the request identifiers OpenRouter returned for that order; they do not directly identify you and are deleted together with the order. <strong>After confirmed delivery we no longer hold identifiers that would let us locate any residual processor copy of your order. Requests are sent with a routing setting that excludes providers that retain or train on content; any limited retention by OpenRouter or the model provider for abuse prevention, security, billing, or legal compliance ends under their own retention periods. If you request deletion while an order is active, we cancel the order and notify OpenRouter with the identifiers we still hold.</strong> <strong>OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.</strong> The setting operates fail-closed: if no provider with that policy is available, the order is not sent</td>
 </tr>
 <tr>
 <td><strong>Meta Platforms, Inc.</strong> (the model provider currently behind OpenRouter for our chosen model; OpenRouter's subprocessor)</td>
@@ -464,6 +477,10 @@ hosted by Modal.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>OpenRouter's standard DPA does not contemplate processing Sensitive Data
+without the agreement or amendment it specifies. Our prohibition on
+submitting such data is not a substitute for those contractual
+requirements.</strong></p>
 <p>Your request text and generated books are never used by OWN PLACE LLC to
 train models, are never sold, and are never shared with anyone other than the
 processors above for the purpose of producing your book, except as described
@@ -485,13 +502,19 @@ precise-location, financial-account, or other sensitive personal data
 nothing is sent. We do not request such information, do not read requests to
 look for it, and do not use anything you submit to make inferences about you
 or anyone else. <strong>We do not ask for, and no screen in the App is treated as,
-consent to process health or other sensitive personal data.</strong> If such
+consent to process health or other sensitive personal data. A user's
+confirmation does not authorize processing of personal or consumer health
+data. We rely on a requested-service exception only where the applicable law
+permits it and the specific processing is objectively necessary and
+proportionate. Otherwise, processing requires a valid legal basis; our
+current service does not offer a sensitive-data consent option.</strong> If such
 information is present despite your confirmation, it is processed only to
 write or narrate the book you requested, only by the processors above, and
 is deleted on the schedule in Section 6.4 or earlier on request; if we become
 aware that submitted content contains such data, we delete it and may refuse
 further orders. How consumer health data is handled is set out in our
-Consumer Health Data Privacy Policy.</p>
+<a href="consumer-health-data-privacy-policy.html">Consumer Health Data Privacy
+Policy</a>.</p>
 <p><strong>Accuracy note.</strong> Generated text is produced by a statistical model and may
 be inaccurate or fabricated even when it sounds confident. Do not rely on it
 for factual accuracy, and never as medical, legal, financial, or other
@@ -505,6 +528,10 @@ we will tell you about a legal demand for your data through a notice in the
 App or on our website.</p>
 <h3>6.4 Retention and deletion on the server — no post-delivery server retention</h3>
 <p>We call this model <strong>"no post-delivery server retention."</strong></p>
+<p><strong>Modal may retain Function inputs and outputs for up to seven days under its
+infrastructure retention policy, independently of deletion from our
+application storage. The one-day period applies to application and container
+logs only.</strong></p>
 <ul>
 <li><strong>Temporary working storage.</strong> The order text, the generated chapters, the
   title, and the audio are stored on Modal as temporary working storage only
@@ -532,7 +559,18 @@ App or on our website.</p>
   except content you separately submit in a report or support request and
   content that law requires us to preserve."</em> This covers content reports and
   copyright disputes, reports required under 18 U.S.C. § 2258A, and lawful
-  preservation demands.</li>
+  preservation demands. <strong>When we obtain actual knowledge of facts or
+  circumstances triggering 18 U.S.C. §2258A, including apparent covered child
+  sexual exploitation, child sex trafficking, or online enticement, we report
+  to NCMEC as soon as reasonably possible. We preserve report materials for
+  one year after submission and longer where legally required, using the
+  legally required security safeguards.</strong> Preserved report materials are held
+  under a legal hold excluded from ordinary automatic deletion. <strong>For consumer
+  health data, retention beyond an applicable deletion deadline is permitted
+  only where a specific applicable legal obligation or statutory exception
+  authorizes it. A general interest in defending possible claims does not by
+  itself override that deadline.</strong> This applies equally to excerpts contained
+  in content reports and in email correspondence.</li>
 <li><strong>Your own copy.</strong> <em>"After delivery, Talefall saves the book on this device
   and, if iCloud is available and the save succeeds, in your private iCloud
   storage. OWN PLACE LLC deletes its server copy after the final chapter has
@@ -545,8 +583,18 @@ App or on our website.</p>
   Files</strong>. A privacy deletion request addressed to us does not delete your own
   iCloud copy; the delete-book button in the App offers to remove the local
   and the iCloud copy.</li>
-<li><strong>Deletion while an order is running.</strong> If you request deletion while an order is active, we stop further processing as soon as technically possible, delete OWN PLACE LLC's server-side working content, and restore the affected hours under Terms Section 4.2.
-  We also notify OpenRouter where it may still hold a limited copy. After delivery we confirm to you that the server copy has already been
+<li><strong>Deletion while an order is running.</strong> If you request deletion while an
+  order is queued, being written, or being narrated, we stop further
+  processing as soon as technically possible, delete our working content, and
+  restore the affected hours under Terms Section 4.2. <strong>After confirmed
+  delivery we no longer hold identifiers that would let us locate any
+  residual processor copy of your order. Requests are sent with a routing
+  setting that excludes providers that retain or train on content; any limited
+  retention by OpenRouter or the model provider for abuse prevention,
+  security, billing, or legal compliance ends under their own retention
+  periods. If you request deletion while an order is active, we cancel the
+  order and notify OpenRouter with the identifiers we still hold.</strong> After
+  delivery we confirm to you that the server copy has already been
   deleted; the hours ledger is handled separately below.</li>
 <li><strong>Hours ledger</strong> (per original transaction identifier: seconds of audio
   charged per order, quota window, purchased extra hours by Apple transaction
@@ -565,13 +613,16 @@ App or on our website.</p>
 <li><strong>Content reports and enforcement notes</strong> are kept for up to 24 months
   after resolution, longer only for legal claims or where the law requires
   preservation.</li>
-<li><strong>Read-aloud passages</strong> (Section 5, "read a passage aloud") are not stored.</li>
+<li><strong>Read-aloud passages</strong> (Section 5, "read a passage aloud") are not
+  retained in our application storage.</li>
 <li><strong>Backups.</strong> We do not create separate content backups, and Modal's storage
   is not separately archived by us. Where
   a processor keeps backup copies, they expire on that processor's next
   scheduled expiration cycle after deletion and, for Washington consumer
   health data, no later than six months after an authenticated request. Modal
-  request logs expire after one day.</li>
+  application and container logs expire after one day; <strong>Modal may retain
+  Function inputs and outputs for up to seven days under its infrastructure
+  retention policy, independently of deletion from our application storage.</strong></li>
 </ul>
 <h3>6.5 Content limits and safety controls</h3>
 <p>The language model has no access to your library, your other books, or
@@ -589,15 +640,17 @@ categories, including self-harm instructions. They are not used to infer or
 create a record of any person's health status or to build a profile; only the
 enforcement metadata described in this Policy is retained. <strong>Report content
 submits the report directly through the App. If submission fails, the App
-offers email to contact@ownplace.net as a fallback method. We acknowledge
-reports through the available reporting channel and promptly prioritize
-reports alleging child exploitation, credible threats, or imminent harm. Other
-reports are reviewed as resources permit.</strong> Where
+offers email to contact@ownplace.net as a fallback method. We review and
+respond to all content reports in a timely manner. Reports involving child
+exploitation, credible threats, or imminent harm receive immediate priority.
+If an investigation requires additional time, we inform the reporter through
+the available reporting channel.</strong> Where
 server content appears unlawful we restrict access to it immediately; we may
 block a subscription identifier from further use for serious or repeated
 violations, and report apparent child sexual exploitation to the NCMEC
 CyberTipline as the law requires. The full rules, enforcement steps, and
-appeal process are in our AI Safety and Content Policy.</p>
+appeal process are in our <a href="ai-safety-and-content-policy.html">AI Safety and Content
+Policy</a>.</p>
 <h3>6.6 Permission screens, the per-order confirmation, and what we record</h3>
 <p><strong>Before first use of AI Studio, the App presents the Terms screen. Before
 the first writing-mode order, and again if the provider changes, the App
@@ -713,7 +766,8 @@ deletion status and a pseudonymous book identifier, but not the book title
 or content.</strong> For AI Studio purchases and requests, the service also derives
 the <strong>country or sanctions-relevant region</strong> from the IP address for the
 territory and sanctions checks described in Sections 5 and 14; we do not
-derive the U.S. state. This is done for legal-compliance and security reasons.
+derive the U.S. state. <strong>GeoIP is a territorial control and does not by itself
+establish sanctions eligibility.</strong> This is done for legal-compliance and security reasons.
 This location information is not stored with an order, but it appears in
 the same log line as the request and, on quota events, alongside the
 original transaction identifier — which is why Section 18 discloses it as
@@ -731,35 +785,59 @@ supported"); these are numbers only, with no identifiers, and are kept for
   turn off online cover lookup (Settings → Covers) and the usage counters
   (Settings → Privacy).</li>
 <li><strong>Delete a book from the server.</strong> Delete it in the App. The App tells the
-  service to delete the server copy (text and audio). If the book is still
-  queued, being written, or being narrated: If you request deletion while an order is active, we stop further processing as soon as technically possible, delete OWN PLACE LLC's server-side working content, and restore the affected hours under Terms Section 4.2.
-  You do not have to wait for it to finish.</li>
+  service to delete the server copy (text and audio). If you request deletion
+  while an order is queued, being written, or being narrated, we stop further
+  processing as soon as technically possible, delete our working content, and
+  restore the affected hours under Terms Section 4.2. You do not have to wait
+  for it to finish.</li>
 <li><strong>Automatic deletion.</strong> Even if you do nothing, an AI Studio order's text
   and audio are deleted from the server immediately after delivery of the
   final chapter is confirmed, and in any event no later than seven days after
   the Service accepts the order if full delivery is never confirmed
   (Section 6.4).</li>
-<li><strong>Delete everything on request — from the App.</strong> Go to <strong>Settings →
-  Privacy → Request Data Deletion</strong>. The App sends an authenticated deletion
-  request to our service using your current Apple-signed subscription
-  transaction; no email and no identifier lookup are needed. A verified
-  deletion request also covers active orders: If you request deletion while an order is active, we stop further processing as soon as technically possible, delete OWN PLACE LLC's server-side working content, and restore the affected hours under Terms Section 4.2. We delete active order data without
+<li><strong>Delete everything on request — by email.</strong> <strong>To request access,
+  correction, or deletion, email contact@ownplace.net and include your
+  subscription's original transaction identifier, if available. We use it to
+  locate records and verify your authority proportionately before disclosing
+  or deleting data. The identifier alone is not proof of authority.</strong>
+  <strong>Settings → Privacy → Request Data Deletion</strong> in the App prepares that
+  email for you with the identifier filled in; the App does not send a
+  deletion request to our service by itself. We delete <strong>records eligible for
+  deletion, subject to the limited exceptions described in this Policy.</strong> A
+  deletion request also covers active orders: if you request deletion while an
+  order is queued, being written, or being narrated, we stop further
+  processing as soon as technically possible, delete our working content, and
+  restore the affected hours under Terms Section 4.2. <strong>After confirmed
+  delivery we no longer hold identifiers that would let us locate any residual
+  processor copy of your order. Requests are sent with a routing setting that
+  excludes providers that retain or train on content; any limited retention by
+  OpenRouter or the model provider for abuse prevention, security, billing, or
+  legal compliance ends under their own retention periods. If you request
+  deletion while an order is active, we cancel the order and notify OpenRouter
+  with the identifiers we still hold.</strong> We delete active order data without
   waiting for generation to finish, delete the permission records, delete
   order-linked usage entries and non-required ledger details, while retaining
   only the minimum transaction and balance record necessary to preserve
-  unused purchased extra hours, instruct our
-  processors the same day to delete their copies, and delete backup copies
+  unused purchased extra hours, instruct any
+  processor still able to locate a copy to delete it, and delete backup copies
   on the next scheduled backup-expiration cycle (for Washington consumer
-  health data, no later than six months after authentication). We may retain
+  health data, no later than six months after authentication). <strong>Where NRS
+  603A.515 applies, we delete covered data within 30 calendar days after
+  authentication and notify the relevant recipients. Recipients must delete
+  covered data within 30 calendar days after notification, subject to the
+  statute's backup exception.</strong> We may retain
   narrowly limited billing evidence only where and for as long as required
   by law or necessary to establish, exercise, or defend legal claims, plus
-  the minimal deletion-request record described in Section 6.4. <strong>Deleting
+  the minimal deletion-request record described in Section 6.4. <strong>For consumer
+  health data, retention beyond an applicable deletion deadline is permitted
+  only where a specific applicable legal obligation or statutory exception
+  authorizes it. A general interest in defending possible claims does not by
+  itself override that deadline.</strong> <strong>Deleting
   content or consumer health data does not forfeit purchased extra hours. We
   retain only the minimum entitlement record needed to preserve that
   balance. If you request deletion of every identifier-linked record and
   preservation is technically impossible, we will first offer a refund path
-  for unused purchased extra hours or obtain your separate confirmation that
-  you choose deletion and forfeiture.</strong></li>
+  or obtain your separate confirmation of deletion and forfeiture.</strong></li>
 <li><strong>Your own copy is not affected.</strong> A deletion request addressed to us
   concerns our server-side records. It does not delete the copy of a book
   saved on your device or the copy the App stores through Apple's iCloud
@@ -767,15 +845,20 @@ supported"); these are numbers only, with no identifiers, and are kept for
   that copy. To remove those, delete the book in
   the App — the delete-book button offers to remove the local and the iCloud
   copy.</li>
-<li><strong>If the in-App path is unavailable</strong> (for example, the subscription has
-  expired and cannot be restored on your device), email contact@ownplace.net.
-  Email alone is not sufficient to obtain a copy of content or delete records
-  unless we complete additional verification proportionate to the request —
-  for example, an Apple receipt for the subscription or a signed transaction
-  obtained through the App. We do this so that a leaked identifier cannot be
-  used by someone else to delete or obtain your books.</li>
-<li><strong>Access or portability.</strong> On the same basis — in the App, or by email with
-  verification — you may ask whether we hold information associated with your
+<li><strong>How we verify you.</strong> Email alone is not sufficient to obtain a copy of
+  content or delete records unless we complete additional verification
+  proportionate to the request — for example, an Apple receipt for the
+  subscription. We do this so that a leaked identifier cannot be used by
+  someone else to delete or obtain your books. <strong>The identifier alone is not
+  proof of authority.</strong></li>
+<li><strong>If you do not use Talefall or hold a subscription.</strong> <strong>These rights are
+  also available to individuals whose personal data we process even if they do
+  not use Talefall or hold a subscription. Contact contact@ownplace.net with
+  information reasonably sufficient to locate the data. We verify your
+  identity and authority using an appropriate alternative method and do not
+  require another person's Apple transaction.</strong></li>
+<li><strong>Access or portability.</strong> On the same basis — by email, with verification
+  proportionate to the request — you may ask whether we hold information associated with your
   subscription and receive a copy of the information that still exists,
   together with the processors that received order content. Because ordinary
   order content is deleted after delivery, we cannot provide content or order
@@ -796,6 +879,12 @@ supported"); these are numbers only, with no identifiers, and are kept for
   only. Server-based narration remains available subject to its separate
   upload confirmation. Withdrawal does not affect processing that already
   happened, and you can delete the resulting books as described above.</li>
+<li><strong>Ask us to stop collecting consumer health data.</strong> <strong>You may separately
+  request that we cease collecting, sharing, or selling your consumer health
+  data. This request is not limited to writing mode. Withdrawing AI-provider
+  permission also stops further transfers under that permission for active
+  writing orders as soon as technically possible; processing already completed
+  cannot be undone.</strong></li>
 <li><strong>Cancel the subscription</strong> at any time in iOS Settings → Apple Account →
   Subscriptions. Cancelling does not by itself delete the remaining ledger,
   permission, report, enforcement, or active-order records described in this
@@ -805,8 +894,11 @@ supported"); these are numbers only, with no identifiers, and are kept for
   restored by us. If iCloud is unavailable or full, export your own backup
   with <strong>Export to Files</strong> before deleting the App.</li>
 </ul>
-<p>We respond to verified requests within 45 days (extendable once by a further
-45 days where the law allows and we tell you why). If we decline
+<p><strong>We respond without undue delay and within 45 calendar days after receiving
+your request. Verification does not restart this period. We may extend it once
+by 45 days where permitted, explaining the extension within the initial
+period. Where the CCPA applies, we acknowledge receipt within 10 business
+days. Shorter statutory deletion deadlines remain applicable.</strong> If we decline
 a request, you may appeal by replying to our response within 45 days; we
 answer appeals in writing within 45 days and, where the law provides, tell
 you how to contact your state's Attorney General.</p>
@@ -842,14 +934,18 @@ OpenRouter request identifiers described in Section 6.2; Internet activity
 limited to optional identifier-free counters; country or sanctions-relevant
 region inferred from IP for the territory and sanctions checks) for the
 business purposes stated there, and disclosed them
-only to the service providers listed in Section 6.3.</p>
+only to the service providers listed in Section 6.3. <strong>We also collect contact
+information and correspondence voluntarily supplied in support, privacy, and
+content-report requests, and disclose them to our business email provider for
+delivery, storage, and security.</strong></p>
 <p>California residents have the rights to <strong>know/access</strong>, <strong>delete</strong>,
 <strong>correct</strong>, <strong>opt out</strong> of sale or sharing (not applicable — we do neither),
 and <strong>limit</strong> use of sensitive personal information (not applicable), with a
-right to <strong>non-discrimination</strong>. Exercise them using <strong>Settings → Privacy →
-Request Data Deletion</strong> in the App (Section 10) or by emailing
-contact@ownplace.net; we verify requests as described in Section 10 and
-respond within the time allowed by law. An authorized agent may submit a
+right to <strong>non-discrimination</strong>. Exercise them by emailing
+contact@ownplace.net (Section 10); <strong>Settings → Privacy → Request Data
+Deletion</strong> in the App prepares that email for you. We verify requests as
+described in Section 10 and respond within the time allowed by law, and
+<strong>where the CCPA applies, we acknowledge receipt within 10 business days.</strong> An authorized agent may submit a
 request on your behalf with written permission.</p>
 <h2>13. Washington State and Other US States; Consumer Health Data</h2>
 <p>This Policy and the App are governed by the laws of the State of Washington.</p>
@@ -862,11 +958,13 @@ you include information about an identifiable person's physical or mental
 health, including your own. We do not request, read, infer from, sell, or
 share such data; if it is present, it is processed only to write or narrate
 the book you requested, by the processors in Section 6.3, and deleted on the
-schedule in Section 6.4 or earlier on request. Where inadvertently submitted
-consumer health data relates only to the person placing the order, we rely
-on the requested-service exception solely to the objectively necessary
-extent. We do not rely on that exception for consumer health data about
-another person. Third-party consumer health data is prohibited; when
+schedule in Section 6.4 or earlier on request. <strong>A user's confirmation does
+not authorize processing of personal or consumer health data. We rely on a
+requested-service exception only where the applicable law permits it and the
+specific processing is objectively necessary and proportionate. Otherwise,
+processing requires a valid legal basis; our current service does not offer a
+sensitive-data consent option.</strong> We do not rely on that exception for consumer
+health data about another person. Third-party consumer health data is prohibited; when
 detected, processing stops and the data is deleted. We do not establish
 geofences around health-care facilities and do not use location data to
 identify or infer visits to health-care facilities. Country- and
@@ -883,7 +981,10 @@ categories collected, sources, purposes, processors, your rights (access,
 correction, deletion, appeal), and how to contact
 us; it is linked prominently from our home page and from Settings → Privacy
 in the App:
-https://ownplacellc.github.io/listenbook/health-and-content-policy.html.</p>
+https://ownplacellc.github.io/listenbook/consumer-health-data-privacy-policy.html.
+Our rules for AI Studio content, the safety controls, reporting, and appeals
+are in a separate document:
+https://ownplacellc.github.io/listenbook/ai-safety-and-content-policy.html.</p>
 <p><strong>Sensitive data generally.</strong> We do not process sensitive personal
 information to make inferences about you, and we do not profile you.</p>
 <p><strong>Other US states.</strong> Residents of states with comprehensive privacy laws (for
@@ -903,7 +1004,12 @@ purchased or used by, any person while that person is physically located in
 those territories. AI Studio is also unavailable in the other countries and
 regions identified in the App and at
 https://ownplacellc.github.io/listenbook/ai-studio-territories.html.</p>
-<p>This restriction is based on the person's physical location when a purchase,
+<p><strong>AI Studio requires physical presence in a Supported Territory. Purchases
+also require availability in the current App Store storefront. These checks
+apply to new subscriptions, top-ups, and Service requests. An existing
+subscription may continue to renew through Apple while you are outside a
+Supported Territory unless you cancel it; unused monthly hours still expire.</strong>
+This restriction is based on the person's physical location when a purchase,
 top-up, or AI Studio request is made. It is not based on citizenship,
 residence, or the country or region of the person's Apple Account. Availability
 of a product in an App Store storefront does not by itself establish
@@ -918,7 +1024,8 @@ hours are charged. Independently of the country check, the Service refuses
 requests originating from the Crimea region and the so-called Donetsk
 People's Republic and Luhansk People's Republic regions of Ukraine, as
 defined by OFAC, and any other region later designated as a Covered Region
-(Terms of Use, Section 7). As described in Section 9, the hosting provider
+(Terms of Use, Section 7). <strong>GeoIP is a territorial control and does not by
+itself establish sanctions eligibility.</strong> As described in Section 9, the hosting provider
 may retain the IP address, the country inferred from it, and the request path
 in a security log for one day.</p>
 <p>A subscription purchased in a supported territory does not authorize use of
@@ -970,10 +1077,12 @@ such AI Studio processing is not permitted from those territories.</p>
 the service token is embedded in the App and could be extracted by a
 determined person (it does not grant access to anyone else's books, which
 require the Apple-signed transaction of the ordering subscription); and no
-Internet service is perfectly secure. If we learn of a breach affecting your
-data we will notify you as required by law — because we hold no contact
-details, that will take the form of a notice in the App and on our website,
-and, where the law requires, a notice to the relevant authority.</p>
+Internet service is perfectly secure. <strong>We provide breach notices within the
+deadlines and by the methods required by applicable law. Where available, we
+use appropriate contact information. Where substitute notice is legally
+permitted, we fulfil all applicable substitute-notice requirements; an in-App
+or website notice alone may not suffice.</strong> We also notify the relevant
+authority where the law requires it.</p>
 <h2>16. No Tracking, No Cookies, No Advertising</h2>
 <ul>
 <li><strong>We do not track you</strong> across apps, websites, or services.</li>
@@ -1039,7 +1148,7 @@ and, where the law requires, a notice to the relevant authority.</p>
 <tr>
 <td>Read-aloud passages</td>
 <td>Modal (USA)</td>
-<td>Not stored</td>
+<td>Not retained in our application storage; Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy</td>
 </tr>
 <tr>
 <td>Hours ledger and subscription-notification records (by original transaction id)</td>
@@ -1059,7 +1168,12 @@ and, where the law requires, a notice to the relevant authority.</p>
 <tr>
 <td>Content-report and enforcement notes, including any excerpt or chapter you choose to submit with a report</td>
 <td>Modal (USA) / our mailbox</td>
-<td>Up to 24 months after resolution, longer only for legal claims or legally required preservation</td>
+<td>Up to 24 months after resolution, longer only where a specific applicable legal obligation or statutory exception requires it</td>
+</tr>
+<tr>
+<td>Materials preserved for a report under 18 U.S.C. § 2258A</td>
+<td>Modal (USA) / our mailbox</td>
+<td>One year after submission, and longer where legally required; held under a legal hold excluded from ordinary automatic deletion</td>
 </tr>
 <tr>
 <td>Deletion-request record (date, keyed hash of the transaction id, what was deleted; no content)</td>
@@ -1084,7 +1198,7 @@ and, where the law requires, a notice to the relevant authority.</p>
 <tr>
 <td>Server logs (IP, request paths with pseudonymous book ids, transaction id on quota events, IP-derived country; no titles or content)</td>
 <td>Modal (USA)</td>
-<td>1 day</td>
+<td>1 day. The one-day period applies to application and container logs only; Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy, independently of deletion from our application storage</td>
 </tr>
 <tr>
 <td>Backup copies held by processors (we keep no backups of order content)</td>
@@ -1104,7 +1218,7 @@ and, where the law requires, a notice to the relevant authority.</p>
 <tr>
 <td>Content sent to OpenRouter / model provider (writing mode only)</td>
 <td>OpenRouter, model provider (USA)</td>
-<td>Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance. OpenRouter deletes on our written request, which we send the same day as a verified deletion request</td>
+<td>Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance. After confirmed delivery we no longer hold identifiers that would let us locate any residual processor copy of your order; any such limited retention ends under the processor's own retention periods. If you request deletion while an order is active, we cancel the order and notify OpenRouter with the identifiers we still hold</td>
 </tr>
 </tbody>
 </table>
@@ -1132,8 +1246,10 @@ and, where the law requires, a notice to the relevant authority.</p>
   identifier.</li>
 </ul>
 <p>"Linked" reflects that these data types are stored together with, or in the
-same log line as, the subscription's original transaction identifier, even
-though we cannot map that identifier to a person ourselves. <strong>Other User
+same log line as, the subscription's original transaction identifier. <strong>Apple
+does not provide your identity with the transaction identifier. We may
+associate it with contact information you voluntarily provide in support or
+privacy correspondence.</strong> <strong>Other User
 Content is disclosed as linked to the user</strong> because an order's text remains
 on our server while the order runs and for up to seven days if delivery is
 never confirmed, and because a provider may retain limited records as

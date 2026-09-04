@@ -12,7 +12,12 @@ elsewhere, subject to the Terms of Use and applicable law.
 narrates them (or narrates your own text books) on our server — is offered
 only to people who are **physically located** in one of the countries and
 regions listed below (the "Supported Territories") at the moment they
-purchase, top up, or place an order. Eligibility is not based on citizenship,
+purchase, top up, or place an order. **AI Studio requires physical presence in
+a Supported Territory. Purchases also require availability in the current App
+Store storefront. These checks apply to new subscriptions, top-ups, and
+Service requests. An existing subscription may continue to renew through Apple
+while you are outside a Supported Territory unless you cancel it; unused
+monthly hours still expire.** Eligibility is not based on citizenship,
 residence, or the country of your Apple Account. See the [Terms of Use,
 Sections 4.9 and 7](terms-of-use.html) and the [Privacy Policy, Section
 14](privacy-policy.html).
@@ -35,7 +40,8 @@ that originate from the Crimea region and the so-called Donetsk People's
 Republic and Luhansk People's Republic regions of Ukraine, as defined by
 OFAC, and any other region later designated as a Covered Region, even
 though Ukraine as a whole is a Supported Territory. The sanctions rules in
-Section 7 of the Terms of Use apply to everyone.
+Section 7 of the Terms of Use apply to everyone. **GeoIP is a territorial
+control and does not by itself establish sanctions eligibility.**
 
 This list may change when required by law, regulation, a service-provider
 restriction, or an App Store requirement. We will give advance notice where

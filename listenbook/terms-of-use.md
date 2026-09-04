@@ -24,8 +24,9 @@ version, acceptance date, and the subscription transaction identifier used
 for the Service. If you do not agree, do not use the App or the Service.
 
 Related documents: our [Privacy Policy](privacy-policy.html), our
-[Consumer Health Data Privacy Policy and AI Safety and Content
-Policy](health-and-content-policy.html), and the list of
+[Consumer Health Data Privacy
+Policy](consumer-health-data-privacy-policy.html), our [AI Safety and Content
+Policy](ai-safety-and-content-policy.html), and the list of
 [Supported Territories](ai-studio-territories.html) for AI Studio.
 
 ## 1. The App and the Service
@@ -43,8 +44,10 @@ public-domain or otherwise lawfully available. Each catalog integration is
 used subject to the provider's applicable API, linking, attribution, and
 content-access terms. We may remove an integration or item if the provider's
 terms or the work's legal status do not permit access through the App. The
-player has no user accounts, and the player's library never reaches our
-server.
+player has no user accounts. **The player does not upload your library
+automatically. Text you explicitly submit for AI Studio narration, and content
+you choose to include in a report or support request, are exceptions described
+in our Privacy Policy.**
 
 **The Service (AI Studio)** is an optional, paid feature with two modes. In
 **writing mode**, our server writes an original **work of fiction** from your
@@ -120,7 +123,12 @@ same period at the same price unless you turn off auto-renewal at least 24
 hours before the end of the current period; your Apple Account is charged for
 renewal within 24 hours before the end of the current period. You can manage
 or cancel the subscription in iOS Settings → Apple Account → Subscriptions.
-Cancellation takes effect at the end of the current paid period. Except where
+Cancellation takes effect at the end of the current paid period. **AI Studio
+requires physical presence in a Supported Territory. Purchases also require
+availability in the current App Store storefront. These checks apply to new
+subscriptions, top-ups, and Service requests. An existing subscription may
+continue to renew through Apple while you are outside a Supported Territory
+unless you cancel it; unused monthly hours still expire.** Except where
 required by law, cancellation does not provide a prorated refund for a period
 in which the Service remained available as promised. This does not limit
 remedies for non-conforming, unavailable, or undelivered digital services.
@@ -134,7 +142,9 @@ you how many hours remain and when they renew. **We charge the lesser of (a)
 the usable audio actually delivered and (b) the duration you selected when
 placing the order.** Failed, canceled, duplicate, corrupted, or technically
 unusable output is not charged; hours reserved for such an order are
-restored to your balance automatically. If a charged file cannot be played or
+restored to your balance automatically. **If an order fails or is cancelled
+after the monthly period from which its hours were charged has ended, the
+restored hours are credited to your non-expiring extra-hours balance.** If a charged file cannot be played or
 materially fails to contain the requested narration, we will restore the
 affected hours after verification — write to contact@ownplace.net with the
 book identifier shown in the App. **"Delivery is confirmed only after the App
@@ -176,8 +186,8 @@ or Apple Account. **Deleting content or consumer health data does not
 forfeit purchased extra hours. We retain only the minimum entitlement record
 needed to preserve that balance. If you request deletion of every
 identifier-linked record and preservation is technically impossible, we will
-first offer a refund path for unused purchased extra hours or obtain your
-separate confirmation that you choose deletion and forfeiture.**
+first offer a refund path or obtain your separate confirmation of deletion and
+forfeiture.**
 
 **4.4 Fair use and service limits.** To protect the Service from abuse and
 runaway costs, we apply technical ceilings in addition to your hours: a
@@ -247,6 +257,13 @@ Studio requests while you are physically located outside the Supported
 Territories. During that time, the local player and books already downloaded
 to your device remain available, and unused extra hours remain recorded for
 later use from a Supported Territory.
+
+**AI Studio requires physical presence in a Supported Territory. Purchases
+also require availability in the current App Store storefront. These checks
+apply to new subscriptions, top-ups, and Service requests. An existing
+subscription may continue to renew through Apple while you are outside a
+Supported Territory unless you cancel it; unused monthly hours still
+expire.**
 
 **Unused monthly hours expire at renewal, including while the subscriber is
 temporarily located outside the Supported Territories. If we remove the
@@ -412,7 +429,8 @@ instructions, provider keys, or other users' data; or
 (h) are designed to circumvent hours, limits, territorial restrictions, or
 content safeguards.
 
-The full list of prohibited uses is in our AI Safety and Content Policy. Our
+The full list of prohibited uses is in our [AI Safety and Content
+Policy](ai-safety-and-content-policy.html). Our
 automated safety controls may decline a request or stop an order; the model
 provider may apply its own safeguards under its current service
 configuration, and we do not rely on those safeguards as a substitute for
@@ -426,13 +444,18 @@ terrorist or extremist material, trafficking, self-harm instructions,
 instructions facilitating serious wrongdoing, targeted harassment, and
 unlawful exploitation. **Report content submits the report directly through
 the App. If submission fails, the App offers email as a fallback method. We
-acknowledge reports through the available reporting channel and promptly
-prioritize reports alleging child exploitation, credible threats, or imminent
-harm. Other reports are reviewed as resources permit.** **"A content report may include the excerpt or chapter you choose to
+review and respond to all content reports in a timely manner. Reports
+involving child exploitation, credible threats, or imminent harm receive
+immediate priority. If an investigation requires additional time, we inform
+the reporter through the available reporting channel.** **"A content report may include the excerpt or chapter you choose to
 submit for review; reported content is retained separately under the
 report-retention period."** Where server content appears unlawful we restrict access to it
-immediately pending review; apparent child sexual exploitation is reported
-to the NCMEC CyberTipline as the law requires. We may remove the server copy
+immediately pending review. **When we obtain actual knowledge of facts or
+circumstances triggering 18 U.S.C. §2258A, including apparent covered child
+sexual exploitation, child sex trafficking, or online enticement, we report to
+NCMEC as soon as reasonably possible. We preserve report materials for one
+year after submission and longer where legally required, using the legally
+required security safeguards.** We may remove the server copy
 of a book, refuse further orders, and block a subscription identifier from
 further use for serious or repeated violations. If your subscription
 identifier is blocked, you may appeal by email within 30 days and we will
@@ -557,7 +580,9 @@ or report property as required by law.** Embargoed regions include the
 Crimea region and the so-called Donetsk People's Republic and Luhansk
 People's Republic regions of Ukraine, as defined by OFAC, and any other
 region later designated as a Covered Region; our service blocks requests
-from those regions separately from the country check in Section 4.9.
+from those regions separately from the country check in Section 4.9. **GeoIP
+is a territorial control and does not by itself establish sanctions
+eligibility.**
 
 **Wi-Fi upload safety.** The Wi-Fi upload feature runs a temporary local web
 server on your device protected only by a session token and using
@@ -594,8 +619,11 @@ storage** only for as long as the order is being carried out and delivered:
 the content is encrypted, subject to an application-level time-to-live, and
 excluded from OWN PLACE LLC's application logs and crash reports. We do not
 create separate content backups. Processor backup copies, if any, are handled
-as described in our Privacy Policy. **"Delivery is confirmed only after the
-App has durably saved every chapter on the device."** Immediately after
+as described in our Privacy Policy. **Modal may retain Function inputs and
+outputs for up to seven days under its infrastructure retention policy,
+independently of deletion from our application storage. The one-day period
+applies to application and container logs only.** **"Delivery is confirmed
+only after the App has durably saved every chapter on the device."** Immediately after
 delivery of the final chapter is confirmed, OWN PLACE LLC deletes its server
 copy of the text and the audio. **After that, OWN PLACE LLC cannot recover or
 re-deliver the book from its server; the App may still restore the user's own
@@ -758,7 +786,7 @@ law of your residence are not limited by this provision.
 
 **Severability; entire agreement.** If any provision of these Terms is held
 unenforceable, the rest remain in effect. These Terms, the Privacy Policy,
-the Consumer Health Data Privacy Policy and AI Safety and Content Policy, and
+the Consumer Health Data Privacy Policy, the AI Safety and Content Policy, and
 the Apple Standard EULA are the entire agreement between you and us regarding
 the App and the Service.
 

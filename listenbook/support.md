@@ -1,5 +1,7 @@
 # Talefall — Audiobook Player: Support
 
+**Last updated: September 4, 2026**
+
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321,
 USA
 
@@ -54,10 +56,14 @@ People's Republic regions of Ukraine, as defined by OFAC, and any other
 region later designated as a Covered Region, independently of the country
 check.
 
-A subscriber travelling to an unsupported territory cannot place new orders
-there, but the player, books already downloaded, and any unused extra hours
-are kept. Unused monthly hours expire at renewal, including while the
-subscriber is temporarily located outside the Supported Territories. If we
+**AI Studio requires physical presence in a Supported Territory. Purchases
+also require availability in the current App Store storefront. These checks
+apply to new subscriptions, top-ups, and Service requests. An existing
+subscription may continue to renew through Apple while you are outside a
+Supported Territory unless you cancel it; unused monthly hours still
+expire.** A subscriber travelling to an unsupported territory cannot place
+new orders there, but the player, books already downloaded, and any unused
+extra hours are kept. If we
 remove the territory in which a subscriber purchased and ordinarily uses AI
 Studio, we will provide cancellation instructions and assist with an Apple
 refund request for any materially unusable paid period.
@@ -66,7 +72,10 @@ refund request for any materially unusable paid period.
   remaining hours. You are charged the **lesser** of the audio actually
   delivered and the length you selected — never more than you ordered.
   Failed, cancelled, duplicate, or unusable output is not charged, and
-  reserved hours come back to your balance automatically. If a delivered file
+  reserved hours come back to your balance automatically. **If an order fails
+  or is cancelled after the monthly period from which its hours were charged
+  has ended, the restored hours are credited to your non-expiring extra-hours
+  balance.** If a delivered file
   cannot be played or is materially not what was ordered, write to
   contact@ownplace.net with the book identifier from the book menu and we
   will restore the hours after checking.
@@ -158,19 +167,22 @@ unlawful, open the book menu and tap **Report content**. Report content
 submits the report directly through the App. If submission fails, the App
 offers email as a fallback method. A content report may
 include the excerpt or chapter you choose to submit for review; reported
-content is retained separately under the report-retention period. We
-acknowledge reports through the available reporting channel and promptly
-prioritize reports alleging child exploitation, credible threats, or
-imminent harm. Other reports are reviewed as resources permit. Anyone,
+content is retained separately under the report-retention period. **We
+review and respond to all content reports in a timely manner. Reports
+involving child exploitation, credible threats, or imminent harm receive
+immediate priority. If an investigation requires additional time, we inform
+the reporter through the available reporting channel.** Anyone,
 including people who are not users, can also email contact@ownplace.net
 ("Talefall: content report"). The rules
 and what we do about violations are in the [AI Safety and Content
-Policy](health-and-content-policy.html).
+Policy](ai-safety-and-content-policy.html).
 
 **Deleting or cancelling a book.** Deleting an AI Studio book in the App
 offers to delete the copy on this device and the copy in your private iCloud
-storage. If the book is still in the queue, being written, or being
-narrated: If you request deletion while an order is active, we stop further processing as soon as technically possible, delete OWN PLACE LLC's server-side working content, and restore the affected hours under Terms Section 4.2.
+storage. If you request deletion while an order is queued, being
+written, or being narrated, we stop further processing as soon as technically
+possible, delete our working content, and restore the affected hours under
+Terms Section 4.2.
 
 **No post-delivery server retention.** Your order text, the generated
 chapters, the title, and the audio are held on our service (Modal) as
@@ -207,25 +219,38 @@ depend on an active subscription — it is not "cloud storage" provided as a
 subscription benefit.
 You can also make your own copy at any time with **Export to Files**.
 
-**Request data deletion.** To have every record associated with your
-subscription deleted sooner, go to **Settings → Privacy → Request Data
-Deletion**. The App sends an authenticated request to our service using your
-current subscription — no email and no identifier lookup are needed.
+**Request data deletion.** To have the records associated with your
+subscription deleted sooner: **to request access, correction, or deletion,
+email contact@ownplace.net and include your subscription's original
+transaction identifier, if available. We use it to locate records and verify
+your authority proportionately before disclosing or deleting data. The
+identifier alone is not proof of authority.** **Settings → Privacy → Request
+Data Deletion** in the App prepares that email for you with the identifier
+filled in; the App does not send a deletion request to our service by itself.
+We delete **records eligible for deletion, subject to the limited exceptions
+described in the Privacy Policy.**
 **Deleting does not forfeit purchased extra hours**: we keep only the
 minimum entitlement record needed to preserve that balance. If you ask us to
-delete every record including that one, the App first offers a refund path
-for unused extra hours or asks you to confirm separately that you choose
-deletion and forfeiture. If the in-App path does not work (for example, the
-subscription has expired), email contact@ownplace.net; we will ask you for
-proof that the subscription is yours before deleting or handing over
-anything. If you request deletion while an order is active, we stop further processing as soon as technically possible, delete OWN PLACE LLC's server-side working content, and restore the affected hours under Terms Section 4.2. We also notify OpenRouter where it may still hold a limited copy; if the order has already been delivered, we
+delete every record including that one, we will first offer a refund path or
+obtain your separate confirmation of deletion and forfeiture. If you request
+deletion while an order is queued, being written, or being narrated, we stop
+further processing as soon as technically possible, delete our working
+content, and restore the affected hours under Terms Section 4.2. **After
+confirmed delivery we no longer hold identifiers that would let us locate any
+residual processor copy of your order. Requests are sent with a routing
+setting that excludes providers that retain or train on content; any limited
+retention by OpenRouter or the model provider for abuse prevention, security,
+billing, or legal compliance ends under their own retention periods. If you
+request deletion while an order is active, we cancel the order and notify
+OpenRouter with the identifiers we still hold.** If the order has already
+been delivered, we
 confirm that our server copy was deleted at delivery. A privacy deletion
 request does not delete the copy of the book on your device or in your
 iCloud storage — OWN PLACE LLC does not access or control that copy;
 delete it with the book's delete button in the App. See the Privacy Policy,
 "Your Choices and
 How to Delete Data," and the [Consumer Health Data Privacy
-Policy](health-and-content-policy.html).
+Policy](consumer-health-data-privacy-policy.html).
 
 **Generated content.** Writing-mode output is intended as fictional
 entertainment and may be inaccurate or fabricated. Server-based narration
@@ -272,11 +297,15 @@ on those services.
   accepted, lets you withdraw permission to send writing-mode content to
   our AI providers (new writing-mode orders stop until you grant permission
   again; server narration remains available with its own upload
-  confirmation), and links to the Consumer Health Data Privacy Policy.
+  confirmation), and links to the [Consumer Health Data Privacy
+  Policy](consumer-health-data-privacy-policy.html).
 
 ## Your Files and Backups
 
-Your audiobooks, bookmarks, history, and statistics are stored **only on your
+**The player does not upload your library automatically. Text you explicitly
+submit for AI Studio narration, and content you choose to include in a report
+or support request, are exceptions described in this Policy.** Your
+audiobooks, bookmarks, history, and statistics are stored **only on your
 device** (and in your own iCloud/device backups, where applicable). We keep no
 copies of your imported files and **cannot restore** deleted local content.
 Deleting the App may delete your imported books and data — keep your own
@@ -296,6 +325,7 @@ to **contact@ownplace.net**.
 
 - [Privacy Policy](privacy-policy.html)
 - [Terms of Use](terms-of-use.html)
-- [Consumer Health Data Privacy Policy and AI Safety and Content Policy](health-and-content-policy.html)
+- [Consumer Health Data Privacy Policy](consumer-health-data-privacy-policy.html)
+- [AI Safety and Content Policy](ai-safety-and-content-policy.html)
 - [AI Studio Supported Territories](ai-studio-territories.html)
 - [EULA](eula.html)

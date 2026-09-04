@@ -20,8 +20,9 @@ disclaimers, and limitations of liability — are set out in our
 [Terms of Use](terms-of-use.html), which you accept by using the App. How data
 is handled, including what leaves your device when you use AI Studio, is
 described in our [Privacy Policy](privacy-policy.html), our
-[Consumer Health Data Privacy Policy and AI Safety and Content
-Policy](health-and-content-policy.html), and the list of countries and
+[Consumer Health Data Privacy
+Policy](consumer-health-data-privacy-policy.html), our [AI Safety and Content
+Policy](ai-safety-and-content-policy.html), and the list of countries and
 regions where AI Studio is offered,
 [AI Studio Supported Territories](ai-studio-territories.html).
 
