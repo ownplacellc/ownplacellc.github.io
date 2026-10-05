@@ -134,7 +134,7 @@ with the App, and we will help.
    do not use content for training or routine retention. This is not a
    zero-retention guarantee; limited retention may occur for abuse
    prevention, security, billing, or legal compliance. The screen provides
-   "Allow and Continue" and "Don't Allow" actions. Choosing "Don't Allow"
+   "Allow" and "Don't Allow" actions (in Settings the switch can be turned on only through this screen). Choosing "Don't Allow"
    sends no content to OpenRouter or Meta and leaves writing mode disabled;
    the player and server-based narration remain available. Server narration
    does not need that permission
@@ -149,17 +149,7 @@ with the App, and we will help.
    events (changing names or calling real events "fiction" does not make the
    information anonymous) and you confirm that the description contains no
    personal information about an identifiable real person, including you,
-   even under a changed name — "Confirm and Continue." Orders containing
-   such information are prohibited and may be rejected. Before sending, our
-   server checks writing-mode orders with an automated filter (contact
-   details, identity-document, bank-account and payment-card numbers,
-   passwords and API keys, and explicit combinations of "I" or a close family
-   member with health, sexual-orientation, gender-identity, or criminal-record
-   information); a flagged order is not sent to the provider and no hours are
-   charged, and we log only the category of the refusal, not the text. The
-   filter does not catch everything, and the rule applies to what it misses.
-   We also keep, in the order receipt, the version of the confirmation text,
-   the time, and a SHA-256 fingerprint of the order text (not the text).
+   even under a changed name, using a switch with the confirmation text. The "Create book" button stays disabled until the switch is on, and editing the description afterwards turns it off again, so you must confirm again. Orders containing such information are prohibited and may be rejected. Before sending, our server checks writing-mode orders with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly and API keys of common formats; and explicit combinations of you or a named close person (relative, partner, friend, colleague, neighbor, patient, client) with health, sexual-orientation, gender-identity, or criminal-record information, in English, Russian, and Spanish. A flagged order is not sent to the provider and no hours are charged, and we log only the category of the refusal, not the text. The filter misses some cases, and the rule applies to what it misses. We also keep, in the order receipt, the version of the confirmation text, the time, and a SHA-256 fingerprint of the order text (not the text); the rights described in our privacy policies apply to this metadata as well.
    **Before every narration order** you confirm that it contains no
    information about an identifiable real person (including you) and no
    health, biometric, genetic, precise-location, financial-account, or other
