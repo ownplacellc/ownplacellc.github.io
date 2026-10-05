@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: September 4, 2026**
+**Effective Date: October 5, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -29,14 +29,15 @@ consumer health data about an identifiable real person, including you. Use
 the on-device voice for text containing such data.
 
 In writing mode your request must not describe, depict, or be about a real,
-identifiable person — including you. In both modes you confirm before every
-order that the order contains no information about an identifiable real
-person and no health, biometric, genetic, precise-location,
-financial-account, or other sensitive personal data; an order you flag as
-containing such data is refused. These rules exist to protect you and
-others. Because we do not routinely review submitted content, we rely on
-your confirmation that it contains no prohibited personal or consumer
-health data. A user's confirmation does not authorize processing of personal
+identifiable person — including you, even under a changed name. Before every
+writing-mode order the App warns you: "Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected." and you confirm: "I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name". Before every narration order you confirm that the order contains no information about an identifiable real person and no health, biometric, genetic, precise-location, financial-account, or other sensitive personal data; a narration order you flag as containing such data is refused. Writing-mode orders containing such information are prohibited and may be rejected.
+
+Before a writing-mode order is sent to OpenRouter, our server checks it with an automated filter for contact details (email addresses, telephone numbers), identity-document, bank-account, and payment-card numbers (for example a Social Security number, payment card number, or IBAN), passwords and API keys, and explicit combinations of "I" or a close family member with information about health, sexual orientation, gender identity, or a criminal record. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter does not catch everything, and the rule applies equally to anything the filter misses. For each writing-mode order the server also records your confirmation (version of the confirmation text, time, and a SHA-256 fingerprint of the order text, without the text) in the order receipt, which remains after the book is deleted from the server.
+
+These rules exist to protect you and others. Because we do not routinely
+review submitted content, we rely on your confirmation that it contains no
+prohibited personal or consumer health data, backed by the automated filter
+above, which does not catch everything. A user's confirmation does not authorize processing of personal
 or consumer health data (see the [Consumer Health Data Privacy Policy,
 A5](consumer-health-data-privacy-policy.html)).
 

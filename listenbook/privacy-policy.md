@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: September 4, 2026**
+**Effective Date: October 5, 2026**
 
 **Data controller and service provider:** OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321,
 USA. Email: contact@ownplace.net. Telephone: +1 (213) 524-8012.
@@ -76,8 +76,10 @@ limited by this language-control provision.
   through OpenRouter; to read it aloud we run our own narrator model in our
   private container on Modal. Before first use of AI Studio, the App
   presents the Terms screen. Before the first writing-mode order, and again
-  if the provider changes, the App separately asks permission to send
-  writing-mode content to OpenRouter and Meta. Server-based narration does
+  if the provider or the text of the permission changes, the App separately
+  asks permission to send writing-mode content to OpenRouter and Meta.
+  Writing-mode content is processed by OpenRouter and Meta, and we do not
+  guarantee that this processing takes place only in the United States. Server-based narration does
   not require permission to send content to OpenRouter or Meta because it is
   not sent to them; it has its own upload confirmation naming Modal. Details
   are in Section 6.
@@ -87,11 +89,14 @@ limited by this language-control provision.
   text that you are legally entitled to submit and that does not contain
   personal or consumer health data about an identifiable real person,
   including you. Use the on-device voice for text containing such data.
-  Before **every** order you confirm that the order contains no information
-  about an identifiable real person and no sensitive personal data; an order
-  you flag as containing such data is refused. We do not read your requests
-  or the books, and we do not check them beyond automated safety controls
-  (Section 6.5).
+  Before **every** writing-mode order you confirm that the description
+  contains no personal information about an identifiable real person,
+  including you, even under a changed name; orders containing such
+  information are prohibited and may be rejected. Our server also checks
+  writing-mode orders with an automated filter before they are sent to the
+  provider (Section 6.5); the filter does not catch everything. We do not
+  read your requests or the books, and we do not check them beyond automated
+  safety controls and that filter (Section 6.5).
 - **AI Studio is available only in Supported Territories.** The App is not
   distributed on App Store storefronts of the European Economic Area, the
   United Kingdom or Switzerland, and AI Studio is not offered to persons
@@ -227,8 +232,8 @@ service.
 | **Purchases and restore** | Purchase and restore requests | Apple (StoreKit) | To buy the player, subscribe, or buy extra hours | Apple's policy; see Section 7 for what we receive |
 | **Evaluation-period date sync** | The evaluation start date only | Apple iCloud Key-Value Store | So reinstalling does not restart the evaluation period | Your iCloud account |
 | **AI Studio territory and sanctions check** | Current App Store storefront country or region and country-level (and, for sanctioned regions, region-level) location inferred from the request IP address | The App Store and our service on Modal | To refuse purchases and AI Studio processing from unavailable territories and requests from regions subject to U.S. sanctions | A refusal decision is not retained with an order because no order is created; the IP address, the country inferred from it, and the request path remain in the one-day server log described in Section 9 |
-| **AI Studio permission records** (Terms acceptance before first use of AI Studio; AI-provider permission before the first writing-mode order and again if a document or provider changes) | The version and date of the Terms of Use you accepted, the version and time of your permission to transfer writing-mode content to our AI providers, and the Apple-signed subscription transaction — nothing else | Our service on Modal (USA) | To record that you accepted the Terms and authorized the transfer before any writing-mode content is sent | Retained with the billing ledger (Section 6.4) |
-| **AI Studio per-order confirmation** (before every order) | The version and time of your confirmation that the order contains no information about an identifiable real person and no sensitive personal data; stored as a field of the order | Our service on Modal (USA) | To document that the order was placed under our no-personal-data rule | With the order record (Section 6.4). If you indicate that the order does contain such data, the App refuses the order and nothing is sent |
+| **AI Studio permission records** (Terms acceptance before first use of AI Studio; AI-provider permission, text version 2026-10, before the first writing-mode order and again if a document, the permission text, or the provider changes) | The version and date of the Terms of Use you accepted, the version and time of your permission to transfer writing-mode content to our AI providers, and the Apple-signed subscription transaction — nothing else | Our service on Modal (USA) | To record that you accepted the Terms and authorized the transfer before any writing-mode content is sent | Retained with the billing ledger (Section 6.4) |
+| **AI Studio per-order confirmation** (before every order) | For a writing-mode order: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text — not the text itself — stored in the order receipt. For a narration order: the version and time of your confirmation, stored as a field of the order | Our service on Modal (USA) | To document that the order was placed under our no-personal-data rule | Writing-mode receipt record: kept after the book is deleted from the server, with the hours ledger (Section 6.4). Narration confirmation: with the order record. If you indicate that a narration order does contain such data, the App refuses the order and nothing is sent |
 | **AI Studio — write a book** (subscription) | Your book request ("prompt"), requested length in minutes, an Apple-signed subscription transaction, the App's shared service token, and a random per-order key used to avoid duplicate orders | Our service on Modal (USA); the request text is forwarded to the language model via OpenRouter (Section 6.3). While the order exists, our service keeps with it the request identifiers OpenRouter returns; they are deleted together with the order | To write the book you ordered | Temporary working storage only, for the time needed to run and deliver the order: encrypted, subject to an application-level time-to-live, and excluded from OWN PLACE LLC's application logs and crash reports; we do not create separate content backups. Text and audio are deleted immediately after delivery of the final chapter is confirmed; if full delivery is not confirmed within seven days after the Service accepts the order, all server-side order content is deleted and the hours are restored (Section 6.4) |
 | **AI Studio — narrate my text book** (subscription; sent only after you confirm the narration upload screen, Section 6.6) | The title, language, and full chapter text of the book you chose, plus the same signed transaction and token | Our service on Modal (USA). The text is processed by our narrator model running in our private container on Modal. It is processed by Modal as our infrastructure provider but is not sent to OpenRouter, Meta, or another model provider | To produce audio of that book in our narrator voice | Same as above |
 | **AI Studio — read a passage aloud** (subscription) | The passage text and language, plus the same signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio immediately | Not retained in our application storage: the text is processed in temporary memory and discarded; only the character count and audio length are logged. Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy |
@@ -332,8 +337,8 @@ hosted by Modal.
 | Processor | Role | Location | What it receives | Commitments and limits |
 |---|---|---|---|---|
 | **Modal Labs, Inc.** | Hosting: runs our service, our writer program, our narrator model (in our private container), and stores order records, audio, permission records, the hours ledger, and short-lived logs | United States (Modal's default region; requests are routed through Virginia, USA) | Everything in 6.2 | Modal acts as our processor under its Data Processing Addendum (modal.com/legal/dpa, incorporated by reference into our agreement): it processes data only on our documented instructions, publishes and is responsible for its subprocessors (trust.modal.com/subprocessors), deletes customer data at termination, notifies us of a personal-data breach without undue delay, and offers Standard Contractual Clauses and the UK Addendum for any international transfer; it does not use customer data to train models; request logs are retained for one day (Section 9) |
-| **OpenRouter, Inc.** | Gateway to the language model that writes the text | United States (hosted on Google Cloud Platform, US regions) | Your request text, the requested length and language, and the writing instructions, plans, summaries, and draft chapters our writer program generates along the way. **We do not add an account, device, or subscription identifier to content sent to OpenRouter.** The prompt itself may nevertheless contain personal data if you include it, and OpenRouter and the model provider will process that content | OpenRouter acts as our processor under the data processing addendum incorporated in its terms: it processes content only on our instructions, encrypts data in transit and at rest, maintains a SOC 2 program, notifies us of a confirmed breach within 72 hours, publishes its subprocessors at trust.openrouter.ai and is responsible for them, and deletes data on our written request. While an order exists, our service stores with each writing-mode order the request identifiers OpenRouter returned for that order; they do not directly identify you and are deleted together with the order. **After confirmed delivery we no longer hold identifiers that would let us locate any residual processor copy of your order. Requests are sent with a routing setting that excludes providers that retain or train on content; any limited retention by OpenRouter or the model provider for abuse prevention, security, billing, or legal compliance ends under their own retention periods. If you request deletion while an order is active, we cancel the order and notify OpenRouter with the identifiers we still hold.** **OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.** The setting operates fail-closed: if no provider with that policy is available, the order is not sent |
-| **Meta Platforms, Inc.** (the model provider currently behind OpenRouter for our chosen model; OpenRouter's subprocessor) | Generates the text | United States | The same content OpenRouter forwards, with no identifier added by us | Meta acts as OpenRouter's subprocessor under OpenRouter's applicable flow-down obligations. **OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.** The setting operates fail-closed: if no provider with that policy is available, the order is not sent. To the best of our knowledge, under the API terms published at https://ai.developer.meta.com/legal/terms-of-service, Meta does not use this API content to train its models. The model provider may apply its own safeguards under its current service configuration; we do not rely on those safeguards as a substitute for our controls. We will update this Policy if we change model or provider, and the App will ask for your permission again (Section 6.6) |
+| **OpenRouter, Inc.** | Gateway to the language model that writes the text | United States company (hosted on Google Cloud Platform, US regions); processing by the model provider reached through OpenRouter is not guaranteed to be limited to the United States and may take place outside the United States | Your request text, the requested length and language, and the writing instructions, plans, summaries, and draft chapters our writer program generates along the way. **We do not add an account, device, or subscription identifier to content sent to OpenRouter.** The prompt itself may nevertheless contain personal data if you include it, and OpenRouter and the model provider will process that content | OpenRouter acts as our processor under the data processing addendum incorporated in its terms: it processes content only on our instructions, encrypts data in transit and at rest, maintains a SOC 2 program, notifies us of a confirmed breach within 72 hours, publishes its subprocessors at trust.openrouter.ai and is responsible for them, and deletes data on our written request. While an order exists, our service stores with each writing-mode order the request identifiers OpenRouter returned for that order; they do not directly identify you and are deleted together with the order. **After confirmed delivery we no longer hold identifiers that would let us locate any residual processor copy of your order. Requests are sent with a routing setting that excludes providers that retain or train on content; any limited retention by OpenRouter or the model provider for abuse prevention, security, billing, or legal compliance ends under their own retention periods. If you request deletion while an order is active, we cancel the order and notify OpenRouter with the identifiers we still hold.** **Writing-mode content is sent through OpenRouter to Meta to generate the requested text. We do not guarantee that processing by OpenRouter and Meta takes place exclusively in the United States; it may take place outside the United States.** **OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.** The setting operates fail-closed: if no provider with that policy is available, the order is not sent |
+| **Meta Platforms, Inc.** (the model provider currently behind OpenRouter for our chosen model; OpenRouter's subprocessor) | Generates the text | United States company; processing location not guaranteed to be limited to the United States | The same content OpenRouter forwards, with no identifier added by us | Meta acts as OpenRouter's subprocessor under OpenRouter's applicable flow-down obligations. **Writing-mode content is sent through OpenRouter to Meta to generate the requested text. We do not guarantee that processing by OpenRouter and Meta takes place exclusively in the United States; it may take place outside the United States.** **OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance.** The setting operates fail-closed: if no provider with that policy is available, the order is not sent. To the best of our knowledge, under the API terms published at https://ai.developer.meta.com/legal/terms-of-service, Meta does not use this API content to train its models. The model provider may apply its own safeguards under its current service configuration; we do not rely on those safeguards as a substitute for our controls. We will update this Policy if we change model or provider, and the App will ask for your permission again (Section 6.6) |
 | **Our narrator model** (running in our own private container on a graphics card rented from Modal) | Reads text aloud | United States (Modal) | The text to be narrated and the language | The narrator model is operated by OWN PLACE LLC in a private container hosted by Modal. The text is processed by Modal as our infrastructure provider but is not sent to OpenRouter, Meta, or another model provider. The narrator software and voice assets are ours or licensed to us |
 | **Apple** | Payment, subscription status | Apple's infrastructure | Purchases; sends us server notifications about renewals, refunds, revocations | Apple's policy |
 
@@ -357,12 +362,8 @@ AI Studio's writing mode is intended solely to generate fictional
 entertainment. The server-based narration mode may process only text that
 you are legally entitled to submit and that does not contain personal or
 consumer health data about an identifiable real person, including you. Use
-the on-device voice for text containing such data. Before every order the
-App asks you to confirm that the order contains no information about an
-identifiable real person and no health, biometric, genetic,
-precise-location, financial-account, or other sensitive personal data
-(Section 6.6); if you indicate that it does, the App refuses the order and
-nothing is sent. We do not request such information, do not read requests to
+the on-device voice for text containing such data. Before every
+writing-mode order the App warns you — *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* — and asks you to confirm: *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* (Section 6.6). Before every narration order the App asks you to confirm that the order contains no information about an identifiable real person and no health, biometric, genetic, precise-location, financial-account, or other sensitive personal data; if you indicate that it does, the App refuses the order and nothing is sent. Writing-mode orders prohibited by this rule may be rejected, including by the automated filter described in Section 6.5. We do not request such information, do not read requests to
 look for it, and do not use anything you submit to make inferences about you
 or anyone else. **We do not ask for, and no screen in the App is treated as,
 consent to process health or other sensitive personal data. A user's
@@ -474,6 +475,11 @@ logs only.**
   permission version, the time, and the original transaction identifier —
   are retained with the hours ledger for the same period, because they
   document the basis on which paid work was done.
+- **Writing-mode confirmation record** (Section 6.6) — the confirmation text
+  version, the time, and a SHA-256 fingerprint of the order text, with no
+  text — is kept in the order receipt, which remains after the book is deleted
+  from the server, and is retained with the hours ledger for the same period,
+  because it documents the basis on which paid work was done.
 - **Deletion-request records.** When we fulfil a deletion request we keep a
   minimal record of the request itself (date, a keyed hash of the original
   transaction identifier — not the identifier itself — and what was
@@ -504,7 +510,7 @@ content, credible threats, terrorist or extremist material, trafficking,
 self-harm instructions, instructions facilitating serious wrongdoing,
 targeted harassment, and unlawful exploitation. The model provider may apply
 its own safeguards under its current service configuration; we do not rely
-on those safeguards as a substitute for our controls. These controls are
+on those safeguards as a substitute for our controls. **Pre-submission filter for writing-mode orders.** Before a writing-mode order is sent to OpenRouter, our server checks it with an automated filter for contact details (email addresses, telephone numbers), identity-document, bank-account, and payment-card numbers (for example a Social Security number, payment card number, or IBAN), passwords and API keys, and explicit combinations of "I" or a close family member with information about health, sexual orientation, gender identity, or a criminal record. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter does not catch everything, and the rule applies equally to anything the filter misses. These controls are
 automated. The safety controls evaluate submitted text for prohibited content
 categories, including self-harm instructions. They are not used to infer or
 create a record of any person's health status or to build a profile; only the
@@ -525,10 +531,13 @@ Policy](ai-safety-and-content-policy.html).
 ### 6.6 Permission screens, the per-order confirmation, and what we record
 
 **Before first use of AI Studio, the App presents the Terms screen. Before
-the first writing-mode order, and again if the provider changes, the App
-separately asks permission to send writing-mode content to OpenRouter and
-Meta. Server-based narration does not require permission to send content to
-OpenRouter or Meta because it is not sent to them.** No order content is
+the first writing-mode order, and again if the provider or the text of the
+permission changes, the App separately asks permission to send writing-mode
+content to OpenRouter and Meta. Server-based narration does not require
+permission to send content to OpenRouter or Meta because it is not sent to
+them.** Because the text of the permission changed in October 2026 (permission
+version 2026-10), the App asks for the permission again, including from users
+who granted the earlier one. No order content is
 sent to our service until you have completed the screens that apply to that
 mode.
 
@@ -541,15 +550,9 @@ mode.
    an identifiable real person, including you. Use the on-device voice for
    text containing such data.*
 2. **AI-provider permission screen** (before the first writing-mode order;
-   again if the provider changes) — a separate "Allow and Continue" action
-   with the text: *"Allow content from my AI Studio writing-mode orders to be
-   sent to OpenRouter and Meta in the United States until I withdraw this
-   permission or the provider changes. OpenRouter and Meta process
-   writing-mode content to generate the requested text. Requests are sent
-   using a setting that restricts routing to providers that state they do not
-   use content for training or routine retention. This is not a
-   zero-retention guarantee; limited retention may occur for abuse
-   prevention, security, billing, or legal compliance."* The screen provides
+   again if the provider or the text of the permission changes) — a separate
+   "Allow and Continue" action with the text: *"Allow content from my AI Studio writing-mode orders to be sent to OpenRouter and Meta to generate the requested text. I understand that their processing is not guaranteed to take place only in the United States and may take place outside the United States. This permission remains in effect until I withdraw it or the provider changes."* The screen
+   then continues to describe the routing setting: *"OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance."* The screen provides
    "Allow and Continue" and "Don't Allow" actions. Choosing "Don't Allow"
    sends no content to OpenRouter or Meta and leaves writing mode disabled;
    the player and server-based narration remain available.
@@ -563,21 +566,17 @@ keep no server copy after delivery: *"Delivery is confirmed only after the App
 has durably saved every chapter on the device."* Once that has happened we
 delete our server copy and cannot restore it (Section 6.4).
 
-**Before every order** the App additionally shows: *"I confirm that this
-order does not contain information about an identifiable real person,
-including me, and does not contain health, biometric, genetic,
-precise-location, financial-account, or other sensitive personal data"* with
-the button **"Confirm and Continue."** If you indicate that the order does
-contain such information, the App refuses the order; nothing is sent to our
-server, and for narration the App points you to the on-device voice. None of
+**Before every writing-mode order** the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the confirmation *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* with the button **"Confirm and Continue."** **Before every narration order** the App shows: *"I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data"* with the same button. If you indicate that a narration order does contain such information, the App refuses the order; nothing is sent to our server, and the App points you to the on-device voice. A writing-mode order that contains such information is prohibited and may be rejected, including by the automated filter in Section 6.5; the filter does not catch everything. For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text. The receipt does not contain the text itself and remains after the book is deleted from the server. None of
 these screens asks for consent to process health or other sensitive data,
 and no tap is treated as such consent.
 
 We record, for the Terms screen and the AI-provider permission screen, only
 the document or permission version, the time, and the original transaction
-identifier of the subscription used; the per-order confirmation's version
-and time, and the narration upload confirmation's version and time, are
-stored as fields of the order record. If we change the model provider or
+identifier of the subscription used. The writing-mode confirmation record
+(confirmation text version, time, and SHA-256 fingerprint of the order text,
+without the text) is kept in the order receipt, which remains after the book
+is deleted from the server; the narration confirmation's and upload
+confirmation's version and time are stored as fields of the order record. If we change the model provider or
 materially change the Terms or this Policy, the App asks again before the
 next order. You can see the current versions in Settings → Privacy.
 **Withdrawing AI-provider permission disables writing mode only. Server-based
@@ -1022,7 +1021,8 @@ authority where the law requires it.
 | Read-aloud passages | Modal (USA) | Not retained in our application storage; Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy |
 | Hours ledger and subscription-notification records (by original transaction id) | Modal (USA) | 7 years after the last related financial event, then deleted or irreversibly aggregated |
 | Permission records (document/permission version, time, original transaction id — nothing else) | Modal (USA) | With the hours ledger |
-| Per-order confirmation (version, time) | Modal (USA) | With the order record |
+| Narration per-order confirmation (version, time) | Modal (USA) | With the order record |
+| Writing-mode confirmation record in the order receipt (confirmation text version, time, SHA-256 fingerprint of the order text; no text) | Modal (USA) | Remains after the book is deleted from the server; retained with the hours ledger |
 | Content-report and enforcement notes, including any excerpt or chapter you choose to submit with a report | Modal (USA) / our mailbox | Up to 24 months after resolution, longer only where a specific applicable legal obligation or statutory exception requires it |
 | Materials preserved for a report under 18 U.S.C. § 2258A | Modal (USA) / our mailbox | One year after submission, and longer where legally required; held under a legal hold excluded from ordinary automatic deletion |
 | Deletion-request record (date, keyed hash of the transaction id, what was deleted; no content) | Modal (USA) | 2 years |

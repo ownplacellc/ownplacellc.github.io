@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: September 4, 2026**
+**Effective Date: October 5, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -78,7 +78,14 @@ location data to identify or infer visits to health-care facilities.
 Country- and region-level GeoIP checks are used solely for territorial and
 sanctions compliance. We do **not** infer health status from your requests, your library,
 your purchases, your language, or anything else, and we do **not** use
-automated tools to detect or extract health information from content. The
+automated tools to detect or extract health information from content, with
+one limited exception: the pre-submission filter for writing-mode orders
+described in A5 rejects an order that contains an explicit combination of
+"I" or a close family member with information about health, sexual
+orientation, gender identity, or a criminal record (among other categories),
+so that the order is not sent to the model provider. It does not infer health
+status, creates no record of anyone's health status, and our log keeps only
+the category of the refusal, not the text. The
 safety controls evaluate submitted text for prohibited content categories,
 including self-harm instructions. They are not used to infer or create a
 record of any person's health status or to build a profile; only the
@@ -124,9 +131,14 @@ receives it.
 | Recipient | Role | Location | What it receives |
 |---|---|---|---|
 | **Modal Labs, Inc.** (modal.com) | Hosting; runs our service and our own narrator model in our private container; holds the temporary working storage used to produce and deliver the order | United States | The full order (request or narration text, generated chapters, audio) |
-| **OpenRouter, Inc.** (openrouter.ai) | Gateway to the language model that writes fiction (writing mode only) | United States | The book request and the working text our writer program generates; no identifier added by us. While the order exists, our service keeps with it the request identifiers OpenRouter returns; they do not directly identify you and are deleted together with the order |
-| **The model provider reached through OpenRouter** (currently Meta Platforms, Inc.), acting as OpenRouter's subprocessor | Generates the text | United States | The same content. |
+| **OpenRouter, Inc.** (openrouter.ai) | Gateway to the language model that writes fiction (writing mode only) | United States company; processing location not guaranteed to be limited to the United States (hosted on Google Cloud Platform, US regions, but processing by the model provider may take place outside the United States) | The book request and the working text our writer program generates; no identifier added by us. While the order exists, our service keeps with it the request identifiers OpenRouter returns; they do not directly identify you and are deleted together with the order |
+| **The model provider reached through OpenRouter** (currently Meta Platforms, Inc.), acting as OpenRouter's subprocessor | Generates the text | United States company; processing location not guaranteed to be limited to the United States | The same content. |
 | **Our business email provider** | Delivery, storage, and security of mail sent to and from contact@ownplace.net | United States | Whatever you include in a support, privacy, or content-report message, and your email address |
+
+Writing-mode content is sent through OpenRouter to Meta to generate the
+requested text. We do not guarantee that processing by OpenRouter and Meta
+takes place exclusively in the United States; it may take place outside the
+United States.
 
 OpenRouter and Meta process writing-mode content to generate the
 requested text. Requests are sent using a setting that restricts routing to
@@ -182,15 +194,10 @@ refusal:
   text that you are legally entitled to submit and that does not contain
   personal or consumer health data about an identifiable real person,
   including you. Use the on-device voice for text containing such data.
-- **The confirmation, before every order.** Each time you place an order the
-  App shows the statement *"I confirm that this order does not contain
-  information about an identifiable real person, including me, and does not
-  contain health, biometric, genetic, precise-location, financial-account, or
-  other sensitive personal data"* and the button **"Confirm and Continue."**
-  If you instead indicate that the order does contain such information, the
-  App **refuses the order**; nothing is sent to our server, and the App
-  suggests the on-device voice for narration. There is no option to consent
-  to processing it instead.
+- **The confirmation and warning, before every order.** Before every
+  writing-mode order the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the statement *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* with the button **"Confirm and Continue."** Before every narration order the App shows the statement *"I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data"* and the same button. If you instead indicate that a narration order does contain such information, the App **refuses the order**; nothing is sent to our server, and the App suggests the on-device voice. A writing-mode order containing such information is prohibited and may be rejected. There is no option to consent to processing it instead.
+- **Automated filter before the provider.** Before a writing-mode order is sent to OpenRouter, our server checks it with an automated filter for contact details (email addresses, telephone numbers), identity-document, bank-account, and payment-card numbers (for example a Social Security number, payment card number, or IBAN), passwords and API keys, and explicit combinations of "I" or a close family member with information about health, sexual orientation, gender identity, or a criminal record. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter does not catch everything, and the rule applies equally to anything the filter misses.
+- **Record of the confirmation.** For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text. The receipt does not contain the text itself and remains after the book is deleted from the server. Because the record holds only a fingerprint and not the text, it does not contain consumer health data.
 - **What your confirmation does and does not do.** **A user's confirmation
   does not authorize processing of personal or consumer health data. We rely
   on a requested-service exception only where the applicable law permits it
@@ -205,8 +212,11 @@ refusal:
 - **The AI-provider permission is separate, mode-specific, and is not
   health-data consent.** Before your first writing-mode order, and again if
   the provider changes, the App asks you to allow content from your
-  writing-mode orders to be sent to OpenRouter and Meta in the United States
-  (A4, and Privacy Policy Section 6.6). Server-based narration does not
+  writing-mode orders to be sent to OpenRouter and Meta, with the statement
+  that their processing is not guaranteed to take place only in the United
+  States and may take place outside it; because the permission text changed
+  in October 2026 (version 2026-10), the App asks again, including from
+  users who granted the earlier permission (A4, and Privacy Policy Section 6.6). Server-based narration does not
   require permission to send content to OpenRouter or Meta because it is not
   sent to them; before every narration order the App instead shows the
   upload confirmation naming our service hosted by Modal. Neither permission
@@ -233,6 +243,7 @@ logs only.**
 | What | How long we keep it |
 |---|---|
 | Order text, generated chapters, title, and audio | Held in **temporary working storage** on Modal only while the order is being produced and delivered: encrypted, subject to an application-level time-to-live, and excluded from OWN PLACE LLC's application logs and crash reports; we do not create separate content backups. Deleted immediately after confirmed delivery of the final chapter. |
+| Writing-mode confirmation record in the order receipt (confirmation text version, time, SHA-256 fingerprint of the order text; no text) | Remains after the book is deleted from the server; retained with the hours ledger (Privacy Policy, Section 6.4) |
 | Content of an order that is never fully delivered | Deleted no later than **seven days** after the Service accepts the order |
 | Passages read aloud on demand | **Not retained in our application storage** |
 | Content you submit in a content report or support request | Retained separately under the report-retention period below |

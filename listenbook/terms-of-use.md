@@ -1,6 +1,6 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: September 4, 2026**
+**Effective Date: October 5, 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you" or
 "User") and OWN PLACE LLC ("we," "us," or "our"), a Washington limited
@@ -13,13 +13,16 @@ it (the "Service").
 **How you accept these Terms.** By downloading, installing, or using the App,
 you agree to these Terms as they apply to the player. **Before first use of
 AI Studio, the App presents the Terms screen. Before the first writing-mode
-order, and again if the provider changes, the App separately asks permission
-to send writing-mode content to OpenRouter and Meta. Server-based narration
-does not require permission to send content to OpenRouter or Meta because it
-is not sent to them** (Section 5.1). Before **every** order you also confirm
-that the order contains no information about an identifiable real person and
-no sensitive personal data, and before every server-based narration order
-you confirm the upload to our service on Modal (Section 5.1). We record the Terms
+order, and again if the provider or the text of the permission changes, the
+App separately asks permission to send writing-mode content to OpenRouter and
+Meta. Server-based narration does not require permission to send content to
+OpenRouter or Meta because it is not sent to them** (Section 5.1). Before
+**every** writing-mode order you also confirm that the description contains
+no personal information about an identifiable real person, including you,
+even under a changed name, and before every narration order you confirm that
+it contains no information about an identifiable real person and no
+sensitive personal data; before every server-based narration order you also
+confirm the upload to our service on Modal (Section 5.1). We record the Terms
 version, acceptance date, and the subscription transaction identifier used
 for the Service. If you do not agree, do not use the App or the Service.
 
@@ -303,13 +306,12 @@ users may cancel and obtain the remedies provided by applicable consumer law.
 **5.1 How it works; what you confirm before ordering.** When you order a
 book in writing mode, your description is sent to our server, which uses a
 third-party large language model (currently reached through OpenRouter, with
-the model currently provided by Meta, in the United States) to write the
-text, and our own narration model to read it aloud. **"OpenRouter and Meta
+the model currently provided by Meta) to write the text, and our own narration model to read it aloud. **"OpenRouter and Meta
 process writing-mode content to generate the requested text. Requests are
 sent using a setting that restricts routing to providers that state they do
 not use content for training or routine retention. This is not a
 zero-retention guarantee; limited retention may occur for abuse prevention,
-security, billing, or legal compliance."** That routing setting operates
+security, billing, or legal compliance."** **Writing-mode content is sent through OpenRouter to Meta to generate the requested text. We do not guarantee that processing by OpenRouter and Meta takes place exclusively in the United States; it may take place outside the United States.** That routing setting operates
 fail-closed: if no provider with such a policy is available, the order is not
 sent. In server-based
 narration mode, the text is processed by our narrator model on
@@ -320,10 +322,13 @@ request support, report content, submit a legal complaint, or when reasonably
 necessary to investigate abuse, security incidents, or comply with law.
 
 **Before first use of AI Studio, the App presents the Terms screen. Before
-the first writing-mode order, and again if the provider changes, the App
-separately asks permission to send writing-mode content to OpenRouter and
-Meta. Server-based narration does not require permission to send content to
-OpenRouter or Meta because it is not sent to them.** Nothing is sent to an
+the first writing-mode order, and again if the provider or the text of the
+permission changes, the App separately asks permission to send writing-mode
+content to OpenRouter and Meta. Server-based narration does not require
+permission to send content to OpenRouter or Meta because it is not sent to
+them.** Because the text of the permission changed in October 2026
+(permission version 2026-10), the App asks for the permission again,
+including from users who granted the earlier one. Nothing is sent to an
 AI provider until you have granted that permission.
 
 1. *Terms screen* ("I Agree"), before first use of AI Studio. You accept
@@ -335,14 +340,8 @@ AI provider until you have granted that permission.
    an identifiable real person, including you.
 2. *AI-provider permission screen* ("Allow and Continue"), before the first
    writing-mode order and again if the provider changes, which states:
-   **"Allow content from my AI Studio writing-mode orders to be sent to
-   OpenRouter and Meta in the United States until I withdraw this permission
-   or the provider changes. OpenRouter and Meta process writing-mode content
-   to generate the requested text. Requests are sent using a setting that
-   restricts routing to providers that state they do not use content for
-   training or routine retention. This is not a zero-retention guarantee;
-   limited retention may occur for abuse prevention, security, billing, or
-   legal compliance."** The screen provides "Allow and Continue" and "Don't
+   **"Allow content from my AI Studio writing-mode orders to be sent to OpenRouter and Meta to generate the requested text. I understand that their processing is not guaranteed to take place only in the United States and may take place outside the United States. This permission remains in effect until I withdraw it or the provider changes."** The screen then
+   continues: **"OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance."** The screen provides "Allow and Continue" and "Don't
    Allow" actions. Choosing "Don't Allow" sends no content to OpenRouter or
    Meta and leaves writing mode disabled; the player and server-based
    narration remain available.
@@ -359,19 +358,11 @@ AI provider until you have granted that permission.
    backup before deleting the App."** Because the server copy is deleted, a
    delivered book cannot be downloaded from our service again (Section 8).
 
-**Before every order** — in both modes — the App shows the statement **"I
-confirm that this order does not contain information about an identifiable
-real person, including me, and does not contain health, biometric, genetic,
-precise-location, financial-account, or other sensitive personal data"**
-with the button **"Confirm and Continue."** If you indicate instead that the
-order does contain such information, the App refuses the order and nothing
-is sent to our server; for narration, use the on-device voice. No screen in
-the App asks for, and no tap is treated as, consent to process health or
-other sensitive personal data.
+**Before every writing-mode order** the App shows the warning **"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."** and the statement **"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"** with the button **"Confirm and Continue."** **Before every narration order** the App shows the statement **"I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data"** with the same button. If you indicate instead that a narration order does contain such information, the App refuses the order and nothing is sent to our server; use the on-device voice. A writing-mode order containing such information is prohibited and may be rejected. No screen in the App asks for, and no tap is treated as, consent to process health or other sensitive personal data.
 
-We record the version and time of each acceptance and permission, and the
-version and time of the per-order confirmation and of the narration upload
-confirmation with the order. If we change the model provider or materially
+Before a writing-mode order is sent to OpenRouter, our server checks it with an automated filter for contact details (email addresses, telephone numbers), identity-document, bank-account, and payment-card numbers (for example a Social Security number, payment card number, or IBAN), passwords and API keys, and explicit combinations of "I" or a close family member with information about health, sexual orientation, gender identity, or a criminal record. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter does not catch everything, and the rule applies equally to anything the filter misses.
+
+We record the version and time of each acceptance and permission. For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text. The receipt does not contain the text itself and remains after the book is deleted from the server. The version and time of the narration confirmation and of the narration upload confirmation are recorded with the order. If we change the model provider or materially
 change these Terms or the Privacy Policy, the App asks again before the next
 order. You may withdraw the AI-provider permission at any time in Settings →
 Privacy; the Service will then not accept new writing-mode orders until you
@@ -399,7 +390,9 @@ older) to use AI Studio** — see the App-wide age requirement in Section 2.
 
 **5.3 Your requests.** You are solely responsible for the descriptions and
 text you submit. AI Studio's writing mode accepts orders for fictional works
-only; the server-based narration mode accepts only text you are entitled to
+only, and orders containing personal information about an identifiable real
+person are prohibited and may be rejected, including by the automated filter
+described in Section 5.1; the server-based narration mode accepts only text you are entitled to
 submit (Section 5.8). You must **not** submit requests or text that:
 
 (a) are unlawful or would result in unlawful content, including content that

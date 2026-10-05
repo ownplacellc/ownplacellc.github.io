@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: September 4, 2026**
+**Last updated: October 5, 2026**
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321,
 USA
@@ -122,10 +122,14 @@ with the App, and we will help.
    acceptance of the Terms of Use, with the 18+ confirmation and the rule
    that writing mode is for fiction only and server narration is for your
    own text without personal or health data about a real person. Before
-   your first writing-mode order (and again if the provider changes) the
-   App separately asks permission to send content from your writing-mode
-   orders to OpenRouter and Meta in the United States. OpenRouter and Meta
-   process writing-mode content to generate the requested text. Requests are
+   your first writing-mode order (and again if the provider or the text of
+   the permission changes) the App separately asks permission to send
+   content from your writing-mode orders to OpenRouter and Meta. The
+   permission text says that their processing is not guaranteed to take
+   place only in the United States and may take place outside the United
+   States; because that text changed in October 2026, the App asks again,
+   including from users who granted the earlier permission. OpenRouter and
+   Meta process writing-mode content to generate the requested text. Requests are
    sent using a setting that restricts routing to providers that state they
    do not use content for training or routine retention. This is not a
    zero-retention guarantee; limited retention may occur for abuse
@@ -141,10 +145,25 @@ with the App, and we will help.
    until you have completed the screens that apply to that mode.
 2. Describe the book you want and choose its length (15 minutes to 10 hours).
    The App shows your remaining hours before you confirm. **Before every
-   order** you confirm that it contains no information about an identifiable
-   real person (including you) and no health, biometric, genetic,
-   precise-location, financial-account, or other sensitive personal data —
-   "Confirm and Continue." If you say it does, the App refuses the order and
+   writing-mode order** the App warns you to use invented characters and
+   events (changing names or calling real events "fiction" does not make the
+   information anonymous) and you confirm that the description contains no
+   personal information about an identifiable real person, including you,
+   even under a changed name — "Confirm and Continue." Orders containing
+   such information are prohibited and may be rejected. Before sending, our
+   server checks writing-mode orders with an automated filter (contact
+   details, identity-document, bank-account and payment-card numbers,
+   passwords and API keys, and explicit combinations of "I" or a close family
+   member with health, sexual-orientation, gender-identity, or criminal-record
+   information); a flagged order is not sent to the provider and no hours are
+   charged, and we log only the category of the refusal, not the text. The
+   filter does not catch everything, and the rule applies to what it misses.
+   We also keep, in the order receipt, the version of the confirmation text,
+   the time, and a SHA-256 fingerprint of the order text (not the text).
+   **Before every narration order** you confirm that it contains no
+   information about an identifiable real person (including you) and no
+   health, biometric, genetic, precise-location, financial-account, or other
+   sensitive personal data; if you say it does, the App refuses the order and
    nothing is sent; for narration, use the free on-device voice instead.
 3. The order goes to our service. You can close the App; writing takes
    minutes, narration can take longer for long books.
