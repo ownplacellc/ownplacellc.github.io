@@ -25,8 +25,7 @@ Settings → Privacy.
 AI Studio is not a health service. Its **writing mode** is intended solely to
 generate fictional entertainment from a description you type. Its
 **server-based narration mode** reads aloud a text book you already own. We
-do not ask for health information, and our rules — stated before every
-order — require you to confirm that the order contains none.
+do not ask for health information, and our rules — stated before every writing-mode order and before a book is first sent for narration — require you to confirm that the order contains none.
 
 Nevertheless, AI Studio accepts free text. Information you type into a book
 request, or contained in a text you submit for narration, **may constitute
@@ -56,7 +55,7 @@ rights described in A7 and A8.
 ## A2. What consumer health data we may collect, and from whom
 
 We collect consumer health data only if it is put in the text sent to AI
-Studio, contrary to the confirmation given before every order, or included in
+Studio, contrary to the confirmation given before every writing-mode order or before a book is first sent for narration, or included in
 a message sent to us. Sources include the individual concerned, users
 submitting orders or reports, and other persons contacting us. A submission
 may concern someone other than its sender. Specifically:
@@ -183,7 +182,7 @@ example, in response to a valid subpoena) or as part of a merger,
 acquisition, or sale of assets, subject to the notice and purpose-limitation
 requirements of applicable law.
 
-## A5. Our rule: no real people, no sensitive data — confirmed before every order
+## A5. Our rule: no real people, no sensitive data — confirmed before every writing-mode order and before a book is first sent for narration
 
 We do not ask for consent to process consumer health data, and we do not
 treat any tap in the App as such consent. Our approach is prevention and
@@ -194,8 +193,8 @@ refusal:
   text that you are legally entitled to submit and that does not contain
   personal or consumer health data about an identifiable real person,
   including you. Use the on-device voice for text containing such data.
-- **The confirmation and warning, before every order.** Before every
-  writing-mode order the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the statement *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Before every narration order** the App shows a switch with the statement *"I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data"*; this is a switch in the App before sending, and our server receives and records nothing about it. If you instead indicate that a narration order does contain such information, the App **refuses the order**; nothing is sent to our server, and the App suggests the on-device voice. A writing-mode order containing such information is prohibited and may be rejected. There is no option to consent to processing it instead.
+- **The confirmation and warning.** Before every
+  writing-mode order the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the statement *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Narration of your own text — confirmed once per book.** The text of your book is sent to our service for narration only if the narrated voice (our service's voice) is selected for that book and you have confirmed that book's text. With the offline Apple voice the text never leaves your device, on any path (import, library, player, chapter list). You confirm per book: in the text-import form with a switch labeled *"This text has no real person's information"*, under which the App shows *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."*; or, in the library, in a question titled *"Send this text for narration?"* with the same note and the buttons *"Confirm and Send"* and *"Cancel"*, shown before a book is first sent for narration. Sending the same book again (for example, if the service did not finish the order and the book is submitted again) uses the confirmation already given. Our server does not receive or store this confirmation; it is given in the App only. If the text does contain such information, choose the offline Apple voice. A writing-mode order containing such information is prohibited and may be rejected. There is no option to consent to processing it instead.
 - **Automated filter before the provider.** Before a writing-mode order is sent to OpenRouter, our server checks it with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly (for example "password: ..." or "my password is ...") and API keys of common formats; and explicit combinations of the person placing the order, or a named close person (a relative, partner, friend, colleague, neighbor, patient, or client), with information about health, sexual orientation, gender identity, or a criminal record, in English, Russian, and Spanish. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter relies on patterns, does not recognize a real person without such a connection, and misses some cases; the prohibition applies equally to anything the filter misses.
 - **Record of the confirmation.** For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text, without the text itself. The receipt remains after the book is deleted from the server. The access, deletion, and other rights described in our privacy policies apply to this metadata as well. No such record is kept for server-based narration: the narration confirmation is given in the App only and is not sent to or stored by our server.
 - **What your confirmation does and does not do.** **A user's confirmation
@@ -218,8 +217,7 @@ refusal:
   in October 2026 (version 2026-10), the App asks again, including from
   users who granted the earlier permission (A4, and Privacy Policy Section 6.6). Server-based narration does not
   require permission to send content to OpenRouter or Meta because it is not
-  sent to them; before every narration order the App instead shows the
-  upload confirmation naming our service hosted by Modal. Neither permission
+  sent to them; before a book is first sent for narration the App instead asks for the per-book narration confirmation described above. Neither permission
   describes anything but where content goes; neither is, or is treated by us
   as, consent to process health or other sensitive data. None of these
   confirmations is a condition of using the player.
@@ -296,7 +294,7 @@ Regardless of where you live, you may:
   the permission to send writing-mode content to our AI providers; new
   writing-mode orders stop until you grant permission again. Withdrawing
   AI-provider permission disables writing mode only. Server-based narration
-  remains available subject to its separate upload confirmation. Withdrawal
+  remains available subject to its own per-book confirmation. Withdrawal
   does not undo processing that already happened, but you can then delete
   the resulting books.
 - **Ask us to stop collecting your consumer health data** — **you may

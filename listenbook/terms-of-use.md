@@ -19,10 +19,7 @@ Meta. Server-based narration does not require permission to send content to
 OpenRouter or Meta because it is not sent to them** (Section 5.1). Before
 **every** writing-mode order you also confirm that the description contains
 no personal information about an identifiable real person, including you,
-even under a changed name, and before every narration order you confirm that
-it contains no information about an identifiable real person and no
-sensitive personal data; before every server-based narration order you also
-confirm the upload to our service on Modal (Section 5.1). We record the Terms
+even under a changed name, and before a book is first sent for narration you confirm that its text contains no information about a real person, including yourself (Section 5.1). We record the Terms
 version, acceptance date, and the subscription transaction identifier used
 for the Service. If you do not agree, do not use the App or the Service.
 
@@ -344,10 +341,7 @@ AI provider until you have granted that permission.
    continues: **"OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance."** Choosing "Don't Allow" sends no content to OpenRouter or
    Meta and leaves writing mode disabled; the player and server-based
    narration remain available.
-3. *Narration upload screen*, before every server-based narration order,
-   which states: **"Upload this text to OWN PLACE LLC's service hosted by
-   Modal in the United States for server-based narration. It will not be
-   sent to OpenRouter or Meta."**
+3. *Narration confirmation*, once per book before it is first sent for narration, as described below. Text sent for narration is processed by our service on Modal in the United States and is not sent to OpenRouter or Meta.
 4. *Delivery and server-retention notice*, before your first order and again
    on the AI Studio purchase screen, which states: **"After delivery,
    Talefall saves the book on this device and, if iCloud is available and the
@@ -357,7 +351,7 @@ AI provider until you have granted that permission.
    backup before deleting the App."** Because the server copy is deleted, a
    delivered book cannot be downloaded from our service again (Section 8).
 
-**Before every writing-mode order** the App shows the warning **"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."** and the statement **"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"**. The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Before every narration order** the App shows a switch with the statement "I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data";  this is a switch in the App before sending, and our server receives and records nothing about it. If you indicate instead that a narration order does contain such information, the App refuses the order and nothing is sent to our server; use the on-device voice. A writing-mode order containing such information is prohibited and may be rejected. No screen in the App asks for, and no tap is treated as, consent to process health or other sensitive personal data.
+**Before every writing-mode order** the App shows the warning **"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."** and the statement **"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"**. The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Narration of your own text — confirmed once per book.** The text of your book is sent to our service for narration only if the narrated voice (our service's voice) is selected for that book and you have confirmed that book's text. With the offline Apple voice the text never leaves your device, on any path (import, library, player, chapter list). You confirm per book: in the text-import form with a switch labeled *"This text has no real person's information"*, under which the App shows *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."*; or, in the library, in a question titled *"Send this text for narration?"* with the same note and the buttons *"Confirm and Send"* and *"Cancel"*, shown before a book is first sent for narration. Sending the same book again (for example, if the service did not finish the order and the book is submitted again) uses the confirmation already given. Our server does not receive or store this confirmation; it is given in the App only. If the text does contain such information, choose the offline Apple voice. A writing-mode order containing such information is prohibited and may be rejected. No screen in the App asks for, and no tap is treated as, consent to process health or other sensitive personal data.
 
 Before a writing-mode order is sent to OpenRouter, our server checks it with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly (for example "password: ..." or "my password is ...") and API keys of common formats; and explicit combinations of the person placing the order, or a named close person (a relative, partner, friend, colleague, neighbor, patient, or client), with information about health, sexual orientation, gender identity, or a criminal record, in English, Russian, and Spanish. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter relies on patterns, does not recognize a real person without such a connection, and misses some cases; the prohibition applies equally to anything the filter misses.
 
@@ -367,7 +361,7 @@ order. You may withdraw the AI-provider permission at any time in Settings →
 Privacy; the Service will then not accept new writing-mode orders until you
 grant permission again. **Withdrawing AI-provider permission disables
 writing mode only. Server-based narration remains available subject to its
-separate upload confirmation.**
+own per-book confirmation.**
 
 **5.2 No guarantees about the output; accuracy note; age requirement.**
 AI-generated text is produced by a statistical model. It may be **inaccurate,
@@ -491,7 +485,7 @@ contain personal or consumer health data about an identifiable real person,
 including you. Use the on-device voice for text containing such data. When
 you ask the Service to narrate a text book you already have, you represent
 that you own the text or have the right to have it reproduced as audio for
-your personal use, and you give the per-order confirmation in Section 5.1.
+your personal use, and you give the per-book narration confirmation in Section 5.1.
 The narrator model is operated by OWN PLACE LLC in a private container
 hosted by Modal. The text is processed by Modal as our infrastructure
 provider but is not sent to OpenRouter, Meta, or another model provider. Do

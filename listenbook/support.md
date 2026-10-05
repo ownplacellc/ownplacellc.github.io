@@ -138,10 +138,7 @@ with the App, and we will help.
    sends no content to OpenRouter or Meta and leaves writing mode disabled;
    the player and server-based narration remain available. Server narration
    does not need that permission
-   because the text is not sent to them; instead, before every narration
-   order the App shows: "Upload this text to OWN PLACE LLC's service hosted
-   by Modal in the United States for server-based narration. It will not be
-   sent to OpenRouter or Meta." No order content is sent to our service
+   because the text is not sent to them; instead, before a book is first sent for narration the App asks you to confirm that its text contains no information about a real person (see "Narrate my own text book" below). The text is not sent to OpenRouter or Meta. No order content is sent to our service
    until you have completed the screens that apply to that mode.
 2. Describe the book you want and choose its length (15 minutes to 10 hours).
    The App shows your remaining hours before you confirm. **Before every
@@ -150,17 +147,15 @@ with the App, and we will help.
    information anonymous) and you confirm that the description contains no
    personal information about an identifiable real person, including you,
    even under a changed name, using a switch with the confirmation text. The "Create book" button stays disabled until the switch is on, and editing the description afterwards turns it off again, so you must confirm again. Orders containing such information are prohibited and may be rejected. Before sending, our server checks writing-mode orders with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly and API keys of common formats; and explicit combinations of you or a named close person (relative, partner, friend, colleague, neighbor, patient, client) with health, sexual-orientation, gender-identity, or criminal-record information, in English, Russian, and Spanish. A flagged order is not sent to the provider and no hours are charged, and we log only the category of the refusal, not the text. The filter misses some cases, and the rule applies to what it misses. We also keep, in the order receipt, the version of the confirmation text, the time, and a SHA-256 fingerprint of the order text (not the text); the rights described in our privacy policies apply to this metadata as well.
-   **Before every narration order** you confirm that it contains no
-   information about an identifiable real person (including you) and no
-   health, biometric, genetic, precise-location, financial-account, or other
-   sensitive personal data; if you say it does, the App refuses the order and
-   nothing is sent; for narration, use the free on-device voice instead.
+   Narration of your own text is confirmed per book, not per order (see "Narrate my own text book" below).
 3. The order goes to our service. You can close the App; writing takes
    minutes, narration can take longer for long books.
 4. The App shows the stages ("In queue", "Writing", "Narrating") and
    downloads the book automatically. Text is often available before audio.
 
-**Narrate my own text book.** You can also send a text book you imported
+**Narrate my own text book.** The text of your book is sent to our service for narration only if the narrated voice (our service's voice) is selected for that book and you have confirmed that book's text. With the offline Apple voice the text never leaves your device, on any path (import, library, player, chapter list). You confirm per book: in the text-import form with a switch labeled *"This text has no real person's information"*, under which the App shows *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."*; or, in the library, in a question titled *"Send this text for narration?"* with the same note and the buttons *"Confirm and Send"* and *"Cancel"*, shown before a book is first sent for narration. Sending the same book again (for example, if the service did not finish the order and the book is submitted again) uses the confirmation already given. Our server does not receive or store this confirmation; it is given in the App only. If the text does contain such information, choose the offline Apple voice.
+
+You can also send a text book you imported
 (EPUB, FB2, PDF, TXT) to be narrated in our voice; it uses hours the same
 way. The narrator model is operated by OWN PLACE LLC in a private container
 hosted by Modal. The text is processed by Modal as our infrastructure
@@ -305,7 +300,7 @@ on those services.
 - **AI Studio permissions:** Settings → Privacy shows the Terms version you
   accepted, lets you withdraw permission to send writing-mode content to
   our AI providers (new writing-mode orders stop until you grant permission
-  again; server narration remains available with its own upload
+  again; server narration remains available with its own per-book
   confirmation), and links to the [Consumer Health Data Privacy
   Policy](consumer-health-data-privacy-policy.html).
 

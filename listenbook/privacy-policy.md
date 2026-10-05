@@ -81,7 +81,7 @@ limited by this language-control provision.
   Writing-mode content is processed by OpenRouter and Meta, and we do not
   guarantee that this processing takes place only in the United States. Server-based narration does
   not require permission to send content to OpenRouter or Meta because it is
-  not sent to them; it has its own upload confirmation naming Modal. Details
+  not sent to them; it has its own per-book confirmation, given in the App before a book is first sent for narration. Details
   are in Section 6.
 - **Writing mode is for fiction; narration mode is for your own text without
   personal data.** AI Studio's writing mode is intended solely to generate
@@ -235,7 +235,7 @@ service.
 | **AI Studio permission records** (Terms acceptance before first use of AI Studio; AI-provider permission, text version 2026-10, before the first writing-mode order and again if a document, the permission text, or the provider changes) | The version and date of the Terms of Use you accepted, the version and time of your permission to transfer writing-mode content to our AI providers, and the Apple-signed subscription transaction — nothing else | Our service on Modal (USA) | To record that you accepted the Terms and authorized the transfer before any writing-mode content is sent | Retained with the billing ledger (Section 6.4) |
 | **AI Studio per-order confirmation** (writing mode, before every order) | The version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text — not the text itself — stored in the order receipt. Nothing is recorded for server-based narration (its confirmation is given in the App only) | Our service on Modal (USA) | To document that the order was placed under our no-personal-data rule | Kept after the book is deleted from the server, with the hours ledger (Section 6.4); the rights in Section 10 apply to it |
 | **AI Studio — write a book** (subscription) | Your book request ("prompt"), requested length in minutes, an Apple-signed subscription transaction, the App's shared service token, and a random per-order key used to avoid duplicate orders | Our service on Modal (USA); the request text is forwarded to the language model via OpenRouter (Section 6.3). While the order exists, our service keeps with it the request identifiers OpenRouter returns; they are deleted together with the order | To write the book you ordered | Temporary working storage only, for the time needed to run and deliver the order: encrypted, subject to an application-level time-to-live, and excluded from OWN PLACE LLC's application logs and crash reports; we do not create separate content backups. Text and audio are deleted immediately after delivery of the final chapter is confirmed; if full delivery is not confirmed within seven days after the Service accepts the order, all server-side order content is deleted and the hours are restored (Section 6.4) |
-| **AI Studio — narrate my text book** (subscription; sent only after you confirm the narration upload screen, Section 6.6) | The title, language, and full chapter text of the book you chose, plus the same signed transaction and token | Our service on Modal (USA). The text is processed by our narrator model running in our private container on Modal. It is processed by Modal as our infrastructure provider but is not sent to OpenRouter, Meta, or another model provider | To produce audio of that book in our narrator voice | Same as above |
+| **AI Studio — narrate my text book** (subscription; sent only if the narrated voice is selected for the book and you have confirmed the book's text, Section 6.6) | The title, language, and full chapter text of the book you chose, plus the same signed transaction and token | Our service on Modal (USA). The text is processed by our narrator model running in our private container on Modal. It is processed by Modal as our infrastructure provider but is not sent to OpenRouter, Meta, or another model provider | To produce audio of that book in our narrator voice | Same as above |
 | **AI Studio — read a passage aloud** (subscription) | The passage text and language, plus the same signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio immediately | Not retained in our application storage: the text is processed in temporary memory and discarded; only the character count and audio length are logged. Modal may retain Function inputs and outputs for up to seven days under its infrastructure retention policy |
 | **AI Studio — collecting finished books** | Book identifiers; a per-chapter "delivered" confirmation; a delete or cancel request when you delete a book in the App; the signed transaction (so the service shows you only your own books) | Our service on Modal (USA) | To download your books and to tell the server it may remove its copy | See Section 6.4 |
 | **AI Studio — Report content** (only when you use it) | The book identifier, the App version, the report category you choose, whatever you add, and the signed transaction (so we can act on your subscription's book). A content report may include the excerpt or chapter you choose to submit for review; reported content is retained separately under the report-retention period. Submitted directly from the App to our service. If submission fails, the App offers email to contact@ownplace.net as a fallback method, in which case we receive what you enter there and your email address | Our service on Modal (USA); fallback: our mailbox | To review unsafe or unlawful output and act on it (Section 6.5). We review and respond to all content reports in a timely manner; reports involving child exploitation, credible threats, or imminent harm receive immediate priority, and if an investigation requires additional time we inform the reporter through the available reporting channel | Up to 24 months after the report is resolved, unless needed for legal claims or required to be preserved by law (for example, 18 U.S.C. § 2258A) |
@@ -357,13 +357,13 @@ review may occur when you request support, report content, submit a legal
 complaint, or when reasonably necessary to investigate abuse, security
 incidents, or comply with law.
 
-**No real people, no sensitive information — confirmed before every order.**
+**No real people, no sensitive information — confirmed before every writing-mode order and before a book is first sent for narration.**
 AI Studio's writing mode is intended solely to generate fictional
 entertainment. The server-based narration mode may process only text that
 you are legally entitled to submit and that does not contain personal or
 consumer health data about an identifiable real person, including you. Use
 the on-device voice for text containing such data. Before every
-writing-mode order the App warns you — *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* — and asks you to confirm: *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* (Section 6.6). Before every narration order the App asks you to confirm that the order contains no information about an identifiable real person and no health, biometric, genetic, precise-location, financial-account, or other sensitive personal data; if you indicate that it does, the App refuses the order and nothing is sent. Writing-mode orders prohibited by this rule may be rejected, including by the automated filter described in Section 6.5. We do not request such information, do not read requests to
+writing-mode order the App warns you — *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* — and asks you to confirm: *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* (Section 6.6). Before a book is first sent for narration you confirm that its text contains no information about a real person, including yourself, in the App only (our server does not receive or store this confirmation); with the offline Apple voice the text never leaves the device. A narration text that contains such information is prohibited. Writing-mode orders prohibited by this rule may be rejected, including by the automated filter described in Section 6.5. We do not request such information, do not read requests to
 look for it, and do not use anything you submit to make inferences about you
 or anyone else. **We do not ask for, and no screen in the App is treated as,
 consent to process health or other sensitive personal data. A user's
@@ -555,17 +555,14 @@ mode.
    then continues to describe the routing setting: *"OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance."* Choosing "Don't Allow"
    sends no content to OpenRouter or Meta and leaves writing mode disabled;
    the player and server-based narration remain available.
-3. **Narration upload screen** (before every server-based narration order) —
-   the text: *"Upload this text to OWN PLACE LLC's service hosted by Modal in
-   the United States for server-based narration. It will not be sent to
-   OpenRouter or Meta."*
+3. **Narration confirmation** (once per book, before a book is first sent for narration) — described below. Text sent for narration is processed by our service on Modal in the United States and is not sent to OpenRouter or Meta.
 
 Before your first order, and on the paywall, the App also discloses that we
 keep no server copy after delivery: *"Delivery is confirmed only after the App
 has durably saved every chapter on the device."* Once that has happened we
 delete our server copy and cannot restore it (Section 6.4).
 
-**Before every writing-mode order** the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the confirmation *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Before every narration order** the App shows a switch with the statement *"I confirm that this order does not contain information about an identifiable real person, including me, and does not contain health, biometric, genetic, precise-location, financial-account, or other sensitive personal data"*; this is a switch in the App before sending, and our server receives and records nothing about it. If you indicate that a narration order does contain such information, the App refuses the order; nothing is sent to our server, and the App points you to the on-device voice. A writing-mode order that contains such information is prohibited and may be rejected, including by the automated filter in Section 6.5; the filter does not catch everything. For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text, without the text itself. The receipt remains after the book is deleted from the server. The access, deletion, and other rights described in our privacy policies apply to this metadata as well. No such record is kept for server-based narration: the narration confirmation is given in the App only and is not sent to or stored by our server. None of
+**Before every writing-mode order** the App shows the warning *"Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected."* and the confirmation *"I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name"* The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. **Narration of your own text — confirmed once per book.** The text of your book is sent to our service for narration only if the narrated voice (our service's voice) is selected for that book and you have confirmed that book's text. With the offline Apple voice the text never leaves your device, on any path (import, library, player, chapter list). You confirm per book: in the text-import form with a switch labeled *"This text has no real person's information"*, under which the App shows *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."*; or, in the library, in a question titled *"Send this text for narration?"* with the same note and the buttons *"Confirm and Send"* and *"Cancel"*, shown before a book is first sent for narration. Sending the same book again (for example, if the service did not finish the order and the book is submitted again) uses the confirmation already given. Our server does not receive or store this confirmation; it is given in the App only. If the text does contain such information, choose the offline Apple voice. A writing-mode order that contains such information is prohibited and may be rejected, including by the automated filter in Section 6.5; the filter does not catch everything. For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text, without the text itself. The receipt remains after the book is deleted from the server. The access, deletion, and other rights described in our privacy policies apply to this metadata as well. No such record is kept for server-based narration: the narration confirmation is given in the App only and is not sent to or stored by our server. None of
 these screens asks for consent to process health or other sensitive data,
 and no tap is treated as such consent.
 
@@ -574,12 +571,11 @@ the document or permission version, the time, and the original transaction
 identifier of the subscription used. The writing-mode confirmation record
 (confirmation text version, time, and SHA-256 fingerprint of the order text,
 without the text) is kept in the order receipt, which remains after the book
-is deleted from the server; no narration confirmation or narration
-upload confirmation is sent to or recorded by our server. If we change the model provider or
+is deleted from the server; the narration confirmation is not sent to or recorded by our server. If we change the model provider or
 materially change the Terms or this Policy, the App asks again before the
 next order. You can see the current versions in Settings → Privacy.
 **Withdrawing AI-provider permission disables writing mode only. Server-based
-narration remains available subject to its separate upload confirmation.**
+narration remains available subject to its own per-book confirmation.**
 
 ## 7. Purchases, Subscription, and What We Receive from Apple
 
@@ -758,8 +754,8 @@ supported"); these are numbers only, with no identifiers, and are kept for
   of writing-mode content to our AI providers at any time in Settings →
   Privacy; the App will not place new writing-mode orders until you grant
   permission again. Withdrawing AI-provider permission disables writing mode
-  only. Server-based narration remains available subject to its separate
-  upload confirmation. Withdrawal does not affect processing that already
+  only. Server-based narration remains available subject to its own
+  per-book confirmation. Withdrawal does not affect processing that already
   happened, and you can delete the resulting books as described above.
 - **Ask us to stop collecting consumer health data.** **You may separately
   request that we cease collecting, sharing, or selling your consumer health
@@ -844,8 +840,8 @@ This Policy and the App are governed by the laws of the State of Washington.
 **Consumer health data.** AI Studio is not a health service. Its writing
 mode is intended solely to generate fictional entertainment, its narration
 mode may process only text without personal or consumer health data about an
-identifiable real person, and before every order you confirm that the order
-contains none. A request may nevertheless contain consumer health data if
+identifiable real person, before every writing-mode order and before a book is first sent for narration you confirm that
+the order contains none. A request may nevertheless contain consumer health data if
 you include information about an identifiable person's physical or mental
 health, including your own. We do not request, read, infer from, sell, or
 share such data; if it is present, it is processed only to write or narrate
