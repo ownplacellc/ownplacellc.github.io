@@ -134,7 +134,7 @@ with the App, and we will help.
    do not use content for training or routine retention. This is not a
    zero-retention guarantee; limited retention may occur for abuse
    prevention, security, billing, or legal compliance. The screen provides
-   "Allow" and "Don't Allow" actions (in Settings the switch can be turned on only through this screen). Choosing "Don't Allow"
+   "Allow and Continue" and "Don't Allow" actions (in Settings the switch can be turned on only through this screen). Choosing "Don't Allow"
    sends no content to OpenRouter or Meta and leaves writing mode disabled;
    the player and server-based narration remain available. Server narration
    does not need that permission

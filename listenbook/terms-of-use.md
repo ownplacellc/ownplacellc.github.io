@@ -338,7 +338,7 @@ AI provider until you have granted that permission.
    narration mode may process only text that you are legally entitled to
    submit and that does not contain personal or consumer health data about
    an identifiable real person, including you.
-2. *AI-provider permission screen* (a separate screen with "Allow" and "Don't Allow" actions; in Settings the switch can be turned on only through this screen), before the first
+2. *AI-provider permission screen* (a separate screen with "Allow and Continue" and "Don't Allow" actions; in Settings the switch can be turned on only through this screen), before the first
    writing-mode order and again if the provider changes, which states:
    **"Allow content from my AI Studio writing-mode orders to be sent to OpenRouter and Meta to generate the requested text. I understand that their processing is not guaranteed to take place only in the United States and may take place outside the United States. This permission remains in effect until I withdraw it or the provider changes."** The screen then
    continues: **"OpenRouter and Meta process writing-mode content to generate the requested text. Requests are sent using a setting that restricts routing to providers that state they do not use content for training or routine retention. This is not a zero-retention guarantee; limited retention may occur for abuse prevention, security, billing, or legal compliance."** Choosing "Don't Allow" sends no content to OpenRouter or
