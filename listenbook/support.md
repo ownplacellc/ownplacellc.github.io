@@ -43,8 +43,9 @@ and includes the player while it is active.
   Territories](ai-studio-territories.html). The App is not distributed in the
   European Economic Area, the United Kingdom, or Switzerland.
 - **Cancel:** iOS Settings → Apple Account → Subscriptions → Talefall.
-  Cancellation takes effect at the end of the paid period; books already on
-  your phone keep working.
+  Cancellation takes effect at the end of the paid period. Books already on
+  your phone stay there and can be exported; listening and reading need the
+  player purchase or an active subscription.
 
 ### Restore Purchases
 
@@ -81,7 +82,8 @@ works offline, never sends the text anywhere, and does not use hours.
 delete the book from our server and cannot send it again. The App keeps the
 book on your device and, if iCloud is available, in your private iCloud. Use
 **Export to Files** for your own backup. An order not delivered within seven
-days is deleted and its hours restored.
+days expires; it is deleted and its hours restored at the next scheduled
+cleanup, normally within 15 minutes.
 
 **Report content.** Book menu → **Report content**. If sending fails, the App
 offers to email the report to contact@ownplace.net. Anyone can also report by

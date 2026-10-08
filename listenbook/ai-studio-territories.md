@@ -28,8 +28,10 @@ Sections 4.9 and 7).
 **Sanctions.** Independently of this list, the Service is not available to
 blocked or sanctioned persons or to anyone located in a country or region
 subject to comprehensive U.S. sanctions, including Cuba, Iran, North Korea,
-Syria, and the Crimea, so-called Donetsk People's Republic, and so-called
-Luhansk People's Republic regions of Ukraine. Our country check is a
+and the Crimea, so-called Donetsk People's Republic, and so-called Luhansk
+People's Republic regions of Ukraine. Countries not listed below, such as
+Syria and Russia, are excluded as a service restriction, and targeted
+sanctions and export controls apply everywhere. Our country check is a
 territorial control and does not by itself establish that a person is
 eligible under sanctions law.
 
@@ -40,7 +42,8 @@ subscription may continue to renew while you are away unless you cancel it;
 unused monthly hours still expire at renewal. If we remove the territory in
 which you bought and normally use the subscription, we will explain how to
 cancel and help you request an Apple refund for a materially unusable paid
-period.
+period. Privacy requests, withdrawals of permission, and content reports are
+accepted from anywhere.
 
 This list may change when required by law, a service-provider restriction, or
 an App Store requirement. We will give advance notice where reasonably
@@ -68,9 +71,10 @@ Bolivia · Chile · Guyana · Paraguay · Suriname
 
 ### Europe
 
-Ukraine (excluding the Crimea region and the so-called Donetsk People's
-Republic and Luhansk People's Republic regions, as defined by OFAC, and any
-other region later designated as a Covered Region)
+Ukraine (excluding the Crimea region, the so-called Donetsk People's
+Republic and Luhansk People's Republic regions, as defined by OFAC, the
+Kherson and Zaporizhzhia regions, and any other region later designated as a
+Covered Region)
 
 ### Middle East
 

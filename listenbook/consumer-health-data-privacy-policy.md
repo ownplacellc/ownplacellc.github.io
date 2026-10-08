@@ -51,24 +51,41 @@ else.
 
 ## A3. Purposes
 
-If consumer health data is present, we use it **only**:
+We do not offer any service that processes consumer health data, and we do
+not ask anyone to provide it. If it is present despite the rule, it may be
+processed automatically before anyone notices — by the checks in A5 and, if
+those miss it, by the steps that write, moderate, narrate, and deliver the
+requested book. **Neither a user's confirmation nor the fact that a request
+passed our filters authorizes that processing.** We rely on a "requested
+service" exception only where the applicable law allows it and the
+processing is necessary and proportionate for a service requested by the
+person the data is about — never because someone submitted another person's
+data. When we learn that an order contains consumer health data, we stop the
+order, delete the data, restore the hours, and notify OpenRouter of the
+identifiers we still hold if the order is active.
+
+Apart from that residual, unintended processing, we use consumer health data
+only:
 
 1. to run the automated checks that refuse requests containing personal or
    sensitive data, and to moderate generated chapters (A5);
-2. where a request was not refused, to write or narrate the specific book
-   requested and deliver it to the requester's device;
-3. to respond to a report, support message, or rights request; and
-4. to comply with a legal obligation.
+2. to respond to a report, support message, or rights request; and
+3. to comply with a legal obligation.
 
 We do not use it for advertising, marketing, profiling, research, model
 training, or any other purpose, and we do not sell it.
 
 ## A4. Who receives it
 
-We have no affiliates. Content that could contain consumer health data is
-handled only by these processors, on our instructions and only for the
-purposes in A3. Disclosure to a processor for those purposes is not "sharing"
-under Washington law.
+We have no affiliates. Content that could contain consumer health data, if
+someone includes it against our rule, may reach the recipients below, which
+process it on our instructions for the purposes in A3. We treat a recipient
+as a processor for consumer health data — so that disclosure to it is not
+"sharing" under Washington law — only to the extent a binding contract with
+it covers that processing. **Our contract with OpenRouter does not cover
+sensitive data (see "Contract limits" below), so we make no such claim for
+OpenRouter or the hosting providers it routes to;** for them, our protection
+is prevention (A5) and deletion on discovery (A3).
 
 | Recipient | Role | What it receives |
 |---|---|---|
@@ -91,8 +108,10 @@ that we do not have.
 
 **No sharing or sale.** We do not share consumer health data with third
 parties for their own purposes, with advertisers, or with data brokers, and
-we have not done so. We would do so only after obtaining the separate consent
-the law requires, and we would list those third parties here. We may disclose
+we have not done so, and we do not sell it. We would share it only after
+obtaining the separate consent the law requires, and would list those third
+parties here; a sale would require the separate, signed authorization the law
+requires. We may disclose
 data where the law requires it (for example, a valid court order).
 
 ## A5. Prevention: the rule, the filters, and no consent option
@@ -131,7 +150,7 @@ data where the law requires it (for example, a valid court order).
 
 | What | How long |
 |---|---|
-| Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if delivery is not confirmed, deleted no later than 7 days after the order was accepted |
+| Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if delivery is not confirmed, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
 | A refused request | Not stored; only the refusal category is logged |
 | Order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
 | Content reports (may include a passage) | 12 months |

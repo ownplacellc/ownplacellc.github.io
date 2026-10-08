@@ -73,9 +73,10 @@ that age, do not use the App.
 ## 3. The Player: Trial, One-Time Purchase, or Subscription
 
 - The App is free to download and includes a **3-day free trial** of the
-  player. You are **not charged automatically** when the trial ends. A trial
-  that began under an earlier version of the App keeps the length granted
-  then.
+  player. You are **not charged automatically** when the trial ends. Earlier
+  versions of the App offered a 14-day trial; from version 1.3, a trial in
+  progress ends 3 days after it started. This does not limit any right you
+  have under applicable law.
 - After the trial, listening and reading in the player require either the
   **one-time player purchase** (non-consumable, product
   `com.anisimov.audiobooks.pro`) or an **active Talefall Subscription**,
@@ -183,7 +184,8 @@ territory in which you bought and normally use the subscription, we will
 explain how to cancel and help you request an Apple refund for a materially
 unusable paid period. The list may change when required by law, a provider
 restriction, or an App Store requirement; we will give advance notice where
-reasonably practicable.
+reasonably practicable. Requests to exercise privacy rights, withdrawals of
+permission, and content reports are accepted from anywhere.
 
 **4.10 No reduction of what you already paid for.** We will not reduce the
 hours or other material benefits already purchased for the current period.
@@ -389,8 +391,11 @@ restrictions in Section 4.9.
 export-control or sanctions laws. You may not buy or use the Service if you
 are a blocked or sanctioned person, are acting for one, or are located in a
 country or region subject to comprehensive U.S. sanctions (including Cuba,
-Iran, North Korea, Syria, and the Crimea, so-called Donetsk People's
-Republic, and so-called Luhansk People's Republic regions of Ukraine). Our
+Iran, North Korea, and the Crimea, so-called Donetsk People's Republic, and
+so-called Luhansk People's Republic regions of Ukraine). Other countries and
+regions, such as Syria and Russia, are also outside the Supported Territories
+as a service restriction, and targeted sanctions and export controls apply
+everywhere. Our
 country check (Section 4.9) is a territorial control and does not by itself
 establish that you are eligible under sanctions law.
 
@@ -409,10 +414,11 @@ and audio are held on Modal as temporary, encrypted working storage.
 **Delivery is confirmed only after the App has saved every chapter on your
 device.** Immediately after delivery is confirmed, we delete our server copy of
 the text and audio, and **we cannot restore or re-deliver the book after
-that.** If delivery is not confirmed within **seven days** after the Service
-accepted the order, we treat the order as failed, stop processing, delete all
-server-side order content, and restore all hours reserved or charged for it;
-chapters already saved on your device remain. We keep a receipt for each order
+that.** An order whose delivery is not confirmed within **seven days** after
+the Service accepted it expires: at the next scheduled cleanup, normally
+within 15 minutes, we stop processing, delete all server-side order content,
+and restore all hours reserved or charged for it (a cleanup that fails is
+retried); chapters already saved on your device remain. We keep a receipt for each order
 (times, length, hours charged, and the records described in the Privacy
 Policy) but not its content. Exceptions: content you submit in a report or
 support request, and content the law requires us to preserve.
@@ -420,8 +426,9 @@ support request, and content the law requires us to preserve.
 **Your copy.** After delivery, the App saves the book on your device and, if
 iCloud is available and the save succeeds, in your private iCloud storage,
 which we cannot access. If iCloud is unavailable or full, use Export to Files
-before deleting the App. Access to your saved copy does not depend on an
-active subscription.
+before deleting the App. Your saved copy and Export to Files do not depend on
+an active subscription; listening to or reading it in the App requires the
+player purchase or an active subscription (Section 3).
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
@@ -429,7 +436,8 @@ future periods — subject to Section 4.10. If we discontinue the Service, we
 will give notice in the App and on our website at least 30 days in advance
 where practicable, stop charging renewals, give a reasonable period to use
 remaining hours, and, where that is impossible, help affected users request an
-appropriate refund through Apple. Books already on your device keep working.
+appropriate refund through Apple. Books already on your device stay there
+(Section 3 governs playback in the App).
 
 **Suspension and termination.** We may suspend or end your access to the
 Service if we reasonably believe you violated Sections 4.9, 5, 6, or 7. This

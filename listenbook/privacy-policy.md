@@ -71,7 +71,8 @@ live.
   requests or books.
 - **We keep no copy after delivery.** The server copy of a book is deleted as
   soon as the App confirms it has saved every chapter; an undelivered order
-  is deleted after seven days and its hours are restored. We keep a receipt
+  expires after seven days and is deleted, with its hours restored, at the
+  next scheduled cleanup. We keep a receipt
   (times, hours, confirmation records) but not the content (Section 6.4).
 - **Your subscription is identified by Apple's signed transaction, not by
   you** (Section 6.1).
@@ -143,7 +144,7 @@ you use them.
 | **Purchases** | Purchase and restore requests | Apple (StoreKit) | To buy the player, subscribe, or buy extra hours | Apple's policy; Section 7 |
 | **Trial date** | The trial start date | Apple iCloud Key-Value Store | So reinstalling does not restart the trial | Your iCloud account |
 | **AI-provider permission** | Whether you allowed or withdrew it, its version, and the time, with the signed subscription transaction (your Terms acceptance stays on the device) | Our service on Modal (USA) | So the Service writes books only with your permission | Section 6.4 |
-| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction, the App's shared service token, a random order key, and the version and time of your per-order confirmation | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until delivery, at most 7 days (Section 6.4). Receipt: Section 6.4 |
+| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction, the App's shared service token, a random order key, and the version and time of your per-order confirmation | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until delivery; an undelivered order expires after 7 days (Section 6.4). Receipt: Section 6.4 |
 | **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
 | **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
 | **Collecting books** | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
@@ -236,8 +237,10 @@ incident or to comply with law.
   device.** Immediately after that, we delete our server copy of the text and
   audio. We cannot restore or re-deliver the book after that.
 - **If delivery is not confirmed within seven days** after the Service
-  accepted the order, we treat the order as failed, delete all server-side
-  order content, and restore all hours reserved or charged for it.
+  accepted the order, the order expires: at the next scheduled cleanup,
+  normally within 15 minutes, we delete all server-side order content and
+  restore all hours reserved or charged for it; a cleanup that fails is
+  retried.
 - **Deleting or cancelling a book in the App** sends a delete request to the
   service (retried later if you are offline); a running order is stopped and
   its hours restored.
@@ -343,11 +346,16 @@ and what it generated for that order.
    device.
 
 **None of these screens asks for, and no tap is treated as, consent to process
-health or other sensitive data.** If such data reaches us despite the rule and
-our filters, it is processed only to refuse or carry out the specific request,
-by the recipients in 6.3, and deleted on the schedule in 6.4 or sooner on
-request. Where we learn that an order contains such data, we delete it and
-may refuse further orders.
+health or other sensitive data.** Neither a confirmation nor the fact that a
+request passed our filters authorizes processing such data. If it reaches us
+despite the rule, that is a residual risk we work to prevent, not a service
+we offer: it may be processed automatically before anyone notices, but we
+rely on a "requested service" exception only where the applicable law allows
+it and the processing is necessary and proportionate, and never because one
+person submitted another person's data. When we learn that an order contains
+such data, we stop the order, delete the data, restore the hours, notify
+OpenRouter of the identifiers we still hold if the order is active, and may
+refuse further orders. See the Consumer Health Data Privacy Policy.
 
 ### 6.7 Territory and sanctions check
 
@@ -355,10 +363,12 @@ The Service is offered only in the Supported Territories (Terms of Use,
 Section 4.9). For each Service request our server derives the **country** from
 the request's IP address and refuses requests from outside the Supported
 Territories, from countries and regions subject to comprehensive U.S.
-sanctions (including the Crimea, so-called Donetsk People's Republic, and
-so-called Luhansk People's Republic regions of Ukraine), and when the country
-cannot be determined. We record the country code and the decision in our
-logs, not the IP address; the IP address is used only for this check. We do
+sanctions or otherwise excluded (including the Crimea, so-called Donetsk
+People's Republic, so-called Luhansk People's Republic, Kherson, and
+Zaporizhzhia regions of Ukraine), and when the country
+cannot be determined. Privacy requests, permission withdrawals, and content
+reports are not blocked by this check. We record the country code and the
+decision in our logs, not the IP address; the IP address is used only for this check. We do
 not derive the U.S. state, do not collect precise location, and do not use
 location to infer visits to any place. This check is a territorial control
 and does not by itself establish eligibility under sanctions law.
@@ -445,8 +455,10 @@ once by 45 days where the law allows, telling you why within the first period.
 Shorter legal deadlines apply where they exist. **Appeals:** if we decline a
 request, reply to our answer within 45 days; we answer the appeal in writing
 within 45 days and, where the law provides, tell you how to contact your
-state's Attorney General. Exercising your rights never affects your player or
-subscription.
+state's Attorney General. We will not discriminate against you for exercising
+your rights. If you ask us to stop processing your data for the Service, we
+cannot write or narrate new books for your subscription while that request
+is in effect; your player and the books on your device are not affected.
 
 ## 11. Children and Age
 
@@ -530,7 +542,7 @@ websites you open from it follow their own policies.
 |---|---|---|
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
-| Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until delivery is confirmed; at most 7 days if never delivered; sooner if you delete the book or ask us |
+| Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until delivery is confirmed; if never delivered, the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
 | Processor copies | Modal; OpenRouter and its hosts | Modal up to 7 days; OpenRouter and hosts as described in 6.3 |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
@@ -545,20 +557,22 @@ websites you open from it follow their own policies.
 
 ## 18. App Privacy Label
 
-Our App Store privacy label and the privacy manifest in the App disclose:
+For version 1.3 our App Store privacy label and the privacy manifest in the
+App disclose:
 
 - **Data linked to you:** Identifiers — **User ID** (the subscription's
   original transaction identifier); **Purchases — Purchase History**
   (subscription status, extra hours, hours used); **User Content — Other User
-  Content** (book ideas, narration text, content reports); all for App
-  Functionality.
+  Content** (book ideas, narration text, content reports); **Location —
+  Coarse Location** (the country derived from the IP address of a Service
+  request, logged as a country code with the request for about one day);
+  all for App Functionality.
 - **Data not linked to you:** Usage Data — **Product Interaction** (the
   optional anonymous counters), for Analytics.
 - **No tracking.**
 
-The country derived from the IP address is used only to decide each request
-and is logged as a country code for about one day for security; it is not
-stored with your orders or used for any other purpose.
+The country is used only to decide each request under Section 6.7 and for
+security; it is not stored with your orders or used for any other purpose.
 
 ## 19. Changes to This Policy
 
