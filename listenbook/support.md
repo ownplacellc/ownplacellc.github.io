@@ -1,9 +1,9 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 5, 2026**
+**Last updated: October 8, 2026**
 
-**Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321,
-USA
+**Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
+WA 98034-5321, USA
 
 Contact: **contact@ownplace.net** · Telephone: +1 (213) 524-8012
 
@@ -11,319 +11,119 @@ Contact: **contact@ownplace.net** · Telephone: +1 (213) 524-8012
 
 ## Purchases and Billing
 
-**All purchases are processed by Apple through the App Store.** OWN PLACE LLC
-does not receive or store your payment card details or Apple Account
-credentials.
-
-**For charges, receipts, refunds, or purchase history**, contact **Apple
+**All purchases are processed by Apple.** We do not receive your payment
+details. For charges, receipts, refunds, or purchase history, contact **Apple
 Support** (https://support.apple.com/billing) or visit
-https://reportaproblem.apple.com. Refunds are granted or denied by Apple
-under its own policies. Prices are always the localized prices Apple shows
-you immediately before purchase; any price mentioned on this site is
-illustrative and may be outdated.
+https://reportaproblem.apple.com; Apple decides refunds. Prices are the ones
+Apple shows you before purchase.
 
-### The player (one-time purchase)
+### The player
 
-The App includes a **3-day free evaluation period** (evaluation periods
-started under an earlier version keep their original length). You will
-**not** be charged automatically when it ends. To continue using full player
-functionality, complete a one-time purchase through Apple at the price shown
-in your App Store storefront. This is not a subscription; there are no
-recurring charges for the player. The player purchase is separate from AI
-Studio and is never taken away because of anything that happens with AI
-Studio.
+The App includes a **3-day free trial** of the player, with no automatic
+charge when it ends. After that, listening and reading need either the
+**one-time player purchase** or an active **Talefall Subscription**, which
+includes the player while it is active. Without either, your library, your
+book orders, and Export to Files stay available.
 
-### AI Studio (subscription) — available in selected countries and regions
+### Talefall Subscription
 
-AI Studio — fictional books written and narrated by our service, or your own
-text books narrated in our voice — requires a separate **monthly
-auto-renewable subscription** that includes **10 hours of
-finished audio per month**. Unused monthly hours do not carry over.
+The monthly auto-renewable subscription unlocks **Book from an Idea** and
+narration of your own texts in the **Talefall voice** (both in the Create tab),
+and includes the player while it is active.
 
-AI Studio is offered only to people physically located in a **Supported
-Territory**. The App is **not distributed on the App Store storefronts of
-the European Economic Area, the United Kingdom, or Switzerland**, and AI
-Studio is not offered to persons located there. AI Studio is also
-unavailable in some other countries. The list is here:
-[Supported Territories](ai-studio-territories.html). If the App Store
-returns no AI Studio products for your storefront, the App shows "AI Studio
-is not offered in your App Store country or region" instead of a purchase
-screen. If the App Store does not answer within a short timeout, the App
-shows "Unable to load AI Studio purchases. Check your connection and try
-again." with a "Try again" button. Our service also refuses requests from
-the Crimea region and the so-called Donetsk People's Republic and Luhansk
-People's Republic regions of Ukraine, as defined by OFAC, and any other
-region later designated as a Covered Region, independently of the country
-check.
-
-**AI Studio requires physical presence in a Supported Territory. Purchases
-also require availability in the current App Store storefront. These checks
-apply to new subscriptions, top-ups, and Service requests. An existing
-subscription may continue to renew through Apple while you are outside a
-Supported Territory unless you cancel it; unused monthly hours still
-expire.** A subscriber travelling to an unsupported territory cannot place
-new orders there, but the player, books already downloaded, and any unused
-extra hours are kept. If we
-remove the territory in which a subscriber purchased and ordinarily uses AI
-Studio, we will provide cancellation instructions and assist with an Apple
-refund request for any materially unusable paid period.
-
-- **How hours are charged.** Before an order starts, the App shows your
-  remaining hours. You are charged the **lesser** of the audio actually
-  delivered and the length you selected — never more than you ordered.
-  Failed, cancelled, duplicate, or unusable output is not charged, and
-  reserved hours come back to your balance automatically. **If an order fails
-  or is cancelled after the monthly period from which its hours were charged
-  has ended, the restored hours are credited to your non-expiring extra-hours
-  balance.** If a delivered file
-  cannot be played or is materially not what was ordered, write to
-  contact@ownplace.net with the book identifier from the book menu and we
-  will restore the hours after checking.
-- **Out of hours?** Wait for your renewal date (shown in the App), or buy an
-  **extra 5 hours** (one-time consumable purchase; requires an active
-  subscription). Extra hours are used after the monthly hours and do not
-  expire at renewal.
-- **Extra hours — what to expect when you buy.** **Apple may charge your
-  Apple Account as soon as it approves the purchase.** The App credits the
-  five hours only after our server has verified the signed Apple
-  transaction. If the server cannot be reached at that moment, the App keeps
-  the transaction pending and retries automatically the next time you open
-  it; the same transaction is never credited twice. **If the hours are not
-  credited within 24 hours, contact contact@ownplace.net** — we will restore
-  the credit or help you request a refund from Apple.
-- **Extra hours if the subscription lapses.** They become unavailable while
-  the subscription is inactive but stay recorded, and come back when the same
-  subscription is reactivated. They do not disappear just because the
-  subscription lapsed or renewed.
+- **Hours.** Each month includes **5 hours of new audio**. Listening never
+  uses hours. Hours are deducted after narration for the actual length of the
+  finished audio, never more than your balance. Failed or cancelled books
+  return their hours automatically. Unused monthly hours expire at renewal.
+- **Extra hours.** With an active subscription you can buy **5 extra hours**;
+  they are used after the monthly hours and do not expire at renewal. If they
+  are not credited within 24 hours of purchase, write to us.
+- **Book length:** 15 minutes to 5 hours.
+- **Where it is available:** only in the [Supported
+  Territories](ai-studio-territories.html). The App is not distributed in the
+  European Economic Area, the United Kingdom, or Switzerland.
 - **Cancel:** iOS Settings → Apple Account → Subscriptions → Talefall.
-  Cancellation takes effect at the end of the paid period. Books already on
+  Cancellation takes effect at the end of the paid period; books already on
   your phone keep working.
-- **Refunded subscription:** if Apple refunds or revokes a subscription, the
-  service stops accepting new orders under it immediately.
 
 ### Restore Purchases
 
-If you purchased the player or the subscription and it is not recognized (for
-example, after reinstalling the App or switching to a new iPhone):
+Sign in with the same Apple Account you used to buy, then use **Restore
+Purchases** in the App. If a completed purchase is still not recognized,
+write to contact@ownplace.net.
 
-1. Make sure you are signed in with the **same Apple Account** used for the
-   original purchase.
-2. Open the App → **Settings** → tap **Restore Purchases** (for AI Studio,
-   the same button is on the subscription screen).
-3. Wait for confirmation from Apple.
+## Creating a Book: How It Works
 
-**If a completed purchase is still not recognized after using Restore
-Purchases, contact us at contact@ownplace.net** — that is a technical issue
-with the App, and we will help.
+1. **Before You Create.** The first time, the App asks you to confirm that you
+   are 18 or older and accept the [Terms of Use](terms-of-use.html) and
+   [Privacy Policy](privacy-policy.html).
+2. **Permission.** Before your first book order the App asks permission to
+   send your order to OpenRouter (which passes it to US-headquartered,
+   zero-data-retention hosts of the GLM model) or, if we switch the route, to
+   Amazon Web Services (Amazon Bedrock). "Not Now" sends nothing. You can
+   withdraw it later in Settings.
+3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
+   length. **Do not include personal data about real people, including
+   yourself.** Turn on "My idea contains no personal data about real people";
+   editing the idea turns it off again. Our server refuses ideas in which it
+   finds personal or sensitive data and asks you to rewrite them; no hours are
+   used.
+4. **Writing and narration.** You can close the App. Each chapter is checked
+   by our moderation model before it is narrated and delivered. The App
+   downloads the book automatically.
 
-## AI Studio: How It Works
+**Narrate your own text.** Choose the Talefall voice for a text book and
+confirm "This text has no real person's information"; the text then goes to
+our own narrator on our service and uses hours. The on-device Apple voice
+works offline, never sends the text anywhere, and does not use hours.
 
-1. Before you first use AI Studio the App presents the Terms screen:
-   acceptance of the Terms of Use, with the 18+ confirmation and the rule
-   that writing mode is for fiction only and server narration is for your
-   own text without personal or health data about a real person. Before
-   your first writing-mode order (and again if the provider or the text of
-   the permission changes) the App separately asks permission to send
-   content from your writing-mode orders to OpenRouter and Meta. The
-   permission text says that their processing is not guaranteed to take
-   place only in the United States and may take place outside the United
-   States; because that text changed in October 2026, the App asks again,
-   including from users who granted the earlier permission. OpenRouter and
-   Meta process writing-mode content to generate the requested text. Requests are
-   sent using a setting that restricts routing to providers that state they
-   do not use content for training or routine retention. This is not a
-   zero-retention guarantee; limited retention may occur for abuse
-   prevention, security, billing, or legal compliance. The screen provides
-   "Allow and Continue" and "Don't Allow" actions (in Settings the switch can be turned on only through this screen). Choosing "Don't Allow"
-   sends no content to OpenRouter or Meta and leaves writing mode disabled;
-   the player and server-based narration remain available. Server narration
-   does not need that permission
-   because the text is not sent to them; instead, before a book is first sent for narration the App asks you to confirm that its text contains no information about a real person (see "Narrate my own text book" below). The text is not sent to OpenRouter or Meta. No order content is sent to our service
-   until you have completed the screens that apply to that mode.
-2. Describe the book you want and choose its length (15 minutes to 10 hours).
-   The App shows your remaining hours before you confirm. **Before every
-   writing-mode order** the App warns you to use invented characters and
-   events (changing names or calling real events "fiction" does not make the
-   information anonymous) and you confirm that the description contains no
-   personal information about an identifiable real person, including you,
-   even under a changed name, using a switch with the confirmation text. The "Create book" button stays disabled until the switch is on, and editing the description afterwards turns it off again, so you must confirm again. Orders containing such information are prohibited and may be rejected. Before sending, our server checks writing-mode orders with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly and API keys of common formats; and explicit combinations of you or a named close person (relative, partner, friend, colleague, neighbor, patient, client) with health, sexual-orientation, gender-identity, or criminal-record information, in English, Russian, and Spanish. A flagged order is not sent to the provider and no hours are charged, and we log only the category of the refusal, not the text. The filter misses some cases, and the rule applies to what it misses. We also keep, in the order receipt, the version of the confirmation text, the time, and a SHA-256 fingerprint of the order text (not the text); the rights described in our privacy policies apply to this metadata as well.
-   Narration of your own text is confirmed per book, not per order (see "Narrate my own text book" below).
-3. The order goes to our service. You can close the App; writing takes
-   minutes, narration can take longer for long books.
-4. The App shows the stages ("In queue", "Writing", "Narrating") and
-   downloads the book automatically. Text is often available before audio.
+**Your copy and our server.** As soon as the App has saved every chapter, we
+delete the book from our server and cannot send it again. The App keeps the
+book on your device and, if iCloud is available, in your private iCloud. Use
+**Export to Files** for your own backup. An order not delivered within seven
+days is deleted and its hours restored.
 
-**Narrate my own text book.** The text of your book is sent to our service for narration only if the narrated voice (our service's voice) is selected for that book and you have confirmed that book's text. With the offline Apple voice the text never leaves your device, on any path (import, library, player, chapter list). You confirm per book: in the text-import form with a switch labeled *"This text has no real person's information"*, under which the App shows *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."*; or, in the library, in a question titled *"Send this text for narration?"* with the same note and the buttons *"Confirm and Send"* and *"Cancel"*, shown before a book is first sent for narration. Sending the same book again (for example, if the service did not finish the order and the book is submitted again) uses the confirmation already given. Our server does not receive or store this confirmation; it is given in the App only. If the text does contain such information, choose the offline Apple voice.
-
-You can also send a text book you imported
-(EPUB, FB2, PDF, TXT) to be narrated in our voice; it uses hours the same
-way. The narrator model is operated by OWN PLACE LLC in a private container
-hosted by Modal. The text is processed by Modal as our infrastructure
-provider but is not sent to OpenRouter, Meta, or another model provider.
-Server narration may process only text that you are legally
-entitled to submit and that does not contain personal or consumer health
-data about an identifiable real person, including you — for such text use
-the on-device voice. Reading aloud with the on-device Apple voice remains
-free and does not use hours.
-
-**Report content.** If a generated book contains something unsafe or
-unlawful, open the book menu and tap **Report content**. Report content
-submits the report directly through the App. If submission fails, the App
-offers email as a fallback method. A content report may
-include the excerpt or chapter you choose to submit for review; reported
-content is retained separately under the report-retention period. **We
-review and respond to all content reports in a timely manner. Reports
-involving child exploitation, credible threats, or imminent harm receive
-immediate priority. If an investigation requires additional time, we inform
-the reporter through the available reporting channel.** Anyone,
-including people who are not users, can also email contact@ownplace.net
-("Talefall: content report"). The rules
-and what we do about violations are in the [AI Safety and Content
+**Report content.** Book menu → **Report content**. If sending fails, the App
+offers to email the report to contact@ownplace.net. Anyone can also report by
+email ("Talefall: content report"). See the [AI Safety and Content
 Policy](ai-safety-and-content-policy.html).
 
-**Deleting or cancelling a book.** Deleting an AI Studio book in the App
-offers to delete the copy on this device and the copy in your private iCloud
-storage. If you request deletion while an order is queued, being
-written, or being narrated, we stop further processing as soon as technically
-possible, delete our working content, and restore the affected hours under
-Terms Section 4.2.
+**Generated content** may be inaccurate. Do not rely on it for facts or as
+professional advice.
 
-**No post-delivery server retention.** Your order text, the generated
-chapters, the title, and the audio are held on our service (Modal) as
-**temporary working storage** only while the order is being produced and
-delivered: the content is encrypted, subject to an application-level
-time-to-live, and excluded from OWN PLACE LLC's application logs and crash
-reports. We do not create separate content backups. Processor backup copies,
-if any, are handled as described in the Privacy Policy. Delivery is confirmed
-only after the App has durably saved every chapter on the device — a
-successful network download is not, by itself, delivery. Immediately after
-confirmed delivery of the final chapter, OWN PLACE LLC deletes its server
-copy (text and audio). **OWN PLACE LLC cannot recover or re-deliver the book
-from its server after deletion; the App may still restore your own saved
-iCloud copy.**
+## Privacy Requests
 
-If full delivery is not confirmed within seven days after the Service accepts
-the order, we treat the order as failed, stop further processing, delete all
-server-side order content, and automatically restore all hours reserved or
-charged for that order. Chapters already saved on your device remain
-available.
-
-We do not retain order content after confirmed delivery, except content you
-separately submit in a report or support request and content that law
-requires us to preserve.
-
-**Your copy of the book.** After delivery, Talefall saves the book on this
-device and, if iCloud is available and the save succeeds, in your private
-iCloud storage. OWN PLACE LLC deletes its server copy after the final
-chapter has been saved on this device and cannot restore it. If iCloud is
-unavailable or full, export your own backup before deleting the App. The App
-stores the copy through Apple's iCloud service under your Apple account. OWN
-PLACE LLC does not access or control that copy, and access to it does not
-depend on an active subscription — it is not "cloud storage" provided as a
-subscription benefit.
-You can also make your own copy at any time with **Export to Files**.
-
-**Request data deletion.** To have the records associated with your
-subscription deleted sooner: **to request access, correction, or deletion,
-email contact@ownplace.net and include your subscription's original
-transaction identifier, if available. We use it to locate records and verify
-your authority proportionately before disclosing or deleting data. The
-identifier alone is not proof of authority.** **Settings → Privacy → Request
-Data Deletion** in the App prepares that email for you with the identifier
-filled in; the App does not send a deletion request to our service by itself.
-We delete **records eligible for deletion, subject to the limited exceptions
-described in the Privacy Policy.**
-**Deleting does not forfeit purchased extra hours**: we keep only the
-minimum entitlement record needed to preserve that balance. If you ask us to
-delete every record including that one, we will first offer a refund path or
-obtain your separate confirmation of deletion and forfeiture. If you request
-deletion while an order is queued, being written, or being narrated, we stop
-further processing as soon as technically possible, delete our working
-content, and restore the affected hours under Terms Section 4.2. **After
-confirmed delivery we no longer hold identifiers that would let us locate any
-residual processor copy of your order. Requests are sent with a routing
-setting that excludes providers that retain or train on content; any limited
-retention by OpenRouter or the model provider for abuse prevention, security,
-billing, or legal compliance ends under their own retention periods. If you
-request deletion while an order is active, we cancel the order and notify
-OpenRouter with the identifiers we still hold.** If the order has already
-been delivered, we
-confirm that our server copy was deleted at delivery. A privacy deletion
-request does not delete the copy of the book on your device or in your
-iCloud storage — OWN PLACE LLC does not access or control that copy;
-delete it with the book's delete button in the App. See the Privacy Policy,
-"Your Choices and
-How to Delete Data," and the [Consumer Health Data Privacy
+Settings → Privacy → **Request data deletion** prepares an email to
+contact@ownplace.net with your subscription identifier. You can also ask for
+access or correction by email. See the [Privacy Policy](privacy-policy.html)
+and the [Consumer Health Data Privacy
 Policy](consumer-health-data-privacy-policy.html).
-
-**Generated content.** Writing-mode output is intended as fictional
-entertainment and may be inaccurate or fabricated. Server-based narration
-reproduces the text you submit and may be fiction or non-fiction. Please
-review generated content and do not rely on it for facts or as professional
-advice. See the Terms of Use.
 
 ## Importing Audiobooks
 
-**From Files:** Library → Import → choose files or a ZIP archive from the
-Files app (iCloud Drive, Dropbox, Google Drive, or local storage). Supported
-formats: MP3, M4A, M4B, AAC, FLAC; other formats are converted on the device.
+**From Files:** import audio files or a ZIP from the Files app. MP3, M4A, M4B,
+AAC, and FLAC are supported; other formats are converted on the device.
 
-**Wi-Fi Upload (computer-to-phone):**
-
-1. Connect your iPhone and computer to the **same Wi-Fi network**.
-2. In the App, open **Wi-Fi Upload** — the App will display a local address
-   (e.g., http://192.168.x.x:8080/…) that includes a one-time session token.
-3. Open that address in your computer's browser and upload your files.
-4. **Turn the server off** when you are done.
-
-⚠️ **Safety:** The Wi-Fi Upload transfer uses plain HTTP on your local
-network. Use it **only on a trusted private network** — never on public or
-shared Wi-Fi — keep the displayed address private, and turn the server off
-immediately after transferring files.
+**Wi-Fi Upload:** connect your iPhone and computer to the same Wi-Fi network,
+open Wi-Fi Upload in the App, open the shown address in your computer's
+browser, and upload. The transfer uses plain HTTP on your local network: use
+it only on a trusted private network and turn the server off when done.
 
 ## Free Catalogs
 
-The built-in catalogs show audiobooks and texts identified by LibriVox, the
-Internet Archive, and Project Gutenberg as public-domain or otherwise
-lawfully available, and are used subject to those providers' terms.
-Availability of any particular book and the accuracy of its metadata depend
-on those services.
-
-## Privacy Choices
-
-- **Covers:** Settings → Covers → "Find covers online" (on by default) sends
-  the title and author of books without a cover to Apple's iTunes Search
-  API. Turn it off if you prefer.
-- **Usage counters (no identifiers):** asked once on first launch, off by
-  default; change your answer in Settings → Privacy. Not offered in the EEA
-  or UK.
-- **AI Studio permissions:** Settings → Privacy shows the Terms version you
-  accepted, lets you withdraw permission to send writing-mode content to
-  our AI providers (new writing-mode orders stop until you grant permission
-  again; server narration remains available with its own per-book
-  confirmation), and links to the [Consumer Health Data Privacy
-  Policy](consumer-health-data-privacy-policy.html).
+The built-in catalogs show works that LibriVox, the Internet Archive, and
+Project Gutenberg identify as public-domain or lawfully available.
 
 ## Your Files and Backups
 
-**The player does not upload your library automatically. Text you explicitly
-submit for AI Studio narration, and content you choose to include in a report
-or support request, are exceptions described in this Policy.** Your
-audiobooks, bookmarks, history, and statistics are stored **only on your
-device** (and in your own iCloud/device backups, where applicable). We keep no
-copies of your imported files and **cannot restore** deleted local content.
-Deleting the App may delete your imported books and data — keep your own
-backups of original files. AI Studio books are saved on your device and, if
-iCloud is available and the save succeeds, in your private iCloud storage;
-we delete our server copy after delivery is confirmed and **cannot** send
-you the book again. Use **Export to Files** to keep your own copy.
+Your library, bookmarks, and statistics stay on your device and in your own
+backups. We keep no copies and cannot restore deleted local content; keep
+backups of your original files.
 
 ## Copyright Complaints
 
-If you are a rights holder and believe content accessible through the App or
-produced by the service infringes your rights, see the copyright-complaints
-section of the [Terms of Use](terms-of-use.html), and write
-to **contact@ownplace.net**.
+See the copyright section of the [Terms of Use](terms-of-use.html) and write to
+**contact@ownplace.net**.
 
 ## Legal Documents
 
@@ -331,5 +131,5 @@ to **contact@ownplace.net**.
 - [Terms of Use](terms-of-use.html)
 - [Consumer Health Data Privacy Policy](consumer-health-data-privacy-policy.html)
 - [AI Safety and Content Policy](ai-safety-and-content-policy.html)
-- [AI Studio Supported Territories](ai-studio-territories.html)
+- [Supported Territories](ai-studio-territories.html)
 - [EULA](eula.html)

@@ -1,51 +1,51 @@
-# Talefall — Audiobook Player: Where AI Studio Is Available
+# Talefall — Audiobook Player: Where the Talefall Subscription Is Available
 
-**Last updated: September 4, 2026**
+**Last updated: October 8, 2026**
 
-The App is distributed only through the App Store storefronts in which OWN
-PLACE LLC makes it available. It is not distributed on storefronts in the
-European Economic Area, the United Kingdom, or Switzerland. After download,
-the **audiobook player** may continue to function while the device is
-elsewhere, subject to the Terms of Use and applicable law.
+The App is distributed only on the App Store storefronts where OWN PLACE LLC
+makes it available. It is **not distributed on the storefronts of the
+European Economic Area, the United Kingdom, or Switzerland.** After download,
+the **player** keeps working wherever the device is, subject to the Terms of
+Use and applicable law.
 
-**AI Studio** — the optional subscription that writes fictional books and
-narrates them (or narrates your own text books) on our server — is offered
-only to people who are **physically located** in one of the countries and
-regions listed below (the "Supported Territories") at the moment they
-purchase, top up, or place an order. **AI Studio requires physical presence in
-a Supported Territory. Purchases also require availability in the current App
-Store storefront. These checks apply to new subscriptions, top-ups, and
-Service requests. An existing subscription may continue to renew through Apple
-while you are outside a Supported Territory unless you cancel it; unused
-monthly hours still expire.** Eligibility is not based on citizenship,
-residence, or the country of your Apple Account. See the [Terms of Use,
-Sections 4.9 and 7](terms-of-use.html) and the [Privacy Policy, Section
-14](privacy-policy.html).
+The **Talefall Subscription** and its server features — creating a book from
+an idea and narrating your own text in the Talefall voice — together with
+extra-hours purchases, are offered only to people who are **physically
+located** in one of the countries and regions listed below (the "Supported
+Territories") when they buy, top up, or send a request. Eligibility is not
+based on citizenship, residence, or the country of your Apple Account.
 
-In any other country or region not listed below, the AI Studio subscription
-and extra hours are not sold, and AI Studio requests are refused by our
-service before any order is created. The player and books already on your device keep
-working everywhere, and unused extra hours stay recorded for later use from
-a Supported Territory. Unused monthly hours expire at renewal, including
-while the subscriber is temporarily located outside the Supported
-Territories. If we remove the territory in which a subscriber purchased and
-ordinarily uses AI Studio, we will provide cancellation instructions and
-assist with an Apple refund request for any materially unusable paid period
-(Terms of Use, Section 4.9).
+**How we check.** Our server determines the country of each request from the
+request's IP address and refuses requests that come from outside the
+Supported Territories, from a country or region subject to comprehensive U.S.
+sanctions, or from a location it cannot determine. A refused request creates
+no order, sends nothing to an AI provider, and uses no hours. We record the
+country code and the refusal, not the IP address. Purchases also depend on
+the App Store offering the product in your storefront. Please do not use a VPN
+or another person's Apple Account to get around this check (Terms of Use,
+Sections 4.9 and 7).
 
-**Sanctioned regions.** Independently of the country list, AI Studio is not
-available to persons located in any country or region subject to
-comprehensive U.S. sanctions, and our service separately blocks requests
-that originate from the Crimea region and the so-called Donetsk People's
-Republic and Luhansk People's Republic regions of Ukraine, as defined by
-OFAC, and any other region later designated as a Covered Region, even
-though Ukraine as a whole is a Supported Territory. The sanctions rules in
-Section 7 of the Terms of Use apply to everyone. **GeoIP is a territorial
-control and does not by itself establish sanctions eligibility.**
+**Sanctions.** Independently of this list, the Service is not available to
+blocked or sanctioned persons or to anyone located in a country or region
+subject to comprehensive U.S. sanctions, including Cuba, Iran, North Korea,
+Syria, and the Crimea, so-called Donetsk People's Republic, and so-called
+Luhansk People's Republic regions of Ukraine. Our country check is a
+territorial control and does not by itself establish that a person is
+eligible under sanctions law.
 
-This list may change when required by law, regulation, a service-provider
-restriction, or an App Store requirement. We will give advance notice where
-reasonably practicable.
+**Travelling.** A subscriber outside the Supported Territories cannot send new
+requests there, but the player and the books already on the device keep
+working, and unused extra hours stay recorded for later use. An existing
+subscription may continue to renew while you are away unless you cancel it;
+unused monthly hours still expire at renewal. If we remove the territory in
+which you bought and normally use the subscription, we will explain how to
+cancel and help you request an Apple refund for a materially unusable paid
+period.
+
+This list may change when required by law, a service-provider restriction, or
+an App Store requirement. We will give advance notice where reasonably
+practicable. See also the [Terms of Use](terms-of-use.html) and the [Privacy
+Policy](privacy-policy.html).
 
 ## Supported Territories (80)
 
@@ -101,8 +101,8 @@ Guinea-Bissau · Liberia · Mauritania · Mozambique · Namibia · Sierra Leone
 
 ## Not available
 
-AI Studio is not available anywhere not listed above. This includes, without
-limitation: all European Union member states, Iceland, Liechtenstein, Norway,
+The subscription is not available anywhere not listed above. This includes,
+without limitation: all European Union member states, Iceland, Liechtenstein, Norway,
 the United Kingdom, Switzerland, Russia, Belarus, China, Macao, Türkiye,
 Brazil, Argentina, Colombia, Peru, Uruguay, Ecuador, Venezuela, South Africa,
 Nigeria, Kenya, Ghana, Morocco, Egypt, Saudi Arabia, Qatar, Bahrain,
@@ -112,16 +112,14 @@ Serbia, Kosovo, Afghanistan, Iraq, Libya, Yemen, Myanmar, Cameroon,
 Botswana, Burkina Faso, Gabon, Madagascar, Malawi, Mali, Niger, São Tomé and
 Príncipe, and Seychelles.
 
-In the European Economic Area, the United Kingdom, and Switzerland the whole
-App — not only AI Studio — is not distributed: it is not offered on those
-App Store storefronts.
+The Talefall Subscription is not available anywhere not listed above. In
+the European Economic Area, the United Kingdom, and Switzerland the whole App,
+not only the subscription, is not distributed.
 
-If you are in a Supported Territory and the App says "AI Studio is not
-offered in your App Store country or region," make sure your Apple Account
-storefront matches the country you are in. If it says "Unable to load AI
-Studio purchases. Check your connection and try again.", check your Internet
-connection (the App needs to reach the App Store to load the products) and
-tap "Try again". If the problem persists, write to contact@ownplace.net.
+If you are in a Supported Territory and the App cannot load the subscription,
+make sure your Apple Account storefront matches the country you are in and
+that you are connected to the Internet, then try again. If the problem
+persists, write to contact@ownplace.net.
 
 ## Questions
 

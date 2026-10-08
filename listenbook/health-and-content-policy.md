@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: This page has moved
 
-**Updated: September 4, 2026**
+**Updated: October 8, 2026**
 
 This address previously held one page with two parts. They are now two
 separate documents:
@@ -12,12 +12,13 @@ separate documents:
   could reach us, from whom, who processes it, how long it is kept, and your
   rights.
 - **[AI Safety and Content Policy](ai-safety-and-content-policy.html)** —
-  the rules for what may be requested from AI Studio, our automated safety
-  controls, how to report content, enforcement, and appeals.
+  the rules for what may be requested from the Talefall Subscription's
+  server features, our automated safety controls, how to report content,
+  enforcement, and appeals.
 
 Our other documents: [Privacy Policy](privacy-policy.html) ·
 [Terms of Use](terms-of-use.html) ·
-[AI Studio Supported Territories](ai-studio-territories.html) ·
+[Supported Territories](ai-studio-territories.html) ·
 [EULA](eula.html) · [Support](support.html)
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA ·

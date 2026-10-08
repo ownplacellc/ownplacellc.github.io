@@ -1,192 +1,197 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: October 5, 2026**
+**Effective Date: October 8, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
 Audiobook Player (the "App"; bundle identifier com.anisimov.audiobooks) and
-operator of its optional AI Studio service (the "Service").
+operator of the server features that come with the Talefall Subscription (the
+"Service"): **Book from an Idea** and **narration of your own text in the
+Talefall voice**, both in the App's Create tab.
 
-This is our **AI Safety and Content Policy** for AI Studio. It is part of our
-[Terms of Use](terms-of-use.html) and our [Privacy
-Policy](privacy-policy.html). How consumer health data would be handled if it
-reached us is set out in a separate document, the [Consumer Health Data
-Privacy Policy](consumer-health-data-privacy-policy.html).
+This Policy is part of our [Terms of Use](terms-of-use.html) and our [Privacy
+Policy](privacy-policy.html). How consumer health data is handled if it
+reaches us is described in our [Consumer Health Data Privacy
+Policy](consumer-health-data-privacy-policy.html).
 
 ## B1. Scope
 
-This Policy governs every request submitted to AI Studio and every book it
-produces. It is part of the Terms of Use (Section 5). It applies in addition
-to the App's 18+ rating and the age confirmation required before the first
-order.
+This Policy governs every request submitted to the Service and every book it
+produces. It applies in addition to the App's 18+ rating and the "Before You
+Create" screen, on which you state that you are 18 or older and accept the
+Terms before your first use of the Service. That statement is a
+self-declaration; we do not verify age.
 
-## B2. Writing mode: fiction only. Narration mode: your own text, no personal data
+## B2. The core rule: no personal data about real people
 
-AI Studio's writing mode is intended solely to generate fictional
-entertainment. The server-based narration mode may process only text that
-you are legally entitled to submit and that does not contain personal or
-consumer health data about an identifiable real person, including you. Use
-the on-device voice for text containing such data.
+Do not put personal data about real people — **including yourself** — into a
+book idea or into a text you send for narration in the Talefall voice. That
+means no real person's name together with their circumstances, no contact
+details, addresses, or account numbers, and no health, sexual orientation,
+gender identity, beliefs, finances, criminal record, or other sensitive
+details about you or anyone else. Changing a name or calling something
+"fiction" does not make such details anonymous.
 
-In writing mode your request must not describe, depict, or be about a real,
-identifiable person — including you, even under a changed name. Before every
-writing-mode order the App warns you: "Use invented characters and events. Changing names or calling real events "fiction" does not make the information anonymous. Orders containing such information are prohibited and may be rejected." and you confirm with a switch: "I confirm this description contains no personal information about an identifiable real person, including me, even under a changed name". The writing-mode order form shows a switch with the confirmation text; the "Create book" button stays disabled until you turn the switch on, and editing the description afterwards turns the switch off again, so you must confirm again. Before a book is first sent for narration you confirm, in the App only, that its text contains no information about a real person, including yourself — in the text-import form with the switch *"This text has no real person's information"*, or in the library question *"Send this text for narration?"* (buttons *"Confirm and Send"* and *"Cancel"*). The note shown with both says: *"The narrated voice sends the chapter text to our service. Confirm the text contains no information about a real person, including yourself. If it does, choose the offline Apple voice — it never leaves this device."* The confirmation is per book, a repeated submission of the same book uses it, and our server does not receive or store it. With the offline Apple voice the text never leaves your device. Writing-mode orders containing such information are prohibited and may be rejected.
+- **Stories** must be fiction: invented characters and events.
+- **Explainers and How-to guides** may cover general topics — science,
+  history, how things work, a skill you want to learn — but not a private
+  individual.
+- **Narration in the Talefall voice** is for text you are entitled to have
+  narrated and that contains no personal data about real people. For any
+  other text, use the on-device Apple voice: that text never leaves your
+  device.
 
-Before a writing-mode order is sent to OpenRouter, our server checks it with an automated, pattern-based filter for: email addresses; telephone numbers; U.S. Social Security numbers (SSN); payment card numbers (with a check-digit test); IBAN numbers; passwords written out explicitly (for example "password: ..." or "my password is ...") and API keys of common formats; and explicit combinations of the person placing the order, or a named close person (a relative, partner, friend, colleague, neighbor, patient, or client), with information about health, sexual orientation, gender identity, or a criminal record, in English, Russian, and Spanish. An order the filter flags is rejected: it is not sent to OpenRouter or Meta, no hours are charged, and our log records only the category of the refusal, not the text. The filter relies on patterns, does not recognize a real person without such a connection, and misses some cases; the prohibition applies equally to anything the filter misses. For each writing-mode order our server stores in the order receipt a record of your confirmation: the version of the confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the order text, without the text itself. The receipt remains after the book is deleted from the server. The access, deletion, and other rights described in our privacy policies apply to this metadata as well. No such record is kept for server-based narration: the narration confirmation is given in the App only and is not sent to or stored by our server.
-
-These rules exist to protect you and others. Because we do not routinely
-review submitted content, we rely on your confirmation that it contains no
-prohibited personal or consumer health data, backed by the automated filter
-above, which does not catch everything. A user's confirmation does not authorize processing of personal
-or consumer health data (see the [Consumer Health Data Privacy Policy,
-A5](consumer-health-data-privacy-policy.html)).
+Before **every** book order you turn on the switch **"My idea contains no
+personal data about real people"**; it covers the exact text of the idea, so
+editing the idea requires confirming again. Before a book is first sent for
+narration in the Talefall voice you confirm **"This text has no real person's
+information."** These confirmations state the rule; they are not consent to
+process sensitive data, and the rule applies whether or not our filters catch
+a violation.
 
 ## B3. Prohibited uses
 
-You may not use AI Studio to request, produce, or narrate content that:
+You may not use the Service to request, produce, or narrate content that:
 
 1. **sexualizes minors** in any form, including fictional characters
-   presented as minors, or that otherwise exploits or endangers children;
-2. is **pornographic or graphically explicit sexual content, sexual
-   services, sexual exploitation, non-consensual sexual content, or fetish
-   content intended primarily for sexual arousal** — all of which are
-   prohibited;
+   presented as minors, or otherwise exploits or endangers children;
+2. is **pornographic or graphically explicit sexual content**, sexual
+   services, non-consensual sexual content, or fetish content intended
+   primarily for sexual arousal;
 3. **threatens, incites, or glorifies violence** against real people or
-   groups, or constitutes a credible threat;
-4. **promotes, recruits for, or provides support to terrorism or violent
-   extremism**, including extremist recruitment material;
+   groups, or is a credible threat;
+4. **promotes or supports terrorism or violent extremism**;
 5. **facilitates human trafficking, forced labour, or sexual exploitation**;
-6. **provides instructions for or encourages self-harm, suicide, or eating
+6. **provides instructions for, or encourages, self-harm, suicide, or eating
    disorders**;
 7. **provides instructions that facilitate serious wrongdoing**, including
-   the creation of weapons capable of mass harm, malware, or serious crimes
-   against persons;
-8. **harasses, bullies, or demeans** a real person, or targets people on the
-   basis of a protected characteristic;
+   weapons capable of mass harm, malware, or serious crimes against people;
+8. is **hateful**: attacks or demeans people on the basis of a protected
+   characteristic, or harasses or bullies a real person;
 9. **impersonates or defames** a real person or organization, or presents
    invented statements as things a real person said or did;
-10. **profiles, tracks, or compiles personal data** about other people, or
-    contains personal or health information about identifiable people;
-11. is intended to be presented as **medical, legal, financial, psychological,
-    or other professional advice** without the involvement of a licensed
-    professional, or as a substitute for emergency services;
+10. contains or compiles **personal data about real people** (B2);
+11. is meant to be presented as **medical, legal, financial, psychological,
+    or other professional advice**, or as a substitute for emergency
+    services;
 12. **infringes copyright, trademark, privacy, or publicity rights**,
-    including requests to reproduce or continue a specific protected work or
-    to closely imitate a living author's identifiable style with intent to
-    pass the result off;
-13. contains **prompt-injection, malware**, or attempts to extract our system
-    instructions, provider keys, or other users' content;
+    including requests to reproduce or continue a specific protected work;
+13. contains **prompt-injection or malware**, or tries to extract our
+    instructions, keys, or other users' content;
 14. **circumvents** hours, limits, the territorial or sanctions restrictions
     in the Terms (Sections 4.9 and 7), or these safety controls; or
-15. is otherwise **unlawful** where you are located or where we operate.
+15. is otherwise **unlawful** where you are or where we operate.
 
-Ordinary adult fiction — including violence, crime, horror, strong language,
-and mature themes handled as part of a story — is not prohibited by this
-Policy; the App is rated 18+ for that reason. Sexual content is limited to
-what item 2 allows: it may be part of a narrative, but pornographic or
-graphically explicit material is prohibited. The model provider may apply its
-own safeguards under its current service configuration; we do not rely on
-those safeguards as a substitute for our controls, and a request may still
-be declined by the provider.
+Ordinary adult fiction — violence, crime, horror, strong language, and mature
+themes handled as part of a story — is allowed; that is why the App is rated
+18+. Sexual content may be part of a story but must not be pornographic or
+graphically explicit.
 
 ## B4. Safety controls
 
-- **Automated input controls** examine each request before it is sent to the
-  language model and decline requests that match the prohibited categories
-  above. A declined request consumes no hours.
-- **Automated output controls** examine generated text before narration and
-  stop an order whose output matches the prohibited categories; a stopped
-  order is not charged.
-- **Provider safeguards.** The model provider may apply its own safeguards
-  under its current service configuration; we do not rely on those
-  safeguards as a substitute for our controls.
-- **No human pre-review.** Nobody at OWN PLACE LLC reads requests or books
-  before they reach you. Authorized personnel may review specific content
-  only when you request support, report content, submit a legal complaint,
-  or when reasonably necessary to investigate abuse, security incidents, or
-  comply with law.
-- **No profiling.** Safety controls make a decision about a request; they do
-  not build a record of you. Only the enforcement notes in B6 are kept.
+All of these run automatically on our own server. They reduce risk but are
+imperfect: they can refuse a harmless request and miss a harmful one, so the
+rules above apply to anything they miss, and you must review generated
+content before relying on it or sharing it.
 
-These controls are imperfect. They can decline a harmless request and can
-miss a harmful one; that is why you must review generated content before
-relying on it or sharing it, and why the report path below exists.
+- **Input check for personal and sensitive data (book ideas).** Before a
+  book idea is sent to an AI provider, our server looks for personal and sensitive data patterns in English, Russian, and
+  Spanish: email addresses, phone numbers, U.S. Social Security numbers,
+  payment-card numbers, IBANs, passwords and API keys, and statements about
+  your own health, sexuality, gender identity, or criminal record or that of a
+  named close person (a relative, partner, friend, colleague, neighbor,
+  patient, or client). A match is refused: nothing is sent on, no hours are
+  used, and the App asks you to rewrite the request. Our log records only the
+  category of the refusal, never the text. Text you send for narration is not
+  scanned for personal data; your per-book confirmation and the rule in B2
+  apply to it.
+- **Input check for prohibited content (ideas and narration text).** Before
+  anything is sent to an AI provider or to our narrator, our server refuses
+  requests that clearly seek sexual content involving minors, instructions
+  for weapons of mass destruction, or encouragement of or instructions for
+  suicide.
+- **Output moderation.** Before narration and delivery, every generated
+  chapter is checked by an open-source safety classifier model that we run on
+  our own infrastructure at Modal, so the text is not sent to any other
+  company for this check. It looks for sexual content (especially involving
+  minors), hate, dangerous instructions, and personal data about real people.
+  A chapter that fails is not narrated or delivered, the order is stopped,
+  and the hours reserved for it are restored. We record the category of the
+  decision, not the text.
+- **Provider safeguards.** AI providers may apply their own safeguards; we do
+  not rely on them in place of our own controls.
+- **No human pre-review.** Nobody at OWN PLACE LLC reads requests or books
+  before they reach you. Authorized personnel review specific content only
+  when you contact support, report content, or submit a legal complaint, or
+  when reasonably necessary to investigate abuse or a security incident or to
+  comply with law.
+- **No profiling.** These controls decide about a request or a chapter. They
+  are not used to infer anyone's health or other characteristics or to build a
+  profile; only the records described in B6 are kept.
 
 ## B5. Reporting content
 
-If a generated book contains something unsafe or unlawful:
+- **In the App:** open the book's menu and tap **Report content**, choose a
+  reason (Child safety, About a real person, Threat or violence, Copyright,
+  or Something else), and add a note if you like. The report is sent from the
+  App to our service together with the book number, the chapter, the passage
+  shown on the report screen, and the App version, so that we can find what
+  you mean.
+- **By email, if sending fails:** the App offers to email the report to
+  contact@ownplace.net instead; that email contains the book number, chapter,
+  reason, your note, and the App version, but not the passage.
+- **Anyone, including people who do not use the App,** may report by email to
+  contact@ownplace.net with the subject "Talefall: content report" and, if
+  known, the book number.
 
-- open the book menu in the App and tap **Report content**. Report content
-  submits the report directly through the App to our service, with the book
-  identifier, the App version, the category you choose, and what you add. If
-  submission fails, the App offers email to contact@ownplace.net as a
-  fallback method. A content report may include the excerpt or chapter you choose to
-  submit for review; reported content is retained separately under the
-  report-retention period.
-- Anyone may also report — including people who are not users — by email to
-  contact@ownplace.net with the subject "Talefall: content report" and,
-  where known, the book identifier.
+We review reports promptly. Reports about child safety, credible threats, or
+imminent harm are handled first. We tell the reporter the outcome where we
+lawfully can. Reports are stored separately from books and are kept for
+**12 months**, longer only where the law requires preservation.
 
-**We review and respond to all content reports in a timely manner. Reports
-involving child exploitation, credible threats, or imminent harm receive
-immediate priority. If an investigation requires additional time, we inform
-the reporter through the available reporting channel.**
-We tell the reporter the outcome where we lawfully can. Where a report shows
-that content still held on our servers is unlawful, we restrict access to
-that content immediately — delivery is withheld and the order is stopped if
-still running — pending review.
-
-**Child sexual exploitation.** A request or a generated text that breaks this
-Policy is not by itself material reportable under U.S. federal law. **When we
-obtain actual knowledge of facts or circumstances triggering 18 U.S.C.
-§ 2258A, including apparent covered child sexual exploitation, child sex
-trafficking, or online enticement, we report to NCMEC as soon as reasonably
-possible. We preserve report materials for one year after submission and
-longer where legally required, using the legally required security
-safeguards.** Preserved report materials are held under a legal hold that is
-excluded from ordinary automatic deletion. We cooperate with law enforcement,
-and such reports are handled before any other report.
+**Child sexual exploitation.** When we obtain actual knowledge of facts or
+circumstances that trigger 18 U.S.C. § 2258A, including apparent child sexual
+abuse material, child sex trafficking, or online enticement, we report to the
+NCMEC CyberTipline as soon as reasonably possible and preserve the report
+materials for one year after submission, or longer where the law requires,
+under the required security safeguards and outside ordinary automatic
+deletion.
 
 ## B6. Enforcement
 
 Depending on severity and history, we may:
 
-- refuse or cancel the order and remove or withhold the server copy of the
-  book, immediately where the content appears unlawful;
-- restrict the subscription identifier to a lower daily limit;
-- **block the subscription identifier** from placing further AI Studio orders,
-  for serious or repeated violations; or
+- refuse or stop an order and remove or withhold the server copy of a book;
+- **block the subscription** (identified by its Apple original transaction
+  identifier) from placing further orders and narration requests, for
+  serious or repeated violations; or
 - report the matter to law enforcement or NCMEC where required.
 
-Enforcement applies to the AI Studio subscription only. Your separately
-purchased player license and the books already on your device are not
-affected, and a deletion request under the Privacy Policy is still honoured.
-For each enforcement action we keep a note (book identifier, date, reason
-category, restriction) for up to 24 months, or longer only where a specific
-applicable legal obligation or statutory exception requires it.
-Blocking for a violation does not entitle you to a refund from us for hours
-already used, without prejudice to any refund Apple grants or that applicable
-law requires.
+A block applies to the Service only. Your separately purchased player, the
+books already on your device, and your privacy rights are not affected. For
+each block we keep a record of the subscription identifier, the date, the
+reason category, and the related book number, for as long as the block lasts
+and for 12 months after it ends, longer only where the law requires. A block
+for a violation does not entitle you to a refund from us for hours already
+used, without prejudice to any refund Apple grants or the law requires.
 
-## B7. Appeals
+## B7. Review of a block or refusal
 
-If your order was declined by a safety control, or your subscription
-identifier was restricted or blocked, and you believe this was wrong, email
-contact@ownplace.net with the subject "Talefall: appeal" within **30 days**,
-including the book identifier or the date of the restriction and why you
-think the decision was mistaken. A person will review the decision and answer
-in writing within **30 days**. If a decision was mistaken, we restore access
-and any hours affected.
+If your request was refused by a safety control or your subscription was
+blocked, and you believe this was a mistake, email contact@ownplace.net with
+the subject "Talefall: appeal" within **30 days**, including the book number
+or the date and why you think the decision was wrong. A person reviews the
+decision and answers in writing within **30 days**. If the decision was
+mistaken, we lift the block and restore any hours affected.
 
 ## B8. Accuracy and reliance
 
-Writing-mode output is intended as fictional entertainment and may be
-inaccurate or fabricated. Server-based narration reproduces the text you
-submit and may be fiction or non-fiction. Writing-mode text is produced by a
-statistical model and may be inaccurate, invented, or biased even when it
-sounds confident. Do not rely on it for factual accuracy and never as medical, legal, financial, or other
+Generated text is produced by a statistical model and may be inaccurate,
+invented, or biased even when it sounds confident. Explainers and How-to
+guides are AI-generated overviews without source checking. Do not rely on
+generated content for facts, and never as medical, legal, financial, or other
 professional advice. If you are in crisis, contact local emergency services
-or a crisis line; AI Studio cannot help you.
+or a crisis line.
 
 ## B9. Contact
 
