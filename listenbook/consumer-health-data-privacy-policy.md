@@ -106,13 +106,19 @@ health and other sensitive data and filter for it before anything reaches
 OpenRouter (A5). We do not claim contractual protection for sensitive data
 that we do not have.
 
-**No sharing or sale.** We do not share consumer health data with third
-parties for their own purposes, with advertisers, or with data brokers, and
-we have not done so, and we do not sell it. We would share it only after
-obtaining the separate consent the law requires, and would list those third
-parties here; a sale would require the separate, signed authorization the law
-requires. We may disclose
-data where the law requires it (for example, a valid court order).
+**No advertising disclosures and no sale.** We do not intentionally disclose
+consumer health data to anyone, do not give it to advertisers or data brokers,
+and do not sell it. The only disclosures that can occur are the incidental
+transmissions described above: if someone includes consumer health data in a
+book idea against our rule and our filters miss it, it is transmitted to
+OpenRouter and its hosting providers to write the book. Because our contract
+with OpenRouter does not cover sensitive data, such a transmission may count
+as "sharing" under Washington law; we do not obtain consent for it because we
+do not offer that processing, and we work to prevent it (A5) and delete on
+discovery (A3). Any intended sharing would require the separate consent the
+law requires, and a sale would require the separate, signed authorization the
+law requires. We may also disclose data where the law requires it (for
+example, a valid court order).
 
 ## A5. Prevention: the rule, the filters, and no consent option
 
@@ -166,11 +172,13 @@ where a specific legal obligation or statutory exception requires it.
 Wherever you live, you may:
 
 - **Confirm and access** whether we hold your consumer health data, get a copy
-  of what still exists, and get the list of all third parties and affiliates
-  with which we shared or sold it (none) and of the processors that received
-  it, with their contact details (A4);
-- **Delete** your consumer health data, including from processors where they
-  can still locate it. We tell each processor that received it to delete it;
+  of what still exists, and get a list of every recipient that received it —
+  processors, contractors, and any other third parties, including recipients
+  of incidental transmissions such as OpenRouter and its hosting providers —
+  with their contact details (A4). We have no affiliates;
+- **Delete** your consumer health data. We notify every recipient that
+  received it — processors, contractors, and other third parties — to delete
+  it, using the identifiers we still hold;
 - **Withdraw** the AI-provider permission in Settings, which stops new book
   orders, and **ask us to stop collecting** your consumer health data, which
   we treat as a deletion request plus a block on further processing for your

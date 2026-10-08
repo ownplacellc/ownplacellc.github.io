@@ -435,7 +435,9 @@ of refused requests by reason, without identifiers, for 30 days.
   alternative method.
 - **What deletion covers.** We delete any remaining order content, receipts,
   permission records, reports linked to you, and other records eligible for
-  deletion, and instruct processors that can still locate a copy to delete it.
+  deletion, and notify every recipient that received the data (processors,
+  contractors, and other third parties, such as OpenRouter) to delete it,
+  using the identifiers we still hold.
   We keep only the minimal deletion-request record (Section 6.4), records the
   law requires us to keep, and — unless you confirm that you give them up —
   the minimum record needed to preserve unused purchased extra hours. Where
