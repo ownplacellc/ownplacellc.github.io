@@ -108,8 +108,8 @@ that we do not have.
 
 **No advertising disclosures and no sale.** We do not intentionally disclose
 consumer health data to anyone, do not give it to advertisers or data brokers,
-and do not sell it. The only disclosures that can occur are the incidental
-transmissions described above: if someone includes consumer health data in a
+and do not sell it. Incidental disclosures may occur through the recipients
+and processing described above; for example, if someone includes consumer health data in a
 book idea against our rule and our filters miss it, it is transmitted to
 OpenRouter and its hosting providers to write the book. Because our contract
 with OpenRouter does not cover sensitive data, such a transmission may count
