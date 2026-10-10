@@ -1,6 +1,6 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: October 8, 2026**
+**Effective Date: October 9, 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
@@ -36,8 +36,7 @@ no user accounts and does not upload your library. A short sample audiobook
 is bundled with the App and plays without a network connection; its text was
 written with the help of an AI model.
 
-**The Service** is available only with an active Talefall Subscription and
-only in Supported Territories (Section 4.9). It has two server features,
+**The Service** requires an active Talefall Subscription for new orders and new requests that use hours. Expiry does not prevent delivery or management of an existing paid order, as described in Section 8. The territorial restrictions in Section 4.9 continue to apply. It has two server features,
 reached from the App's **Create** tab:
 
 - **Book from an Idea** — you describe an idea and choose a book type (Story,
@@ -94,7 +93,7 @@ that age, do not use the App.
 
 ## 4. The Talefall Subscription: Hours, Extra Hours, and Cancellation
 
-**4.1 Subscription.** The Service requires an **auto-renewable monthly
+**4.1 Subscription.** Placing new orders and making new requests that use hours requires an **auto-renewable monthly
 subscription** bought through Apple (product
 `com.anisimov.audiobooks.generation.monthly`, shown in the App as "Talefall
 Subscription"). Payment is charged to your Apple Account when you confirm the
@@ -196,8 +195,7 @@ notice.
 
 **5.1 How book creation works.** When you order a book, your idea, the book
 type, language, and length are sent to our service on Modal. Our server first
-checks the idea with automated filters (Section 5.4). It then writes the book
-with a third-party large language model. **Current route:** OpenRouter, Inc.
+checks the idea with automated filters (Section 5.4). It then writes the book with a third-party large language model. The current book-writing model is GLM-5.3, developed by Z.ai and accessed through OpenRouter using the model identifier `z-ai/glm-5.3`. Requests are restricted to the hosting providers listed in the Privacy Policy. **Current route:** OpenRouter, Inc.
 passes the requests to independent hosting providers running the GLM model
 developed by Z.ai; we restrict routing to hosting providers that OpenRouter
 lists as headquartered in the United States and as zero data retention, and
@@ -242,10 +240,12 @@ order or the book before it reaches you.
    switch **"My idea contains no personal data about real people"**; the
    order cannot be sent until it is on, and it covers the exact text of your
    idea, so editing the idea requires confirming again.
-4. *Narration of your own text — once per book.* Your text is sent to our
-   service only if you choose the Talefall voice for that book and confirm
-   **"This text has no real person's information."** With the on-device Apple
-   voice the text never leaves your device.
+4. *Narration in the Talefall voice.* For a book created from your idea, the
+   App reuses the confirmation given when you placed that order for narration
+   of the resulting book; it does not ask you to confirm again. For another
+   book without that confirmation, before its first narration in the Talefall
+   voice you confirm "This text has no real person's information." With the
+   on-device Apple voice, the text never leaves your device.
 
 None of these screens is, or is treated by us as, consent to process health
 or other sensitive data (see the Consumer Health Data Privacy Policy).
@@ -420,8 +420,18 @@ within 15 minutes, we stop processing, delete all server-side order content,
 and restore all hours reserved or charged for it (a cleanup that fails is
 retried); chapters already saved on your device remain. We keep a receipt for each order
 (times, length, hours charged, and the records described in the Privacy
-Policy) but not its content. Exceptions: content you submit in a report or
-support request, and content the law requires us to preserve.
+Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve.
+
+**Subscription expiry and existing orders.** A book ordered and paid for with
+hours while your subscription was active remains available for delivery after
+the subscription expires, provided the subscription has not been refunded or
+revoked. You can still view the order list, download the book, confirm
+delivery, and delete or cancel the order using the same subscription. Expiry
+alone does not cancel the order or restore its hours. New orders and new
+requests that use hours require an active subscription. The existing seven-day
+delivery deadline and the rules for deletion and restoration of hours continue
+to apply; expiry does not restart that deadline. Listening and reading in the
+App remain subject to the player access requirements.
 
 **Your copy.** After delivery, the App saves the book on your device and, if
 iCloud is available and the save succeeds, in your private iCloud storage,

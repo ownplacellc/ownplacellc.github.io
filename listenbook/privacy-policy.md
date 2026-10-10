@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 8, 2026**
+**Effective Date: October 9, 2026**
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -64,9 +64,7 @@ live.
   Narration runs on our own narrator model on Modal, and every chapter is
   checked by our own moderation model on Modal; neither sends the text to
   another company.
-- **The rule: no personal data about real people, including you.** You
-  confirm it before every book order and before a book is first sent for
-  narration in the Talefall voice. Our server refuses book ideas in which it
+- **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas in which it
   detects personal or sensitive data (Section 6.5). We do not read your
   requests or books.
 - **We keep no copy after delivery.** The server copy of a book is deleted as
@@ -201,6 +199,10 @@ idea text — not the text itself.
 
 ### 6.3 Who processes the content
 
+The current book-writing model is GLM-5.3, developed by Z.ai and accessed
+through OpenRouter using the model identifier `z-ai/glm-5.3`. Requests are
+restricted to the hosting providers listed in this Privacy Policy.
+
 | Recipient | Role | Location | What it receives | Commitments |
 |---|---|---|---|---|
 | **Modal Labs, Inc.** | Hosting: runs our service, our writer program, our narrator model, and our moderation model; stores working content, receipts, and logs | United States | Everything in 6.2 | Processor under Modal's Data Processing Addendum (modal.com/legal/dpa): processes on our instructions, lists its subprocessors, notifies breaches, does not train on customer data. Modal may keep function inputs and outputs for up to seven days under its infrastructure retention policy, independently of our deletion |
@@ -239,8 +241,18 @@ incident or to comply with law.
 - **If delivery is not confirmed within seven days** after the Service
   accepted the order, the order expires: at the next scheduled cleanup,
   normally within 15 minutes, we delete all server-side order content and
-  restore all hours reserved or charged for it; a cleanup that fails is
-  retried.
+  restore all hours reserved or charged for it; a cleanup that fails is retried.
+- **Subscription expiry and existing orders.** A book ordered and paid for
+  with hours while your subscription was active remains available for delivery
+  after the subscription expires, provided the subscription has not been
+  refunded or revoked. You can still view the order list, download the book,
+  confirm delivery, and delete or cancel the order using the same
+  subscription. Expiry alone does not cancel the order or restore its hours.
+  New orders and new requests that use hours require an active subscription.
+  The existing seven-day delivery deadline and the rules for deletion and
+  restoration of hours continue to apply; expiry does not restart that
+  deadline. Listening and reading in the App remain subject to the player
+  access requirements.
 - **Deleting or cancelling a book in the App** sends a delete request to the
   service (retried later if you are offline); a running order is stopped and
   its hours restored.
@@ -339,11 +351,15 @@ and what it generated for that order.
 3. **Before every book order:** the switch *"My idea contains no personal data
    about real people"*; it covers the exact text, so editing the idea requires
    confirming again. Recorded in the receipt as described in 6.2.
-4. **Before a book is first narrated in the Talefall voice:** the switch or
-   question *"This text has no real person's information"* / *"Send this text
-   for narration?"*. This confirmation stays in the App and is not recorded by
-   our server. With the on-device Apple voice the text never leaves your
-   device.
+4. **Narration in the Talefall voice:** For a book created from your idea, the
+   App reuses the confirmation given when you placed that order for narration
+   of the resulting book; it does not ask you to confirm again. For another
+   book without that confirmation, before its first narration in the Talefall
+   voice you confirm "This text has no real person's information." With the
+   on-device Apple voice, the text never leaves your device. A separate
+   narration confirmation stays in the App and is not recorded by our server.
+   The book-order confirmation is recorded in the order receipt as described
+   in Section 6.2.
 
 **None of these screens asks for, and no tap is treated as, consent to process
 health or other sensitive data.** Neither a confirmation nor the fact that a

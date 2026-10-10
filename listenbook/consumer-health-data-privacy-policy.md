@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: October 8, 2026**
+**Effective Date: October 9, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -20,9 +20,7 @@ controls if the two differ. It is linked from the home page of ownplace.net.
 The Service is not a health service, and we do not ask for health
 information. **Our rule is that book ideas and texts sent for narration must
 contain no personal data about real people, including you** — and in
-particular no health information. You confirm this before every book order
-and before a book is first narrated in the Talefall voice, and our server
-filters for it (A5).
+particular no health information. You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server applies the filters described in A5.
 
 Still, the Service accepts free text. If someone types, against the rule,
 information that identifies a person and reveals their past, present, or
@@ -87,6 +85,10 @@ sensitive data (see "Contract limits" below), so we make no such claim for
 OpenRouter or the hosting providers it routes to;** for them, our protection
 is prevention (A5) and deletion on discovery (A3).
 
+The current book-writing model is GLM-5.3, developed by Z.ai and accessed
+through OpenRouter using the model identifier `z-ai/glm-5.3`. Requests are
+restricted to the hosting providers listed in the Privacy Policy.
+
 | Recipient | Role | What it receives |
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), United States | Hosting; runs our service, our narrator model, and our moderation model; holds temporary working storage | The full order: idea or narration text, generated chapters, audio |
@@ -126,10 +128,7 @@ example, a valid court order).
   idea or a narration text. Stories must be fiction; Explainers and How-to
   guides may cover general topics, not a private individual.
 - **Confirmations.** Before every book order: the switch *"My idea contains no
-  personal data about real people"*, which covers the exact text. Before a book
-  is first narrated in the Talefall voice: *"This text has no real person's
-  information."* With the on-device Apple voice the text never leaves the
-  device.
+  personal data about real people"*, which covers the exact text. For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." With the on-device Apple voice, the text never leaves your device.
 - **Input filter on our server for book ideas** (before anything is sent to an
   AI provider; English, Russian, and Spanish): it refuses an idea containing,
   among other patterns, statements about the requester's own or a named close

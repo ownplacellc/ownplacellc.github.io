@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: October 8, 2026**
+**Effective Date: October 9, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -43,9 +43,7 @@ details about you or anyone else. Changing a name or calling something
 
 Before **every** book order you turn on the switch **"My idea contains no
 personal data about real people"**; it covers the exact text of the idea, so
-editing the idea requires confirming again. Before a book is first sent for
-narration in the Talefall voice you confirm **"This text has no real person's
-information."** These confirmations state the rule; they are not consent to
+editing the idea requires confirming again. For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." These confirmations state the rule; they are not consent to
 process sensitive data, and the rule applies whether or not our filters catch
 a violation.
 

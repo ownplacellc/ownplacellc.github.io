@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 8, 2026**
+**Last updated: October 9, 2026**
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
 WA 98034-5321, USA
@@ -44,8 +44,18 @@ and includes the player while it is active.
   European Economic Area, the United Kingdom, or Switzerland.
 - **Cancel:** iOS Settings → Apple Account → Subscriptions → Talefall.
   Cancellation takes effect at the end of the paid period. Books already on
-  your phone stay there and can be exported; listening and reading need the
-  player purchase or an active subscription.
+  your phone stay there and can be exported; listening and reading need the player purchase or an active subscription.
+- **Subscription expiry and existing orders.** A book ordered and paid for
+  with hours while your subscription was active remains available for delivery
+  after the subscription expires, provided the subscription has not been
+  refunded or revoked. You can still view the order list, download the book,
+  confirm delivery, and delete or cancel the order using the same
+  subscription. Expiry alone does not cancel the order or restore its hours.
+  New orders and new requests that use hours require an active subscription.
+  The existing seven-day delivery deadline and the rules for deletion and
+  restoration of hours continue to apply; expiry does not restart that
+  deadline. Listening and reading in the App remain subject to the player
+  access requirements.
 
 ### Restore Purchases
 
@@ -70,12 +80,15 @@ write to contact@ownplace.net.
    finds personal or sensitive data and asks you to rewrite them; no hours are
    used.
 4. **Writing and narration.** You can close the App. Each chapter is checked
-   by our moderation model before it is narrated and delivered. The App
-   downloads the book automatically.
+   by our moderation model before it is narrated and delivered. The App downloads the book automatically.
 
-**Narrate your own text.** Choose the Talefall voice for a text book and
-confirm "This text has no real person's information"; the text then goes to
-our own narrator on our service and uses hours. The on-device Apple voice
+   If server narration fails, the server automatically retries up to three
+   times within the same order. Failed attempts do not use additional hours;
+   hours are charged for the actual duration of the successfully produced
+   audio. If the order ultimately fails, its hours are restored under the
+   existing rules.
+
+**Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
 works offline, never sends the text anywhere, and does not use hours.
 
 **Your copy and our server.** As soon as the App has saved every chapter, we

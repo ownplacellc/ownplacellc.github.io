@@ -1,6 +1,6 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: 8 de octubre de 2026**
+**Fecha de entrada en vigor: 9 de octubre de 2026**
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -65,9 +65,7 @@ residencia.
   La narración se ejecuta en nuestro propio modelo narrador en Modal, y cada capítulo se
   revisa con nuestro propio modelo de moderación en Modal; ninguno envía el texto a
   otra empresa.
-- **La regla: ningún dato personal sobre personas reales, incluido usted.** Usted
-  lo confirma antes de cada pedido de libro y antes de que un libro se envíe por primera vez
-  a narración con la voz de Talefall. Nuestro servidor rechaza las ideas de libro en las que
+- **La regla: ningún dato personal sobre personas reales, incluido usted.** Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor rechaza las ideas de libro en las que
   detecta datos personales o sensibles (sección 6.5). No leemos sus
   solicitudes ni sus libros.
 - **No conservamos ninguna copia tras la entrega.** La copia del libro en el servidor se elimina en cuanto
@@ -202,6 +200,11 @@ texto de la idea, no el texto mismo.
 
 ### 6.3 Quién procesa el contenido
 
+El modelo actual para escribir libros es GLM-5.3, desarrollado por Z.ai y
+utilizado a través de OpenRouter con el identificador `z-ai/glm-5.3`. Las
+solicitudes se limitan a los proveedores de alojamiento enumerados en esta
+Política de privacidad.
+
 | Destinatario | Función | Ubicación | Qué recibe | Compromisos |
 |---|---|---|---|---|
 | **Modal Labs, Inc.** | Alojamiento: ejecuta nuestro servicio, nuestro programa escritor, nuestro modelo narrador y nuestro modelo de moderación; almacena contenido de trabajo, recibos y registros | Estados Unidos | Todo lo indicado en 6.2 | Encargado del tratamiento conforme al Anexo de Procesamiento de Datos de Modal (modal.com/legal/dpa): procesa según nuestras instrucciones, enumera sus subencargados, notifica las brechas y no entrena con datos de clientes. Modal puede conservar las entradas y salidas de las funciones hasta siete días conforme a su política de retención de infraestructura, con independencia de nuestra eliminación |
@@ -240,8 +243,18 @@ seguridad o para cumplir la ley.
 - **Si la entrega no se confirma en siete días** desde que el Servicio
   aceptó el pedido, el pedido caduca: en la siguiente limpieza programada,
   normalmente en 15 minutos, eliminamos todo el contenido del pedido en el servidor y
-  restituimos todas las horas reservadas o cobradas por él; una limpieza que falla se
-  reintenta.
+  restituimos todas las horas reservadas o cobradas por él; una limpieza que falla se reintenta.
+- **Vencimiento de la suscripción y pedidos existentes.** Un libro encargado y
+  pagado con horas mientras la suscripción estaba activa sigue disponible para
+  su entrega después del vencimiento, siempre que la suscripción no haya sido
+  reembolsada ni revocada. Con la misma suscripción, usted puede seguir
+  consultando la lista de pedidos, descargando el libro, confirmando la
+  entrega y eliminando o cancelando el pedido. El vencimiento por sí solo no
+  cancela el pedido ni restituye sus horas. Los nuevos pedidos y las nuevas
+  solicitudes que consuman horas requieren una suscripción activa. Siguen
+  vigentes el plazo de entrega de siete días y las reglas de eliminación y
+  restitución de horas; el vencimiento no reinicia ese plazo. La escucha y la
+  lectura en la App siguen sujetas a los requisitos de acceso al reproductor.
 - **Eliminar o cancelar un libro en la App** envía una solicitud de eliminación al
   servicio (se reintenta más tarde si usted está sin conexión); un pedido en curso se detiene y
   sus horas se restituyen.
@@ -320,9 +333,16 @@ y lo que generó para ese pedido.
    texto no se envía a estos proveedores.
 3. **Antes de cada pedido de libro:** el interruptor *«Mi idea no contiene datos personales de personas reales»*; cubre el texto exacto, de modo que editar la idea exige
    confirmar de nuevo. Se registra en el recibo como se describe en 6.2.
-4. **Antes de que un libro se narre por primera vez con la voz de Talefall:** el interruptor o la pregunta
-   *«Este texto no contiene datos de una persona real»* / *«¿Enviar este texto para narrarlo?»*. Esta confirmación permanece en la App y nuestro servidor no la registra. Con la voz de Apple en el dispositivo, el texto nunca sale de su
-   dispositivo.
+4. **Narración con la voz de Talefall:** Para un libro creado a partir de su
+   idea, la App reutiliza la confirmación dada al realizar ese pedido para
+   narrar el libro resultante; no le pide que confirme de nuevo. Para otro
+   libro que no tenga esa confirmación, antes de su primera narración con la
+   voz de Talefall usted confirma: «Este texto no contiene datos de una
+   persona real». Con la voz de Apple en el dispositivo, el texto nunca sale
+   de su dispositivo. La confirmación independiente para la narración
+   permanece en la App y nuestro servidor no la registra. La confirmación dada
+   al encargar el libro se registra en el recibo del pedido, como se describe
+   en la sección 6.2.
 
 **Ninguna de estas pantallas solicita, y ningún toque se trata como, consentimiento para tratar
 datos de salud ni otros datos sensibles.** Ni una confirmación ni el hecho de que una

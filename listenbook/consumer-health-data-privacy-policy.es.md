@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Política de privacidad de datos de salud del consumidor
 
-**Fecha de entrada en vigor: 8 de octubre de 2026**
+**Fecha de entrada en vigor: 9 de octubre de 2026**
 
 Esta es una traducción.
 
@@ -22,9 +22,7 @@ prevalece si ambas difieren. Está enlazada desde la página de inicio de ownpla
 El Servicio no es un servicio de salud y no solicitamos información de
 salud. **Nuestra regla es que las ideas de libro y los textos enviados para narración deben
 no contener datos personales sobre personas reales, incluido usted**, y en
-particular ninguna información de salud. Usted lo confirma antes de cada pedido de libro
-y antes de que un libro se narre por primera vez con la voz de Talefall, y nuestro servidor
-lo filtra (A5).
+particular ninguna información de salud. Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor aplica los filtros descritos en A5.
 
 Aun así, el Servicio acepta texto libre. Si alguien escribe, en contra de la regla,
 información que identifica a una persona y revela su salud física o mental pasada, presente o
@@ -88,6 +86,11 @@ sensibles (véase «Límites contractuales» más abajo), por lo que no hacemos 
 OpenRouter ni de los proveedores de alojamiento a los que enruta;** para ellos, nuestra protección
 es la prevención (A5) y la eliminación al descubrirlo (A3).
 
+El modelo actual para escribir libros es GLM-5.3, desarrollado por Z.ai y
+utilizado a través de OpenRouter con el identificador `z-ai/glm-5.3`. Las
+solicitudes se limitan a los proveedores de alojamiento enumerados en la
+Política de privacidad.
+
 | Destinatario | Función | Qué recibe |
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), Estados Unidos | Alojamiento; ejecuta nuestro servicio, nuestro modelo narrador y nuestro modelo de moderación; mantiene almacenamiento de trabajo temporal | El pedido completo: idea o texto de narración, capítulos generados, audio |
@@ -126,9 +129,7 @@ ejemplo, una orden judicial válida).
   ni en un texto de narración. Los relatos deben ser ficción; los textos explicativos y las guías prácticas
   pueden abordar temas generales, no a un particular.
 - **Confirmaciones.** Antes de cada pedido de libro: el interruptor *«Mi idea no contiene
-  datos personales de personas reales»*, que cubre el texto exacto. Antes de que un libro
-  se narre por primera vez con la voz de Talefall: *«Este texto no contiene datos de una persona real.»* Con la voz de Apple en el dispositivo, el texto nunca sale del
-  dispositivo.
+  datos personales de personas reales»*, que cubre el texto exacto. Para un libro creado a partir de su idea, la App reutiliza la confirmación dada al realizar ese pedido para narrar el libro resultante; no le pide que confirme de nuevo. Para otro libro que no tenga esa confirmación, antes de su primera narración con la voz de Talefall usted confirma: «Este texto no contiene datos de una persona real». Con la voz de Apple en el dispositivo, el texto nunca sale de su dispositivo.
 - **Filtro de entrada en nuestro servidor para ideas de libro** (antes de enviar nada a un
   proveedor de IA; en inglés, ruso y español): rechaza una idea que contenga,
   entre otros patrones, declaraciones sobre la salud, la orientación sexual, la identidad de género o los antecedentes penales del solicitante o de una persona cercana identificada, así como
