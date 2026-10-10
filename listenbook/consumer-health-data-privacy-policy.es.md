@@ -20,8 +20,8 @@ prevalece si ambas difieren. Está enlazada desde la página de inicio de ownpla
 ## A1. Por qué existe esta política
 
 El Servicio no es un servicio de salud y no solicitamos información de
-salud. **Nuestra regla es que las ideas de libro y los textos enviados para narración deben
-no contener datos personales sobre personas reales, incluido usted**, y en
+salud. **Nuestra regla es que las ideas de libro y los textos enviados para narración no
+deben contener datos personales sobre personas reales, incluido usted**, y en
 particular ninguna información de salud. Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor aplica los filtros descritos en A5.
 
 Aun así, el Servicio acepta texto libre. Si alguien escribe, en contra de la regla,

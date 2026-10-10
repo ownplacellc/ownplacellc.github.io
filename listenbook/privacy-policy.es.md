@@ -405,7 +405,7 @@ códigos de estado, horas, el identificador de transacción original en los even
 el código de país de la verificación de territorio. Nuestra aplicación no escribe la
 dirección IP ni ningún texto de solicitudes o libros en estos registros. La infraestructura de Modal
 procesa las direcciones IP para enrutar y proteger el tráfico conforme a sus propias políticas.
-Nuestros registros de aplicación se conservan unos **un día**. También conservamos recuentos diarios
+Nuestros registros de aplicación se conservan aproximadamente **un día**. También conservamos recuentos diarios
 de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
 
 ## 10. Sus opciones, derechos y cómo presentar una solicitud
