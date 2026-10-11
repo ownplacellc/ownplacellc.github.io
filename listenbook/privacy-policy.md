@@ -61,10 +61,13 @@ live.
   sent through **OpenRouter, Inc.** to an AI hosting provider: for orders
   under the current permission, **Microsoft Azure**, which runs the **GPT-6
   Luna** model (developed by OpenAI; OpenAI does not receive your orders),
-  once OpenRouter has confirmed in writing that this endpoint neither stores
-  the content for abuse monitoring nor has it reviewed by people; until then,
-  as a backup, and for orders from older versions of the App, independent
-  hosting providers of the **GLM** model. OpenRouter routes are restricted to
+  while OpenRouter classifies the Azure endpoint we use as zero data
+  retention and our requests require it; otherwise, and for orders from
+  older versions of the App, independent hosting providers of the **GLM**
+  model. Zero data retention means that the provider is to process the
+  request and return the answer without keeping either of them afterwards.
+  We have not independently verified which abuse-monitoring mode Microsoft
+  applies to this endpoint (Section 6.3). OpenRouter routes are restricted to
   zero-data-retention endpoints of providers that OpenRouter lists as
   headquartered in the United States; processing is not guaranteed to take
   place only in the United States. The permission also covers **Amazon Web
@@ -220,6 +223,8 @@ receipt also records your per-order confirmation: the version of the
 confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the
 idea text — not the text itself.
 
+<a id="ai-providers"></a>
+
 ### 6.3 Who processes the content
 
 To write books, we send your idea, book settings, and the instructions, plans
@@ -242,8 +247,10 @@ We do not collect, use or sell personal data to train large language models,
 and we permit only AI routes whose applicable terms prohibit training on
 request and response content. For the Bedrock models we permit, content is not
 retained by default; AWS may retain content flagged by automated abuse
-detection for up to 30 days. Models requiring broader content retention or
-additional provider human review are outside this permission.
+detection for up to 30 days. For Amazon Bedrock, models requiring broader
+content retention or additional human review by the model provider are
+outside this permission. Microsoft's abuse monitoring on the Azure route is
+described separately in the table below.
 
 Limited operational metadata may be retained for billing, security, abuse
 prevention or legal compliance, as specified for each recipient below. These
@@ -258,19 +265,35 @@ Modal's retention, which are addressed separately in Section 6.4.
   restricted to the single Azure endpoint that OpenRouter labels as United
   States (`azure/us`) and lists as zero data retention; if that endpoint is
   unavailable, the request is not sent to any other host of this model. We
-  use this route only after OpenRouter has confirmed to us in writing, and
-  only while that confirmation stands, that this endpoint operates under
-  Microsoft's modified abuse monitoring, that is, without storing prompts or
-  responses for abuse monitoring and without human review of them; until
-  then, these orders use the backup route.
+  use this route only while OpenRouter classifies this endpoint as zero data
+  retention (ZDR) and our requests require it. In practice: (1) every request
+  on this route requires that single endpoint and zero data retention
+  (`only: ["azure/us"]`, `allow_fallbacks: false`, `zdr: true`,
+  `data_collection: deny`), so OpenRouter is instructed not to send it to any
+  other endpoint; (2) while the route is switched on, our server regularly
+  checks OpenRouter's public data: its list of zero-data-retention endpoints
+  (`openrouter.ai/api/v1/endpoints/zdr`) must include this model on
+  `azure/us`, the endpoint must be listed as available, and OpenRouter must
+  list Azure as headquartered in the United States. If the latest check is
+  negative, could not be completed, or is more than 24 hours old, the route
+  is closed: new orders under the current permission use the backup route,
+  and orders already assigned to this route that are still being written are
+  stopped and their hours restored. **What zero data retention means:** the
+  provider processes the request and returns the answer without saving the
+  request or the answer afterwards; it does not cover limited operational
+  metadata or brief in-memory processing (see the note below the table). ZDR
+  is OpenRouter's classification and the providers' commitment; we have not
+  independently verified which abuse-monitoring mode Microsoft applies to this
+  endpoint (see the Microsoft row in the table).
 - **Backup route, and the only route for older versions of the App:** the
   **GLM-5.3** model, developed by Z.ai, reached through OpenRouter using the
   model identifier `z-ai/glm-5.3`, with requests restricted to the hosting
-  providers listed below. We use it when the main route is unavailable or
-  fails for an order, and for every order made under the earlier permission
-  version 2026-10-08 (Section 6.6). It is also used for orders under the
-  current permission while the main route is not confirmed as described
-  above. One book may be written partly on each route.
+  providers listed below. We use it for orders under the current permission
+  accepted while the main route is switched off or closed as described
+  above, and for every order made under the earlier permission version
+  2026-10-08 (Section 6.6). Each order keeps the route assigned when it was
+  accepted; it is not moved to another recipient while it is being
+  written.
 - **Amazon Bedrock — not yet enabled.** No order is sent to Amazon Web
   Services today. We will enable this route only in AWS Regions in the United
   States, only for models on our allowlist whose AWS terms meet the conditions
@@ -286,7 +309,7 @@ Neither OpenAI nor Z.ai receives your orders.
 |---|---|---|---|---|---|
 | **Modal Labs, Inc.** | Active | Hosting: runs our service, our writer program, our narrator model, and our moderation model; stores working content, receipts, and logs | United States | Everything in 6.2 | Processor under Modal's Data Processing Addendum (modal.com/legal/dpa): processes on our instructions, lists its subprocessors, notifies breaches, does not train on customer data. Modal may keep function inputs and outputs for up to seven days under its infrastructure retention policy, independently of our deletion |
 | **OpenRouter, Inc.** | Active (all OpenRouter routes) | Gateway that passes book-writing requests to the hosting providers in the rows below | United States company; processing not guaranteed to be only in the United States | Your idea, length, language, and the instructions, plans, and draft chapters our writer program produces. **We add no account, device, or subscription identifier** | Processor under OpenRouter's data processing addendum (signed September 11, 2026). Requests are sent with `data_collection: deny`, zero-data-retention routing, and a fixed list of hosting endpoints; if none of them is available, the request is not sent elsewhere. Optional logging of prompts and responses in our OpenRouter account is off, and we enable no tools or plugins for these requests. OpenRouter may keep limited request metadata for billing, security, abuse prevention, or legal compliance |
-| **Microsoft Corporation (Microsoft Azure)** | Main route for orders under permission 2026-10-10.2, used only while the written confirmation described above stands | Runs the GPT-6 Luna model that writes the text, for requests OpenRouter forwards | The Azure endpoint OpenRouter labels as United States (`azure/us`); Microsoft is headquartered in the United States. We have not independently verified the Azure region or deployment type, so processing is not guaranteed to take place only in the United States | The same content OpenRouter forwards | Bound through OpenRouter; we have no direct contract with Microsoft. OpenRouter lists this endpoint as zero data retention, which OpenRouter defines as the provider not storing the data for any period. Microsoft states that prompts and completions of models sold by Azure are not available to OpenAI, are not used to train generative AI foundation models without the customer's permission or instruction, and are not stored in the model. Microsoft's documentation also describes abuse monitoring: in its standard mode, prompts and completions flagged by automated systems may be stored and reviewed by authorized Microsoft employees; for customers approved for modified abuse monitoring, that storage and human review do not take place, although automated review at the time of the request may still occur. Microsoft's and OpenRouter's public documentation does not state which mode applies to this endpoint, so we send orders to it only on the written-confirmation condition described above; zero data retention and modified abuse monitoring are the providers' commitments, not a guarantee from us. **OpenAI, the developer of GPT-6 Luna, does not receive your orders**: Microsoft states that these models do not interact with services operated by OpenAI |
+| **Microsoft Corporation (Microsoft Azure)** | Main route for orders under permission 2026-10-10.2, used only while OpenRouter classifies this endpoint as zero data retention and our requests require it, as described above | Runs the GPT-6 Luna model that writes the text, for requests OpenRouter forwards | The Azure endpoint OpenRouter labels as United States (`azure/us`); Microsoft is headquartered in the United States. We have not independently verified the Azure region or deployment type, so processing is not guaranteed to take place only in the United States | The same content OpenRouter forwards | Bound through OpenRouter; we have no direct contract with Microsoft. OpenRouter lists this endpoint as zero data retention, which OpenRouter defines as the provider not storing the data for any period. Microsoft states that prompts and completions of models sold by Azure are not available to OpenAI, are not used to train generative AI foundation models without the customer's permission or instruction, and are not stored in the model. Microsoft's documentation also describes abuse monitoring: in its standard mode, prompts and completions flagged by automated systems may be stored and reviewed by authorized Microsoft employees; for customers approved for modified abuse monitoring, that storage and human review do not take place, although automated review at the time of the request may still occur. Microsoft's and OpenRouter's public documentation does not state which mode applies to this endpoint. OpenRouter's zero-data-retention classification of the endpoint is consistent with no storage for abuse monitoring, but we have not independently verified Microsoft's mode and do not state that storage of flagged content or its review by Microsoft employees is excluded. Zero data retention is OpenRouter's classification and the providers' commitment, not a guarantee from us. **OpenAI, the developer of GPT-6 Luna, does not receive your orders**: Microsoft states that these models do not interact with services operated by OpenAI |
 | **Hosting providers of the GLM model**, reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Active — backup route; the only route for older versions of the App | Run the GLM model that writes the text | Providers that OpenRouter lists as headquartered in the United States and as zero data retention; server locations not guaranteed | The same content OpenRouter forwards | Bound through OpenRouter. Zero data retention is the providers' stated commitment, not a guarantee from us. **Z.ai, the developer of GLM, does not receive your orders** |
 | **Amazon Web Services, Inc. (Amazon Bedrock)** | **Not yet enabled**; receives nothing until this table says otherwise | Would run allowlisted models that write the text | AWS Regions in the United States | Would receive your idea, length, language, and the instructions, plans, and draft chapters our writer program produces, with no account, device, or subscription identifier | Processor under the AWS Data Processing Addendum, which is incorporated into the AWS Service Terms. AWS states that Amazon Bedrock does not use inputs or outputs to train models, does not share them with model providers, and by default does not store them. For some models, AWS keeps traffic flagged by its abuse classifiers for up to 30 days for automated abuse detection; models with broader retention or additional provider human review are not on our allowlist. AWS may keep limited request metadata for billing, security, abuse prevention, or legal compliance |
 | **Our narrator model** (VoxCPM2) | Active | Reads text aloud | Our own container on Modal (USA) | The text to be narrated | Operated by us; nothing is sent to another company |

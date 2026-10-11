@@ -62,11 +62,14 @@ residencia.
   sensibles y de contenido prohibido. Para escribir el libro, después se envía a
   través de **OpenRouter, Inc.** a un proveedor de alojamiento de IA: para los
   pedidos con el permiso vigente, **Microsoft Azure**, que ejecuta el modelo
-  **GPT-6 Luna** (desarrollado por OpenAI; OpenAI no recibe sus pedidos), una vez
-  que OpenRouter haya confirmado por escrito que este punto de acceso no almacena el
-  contenido para la supervisión de abusos ni lo somete a revisión humana; hasta
-  entonces, como vía de respaldo, y para los pedidos de versiones anteriores de la
-  App, proveedores de alojamiento independientes del modelo **GLM**. Las vías de OpenRouter se limitan a
+  **GPT-6 Luna** (desarrollado por OpenAI; OpenAI no recibe sus pedidos), mientras
+  OpenRouter clasifique el punto de acceso de Azure que usamos como de conservación
+  cero de datos y nuestras solicitudes lo exijan; en los demás casos, y para los
+  pedidos de versiones anteriores de la App, proveedores de alojamiento
+  independientes del modelo **GLM**. Conservación cero de datos significa que el
+  proveedor debe procesar la solicitud y devolver la respuesta sin guardar
+  después ninguna de las dos. No hemos verificado por nuestra cuenta qué modo de
+  supervisión de abusos aplica Microsoft a este punto de acceso (sección 6.3). Las vías de OpenRouter se limitan a
   puntos de acceso con conservación cero de datos de proveedores que OpenRouter
   indica con sede en Estados Unidos; no se garantiza que el procesamiento ocurra
   solo en Estados Unidos. El permiso cubre también **Amazon Web Services (Amazon
@@ -222,6 +225,8 @@ recibo también registra su confirmación por pedido: la versión del
 texto de confirmación, la hora y una huella criptográfica (SHA-256) del
 texto de la idea, no el texto mismo.
 
+<a id="ai-providers"></a>
+
 ### 6.3 Quién procesa el contenido
 
 Para escribir libros, enviamos su idea, los ajustes del libro y las
@@ -245,9 +250,10 @@ lenguaje de gran tamaño, y solo permitimos vías de IA cuyos términos aplicabl
 prohíben entrenar con el contenido de las solicitudes y respuestas. En los
 modelos de Bedrock que permitimos, el contenido no se conserva de forma
 predeterminada; AWS puede conservar hasta 30 días el contenido marcado por la
-detección automática de abusos. Los modelos que requieran una conservación más
-amplia del contenido o una revisión humana adicional por parte del proveedor
-quedan fuera de este permiso.
+detección automática de abusos. Los modelos de Amazon Bedrock que requieran una
+conservación más amplia del contenido o una revisión humana adicional por parte
+del proveedor del modelo quedan fuera de este permiso. La supervisión de abusos
+de Microsoft en la vía de Azure se describe por separado en la tabla de abajo.
 
 Pueden conservarse metadatos operativos limitados por facturación, seguridad,
 prevención de abusos o cumplimiento legal, según se especifica para cada
@@ -263,19 +269,35 @@ que se tratan por separado en la sección 6.4.
   se limitan al único punto de acceso de Azure que OpenRouter identifica como de
   Estados Unidos (`azure/us`) e indica con conservación cero de datos; si no está
   disponible, la solicitud no se envía a ningún otro proveedor de este modelo. Solo
-  usamos esta vía después de que OpenRouter nos haya confirmado por escrito, y
-  mientras esa confirmación siga vigente, que este punto de acceso funciona con la
-  supervisión de abusos modificada de Microsoft, es decir, sin almacenar las
-  solicitudes ni las respuestas para la supervisión de abusos y sin revisión humana
-  de ellas; hasta entonces, estos pedidos usan la vía de respaldo.
+  usamos esta vía mientras OpenRouter clasifique este punto de acceso como de
+  conservación cero de datos (ZDR) y nuestras solicitudes lo exijan. En la
+  práctica: (1) cada solicitud por esta vía exige ese único punto de acceso y la
+  conservación cero de datos (`only: ["azure/us"]`, `allow_fallbacks: false`,
+  `zdr: true`, `data_collection: deny`), de modo que OpenRouter recibe la
+  instrucción de no enviarla a ningún otro punto de acceso; (2) mientras la vía
+  está activada, nuestro servidor comprueba periódicamente los datos públicos de
+  OpenRouter: su lista de puntos de acceso con conservación cero de datos
+  (`openrouter.ai/api/v1/endpoints/zdr`) debe incluir este modelo en `azure/us`,
+  el punto de acceso debe figurar como disponible y OpenRouter debe indicar que
+  Azure tiene su sede en Estados Unidos. Si la última comprobación es negativa, no
+  pudo completarse o tiene más de 24 horas, la vía se cierra: los pedidos nuevos
+  con el permiso vigente usan la vía de respaldo, y los pedidos ya asignados a
+  esta vía que todavía se estén escribiendo se detienen y se restituyen sus
+  horas. **Qué significa la conservación cero de datos:** el proveedor procesa la
+  solicitud y devuelve la respuesta sin guardar después la solicitud ni la
+  respuesta; no abarca metadatos operativos limitados ni un breve procesamiento en
+  memoria (véase la nota bajo la tabla). ZDR es la clasificación de OpenRouter y
+  el compromiso de los proveedores; no hemos verificado por nuestra cuenta qué
+  modo de supervisión de abusos aplica Microsoft a este punto de acceso (véase la
+  fila de Microsoft en la tabla).
 - **Vía de respaldo, y única vía para versiones anteriores de la App:** el modelo
   **GLM-5.3**, desarrollado por Z.ai, utilizado a través de OpenRouter con el
   identificador `z-ai/glm-5.3`, con las solicitudes limitadas a los proveedores
-  de alojamiento enumerados abajo. La usamos cuando la vía principal no está
-  disponible o falla en un pedido, y para todos los pedidos hechos con la versión
-  anterior del permiso 2026-10-08 (sección 6.6). También se usa para los pedidos
-  con el permiso vigente mientras la vía principal no esté confirmada como se
-  describe arriba. Un mismo libro puede escribirse en parte por cada vía.
+  de alojamiento enumerados abajo. La usamos para los pedidos con el permiso
+  vigente aceptados mientras la vía principal esté desactivada o cerrada como se
+  describe arriba, y para todos los pedidos hechos con la versión anterior del
+  permiso 2026-10-08 (sección 6.6). Cada pedido conserva la vía asignada al
+  aceptarse; mientras se escribe, no se traslada a otro destinatario.
 - **Amazon Bedrock: aún no habilitado.** Hoy no se envía ningún pedido a Amazon
   Web Services. Solo habilitaremos esta vía en regiones de AWS en Estados Unidos,
   solo para modelos de nuestra lista permitida cuyos términos de AWS cumplan las
@@ -292,7 +314,7 @@ Ni OpenAI ni Z.ai reciben sus pedidos.
 |---|---|---|---|---|---|
 | **Modal Labs, Inc.** | Activo | Alojamiento: ejecuta nuestro servicio, nuestro programa escritor, nuestro modelo narrador y nuestro modelo de moderación; almacena contenido de trabajo, recibos y registros | Estados Unidos | Todo lo indicado en 6.2 | Encargado del tratamiento conforme al Anexo de Procesamiento de Datos de Modal (modal.com/legal/dpa): procesa según nuestras instrucciones, enumera sus subencargados, notifica las brechas y no entrena con datos de clientes. Modal puede conservar las entradas y salidas de las funciones hasta siete días conforme a su política de retención de infraestructura, con independencia de nuestra eliminación |
 | **OpenRouter, Inc.** | Activo (todas las vías de OpenRouter) | Pasarela que transmite las solicitudes de escritura de libros a los proveedores de alojamiento de las filas siguientes | Empresa estadounidense; no se garantiza que el procesamiento ocurra solo en Estados Unidos | Su idea, extensión, idioma y las instrucciones, planes y borradores de capítulos que produce nuestro programa escritor. **No añadimos ningún identificador de cuenta, dispositivo ni suscripción** | Encargado del tratamiento conforme al anexo de procesamiento de datos de OpenRouter (firmado el 11 de septiembre de 2026). Las solicitudes se envían con `data_collection: deny`, enrutamiento de conservación cero de datos y una lista fija de puntos de acceso; si ninguno está disponible, la solicitud no se envía a otro lugar. El registro opcional de solicitudes y respuestas en nuestra cuenta de OpenRouter está desactivado, y no habilitamos herramientas ni complementos para estas solicitudes. OpenRouter puede conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal |
-| **Microsoft Corporation (Microsoft Azure)** | Vía principal para pedidos con el permiso 2026-10-10.2; se usa solo mientras siga vigente la confirmación por escrito descrita arriba | Ejecuta el modelo GPT-6 Luna que escribe el texto, para las solicitudes que reenvía OpenRouter | El punto de acceso de Azure que OpenRouter identifica como de Estados Unidos (`azure/us`); Microsoft tiene su sede en Estados Unidos. No hemos verificado por nuestra cuenta la región ni el tipo de implementación de Azure, por lo que no se garantiza que el procesamiento ocurra solo en Estados Unidos | El mismo contenido que OpenRouter reenvía | Vinculada a través de OpenRouter; no tenemos un contrato directo con Microsoft. OpenRouter indica este punto de acceso con conservación cero de datos, que OpenRouter define como que el proveedor no almacena los datos durante ningún período. Microsoft declara que las solicitudes y respuestas de los modelos vendidos por Azure no están disponibles para OpenAI, no se usan para entrenar modelos fundacionales de IA generativa sin el permiso o la instrucción del cliente y no se almacenan en el modelo. La documentación de Microsoft también describe la supervisión de abusos: en su modo estándar, las solicitudes y respuestas marcadas por sistemas automáticos pueden almacenarse y ser revisadas por empleados autorizados de Microsoft; para los clientes aprobados para la supervisión de abusos modificada, ese almacenamiento y esa revisión humana no se realizan, aunque puede seguir habiendo una revisión automática en el momento de la solicitud. La documentación pública de Microsoft y de OpenRouter no indica qué modo se aplica a este punto de acceso, por lo que solo le enviamos pedidos con la condición de confirmación por escrito descrita arriba; la conservación cero de datos y la supervisión de abusos modificada son compromisos de los proveedores, no una garantía nuestra. **OpenAI, el desarrollador de GPT-6 Luna, no recibe sus pedidos**: Microsoft declara que estos modelos no interactúan con servicios operados por OpenAI |
+| **Microsoft Corporation (Microsoft Azure)** | Vía principal para pedidos con el permiso 2026-10-10.2; se usa solo mientras OpenRouter clasifique este punto de acceso como de conservación cero de datos y nuestras solicitudes lo exijan, como se describe arriba | Ejecuta el modelo GPT-6 Luna que escribe el texto, para las solicitudes que reenvía OpenRouter | El punto de acceso de Azure que OpenRouter identifica como de Estados Unidos (`azure/us`); Microsoft tiene su sede en Estados Unidos. No hemos verificado por nuestra cuenta la región ni el tipo de implementación de Azure, por lo que no se garantiza que el procesamiento ocurra solo en Estados Unidos | El mismo contenido que OpenRouter reenvía | Vinculada a través de OpenRouter; no tenemos un contrato directo con Microsoft. OpenRouter indica este punto de acceso con conservación cero de datos, que OpenRouter define como que el proveedor no almacena los datos durante ningún período. Microsoft declara que las solicitudes y respuestas de los modelos vendidos por Azure no están disponibles para OpenAI, no se usan para entrenar modelos fundacionales de IA generativa sin el permiso o la instrucción del cliente y no se almacenan en el modelo. La documentación de Microsoft también describe la supervisión de abusos: en su modo estándar, las solicitudes y respuestas marcadas por sistemas automáticos pueden almacenarse y ser revisadas por empleados autorizados de Microsoft; para los clientes aprobados para la supervisión de abusos modificada, ese almacenamiento y esa revisión humana no se realizan, aunque puede seguir habiendo una revisión automática en el momento de la solicitud. La documentación pública de Microsoft y de OpenRouter no indica qué modo se aplica a este punto de acceso. Que OpenRouter clasifique este punto de acceso como de conservación cero de datos es coherente con que no haya almacenamiento para la supervisión de abusos, pero no hemos verificado por nuestra cuenta el modo de Microsoft y no afirmamos que el almacenamiento del contenido marcado o su revisión por empleados de Microsoft estén excluidos. La conservación cero de datos es una clasificación de OpenRouter y un compromiso de los proveedores, no una garantía nuestra. **OpenAI, el desarrollador de GPT-6 Luna, no recibe sus pedidos**: Microsoft declara que estos modelos no interactúan con servicios operados por OpenAI |
 | **Proveedores de alojamiento del modelo GLM**, a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Activos: vía de respaldo; única vía para versiones anteriores de la App | Ejecutan el modelo GLM que escribe el texto | Proveedores que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos; no se garantiza la ubicación de los servidores | El mismo contenido que OpenRouter reenvía | Vinculados a través de OpenRouter. La conservación cero de datos es un compromiso declarado de los proveedores, no una garantía nuestra. **Z.ai, el desarrollador de GLM, no recibe sus pedidos** |
 | **Amazon Web Services, Inc. (Amazon Bedrock)** | **Aún no habilitado**; no recibe nada hasta que esta tabla indique lo contrario | Ejecutaría modelos de la lista permitida que escriben el texto | Regiones de AWS en Estados Unidos | Recibiría su idea, extensión, idioma y las instrucciones, planes y borradores de capítulos que produce nuestro programa escritor, sin identificador de cuenta, dispositivo ni suscripción | Encargado del tratamiento conforme al Anexo de Procesamiento de Datos de AWS (AWS Data Processing Addendum), incorporado en los Términos de Servicio de AWS (AWS Service Terms). AWS declara que Amazon Bedrock no usa las entradas ni las salidas para entrenar modelos, no las comparte con los proveedores de modelos y, de forma predeterminada, no las almacena. Para algunos modelos, AWS conserva hasta 30 días el tráfico marcado por sus clasificadores de abuso para la detección automática de abusos; los modelos con una conservación más amplia o con revisión humana adicional por parte del proveedor no están en nuestra lista permitida. AWS puede conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal |
 | **Nuestro modelo narrador** (VoxCPM2) | Activo | Lee texto en voz alta | Nuestro propio contenedor en Modal (EE. UU.) | El texto que se va a narrar | Operado por nosotros; no se envía nada a otra empresa |

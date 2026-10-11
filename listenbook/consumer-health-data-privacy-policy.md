@@ -102,14 +102,18 @@ Amazon Web Services (Amazon Bedrock); the Privacy Policy, Section 6.3, lists
 the current models and routes. **Main route** (orders under the current
 permission): the GPT-6 Luna model, developed by OpenAI, run by Microsoft
 Azure and reached through OpenRouter, restricted to the Azure endpoint that
-OpenRouter labels as United States and as zero data retention, and used only
-while OpenRouter confirms in writing that this endpoint neither stores the
-content for abuse monitoring nor has it reviewed by people (until then, these
-orders use the backup route). **Backup
+OpenRouter labels as United States, and used only while OpenRouter classifies
+that endpoint as zero data retention (meaning the provider processes the
+request and returns the answer without keeping either of them afterwards) and
+our requests require it. Our server checks this regularly against OpenRouter's
+public list; if the check fails or is more than 24 hours old, new orders use
+the backup route, and orders on this route that are still being written are
+stopped and their hours restored. We have not independently verified which
+abuse-monitoring mode Microsoft applies to this endpoint. **Backup
 route, and the only route for older versions of the App:** the GLM-5.3 model,
 developed by Z.ai, reached through OpenRouter and restricted to the hosting
-providers listed in the Privacy Policy. One book may be written partly on
-each route. **Amazon Bedrock is not yet enabled**; no order is sent to Amazon
+providers listed in the Privacy Policy. Each order keeps the route assigned
+when it was accepted. **Amazon Bedrock is not yet enabled**; no order is sent to Amazon
 Web Services until the Privacy Policy says otherwise and we have updated the
 assessment in A9.
 
@@ -117,7 +121,7 @@ assessment in A9.
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), United States | Hosting; runs our service, our narrator model, and our moderation model; holds temporary working storage | The full order: idea or narration text, generated chapters, audio |
 | **OpenRouter, Inc.** (openrouter.ai) | Passes book-writing requests to the hosting providers below | The idea and the working text our writer program produces, with no identifier added by us |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — main route | Runs the GPT-6 Luna model that writes the text, on an endpoint OpenRouter lists as United States and zero data retention. Microsoft's documentation describes abuse monitoring in which flagged content may be stored and reviewed by authorized Microsoft employees unless modified abuse monitoring applies; public documentation does not state which mode applies to this endpoint, so we use it only while OpenRouter confirms in writing that modified abuse monitoring applies (Privacy Policy, Section 6.3) | The same content OpenRouter forwards |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — main route | Runs the GPT-6 Luna model that writes the text, on an endpoint OpenRouter lists as United States and zero data retention. Microsoft's documentation describes abuse monitoring in which flagged content may be stored and reviewed by authorized Microsoft employees unless modified abuse monitoring applies; public documentation does not state which mode applies to this endpoint, and we have not independently verified Microsoft's mode. We use the endpoint only while OpenRouter classifies it as zero data retention and our requests require it (Privacy Policy, Section 6.3) | The same content OpenRouter forwards |
 | **Hosting providers of the GLM model** (backup route; older versions of the App), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the model that writes the text; listed by OpenRouter as headquartered in the United States and zero data retention | The same content OpenRouter forwards |
 | **Amazon Web Services, Inc. (Amazon Bedrock)** (aws.amazon.com) — **not yet enabled** | Once enabled: runs allowlisted models in AWS Regions in the United States; keeps no content by default, but may keep traffic flagged by its abuse classifiers for up to 30 days for automated abuse detection | Once enabled: the idea and the working text our writer program produces, with no identifier added by us |
 | **Apple Inc.** (iCloud Mail) | Delivers and stores mail sent to contact@ownplace.net | What you write to us, and your email address |
@@ -197,7 +201,7 @@ example, a valid court order).
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
 | Email | Up to 24 months after the last message, deleted earlier on request |
-| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter and its hosting providers, including Microsoft, are restricted to zero-data-retention endpoints but may keep limited metadata, and Microsoft's abuse monitoring applies as described in A4; once the Bedrock route is enabled, Amazon Web Services keeps no content by default but may keep content flagged by its abuse classifiers up to 30 days, which we cannot access directly, and may keep limited metadata; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
+| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter and its hosting providers, including Microsoft, are restricted to zero-data-retention endpoints but may keep limited metadata, and Microsoft's abuse monitoring, whose mode for this endpoint we have not independently verified, applies as described in A4; once the Bedrock route is enabled, Amazon Web Services keeps no content by default but may keep content flagged by its abuse classifiers up to 30 days, which we cannot access directly, and may keep limited metadata; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
 
 We keep consumer health data beyond an applicable deletion deadline only
 where a specific legal obligation or statutory exception requires it.

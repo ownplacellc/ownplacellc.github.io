@@ -101,13 +101,17 @@ través de Amazon Web Services (Amazon Bedrock); la sección 6.3 de la Política
 enumera los modelos y las vías actuales. **Vía principal** (pedidos con el permiso
 vigente): el modelo GPT-6 Luna, desarrollado por OpenAI, ejecutado por Microsoft Azure y
 utilizado a través de OpenRouter, limitado al punto de acceso de Azure que OpenRouter
-identifica como de Estados Unidos y con conservación cero de datos, y solo mientras
-OpenRouter confirme por escrito que este punto de acceso no almacena el contenido para la
-supervisión de abusos ni lo somete a revisión humana (hasta entonces, estos pedidos usan
-la vía de respaldo). **Vía de respaldo, y
+identifica como de Estados Unidos, y solo mientras OpenRouter clasifique ese punto de
+acceso como de conservación cero de datos (es decir, el proveedor procesa la solicitud y
+devuelve la respuesta sin guardar después ninguna de las dos) y nuestras solicitudes lo
+exijan. Nuestro servidor lo comprueba periódicamente con la lista pública de OpenRouter;
+si la comprobación falla o tiene más de 24 horas, los pedidos nuevos usan la vía de
+respaldo, y los pedidos de esta vía que todavía se estén escribiendo se detienen y se
+restituyen sus horas. No hemos verificado por nuestra cuenta qué modo de supervisión de
+abusos aplica Microsoft a este punto de acceso. **Vía de respaldo, y
 única vía para versiones anteriores de la App:** el modelo GLM-5.3, desarrollado por Z.ai,
 utilizado a través de OpenRouter y limitado a los proveedores de alojamiento enumerados en
-la Política de privacidad. Un mismo libro puede escribirse en parte por cada vía. **Amazon
+la Política de privacidad. Cada pedido conserva la vía asignada al aceptarse. **Amazon
 Bedrock aún no está habilitado**; no se envía ningún pedido a Amazon Web Services hasta que
 la Política de privacidad indique lo contrario y hayamos actualizado la evaluación de A9.
 
@@ -115,7 +119,7 @@ la Política de privacidad indique lo contrario y hayamos actualizado la evaluac
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), Estados Unidos | Alojamiento; ejecuta nuestro servicio, nuestro modelo narrador y nuestro modelo de moderación; mantiene almacenamiento de trabajo temporal | El pedido completo: idea o texto de narración, capítulos generados, audio |
 | **OpenRouter, Inc.** (openrouter.ai) | Transmite las solicitudes de escritura de libros a los proveedores de alojamiento indicados abajo | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — vía principal | Ejecuta el modelo GPT-6 Luna que escribe el texto, en un punto de acceso que OpenRouter indica como de Estados Unidos y con conservación cero de datos. La documentación de Microsoft describe una supervisión de abusos en la que el contenido marcado puede almacenarse y ser revisado por empleados autorizados de Microsoft, salvo que se aplique la supervisión de abusos modificada; la documentación pública no indica qué modo se aplica a este punto de acceso, por lo que solo lo usamos mientras OpenRouter confirme por escrito que se aplica la supervisión de abusos modificada (Política de privacidad, sección 6.3) | El mismo contenido que OpenRouter reenvía |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — vía principal | Ejecuta el modelo GPT-6 Luna que escribe el texto, en un punto de acceso que OpenRouter indica como de Estados Unidos y con conservación cero de datos. La documentación de Microsoft describe una supervisión de abusos en la que el contenido marcado puede almacenarse y ser revisado por empleados autorizados de Microsoft, salvo que se aplique la supervisión de abusos modificada; la documentación pública no indica qué modo se aplica a este punto de acceso, y no hemos verificado por nuestra cuenta el modo de Microsoft. Solo usamos el punto de acceso mientras OpenRouter lo clasifique como de conservación cero de datos y nuestras solicitudes lo exijan (Política de privacidad, sección 6.3) | El mismo contenido que OpenRouter reenvía |
 | **Proveedores de alojamiento del modelo GLM** (vía de respaldo; versiones anteriores de la App), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo que escribe el texto; OpenRouter los indica con sede en Estados Unidos y con conservación cero de datos | El mismo contenido que OpenRouter reenvía |
 | **Amazon Web Services, Inc. (Amazon Bedrock)** (aws.amazon.com) — **aún no habilitado** | Una vez habilitado: ejecuta modelos de la lista permitida en regiones de AWS en Estados Unidos; de forma predeterminada no almacena el contenido, pero puede conservar hasta 30 días el tráfico marcado por sus clasificadores de abuso para la detección automática de abusos | Una vez habilitado: la idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
 | **Apple Inc.** (iCloud Mail) | Entrega y almacena el correo enviado a contact@ownplace.net | Lo que usted nos escribe y su dirección de correo electrónico |
@@ -193,7 +197,7 @@ ejemplo, una orden judicial válida).
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Correo electrónico | Hasta 24 meses después del último mensaje; se elimina antes si se solicita |
-| Copias que conservan los proveedores de servicios | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; OpenRouter y sus proveedores de alojamiento, incluida Microsoft, se limitan a puntos de acceso con conservación cero de datos, pero pueden conservar metadatos limitados, y a Microsoft se le aplica su supervisión de abusos como se describe en A4; una vez habilitada la vía de Bedrock, Amazon Web Services no conserva contenido de forma predeterminada, pero puede conservar hasta 30 días el contenido marcado por sus clasificadores de abuso (al que no tenemos acceso directo) y puede conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
+| Copias que conservan los proveedores de servicios | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; OpenRouter y sus proveedores de alojamiento, incluida Microsoft, se limitan a puntos de acceso con conservación cero de datos, pero pueden conservar metadatos limitados, y a Microsoft se le aplica su supervisión de abusos, cuyo modo para este punto de acceso no hemos verificado por nuestra cuenta, como se describe en A4; una vez habilitada la vía de Bedrock, Amazon Web Services no conserva contenido de forma predeterminada, pero puede conservar hasta 30 días el contenido marcado por sus clasificadores de abuso (al que no tenemos acceso directo) y puede conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
 
 Conservamos datos de salud del consumidor más allá de un plazo de eliminación aplicable solo
 cuando lo exija una obligación legal específica o una excepción legal.
