@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 9, 2026**
+**Effective Date: October 10, 2026**
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -55,12 +55,16 @@ live.
   providers (Section 5).
 - **The Service is optional.** When you order a book, your idea goes to our
   service on Modal (USA). Our server first checks it for personal and
-  sensitive data and for prohibited content. It is then sent to **OpenRouter,
-  Inc.**, which passes it to independent hosting providers of the **GLM**
-  model that OpenRouter lists as headquartered in the United States and as
-  zero data retention. We may switch this route to **Amazon Web Services
-  (Amazon Bedrock)**; the permission you give names both (Section 6.6).
-  Processing is not guaranteed to take place only in the United States.
+  sensitive data and for prohibited content. It is then sent to **Amazon Web
+  Services (Amazon Bedrock)**, which runs the **GPT-6 Luna** model (developed
+  by OpenAI) in AWS Regions in the United States; OpenAI does not receive your
+  orders. As a backup, it may instead go to **OpenRouter, Inc.**, which passes
+  it to independent hosting providers of the **GLM** model that OpenRouter
+  lists as headquartered in the United States and as zero data retention;
+  processing on that backup route is not guaranteed to take place only in the
+  United States. The permission you give names both routes (Sections 6.3 and
+  6.6). Amazon Bedrock does not store the content by default but may keep
+  content flagged by its abuse classifiers for up to 30 days (Section 6.4).
   Narration runs on our own narrator model on Modal, and every chapter is
   checked by our own moderation model on Modal; neither sends the text to
   another company.
@@ -156,7 +160,9 @@ https://librivox.org/pages/privacy/ · Project Gutenberg:
 https://www.gutenberg.org/policy/privacy_policy.html · Modal:
 https://modal.com/legal/privacy-policy · OpenRouter:
 https://openrouter.ai/privacy · Amazon Web Services:
-https://aws.amazon.com/privacy/.
+https://aws.amazon.com/privacy/ · Amazon Bedrock data handling:
+https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html and
+https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html.
 
 ## 6. The Talefall Subscription's Server Features
 
@@ -199,22 +205,37 @@ idea text — not the text itself.
 
 ### 6.3 Who processes the content
 
-The current book-writing model is GLM-5.3, developed by Z.ai and accessed
-through OpenRouter using the model identifier `z-ai/glm-5.3`. Requests are
-restricted to the hosting providers listed in this Privacy Policy.
+Book writing uses one of two routes:
+
+- **Main route:** the **GPT-6 Luna** model, developed by OpenAI, run by
+  Amazon Web Services in **Amazon Bedrock**. We send requests to the
+  us-east-1 Region with a United States geographic cross-Region inference
+  profile, so Amazon Bedrock processes them in AWS Regions in the United
+  States.
+- **Backup route:** the **GLM-5.3** model, developed by Z.ai, accessed through
+  OpenRouter using the model identifier `z-ai/glm-5.3`, with requests
+  restricted to the hosting providers listed below. We use it when the main
+  route is unavailable or fails for an order, and for orders made under an
+  earlier permission version that did not describe the main route
+  (Section 6.6). One book may be written partly on each route.
+
+Neither OpenAI nor Z.ai receives your orders.
 
 | Recipient | Role | Location | What it receives | Commitments |
 |---|---|---|---|---|
 | **Modal Labs, Inc.** | Hosting: runs our service, our writer program, our narrator model, and our moderation model; stores working content, receipts, and logs | United States | Everything in 6.2 | Processor under Modal's Data Processing Addendum (modal.com/legal/dpa): processes on our instructions, lists its subprocessors, notifies breaches, does not train on customer data. Modal may keep function inputs and outputs for up to seven days under its infrastructure retention policy, independently of our deletion |
-| **OpenRouter, Inc.** (current route) | Gateway that passes book-writing requests to the model's hosting providers | United States company; processing not guaranteed to be only in the United States | Your idea, length, language, and the instructions, plans, and draft chapters our writer program produces. **We add no account, device, or subscription identifier** | Processor under OpenRouter's data processing addendum (signed September 11, 2026). Requests are sent with `data_collection: deny`, zero-data-retention routing, and a fixed list of hosting providers; if none of them is available, the request is not sent elsewhere. OpenRouter may keep limited request metadata for billing, security, abuse prevention, or legal compliance |
-| **Hosting providers of the GLM model** (current route), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the GLM model that writes the text | Providers that OpenRouter lists as headquartered in the United States and as zero data retention; server locations not guaranteed | The same content OpenRouter forwards | Bound through OpenRouter. Zero data retention is the providers' stated commitment, not a guarantee from us. **Z.ai, the developer of GLM, does not receive your orders** |
-| **Amazon Web Services, Inc. (Amazon Bedrock)** — possible future route | Would run the model that writes the text, instead of OpenRouter and its hosts | United States company; processing not guaranteed to be only in the United States | The same content | Not in use as of the Effective Date. If we switch, we will update this table before the switch; your existing permission already names AWS |
+| **Amazon Web Services, Inc. (Amazon Bedrock)** (main route) | Runs the GPT-6 Luna model that writes the text | AWS Regions in the United States (us-east-1 with a US geographic cross-Region inference profile) | Your idea, length, language, and the instructions, plans, and draft chapters our writer program produces. **We add no account, device, or subscription identifier** | Processor under the AWS Data Processing Addendum, which is incorporated into the AWS Service Terms. AWS states that Amazon Bedrock does not use inputs or outputs to train models and does not share them with model providers, and that by default it does not store them; for GPT-6 Luna, however, traffic flagged by AWS's abuse classifiers is retained for up to 30 days for automated offline abuse detection, stored in the AWS Region where the request was processed and not shared with the model provider. AWS may keep limited request metadata for billing, security, abuse prevention, or legal compliance. **OpenAI, the developer of GPT-6 Luna, does not receive your orders**: AWS runs the model in AWS-operated accounts to which model providers have no access |
+| **OpenRouter, Inc.** (backup route) | Gateway that passes book-writing requests to the model's hosting providers | United States company; processing not guaranteed to be only in the United States | Your idea, length, language, and the instructions, plans, and draft chapters our writer program produces. **We add no account, device, or subscription identifier** | Processor under OpenRouter's data processing addendum (signed September 11, 2026). Requests are sent with `data_collection: deny`, zero-data-retention routing, and a fixed list of hosting providers; if none of them is available, the request is not sent elsewhere. OpenRouter may keep limited request metadata for billing, security, abuse prevention, or legal compliance |
+| **Hosting providers of the GLM model** (backup route), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the GLM model that writes the text | Providers that OpenRouter lists as headquartered in the United States and as zero data retention; server locations not guaranteed | The same content OpenRouter forwards | Bound through OpenRouter. Zero data retention is the providers' stated commitment, not a guarantee from us. **Z.ai, the developer of GLM, does not receive your orders** |
 | **Our narrator model** (VoxCPM2) | Reads text aloud | Our own container on Modal (USA) | The text to be narrated | Operated by us; nothing is sent to another company |
 | **Our moderation model** | Checks each generated chapter (Section 6.5) | Our own container on Modal (USA) | Each generated chapter | Operated by us; nothing is sent to another company |
 | **Apple** | Payments, subscription status, email delivery for contact@ownplace.net | Apple's infrastructure | Purchases; notices about renewals and refunds; your email if you write to us | Apple's policy |
 
 **Contract limits on sensitive data.** Our agreement with OpenRouter is its
-standard data processing addendum, which excludes sensitive data. We therefore
+standard data processing addendum, which excludes sensitive data. Our
+agreement with Amazon Web Services is its standard customer agreement with
+the AWS Data Processing Addendum; we do not rely on it, or on any other
+provider contract, to authorize the processing of sensitive data. We therefore
 prohibit sending personal or sensitive data in requests and filter for it
 (Section 6.5); we do not claim any contractual protection for sensitive data
 that we do not have. Narration and moderation run on our own models at Modal.
@@ -271,9 +292,13 @@ incident or to comply with law.
   evidence that we complied.
 - **Processor copies.** Modal may keep function inputs and outputs for up to
   seven days under its infrastructure retention policy. OpenRouter and the
-  hosting providers may keep limited metadata as described in 6.3. After
-  delivery we no longer hold identifiers that would let us locate any residual
-  provider copy; while an order is active, a deletion request cancels it.
+  hosting providers may keep limited metadata as described in 6.3. On the main
+  route, Amazon Web Services may keep content flagged by its abuse
+  classifiers for up to 30 days, and limited metadata, as described in 6.3;
+  those copies are held by AWS, and we cannot see, locate, or delete them.
+  After delivery we no longer hold identifiers that would let us locate any
+  residual provider copy; while an order is active, a deletion request
+  cancels it.
 - For Washington consumer health data, backup copies held by a processor are
   deleted no later than six months after an authenticated request.
 
@@ -327,25 +352,16 @@ and what it generated for that order.
    version (currently 2026-10-08), the time, and your statement on your
    device; it is not sent to our server.
 2. **AI-provider permission** (before the first book order; again if the
-   permission text changes). Title: *"Send your order to OpenRouter or Amazon
-   Bedrock?"* Text: *"Allow content from my book orders to be sent to
-   OpenRouter, which passes it to independent hosting providers running the
-   GLM model (developed by Z.ai), to generate the requested text. Z.ai itself
-   does not receive my orders. Requests are restricted to hosting providers
-   that OpenRouter lists as headquartered in the United States and as zero
-   data retention, which means they state that they do not store or train on
-   the content. Talefall may instead send the same content to Amazon Web
-   Services (Amazon Bedrock) for the same purpose; the Privacy Policy names
-   the route in use. I understand that processing is not guaranteed to take
-   place only in the United States. This permission remains in effect until I
-   withdraw it or Talefall uses a provider not named here. Zero data retention
-   is the providers' commitment, not a guarantee from us; OpenRouter or Amazon
-   Web Services may keep limited request metadata for billing, security,
-   abuse prevention, or legal compliance."* Buttons: "Allow and Continue" and
-   "Not Now"; "Not Now" sends nothing to these providers. Our server keeps
-   your latest decision (allowed or withdrawn), the permission version
-   (2026-10-08), and the time, with the original transaction identifier, and
-   refuses book orders without a current permission. You can withdraw it in Settings; book orders then stop until
+   permission text changes). Title: *"Send your order to Amazon Bedrock or
+   OpenRouter?"* Text: *"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance."* Buttons: "Allow and
+   Continue" and "Not Now"; "Not Now" sends nothing to these providers. Our
+   server keeps your latest decision (allowed or withdrawn), the permission
+   version (currently 2026-10-10), and the time, with the original transaction
+   identifier, and refuses book orders without a valid permission. A
+   permission of the earlier version 2026-10-08, which named Amazon Web
+   Services but not the GPT-6 Luna model or the retention of flagged content,
+   is used only for the backup route through OpenRouter; the App asks again
+   with the current text before your next book order. You can withdraw it in Settings; book orders then stop until
    you allow it again. Narration does not need this permission because the
    text is not sent to these providers.
 3. **Before every book order:** the switch *"My idea contains no personal data
@@ -370,8 +386,9 @@ rely on a "requested service" exception only where the applicable law allows
 it and the processing is necessary and proportionate, and never because one
 person submitted another person's data. When we learn that an order contains
 such data, we stop the order, delete the data, restore the hours, notify
-OpenRouter of the identifiers we still hold if the order is active, and may
-refuse further orders. See the Consumer Health Data Privacy Policy.
+the AI provider that received it (Amazon Web Services or OpenRouter) of the
+identifiers we still hold if the order is active, and may refuse further
+orders. See the Consumer Health Data Privacy Policy.
 
 ### 6.7 Territory and sanctions check
 
@@ -452,8 +469,10 @@ of refused requests by reason, without identifiers, for 30 days.
 - **What deletion covers.** We delete any remaining order content, receipts,
   permission records, reports linked to you, and other records eligible for
   deletion, and notify every recipient that received the data (processors,
-  contractors, and other third parties, such as OpenRouter) to delete it,
-  using the identifiers we still hold.
+  contractors, and other third parties, such as Amazon Web Services and
+  OpenRouter) to delete it, using the identifiers we still hold. Copies that
+  Amazon Web Services keeps for abuse detection are not accessible to us; they
+  expire within 30 days.
   We keep only the minimal deletion-request record (Section 6.4), records the
   law requires us to keep, and — unless you confirm that you give them up —
   the minimum record needed to preserve unused purchased extra hours. Where
@@ -561,7 +580,7 @@ websites you open from it follow their own policies.
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
 | Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until delivery is confirmed; if never delivered, the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
-| Processor copies | Modal; OpenRouter and its hosts | Modal up to 7 days; OpenRouter and hosts as described in 6.3 |
+| Processor copies | Modal; Amazon Web Services; OpenRouter and its hosts | Modal up to 7 days; Amazon Web Services up to 30 days for content flagged by its abuse classifiers, plus limited metadata; OpenRouter and hosts as described in 6.3 |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
 | Content reports (reason, note, passage, book number, chapter, subscription identifier) | Modal (USA); our mailbox if emailed | 12 months |
@@ -598,9 +617,9 @@ We will update the Effective Date and post the new version at its public
 address; earlier versions are available on request. Before a material change
 to how Service data is processed takes effect — for example, a new kind of
 recipient not named in the permission you gave — we will show a notice in the
-App and ask for your permission again where required. A switch to Amazon Web
-Services, which your permission already names, will be reflected in Section
-6.3 before it happens.
+App and ask for your permission again where required. A change between the
+two routes named in your permission will be reflected in Section 6.3 before
+it happens.
 
 ## 20. Contact
 

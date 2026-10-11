@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: October 9, 2026**
+**Effective Date: October 10, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -117,7 +117,13 @@ content before relying on it or sharing it.
   and the hours reserved for it are restored. We record the category of the
   decision, not the text.
 - **Provider safeguards.** AI providers may apply their own safeguards; we do
-  not rely on them in place of our own controls.
+  not rely on them in place of our own controls. On the main book-writing
+  route, Amazon Bedrock runs automated abuse detection: Amazon Web Services
+  may keep content its classifiers flag for up to 30 days for automated
+  abuse detection, may ask us about our use of the service, and may suspend
+  our access if it finds a violation of its terms or of the model provider's
+  use policies. Requests that break those terms can therefore stop the
+  Service for everyone, which is one more reason the rules in B3 apply.
 - **No human pre-review.** Nobody at OWN PLACE LLC reads requests or books
   before they reach you. Authorized personnel review specific content only
   when you contact support, report content, or submit a legal complaint, or

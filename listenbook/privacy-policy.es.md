@@ -1,6 +1,6 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: 9 de octubre de 2026**
+**Fecha de entrada en vigor: 10 de octubre de 2026**
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -57,11 +57,17 @@ residencia.
   proveedores de catálogos (sección 5).
 - **El Servicio es opcional.** Cuando usted pide un libro, su idea va a nuestro
   servicio en Modal (EE. UU.). Nuestro servidor primero la revisa en busca de datos personales y
-  sensibles y de contenido prohibido. Después se envía a **OpenRouter,
-  Inc.**, que la transmite a proveedores de alojamiento independientes del modelo **GLM**
-  que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos. Podemos cambiar esta vía a **Amazon Web Services
-  (Amazon Bedrock)**; el permiso que usted otorga menciona ambas (sección 6.6).
-  No se garantiza que el procesamiento ocurra solo en Estados Unidos.
+  sensibles y de contenido prohibido. Después se envía a **Amazon Web Services
+  (Amazon Bedrock)**, que ejecuta el modelo **GPT-6 Luna** (desarrollado por
+  OpenAI) en regiones de AWS en Estados Unidos; OpenAI no recibe sus pedidos.
+  Como vía de respaldo, puede ir en su lugar a **OpenRouter, Inc.**, que la
+  transmite a proveedores de alojamiento independientes del modelo **GLM** que
+  OpenRouter indica con sede en Estados Unidos y con conservación cero de datos;
+  en esa vía de respaldo no se garantiza que el procesamiento ocurra solo en
+  Estados Unidos. El permiso que usted otorga menciona ambas vías (secciones 6.3
+  y 6.6). Amazon Bedrock no almacena el contenido de forma predeterminada, pero
+  puede conservar hasta 30 días el contenido que marquen sus clasificadores de
+  abuso (sección 6.4).
   La narración se ejecuta en nuestro propio modelo narrador en Modal, y cada capítulo se
   revisa con nuestro propio modelo de moderación en Modal; ninguno envía el texto a
   otra empresa.
@@ -157,7 +163,9 @@ https://librivox.org/pages/privacy/ · Project Gutenberg:
 https://www.gutenberg.org/policy/privacy_policy.html · Modal:
 https://modal.com/legal/privacy-policy · OpenRouter:
 https://openrouter.ai/privacy · Amazon Web Services:
-https://aws.amazon.com/privacy/.
+https://aws.amazon.com/privacy/ · Tratamiento de datos en Amazon Bedrock:
+https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html y
+https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html.
 
 ## 6. Las funciones de servidor de la Suscripción a Talefall
 
@@ -200,23 +208,38 @@ texto de la idea, no el texto mismo.
 
 ### 6.3 Quién procesa el contenido
 
-El modelo actual para escribir libros es GLM-5.3, desarrollado por Z.ai y
-utilizado a través de OpenRouter con el identificador `z-ai/glm-5.3`. Las
-solicitudes se limitan a los proveedores de alojamiento enumerados en esta
-Política de privacidad.
+Los libros se escriben por una de dos vías:
+
+- **Vía principal:** el modelo **GPT-6 Luna**, desarrollado por OpenAI, que
+  Amazon Web Services ejecuta en **Amazon Bedrock**. Enviamos las solicitudes
+  a la región us-east-1 con un perfil geográfico de inferencia entre regiones
+  de Estados Unidos, por lo que Amazon Bedrock las procesa en regiones de AWS
+  en Estados Unidos.
+- **Vía de respaldo:** el modelo **GLM-5.3**, desarrollado por Z.ai, utilizado
+  a través de OpenRouter con el identificador `z-ai/glm-5.3`, con las
+  solicitudes limitadas a los proveedores de alojamiento enumerados abajo. La
+  usamos cuando la vía principal no está disponible o falla en un pedido, y
+  para los pedidos hechos con un permiso de una versión anterior que no
+  describía la vía principal (sección 6.6). Un mismo libro puede escribirse en
+  parte por cada vía.
+
+Ni OpenAI ni Z.ai reciben sus pedidos.
 
 | Destinatario | Función | Ubicación | Qué recibe | Compromisos |
 |---|---|---|---|---|
 | **Modal Labs, Inc.** | Alojamiento: ejecuta nuestro servicio, nuestro programa escritor, nuestro modelo narrador y nuestro modelo de moderación; almacena contenido de trabajo, recibos y registros | Estados Unidos | Todo lo indicado en 6.2 | Encargado del tratamiento conforme al Anexo de Procesamiento de Datos de Modal (modal.com/legal/dpa): procesa según nuestras instrucciones, enumera sus subencargados, notifica las brechas y no entrena con datos de clientes. Modal puede conservar las entradas y salidas de las funciones hasta siete días conforme a su política de retención de infraestructura, con independencia de nuestra eliminación |
-| **OpenRouter, Inc.** (vía actual) | Pasarela que transmite las solicitudes de escritura de libros a los proveedores de alojamiento del modelo | Empresa estadounidense; no se garantiza que el procesamiento ocurra solo en Estados Unidos | Su idea, extensión, idioma y las instrucciones, planes y borradores de capítulos que produce nuestro programa escritor. **No añadimos ningún identificador de cuenta, dispositivo ni suscripción** | Encargado del tratamiento conforme al anexo de procesamiento de datos de OpenRouter (firmado el 11 de septiembre de 2026). Las solicitudes se envían con `data_collection: deny`, enrutamiento de conservación cero de datos y una lista fija de proveedores de alojamiento; si ninguno está disponible, la solicitud no se envía a otro lugar. OpenRouter puede conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal |
-| **Proveedores de alojamiento del modelo GLM** (vía actual), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo GLM que escribe el texto | Proveedores que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos; no se garantiza la ubicación de los servidores | El mismo contenido que OpenRouter reenvía | Vinculados a través de OpenRouter. La conservación cero de datos es un compromiso declarado de los proveedores, no una garantía nuestra. **Z.ai, el desarrollador de GLM, no recibe sus pedidos** |
-| **Amazon Web Services, Inc. (Amazon Bedrock)** — posible vía futura | Ejecutaría el modelo que escribe el texto, en lugar de OpenRouter y sus proveedores | Empresa estadounidense; no se garantiza que el procesamiento ocurra solo en Estados Unidos | El mismo contenido | No está en uso a la fecha de entrada en vigor. Si cambiamos, actualizaremos esta tabla antes del cambio; su permiso actual ya menciona a AWS |
+| **Amazon Web Services, Inc. (Amazon Bedrock)** (vía principal) | Ejecuta el modelo GPT-6 Luna que escribe el texto | Regiones de AWS en Estados Unidos (us-east-1 con un perfil geográfico de inferencia entre regiones de EE. UU.) | Su idea, extensión, idioma y las instrucciones, planes y borradores de capítulos que produce nuestro programa escritor. **No añadimos ningún identificador de cuenta, dispositivo ni suscripción** | Encargado del tratamiento conforme al Anexo de Procesamiento de Datos de AWS (AWS Data Processing Addendum), incorporado a los Términos de servicio de AWS (AWS Service Terms). AWS declara que Amazon Bedrock no usa las entradas ni las salidas para entrenar modelos ni las comparte con los proveedores de modelos, y que de forma predeterminada no las almacena; sin embargo, para GPT-6 Luna el tráfico marcado por los clasificadores de abuso de AWS se conserva hasta 30 días para la detección automática de abusos en diferido, almacenado en la región de AWS donde se procesó la solicitud y sin compartirse con el proveedor del modelo. AWS puede conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal. **OpenAI, el desarrollador de GPT-6 Luna, no recibe sus pedidos**: AWS ejecuta el modelo en cuentas operadas por AWS a las que los proveedores de modelos no tienen acceso |
+| **OpenRouter, Inc.** (vía de respaldo) | Pasarela que transmite las solicitudes de escritura de libros a los proveedores de alojamiento del modelo | Empresa estadounidense; no se garantiza que el procesamiento ocurra solo en Estados Unidos | Su idea, extensión, idioma y las instrucciones, planes y borradores de capítulos que produce nuestro programa escritor. **No añadimos ningún identificador de cuenta, dispositivo ni suscripción** | Encargado del tratamiento conforme al anexo de procesamiento de datos de OpenRouter (firmado el 11 de septiembre de 2026). Las solicitudes se envían con `data_collection: deny`, enrutamiento de conservación cero de datos y una lista fija de proveedores de alojamiento; si ninguno está disponible, la solicitud no se envía a otro lugar. OpenRouter puede conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal |
+| **Proveedores de alojamiento del modelo GLM** (vía de respaldo), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo GLM que escribe el texto | Proveedores que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos; no se garantiza la ubicación de los servidores | El mismo contenido que OpenRouter reenvía | Vinculados a través de OpenRouter. La conservación cero de datos es un compromiso declarado de los proveedores, no una garantía nuestra. **Z.ai, el desarrollador de GLM, no recibe sus pedidos** |
 | **Nuestro modelo narrador** (VoxCPM2) | Lee texto en voz alta | Nuestro propio contenedor en Modal (EE. UU.) | El texto que se va a narrar | Operado por nosotros; no se envía nada a otra empresa |
 | **Nuestro modelo de moderación** | Revisa cada capítulo generado (sección 6.5) | Nuestro propio contenedor en Modal (EE. UU.) | Cada capítulo generado | Operado por nosotros; no se envía nada a otra empresa |
 | **Apple** | Pagos, estado de la suscripción, entrega de correo para contact@ownplace.net | Infraestructura de Apple | Compras; avisos sobre renovaciones y reembolsos; su correo electrónico si nos escribe | Política de Apple |
 
 **Límites contractuales sobre datos sensibles.** Nuestro acuerdo con OpenRouter es su
-anexo estándar de procesamiento de datos, que excluye los datos sensibles. Por eso
+anexo estándar de procesamiento de datos, que excluye los datos sensibles. Nuestro
+acuerdo con Amazon Web Services es su acuerdo estándar de cliente con el Anexo de
+Procesamiento de Datos de AWS; no nos basamos en él ni en ningún otro contrato con un
+proveedor para autorizar el tratamiento de datos sensibles. Por eso
 prohibimos enviar datos personales o sensibles en las solicitudes y los filtramos
 (sección 6.5); no afirmamos tener ninguna protección contractual para datos sensibles
 que no tenemos. La narración y la moderación se ejecutan en nuestros propios modelos en Modal.
@@ -273,7 +296,10 @@ seguridad o para cumplir la ley.
   prueba de que cumplimos.
 - **Copias de los encargados.** Modal puede conservar las entradas y salidas de las funciones hasta
   siete días conforme a su política de retención de infraestructura. OpenRouter y los
-  proveedores de alojamiento pueden conservar metadatos limitados como se describe en 6.3. Tras
+  proveedores de alojamiento pueden conservar metadatos limitados como se describe en 6.3. En la
+  vía principal, Amazon Web Services puede conservar hasta 30 días el contenido que marquen sus
+  clasificadores de abuso, y metadatos limitados, como se describe en 6.3; esas copias las
+  conserva AWS, y nosotros no podemos verlas, localizarlas ni eliminarlas. Tras
   la entrega ya no conservamos identificadores que nos permitan localizar ninguna copia residual
   de un proveedor; mientras un pedido está activo, una solicitud de eliminación lo cancela.
 - En el caso de los datos de salud del consumidor de Washington, las copias de seguridad que mantenga un encargado del tratamiento se
@@ -324,11 +350,15 @@ y lo que generó para ese pedido.
    (actualmente 2026-10-08), la hora y su declaración en su
    dispositivo; no se envía a nuestro servidor.
 2. **Permiso del proveedor de IA** (antes del primer pedido de libro; de nuevo si el
-   texto del permiso cambia). Título: *«¿Enviar tu pedido a OpenRouter o a Amazon Bedrock?»* Texto: *«Permito que el contenido de mis pedidos de libros se envíe a OpenRouter, que lo transmite a proveedores de alojamiento independientes que ejecutan el modelo GLM (desarrollado por Z.ai), para generar el texto solicitado. Z.ai no recibe mis pedidos. Las solicitudes se limitan a proveedores que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos, es decir, que declaran no almacenar el contenido ni entrenar con él. En su lugar, Talefall puede enviar el mismo contenido a Amazon Web Services (Amazon Bedrock) con la misma finalidad; la Política de privacidad indica la vía en uso. Entiendo que no se garantiza que el procesamiento ocurra solo en Estados Unidos. Este permiso sigue vigente hasta que lo retire o hasta que Talefall use un proveedor no mencionado aquí. La conservación cero es un compromiso de los proveedores, no una garantía nuestra; OpenRouter o Amazon Web Services pueden conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal.»* Botones: «Permitir y continuar» y
+   texto del permiso cambia). Título: *«¿Enviar tu pedido a Amazon Bedrock o a OpenRouter?»* Texto: *«Permito que el contenido de mis pedidos de libros se envíe a un proveedor de IA para generar el texto solicitado. La vía principal es Amazon Web Services (Amazon Bedrock), que ejecuta el modelo GPT-6 Luna (desarrollado por OpenAI) en regiones de AWS en Estados Unidos. OpenAI no recibe mis pedidos, y AWS declara que no los usa para entrenar modelos. Amazon Bedrock no almacena el contenido de forma predeterminada, pero AWS puede conservar hasta 30 días el contenido que marquen sus clasificadores automáticos de abuso, para la detección automática de abusos. Como vía de respaldo, Talefall puede enviar el mismo contenido a OpenRouter, que lo transmite a proveedores de alojamiento independientes que ejecutan el modelo GLM (desarrollado por Z.ai) y que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos, es decir, que declaran no almacenar el contenido ni entrenar con él; Z.ai no recibe mis pedidos, y no se garantiza que el procesamiento en esta vía ocurra solo en Estados Unidos. La Política de privacidad indica las vías en uso. Este permiso sigue vigente hasta que lo retire o hasta que Talefall use un proveedor no mencionado aquí. Estos son compromisos de los proveedores, no una garantía nuestra; Amazon Web Services y OpenRouter también pueden conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal.»* Botones: «Permitir y continuar» y
    «Ahora no»; «Ahora no» no envía nada a estos proveedores. Nuestro servidor conserva
    su última decisión (permitido o retirado), la versión del permiso
-   (2026-10-08) y la hora, junto con el identificador de transacción original, y
-   rechaza los pedidos de libros sin un permiso vigente. Usted puede retirarlo en Ajustes; los pedidos de libros se detienen entonces hasta
+   (actualmente 2026-10-10) y la hora, junto con el identificador de transacción original, y
+   rechaza los pedidos de libros sin un permiso válido. Un permiso de la versión
+   anterior 2026-10-08, que mencionaba a Amazon Web Services pero no el modelo
+   GPT-6 Luna ni la conservación del contenido marcado, se usa solo para la vía de
+   respaldo a través de OpenRouter; antes de su próximo pedido de libro, la App le
+   preguntará de nuevo con el texto vigente. Usted puede retirarlo en Ajustes; los pedidos de libros se detienen entonces hasta
    que lo permita de nuevo. La narración no necesita este permiso porque el
    texto no se envía a estos proveedores.
 3. **Antes de cada pedido de libro:** el interruptor *«Mi idea no contiene datos personales de personas reales»*; cubre el texto exacto, de modo que editar la idea exige
@@ -353,8 +383,8 @@ solo invocamos una excepción de «servicio solicitado» cuando la ley aplicable
 permite y el tratamiento es necesario y proporcionado, y nunca porque una
 persona haya enviado los datos de otra. Cuando sabemos que un pedido contiene
 tales datos, detenemos el pedido, eliminamos los datos, restituimos las horas, notificamos
-a OpenRouter los identificadores que aún conservamos si el pedido está activo, y podemos
-rechazar pedidos posteriores. Consulte la Política de privacidad de datos de salud del consumidor.
+al proveedor de IA que los recibió (Amazon Web Services u OpenRouter) los identificadores
+que aún conservamos si el pedido está activo, y podemos rechazar pedidos posteriores. Consulte la Política de privacidad de datos de salud del consumidor.
 
 ### 6.7 Verificación de territorio y de sanciones
 
@@ -431,8 +461,10 @@ de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
 - **Qué abarca la eliminación.** Eliminamos cualquier contenido de pedido restante, recibos,
   registros de permisos, denuncias vinculadas a usted y otros registros susceptibles de
   eliminación, y notificamos a cada destinatario que recibió los datos (encargados del tratamiento,
-  contratistas y otros terceros, como OpenRouter) que los eliminen,
-  usando los identificadores que aún conservamos.
+  contratistas y otros terceros, como Amazon Web Services y OpenRouter) que los eliminen,
+  usando los identificadores que aún conservamos. Las copias que Amazon Web Services
+  conserva para la detección de abusos no son accesibles para nosotros; caducan en un
+  plazo de 30 días.
   Conservamos solo el registro mínimo de la solicitud de eliminación (sección 6.4), los registros que
   la ley nos obliga a conservar y —salvo que usted confirme que renuncia a ellas—
   el registro mínimo necesario para preservar las horas adicionales compradas no utilizadas. Cuando
@@ -538,7 +570,7 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 | Biblioteca, datos de lectura y reproducción, ajustes | Su dispositivo y copias de seguridad | Hasta que usted los elimine |
 | Fecha de inicio de la prueba | Llavero y almacén de clave-valor de iCloud | Persistente por diseño |
 | Contenido del pedido (idea o texto de narración, capítulos, título, audio, identificadores de solicitud del proveedor de IA) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que se confirme la entrega; si nunca se entrega, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
-| Copias de los encargados | Modal; OpenRouter y sus proveedores | Modal hasta 7 días; OpenRouter y sus proveedores como se describe en 6.3 |
+| Copias de los encargados | Modal; Amazon Web Services; OpenRouter y sus proveedores | Modal hasta 7 días; Amazon Web Services hasta 30 días para el contenido marcado por sus clasificadores de abuso, más metadatos limitados; OpenRouter y sus proveedores como se describe en 6.3 |
 | Su libro entregado | Su dispositivo y su iCloud privado | Hasta que usted lo elimine |
 | Recibos, registros de permisos, saldo de horas, avisos de suscripción | Modal (EE. UU.) | 7 años después del último hecho financiero relacionado |
 | Denuncias de contenido (motivo, nota, pasaje, número de libro, capítulo, identificador de suscripción) | Modal (EE. UU.); nuestro buzón si se envían por correo | 12 meses |
@@ -575,9 +607,8 @@ Actualizaremos la fecha de entrada en vigor y publicaremos la nueva versión en 
 dirección pública; las versiones anteriores están disponibles previa solicitud. Antes de que entre en vigor un cambio sustancial
 en cómo se tratan los datos del Servicio —por ejemplo, un nuevo tipo de
 destinatario no mencionado en el permiso que usted otorgó— mostraremos un aviso en la
-App y pediremos su permiso de nuevo cuando sea necesario. Un cambio a Amazon Web
-Services, que su permiso ya menciona, se reflejará en la sección
-6.3 antes de que ocurra.
+App y pediremos su permiso de nuevo cuando sea necesario. Un cambio entre las dos
+vías mencionadas en su permiso se reflejará en la sección 6.3 antes de que ocurra.
 
 ## 20. Contacto
 

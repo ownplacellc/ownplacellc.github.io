@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 9, 2026**
+**Last updated: October 10, 2026**
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
 WA 98034-5321, USA
@@ -69,10 +69,14 @@ write to contact@ownplace.net.
    are 18 or older and accept the [Terms of Use](terms-of-use.html) and
    [Privacy Policy](privacy-policy.html).
 2. **Permission.** Before your first book order the App asks permission to
-   send your order to OpenRouter (which passes it to US-headquartered,
-   zero-data-retention hosts of the GLM model) or, if we switch the route, to
-   Amazon Web Services (Amazon Bedrock). "Not Now" sends nothing. You can
-   withdraw it later in Settings.
+   send your order to Amazon Web Services (Amazon Bedrock), which runs the
+   GPT-6 Luna model by OpenAI in the United States, or, as a backup, to
+   OpenRouter (which passes it to US-headquartered, zero-data-retention hosts
+   of the GLM model). OpenAI does not receive your order; Amazon Bedrock may
+   keep content its abuse classifiers flag for up to 30 days. "Not Now" sends
+   nothing. You can withdraw it later in Settings. If you allowed an earlier
+   version of this permission, the App asks again before your next book
+   order.
 3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
    length. **Do not include personal data about real people, including
    yourself.** Turn on "My idea contains no personal data about real people";

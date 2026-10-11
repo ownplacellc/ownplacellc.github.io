@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Política de privacidad de datos de salud del consumidor
 
-**Fecha de entrada en vigor: 9 de octubre de 2026**
+**Fecha de entrada en vigor: 10 de octubre de 2026**
 
 Esta es una traducción.
 
@@ -60,8 +60,9 @@ solicitado» solo cuando la ley aplicable lo permite y el
 tratamiento es necesario y proporcionado para un servicio solicitado por la
 persona a quien se refieren los datos, y nunca porque alguien haya enviado los datos de
 otra persona. Cuando sabemos que un pedido contiene datos de salud del consumidor, detenemos el
-pedido, eliminamos los datos, restituimos las horas y notificamos a OpenRouter los
-identificadores que aún conservamos si el pedido está activo.
+pedido, eliminamos los datos, restituimos las horas y notificamos al proveedor de IA que
+los recibió (Amazon Web Services u OpenRouter) los identificadores que aún conservamos si
+el pedido está activo.
 
 Aparte de ese tratamiento residual y no intencionado, usamos los datos de salud del consumidor
 solo:
@@ -81,41 +82,49 @@ alguien lo incluye en contra de nuestra regla, puede llegar a los destinatarios 
 lo tratan según nuestras instrucciones para los fines de A3. Consideramos a un destinatario
 encargado del tratamiento de datos de salud del consumidor —de modo que la divulgación a él no sea
 «compartir» conforme a la ley de Washington— solo en la medida en que un contrato vinculante
-con él cubra ese tratamiento. **Nuestro contrato con OpenRouter no cubre los datos
-sensibles (véase «Límites contractuales» más abajo), por lo que no hacemos tal afirmación respecto de
-OpenRouter ni de los proveedores de alojamiento a los que enruta;** para ellos, nuestra protección
-es la prevención (A5) y la eliminación al descubrirlo (A3).
+con él cubra ese tratamiento. **No nos basamos en ningún contrato con los proveedores de IA
+como cobertura de los datos sensibles (véase «Límites contractuales» más abajo), por lo que no
+hacemos tal afirmación respecto de Amazon Web Services, OpenRouter ni los proveedores de
+alojamiento a los que OpenRouter enruta;** para ellos, nuestra protección es la prevención (A5)
+y la eliminación al descubrirlo (A3).
 
-El modelo actual para escribir libros es GLM-5.3, desarrollado por Z.ai y
-utilizado a través de OpenRouter con el identificador `z-ai/glm-5.3`. Las
-solicitudes se limitan a los proveedores de alojamiento enumerados en la
-Política de privacidad.
+Los libros se escriben por una de dos vías. **Vía principal:** el modelo GPT-6 Luna,
+desarrollado por OpenAI, que Amazon Web Services ejecuta en Amazon Bedrock en regiones de
+AWS en Estados Unidos. **Vía de respaldo:** el modelo GLM-5.3, desarrollado por Z.ai,
+utilizado a través de OpenRouter con el identificador `z-ai/glm-5.3`, con las solicitudes
+limitadas a los proveedores de alojamiento enumerados en la Política de privacidad; se usa
+cuando la vía principal no está disponible o falla en un pedido, y para los pedidos hechos
+con un permiso de una versión anterior. Un mismo libro puede escribirse en parte por cada
+vía.
 
 | Destinatario | Función | Qué recibe |
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), Estados Unidos | Alojamiento; ejecuta nuestro servicio, nuestro modelo narrador y nuestro modelo de moderación; mantiene almacenamiento de trabajo temporal | El pedido completo: idea o texto de narración, capítulos generados, audio |
-| **OpenRouter, Inc.** (openrouter.ai) — vía actual para escribir libros | Transmite las solicitudes de escritura de libros a los proveedores de alojamiento del modelo | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
-| **Proveedores de alojamiento del modelo GLM**, a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo que escribe el texto; OpenRouter los indica con sede en Estados Unidos y con conservación cero de datos | El mismo contenido |
-| **Amazon Web Services, Inc. (Amazon Bedrock)** — posible vía futura, no en uso a la fecha de entrada en vigor | Ejecutaría el modelo que escribe el texto en lugar de OpenRouter y sus proveedores | El mismo contenido |
+| **Amazon Web Services, Inc. (Amazon Bedrock)** (aws.amazon.com) — vía principal para escribir libros | Ejecuta el modelo GPT-6 Luna que escribe el texto, en regiones de AWS en Estados Unidos. De forma predeterminada no almacena el contenido, pero conserva hasta 30 días el tráfico marcado por sus clasificadores de abuso para la detección automática de abusos | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
+| **OpenRouter, Inc.** (openrouter.ai) — vía de respaldo para escribir libros | Transmite las solicitudes de escritura de libros a los proveedores de alojamiento del modelo | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
+| **Proveedores de alojamiento del modelo GLM** (vía de respaldo), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo que escribe el texto; OpenRouter los indica con sede en Estados Unidos y con conservación cero de datos | El mismo contenido |
 | **Apple Inc.** (iCloud Mail) | Entrega y almacena el correo enviado a contact@ownplace.net | Lo que usted nos escribe y su dirección de correo electrónico |
 
 La narración y la moderación se ejecutan en nuestros propios modelos en Modal; ese texto no se
-envía a OpenRouter, a sus proveedores ni a Amazon Web Services. No se garantiza que el procesamiento por parte de los proveedores de IA
-ocurra solo en Estados Unidos. Z.ai,
-el desarrollador de GLM, no recibe pedidos.
+envía a Amazon Web Services, a OpenRouter ni a sus proveedores. En la vía de respaldo no se
+garantiza que el procesamiento ocurra solo en Estados Unidos. Ni OpenAI, el desarrollador
+de GPT-6 Luna, ni Z.ai, el desarrollador de GLM, reciben pedidos.
 
 **Límites contractuales.** Nuestro anexo de procesamiento de datos con OpenRouter es el
-estándar, que excluye los datos sensibles. Por eso prohibimos enviar datos de
-salud y otros datos sensibles y los filtramos antes de que nada llegue a
-OpenRouter (A5). No afirmamos tener protección contractual para datos sensibles
+estándar, que excluye los datos sensibles. Amazon Web Services trata el contenido
+conforme a su Anexo de Procesamiento de Datos de AWS estándar, incorporado a los
+Términos de servicio de AWS; no nos basamos en él para autorizar el tratamiento de datos
+sensibles. Por eso prohibimos enviar datos de salud y otros datos sensibles y los
+filtramos antes de que nada llegue a un proveedor de IA (A5). No afirmamos tener protección contractual para datos sensibles
 que no tenemos.
 
 **Sin divulgaciones publicitarias y sin venta.** No divulgamos intencionalmente datos de salud del consumidor
 a nadie, no los entregamos a anunciantes ni a corredores de datos y
 no los vendemos. Pueden producirse divulgaciones incidentales a través de los destinatarios y el tratamiento descritos arriba; por ejemplo, si alguien incluye datos de salud del consumidor en una
 idea de libro en contra de nuestra regla y nuestros filtros no lo detectan, se transmiten
-a OpenRouter y a sus proveedores de alojamiento para escribir el libro. Como nuestro contrato
-con OpenRouter no cubre los datos sensibles, tal transmisión puede considerarse
+al proveedor de IA de la vía utilizada —Amazon Web Services, u OpenRouter y sus proveedores
+de alojamiento— para escribir el libro. Como no nos basamos en un contrato con estos
+proveedores que cubra los datos sensibles, tal transmisión puede considerarse
 «compartir» conforme a la ley de Washington; no obtenemos consentimiento para ello porque
 no ofrecemos ese tratamiento, y trabajamos para prevenirlo (A5) y eliminarlo al descubrirlo (A3).
 Cualquier intercambio previsto requeriría el consentimiento independiente que exige la
@@ -161,7 +170,7 @@ ejemplo, una orden judicial válida).
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Correo electrónico | Hasta 24 meses después del último mensaje; se elimina antes si se solicita |
-| Copias de los encargados | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; OpenRouter y los proveedores de alojamiento no conservan contenido con el enrutamiento de conservación cero de datos, pero pueden conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
+| Copias de los encargados | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; Amazon Web Services no conserva contenido de forma predeterminada, pero conserva hasta 30 días el contenido marcado por sus clasificadores de abuso (al que no podemos acceder ni eliminar) y puede conservar metadatos limitados; OpenRouter y los proveedores de alojamiento no conservan contenido con el enrutamiento de conservación cero de datos, pero pueden conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
 
 Conservamos datos de salud del consumidor más allá de un plazo de eliminación aplicable solo
 cuando lo exija una obligación legal específica o una excepción legal.
@@ -173,7 +182,8 @@ Dondequiera que viva, usted puede:
 - **Confirmar y acceder** a si conservamos sus datos de salud del consumidor, obtener una copia
   de lo que aún existe y obtener una lista de cada destinatario que los recibió
   —encargados del tratamiento, contratistas y cualquier otro tercero, incluidos los destinatarios
-  de transmisiones incidentales como OpenRouter y sus proveedores de alojamiento—
+  de transmisiones incidentales como Amazon Web Services, OpenRouter y los proveedores de
+  alojamiento de OpenRouter—
   con sus datos de contacto (A4). No tenemos entidades afiliadas;
 - **Eliminar** sus datos de salud del consumidor. Notificamos a cada destinatario que
   los recibió —encargados del tratamiento, contratistas y otros terceros— que los elimine,
