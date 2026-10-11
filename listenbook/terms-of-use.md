@@ -1,6 +1,8 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: October 10, 2026**
+**Effective Date: October 11, 2026**
+
+<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
@@ -196,25 +198,25 @@ notice.
 **5.1 How book creation works.** When you order a book, your idea, the book
 type, language, and length are sent to our service on Modal. Our server first
 checks the idea with automated filters (Section 5.4). It then writes the
-book with a third-party large language model, on one of two routes. **Main
-route:** the GPT-6 Luna model, developed by OpenAI, run by Amazon Web
-Services, Inc. in Amazon Bedrock in AWS Regions in the United States. OpenAI
-itself does not receive your orders. Amazon Bedrock does not store the
-content by default, but AWS may keep content flagged by its automated abuse
-classifiers for up to 30 days for automated abuse detection, and AWS's own
-abuse-detection mechanisms and acceptable-use rules apply to the requests.
-**Backup route:** OpenRouter, Inc. passes the requests to independent hosting
-providers running the GLM-5.3 model developed by Z.ai (model identifier
-`z-ai/glm-5.3`); we restrict routing to hosting providers that OpenRouter
-lists as headquartered in the United States and as zero data retention, and
-we instruct OpenRouter not to route to providers that collect data for
-training. Z.ai itself does not receive your orders. Processing on the backup
-route is not guaranteed to take place only in the United States. We use the
-backup route when the main route is unavailable or fails for an order, and
-for orders made under an earlier permission version; one book may be written
-partly on each route. The permission you give in the App names both routes
-(Section 5.2), and the Privacy Policy states which routes are in use. Each
-chapter is then
+book with third-party large language models.
+
+Book writing uses third-party AI models through OpenRouter and its disclosed
+hosting providers, including Microsoft Azure where listed, or through Amazon
+Web Services (Amazon Bedrock). The current models, recipients and processing
+conditions are described in Privacy Policy Section 6.3.
+
+We may replace a model or switch between already authorized routes without
+asking again only while processing remains within the scope of your
+AI-provider permission. Availability through OpenRouter or Amazon Bedrock
+does not by itself make a model or recipient authorized.
+
+Before expanding that scope, we provide the relevant disclosure and obtain
+renewed explicit permission as described in Privacy Policy Section 6.6.
+Accepting these Terms does not replace that permission and does not authorize
+processing of consumer health data or other sensitive personal data.
+
+Providers' own abuse-monitoring and acceptable-use rules apply to the
+requests (AI Safety and Content Policy, B4). Each chapter is then
 checked by our output moderation (Section 5.4), narrated by our own narrator
 model running on Modal, and delivered to the App. No person reviews your
 order or the book before it reaches you.
@@ -223,24 +225,30 @@ order or the book before it reaches you.
 
 1. *Terms and age* — once, before your first book order or server narration:
    the "Before You Create" screen described above. The App records on your
-   device the version of the Terms you accepted (currently 2026-10-10, this
-   edition), the time, and your 18+ statement. Updated versions of the App
-   ask you to accept this edition before your next use of the Service. Older
-   versions that hold the acceptance of the October 8, 2026 edition and
-   permission 2026-10-08 send book orders only through the backup route,
-   whose processing this edition does not change.
+   device the version of the Terms you accepted (currently 2026-10-10.2,
+   this edition), the time, and your 18+ statement. Updated versions of the
+   App ask you to accept this edition before your next use of the Service.
+   Older versions that hold the acceptance of the October 8, 2026 edition and
+   permission 2026-10-08 send book orders only to the GLM hosting providers
+   through OpenRouter, the processing that permission described; this edition
+   does not change it.
 2. *Permission to send book orders to the AI providers* — before your first
-   book order, and again if the permission text changes. The screen asks
-   **"Send your order to Amazon Bedrock or OpenRouter?"** and states:
-   **"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance. This does not limit our obligations under applicable law."** The buttons are "Allow and Continue"
-   and "Not Now." "Not Now" sends nothing to these providers; the player and
-   server narration remain available. This is permission version 2026-10-10.
-   A permission of the earlier version 2026-10-08 is used only for the backup
-   route. Updated versions of the App ask again with the current text before
-   your next book order; until then, older versions holding permission
-   2026-10-08 use only the backup route.
-   You can withdraw it at any time in Settings; new book orders then stop
-   until you allow it again.
+   book order, and again when renewed permission is required (Privacy Policy,
+   Section 6.6). The screen asks **"Allow AI processing of your book
+   orders?"** and states: **"I allow Talefall to send my ideas, book settings and working text to Amazon Web Services (Amazon Bedrock, US regions) or through OpenRouter to AI hosts, including Microsoft Azure, to write my books. OpenRouter uses US-headquartered hosts; US-only processing is not guaranteed. Providers commit not to train on this content. OpenRouter uses zero-retention routes; AWS may retain content flagged for abuse for up to 30 days. Models and recipients: Privacy Policy. Permission covers future orders until withdrawn in Settings."**
+   The buttons are "Allow and Continue" and "Not Now," and the link
+   "Privacy Policy · AI providers" opens the list of current models and
+   recipients in Privacy Policy Section 6.3; the rules for later model and
+   route changes are in Privacy Policy Section 6.6.
+   "Not Now" sends no order content to these AI providers; the player and
+   server narration remain available. This is permission version
+   2026-10-10.2. A permission of the earlier version 2026-10-08 is used only
+   for the GLM route through OpenRouter. Updated versions of the App ask again
+   with the current text before your next book order; until then, older
+   versions holding permission 2026-10-08 use only that route.
+   You can withdraw it at any time in Settings; further transfers to the AI
+   providers then stop, including further AI calls for orders in progress,
+   and new book orders stop until you allow it again.
 3. *No personal data — before every book order.* The order form shows the
    switch **"My idea contains no personal data about real people"**; the
    order cannot be sent until it is on, and it covers the exact text of your
@@ -357,8 +365,9 @@ train models or for advertising.
 **5.9 Text you submit for narration.** You represent that you own the text or
 have the right to have it narrated for your personal use and that it contains
 no personal data about real people (Section 5.3). The text is processed by our
-own narrator model on Modal and is not sent to Amazon Web Services,
-OpenRouter, its hosting providers, or any other model provider.
+own narrator model on Modal and is not sent to OpenRouter, its hosting
+providers (including Microsoft), Amazon Web Services, or any other model
+provider.
 
 ## 6. User Content, Copyright, and Complaints
 
@@ -426,7 +435,7 @@ working storage,
 and restore all hours reserved or charged for it (a cleanup that fails is
 retried); chapters already saved on your device remain. We keep a receipt for each order
 (times, length, hours charged, and the records described in the Privacy
-Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve. Copies kept by our service providers, such as content flagged by Amazon Web Services' abuse classifiers (up to 30 days), follow the periods described in the Privacy Policy.
+Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve. Copies kept by our service providers (for example, Modal's infrastructure copies for up to seven days, or content flagged by a provider's abuse monitoring) follow the periods described in the Privacy Policy.
 
 **Subscription expiry and existing orders.** A book ordered and paid for with
 hours while your subscription was active remains available for delivery after
@@ -464,9 +473,10 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
-Inc. (hosting), Amazon Web Services, Inc. (Amazon Bedrock, main book-writing
-route), and OpenRouter, Inc. and the hosting providers it routes to (backup
-route), as described in the Privacy Policy.
+Inc. (hosting), OpenRouter, Inc. and the hosting providers it routes to
+(including Microsoft Corporation through Microsoft Azure), and, once that
+route is enabled, Amazon Web Services, Inc. (Amazon Bedrock), as described in
+the Privacy Policy.
 Those services operate under their own terms; we remain responsible for our
 choice and use of them but do not guarantee their availability.
 
@@ -534,7 +544,11 @@ the App.
 post the new version at its public address; earlier versions are available on
 request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
-version before your next use of the Service. Material changes do not reduce
+version before your next use of the Service; this edition (version
+2026-10-10.2) is such a change. A new edition of these Terms does not by
+itself expand your AI-provider permission: a new AI recipient outside it, or
+a wider scope of processing, requires renewed explicit permission (Section
+5.2; Privacy Policy, Section 6.6). Material changes do not reduce
 benefits already purchased for the current period.
 
 **Notices.** We may give notices in the App or on our website; notices to us

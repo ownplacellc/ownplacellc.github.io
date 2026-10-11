@@ -1,6 +1,8 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: October 10, 2026**
+**Effective Date: October 11, 2026**
+
+<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -120,12 +122,17 @@ content before relying on it or sharing it.
   decision, not the text.
 - **Provider safeguards.** AI providers may apply their own safeguards; we do
   not rely on them in place of our own controls. On the main book-writing
-  route, Amazon Bedrock runs automated abuse detection: Amazon Web Services
-  may keep content its classifiers flag for up to 30 days for automated
-  abuse detection, may request information about our use of the service,
-  and may suspend our access for noncompliance with its applicable terms or
-  policies (including the model provider's use policies) or for failure to
-  respond. Requests that break those terms can therefore stop the
+  route, Microsoft Azure, reached through OpenRouter, filters prompts and
+  completions in real time and runs abuse monitoring as described in the
+  Privacy Policy, Section 6.3; where it confirms abuse, access to the model
+  may be limited, suspended, or terminated. OpenRouter and the other hosting
+  providers it routes to apply their own terms and policies. If we enable the
+  Amazon Bedrock route, Amazon Bedrock runs automated abuse detection: Amazon
+  Web Services may keep content its classifiers flag for up to 30 days for
+  automated abuse detection, may request information about our use of the
+  service, and may suspend our access for noncompliance with its applicable
+  terms or policies (including the model provider's use policies) or for
+  failure to respond. Requests that break those terms can therefore stop the
   Service for everyone, which is one more reason the rules in B3 apply.
 - **No human pre-review.** Nobody at OWN PLACE LLC reads requests or books
   before they reach you. Authorized personnel review specific content only
