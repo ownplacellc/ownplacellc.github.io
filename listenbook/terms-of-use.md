@@ -218,8 +218,9 @@ processing of consumer health data or other sensitive personal data.
 Providers' own abuse-monitoring and acceptable-use rules apply to the
 requests (AI Safety and Content Policy, B4). Each chapter is then
 checked by our output moderation (Section 5.4), narrated by our own narrator
-model running on Modal, and delivered to the App. No person reviews your
-order or the book before it reaches you.
+model running on Modal, and delivered to the App. OWN PLACE LLC does not
+routinely conduct human pre-review of orders or books. Limited human access
+and provider safeguards are described in Privacy Policy Section 6.3.
 
 **5.2 What you confirm before using the Service.**
 
@@ -240,8 +241,7 @@ order or the book before it reaches you.
    "Privacy Policy · AI providers" opens the list of current models and
    recipients in Privacy Policy Section 6.3; the rules for later model and
    route changes are in Privacy Policy Section 6.6.
-   "Not Now" sends no order content to these AI providers; the player and
-   server narration remain available. This is permission version
+   Below the buttons the screen states: **"“Not Now” sends no order content to these AI providers. The player and server-based narration remain available."** This is permission version
    2026-10-10.2. A permission of the earlier version 2026-10-08 is used only
    for the GLM route through OpenRouter. Updated versions of the App ask again
    with the current text before your next book order; until then, older

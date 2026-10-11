@@ -73,8 +73,8 @@ write to contact@ownplace.net.
 2. **Permission.** Before your first book order the App asks permission to
    send your ideas, book settings, and working text to AI providers to write
    your books: through OpenRouter to AI hosts, including Microsoft Azure
-   (which currently runs the GPT-6 Luna model by OpenAI; OpenAI does not
-   receive your order), or to Amazon Web Services (Amazon Bedrock, US
+   (which runs the GPT-6 Luna model by OpenAI once its no-storage terms for
+   our endpoint are confirmed; OpenAI does not receive your order), or to Amazon Web Services (Amazon Bedrock, US
    regions), a route that is not yet enabled. Providers commit not to train
    on this content; OpenRouter uses zero-retention routes; once enabled, AWS
    may keep content flagged for abuse for up to 30 days. Processing is not

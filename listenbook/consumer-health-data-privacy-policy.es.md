@@ -101,7 +101,10 @@ través de Amazon Web Services (Amazon Bedrock); la sección 6.3 de la Política
 enumera los modelos y las vías actuales. **Vía principal** (pedidos con el permiso
 vigente): el modelo GPT-6 Luna, desarrollado por OpenAI, ejecutado por Microsoft Azure y
 utilizado a través de OpenRouter, limitado al punto de acceso de Azure que OpenRouter
-identifica como de Estados Unidos y con conservación cero de datos. **Vía de respaldo, y
+identifica como de Estados Unidos y con conservación cero de datos, y solo mientras
+OpenRouter confirme por escrito que este punto de acceso no almacena el contenido para la
+supervisión de abusos ni lo somete a revisión humana (hasta entonces, estos pedidos usan
+la vía de respaldo). **Vía de respaldo, y
 única vía para versiones anteriores de la App:** el modelo GLM-5.3, desarrollado por Z.ai,
 utilizado a través de OpenRouter y limitado a los proveedores de alojamiento enumerados en
 la Política de privacidad. Un mismo libro puede escribirse en parte por cada vía. **Amazon
@@ -112,7 +115,7 @@ la Política de privacidad indique lo contrario y hayamos actualizado la evaluac
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), Estados Unidos | Alojamiento; ejecuta nuestro servicio, nuestro modelo narrador y nuestro modelo de moderación; mantiene almacenamiento de trabajo temporal | El pedido completo: idea o texto de narración, capítulos generados, audio |
 | **OpenRouter, Inc.** (openrouter.ai) | Transmite las solicitudes de escritura de libros a los proveedores de alojamiento indicados abajo | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — vía principal | Ejecuta el modelo GPT-6 Luna que escribe el texto, en un punto de acceso que OpenRouter indica como de Estados Unidos y con conservación cero de datos. La documentación de Microsoft describe una supervisión de abusos en la que el contenido marcado puede almacenarse y ser revisado por empleados autorizados de Microsoft, salvo que se aplique la supervisión de abusos modificada; la documentación pública no indica qué modo se aplica a este punto de acceso (Política de privacidad, sección 6.3) | El mismo contenido que OpenRouter reenvía |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — vía principal | Ejecuta el modelo GPT-6 Luna que escribe el texto, en un punto de acceso que OpenRouter indica como de Estados Unidos y con conservación cero de datos. La documentación de Microsoft describe una supervisión de abusos en la que el contenido marcado puede almacenarse y ser revisado por empleados autorizados de Microsoft, salvo que se aplique la supervisión de abusos modificada; la documentación pública no indica qué modo se aplica a este punto de acceso, por lo que solo lo usamos mientras OpenRouter confirme por escrito que se aplica la supervisión de abusos modificada (Política de privacidad, sección 6.3) | El mismo contenido que OpenRouter reenvía |
 | **Proveedores de alojamiento del modelo GLM** (vía de respaldo; versiones anteriores de la App), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo que escribe el texto; OpenRouter los indica con sede en Estados Unidos y con conservación cero de datos | El mismo contenido que OpenRouter reenvía |
 | **Amazon Web Services, Inc. (Amazon Bedrock)** (aws.amazon.com) — **aún no habilitado** | Una vez habilitado: ejecuta modelos de la lista permitida en regiones de AWS en Estados Unidos; de forma predeterminada no almacena el contenido, pero puede conservar hasta 30 días el tráfico marcado por sus clasificadores de abuso para la detección automática de abusos | Una vez habilitado: la idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
 | **Apple Inc.** (iCloud Mail) | Entrega y almacena el correo enviado a contact@ownplace.net | Lo que usted nos escribe y su dirección de correo electrónico |
