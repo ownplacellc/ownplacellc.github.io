@@ -120,9 +120,10 @@ content before relying on it or sharing it.
   not rely on them in place of our own controls. On the main book-writing
   route, Amazon Bedrock runs automated abuse detection: Amazon Web Services
   may keep content its classifiers flag for up to 30 days for automated
-  abuse detection, may ask us about our use of the service, and may suspend
-  our access if it finds a violation of its terms or of the model provider's
-  use policies. Requests that break those terms can therefore stop the
+  abuse detection, may request information about our use of the service,
+  and may suspend our access for noncompliance with its applicable terms or
+  policies (including the model provider's use policies) or for failure to
+  respond. Requests that break those terms can therefore stop the
   Service for everyone, which is one more reason the rules in B3 apply.
 - **No human pre-review.** Nobody at OWN PLACE LLC reads requests or books
   before they reach you. Authorized personnel review specific content only

@@ -75,8 +75,9 @@ write to contact@ownplace.net.
    of the GLM model). OpenAI does not receive your order; Amazon Bedrock may
    keep content its abuse classifiers flag for up to 30 days. "Not Now" sends
    nothing. You can withdraw it later in Settings. If you allowed an earlier
-   version of this permission, the App asks again before your next book
-   order.
+   version of this permission, an updated version of the App asks again
+   before your next book order; until then, orders from older versions use
+   only the OpenRouter backup route.
 3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
    length. **Do not include personal data about real people, including
    yourself.** Turn on "My idea contains no personal data about real people";

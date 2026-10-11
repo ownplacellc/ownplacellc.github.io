@@ -59,9 +59,11 @@ service" exception only where the applicable law allows it and the
 processing is necessary and proportionate for a service requested by the
 person the data is about — never because someone submitted another person's
 data. When we learn that an order contains consumer health data, we stop the
-order, delete the data, restore the hours, and notify the AI provider that
-received it (Amazon Web Services or OpenRouter) of the identifiers we still
-hold if the order is active.
+order and any further processing, delete the copies we control (unless the
+law requires us to preserve them), restore the hours, and notify every AI
+provider that may have received it — Amazon Web Services and OpenRouter — to
+delete it, giving the dates and any identifiers we still hold. We do this
+also after delivery.
 
 Apart from that residual, unintended processing, we use consumer health data
 only:
@@ -78,7 +80,9 @@ training, or any other purpose, and we do not sell it.
 
 We have no affiliates. Content that could contain consumer health data, if
 someone includes it against our rule, may reach the recipients below, which
-process it on our instructions for the purposes in A3. We treat a recipient
+process it to provide the Service for the purposes in A3; in addition,
+Amazon Web Services may keep content its abuse classifiers flag for its
+automated abuse detection (A6). We treat a recipient
 as a processor for consumer health data — so that disclosure to it is not
 "sharing" under Washington law — only to the extent a binding contract with
 it covers that processing. **We do not rely on any contract with the AI
@@ -127,9 +131,12 @@ book idea against our rule and our filters miss it, it is transmitted to the
 AI provider on the route used — Amazon Web Services, or OpenRouter and its
 hosting providers — to write the book. Because we do not rely on a contract
 with these providers that covers sensitive data, such a transmission may count
-as "sharing" under Washington law; we do not obtain consent for it because we
-do not offer that processing, and we work to prevent it (A5) and delete on
-discovery (A3). Any intended sharing would require the separate consent the
+as "sharing" under Washington law. Our rule and filters do not create an
+exemption from consumer health data laws, and the AI-provider permission does
+not authorize processing consumer health data. We work to prevent such
+transmissions (A5); any unintended collection or disclosure is handled under
+applicable law, including stopping further processing, deletion, and
+notification of recipients (A3). Any intended sharing would require the separate consent the
 law requires, and a sale would require the separate, signed authorization the
 law requires. We may also disclose data where the law requires it (for
 example, a valid court order).
@@ -173,7 +180,7 @@ example, a valid court order).
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
 | Email | Up to 24 months after the last message, deleted earlier on request |
-| Processor copies | Modal may keep function inputs and outputs up to 7 days; Amazon Web Services keeps no content by default but keeps content flagged by its abuse classifiers up to 30 days, which we cannot access or delete, and may keep limited metadata; OpenRouter and hosting providers keep no content under zero-data-retention routing but may keep limited metadata; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
+| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; Amazon Web Services keeps no content by default but keeps content flagged by its abuse classifiers up to 30 days, which we cannot access directly, and may keep limited metadata; OpenRouter and hosting providers keep no content under zero-data-retention routing but may keep limited metadata; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
 
 We keep consumer health data beyond an applicable deletion deadline only
 where a specific legal obligation or statutory exception requires it.

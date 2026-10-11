@@ -74,16 +74,21 @@ residencia.
 - **La regla: ningún dato personal sobre personas reales, incluido usted.** Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor rechaza las ideas de libro en las que
   detecta datos personales o sensibles (sección 6.5). No leemos sus
   solicitudes ni sus libros.
-- **No conservamos ninguna copia tras la entrega.** La copia del libro en el servidor se elimina en cuanto
-  la App confirma que ha guardado todos los capítulos; un pedido no entregado
-  caduca a los siete días y se elimina, con sus horas restituidas, en la
-  siguiente limpieza programada. Conservamos un recibo
-  (horas, tiempos, registros de confirmación), pero no el contenido (sección 6.4).
+- **Nuestro servidor no conserva ninguna copia del libro tras la entrega.** Nuestra
+  copia del libro en el servidor se elimina en cuanto la App confirma que ha guardado
+  todos los capítulos; un pedido no entregado caduca a los siete días y se elimina,
+  con sus horas restituidas, en la siguiente limpieza programada. Conservamos un
+  recibo (horas, tiempos, registros de confirmación), pero no el contenido. Las
+  copias que conservan nuestros proveedores de servicios (por ejemplo, el contenido
+  marcado por los clasificadores de abuso de Amazon Web Services, hasta 30 días),
+  las denuncias de contenido y los materiales que la ley nos obliga a preservar
+  siguen los plazos propios de la sección 6.4.
 - **Su suscripción se identifica por la transacción firmada de Apple, no por
   usted** (sección 6.1).
 - **Contadores de uso solo si usted dice que sí**; por defecto es no (sección 8).
 - **Sin rastreo, sin anuncios, sin identificador publicitario, sin SDK de analítica de terceros.**
-  No vendemos ni compartimos información personal.
+  No vendemos información personal ni la compartimos para publicidad conductual
+  entre contextos; solo la divulgamos a los destinatarios descritos en la sección 6.3.
 
 ## 3. Información que no recopilamos
 
@@ -220,7 +225,8 @@ Los libros se escriben por una de dos vías:
   solicitudes limitadas a los proveedores de alojamiento enumerados abajo. La
   usamos cuando la vía principal no está disponible o falla en un pedido, y
   para los pedidos hechos con un permiso de una versión anterior que no
-  describía la vía principal (sección 6.6). Un mismo libro puede escribirse en
+  describía el modelo GPT-6 Luna ni la conservación del contenido marcado
+  (sección 6.6). Un mismo libro puede escribirse en
   parte por cada vía.
 
 Ni OpenAI ni Z.ai reciben sus pedidos.
@@ -255,7 +261,7 @@ revisarse contenido específico cuando usted contacta con soporte, denuncia cont
 legal, o cuando sea razonablemente necesario para investigar un abuso o un incidente de
 seguridad o para cumplir la ley.
 
-### 6.4 Conservación y eliminación: ninguna copia tras la entrega
+### 6.4 Conservación y eliminación: ninguna copia en nuestro servidor tras la entrega
 
 - El **contenido de trabajo** (idea o texto de narración, capítulos generados, título,
   audio, identificadores de solicitud del proveedor de IA) se conserva solo mientras el pedido
@@ -265,7 +271,8 @@ seguridad o para cumplir la ley.
   audio en el servidor. Después no podemos restaurar ni volver a entregar el libro.
 - **Si la entrega no se confirma en siete días** desde que el Servicio
   aceptó el pedido, el pedido caduca: en la siguiente limpieza programada,
-  normalmente en 15 minutos, eliminamos todo el contenido del pedido en el servidor y
+  normalmente en 15 minutos, eliminamos todo el contenido del pedido de nuestro
+  almacenamiento de trabajo y
   restituimos todas las horas reservadas o cobradas por él; una limpieza que falla se reintenta.
 - **Vencimiento de la suscripción y pedidos existentes.** Un libro encargado y
   pagado con horas mientras la suscripción estaba activa sigue disponible para
@@ -294,12 +301,12 @@ seguridad o para cumplir la ley.
 - **Los registros de solicitudes de eliminación** (fecha, un hash con clave del identificador de
   transacción y lo que se eliminó; sin contenido) se conservan dos años como
   prueba de que cumplimos.
-- **Copias de los encargados.** Modal puede conservar las entradas y salidas de las funciones hasta
+- **Copias que conservan los proveedores de servicios.** Modal puede conservar las entradas y salidas de las funciones hasta
   siete días conforme a su política de retención de infraestructura. OpenRouter y los
   proveedores de alojamiento pueden conservar metadatos limitados como se describe en 6.3. En la
   vía principal, Amazon Web Services puede conservar hasta 30 días el contenido que marquen sus
   clasificadores de abuso, y metadatos limitados, como se describe en 6.3; esas copias las
-  conserva AWS, y nosotros no podemos verlas, localizarlas ni eliminarlas. Tras
+  conserva AWS, y no tenemos acceso directo a ellas. Tras
   la entrega ya no conservamos identificadores que nos permitan localizar ninguna copia residual
   de un proveedor; mientras un pedido está activo, una solicitud de eliminación lo cancela.
 - En el caso de los datos de salud del consumidor de Washington, las copias de seguridad que mantenga un encargado del tratamiento se
@@ -347,18 +354,21 @@ y lo que generó para ese pedido.
 1. **«Antes de crear»** (una vez, antes del primer pedido de libro o narración con la
    voz de Talefall; la App no envía ninguno de los dos hasta que usted acepta): *«Crear libros a partir de ideas y narrar tu texto en nuestro servicio se rigen por los Términos de uso y la Política de privacidad. Estas funciones son solo para adultos.»* con el interruptor *«Tengo 18 años o más y acepto los Términos de uso y la Política de privacidad»* y el botón «Continuar». Esto es
    una declaración propia de edad, no una verificación de edad. La App almacena la versión de los Términos
-   (actualmente 2026-10-08), la hora y su declaración en su
-   dispositivo; no se envía a nuestro servidor.
+   (actualmente 2026-10-10, la edición del 10 de octubre de 2026), la hora y su
+   declaración en su dispositivo; no se envía a nuestro servidor. Como esta edición
+   cambia cómo se tratan los pedidos de libros, la App le pide que la acepte de nuevo.
 2. **Permiso del proveedor de IA** (antes del primer pedido de libro; de nuevo si el
-   texto del permiso cambia). Título: *«¿Enviar tu pedido a Amazon Bedrock o a OpenRouter?»* Texto: *«Permito que el contenido de mis pedidos de libros se envíe a un proveedor de IA para generar el texto solicitado. La vía principal es Amazon Web Services (Amazon Bedrock), que ejecuta el modelo GPT-6 Luna (desarrollado por OpenAI) en regiones de AWS en Estados Unidos. OpenAI no recibe mis pedidos, y AWS declara que no los usa para entrenar modelos. Amazon Bedrock no almacena el contenido de forma predeterminada, pero AWS puede conservar hasta 30 días el contenido que marquen sus clasificadores automáticos de abuso, para la detección automática de abusos. Como vía de respaldo, Talefall puede enviar el mismo contenido a OpenRouter, que lo transmite a proveedores de alojamiento independientes que ejecutan el modelo GLM (desarrollado por Z.ai) y que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos, es decir, que declaran no almacenar el contenido ni entrenar con él; Z.ai no recibe mis pedidos, y no se garantiza que el procesamiento en esta vía ocurra solo en Estados Unidos. La Política de privacidad indica las vías en uso. Este permiso sigue vigente hasta que lo retire o hasta que Talefall use un proveedor no mencionado aquí. Estos son compromisos de los proveedores, no una garantía nuestra; Amazon Web Services y OpenRouter también pueden conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal.»* Botones: «Permitir y continuar» y
+   texto del permiso cambia). Título: *«¿Enviar tu pedido a Amazon Bedrock o a OpenRouter?»* Texto: *«Permito que el contenido de mis pedidos de libros se envíe a un proveedor de IA para generar el texto solicitado. La vía principal es Amazon Web Services (Amazon Bedrock), que ejecuta el modelo GPT-6 Luna (desarrollado por OpenAI) en regiones de AWS en Estados Unidos. OpenAI no recibe mis pedidos, y AWS declara que no los usa para entrenar modelos. Amazon Bedrock no almacena el contenido de forma predeterminada, pero AWS puede conservar hasta 30 días el contenido que marquen sus clasificadores automáticos de abuso, para la detección automática de abusos. Como vía de respaldo, Talefall puede enviar el mismo contenido a OpenRouter, que lo transmite a proveedores de alojamiento independientes que ejecutan el modelo GLM (desarrollado por Z.ai) y que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos, es decir, que declaran no almacenar el contenido ni entrenar con él; Z.ai no recibe mis pedidos, y no se garantiza que el procesamiento en esta vía ocurra solo en Estados Unidos. La Política de privacidad indica las vías en uso. Este permiso sigue vigente hasta que lo retire o hasta que Talefall use un proveedor no mencionado aquí. Estos son compromisos de los proveedores, no una garantía nuestra; Amazon Web Services y OpenRouter también pueden conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal. Esto no limita nuestras obligaciones conforme a la ley aplicable.»* Botones: «Permitir y continuar» y
    «Ahora no»; «Ahora no» no envía nada a estos proveedores. Nuestro servidor conserva
    su última decisión (permitido o retirado), la versión del permiso
    (actualmente 2026-10-10) y la hora, junto con el identificador de transacción original, y
    rechaza los pedidos de libros sin un permiso válido. Un permiso de la versión
    anterior 2026-10-08, que mencionaba a Amazon Web Services pero no el modelo
    GPT-6 Luna ni la conservación del contenido marcado, se usa solo para la vía de
-   respaldo a través de OpenRouter; antes de su próximo pedido de libro, la App le
-   preguntará de nuevo con el texto vigente. Usted puede retirarlo en Ajustes; los pedidos de libros se detienen entonces hasta
+   respaldo a través de OpenRouter. Las versiones actualizadas de la App le
+   preguntarán de nuevo con el texto vigente antes de su próximo pedido de libro;
+   hasta entonces, las versiones anteriores con el permiso 2026-10-08 usan solo esa
+   vía de respaldo. Usted puede retirarlo en Ajustes; los pedidos de libros se detienen entonces hasta
    que lo permita de nuevo. La narración no necesita este permiso porque el
    texto no se envía a estos proveedores.
 3. **Antes de cada pedido de libro:** el interruptor *«Mi idea no contiene datos personales de personas reales»*; cubre el texto exacto, de modo que editar la idea exige
@@ -382,9 +392,11 @@ que ofrezcamos: pueden tratarse automáticamente antes de que nadie lo advierta,
 solo invocamos una excepción de «servicio solicitado» cuando la ley aplicable lo
 permite y el tratamiento es necesario y proporcionado, y nunca porque una
 persona haya enviado los datos de otra. Cuando sabemos que un pedido contiene
-tales datos, detenemos el pedido, eliminamos los datos, restituimos las horas, notificamos
-al proveedor de IA que los recibió (Amazon Web Services u OpenRouter) los identificadores
-que aún conservamos si el pedido está activo, y podemos rechazar pedidos posteriores. Consulte la Política de privacidad de datos de salud del consumidor.
+tales datos, detenemos todo tratamiento posterior, eliminamos las copias que controlamos
+(salvo que la ley nos obligue a preservarlas), restituimos las horas y notificamos a cada
+proveedor de IA que pueda haberlos recibido —Amazon Web Services y OpenRouter— que los elimine, indicando las fechas y los
+identificadores que aún conservamos. Lo hacemos también tras la entrega. Podemos rechazar
+pedidos posteriores. Consulte la Política de privacidad de datos de salud del consumidor.
 
 ### 6.7 Verificación de territorio y de sanciones
 
@@ -461,10 +473,11 @@ de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
 - **Qué abarca la eliminación.** Eliminamos cualquier contenido de pedido restante, recibos,
   registros de permisos, denuncias vinculadas a usted y otros registros susceptibles de
   eliminación, y notificamos a cada destinatario que recibió los datos (encargados del tratamiento,
-  contratistas y otros terceros, como Amazon Web Services y OpenRouter) que los eliminen,
-  usando los identificadores que aún conservamos. Las copias que Amazon Web Services
-  conserva para la detección de abusos no son accesibles para nosotros; caducan en un
-  plazo de 30 días.
+  contratistas y otros terceros, incluidos ambos proveedores de IA, Amazon Web Services y
+  OpenRouter) que los eliminen, también tras la entrega, indicando las fechas y los
+  identificadores que aún conservamos. No tenemos acceso directo a las copias que Amazon
+  Web Services conserva para la detección de abusos; AWS declara que el contenido marcado
+  se conserva hasta 30 días.
   Conservamos solo el registro mínimo de la solicitud de eliminación (sección 6.4), los registros que
   la ley nos obliga a conservar y —salvo que usted confirme que renuncia a ellas—
   el registro mínimo necesario para preservar las horas adicionales compradas no utilizadas. Cuando
@@ -570,7 +583,7 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 | Biblioteca, datos de lectura y reproducción, ajustes | Su dispositivo y copias de seguridad | Hasta que usted los elimine |
 | Fecha de inicio de la prueba | Llavero y almacén de clave-valor de iCloud | Persistente por diseño |
 | Contenido del pedido (idea o texto de narración, capítulos, título, audio, identificadores de solicitud del proveedor de IA) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que se confirme la entrega; si nunca se entrega, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
-| Copias de los encargados | Modal; Amazon Web Services; OpenRouter y sus proveedores | Modal hasta 7 días; Amazon Web Services hasta 30 días para el contenido marcado por sus clasificadores de abuso, más metadatos limitados; OpenRouter y sus proveedores como se describe en 6.3 |
+| Copias que conservan los proveedores de servicios | Modal; Amazon Web Services; OpenRouter y sus proveedores | Modal hasta 7 días; Amazon Web Services hasta 30 días para el contenido marcado por sus clasificadores de abuso, más metadatos limitados; OpenRouter y sus proveedores como se describe en 6.3 |
 | Su libro entregado | Su dispositivo y su iCloud privado | Hasta que usted lo elimine |
 | Recibos, registros de permisos, saldo de horas, avisos de suscripción | Modal (EE. UU.) | 7 años después del último hecho financiero relacionado |
 | Denuncias de contenido (motivo, nota, pasaje, número de libro, capítulo, identificador de suscripción) | Modal (EE. UU.); nuestro buzón si se envían por correo | 12 meses |

@@ -223,17 +223,19 @@ order or the book before it reaches you.
 
 1. *Terms and age* — once, before your first book order or server narration:
    the "Before You Create" screen described above. The App records on your
-   device the version of the Terms you accepted (currently 2026-10-08), the
-   time, and your 18+ statement.
+   device the version of the Terms you accepted (currently 2026-10-10, this
+   edition), the time, and your 18+ statement. Because this edition changes
+   how book orders are processed, the App asks you to accept it again.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again if the permission text changes. The screen asks
    **"Send your order to Amazon Bedrock or OpenRouter?"** and states:
-   **"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance."** The buttons are "Allow and Continue"
+   **"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance. This does not limit our obligations under applicable law."** The buttons are "Allow and Continue"
    and "Not Now." "Not Now" sends nothing to these providers; the player and
    server narration remain available. This is permission version 2026-10-10.
    A permission of the earlier version 2026-10-08 is used only for the backup
-   route, and the App asks again with the current text before your next book
-   order.
+   route. Updated versions of the App ask again with the current text before
+   your next book order; until then, older versions holding permission
+   2026-10-08 use only the backup route.
    You can withdraw it at any time in Settings; new book orders then stop
    until you allow it again.
 3. *No personal data — before every book order.* The order form shows the
@@ -416,11 +418,12 @@ device.** Immediately after delivery is confirmed, we delete our server copy of
 the text and audio, and **we cannot restore or re-deliver the book after
 that.** An order whose delivery is not confirmed within **seven days** after
 the Service accepted it expires: at the next scheduled cleanup, normally
-within 15 minutes, we stop processing, delete all server-side order content,
+within 15 minutes, we stop processing, delete all order content from our
+working storage,
 and restore all hours reserved or charged for it (a cleanup that fails is
 retried); chapters already saved on your device remain. We keep a receipt for each order
 (times, length, hours charged, and the records described in the Privacy
-Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve.
+Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve. Copies kept by our service providers, such as content flagged by Amazon Web Services' abuse classifiers (up to 30 days), follow the periods described in the Privacy Policy.
 
 **Subscription expiry and existing orders.** A book ordered and paid for with
 hours while your subscription was active remains available for delivery after

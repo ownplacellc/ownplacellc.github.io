@@ -60,9 +60,10 @@ solicitado» solo cuando la ley aplicable lo permite y el
 tratamiento es necesario y proporcionado para un servicio solicitado por la
 persona a quien se refieren los datos, y nunca porque alguien haya enviado los datos de
 otra persona. Cuando sabemos que un pedido contiene datos de salud del consumidor, detenemos el
-pedido, eliminamos los datos, restituimos las horas y notificamos al proveedor de IA que
-los recibió (Amazon Web Services u OpenRouter) los identificadores que aún conservamos si
-el pedido está activo.
+pedido y todo tratamiento posterior, eliminamos las copias que controlamos (salvo que la
+ley nos obligue a preservarlas), restituimos las horas y notificamos a cada proveedor de IA
+que pueda haberlos recibido —Amazon Web Services y OpenRouter— que los elimine, indicando
+las fechas y los identificadores que aún conservamos. Lo hacemos también tras la entrega.
 
 Aparte de ese tratamiento residual y no intencionado, usamos los datos de salud del consumidor
 solo:
@@ -79,7 +80,9 @@ ni ningún otro fin, y no los vendemos.
 
 No tenemos entidades afiliadas. El contenido que pudiera contener datos de salud del consumidor, si
 alguien lo incluye en contra de nuestra regla, puede llegar a los destinatarios siguientes, que
-lo tratan según nuestras instrucciones para los fines de A3. Consideramos a un destinatario
+lo tratan para prestar el Servicio con los fines de A3; además, Amazon Web Services puede
+conservar el contenido que marquen sus clasificadores de abuso para su detección automática
+de abusos (A6). Consideramos a un destinatario
 encargado del tratamiento de datos de salud del consumidor —de modo que la divulgación a él no sea
 «compartir» conforme a la ley de Washington— solo en la medida en que un contrato vinculante
 con él cubra ese tratamiento. **No nos basamos en ningún contrato con los proveedores de IA
@@ -125,8 +128,12 @@ idea de libro en contra de nuestra regla y nuestros filtros no lo detectan, se t
 al proveedor de IA de la vía utilizada —Amazon Web Services, u OpenRouter y sus proveedores
 de alojamiento— para escribir el libro. Como no nos basamos en un contrato con estos
 proveedores que cubra los datos sensibles, tal transmisión puede considerarse
-«compartir» conforme a la ley de Washington; no obtenemos consentimiento para ello porque
-no ofrecemos ese tratamiento, y trabajamos para prevenirlo (A5) y eliminarlo al descubrirlo (A3).
+«compartir» conforme a la ley de Washington. Nuestra regla y nuestros filtros no crean una
+excepción a las leyes sobre datos de salud del consumidor, y el permiso del proveedor de IA
+no autoriza el tratamiento de datos de salud del consumidor. Trabajamos para prevenir esas
+transmisiones (A5); cualquier recopilación o divulgación no intencionada se gestiona conforme
+a la ley aplicable, lo que incluye detener el tratamiento posterior, eliminar los datos y
+notificar a los destinatarios (A3).
 Cualquier intercambio previsto requeriría el consentimiento independiente que exige la
 ley, y una venta requeriría la autorización independiente y firmada que exige la
 ley. También podemos divulgar datos cuando la ley lo exija (por
@@ -170,7 +177,7 @@ ejemplo, una orden judicial válida).
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Correo electrónico | Hasta 24 meses después del último mensaje; se elimina antes si se solicita |
-| Copias de los encargados | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; Amazon Web Services no conserva contenido de forma predeterminada, pero conserva hasta 30 días el contenido marcado por sus clasificadores de abuso (al que no podemos acceder ni eliminar) y puede conservar metadatos limitados; OpenRouter y los proveedores de alojamiento no conservan contenido con el enrutamiento de conservación cero de datos, pero pueden conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
+| Copias que conservan los proveedores de servicios | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; Amazon Web Services no conserva contenido de forma predeterminada, pero conserva hasta 30 días el contenido marcado por sus clasificadores de abuso (al que no tenemos acceso directo) y puede conservar metadatos limitados; OpenRouter y los proveedores de alojamiento no conservan contenido con el enrutamiento de conservación cero de datos, pero pueden conservar metadatos limitados; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
 
 Conservamos datos de salud del consumidor más allá de un plazo de eliminación aplicable solo
 cuando lo exija una obligación legal específica o una excepción legal.

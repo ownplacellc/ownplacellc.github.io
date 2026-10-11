@@ -71,16 +71,21 @@ live.
 - **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas in which it
   detects personal or sensitive data (Section 6.5). We do not read your
   requests or books.
-- **We keep no copy after delivery.** The server copy of a book is deleted as
-  soon as the App confirms it has saved every chapter; an undelivered order
-  expires after seven days and is deleted, with its hours restored, at the
-  next scheduled cleanup. We keep a receipt
-  (times, hours, confirmation records) but not the content (Section 6.4).
+- **Our server keeps no copy of the book after delivery.** Our server copy of
+  a book is deleted as soon as the App confirms it has saved every chapter; an
+  undelivered order expires after seven days and is deleted, with its hours
+  restored, at the next scheduled cleanup. We keep a receipt (times, hours,
+  confirmation records) but not the content. Copies kept by our service
+  providers (for example, content flagged by Amazon Web Services' abuse
+  classifiers, for up to 30 days), content reports, and materials the law
+  requires us to preserve follow the separate periods in Section 6.4.
 - **Your subscription is identified by Apple's signed transaction, not by
   you** (Section 6.1).
 - **Usage counters only if you say yes**; the default is no (Section 8).
 - **No tracking, no ads, no advertising identifier, no third-party analytics
-  SDKs.** We do not sell or share personal information.
+  SDKs.** We do not sell personal information or share it for cross-context
+  behavioral advertising; we disclose it only to the recipients described in
+  Section 6.3.
 
 ## 3. Information We Do Not Collect
 
@@ -216,8 +221,8 @@ Book writing uses one of two routes:
   OpenRouter using the model identifier `z-ai/glm-5.3`, with requests
   restricted to the hosting providers listed below. We use it when the main
   route is unavailable or fails for an order, and for orders made under an
-  earlier permission version that did not describe the main route
-  (Section 6.6). One book may be written partly on each route.
+  earlier permission version that did not describe the GPT-6 Luna model or
+  the retention of flagged content (Section 6.6). One book may be written partly on each route.
 
 Neither OpenAI nor Z.ai receives your orders.
 
@@ -251,7 +256,7 @@ may be reviewed when you contact support, report content, or submit a legal
 complaint, or when reasonably necessary to investigate abuse or a security
 incident or to comply with law.
 
-### 6.4 Retention and deletion — no copy after delivery
+### 6.4 Retention and deletion — no copy on our server after delivery
 
 - **Working content** (idea or narration text, generated chapters, title,
   audio, AI-provider request identifiers) is held only while the order is
@@ -261,7 +266,8 @@ incident or to comply with law.
   audio. We cannot restore or re-deliver the book after that.
 - **If delivery is not confirmed within seven days** after the Service
   accepted the order, the order expires: at the next scheduled cleanup,
-  normally within 15 minutes, we delete all server-side order content and
+  normally within 15 minutes, we delete all order content from our working
+  storage and
   restore all hours reserved or charged for it; a cleanup that fails is retried.
 - **Subscription expiry and existing orders.** A book ordered and paid for
   with hours while your subscription was active remains available for delivery
@@ -290,12 +296,12 @@ incident or to comply with law.
 - **Deletion-request records** (date, a keyed hash of the transaction
   identifier, and what was deleted; no content) are kept for two years as
   evidence that we complied.
-- **Processor copies.** Modal may keep function inputs and outputs for up to
+- **Copies kept by service providers.** Modal may keep function inputs and outputs for up to
   seven days under its infrastructure retention policy. OpenRouter and the
   hosting providers may keep limited metadata as described in 6.3. On the main
   route, Amazon Web Services may keep content flagged by its abuse
   classifiers for up to 30 days, and limited metadata, as described in 6.3;
-  those copies are held by AWS, and we cannot see, locate, or delete them.
+  those copies are held by AWS, and we cannot access them directly.
   After delivery we no longer hold identifiers that would let us locate any
   residual provider copy; while an order is active, a deletion request
   cancels it.
@@ -349,19 +355,23 @@ and what it generated for that order.
    features are for adults only."* with the switch *"I'm 18 or older and agree
    to the Terms of Use and Privacy Policy"* and the button "Continue." This is
    a self-declaration of age, not age verification. The App stores the Terms
-   version (currently 2026-10-08), the time, and your statement on your
-   device; it is not sent to our server.
+   version (currently 2026-10-10, the edition of October 10, 2026), the time,
+   and your statement on your device; it is not sent to our server. Because
+   this edition changes how book orders are processed, the App asks you to
+   accept it again.
 2. **AI-provider permission** (before the first book order; again if the
    permission text changes). Title: *"Send your order to Amazon Bedrock or
-   OpenRouter?"* Text: *"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance."* Buttons: "Allow and
+   OpenRouter?"* Text: *"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance. This does not limit our obligations under applicable law."* Buttons: "Allow and
    Continue" and "Not Now"; "Not Now" sends nothing to these providers. Our
    server keeps your latest decision (allowed or withdrawn), the permission
    version (currently 2026-10-10), and the time, with the original transaction
    identifier, and refuses book orders without a valid permission. A
    permission of the earlier version 2026-10-08, which named Amazon Web
    Services but not the GPT-6 Luna model or the retention of flagged content,
-   is used only for the backup route through OpenRouter; the App asks again
-   with the current text before your next book order. You can withdraw it in Settings; book orders then stop until
+   is used only for the backup route through OpenRouter. Updated versions of
+   the App ask again with the current text before your next book order; until
+   then, older versions holding permission 2026-10-08 use only that backup
+   route. You can withdraw it in Settings; book orders then stop until
    you allow it again. Narration does not need this permission because the
    text is not sent to these providers.
 3. **Before every book order:** the switch *"My idea contains no personal data
@@ -385,10 +395,12 @@ we offer: it may be processed automatically before anyone notices, but we
 rely on a "requested service" exception only where the applicable law allows
 it and the processing is necessary and proportionate, and never because one
 person submitted another person's data. When we learn that an order contains
-such data, we stop the order, delete the data, restore the hours, notify
-the AI provider that received it (Amazon Web Services or OpenRouter) of the
-identifiers we still hold if the order is active, and may refuse further
-orders. See the Consumer Health Data Privacy Policy.
+such data, we stop any further processing, delete the copies we control
+(unless the law requires us to preserve them), restore the hours, and notify
+every AI provider that may have received it — Amazon Web Services and
+OpenRouter — to delete it, giving
+the dates and any identifiers we still hold. We do this also after delivery.
+We may refuse further orders. See the Consumer Health Data Privacy Policy.
 
 ### 6.7 Territory and sanctions check
 
@@ -469,10 +481,11 @@ of refused requests by reason, without identifiers, for 30 days.
 - **What deletion covers.** We delete any remaining order content, receipts,
   permission records, reports linked to you, and other records eligible for
   deletion, and notify every recipient that received the data (processors,
-  contractors, and other third parties, such as Amazon Web Services and
-  OpenRouter) to delete it, using the identifiers we still hold. Copies that
-  Amazon Web Services keeps for abuse detection are not accessible to us; they
-  expire within 30 days.
+  contractors, and other third parties, including both AI providers, Amazon
+  Web Services and OpenRouter) to delete it, also after delivery, giving the
+  dates and any identifiers we still hold. We cannot access directly the
+  copies that Amazon Web Services keeps for abuse detection; AWS states that
+  flagged content is retained for up to 30 days.
   We keep only the minimal deletion-request record (Section 6.4), records the
   law requires us to keep, and — unless you confirm that you give them up —
   the minimum record needed to preserve unused purchased extra hours. Where
@@ -580,7 +593,7 @@ websites you open from it follow their own policies.
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
 | Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until delivery is confirmed; if never delivered, the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
-| Processor copies | Modal; Amazon Web Services; OpenRouter and its hosts | Modal up to 7 days; Amazon Web Services up to 30 days for content flagged by its abuse classifiers, plus limited metadata; OpenRouter and hosts as described in 6.3 |
+| Copies kept by service providers | Modal; Amazon Web Services; OpenRouter and its hosts | Modal up to 7 days; Amazon Web Services up to 30 days for content flagged by its abuse classifiers, plus limited metadata; OpenRouter and hosts as described in 6.3 |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
 | Content reports (reason, note, passage, book number, chapter, subscription identifier) | Modal (USA); our mailbox if emailed | 12 months |
