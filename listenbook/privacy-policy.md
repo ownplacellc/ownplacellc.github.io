@@ -69,8 +69,8 @@ live.
   checked by our own moderation model on Modal; neither sends the text to
   another company.
 - **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas in which it
-  detects personal or sensitive data (Section 6.5). We do not read your
-  requests or books.
+  detects personal or sensitive data (Section 6.5). We do not routinely read
+  requests or books; limited human access is described in Section 6.3.
 - **Our server keeps no copy of the book after delivery.** Our server copy of
   a book is deleted as soon as the App confirms it has saved every chapter; an
   undelivered order expires after seven days and is deleted, with its hours
@@ -356,9 +356,11 @@ and what it generated for that order.
    to the Terms of Use and Privacy Policy"* and the button "Continue." This is
    a self-declaration of age, not age verification. The App stores the Terms
    version (currently 2026-10-10, the edition of October 10, 2026), the time,
-   and your statement on your device; it is not sent to our server. Because
-   this edition changes how book orders are processed, the App asks you to
-   accept it again.
+   and your statement on your device; it is not sent to our server. Updated
+   versions of the App ask you to accept this edition before your next use of
+   the Service. Older versions that hold the acceptance of the October 8, 2026
+   edition and permission 2026-10-08 send book orders only through the backup
+   route, whose processing this edition does not change.
 2. **AI-provider permission** (before the first book order; again if the
    permission text changes). Title: *"Send your order to Amazon Bedrock or
    OpenRouter?"* Text: *"Allow content from my book orders to be sent to an AI provider to generate the requested text. The main route is Amazon Web Services (Amazon Bedrock), which runs the GPT-6 Luna model (developed by OpenAI) in AWS Regions in the United States. OpenAI itself does not receive my orders, and AWS states that it does not use them to train models. Amazon Bedrock does not store the content by default, but AWS may keep content flagged by its automated abuse classifiers for up to 30 days for automated abuse detection. As a backup, Talefall may send the same content to OpenRouter, which passes it to independent hosting providers running the GLM model (developed by Z.ai) that OpenRouter lists as headquartered in the United States and as zero data retention, which means they state that they do not store or train on the content; Z.ai itself does not receive my orders, and processing on this route is not guaranteed to take place only in the United States. The Privacy Policy names the routes in use. This permission remains in effect until I withdraw it or Talefall uses a provider not named here. These are the providers' commitments, not a guarantee from us; Amazon Web Services and OpenRouter may also keep limited request metadata for billing, security, abuse prevention, or legal compliance. This does not limit our obligations under applicable law."* Buttons: "Allow and

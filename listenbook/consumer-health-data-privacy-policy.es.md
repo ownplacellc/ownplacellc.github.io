@@ -228,8 +228,10 @@ la entrega, en la mayoría de los casos no queda contenido que facilitar ni elim
 
 Como las solicitudes de texto libre podrían contener datos sensibles, mantenemos una
 evaluación de protección de datos del Servicio, incluida la evaluación que exige la
-Ley de Privacidad de Datos de Connecticut para el tratamiento de datos sensibles, y
-la actualizamos cuando cambiamos de encargado del tratamiento o de vía de IA.
+Ley de Privacidad de Datos de Connecticut para el tratamiento de datos sensibles. Antes
+de habilitar una nueva vía de IA o cambiar sustancialmente su tratamiento, actualizamos la
+evaluación y resolvemos las conclusiones que exijan cambios en nuestro tratamiento o en
+nuestras salvaguardas.
 
 ## A10. Cambios
 

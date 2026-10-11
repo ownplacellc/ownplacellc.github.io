@@ -72,8 +72,8 @@ residencia.
   revisa con nuestro propio modelo de moderación en Modal; ninguno envía el texto a
   otra empresa.
 - **La regla: ningún dato personal sobre personas reales, incluido usted.** Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor rechaza las ideas de libro en las que
-  detecta datos personales o sensibles (sección 6.5). No leemos sus
-  solicitudes ni sus libros.
+  detecta datos personales o sensibles (sección 6.5). No leemos de forma habitual sus
+  solicitudes ni sus libros; el acceso humano limitado se describe en la sección 6.3.
 - **Nuestro servidor no conserva ninguna copia del libro tras la entrega.** Nuestra
   copia del libro en el servidor se elimina en cuanto la App confirma que ha guardado
   todos los capítulos; un pedido no entregado caduca a los siete días y se elimina,
@@ -355,8 +355,11 @@ y lo que generó para ese pedido.
    voz de Talefall; la App no envía ninguno de los dos hasta que usted acepta): *«Crear libros a partir de ideas y narrar tu texto en nuestro servicio se rigen por los Términos de uso y la Política de privacidad. Estas funciones son solo para adultos.»* con el interruptor *«Tengo 18 años o más y acepto los Términos de uso y la Política de privacidad»* y el botón «Continuar». Esto es
    una declaración propia de edad, no una verificación de edad. La App almacena la versión de los Términos
    (actualmente 2026-10-10, la edición del 10 de octubre de 2026), la hora y su
-   declaración en su dispositivo; no se envía a nuestro servidor. Como esta edición
-   cambia cómo se tratan los pedidos de libros, la App le pide que la acepte de nuevo.
+   declaración en su dispositivo; no se envía a nuestro servidor. Las versiones
+   actualizadas de la App le piden que acepte esta edición antes de su próximo uso del
+   Servicio. Las versiones anteriores que conservan la aceptación de la edición del 8 de
+   octubre de 2026 y el permiso 2026-10-08 envían los pedidos de libros solo por la vía de
+   respaldo, cuyo tratamiento esta edición no cambia.
 2. **Permiso del proveedor de IA** (antes del primer pedido de libro; de nuevo si el
    texto del permiso cambia). Título: *«¿Enviar tu pedido a Amazon Bedrock o a OpenRouter?»* Texto: *«Permito que el contenido de mis pedidos de libros se envíe a un proveedor de IA para generar el texto solicitado. La vía principal es Amazon Web Services (Amazon Bedrock), que ejecuta el modelo GPT-6 Luna (desarrollado por OpenAI) en regiones de AWS en Estados Unidos. OpenAI no recibe mis pedidos, y AWS declara que no los usa para entrenar modelos. Amazon Bedrock no almacena el contenido de forma predeterminada, pero AWS puede conservar hasta 30 días el contenido que marquen sus clasificadores automáticos de abuso, para la detección automática de abusos. Como vía de respaldo, Talefall puede enviar el mismo contenido a OpenRouter, que lo transmite a proveedores de alojamiento independientes que ejecutan el modelo GLM (desarrollado por Z.ai) y que OpenRouter indica con sede en Estados Unidos y con conservación cero de datos, es decir, que declaran no almacenar el contenido ni entrenar con él; Z.ai no recibe mis pedidos, y no se garantiza que el procesamiento en esta vía ocurra solo en Estados Unidos. La Política de privacidad indica las vías en uso. Este permiso sigue vigente hasta que lo retire o hasta que Talefall use un proveedor no mencionado aquí. Estos son compromisos de los proveedores, no una garantía nuestra; Amazon Web Services y OpenRouter también pueden conservar metadatos limitados de las solicitudes por facturación, seguridad, prevención de abusos o cumplimiento legal. Esto no limita nuestras obligaciones conforme a la ley aplicable.»* Botones: «Permitir y continuar» y
    «Ahora no»; «Ahora no» no envía nada a estos proveedores. Nuestro servidor conserva

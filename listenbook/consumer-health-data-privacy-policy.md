@@ -234,8 +234,10 @@ delivery, in most cases no content remains to provide or delete.
 
 Because free-text requests could contain sensitive data, we keep a
 data-protection assessment of the Service, including the assessment the
-Connecticut Data Privacy Act requires for processing sensitive data, and
-update it when we change a processor or AI route.
+Connecticut Data Privacy Act requires for processing sensitive data. Before
+enabling a new AI route or materially changing its processing, we update the
+assessment and resolve findings that require changes to our processing or
+safeguards.
 
 ## A10. Changes
 

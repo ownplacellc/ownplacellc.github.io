@@ -87,7 +87,9 @@ graphically explicit.
 
 ## B4. Safety controls
 
-All of these run automatically on our own server. They reduce risk but are
+Our input checks and output moderation run automatically on our service at
+Modal; providers may apply additional safeguards, as described below. They
+reduce risk but are
 imperfect: they can refuse a harmless request and miss a harmful one, so the
 rules above apply to anything they miss, and you must review generated
 content before relying on it or sharing it.

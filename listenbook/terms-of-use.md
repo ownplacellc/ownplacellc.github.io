@@ -224,8 +224,11 @@ order or the book before it reaches you.
 1. *Terms and age* — once, before your first book order or server narration:
    the "Before You Create" screen described above. The App records on your
    device the version of the Terms you accepted (currently 2026-10-10, this
-   edition), the time, and your 18+ statement. Because this edition changes
-   how book orders are processed, the App asks you to accept it again.
+   edition), the time, and your 18+ statement. Updated versions of the App
+   ask you to accept this edition before your next use of the Service. Older
+   versions that hold the acceptance of the October 8, 2026 edition and
+   permission 2026-10-08 send book orders only through the backup route,
+   whose processing this edition does not change.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again if the permission text changes. The screen asks
    **"Send your order to Amazon Bedrock or OpenRouter?"** and states:
