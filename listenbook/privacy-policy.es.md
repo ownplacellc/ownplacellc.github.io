@@ -297,7 +297,9 @@ que se tratan por separado en la sección 6.4.
   vigente aceptados mientras la vía principal esté desactivada o cerrada como se
   describe arriba, y para todos los pedidos hechos con la versión anterior del
   permiso 2026-10-08 (sección 6.6). Cada pedido conserva la vía asignada al
-  aceptarse; mientras se escribe, no se traslada a otro destinatario.
+  aceptarse; mientras se escribe, no se cambia entre las vías de Azure y GLM.
+  Dentro de la vía de GLM, las solicitudes de un mismo pedido pueden ser
+  procesadas por distintos proveedores de alojamiento enumerados abajo.
 - **Amazon Bedrock: aún no habilitado.** Hoy no se envía ningún pedido a Amazon
   Web Services. Solo habilitaremos esta vía en regiones de AWS en Estados Unidos,
   solo para modelos de nuestra lista permitida cuyos términos de AWS cumplan las

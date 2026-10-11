@@ -292,8 +292,9 @@ Modal's retention, which are addressed separately in Section 6.4.
   accepted while the main route is switched off or closed as described
   above, and for every order made under the earlier permission version
   2026-10-08 (Section 6.6). Each order keeps the route assigned when it was
-  accepted; it is not moved to another recipient while it is being
-  written.
+  accepted; it is not switched between the Azure and GLM routes while being
+  written. Within the GLM route, requests for the same order may be processed
+  by different hosting providers listed below.
 - **Amazon Bedrock — not yet enabled.** No order is sent to Amazon Web
   Services today. We will enable this route only in AWS Regions in the United
   States, only for models on our allowlist whose AWS terms meet the conditions

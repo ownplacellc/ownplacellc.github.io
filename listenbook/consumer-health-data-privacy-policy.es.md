@@ -111,7 +111,9 @@ restituyen sus horas. No hemos verificado por nuestra cuenta qué modo de superv
 abusos aplica Microsoft a este punto de acceso. **Vía de respaldo, y
 única vía para versiones anteriores de la App:** el modelo GLM-5.3, desarrollado por Z.ai,
 utilizado a través de OpenRouter y limitado a los proveedores de alojamiento enumerados en
-la Política de privacidad. Cada pedido conserva la vía asignada al aceptarse. **Amazon
+la Política de privacidad. Cada pedido conserva la vía asignada al aceptarse; dentro de la vía de GLM, las
+solicitudes de un mismo pedido pueden ser procesadas por distintos proveedores de
+alojamiento enumerados. **Amazon
 Bedrock aún no está habilitado**; no se envía ningún pedido a Amazon Web Services hasta que
 la Política de privacidad indique lo contrario y hayamos actualizado la evaluación de A9.
 

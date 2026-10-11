@@ -113,7 +113,8 @@ abuse-monitoring mode Microsoft applies to this endpoint. **Backup
 route, and the only route for older versions of the App:** the GLM-5.3 model,
 developed by Z.ai, reached through OpenRouter and restricted to the hosting
 providers listed in the Privacy Policy. Each order keeps the route assigned
-when it was accepted. **Amazon Bedrock is not yet enabled**; no order is sent to Amazon
+when it was accepted; within the GLM route, requests for the same order may be
+processed by different listed hosting providers. **Amazon Bedrock is not yet enabled**; no order is sent to Amazon
 Web Services until the Privacy Policy says otherwise and we have updated the
 assessment in A9.
 
