@@ -121,8 +121,10 @@ content before relying on it or sharing it.
   and the hours reserved for it are restored. We record the category of the
   decision, not the text.
 - **Provider safeguards.** AI providers may apply their own safeguards; we do
-  not rely on them in place of our own controls. On the main book-writing
-  route, Microsoft Azure, reached through OpenRouter, filters prompts and
+  not rely on them in place of our own controls. The Azure route is
+  currently switched off and books are written by GLM through OpenRouter (Privacy
+  Policy, Section 6.3). If that route is switched on, on it Microsoft Azure,
+  reached through OpenRouter, filters prompts and
   completions in real time and runs abuse monitoring as described in the
   Privacy Policy, Section 6.3; where it confirms abuse, access to the model
   may be limited, suspended, or terminated. OpenRouter and the other hosting

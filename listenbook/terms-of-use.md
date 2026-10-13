@@ -218,7 +218,7 @@ checks the idea with automated filters (Section 5.4). It then writes the
 book with third-party large language models.
 
 Book writing uses third-party AI models through OpenRouter and its disclosed
-hosting providers, including Microsoft Azure where listed, or through Amazon
+hosting providers (the Microsoft Azure route is currently switched off), or through Amazon
 Web Services (Amazon Bedrock). The current models, recipients and processing
 conditions are described in Privacy Policy Section 6.3.
 
@@ -496,9 +496,10 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
 Inc. (hosting), OpenRouter, Inc. and the hosting providers it routes to
-(including Microsoft Corporation through Microsoft Azure), and, once that
-route is enabled, Amazon Web Services, Inc. (Amazon Bedrock), as described in
-the Privacy Policy.
+(currently GLM hosting providers; Microsoft Corporation through Microsoft Azure
+only if that route, which is currently switched off, is switched on), and, once
+that route is enabled, Amazon Web Services, Inc. (Amazon Bedrock), as described
+in the Privacy Policy.
 Those services operate under their own terms; we remain responsible for our
 choice and use of them but do not guarantee their availability.
 

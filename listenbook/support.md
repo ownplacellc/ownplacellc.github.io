@@ -74,8 +74,11 @@ write to contact@ownplace.net.
    [Privacy Policy](privacy-policy.html).
 2. **Permission.** Before your first book order the App asks permission to
    send your ideas, book settings, and working text to AI providers to write
-   your books: through OpenRouter to AI hosts, including Microsoft Azure
-   (which runs the GPT-6 Luna model by OpenAI while OpenRouter classifies
+   your books: through OpenRouter to AI hosts. Currently (as of the date of
+   this version) the Azure route is switched off and all books are written by
+   the GLM model through OpenRouter on United States hosts with zero data
+   retention; the permission also covers Microsoft Azure
+   (which, if we switch that route on, runs the GPT-6 Luna model by OpenAI while OpenRouter classifies
    our Azure endpoint as zero data retention, meaning the request and the
    answer are not kept after processing, and our requests require it; we have
    not independently verified Microsoft's abuse-monitoring mode; OpenAI does
