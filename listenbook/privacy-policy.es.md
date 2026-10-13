@@ -866,15 +866,18 @@ Servicio, como encargados: Modal Labs, Inc. (alojamiento); OpenRouter, Inc. y lo
 proveedores de modelos a los que dirige las solicitudes (hoy, Microsoft Azure para
 el permiso vigente y proveedores de alojamiento de GLM para permisos anteriores);
 y Apple (pagos y correo). La comunicación de datos a un encargado (remisión) no
-requiere su consentimiento. En la medida en que un proveedor de IA trate el
-contenido también para fines propios —por ejemplo, sus propios controles de abuso,
-seguridad o cumplimiento legal, o la categorización anónima de OpenRouter—, esa
-comunicación puede constituir una transferencia; la cubre el consentimiento
-expreso que usted da en la App con el permiso del proveedor de IA (sección 6.3.1),
-que puede negar («Ahora no») sin perder el reproductor. También podemos transferir
-datos sin su consentimiento en los casos que permite la LFPDPPP, por ejemplo
-cuando lo exige una ley o para reconocer, ejercer o defender un derecho en un
-proceso judicial. La lista completa de destinatarios, países y plazos está en la
+requiere su consentimiento. El permiso del proveedor de IA cubre solo los
+destinatarios, el contenido, los fines y las garantías informados para su versión;
+no autoriza el tratamiento de datos de salud ni de otros datos personales
+sensibles, ni constituye el consentimiento de otra persona, y usted puede negarlo
+(«Ahora no») sin perder el reproductor. Cuando una comunicación constituya una
+transferencia conforme a la ley mexicana —por ejemplo, en la medida en que un
+proveedor de IA trate el contenido también para fines propios, como sus propios
+controles de abuso, seguridad o cumplimiento legal, o la categorización anónima de
+OpenRouter—, cumplimos los requisitos aplicables de aviso, de obligaciones del
+destinatario y de consentimiento, o una excepción legal aplicable, por ejemplo
+cuando la transferencia la exige una ley o es necesaria para reconocer, ejercer o
+defender un derecho en un proceso judicial. La lista completa de destinatarios, países y plazos está en la
 sección 6.3.3; hoy, los datos del Servicio se tratan en Estados Unidos.
 
 **Derechos ARCO.** Puede solicitar el acceso, la rectificación, la cancelación o

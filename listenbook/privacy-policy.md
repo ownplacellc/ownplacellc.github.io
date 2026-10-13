@@ -829,9 +829,13 @@ Parties (LFPDPPP) is Section 14A of the Spanish version of this Policy
 OWN PLACE LLC (Section 1); the primary purposes are providing the App and the
 Service, the safety checks, handling requests, and legal compliance, and the
 only secondary purpose is the optional usage counters, which are off unless
-you allow them (Section 8); the AI providers act as our processors
-(*encargados*), and any disclosure that counts as a transfer is covered by the
-in-app AI-provider permission; you may exercise ARCO rights (access,
+you allow them (Section 8); recipient roles and processing are described in
+Section 6.3.3. The AI-provider permission covers only the recipients, content,
+purposes and safeguards disclosed for its version. It does not authorize
+processing health or other sensitive personal data, or constitute another
+person's consent. Where a disclosure constitutes a transfer under Mexican law,
+we comply with the applicable notice, recipient-obligation and consent
+requirements, or an applicable statutory exception. You may exercise ARCO rights (access,
 rectification, cancellation, opposition) and revoke consent by writing to
 contact@ownplace.net; and changes are notified as described in Section 19.
 
