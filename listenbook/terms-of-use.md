@@ -224,9 +224,10 @@ caching and human access are listed in the registry in Privacy Policy Section
 
 Under the current permission (version 2026-10-13.1), models and providers may
 change within the safeguards that permission states (Privacy Policy, Section
-6.3.2) without asking you again. Broadening its purposes, human access,
-retention or geography requires a new permission version and your renewed
-explicit permission (Privacy Policy, Section 6.6). Availability of a model in
+6.3.2) without asking you again. Broadening its purposes, human access or
+retention requires a new permission version and your renewed explicit
+permission (Privacy Policy, Section 6.6). Changes to a provider's terms do not
+automatically expand your permission. Availability of a model in
 a provider's catalogue does not by itself make it authorized. Accepting these
 Terms does not replace that permission and does not authorize processing of
 consumer health data or other sensitive personal data.
@@ -266,7 +267,7 @@ human access and provider safeguards are described in Privacy Policy Section
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again when renewed permission is required (Privacy Policy,
    Section 6.6). The screen asks **"Allow AI processing of your book
-   orders?"** and states: **"Allow us to send your ideas, book settings and working text to the AI providers below to write your books? No model training. Processing is mainly in the US; other countries are listed in our Privacy Policy. Providers may briefly cache content or keep it for abuse, security or legal checks within listed limits (usually 30 days; longer if flagged or legally required). Authorized staff may access it to investigate suspected abuse, give needed support or comply with law. Providers may change within these safeguards. Fiction only, 18+: no real personal or health information. Withdraw in Settings."**
+   orders?"** and states: **"Send your ideas, settings and text to the AI providers below to write your books? No model training. Providers may perform service operations, including OpenRouter's anonymous topic classification for reporting and model rankings. Processing and authorized staff access may occur outside the US. Providers may cache content or retain it for abuse prevention, security or legal requirements; some maximum periods and reviewer countries are not published. Provider safeguards and exceptions are in the Privacy Policy. Fiction only, 18+: no real personal or health data. Withdraw in Settings."**
    Under the heading **"AI providers"** it lists: **"OpenRouter and the model
    providers it routes to"**, **"Amazon Web Services (Amazon Bedrock)"**,
    **"Microsoft (Azure)"**, **"Google (Google Cloud, Vertex AI)"**,
@@ -394,8 +395,11 @@ others. You may not use delivered narration to train or clone a voice model.
 royalty-free license to store, copy, process, transmit, and narrate your
 requests, the text you submit for narration, and the generated book, solely
 to provide the Service to you, to run the safety controls, to handle reports,
-to enforce these Terms, and as required by law. We do not use your content to
-train models or for advertising.
+to enforce these Terms, and as required by law. For book-writing requests
+routed through OpenRouter, the processing permitted under your applicable AI
+permission includes anonymous topic classification for service reporting and
+model rankings as described in the Privacy Policy. We do not use your content
+to train models or for advertising.
 
 **5.9 Text you submit for narration.** You represent that you own the text or
 have the right to have it narrated for your personal use and that it contains
@@ -502,7 +506,7 @@ accepted, no hours are used, and the order is not sent to another provider
 instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
-Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.
+Today, books under permission 2026-10-13.1 are written by the GLM model through OpenRouter; the Microsoft Azure route and Amazon Bedrock meet that permission's conditions but are switched off. Earlier permissions continue on the routes they named.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
@@ -524,8 +528,8 @@ The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
 Inc. (hosting) and the AI providers named in your AI-provider permission:
 OpenRouter, Inc. and the model providers it routes to (today GLM hosting
-providers for earlier permissions; Microsoft Corporation through Microsoft
-Azure only if its proposed route is enabled), Amazon Web Services, Inc. (Amazon
+providers; Microsoft Corporation through Microsoft Azure only while its route
+is switched on), Amazon Web Services, Inc. (Amazon
 Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI
 OpCo, LLC, of which only those marked as used in the registry in Privacy
 Policy Section 6.3.3 receive orders.

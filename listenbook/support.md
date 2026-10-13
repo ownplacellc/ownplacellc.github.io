@@ -76,23 +76,25 @@ write to contact@ownplace.net.
    send your ideas, book settings, and working text to AI providers to write
    your books. In plain words, the current permission (version 2026-10-13.1)
    means:
-   - your content is used only to write the book you ordered, and no one
-     trains models on it;
-   - providers may cache it briefly, and may keep it for abuse, security or
-     legal checks within their published limits — usually up to 30 days,
-     longer if their checks flag it or the law requires it;
+   - your content is used only to write the book you ordered and for the
+     providers' service operations — including OpenRouter's anonymous topic
+     classification for reporting and model rankings — security, abuse
+     prevention and legal compliance; no one trains models on it;
+   - providers may cache it, and may keep it for abuse prevention, security
+     or legal requirements within their published limits; some maximum
+     periods and reviewer countries are not published;
    - authorized provider staff may see it only to investigate suspected
      abuse, give needed support, or comply with law;
-   - processing is mainly in the United States, and today only there;
+   - processing and staff access may occur outside the United States;
    - providers may change within these safeguards; anything broader needs
      your new permission;
    - fiction only, 18+: do not enter real personal or health information.
 
    The screen lists the AI providers: OpenRouter and the model providers it
    routes to, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
-   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.
-   The App tells you this when you try to order, and nothing is charged. The full list of recipients, with countries, retention, caching and
-   human access, is in the [Privacy Policy](privacy-policy.html), Section 6.3
+   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Today, books under permission 2026-10-13.1 are written by the GLM model through OpenRouter; the Microsoft Azure route and Amazon Bedrock meet that permission's conditions but are switched off. Earlier permissions continue on the routes they named.
+   The full list of recipients, with countries, retention, caching, human
+   access and disclosed exceptions, is in the [Privacy Policy](privacy-policy.html), Section 6.3
    ("AI providers, countries & retention"), which also quotes the screen word
    for word. "Not Now" sends no order content to AI providers. **To
    withdraw**, turn the permission off in Settings; this also stops AI

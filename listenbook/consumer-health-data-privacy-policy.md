@@ -105,10 +105,9 @@ Book writing goes to AI providers on the conditions of the permission version
 under which the order was placed (Privacy Policy, Section 6.3). The current
 permission (version 2026-10-13.1) names these recipients: OpenRouter and the
 model providers it routes to, Amazon Web Services (Amazon Bedrock), Microsoft
-(Azure), Google (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.** None of the AI providers listed in that permission
-receives orders under it today. Orders placed under the
+(Azure), Google (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Today, books under permission 2026-10-13.1 are written by the GLM model through OpenRouter; the Microsoft Azure route and Amazon Bedrock meet that permission's conditions but are switched off. Earlier permissions continue on the routes they named.** Orders under the current permission go to the GLM-5.3 model through OpenRouter, as described below; processing and access by authorized provider staff may occur outside the United States (Privacy Policy, Section 6.3.2). Orders placed under the
 earlier permissions (2026-10-08 and 2026-10-10.2) go only to the routes those
-permissions named; today that is the GLM-5.3 model, developed by Z.ai,
+permissions named; that is also the GLM-5.3 model, developed by Z.ai,
 reached through OpenRouter and restricted to hosting providers that OpenRouter
 lists as headquartered in the United States and as zero data retention
 (Privacy Policy, Section 6.3.5). Each order keeps the route assigned when it
@@ -119,16 +118,16 @@ processed by different listed hosting providers.
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), United States | Hosting; runs our service, our narrator model, and our moderation model; holds temporary working storage | The full order: idea or narration text, generated chapters, audio |
 | **OpenRouter, Inc.** (openrouter.ai) | Passes book-writing requests to the model providers below; does not store prompts or responses for our requests, but may categorize sampled prompts anonymously for its reporting and model rankings (Privacy Policy, Section 6.3.3) | The idea and the working text our writer program produces, with no identifier added by us |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — proposed route; not enabled | If enabled, would run the GPT-6 Luna model that writes the text, on the endpoint OpenRouter labels as United States. Under Microsoft's abuse monitoring, content that is flagged, or part of a potentially abusive pattern, may be stored for human review by authorized Microsoft employees; Microsoft does not publish a period for that storage. Under the earlier permission 2026-10-10.2 this route is used only if switched on, which it currently is not | The same content OpenRouter forwards |
-| **Hosting providers of the GLM model** (earlier permissions only), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the model that writes the text; listed by OpenRouter as headquartered in the United States and zero data retention | The same content OpenRouter forwards |
-| **Other AI providers named in the current permission**: Amazon Web Services, Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI OpCo, LLC | Named on the permission screen; **no route today, so they receive nothing.** Before any of them receives an order, the Privacy Policy registry lists its verified conditions and we update the assessment in A9 | Nothing today |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — route switched off today | While switched on, runs the GPT-6 Luna model that writes the text, on the endpoint OpenRouter labels as United States. Under Microsoft's standard abuse-monitoring process, authorized Microsoft employees may review prompts and responses flagged for suspected abuse or identified as part of a potentially abusive pattern. Microsoft does not publish the reviewer countries for the US route we use; access may occur outside the United States, including from countries where Microsoft operates. Microsoft's published documentation does not specify a maximum retention period for content stored for this review. Under the earlier permission 2026-10-10.2 this route is used only if switched on, which it currently is not | The same content OpenRouter forwards |
+| **Hosting providers of the GLM model** (all permission versions), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the model that writes the text; listed by OpenRouter as headquartered in the United States and zero data retention; server locations not published | The same content OpenRouter forwards |
+| **Other AI providers named in the current permission**: Amazon Web Services, Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI OpCo, LLC | Named on the permission screen. Amazon Bedrock meets the conditions of the current permission but is not enabled; Google, Anthropic and OpenAI have no route. **None of them receives anything today.** Before any of them receives an order, the Privacy Policy registry lists its verified conditions and we update the assessment in A9 | Nothing today |
 | **Apple Inc.** (iCloud Mail) | Delivers and stores mail sent to contact@ownplace.net | What you write to us, and your email address |
 
 Narration and moderation run on our own models at Modal; that text is not
-sent to any AI provider. Under the current permission, only routes that process
-and store content in the United States can qualify (Privacy Policy, Section
-6.3.2); for the earlier permissions, processing by OpenRouter and its hosting providers is not
-guaranteed to take place only in the United States. Neither OpenAI, the
+sent to any AI provider. Under every permission version, processing by
+OpenRouter and the providers it routes to, and access by their authorized
+staff, may take place outside the United States (Privacy Policy, Sections
+6.3.2 and 6.3.3). Neither OpenAI, the
 developer of GPT-6 Luna, nor Z.ai, the developer of GLM, receives orders.
 
 **Contract limits.** Our data processing addendum with OpenRouter is its
@@ -148,8 +147,7 @@ and do not sell it. Incidental disclosures may occur through the recipients
 and processing described above; for example, if someone includes consumer health data in a
 book idea against our rule and our filters miss it, it is transmitted to the
 AI recipients on the route used — OpenRouter and the model provider it routes
-to (today a GLM hosting provider for an earlier permission; Microsoft if the
-proposed route is enabled) — to write the book, and that provider may keep it for abuse,
+to (today a GLM hosting provider; Microsoft while its route is switched on) — to write the book, and that provider may keep it for abuse,
 security or legal checks as described above. Because we do not rely on a contract
 with these providers that covers sensitive data, such a transmission may count
 as "sharing" under Washington law. Our rule and filters do not create an
