@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: October 12, 2026**
+**Effective Date: October 13, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 13 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -65,9 +65,10 @@ order and any further processing, delete the copies we control (unless the
 law requires us to preserve them), restore all hours for the order if any chapter was not delivered under
 Section 4.2 of the Terms of Use, and notify every AI
 recipient that may have received it to delete it — OpenRouter, which we ask
-to pass the request on to the hosting provider that processed the order (such
-as Microsoft or a GLM hosting provider), and Amazon Web Services if the order
-used Amazon Bedrock — giving the dates and any identifiers we still hold. We
+to pass the request on to the model provider that processed the order (such
+as Microsoft or a GLM hosting provider), and any other AI provider listed in
+the Privacy Policy, Section 6.3.3, that received it — giving the dates and any
+identifiers we still hold. We
 do this also after delivery.
 
 Apart from that residual, unintended processing, we use consumer health data
@@ -85,58 +86,53 @@ training, or any other purpose, and we do not sell it.
 
 We have no affiliates. Content that could contain consumer health data, if
 someone includes it against our rule, may reach the recipients below, which
-process it to provide the Service for the purposes in A3; in addition,
-Microsoft may apply its abuse monitoring to content it processes (A4, A6),
-and, once the Amazon Bedrock route is enabled, Amazon Web Services may keep
-content its abuse classifiers flag for its automated abuse detection (A6). We
-treat a recipient
-as a processor for consumer health data — so that disclosure to it is not
-"sharing" under Washington law — only to the extent a binding contract with
-it covers that processing. **We do not rely on any contract with the AI
+process it to provide the Service for the purposes in A3. In addition, the AI
+provider that writes the book may keep content for its own abuse, security or
+legal checks within its published limits, and its authorized staff may access
+it to investigate suspected abuse, give needed technical support, or comply
+with law, as the AI-provider permission discloses (Privacy Policy, Sections
+6.3.2 and 6.3.3). For example, Microsoft may store content its abuse
+monitoring flags and have authorized Microsoft employees review it. We treat a
+recipient as a processor for consumer health data — so that disclosure to it
+is not "sharing" under Washington law — only to the extent a binding contract
+with it covers that processing. **We do not rely on any contract with the AI
 providers to cover sensitive data (see "Contract limits" below), so we make no
-such claim for OpenRouter, the hosting providers OpenRouter routes to
-(including Microsoft), or Amazon Web Services;** for them, our protection is prevention (A5) and
-deletion on discovery (A3).
+such claim for OpenRouter, the model providers OpenRouter routes to (including
+Microsoft), or any other AI provider;** for them, our protection is prevention
+(A5) and deletion on discovery (A3).
 
-Book writing goes through OpenRouter to an AI hosting provider, or through
-Amazon Web Services (Amazon Bedrock); the Privacy Policy, Section 6.3, lists
-the current models and routes. **Currently (as of the Effective Date of this version) the Azure route
-is switched off: all books are written by the GLM model through OpenRouter, on hosting
-providers that OpenRouter lists as headquartered in the United States and as
-zero-data-retention endpoints, and no order is sent to Microsoft Azure.** The description of the
-Azure route that follows applies only if and when we switch it on. **Main route if switched on** (orders under the current
-permission): the GPT-6 Luna model, developed by OpenAI, run by Microsoft
-Azure and reached through OpenRouter, restricted to the Azure endpoint that
-OpenRouter labels as United States, and used only while OpenRouter classifies
-that endpoint as zero data retention (meaning the provider processes the
-request and returns the answer without keeping either of them afterwards) and
-our requests require it. Our server checks this regularly against OpenRouter's
-public list; if the check fails or is more than 24 hours old, new orders use
-the backup route, and orders on this route that are still being written are
-stopped and their hours restored. We have not independently verified which
-abuse-monitoring mode Microsoft applies to this endpoint. **Backup
-route, and the only route for older versions of the App:** the GLM-5.3 model,
-developed by Z.ai, reached through OpenRouter and restricted to the hosting
-providers listed in the Privacy Policy. Each order keeps the route assigned
-when it was accepted; within the GLM route, requests for the same order may be
-processed by different listed hosting providers. **Amazon Bedrock is not yet enabled**; no order is sent to Amazon
-Web Services until the Privacy Policy says otherwise and we have updated the
-assessment in A9.
+Book writing goes to AI providers on the conditions of the permission version
+under which the order was placed (Privacy Policy, Section 6.3). The current
+permission (version 2026-10-13.1) names these recipients: OpenRouter and the
+model providers it routes to, Amazon Web Services (Amazon Bedrock), Microsoft
+(Azure), Google (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Today only
+one route meets that permission's conditions: the GPT-6 Luna model, developed
+by OpenAI, run by Microsoft Azure and reached through OpenRouter's United
+States domain; the other listed AI providers receive nothing.** If no
+qualifying route is open, the order is not accepted. Orders placed under the
+earlier permissions (2026-10-08 and 2026-10-10.2) go only to the routes those
+permissions named; today that is the GLM-5.3 model, developed by Z.ai,
+reached through OpenRouter and restricted to hosting providers that OpenRouter
+lists as headquartered in the United States and as zero data retention
+(Privacy Policy, Section 6.3.5). Each order keeps the route assigned when it
+was accepted; within the GLM route, requests for the same order may be
+processed by different listed hosting providers.
 
 | Recipient | Role | What it receives |
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), United States | Hosting; runs our service, our narrator model, and our moderation model; holds temporary working storage | The full order: idea or narration text, generated chapters, audio |
-| **OpenRouter, Inc.** (openrouter.ai) | Passes book-writing requests to the hosting providers below | The idea and the working text our writer program produces, with no identifier added by us |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — main route if switched on (currently switched off) | Runs the GPT-6 Luna model that writes the text, on an endpoint OpenRouter lists as United States and zero data retention. Microsoft's documentation describes abuse monitoring in which flagged content may be stored and reviewed by authorized Microsoft employees unless modified abuse monitoring applies; public documentation does not state which mode applies to this endpoint, and we have not independently verified Microsoft's mode. We use the endpoint only while OpenRouter classifies it as zero data retention and our requests require it (Privacy Policy, Section 6.3) | The same content OpenRouter forwards |
-| **Hosting providers of the GLM model** (backup route; older versions of the App), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the model that writes the text; listed by OpenRouter as headquartered in the United States and zero data retention | The same content OpenRouter forwards |
-| **Amazon Web Services, Inc. (Amazon Bedrock)** (aws.amazon.com) — **not yet enabled** | Once enabled: runs allowlisted models in AWS Regions in the United States; keeps no content by default, but may keep traffic flagged by its abuse classifiers for up to 30 days for automated abuse detection | Once enabled: the idea and the working text our writer program produces, with no identifier added by us |
+| **OpenRouter, Inc.** (openrouter.ai) | Passes book-writing requests to the model providers below; does not store prompts or responses for our requests | The idea and the working text our writer program produces, with no identifier added by us |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — current permission | Runs the GPT-6 Luna model that writes the text, on the endpoint OpenRouter labels as United States. Under Microsoft's abuse monitoring, content that is flagged, or part of a potentially abusive pattern, may be stored for human review by authorized Microsoft employees; Microsoft does not publish a period for that storage. Under the earlier permission 2026-10-10.2 this route is used only if switched on, which it currently is not | The same content OpenRouter forwards |
+| **Hosting providers of the GLM model** (earlier permissions only), reached through OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice, and Wafer | Run the model that writes the text; listed by OpenRouter as headquartered in the United States and zero data retention | The same content OpenRouter forwards |
+| **Other AI providers named in the current permission**: Amazon Web Services, Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI OpCo, LLC | Named on the permission screen; **no route today, so they receive nothing.** Before any of them receives an order, the Privacy Policy registry lists its verified conditions and we update the assessment in A9 | Nothing today |
 | **Apple Inc.** (iCloud Mail) | Delivers and stores mail sent to contact@ownplace.net | What you write to us, and your email address |
 
 Narration and moderation run on our own models at Modal; that text is not
-sent to OpenRouter, its hosts, Microsoft, or Amazon Web Services. Processing
-by OpenRouter and its hosts, including Microsoft, is not guaranteed to take
-place only in the United States. Neither OpenAI, the developer of GPT-6 Luna,
-nor Z.ai, the developer of GLM, receives orders.
+sent to any AI provider. Under the current permission, processing and storage
+take place in the United States (Privacy Policy, Section 6.3.3); for the
+earlier permissions, processing by OpenRouter and its hosting providers is not
+guaranteed to take place only in the United States. Neither OpenAI, the
+developer of GPT-6 Luna, nor Z.ai, the developer of GLM, receives orders.
 
 **Contract limits.** Our data processing addendum with OpenRouter is its
 standard one, which excludes sensitive data; Microsoft and the GLM hosting
@@ -154,9 +150,10 @@ consumer health data to anyone, do not give it to advertisers or data brokers,
 and do not sell it. Incidental disclosures may occur through the recipients
 and processing described above; for example, if someone includes consumer health data in a
 book idea against our rule and our filters miss it, it is transmitted to the
-AI recipients on the route used — OpenRouter and the hosting provider it
-routes to (such as Microsoft), or, once enabled, Amazon Web Services — to
-write the book. Because we do not rely on a contract
+AI recipients on the route used — OpenRouter and the model provider it routes
+to (today Microsoft for the current permission, or a GLM hosting provider for
+an earlier one) — to write the book, and that provider may keep it for abuse,
+security or legal checks as described above. Because we do not rely on a contract
 with these providers that covers sensitive data, such a transmission may count
 as "sharing" under Washington law. Our rule and filters do not create an
 exemption from consumer health data laws, and the AI-provider permission does
@@ -192,7 +189,9 @@ example, a valid court order).
   rule applies to anything they miss.
 - **No consent option.** We do not ask for consent to process consumer health
   data, and no tap in the App is treated as such consent. The AI-provider
-  permission only authorizes where book-order content goes. If consumer health
+  permission only authorizes where book-order content goes, and its screen
+  repeats the rule: *"Fiction only, 18+: no real personal or health
+  information."* If consumer health
   data reaches us despite the rule, we process it only as described in A3 and
   delete it as described in A6; where we learn that an order contains it, we
   delete it and may refuse further orders.
@@ -207,7 +206,7 @@ example, a valid court order).
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
 | Email | Up to 24 months after the last message, deleted earlier on request |
-| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter and its hosting providers, including Microsoft, are restricted to zero-data-retention endpoints but may keep limited metadata, and Microsoft's abuse monitoring, whose mode for this endpoint we have not independently verified, applies as described in A4; once the Bedrock route is enabled, Amazon Web Services keeps no content by default but may keep content flagged by its abuse classifiers up to 30 days, which we cannot access directly, and may keep limited metadata; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
+| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter keeps request metadata without content; the AI provider that processed an order may keep content only as the Privacy Policy registry (Section 6.3.3) states — for Microsoft, content flagged by its abuse monitoring, kept for human review for a period Microsoft does not publish, which we cannot access directly; for the GLM hosting providers used for earlier permissions, zero-data-retention endpoints; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
 
 We keep consumer health data beyond an applicable deletion deadline only
 where a specific legal obligation or statutory exception requires it.
@@ -219,9 +218,9 @@ Wherever you live, you may:
 - **Confirm and access** whether we hold your consumer health data, get a copy
   of what still exists, and get a list of every recipient that received it —
   processors, contractors, and any other third parties, including recipients
-  of incidental transmissions such as OpenRouter, OpenRouter's hosting
-  providers including Microsoft, and Amazon Web Services if it received the
-  data —
+  of incidental transmissions such as OpenRouter, the model provider it
+  routed the order to (such as Microsoft or a GLM hosting provider), and any
+  other listed AI provider that received the data —
   with their contact details (A4). We have no affiliates;
 - **Delete** your consumer health data. We notify every recipient that
   received it — processors, contractors, and other third parties — to delete
@@ -264,9 +263,9 @@ the Privacy Policy; we can provide or delete only content we still hold.
 Because free-text requests could contain sensitive data, we keep a
 data-protection assessment of the Service, including the assessment the
 Connecticut Data Privacy Act requires for processing sensitive data. Before
-enabling a new AI route or materially changing its processing — including
-moving book writing to Microsoft Azure through OpenRouter and any later
-enabling of Amazon Bedrock — we update the assessment and resolve findings
+enabling a new AI route or materially changing its processing — including the
+conditions-based permission 2026-10-13.1 and its Microsoft Azure route, and
+any later route to another listed AI provider — we update the assessment and resolve findings
 that require changes to our processing or safeguards. Updating the Privacy
 Policy does not replace this assessment.
 

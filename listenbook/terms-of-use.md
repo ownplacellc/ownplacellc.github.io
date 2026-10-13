@@ -1,8 +1,8 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: October 12, 2026**
+**Effective Date: October 13, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 13 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
@@ -217,52 +217,69 @@ type, language, and length are sent to our service on Modal. Our server first
 checks the idea with automated filters (Section 5.4). It then writes the
 book with third-party large language models.
 
-Book writing uses third-party AI models through OpenRouter and its disclosed
-hosting providers (the Microsoft Azure route is currently switched off), or through Amazon
-Web Services (Amazon Bedrock). The current models, recipients and processing
-conditions are described in Privacy Policy Section 6.3.
+Book writing uses third-party AI models from the AI providers named in your
+AI-provider permission. The current recipients, routes, countries, retention,
+caching and human access are listed in the registry in Privacy Policy Section
+6.3.3.
 
-We may replace a model or switch between already authorized routes without
-asking again only while processing remains within the scope of your
-AI-provider permission. Availability through OpenRouter or Amazon Bedrock
-does not by itself make a model or recipient authorized.
+Under the current permission (version 2026-10-13.1), models and providers may
+change within the safeguards that permission states (Privacy Policy, Section
+6.3.2) without asking you again. Broadening its purposes, human access,
+retention or geography requires a new permission version and your renewed
+explicit permission (Privacy Policy, Section 6.6). Availability of a model in
+a provider's catalogue does not by itself make it authorized. Accepting these
+Terms does not replace that permission and does not authorize processing of
+consumer health data or other sensitive personal data.
 
-Before expanding that scope, we provide the relevant disclosure and obtain
-renewed explicit permission as described in Privacy Policy Section 6.6.
-Accepting these Terms does not replace that permission and does not authorize
-processing of consumer health data or other sensitive personal data.
+**Earlier permissions keep their promises.** For orders placed under the
+earlier permission versions, the earlier promises continue to apply
+unchanged: under 2026-10-08, only the GLM model through OpenRouter; under
+2026-10-10.2, only OpenRouter routes to zero-data-retention endpoints of
+hosting providers that OpenRouter lists as headquartered in the United States
+(including Microsoft Azure only while that route is switched on and
+classified as zero data retention), or Amazon Bedrock in AWS Regions in the
+United States with flagged content kept for no more than 30 days, if that
+route is enabled (Privacy Policy, Section 6.3.5). The conditions of permission
+2026-10-13.1 apply only if you accept that permission in the App.
 
 Providers' own abuse-monitoring and acceptable-use rules apply to the
 requests (AI Safety and Content Policy, B4). Each chapter is then
 checked by our output moderation (Section 5.4), narrated by our own narrator
 model running on Modal, and delivered to the App. OWN PLACE LLC does not
-routinely conduct human pre-review of orders or books. Limited human access
-and provider safeguards are described in Privacy Policy Section 6.3.
+routinely conduct human pre-review of orders or books. Under the current
+permission, authorized staff of an AI provider may access content to
+investigate suspected abuse, give needed support, or comply with law; limited
+human access and provider safeguards are described in Privacy Policy Section
+6.3.
 
 **5.2 What you confirm before using the Service.**
 
 1. *Terms and age* — once, before your first book order or server narration:
    the "Before You Create" screen described above. The App records on your
-   device the version of the Terms you accepted (currently 2026-10-10.2,
-   this edition), the time, and your 18+ statement. Updated versions of the
-   App ask you to accept this edition before your next use of the Service.
-   Older versions that hold the acceptance of the October 8, 2026 edition and
-   permission 2026-10-08 send book orders only to the GLM hosting providers
-   through OpenRouter, the processing that permission described; this edition
-   does not change it.
+   device the version of the Terms you accepted (currently 2026-10-13.1,
+   this edition of October 13, 2026), the time, and your 18+ statement.
+   Updated versions of the App ask you to accept this edition before your
+   next use of the Service. Older versions that hold the acceptance of an
+   earlier edition and an earlier permission send book orders only on the
+   routes that permission named (Privacy Policy, Section 6.3.5); this edition
+   does not change them.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again when renewed permission is required (Privacy Policy,
    Section 6.6). The screen asks **"Allow AI processing of your book
-   orders?"** and states: **"I allow Talefall to send my ideas, book settings and working text to Amazon Web Services (Amazon Bedrock, US regions) or through OpenRouter to AI hosts, including Microsoft Azure, to write my books. OpenRouter uses US-headquartered hosts; US-only processing is not guaranteed. Providers commit not to train on this content. OpenRouter uses zero-retention routes; AWS may retain content flagged for abuse for up to 30 days. Models and recipients: Privacy Policy. Permission covers future orders until withdrawn in Settings."**
-   The buttons are "Allow and Continue" and "Not Now," and the link
-   "Privacy Policy · AI providers" opens the list of current models and
-   recipients in Privacy Policy Section 6.3; the rules for later model and
-   route changes are in Privacy Policy Section 6.6.
-   Below the buttons the screen states: **"“Not Now” sends no order content to these AI providers. The player and server-based narration remain available."** This is permission version
-   2026-10-10.2. A permission of the earlier version 2026-10-08 is used only
-   for the GLM route through OpenRouter. Updated versions of the App ask again
-   with the current text before your next book order; until then, older
-   versions holding permission 2026-10-08 use only that route.
+   orders?"** and states: **"Allow us to send your ideas, book settings and working text to the AI providers below to write your books? No model training. Processing is mainly in the US; other countries are listed in our Privacy Policy. Providers may briefly cache content or keep it for abuse, security or legal checks within listed limits (usually 30 days; longer if flagged or legally required). Authorized staff may access it to investigate suspected abuse, give needed support or comply with law. Providers may change within these safeguards. Fiction only, 18+: no real personal or health information. Withdraw in Settings."**
+   Under the heading **"AI providers"** it lists: **"OpenRouter and the model
+   providers it routes to"**, **"Amazon Web Services (Amazon Bedrock)"**,
+   **"Microsoft (Azure)"**, **"Google (Google Cloud, Vertex AI)"**,
+   **"Anthropic"**, and **"OpenAI"**. The link **"AI providers, countries &
+   retention"** opens the recipients registry in Privacy Policy Section 6.3
+   before you decide. The buttons are **"Allow AI Processing"** and **"Not
+   Now"**. Below the buttons the screen states: **"“Not Now” sends no order content to AI providers. The player and server-based narration remain available."**
+   In Settings, the permission switch is explained: **"Your ideas, book settings and working text are sent to the AI providers listed in the Privacy Policy to write your books. No model training. You can turn this permission off."**
+   This is permission version 2026-10-13.1. Permissions of the earlier
+   versions 2026-10-08 and 2026-10-10.2 are used only for the routes those
+   versions named (Privacy Policy, Section 6.3.5). Updated versions of the
+   App ask again with the current text before your next book order; until
+   then, older versions use only those earlier routes.
    You can withdraw it at any time in Settings; further transfers to the AI
    providers then stop, including further AI calls for orders in progress,
    and new book orders stop until you allow it again.
@@ -477,6 +494,15 @@ before deleting the App. Your saved copy and Export to Files do not depend on
 an active subscription; listening to or reading it in the App requires the
 player purchase or an active subscription (Section 3).
 
+**Availability of book writing.** Under permission 2026-10-13.1 we write
+books only through AI providers whose published terms meet that permission's
+conditions (Privacy Policy, Section 6.3.2). When no such provider is open,
+book writing may be temporarily unavailable: the App says so, the order is not
+accepted, no hours are used, and the order is not sent to another provider
+instead. If the route of an accepted order closes while the book is being
+written, or you withdraw the permission, the order is stopped and its hours
+are restored under Section 4.2. Narration and the player are not affected.
+
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
 future periods — subject to Section 4.10. If we discontinue the Service, we
@@ -495,11 +521,13 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
-Inc. (hosting), OpenRouter, Inc. and the hosting providers it routes to
-(currently GLM hosting providers; Microsoft Corporation through Microsoft Azure
-only if that route, which is currently switched off, is switched on), and, once
-that route is enabled, Amazon Web Services, Inc. (Amazon Bedrock), as described
-in the Privacy Policy.
+Inc. (hosting) and the AI providers named in your AI-provider permission:
+OpenRouter, Inc. and the model providers it routes to (today Microsoft
+Corporation through Microsoft Azure for the current permission, and GLM
+hosting providers for earlier permissions), Amazon Web Services, Inc. (Amazon
+Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI
+OpCo, LLC, of which only those marked as used in the registry in Privacy
+Policy Section 6.3.3 receive orders.
 Those services operate under their own terms; we remain responsible for our
 choice and use of them but do not guarantee their availability.
 
@@ -568,10 +596,13 @@ post the new version at its public address; earlier versions are available on
 request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
 version before your next use of the Service; this edition (version
-2026-10-10.2) is such a change. A new edition of these Terms does not by
-itself expand your AI-provider permission: a new AI recipient outside it, or
-a wider scope of processing, requires renewed explicit permission (Section
-5.2; Privacy Policy, Section 6.6). Material changes do not reduce
+2026-10-13.1) is such a change. A new edition of these Terms does not by
+itself expand your AI-provider permission: a recipient not named in it, or a
+wider scope of processing, requires renewed explicit permission (Section
+5.2; Privacy Policy, Section 6.6). The broader conditions of permission
+2026-10-13.1 apply only if you accept that permission in the App and only to
+orders placed under it; orders placed under an earlier permission keep its
+promises, and nothing applies retroactively. Material changes do not reduce
 benefits already purchased for the current period.
 
 **Notices.** We may give notices in the App or on our website; notices to us

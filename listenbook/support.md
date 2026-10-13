@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 12, 2026**
+**Last updated: October 13, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 13 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
 WA 98034-5321, USA
@@ -74,28 +74,37 @@ write to contact@ownplace.net.
    [Privacy Policy](privacy-policy.html).
 2. **Permission.** Before your first book order the App asks permission to
    send your ideas, book settings, and working text to AI providers to write
-   your books: through OpenRouter to AI hosts. Currently (as of the date of
-   this version) the Azure route is switched off and all books are written by
-   the GLM model through OpenRouter on United States hosts with zero data
-   retention; the permission also covers Microsoft Azure
-   (which, if we switch that route on, runs the GPT-6 Luna model by OpenAI while OpenRouter classifies
-   our Azure endpoint as zero data retention, meaning the request and the
-   answer are not kept after processing, and our requests require it; we have
-   not independently verified Microsoft's abuse-monitoring mode; OpenAI does
-   not receive your order), or to Amazon Web Services (Amazon Bedrock, US
-   regions), a route that is not yet enabled. Providers commit not to train
-   on this content; OpenRouter uses zero-retention routes; once enabled, AWS
-   may keep content flagged for abuse for up to 30 days. Processing is not
-   guaranteed to take place only in the United States. The current models
-   and recipients are listed in the [Privacy Policy](privacy-policy.html),
-   Section 6.3. "Not Now" sends no order content to these providers. The
-   permission covers future orders until you withdraw it in Settings, which
-   also stops AI processing of orders still in progress. If you allowed an
-   earlier version of this permission, an updated version of the App asks
-   again before your next book order; until then, orders from older versions
-   go only to the GLM model's hosts through OpenRouter. This summary
-   paraphrases the screen; its exact text is in the Privacy Policy, Section
-   6.6.
+   your books. In plain words, the current permission (version 2026-10-13.1)
+   means:
+   - your content is used only to write the book you ordered, and no one
+     trains models on it;
+   - providers may cache it briefly, and may keep it for abuse, security or
+     legal checks within their published limits — usually up to 30 days,
+     longer if their checks flag it or the law requires it;
+   - authorized provider staff may see it only to investigate suspected
+     abuse, give needed support, or comply with law;
+   - processing is mainly in the United States, and today only there;
+   - providers may change within these safeguards; anything broader needs
+     your new permission;
+   - fiction only, 18+: do not enter real personal or health information.
+
+   The screen lists the AI providers: OpenRouter and the model providers it
+   routes to, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
+   (Google Cloud, Vertex AI), Anthropic, and OpenAI. Today books under this
+   permission are written by the GPT-6 Luna model on Microsoft Azure, reached
+   through OpenRouter in the United States; the other listed providers receive
+   nothing. If no provider that meets these conditions is available, the App
+   tells you that book writing is temporarily unavailable and no hours are
+   used. The full list of recipients, with countries, retention, caching and
+   human access, is in the [Privacy Policy](privacy-policy.html), Section 6.3
+   ("AI providers, countries & retention"), which also quotes the screen word
+   for word. "Not Now" sends no order content to AI providers. **To
+   withdraw**, turn the permission off in Settings; this also stops AI
+   processing of orders still in progress. If you allowed an earlier version
+   of this permission, an updated version of the App asks again before your
+   next book order; until then, orders from older versions go only to the
+   routes that earlier permission named — today the GLM model's hosts through
+   OpenRouter with zero data retention.
 3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
    length. **Do not include personal data about real people, including
    yourself.** Turn on "My idea contains no personal data about real people";
