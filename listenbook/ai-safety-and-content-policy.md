@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: AI Safety and Content Policy
 
-**Effective Date: October 11, 2026**
+**Effective Date: October 12, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -187,7 +187,8 @@ each block we keep a record of the subscription identifier, the date, the
 reason category, and the related book number, for as long as the block lasts
 and for 12 months after it ends, longer only where the law requires. A block
 for a violation does not entitle you to a refund from us for hours already
-used, without prejudice to any refund Apple grants or the law requires.
+used, without prejudice to any refund Apple grants or the law requires. This
+does not affect restoration of hours under Section 4.2 of the Terms of Use.
 
 ## B7. Review of a block or refusal
 

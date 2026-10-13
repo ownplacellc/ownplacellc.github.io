@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: Política de privacidad de datos de salud del consumidor
 
-**Fecha de entrada en vigor: 11 de octubre de 2026**
+**Fecha de entrada en vigor: 12 de octubre de 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 Esta es una traducción.
 
@@ -63,7 +63,8 @@ tratamiento es necesario y proporcionado para un servicio solicitado por la
 persona a quien se refieren los datos, y nunca porque alguien haya enviado los datos de
 otra persona. Cuando sabemos que un pedido contiene datos de salud del consumidor, detenemos el
 pedido y todo tratamiento posterior, eliminamos las copias que controlamos (salvo que la
-ley nos obligue a preservarlas), restituimos las horas y notificamos a cada destinatario de
+ley nos obligue a preservarlas), restituimos todas las horas del pedido si algún capítulo no se entregó
+conforme a la sección 4.2 de los Términos de uso y notificamos a cada destinatario de
 IA que pueda haberlos recibido que los elimine —OpenRouter, al que pedimos que transmita la
 solicitud al proveedor de alojamiento que procesó el pedido (como Microsoft o un proveedor
 de alojamiento de GLM), y Amazon Web Services si el pedido usó Amazon Bedrock—, indicando
@@ -193,7 +194,7 @@ ejemplo, una orden judicial válida).
 
 | Qué | Cuánto tiempo |
 |---|---|
-| Contenido del pedido (idea o texto de narración, capítulos generados, audio) | Almacenamiento de trabajo temporal cifrado en Modal, eliminado en cuanto la App confirma que ha guardado todos los capítulos; si la entrega no se confirma, el pedido caduca 7 días después de ser aceptado y se elimina en la siguiente limpieza programada, normalmente en 15 minutos (una limpieza fallida se reintenta). Se elimina antes cuando sabemos que contiene datos de salud del consumidor |
+| Contenido del pedido (idea o texto de narración, capítulos generados, audio) | Almacenamiento de trabajo temporal cifrado en Modal, eliminado en cuanto la App confirma que ha guardado todos los capítulos; si la App no ha confirmado que ha guardado todos los capítulos, el pedido caduca 7 días después de ser aceptado y se elimina en la siguiente limpieza programada, normalmente en 15 minutos (una limpieza fallida se reintenta). Se elimina antes cuando sabemos que contiene datos de salud del consumidor |
 | Una solicitud rechazada | No se almacena; solo se registra la categoría del rechazo |
 | Recibo del pedido | Se conserva 7 años después del último hecho financiero relacionado; contiene una huella SHA-256 del texto de la idea, nunca el texto |
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
@@ -226,8 +227,9 @@ Dondequiera que viva, usted puede:
 - **Apelar** una denegación (A8); y
 - **No ser discriminado** por ejercer estos derechos.
 
-Las personas que no usan Talefall pero creen que otra persona envió sus datos tienen los mismos derechos. Como el contenido del pedido se elimina tras
-la entrega, en la mayoría de los casos no queda contenido que facilitar ni eliminar.
+Las personas que no usan Talefall pero creen que otra persona envió sus datos tienen los mismos derechos. Nuestra copia de trabajo del contenido del pedido se elimina conforme a la
+sección 6.4 de la Política de privacidad; solo podemos facilitar o eliminar
+contenido que aún conservamos.
 
 ## A8. Cómo presentar una solicitud, verificación y plazos
 

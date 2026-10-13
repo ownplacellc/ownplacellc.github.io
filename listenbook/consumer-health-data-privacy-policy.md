@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: October 11, 2026**
+**Effective Date: October 12, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -62,7 +62,8 @@ processing is necessary and proportionate for a service requested by the
 person the data is about — never because someone submitted another person's
 data. When we learn that an order contains consumer health data, we stop the
 order and any further processing, delete the copies we control (unless the
-law requires us to preserve them), restore the hours, and notify every AI
+law requires us to preserve them), restore all hours for the order if any chapter was not delivered under
+Section 4.2 of the Terms of Use, and notify every AI
 recipient that may have received it to delete it — OpenRouter, which we ask
 to pass the request on to the hosting provider that processed the order (such
 as Microsoft or a GLM hosting provider), and Amazon Web Services if the order
@@ -196,7 +197,7 @@ example, a valid court order).
 
 | What | How long |
 |---|---|
-| Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if delivery is not confirmed, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
+| Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if the App has not confirmed saving every chapter, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
 | A refused request | Not stored; only the refusal category is logged |
 | Order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
 | Content reports (may include a passage) | 12 months |
@@ -231,8 +232,8 @@ Wherever you live, you may:
 - **Not be discriminated against** for exercising these rights.
 
 People who do not use Talefall but believe their data was submitted by
-someone else have the same rights. Because order content is deleted after
-delivery, in most cases no content remains to provide or delete.
+someone else have the same rights. Our working copy of order content is deleted as described in Section 6.4 of
+the Privacy Policy; we can provide or delete only content we still hold.
 
 ## A8. How to make a request, verification, and timing
 

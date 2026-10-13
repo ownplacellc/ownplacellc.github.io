@@ -1,8 +1,8 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 11, 2026**
+**Effective Date: October 12, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -81,10 +81,10 @@ live.
 - **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas in which it
   detects personal or sensitive data (Section 6.5). We do not routinely read
   requests or books; limited human access is described in Section 6.3.
-- **Our server keeps no copy of the book after delivery.** Our server copy of
-  a book is deleted as soon as the App confirms it has saved every chapter; an
-  undelivered order expires after seven days and is deleted, with its hours
-  restored, at the next scheduled cleanup. We keep a receipt (times, hours,
+- **Our server deletes its working copy of a book when the App confirms that
+  it has saved every chapter.** An order without that confirmation expires
+  after seven days and is deleted at the next scheduled cleanup. Whether hours
+  are restored follows the delivery rule in the Terms of Use (Section 4.2). We keep a receipt (times, hours,
   confirmation records) but not the content. Copies kept by our service
   providers (for example, Modal's infrastructure copies for up to seven days),
   content reports, and materials the law requires us to preserve follow the
@@ -161,7 +161,7 @@ you use them.
 | **Purchases** | Purchase and restore requests | Apple (StoreKit) | To buy the player, subscribe, or buy extra hours | Apple's policy; Section 7 |
 | **Trial date** | The trial start date | Apple iCloud Key-Value Store | So reinstalling does not restart the trial | Your iCloud account |
 | **AI-provider permission** | Whether you allowed or withdrew it, its version, and the time, with the signed subscription transaction (your Terms acceptance stays on the device) | Our service on Modal (USA) | So the Service writes books only with your permission | Section 6.4 |
-| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction, the App's shared service token, a random order key, and the version and time of your per-order confirmation | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until delivery; an undelivered order expires after 7 days (Section 6.4). Receipt: Section 6.4 |
+| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction, the App's shared service token, a random order key, and the version and time of your per-order confirmation | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until the App confirms saving every chapter, otherwise until the order expires after 7 days (Section 6.4). Receipt: Section 6.4 |
 | **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
 | **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
 | **Collecting books** | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
@@ -222,6 +222,42 @@ length, hours charged or restored, and the outcome. For a book order the
 receipt also records your per-order confirmation: the version of the
 confirmation text, the time, and a cryptographic fingerprint (SHA-256) of the
 idea text — not the text itself.
+
+**Service operation records.** To apply the delivery rule for hours (Terms of
+Use, Section 4.2), enforce limits, and avoid processing the same thing twice,
+our server also keeps the following technical records. They contain no book
+content.
+
+- *Audio transfers:* each time our server sends a chapter's audio file to the
+  App — the book number, the chapter's file name, the time, and whether the
+  complete file was sent. Deleted when the order ends, or at a later scheduled
+  cleanup if that deletion fails.
+- *Order closing and hours decision:* for an order that ends before the App
+  has confirmed saving every chapter, a record that the order stopped
+  accepting new transfers, with the time and the requested closing status,
+  and the decision whether its hours are restored. Kept as long as the order's
+  receipt and deleted about one day after the receipt is deleted.
+- *Permission timestamps:* the time our server first received each AI-provider
+  permission or withdrawal sent by the App (Section 6.6), so that a repeated
+  copy of an older answer cannot override a newer one. Kept until your data is
+  deleted at your request.
+- *Daily limits:* counters of orders and content reports per subscription
+  identifier and day (Terms of Use, Section 4.4). Deleted at scheduled cleanup once their UTC calendar date is more than two days old, normally about two to three days after creation.
+- *App Store notifications:* identifiers of Apple's server notifications that
+  we have already processed. Kept for eight days.
+- *Extra-hours purchases:* the link between an extra-hours transaction
+  identifier and the subscription that received its hours, and any Apple
+  refund of that purchase or reversal of such a refund, so that one purchase
+  is credited only once. Kept as long as the hours balance (Section 6.4).
+- *Deletion safeguards:* when an order is deleted at your request, a
+  settlement record links its book number to the subscription identifier so
+  that a late charge for deleted work can be corrected; it is deleted at
+  scheduled cleanup about eight days after it is created. Separate records
+  keep each order's final status (book number, outcome, and time) and the time
+  of your latest deletion request, linked to a fingerprint of the subscription
+  identifier, so that deleted work cannot resume. These final-status and
+  deletion-time records have no automatic expiry; requests to delete them are
+  assessed under applicable law.
 
 <a id="ai-providers"></a>
 
@@ -345,19 +381,25 @@ may be reviewed when you contact support, report content, or submit a legal
 complaint, or when reasonably necessary to investigate abuse or a security
 incident or to comply with law.
 
-### 6.4 Retention and deletion — no copy on our server after delivery
+### 6.4 Retention and deletion of our working copy
 
 - **Working content** (idea or narration text, generated chapters, title,
   audio, AI-provider request identifiers) is held only while the order is
   produced and delivered.
-- **Delivery is confirmed only after the App has saved every chapter on your
-  device.** Immediately after that, we delete our server copy of the text and
-  audio. We cannot restore or re-deliver the book after that.
-- **If delivery is not confirmed within seven days** after the Service
-  accepted the order, the order expires: at the next scheduled cleanup,
-  normally within 15 minutes, we delete all order content from our working
-  storage and
-  restore all hours reserved or charged for it; a cleanup that fails is retried.
+- **Deletion after the App saves the book.** We delete our server copy of the
+  text and audio immediately after the App confirms that it has saved every
+  chapter on your device. We cannot restore or re-deliver the book after that.
+  The App's saved confirmation triggers deletion, but it is not the only way a
+  chapter can count as delivered for restoring hours: under the delivery rule
+  in the Terms of Use (Section 4.2), a chapter also counts as delivered when our server has sent its complete
+  audio file in response to a request made with the subscription that placed
+  the order.
+- **If the App has not confirmed saving every chapter within seven days**
+  after the Service accepted the order, the order expires: at the next
+  scheduled cleanup, normally within 15 minutes, we delete all order content
+  from our working storage; a cleanup that fails is retried. If any chapter
+  was not delivered, all hours reserved or charged for the order are restored;
+  if every chapter was delivered, expiry restores no hours.
 - **Subscription expiry and existing orders.** A book ordered and paid for
   with hours while your subscription was active remains available for delivery
   after the subscription expires, provided the subscription has not been
@@ -370,12 +412,13 @@ incident or to comply with law.
   deadline. Listening and reading in the App remain subject to the player
   access requirements.
 - **Deleting or cancelling a book in the App** sends a delete request to the
-  service (retried later if you are offline); a running order is stopped and
-  its hours restored.
+  service (retried later if you are offline); a running order is stopped. Its hours are restored if any chapter was not delivered (Terms of Use, Section 4.2).
 - **Receipts, permission records, and the hours balance** (Sections 6.2 and
   6.6) are kept for **seven years after the last related financial event**,
   because they document paid work and charges, then deleted or irreversibly
   aggregated. They contain no book content.
+- **Service operation records** (Section 6.2) are kept for the periods stated
+  there.
 - **Content reports** are kept for **12 months** after submission, separately
   from books. **Blocks** of a subscription, with the reason category and
   related book number, are kept while the block lasts and for 12 months after
@@ -392,7 +435,7 @@ incident or to comply with law.
   the Amazon Bedrock route is enabled, Amazon Web Services may keep content
   flagged by its abuse classifiers for up to 30 days, and limited metadata, as
   described in 6.3. Copies held by providers are not accessible to us directly.
-  After delivery we no longer hold identifiers that would let us locate any
+  After our working copy of the order has been deleted, we no longer hold identifiers that would let us locate any
   residual provider copy; while an order is active, a deletion request
   cancels it.
 - For Washington consumer health data, backup copies held by a processor are
@@ -445,7 +488,7 @@ and what it generated for that order.
    features are for adults only."* with the switch *"I'm 18 or older and agree
    to the Terms of Use and Privacy Policy"* and the button "Continue." This is
    a self-declaration of age, not age verification. The App stores the Terms
-   version (currently 2026-10-10.2, the edition of October 11, 2026), the time,
+   version (currently 2026-10-10.2, the edition of October 12, 2026), the time,
    and your statement on your device; it is not sent to our server. Updated
    versions of the App ask you to accept this edition before your next use of
    the Service. Older versions that hold the acceptance of the October 8, 2026
@@ -516,7 +559,8 @@ rely on a "requested service" exception only where the applicable law allows
 it and the processing is necessary and proportionate, and never because one
 person submitted another person's data. When we learn that an order contains
 such data, we stop any further processing, delete the copies we control
-(unless the law requires us to preserve them), restore the hours, and notify
+(unless the law requires us to preserve them), restore all hours for the order if any chapter was not delivered under
+Section 4.2 of the Terms of Use, and notify
 every AI recipient that may have received it to delete it — OpenRouter, which
 we ask to pass the request on to the hosting provider that processed the order
 (such as Microsoft or a GLM hosting provider), and Amazon Web Services if the
@@ -586,7 +630,8 @@ of refused requests by reason, without identifiers, for 30 days.
   counters, no library content is sent to us. Cover lookup and the counters
   are off unless you turn them on in Settings.
 - **Delete a book.** Deleting a book in the App deletes our server copy if one
-  still exists, stops a running order, and restores its hours.
+  still exists and stops a running order; its hours are restored if any
+  chapter was not delivered (Terms of Use, Section 4.2).
 - **Withdraw the AI-provider permission** in Settings. Further transfers to
   the AI providers stop, including further AI calls for orders still in
   progress, and new book orders stop until you allow it again; processing
@@ -612,14 +657,19 @@ of refused requests by reason, without identifiers, for 30 days.
   any identifiers we still hold. We cannot access directly copies that
   providers keep for abuse monitoring or abuse detection (Section 6.3); AWS
   states that flagged content is retained for up to 30 days.
-  We keep only the minimal deletion-request record (Section 6.4), records the
-  law requires us to keep, and — unless you confirm that you give them up —
-  the minimum record needed to preserve unused purchased extra hours. Where
+  A deletion request does not automatically remove the hours ledger and
+  financial transaction records, subscription-status records, block records,
+  or the service operation and deletion-safeguard records described in Section 6.2, except as stated there. We also retain the deletion-request record described in
+  Section 6.4. Requests to delete retained records are assessed under
+  applicable law; retaining a record for operational purposes does not mean
+  that the law requires us to keep it. Deletion does not forfeit unused
+  purchased extra hours without your confirmation. Where
   Nevada law (NRS 603A.515) applies, we delete covered data within 30 days
   after authentication and notify recipients.
 - **Access and correction.** We provide a copy of what still exists and the
-  list of recipients that received order content. Because content is deleted
-  after delivery, we cannot provide or correct what no longer exists.
+  list of recipients that received order content. Once our working copy of the order has been deleted as
+  described in Section 6.4, we cannot provide or correct content we no longer
+  hold.
 - **Authorized agents** may act for you with your written permission.
 - **Cancel the subscription** in iOS Settings → Apple Account →
   Subscriptions. Cancelling does not by itself delete records; make a request
@@ -718,10 +768,12 @@ websites you open from it follow their own policies.
 |---|---|---|
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
-| Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until delivery is confirmed; if never delivered, the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
+| Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until the App confirms saving every chapter; otherwise the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
 | Copies kept by service providers | Modal; OpenRouter and its hosts, including Microsoft; Amazon Web Services if the Bedrock route is enabled | Modal up to 7 days; OpenRouter and its hosts, including Microsoft, as described in 6.3 (zero-data-retention endpoints, limited metadata, Microsoft's abuse monitoring); Amazon Web Services, once enabled, up to 30 days for content flagged by its abuse classifiers, plus limited metadata |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
+| Service operation records (no content) | Modal (USA) | Audio-transfer records: until the order ends; order-closing and hours-decision records: as long as the order's receipt, plus about 1 day; permission timestamps: until your data is deleted at your request; daily-limit counters: about 2 to 3 days, plus scheduled cleanup; App Store notification identifiers: 8 days; extra-hours purchase links: as long as the hours balance |
+| Deletion safeguards (no content) | Modal (USA) | Settlement records: about 8 days after creation, plus scheduled cleanup; order final-status and deletion-time records: no automatic expiry; deletion requests are assessed under applicable law |
 | Content reports (reason, note, passage, book number, chapter, subscription identifier) | Modal (USA); our mailbox if emailed | 12 months |
 | Block records | Modal (USA) | While the block lasts plus 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | Modal (USA) / our mailbox | 1 year after submission, or longer where the law requires |

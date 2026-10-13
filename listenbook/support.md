@@ -1,8 +1,8 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 11, 2026**
+**Last updated: October 12, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
 WA 98034-5321, USA
@@ -35,8 +35,10 @@ and includes the player while it is active.
 
 - **Hours.** Each month includes **5 hours of new audio**. Listening never
   uses hours. Hours are deducted after narration for the actual length of the
-  finished audio, never more than your balance. Failed or cancelled books
-  return their hours automatically. Unused monthly hours expire at renewal.
+  finished audio, never more than your balance. If an order ends with any chapter undelivered under Section 4.2 of the
+  [Terms of Use](terms-of-use.html), all hours reserved or charged for the order
+  are restored automatically. If every chapter was delivered, cancellation
+  alone restores no hours. Unused monthly hours expire at renewal.
 - **Extra hours.** With an active subscription you can buy **5 extra hours**;
   they are used after the monthly hours and do not expire at renewal. If they
   are not credited within 24 hours of purchase, write to us.
@@ -103,18 +105,21 @@ write to contact@ownplace.net.
    If server narration fails, the server automatically retries up to three
    times within the same order. Failed attempts do not use additional hours;
    hours are charged for the actual duration of the successfully produced
-   audio. If the order ultimately fails, its hours are restored under the
-   existing rules.
+   audio. If the order ends with any chapter undelivered, all hours for the
+   order are restored ([Terms of Use](terms-of-use.html), Section 4.2).
 
 **Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
 works offline, never sends the text anywhere, and does not use hours.
 
-**Your copy and our server.** As soon as the App has saved every chapter, we
-delete the book from our server and cannot send it again. The App keeps the
-book on your device and, if iCloud is available, in your private iCloud. Use
-**Export to Files** for your own backup. An order not delivered within seven
-days expires; it is deleted and its hours restored at the next scheduled
-cleanup, normally within 15 minutes.
+**Your copy and our server.** As soon as the App confirms that it has saved
+every chapter, we delete the book from our server and cannot send it again.
+The App keeps the book on your device and, if iCloud is available and the save
+succeeds, in your private iCloud. Use **Export to Files** for your own backup.
+An order without that confirmation within seven days expires and is deleted at
+the next scheduled cleanup, normally within 15 minutes. If any chapter did not
+reach you, all hours for the order are restored; if every chapter reached you,
+cancelling, deleting, or expiry alone restores none ([Terms of
+Use](terms-of-use.html), Section 4.2).
 
 **Report content.** Book menu → **Report content**. If sending fails, the App
 offers to email the report to contact@ownplace.net. Anyone can also report by

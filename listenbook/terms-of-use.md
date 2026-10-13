@@ -1,8 +1,8 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: October 11, 2026**
+**Effective Date: October 12, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
@@ -115,14 +115,29 @@ selected fits your remaining hours; if it does not, the order is refused
 before any work is done. **Hours are deducted after narration for the actual
 length of the finished audio**, which may be somewhat shorter or longer than
 the length you selected, but never by more than the balance you had when the
-order was accepted. Failed, cancelled, or technically unusable output is not
-charged, and hours reserved for it are restored automatically; if that
-happens after the month from which they were taken has ended, the restored
-hours are credited to your extra-hours balance (Section 4.3). If a delivered
-file cannot be played or is materially not what you ordered, write to
-contact@ownplace.net with the book number shown in the App, and we will
-restore the hours after checking. Unused monthly hours **expire at renewal**
+order was accepted. Unused monthly hours **expire at renewal**
 and do not carry over. The month follows your subscription's renewal date.
+
+**Delivery and restoration of hours.** A chapter is *delivered* when the App
+confirms to our server that it has saved the chapter, or when our server has
+sent the chapter's complete audio file (every byte of the size our server
+declared for that file) in response to a request made with the subscription
+that placed the order. If any chapter of an order has not been delivered when
+the order ends — whether it failed, was stopped (for example, by our output
+moderation, Section 5.4), was cancelled or deleted by you, or expired (Section
+8) — all hours reserved or charged for the order are restored automatically,
+including the hours for chapters that were delivered. If every chapter was
+delivered, cancelling or deleting the order, its expiry, or the end of your
+subscription does not by itself restore any hours. Automatic restoration depends only on whether every chapter was delivered
+under this rule; a complete transfer or a saved confirmation does not by
+itself show that the file is playable or materially what you ordered. If a
+delivered file cannot be played or is materially not what you ordered, write
+to contact@ownplace.net with the book number shown in the App, and we will
+restore the hours after checking. Hours restored after the month from which
+they were taken has ended are credited to your extra-hours balance (Section
+4.3). Restoring hours is a credit to your hours balance, not a refund of money
+by Apple, and it does not limit any refund or remedy you may have under
+Section 4.5 or applicable law.
 
 **4.3 Extra hours.** With an active subscription you may buy an **extra-hours
 pack** (consumable product `com.anisimov.audiobooks.hours5`, **5 hours**).
@@ -136,10 +151,12 @@ refund from Apple. If your subscription lapses, unused extra hours become
 unavailable but stay recorded and return if the same subscription is
 reactivated. Extra hours cannot be transferred to another subscription or
 Apple Account. If we permanently discontinue the Service, Section 8 applies.
-Deleting your content or data does not forfeit extra hours; we keep only the
-minimum record needed to preserve that balance, and if you ask us to delete
-that record too, we will first offer a refund path or ask you to confirm the
-forfeiture.
+Deleting your content or data does not forfeit unused purchased extra hours
+without your confirmation. We retain records needed to preserve that balance
+and other records described in Sections 6.2, 6.4, and 10 of the Privacy
+Policy, subject to the retention periods and deletion rights stated there. If
+you ask us to delete records needed to preserve that balance, we will first
+offer a refund path or ask you to confirm the forfeiture.
 
 **4.4 Service limits.** To protect the Service from abuse and runaway costs we
 apply technical limits in addition to your hours: book length from 15 minutes
@@ -336,7 +353,8 @@ emailing contact@ownplace.net within 30 days; a person will review the
 decision and answer within 30 days. A block affects only the Service, not the
 player or books already on your device. A block for a violation does not
 entitle you to a refund from us for hours already used, without prejudice to
-a refund Apple grants or the law requires. Details are in the AI Safety and
+a refund Apple grants or the law requires. This does not affect restoration of
+hours under Section 4.2. Details are in the AI Safety and
 Content Policy.
 
 **5.6 No guarantees about the output.** AI-generated text may be
@@ -386,8 +404,8 @@ contact@ownplace.net; +1 (213) 524-8012. Identify the work, the material at
 issue and how to locate it, your contact details, and why you believe the use
 is unauthorized. We may stop an order, remove material we still hold, or
 restrict the subscription of repeat infringers. Because the Service deletes a
-book from our server after delivery, the material may no longer be held by
-us. This is a voluntary channel; we have not designated an agent with the
+book from our server once the App confirms that it has saved every chapter,
+the material may no longer be held by us. This is a voluntary channel; we have not designated an agent with the
 U.S. Copyright Office under 17 U.S.C. § 512(c)(2). Complaints about a
 catalog work should normally go to the service that hosts it.
 
@@ -425,15 +443,19 @@ it is always available or that an order completes within a particular time.
 
 **Server storage.** While an order is being produced and delivered, its text
 and audio are held on Modal as temporary, encrypted working storage.
-**Delivery is confirmed only after the App has saved every chapter on your
-device.** Immediately after delivery is confirmed, we delete our server copy of
-the text and audio, and **we cannot restore or re-deliver the book after
-that.** An order whose delivery is not confirmed within **seven days** after
-the Service accepted it expires: at the next scheduled cleanup, normally
-within 15 minutes, we stop processing, delete all order content from our
-working storage,
-and restore all hours reserved or charged for it (a cleanup that fails is
-retried); chapters already saved on your device remain. We keep a receipt for each order
+**We delete our server copy of the text and audio as soon as the App confirms
+that it has saved every chapter on your device.** Cancellation, a deletion
+request, and expiry also cause that copy to be deleted without this
+confirmation. Once our server copy is deleted, **we cannot restore or
+re-deliver the book.** Restoration of hours follows Section 4.2: a chapter can
+count as delivered through a complete transfer from our server even without
+the App's saved confirmation.
+An order for which the App has not confirmed saving every chapter within
+**seven days** after the Service accepted it expires: at the next scheduled
+cleanup, normally within 15 minutes, we stop processing and delete all order
+content from our working storage (a cleanup that fails is retried). Hours for
+an expired order are restored only as Section 4.2 provides, that is, if any
+chapter was not delivered; chapters already saved on your device remain. We keep a receipt for each order
 (times, length, hours charged, and the records described in the Privacy
 Policy) but not its content. Exceptions: content you submit in a report or support request, and content the law requires us to preserve. Copies kept by our service providers (for example, Modal's infrastructure copies for up to seven days, or content flagged by a provider's abuse monitoring) follow the periods described in the Privacy Policy.
 
@@ -448,8 +470,8 @@ delivery deadline and the rules for deletion and restoration of hours continue
 to apply; expiry does not restart that deadline. Listening and reading in the
 App remain subject to the player access requirements.
 
-**Your copy.** After delivery, the App saves the book on your device and, if
-iCloud is available and the save succeeds, in your private iCloud storage,
+**Your copy.** As chapters arrive, the App saves them on your device and, if
+iCloud is available and the save succeeds, also in your private iCloud storage,
 which we cannot access. If iCloud is unavailable or full, use Export to Files
 before deleting the App. Your saved copy and Export to Files do not depend on
 an active subscription; listening to or reading it in the App requires the

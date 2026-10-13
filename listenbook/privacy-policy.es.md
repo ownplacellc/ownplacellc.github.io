@@ -1,8 +1,8 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: 11 de octubre de 2026**
+**Fecha de entrada en vigor: 12 de octubre de 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 11 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
+<!-- ДАТА РЕДАКЦИИ: 12 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -83,10 +83,11 @@ residencia.
 - **La regla: ningún dato personal sobre personas reales, incluido usted.** Usted lo confirma antes de cada pedido de libro. Para narrar el libro resultante, la App reutiliza esa confirmación; para otro libro que no la tenga, la App solicita una confirmación independiente antes de su primera narración con la voz de Talefall. Nuestro servidor rechaza las ideas de libro en las que
   detecta datos personales o sensibles (sección 6.5). No leemos de forma habitual sus
   solicitudes ni sus libros; el acceso humano limitado se describe en la sección 6.3.
-- **Nuestro servidor no conserva ninguna copia del libro tras la entrega.** Nuestra
-  copia del libro en el servidor se elimina en cuanto la App confirma que ha guardado
-  todos los capítulos; un pedido no entregado caduca a los siete días y se elimina,
-  con sus horas restituidas, en la siguiente limpieza programada. Conservamos un
+- **Nuestro servidor elimina su copia de trabajo de un libro cuando la App
+  confirma que ha guardado todos los capítulos.** Un pedido sin esa
+  confirmación caduca a los siete días y se elimina en la siguiente limpieza
+  programada. La restitución de horas se rige por la regla de entrega de los
+  Términos de uso (sección 4.2). Conservamos un
   recibo (horas, tiempos, registros de confirmación), pero no el contenido. Las
   copias que conservan nuestros proveedores de servicios (por ejemplo, las copias de
   la infraestructura de Modal, hasta siete días),
@@ -163,7 +164,7 @@ usted las usa.
 | **Compras** | Solicitudes de compra y de restauración | Apple (StoreKit) | Para comprar el reproductor, suscribirse o comprar horas adicionales | Política de Apple; sección 7 |
 | **Fecha de prueba** | La fecha de inicio de la prueba | Almacén de clave-valor de iCloud de Apple | Para que reinstalar no reinicie la prueba | Su cuenta de iCloud |
 | **Permiso del proveedor de IA** | Si lo permitió o lo retiró, su versión y la hora, con la transacción de suscripción firmada (su aceptación de los Términos permanece en el dispositivo) | Nuestro servicio en Modal (EE. UU.) | Para que el Servicio escriba libros solo con su permiso | Sección 6.4 |
-| **Libro a partir de una idea** | Su idea, tipo de libro, idioma, extensión, la transacción de suscripción firmada, el token de servicio compartido de la App, una clave de pedido aleatoria, y la versión y la hora de su confirmación por pedido | Nuestro servicio en Modal (EE. UU.); la idea y el texto de trabajo se envían además al proveedor de IA (sección 6.3) | Para escribir y narrar el libro que usted pidió | Contenido: hasta la entrega; un pedido no entregado caduca a los 7 días (sección 6.4). Recibo: sección 6.4 |
+| **Libro a partir de una idea** | Su idea, tipo de libro, idioma, extensión, la transacción de suscripción firmada, el token de servicio compartido de la App, una clave de pedido aleatoria, y la versión y la hora de su confirmación por pedido | Nuestro servicio en Modal (EE. UU.); la idea y el texto de trabajo se envían además al proveedor de IA (sección 6.3) | Para escribir y narrar el libro que usted pidió | Contenido: hasta que la App confirme que ha guardado todos los capítulos; si no, hasta que el pedido caduque a los 7 días (sección 6.4). Recibo: sección 6.4 |
 | **Narración con la voz de Talefall** (solo para un libro que usted confirmó) | El título del libro, el idioma y el texto de los capítulos, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para narrar ese libro | Igual que arriba |
 | **Narración de pasajes** (voz de Talefall, mientras escucha un libro confirmado) | El texto del pasaje y el idioma, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para devolver el audio de ese pasaje | No lo almacena nuestra aplicación; solo se registran el número de caracteres y la duración del audio. Modal puede conservar las entradas y salidas de las funciones hasta 7 días |
 | **Recogida de libros** | Números de libro, confirmaciones de «guardado» por capítulo, solicitudes de eliminación o cancelación, la transacción firmada | Nuestro servicio en Modal (EE. UU.) | Para descargar sus libros y permitir que el servidor elimine su copia | Sección 6.4 |
@@ -224,6 +225,46 @@ horas cobradas o restituidas y el resultado. En el caso de un pedido de libro, e
 recibo también registra su confirmación por pedido: la versión del
 texto de confirmación, la hora y una huella criptográfica (SHA-256) del
 texto de la idea, no el texto mismo.
+
+**Registros de funcionamiento del servicio.** Para aplicar la regla de entrega
+a las horas (Términos de uso, sección 4.2), hacer cumplir los límites y evitar
+procesar dos veces lo mismo, nuestro servidor también conserva los siguientes
+registros técnicos. No contienen contenido de libros.
+
+- *Transferencias de audio:* cada vez que nuestro servidor envía a la App el
+  archivo de audio de un capítulo, el número de libro, el nombre del archivo
+  del capítulo, la hora y si el archivo se envió completo. Se eliminan cuando
+  el pedido termina o, si esa eliminación falla, en una limpieza programada
+  posterior.
+- *Cierre del pedido y decisión sobre las horas:* para un pedido que termina
+  antes de que la App haya confirmado que ha guardado todos los capítulos, un
+  registro de que el pedido dejó de aceptar nuevas transferencias, con la hora y el estado de cierre solicitado, y la decisión sobre si se restituyen sus
+  horas. Se conservan mientras se conserve el recibo del pedido y se eliminan
+  aproximadamente un día después de eliminarse el recibo.
+- *Hora de recepción de permisos:* la hora en que nuestro servidor recibió por
+  primera vez cada permiso para los proveedores de IA, o su retirada, enviados
+  por la App (sección 6.6), para que una copia repetida de una respuesta
+  anterior no prevalezca sobre una más reciente. Se conserva hasta que sus
+  datos se eliminen a petición suya.
+- *Límites diarios:* contadores de pedidos y de denuncias de contenido por
+  identificador de suscripción y día (Términos de uso, sección 4.4). Se eliminan en una limpieza programada cuando su fecha de calendario UTC tiene más de dos días de antigüedad, normalmente unos dos o tres días después de su creación.
+- *Notificaciones de App Store:* identificadores de las notificaciones de
+  servidor de Apple que ya hemos procesado. Se conservan ocho días.
+- *Compras de horas adicionales:* el vínculo entre el identificador de una
+  transacción de horas adicionales y la suscripción que recibió esas horas, y
+  cualquier reembolso de Apple de esa compra o la anulación de dicho
+  reembolso, para que una compra se abone una sola vez. Se conserva mientras
+  se conserve el saldo de horas (sección 6.4).
+- *Protección de la eliminación:* cuando un pedido se elimina a petición suya,
+  un registro de liquidación vincula su número de libro con el identificador
+  de suscripción para poder corregir un cargo tardío por el trabajo eliminado;
+  se elimina en una limpieza programada unos ocho días después de su creación.
+  Otros registros conservan el estado final de cada pedido (número de libro,
+  resultado y hora) y la hora de su última solicitud de eliminación, vinculada
+  a una huella del identificador de suscripción, para impedir que se reanude
+  el trabajo eliminado. Estos registros del estado final y del momento de
+  eliminación no tienen vencimiento automático; las solicitudes para
+  eliminarlos se evalúan conforme a la legislación aplicable.
 
 <a id="ai-providers"></a>
 
@@ -352,19 +393,27 @@ revisarse contenido específico cuando usted contacta con soporte, denuncia cont
 legal, o cuando sea razonablemente necesario para investigar un abuso o un incidente de
 seguridad o para cumplir la ley.
 
-### 6.4 Conservación y eliminación: ninguna copia en nuestro servidor tras la entrega
+### 6.4 Conservación y eliminación de nuestra copia de trabajo
 
 - El **contenido de trabajo** (idea o texto de narración, capítulos generados, título,
   audio, identificadores de solicitud del proveedor de IA) se conserva solo mientras el pedido
   se produce y se entrega.
-- **La entrega se confirma solo después de que la App haya guardado todos los capítulos en su
-  dispositivo.** Inmediatamente después, eliminamos nuestra copia del texto y del
-  audio en el servidor. Después no podemos restaurar ni volver a entregar el libro.
-- **Si la entrega no se confirma en siete días** desde que el Servicio
-  aceptó el pedido, el pedido caduca: en la siguiente limpieza programada,
-  normalmente en 15 minutos, eliminamos todo el contenido del pedido de nuestro
-  almacenamiento de trabajo y
-  restituimos todas las horas reservadas o cobradas por él; una limpieza que falla se reintenta.
+- **Eliminación una vez que la App ha guardado el libro.** Eliminamos nuestra
+  copia del texto y del audio en el servidor inmediatamente después de que la
+  App confirme que ha guardado todos los capítulos en su dispositivo. Después
+  no podemos restaurar ni volver a entregar el libro. La confirmación de guardado de la App activa la eliminación, pero un
+  capítulo también puede contar como entregado sin esa confirmación a efectos
+  de la restitución de horas: según la regla de entrega de los Términos de
+  uso (sección 4.2), un capítulo cuenta como entregado también cuando nuestro servidor ha enviado su archivo
+  de audio completo en respuesta a una solicitud realizada con la suscripción
+  que hizo el pedido.
+- **Si la App no ha confirmado en siete días que ha guardado todos los
+  capítulos** desde que el Servicio aceptó el pedido, el pedido caduca: en la
+  siguiente limpieza programada, normalmente en 15 minutos, eliminamos todo el
+  contenido del pedido de nuestro almacenamiento de trabajo; una limpieza que
+  falla se reintenta. Si algún capítulo no se entregó, se restituyen todas las
+  horas reservadas o cobradas por el pedido; si se entregaron todos los
+  capítulos, la caducidad no restituye horas.
 - **Vencimiento de la suscripción y pedidos existentes.** Un libro encargado y
   pagado con horas mientras la suscripción estaba activa sigue disponible para
   su entrega después del vencimiento, siempre que la suscripción no haya sido
@@ -377,12 +426,13 @@ seguridad o para cumplir la ley.
   restitución de horas; el vencimiento no reinicia ese plazo. La escucha y la
   lectura en la App siguen sujetas a los requisitos de acceso al reproductor.
 - **Eliminar o cancelar un libro en la App** envía una solicitud de eliminación al
-  servicio (se reintenta más tarde si usted está sin conexión); un pedido en curso se detiene y
-  sus horas se restituyen.
+  servicio (se reintenta más tarde si usted está sin conexión); un pedido en curso se detiene. Sus horas se restituyen si algún capítulo no se entregó (Términos de uso, sección 4.2).
 - **Los recibos, los registros de permisos y el saldo de horas** (secciones 6.2 y
   6.6) se conservan durante **siete años después del último hecho financiero relacionado**,
   porque documentan el trabajo pagado y los cobros; después se eliminan o se agregan de forma irreversible.
   No contienen contenido de libros.
+- **Los registros de funcionamiento del servicio** (sección 6.2) se conservan
+  durante los plazos indicados allí.
 - **Las denuncias de contenido** se conservan **12 meses** desde su envío, por separado
   de los libros. Los **bloqueos** de una suscripción, con la categoría del motivo y el
   número de libro relacionado, se conservan mientras dure el bloqueo y 12 meses después de que
@@ -398,8 +448,7 @@ seguridad o para cumplir la ley.
   conservar metadatos limitados, y a Microsoft se le aplica su supervisión de abusos, como se
   describe en 6.3. Si se habilita la vía de Amazon Bedrock, Amazon Web Services puede conservar
   hasta 30 días el contenido que marquen sus clasificadores de abuso, y metadatos limitados,
-  como se describe en 6.3. No tenemos acceso directo a las copias de los proveedores. Tras
-  la entrega ya no conservamos identificadores que nos permitan localizar ninguna copia residual
+  como se describe en 6.3. No tenemos acceso directo a las copias de los proveedores. Después de eliminarse nuestra copia de trabajo del pedido ya no conservamos identificadores que nos permitan localizar ninguna copia residual
   de un proveedor; mientras un pedido está activo, una solicitud de eliminación lo cancela.
 - En el caso de los datos de salud del consumidor de Washington, las copias de seguridad que mantenga un encargado del tratamiento se
   eliminan a más tardar seis meses después de una solicitud autenticada.
@@ -446,7 +495,7 @@ y lo que generó para ese pedido.
 1. **«Antes de crear»** (una vez, antes del primer pedido de libro o narración con la
    voz de Talefall; la App no envía ninguno de los dos hasta que usted acepta): *«Crear libros a partir de ideas y narrar tu texto en nuestro servicio se rigen por los Términos de uso y la Política de privacidad. Estas funciones son solo para adultos.»* con el interruptor *«Tengo 18 años o más y acepto los Términos de uso y la Política de privacidad»* y el botón «Continuar». Esto es
    una declaración propia de edad, no una verificación de edad. La App almacena la versión de los Términos
-   (actualmente 2026-10-10.2, la edición del 11 de octubre de 2026), la hora y su
+   (actualmente 2026-10-10.2, la edición del 12 de octubre de 2026), la hora y su
    declaración en su dispositivo; no se envía a nuestro servidor. Las versiones
    actualizadas de la App le piden que acepte esta edición antes de su próximo uso del
    Servicio. Las versiones anteriores que conservan la aceptación de la edición del 8 de
@@ -521,7 +570,8 @@ solo invocamos una excepción de «servicio solicitado» cuando la ley aplicable
 permite y el tratamiento es necesario y proporcionado, y nunca porque una
 persona haya enviado los datos de otra. Cuando sabemos que un pedido contiene
 tales datos, detenemos todo tratamiento posterior, eliminamos las copias que controlamos
-(salvo que la ley nos obligue a preservarlas), restituimos las horas y notificamos a cada
+(salvo que la ley nos obligue a preservarlas), restituimos todas las horas del pedido si algún capítulo no se entregó
+conforme a la sección 4.2 de los Términos de uso y notificamos a cada
 destinatario de IA que pueda haberlos recibido que los elimine —OpenRouter, al que pedimos
 que transmita la solicitud al proveedor de alojamiento que procesó el pedido (como Microsoft
 o un proveedor de alojamiento de GLM), y Amazon Web Services si el pedido usó Amazon
@@ -586,7 +636,8 @@ de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
   contadores, no se nos envía ningún contenido de la biblioteca. La búsqueda de portadas y los contadores
   están desactivados salvo que usted los active en Ajustes.
 - **Eliminar un libro.** Eliminar un libro en la App elimina nuestra copia en el servidor si aún
-  existe, detiene un pedido en curso y restituye sus horas.
+  existe y detiene un pedido en curso; sus horas se restituyen si algún
+  capítulo no se entregó (Términos de uso, sección 4.2).
 - **Retirar el permiso del proveedor de IA** en Ajustes. Se detienen las transferencias
   posteriores a los proveedores de IA, incluidas las llamadas posteriores a la IA para pedidos
   en curso, y los nuevos pedidos de libros se detienen hasta que usted lo permita de nuevo; el
@@ -612,14 +663,22 @@ de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
   conservamos. No tenemos acceso directo a las copias que los proveedores conservan para
   la supervisión o la detección de abusos (sección 6.3); AWS declara que el contenido
   marcado se conserva hasta 30 días.
-  Conservamos solo el registro mínimo de la solicitud de eliminación (sección 6.4), los registros que
-  la ley nos obliga a conservar y —salvo que usted confirme que renuncia a ellas—
-  el registro mínimo necesario para preservar las horas adicionales compradas no utilizadas. Cuando
+  Una solicitud de eliminación no elimina automáticamente el registro de
+  horas y las operaciones financieras, los registros del estado de la
+  suscripción, los registros de bloqueos ni los registros de funcionamiento y
+  de protección de la eliminación descritos en la sección 6.2, salvo lo que allí se indica. También
+  conservamos el registro de la solicitud de eliminación descrito en la
+  sección 6.4. Las solicitudes de eliminación de los registros conservados se
+  evalúan conforme a la legislación aplicable; conservar un registro para el
+  funcionamiento del servicio no significa por sí solo que la ley nos obligue
+  a conservarlo. La eliminación no supone perder las horas adicionales
+  compradas y no utilizadas sin su confirmación. Cuando
   se aplique la ley de Nevada (NRS 603A.515), eliminamos los datos cubiertos en un plazo de 30 días
   después de la autenticación y notificamos a los destinatarios.
 - **Acceso y rectificación.** Facilitamos una copia de lo que aún existe y la
-  lista de destinatarios que recibieron contenido del pedido. Como el contenido se elimina
-  tras la entrega, no podemos facilitar ni rectificar lo que ya no existe.
+  lista de destinatarios que recibieron contenido del pedido. Una vez eliminada nuestra copia de trabajo del pedido
+  conforme a la sección 6.4, no podemos facilitar ni rectificar contenido que
+  ya no conservamos.
 - **Los agentes autorizados** pueden actuar en su nombre con su permiso por escrito.
 - **Cancelar la suscripción** en Ajustes de iOS → Cuenta de Apple →
   Suscripciones. Cancelar no elimina por sí solo los registros; presente una solicitud
@@ -716,10 +775,12 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 |---|---|---|
 | Biblioteca, datos de lectura y reproducción, ajustes | Su dispositivo y copias de seguridad | Hasta que usted los elimine |
 | Fecha de inicio de la prueba | Llavero y almacén de clave-valor de iCloud | Persistente por diseño |
-| Contenido del pedido (idea o texto de narración, capítulos, título, audio, identificadores de solicitud del proveedor de IA) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que se confirme la entrega; si nunca se entrega, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
+| Contenido del pedido (idea o texto de narración, capítulos, título, audio, identificadores de solicitud del proveedor de IA) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que la App confirme que ha guardado todos los capítulos; si no, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
 | Copias que conservan los proveedores de servicios | Modal; OpenRouter y sus proveedores, incluida Microsoft; Amazon Web Services si se habilita la vía de Bedrock | Modal hasta 7 días; OpenRouter y sus proveedores, incluida Microsoft, como se describe en 6.3 (puntos de acceso con conservación cero de datos, metadatos limitados, supervisión de abusos de Microsoft); Amazon Web Services, una vez habilitado, hasta 30 días para el contenido marcado por sus clasificadores de abuso, más metadatos limitados |
 | Su libro entregado | Su dispositivo y su iCloud privado | Hasta que usted lo elimine |
 | Recibos, registros de permisos, saldo de horas, avisos de suscripción | Modal (EE. UU.) | 7 años después del último hecho financiero relacionado |
+| Registros de funcionamiento del servicio (sin contenido) | Modal (EE. UU.) | Transferencias de audio: hasta que termina el pedido; cierre del pedido y decisión sobre las horas: mientras se conserve el recibo del pedido, más aproximadamente 1 día; hora de recepción de permisos: hasta que sus datos se eliminen a petición suya; contadores de límites diarios: unos dos o tres días, más la espera hasta la limpieza programada; identificadores de notificaciones de App Store: 8 días; vínculos de compras de horas adicionales: mientras se conserve el saldo de horas |
+| Protección de la eliminación (sin contenido) | Modal (EE. UU.) | Registros de liquidación: unos 8 días desde su creación, más la espera hasta la limpieza programada; registros del estado final del pedido y del momento de eliminación: sin vencimiento automático; las solicitudes de eliminación se evalúan conforme a la legislación aplicable |
 | Denuncias de contenido (motivo, nota, pasaje, número de libro, capítulo, identificador de suscripción) | Modal (EE. UU.); nuestro buzón si se envían por correo | 12 meses |
 | Registros de bloqueo | Modal (EE. UU.) | Mientras dure el bloqueo más 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | Modal (EE. UU.) / nuestro buzón | 1 año desde el envío, o más tiempo cuando la ley lo exija |
