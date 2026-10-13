@@ -105,11 +105,8 @@ Los libros los escriben proveedores de IA en las condiciones de la versión del 
 que se hizo el pedido (Política de privacidad, sección 6.3). El permiso vigente (versión
 2026-10-13.1) nombra estos destinatarios: OpenRouter y los proveedores de modelos a los que
 dirige las solicitudes, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
-(Google Cloud, Vertex AI), Anthropic y OpenAI. **Hoy solo una vía cumple las condiciones de
-ese permiso: el modelo GPT-6 Luna, desarrollado por OpenAI, ejecutado por Microsoft Azure y
-al que se accede a través del dominio de OpenRouter para Estados Unidos; los demás
-proveedores de IA de la lista no reciben nada.** Si no hay abierta ninguna vía que cumpla,
-el pedido no se acepta. Los pedidos hechos con los permisos anteriores (2026-10-08 y
+(Google Cloud, Vertex AI), Anthropic y OpenAI. **La escritura de libros con el permiso 2026-10-13.1 no está disponible temporalmente. La vía propuesta de OpenRouter a Microsoft Azure sigue desactivada hasta que se verifiquen las prácticas de categorización de solicitudes de OpenRouter y los países desde los que el personal de los proveedores puede acceder al contenido. No se aceptan pedidos con este permiso y no se usan horas. Los permisos anteriores siguen usando sus vías autorizadas por separado.** Ninguno de los
+proveedores de IA indicados en ese permiso recibe hoy pedidos con él. Los pedidos hechos con los permisos anteriores (2026-10-08 y
 2026-10-10.2) van solo por las vías que nombraban esos permisos; hoy, el modelo GLM-5.3,
 desarrollado por Z.ai, utilizado a través de OpenRouter y limitado a proveedores de
 alojamiento que OpenRouter indica con sede en Estados Unidos y como de conservación cero de
@@ -120,15 +117,16 @@ por distintos proveedores de alojamiento enumerados.
 | Destinatario | Función | Qué recibe |
 |---|---|---|
 | **Modal Labs, Inc.** (modal.com), Estados Unidos | Alojamiento; ejecuta nuestro servicio, nuestro modelo narrador y nuestro modelo de moderación; mantiene almacenamiento de trabajo temporal | El pedido completo: idea o texto de narración, capítulos generados, audio |
-| **OpenRouter, Inc.** (openrouter.ai) | Transmite las solicitudes de escritura de libros a los proveedores de modelos indicados abajo; no almacena las solicitudes ni las respuestas de nuestros pedidos | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
-| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — permiso vigente | Ejecuta el modelo GPT-6 Luna que escribe el texto, en el punto de acceso que OpenRouter identifica como de Estados Unidos. Con la supervisión de abusos de Microsoft, el contenido marcado, o que forma parte de un patrón potencialmente abusivo, puede almacenarse para su revisión por empleados autorizados de Microsoft; Microsoft no publica un plazo para ese almacenamiento. Con el permiso anterior 2026-10-10.2, esta vía se usa solo si se activa, y actualmente no lo está | El mismo contenido que OpenRouter reenvía |
+| **OpenRouter, Inc.** (openrouter.ai) | Transmite las solicitudes de escritura de libros a los proveedores de modelos indicados abajo; no almacena las solicitudes ni las respuestas de nuestros pedidos, pero puede categorizar de forma anónima una muestra de solicitudes para sus informes y su clasificación de modelos (Política de privacidad, sección 6.3.3) | La idea y el texto de trabajo que produce nuestro programa escritor, sin ningún identificador añadido por nosotros |
+| **Microsoft Corporation (Microsoft Azure)** (microsoft.com) — vía propuesta; no activada | Si se activa, ejecutaría el modelo GPT-6 Luna que escribe el texto, en el punto de acceso que OpenRouter identifica como de Estados Unidos. Con la supervisión de abusos de Microsoft, el contenido marcado, o que forma parte de un patrón potencialmente abusivo, puede almacenarse para su revisión por empleados autorizados de Microsoft; Microsoft no publica un plazo para ese almacenamiento. Con el permiso anterior 2026-10-10.2, esta vía se usa solo si se activa, y actualmente no lo está | El mismo contenido que OpenRouter reenvía |
 | **Proveedores de alojamiento del modelo GLM** (solo permisos anteriores), a los que se llega a través de OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Ejecutan el modelo que escribe el texto; OpenRouter los indica con sede en Estados Unidos y con conservación cero de datos | El mismo contenido que OpenRouter reenvía |
 | **Otros proveedores de IA nombrados en el permiso vigente**: Amazon Web Services, Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC y OpenAI OpCo, LLC | Nombrados en la pantalla del permiso; **hoy no hay vía, por lo que no reciben nada.** Antes de que cualquiera de ellos reciba un pedido, el registro de la Política de privacidad indicará sus condiciones verificadas y actualizaremos la evaluación de A9 | Nada por ahora |
 | **Apple Inc.** (iCloud Mail) | Entrega y almacena el correo enviado a contact@ownplace.net | Lo que usted nos escribe y su dirección de correo electrónico |
 
 La narración y la moderación se ejecutan en nuestros propios modelos en Modal; ese texto no se
-envía a ningún proveedor de IA. Con el permiso vigente, el procesamiento y el almacenamiento
-se realizan en Estados Unidos (Política de privacidad, sección 6.3.3); con los permisos
+envía a ningún proveedor de IA. Con el permiso vigente, solo pueden cumplir las vías que
+procesan y almacenan el contenido en Estados Unidos (Política de privacidad, sección 6.3.2);
+con los permisos
 anteriores, no se garantiza que el procesamiento por OpenRouter y sus proveedores de
 alojamiento ocurra solo en Estados Unidos. Ni OpenAI, el desarrollador de GPT-6 Luna, ni Z.ai, el desarrollador de GLM,
 reciben pedidos.
@@ -148,8 +146,8 @@ a nadie, no los entregamos a anunciantes ni a corredores de datos y
 no los vendemos. Pueden producirse divulgaciones incidentales a través de los destinatarios y el tratamiento descritos arriba; por ejemplo, si alguien incluye datos de salud del consumidor en una
 idea de libro en contra de nuestra regla y nuestros filtros no lo detectan, se transmiten
 a los destinatarios de IA de la vía utilizada —OpenRouter y el proveedor de modelos al que
-dirige la solicitud (hoy Microsoft con el permiso vigente, o un proveedor de alojamiento de
-GLM con uno anterior)— para escribir el libro, y ese proveedor puede conservarlos para
+dirige la solicitud (hoy un proveedor de alojamiento de GLM con un permiso anterior; Microsoft
+si se activa la vía propuesta)— para escribir el libro, y ese proveedor puede conservarlos para
 controles de abuso, seguridad o legales, como se describe arriba. Como no nos basamos en un contrato con estos
 proveedores que cubra los datos sensibles, tal transmisión puede considerarse
 «compartir» conforme a la ley de Washington. Nuestra regla y nuestros filtros no crean una
