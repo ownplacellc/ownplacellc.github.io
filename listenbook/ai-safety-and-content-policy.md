@@ -125,13 +125,13 @@ content before relying on it or sharing it.
   AI-provider permission, providers may run automated checks, keep content
   for abuse, security or legal checks within their published limits, and let
   authorized staff access it to investigate suspected abuse, give needed
-  support, or comply with law (Privacy Policy, Section 6.3). Today, books under permission 2026-10-13.1 are written by the GLM model through OpenRouter; the Microsoft Azure route and Amazon Bedrock meet that permission's conditions but are switched off. Earlier permissions continue on the routes they named.
-  While the Microsoft Azure route is switched on, Azure filters prompts
+  support, or comply with law (Privacy Policy, Section 6.3). Today, books under permission 2026-10-13.1 are written by the GPT-6 Luna model on Microsoft Azure through OpenRouter's United States domain; Amazon Bedrock meets that permission's conditions but is not enabled, and the GLM route is not used under it. Earlier permissions continue on the routes they named.
+  On the Microsoft Azure route, Azure filters prompts
   and completions in real time and runs abuse monitoring, in which flagged
   content may be stored and reviewed by authorized Microsoft employees; where
   it confirms abuse, access to the model may be limited, suspended, or
-  terminated. Books are otherwise written by GLM hosting providers through
-  OpenRouter. OpenRouter and every provider it
+  terminated. Books under earlier permissions are written by GLM hosting
+  providers through OpenRouter. OpenRouter and every provider it
   routes to apply their own terms and policies, and any listed provider may
   suspend our access for violations of its terms or use policies. Requests
   that break those terms can therefore stop the Service for everyone, which

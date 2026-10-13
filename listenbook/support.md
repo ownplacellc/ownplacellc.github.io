@@ -92,7 +92,7 @@ write to contact@ownplace.net.
 
    The screen lists the AI providers: OpenRouter and the model providers it
    routes to, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
-   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Today, books under permission 2026-10-13.1 are written by the GLM model through OpenRouter; the Microsoft Azure route and Amazon Bedrock meet that permission's conditions but are switched off. Earlier permissions continue on the routes they named.
+   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Today, books under permission 2026-10-13.1 are written by the GPT-6 Luna model on Microsoft Azure through OpenRouter's United States domain; Amazon Bedrock meets that permission's conditions but is not enabled, and the GLM route is not used under it. Earlier permissions continue on the routes they named.
    The full list of recipients, with countries, retention, caching, human
    access and disclosed exceptions, is in the [Privacy Policy](privacy-policy.html), Section 6.3
    ("AI providers, countries & retention"), which also quotes the screen word
