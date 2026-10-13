@@ -90,8 +90,7 @@ lo tratan para prestar el Servicio con los fines de A3. Además, el proveedor de
 el libro puede conservar el contenido para sus propios controles de abuso, seguridad o
 legales dentro de los límites que publica, y su personal autorizado puede acceder a él para
 investigar una sospecha de abuso, dar el soporte técnico necesario o cumplir la ley, como
-informa el permiso del proveedor de IA (Política de privacidad, secciones 6.3.2 y 6.3.3).
-Por ejemplo, Microsoft puede almacenar el contenido que marque su supervisión de abusos y
+informa el permiso del proveedor de IA (Política de privacidad, secciones 6.3.2 y 6.3.3). OpenRouter también permite el acceso del personal que presta su servicio de enrutamiento conforme a su acuerdo, como se describe en las secciones 6.3.2 y 6.3.3 de la Política de privacidad. Por ejemplo, Microsoft puede almacenar el contenido que marque su supervisión de abusos y
 hacer que empleados autorizados de Microsoft lo revisen. Consideramos a un destinatario
 encargado del tratamiento de datos de salud del consumidor —de modo que la divulgación a él no sea
 «compartir» conforme a la ley de Washington— solo en la medida en que un contrato vinculante
