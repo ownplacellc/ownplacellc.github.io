@@ -249,9 +249,9 @@ checked by our output moderation (Section 5.4), narrated by our own narrator
 model running on Modal, and delivered to the App. OWN PLACE LLC does not
 routinely conduct human pre-review of orders or books. Under the current
 permission, authorized staff of an AI provider may access content to
-investigate suspected abuse, give needed support, or comply with law; limited
-human access and provider safeguards are described in Privacy Policy Section
-6.3.
+investigate suspected abuse, give needed support, or comply with law. OpenRouter also permits access by personnel performing its routing service in accordance with its agreement, as described in Privacy Policy Sections 6.3.2–6.3.3.
+Limited human access and provider safeguards are described in Privacy Policy
+Section 6.3.
 
 **5.2 What you confirm before using the Service.**
 

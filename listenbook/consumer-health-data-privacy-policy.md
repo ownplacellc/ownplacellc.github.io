@@ -91,7 +91,7 @@ provider that writes the book may keep content for its own abuse, security or
 legal checks within its published limits, and its authorized staff may access
 it to investigate suspected abuse, give needed technical support, or comply
 with law, as the AI-provider permission discloses (Privacy Policy, Sections
-6.3.2 and 6.3.3). For example, Microsoft may store content its abuse
+6.3.2 and 6.3.3). OpenRouter also permits access by personnel performing its routing service in accordance with its agreement, as described in Privacy Policy Sections 6.3.2–6.3.3. For example, Microsoft may store content its abuse
 monitoring flags and have authorized Microsoft employees review it. We treat a
 recipient as a processor for consumer health data — so that disclosure to it
 is not "sharing" under Washington law — only to the extent a binding contract

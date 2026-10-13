@@ -83,8 +83,10 @@ write to contact@ownplace.net.
    - providers may cache it, and may keep it for abuse prevention, security
      or legal requirements within their published limits; some maximum
      periods and reviewer countries are not published;
-   - authorized provider staff may see it only to investigate suspected
-     abuse, give needed support, or comply with law;
+   - authorized provider staff may access content for the purposes and
+     within the recipient-specific restrictions described in Privacy Policy
+     Sections 6.3.2–6.3.3, including OpenRouter personnel performing its
+     routing service;
    - processing and staff access may occur outside the United States;
    - providers may change within these safeguards; anything broader needs
      your new permission;
