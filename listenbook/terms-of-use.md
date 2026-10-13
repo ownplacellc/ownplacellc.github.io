@@ -502,6 +502,7 @@ accepted, no hours are used, and the order is not sent to another provider
 instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
+Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
@@ -522,9 +523,9 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
 Inc. (hosting) and the AI providers named in your AI-provider permission:
-OpenRouter, Inc. and the model providers it routes to (today Microsoft
-Corporation through Microsoft Azure for the current permission, and GLM
-hosting providers for earlier permissions), Amazon Web Services, Inc. (Amazon
+OpenRouter, Inc. and the model providers it routes to (today GLM hosting
+providers for earlier permissions; Microsoft Corporation through Microsoft
+Azure only if its proposed route is enabled), Amazon Web Services, Inc. (Amazon
 Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI
 OpCo, LLC, of which only those marked as used in the registry in Privacy
 Policy Section 6.3.3 receive orders.

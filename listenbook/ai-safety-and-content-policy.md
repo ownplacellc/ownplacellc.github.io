@@ -125,13 +125,13 @@ content before relying on it or sharing it.
   AI-provider permission, providers may run automated checks, keep content
   for abuse, security or legal checks within their published limits, and let
   authorized staff access it to investigate suspected abuse, give needed
-  support, or comply with law (Privacy Policy, Section 6.3). Today these
-  books are written by Microsoft Azure, reached through OpenRouter: Azure
-  filters prompts and completions in real time and runs abuse monitoring, in
-  which flagged content may be stored and reviewed by authorized Microsoft
-  employees; where it confirms abuse, access to the model may be limited,
-  suspended, or terminated. Books under earlier permissions are written by
-  GLM hosting providers through OpenRouter. OpenRouter and every provider it
+  support, or comply with law (Privacy Policy, Section 6.3). Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.
+  If the proposed Microsoft Azure route is enabled, Azure filters prompts
+  and completions in real time and runs abuse monitoring, in which flagged
+  content may be stored and reviewed by authorized Microsoft employees; where
+  it confirms abuse, access to the model may be limited, suspended, or
+  terminated. Books under earlier permissions are written by GLM hosting
+  providers through OpenRouter. OpenRouter and every provider it
   routes to apply their own terms and policies, and any listed provider may
   suspend our access for violations of its terms or use policies. Requests
   that break those terms can therefore stop the Service for everyone, which

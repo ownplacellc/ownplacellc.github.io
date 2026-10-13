@@ -90,12 +90,8 @@ write to contact@ownplace.net.
 
    The screen lists the AI providers: OpenRouter and the model providers it
    routes to, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
-   (Google Cloud, Vertex AI), Anthropic, and OpenAI. Today books under this
-   permission are written by the GPT-6 Luna model on Microsoft Azure, reached
-   through OpenRouter in the United States; the other listed providers receive
-   nothing. If no provider that meets these conditions is available, the App
-   tells you that book writing is temporarily unavailable and no hours are
-   used. The full list of recipients, with countries, retention, caching and
+   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Book writing under permission 2026-10-13.1 is temporarily unavailable. The proposed OpenRouter-to-Microsoft Azure route remains disabled pending verification of OpenRouter's prompt-categorization practices and the countries from which provider staff may access content. No orders under this permission are accepted and no hours are used. Earlier permissions continue to use their separately authorized routes.
+   The App tells you this when you try to order, and nothing is charged. The full list of recipients, with countries, retention, caching and
    human access, is in the [Privacy Policy](privacy-policy.html), Section 6.3
    ("AI providers, countries & retention"), which also quotes the screen word
    for word. "Not Now" sends no order content to AI providers. **To
