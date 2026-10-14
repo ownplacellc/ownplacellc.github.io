@@ -507,7 +507,7 @@ accepted, no hours are used, and the order is not sent to another provider
 instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
-Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model run by OpenAI through OpenRouter, with Microsoft Azure's United States endpoint as the fallback; while that route is switched off, by the GPT-6 Luna model on Microsoft Azure. Amazon Bedrock meets that permission's conditions but is not enabled, and the GLM route is not used under it. Earlier permissions continue on the routes they named.
+Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model run only by OpenAI through OpenRouter; while that route is switched off, book writing under that permission is temporarily unavailable. The Microsoft Azure, Amazon Bedrock and GLM routes are not used under it. Earlier permissions continue on the routes they named.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
