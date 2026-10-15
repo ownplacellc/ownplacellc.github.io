@@ -222,12 +222,14 @@ AI-provider permission. The current recipients, routes, countries, retention,
 caching and human access are listed in the registry in Privacy Policy Section
 6.3.3.
 
-Under the current permission (version 2026-10-14.1), models, and the
-selection among the providers on its closed list, may change within the
-safeguards that permission states (Privacy Policy, Section 6.3.2) without
-asking you again. Subject only to the disclosed uncertainty about the operator of OpenRouter's topic classification (Privacy Policy, Section 6.3.2(1)), sending content to an unlisted recipient, or broadening its
-purposes, human access or retention, requires renewed explicit permission
-(Privacy Policy, Section 6.6). Changes to a provider's terms do not
+Under the current permission (version 2026-10-14.1), the only recipient of
+order content is OpenAI (OpenAI OpCo, LLC), which we use directly through the
+OpenAI API under our contract and data processing addendum with OpenAI,
+without OpenRouter or any other intermediary. The OpenAI model used may change
+within the safeguards that permission states (Privacy Policy, Section 6.3.2)
+without asking you again. Sending content of orders under it to any other
+recipient, or broadening its purposes, human access or retention, requires
+renewed explicit permission (Privacy Policy, Section 6.6). Changes to a provider's terms do not
 automatically expand your permission. Availability of a model in
 a provider's catalogue does not by itself make it authorized. Accepting these
 Terms does not replace that permission and does not authorize processing of
@@ -251,9 +253,12 @@ requests (AI Safety and Content Policy, B4). Each chapter is then
 checked by our output moderation (Section 5.4), narrated by our own narrator
 model running on Modal, and delivered to the App. OWN PLACE LLC does not
 routinely conduct human pre-review of orders or books. Under the current
-permission, authorized staff or contractors of an AI provider may access
-content only for the service, support, security, abuse prevention and legal
-compliance. OpenRouter also permits access by personnel performing its routing service in accordance with its agreement, as described in Privacy Policy Sections 6.3.2–6.3.3.
+permission, authorized OpenAI staff may access content only for support,
+abuse investigation and legal compliance, and OpenAI's contractors only to
+review for abuse and misuse, as described in Privacy Policy Sections
+6.3.2–6.3.3. For orders under earlier permissions, OpenRouter also permits
+access by personnel performing its routing service in accordance with its
+agreement (Privacy Policy, Section 6.3.3).
 Limited human access and provider safeguards are described in Privacy Policy
 Section 6.3.
 
@@ -271,19 +276,19 @@ Section 6.3.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again when renewed permission is required (Privacy Policy,
    Section 6.6). The screen asks **"Allow AI processing of your book
-   orders?"** and states: **"Send your ideas, settings and text to the AI providers below to create books? No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law, including OpenRouter's anonymous topic classification. Processing and authorized staff or contractor access may occur in several countries; we don't choose recipients or routes in China or other countries of concern under US law; provider information we checked names none there but is incomplete. Retention varies; no single maximum. Fiction only: no real personal or health data. Withdraw in Settings."**
-   Under the heading **"AI providers"** it lists: **"OpenRouter (AI request routing)"**, **"Amazon Web Services (Amazon Bedrock)"**, **"Microsoft (Azure, Foundry)"**, **"Google (Vertex AI, Gemini API)"**, **"OpenAI"**, **"Anthropic"**, **"Mistral AI"**, **"xAI"**, **"Independent model hosts: Sail Research, Together AI, Fireworks AI, DeepInfra, Baseten"**. The link **"AI providers, countries &
+   orders?"** and states: **"Send your ideas, settings and text to OpenAI to write your books? We use OpenAI's API directly, under our contract and data processing agreement with OpenAI. No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law. OpenAI may keep requests up to 30 days to provide the service and detect abuse, longer only where the law requires or to protect against harm; no single maximum. Processing and authorized staff or contractor access may occur in several countries; we don't choose China or other countries of concern under US law; OpenAI's published information names none there but is incomplete. Fiction only: no real personal or health data. Withdraw in Settings."**
+   Under the heading **"AI provider"** it lists: **"OpenAI (OpenAI OpCo, LLC), directly"**. The link **"AI provider, countries &
    retention"** opens the recipients registry in Privacy Policy Section 6.3
    before you decide. The buttons are **"Allow AI Processing"** and **"Not
-   Now"**. Below the buttons the screen states: **"“Not Now” sends no order content to AI providers. The player and server-based narration remain available."**
-   In Settings, the permission switch is explained: **"Your ideas, book settings and working text are sent to the AI providers listed in the Privacy Policy to write your books. No model training. You can turn this permission off."**
+   Now"**. Below the buttons the screen states: **"“Not Now” sends no order content to OpenAI. The player and server-based narration remain available."**
+   In Settings, the permission switch is explained: **"Your ideas, book settings and working text are sent to OpenAI to write your books. No model training. You can turn this permission off."**
    This is permission version 2026-10-14.1. Permissions of the earlier
    versions 2026-10-08, 2026-10-10.2 and 2026-10-13.1 are used only for the
    routes those versions named (Privacy Policy, Section 6.3.5). Updated versions of the
    App ask again with the current text before your next book order; until
    then, older versions use only those earlier routes.
    You can withdraw it at any time in Settings; further transfers to the AI
-   providers then stop, including further AI calls for orders in progress,
+   provider then stop, including further AI calls for orders in progress,
    and new book orders stop until you allow it again.
 3. *No personal data — before every book order.* The order form shows the
    switch **"My idea contains no personal data about real people"**; the
@@ -399,22 +404,24 @@ royalty-free license to store, copy, process, transmit, and narrate your
 requests, the text you submit for narration, and the generated book, solely
 to provide the Service to you, to run the safety controls, to handle reports,
 to enforce these Terms, and as required by law. For book-writing requests
-routed through OpenRouter, and only where your applicable AI-provider
-permission expressly covers it (permission 2026-10-14.1 does), this license
+routed through OpenRouter under an earlier permission, and only where that
+permission expressly covers it (permission 2026-10-13.1 does), this license
 includes allowing OpenRouter to use your requests in anonymized form solely
 to classify them by topic for its usage reporting and model rankings, as
 OpenRouter's terms (Section 6.5) describe; you confirm that you have the
 rights needed for that use (compare OpenRouter's terms, Section 6.6). Beyond what
 OpenRouter needs to provide the Service, we do not permit it to use your
-content for any other purpose (Privacy Policy, Section 6.3). We do not use your content
+content for any other purpose (Privacy Policy, Section 6.3). Permission
+2026-10-14.1 does not cover this classification, and requests under it are
+not sent through OpenRouter. We do not use your content
 to train models or for advertising.
 
 **5.9 Text you submit for narration.** You represent that you own the text or
 have the right to have it narrated for your personal use and that it contains
 no personal data about real people (Section 5.3). The text is processed by our
-own narrator model on Modal and is not sent to OpenRouter, its hosting
-providers (including Microsoft), Amazon Web Services, or any other model
-provider.
+own narrator model on Modal and is not sent to OpenAI, OpenRouter, its
+hosting providers (including Microsoft), Amazon Web Services, or any other
+model provider.
 
 ## 6. User Content, Copyright, and Complaints
 
@@ -507,14 +514,14 @@ an active subscription; listening to or reading it in the App requires the
 player purchase or an active subscription (Section 3).
 
 **Availability of book writing.** Under permission 2026-10-14.1 we write
-books only through AI providers whose published terms meet that permission's
-conditions (Privacy Policy, Section 6.3.2). When no such provider is open,
-book writing may be temporarily unavailable: the App says so, the order is not
-accepted, no hours are used, and the order is not sent to another provider
-instead. If the route of an accepted order closes while the book is being
+books only through the OpenAI API, used directly, on that permission's
+conditions (Privacy Policy, Section 6.3.2). When it cannot be used on those
+conditions, book writing may be temporarily unavailable: the App says so, the
+order is not accepted, no hours are used, and the order is not sent to another
+provider instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
-Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model (developed by OpenAI) reached through OpenRouter, run by OpenAI; when that route is unavailable or switched off, the same model on Microsoft Azure (United States endpoint) or on Amazon Bedrock (United States endpoint used by OpenRouter), or the GPT-6 Luna model on Microsoft Azure — each order keeps the route assigned when it was accepted. The GLM route is not used under it. Earlier permissions continue on the routes they named.
+Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model in the OpenAI API, used directly; OpenRouter, Microsoft Azure, Amazon Bedrock and the GLM route are not used under it. Earlier permissions continue on the routes they named.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
@@ -535,12 +542,13 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
 Inc. (hosting) and the AI providers named in your AI-provider permission:
-OpenRouter, Inc. and the model providers it routes to (today Microsoft
-Corporation through Microsoft Azure for the current permission, and GLM
-hosting providers for earlier permissions), Amazon Web Services, Inc. (Amazon
-Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC, and OpenAI
-OpCo, LLC, of which only those marked as used in the registry in Privacy
-Policy Section 6.3.3 receive orders.
+for the current permission, only OpenAI OpCo, LLC, used directly through the
+OpenAI API; for earlier permissions, OpenRouter, Inc. and the model providers
+it routes to (today Microsoft Corporation through Microsoft Azure and GLM
+hosting providers), and, as named by those permissions, Amazon Web Services,
+Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC,
+and OpenAI OpCo, LLC; of these, only those marked as used in the registry in
+Privacy Policy Section 6.3.3 receive orders.
 Those services operate under their own terms; we remain responsible for our
 choice and use of them but do not guarantee their availability.
 
@@ -610,7 +618,7 @@ request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
 version before your next use of the Service; this edition (version
 2026-10-14.1) is such a change. A new edition of these Terms does not by
-itself expand your AI-provider permission: subject only to the disclosed uncertainty about the operator of OpenRouter's topic classification (Privacy Policy, Section 6.3.2(1)), a recipient not named in it, or a
+itself expand your AI-provider permission: a recipient not named in it, or a
 wider scope of processing, requires renewed explicit permission (Section
 5.2; Privacy Policy, Section 6.6). The conditions of permission
 2026-10-14.1 apply only if you accept that permission in the App and only to
