@@ -104,9 +104,7 @@ content before relying on it or sharing it.
   named close person (a relative, partner, friend, colleague, neighbor,
   patient, or client). A match is refused: nothing is sent on, no hours are
   used, and the App asks you to rewrite the request. Our log records only the
-  category of the refusal, never the text. Text you send for narration is not
-  scanned for personal data; your per-book confirmation and the rule in B2
-  apply to it.
+  category of the refusal, never the text. In versions of the App using permission 2026-10-14.1, text you send for narration in the Talefall voice is checked by the same filter before it is narrated; a refused text is not narrated and uses no hours. In earlier versions it is not scanned for personal data. In every version your per-book confirmation and the rule in B2 apply to it.
 - **Input check for prohibited content (ideas and narration text).** Before
   anything is sent to an AI provider or to our narrator, our server refuses
   requests that clearly seek sexual content involving minors, instructions
