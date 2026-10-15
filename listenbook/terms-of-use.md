@@ -2,8 +2,6 @@
 
 **Effective Date: October 14, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 14 октября 2026 — черновик; при публикации заменить на фактический день публикации (во всех 9 файлах). -->
-
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
 7707 NE 141st St, Kirkland, WA 98034-5321, USA (contact@ownplace.net;
