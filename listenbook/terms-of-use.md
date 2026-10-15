@@ -222,13 +222,17 @@ AI-provider permission. The current recipients, routes, countries, retention,
 caching and human access are listed in the registry in Privacy Policy Section
 6.3.3.
 
-Under the current permission (version 2026-10-14.1), the only recipient of
-order content is OpenAI (OpenAI OpCo, LLC), which we use directly through the
-OpenAI API under our contract and data processing addendum with OpenAI,
-without OpenRouter or any other intermediary. The OpenAI model used may change
+Under the current permission (version 2026-10-14.1), OpenAI (OpenAI OpCo,
+LLC) is the only external AI model provider we use directly for orders, through
+the OpenAI API under our contract and data processing addendum with OpenAI. We
+do not route these orders through OpenRouter or another AI gateway. OpenAI may
+process content through its published affiliates and subprocessors under its
+DPA. Our hosting provider Modal also processes order content (Privacy Policy,
+Section 6.3.3). The OpenAI model used may change
 within the safeguards that permission states (Privacy Policy, Section 6.3.2)
-without asking you again. Sending content of orders under it to any other
-recipient, or broadening its purposes, human access or retention, requires
+without asking you again. Sending content of orders under it to another AI
+provider as our own route, or through OpenRouter or another AI gateway, or
+broadening its purposes, human access or retention, requires
 renewed explicit permission (Privacy Policy, Section 6.6). Changes to a provider's terms do not
 automatically expand your permission. Availability of a model in
 a provider's catalogue does not by itself make it authorized. Accepting these
@@ -276,7 +280,7 @@ Section 6.3.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again when renewed permission is required (Privacy Policy,
    Section 6.6). The screen asks **"Allow AI processing of your book
-   orders?"** and states: **"Send your ideas, settings and text to OpenAI to write your books? We use OpenAI's API directly, under our contract and data processing agreement with OpenAI. No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law. OpenAI may keep requests up to 30 days to provide the service and detect abuse, longer only where the law requires or to protect against harm; no single maximum. Processing and authorized staff or contractor access may occur in several countries; we don't choose China or other countries of concern under US law; OpenAI's published information names none there but is incomplete. Fiction only: no real personal or health data. Withdraw in Settings."**
+   orders?"** and states: **"Send your ideas, settings and text to OpenAI to write your books? We use OpenAI's API directly, under our contract and data processing agreement with OpenAI. OpenAI may use its published affiliates and subprocessors. No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law. OpenAI may keep requests up to 30 days to provide the service and detect abuse, longer only where the law requires or to protect against harm; no single maximum. Processing and authorized staff or contractor access may occur in several countries; we don't choose China or other countries of concern under US law; OpenAI's published information names none there but is incomplete. Fiction only: no real personal or health data. Withdraw in Settings."**
    Under the heading **"AI provider"** it lists: **"OpenAI (OpenAI OpCo, LLC), directly"**. The link **"AI provider, countries &
    retention"** opens the recipients registry in Privacy Policy Section 6.3
    before you decide. The buttons are **"Allow AI Processing"** and **"Not
@@ -521,7 +525,7 @@ order is not accepted, no hours are used, and the order is not sent to another
 provider instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
-Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model in the OpenAI API, used directly; OpenRouter, Microsoft Azure, Amazon Bedrock and the GLM route are not used under it. Earlier permissions continue on the routes they named.
+Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model in the OpenAI API, used directly; our routes through OpenRouter (to Microsoft Azure, Amazon Bedrock or GLM hosting providers) are not used under it. OpenAI may process content through its published affiliates and subprocessors. Earlier permissions continue on the routes they named.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
@@ -542,8 +546,8 @@ recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 The App connects to third-party services you choose to use (Apple, LibriVox,
 the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
 Inc. (hosting) and the AI providers named in your AI-provider permission:
-for the current permission, only OpenAI OpCo, LLC, used directly through the
-OpenAI API; for earlier permissions, OpenRouter, Inc. and the model providers
+for the current permission, OpenAI OpCo, LLC, used directly through the
+OpenAI API (OpenAI may use its published affiliates and subprocessors); for earlier permissions, OpenRouter, Inc. and the model providers
 it routes to (today Microsoft Corporation through Microsoft Azure and GLM
 hosting providers), and, as named by those permissions, Amazon Web Services,
 Inc. (Amazon Bedrock), Google LLC (Google Cloud, Vertex AI), Anthropic, PBC,

@@ -89,8 +89,8 @@ these grounds, each limited to what is necessary:
   necessary to write, moderate, narrate and deliver the book that person
   requested (RCW 19.373.030(1)(a)(ii) and (1)(b)(ii)). This ground never
   covers data about someone else. Orders under the current permission
-  2026-10-14.1 go only to OpenAI, directly, and are not subject to
-  OpenRouter's anonymous topic classification. For orders under earlier
+  2026-10-14.1 are sent to OpenAI directly, not through OpenRouter, and are
+  not subject to OpenRouter's anonymous topic classification. For orders under earlier
   permissions, which go through OpenRouter, this ground does not cover that
   classification for reporting and model rankings, which is not necessary to
   write the book; we do not rely on any ground for that classification of
@@ -136,19 +136,22 @@ agreement, and Microsoft may store content its abuse monitoring flags for
 review (Privacy Policy, Section 6.3.3). We treat a
 recipient as a processor for consumer health data — so that disclosure to it
 is not "sharing" under Washington law — only to the extent a binding contract
-with it covers that processing. **We do not rely on any contract with the AI
-providers to cover sensitive data (see "Contract limits" below), so we make no
-such claim for OpenAI (although we use it directly under its data processing
-addendum), OpenRouter, the model providers OpenRouter routes to (including
-Microsoft), or any other AI provider;** for them, our protection is prevention
-(A5) and deletion on discovery (A3).
+with it covers that processing. For OpenAI used directly under
+permission 2026-10-14.1: OpenAI acts as our processor for Customer Data covered by our DPA, including sensitive data unexpectedly included in unstructured text. This contractual protection does not itself authorize collection or disclosure under consumer health data laws. We prohibit such submissions and apply the prevention and
+deletion procedures in A3 and A5. **For the earlier routes we do not rely on
+any contract to cover sensitive data (see "Contract limits" below), so we make
+no such claim for OpenRouter, the model providers OpenRouter routes to
+(including Microsoft), or any other AI provider;** for them, our protection is
+prevention (A5) and deletion on discovery (A3).
 
 Book writing goes to AI providers on the conditions of the permission version
 under which the order was placed (Privacy Policy, Section 6.3). Under the
-current permission (version 2026-10-14.1) the only recipient is **OpenAI
-(OpenAI OpCo, LLC), reached directly through the OpenAI API** under our own
-contract and OpenAI's data processing addendum, without OpenRouter or any
-other intermediary. **Today, books under permission 2026-10-14.1 are written
+current permission (version 2026-10-14.1) **OpenAI (OpenAI OpCo, LLC) is the
+only external AI model provider we use directly**, through the OpenAI API
+under our own contract and OpenAI's data processing addendum. We do not route
+these orders through OpenRouter or another AI gateway. OpenAI may process
+content through its published affiliates and subprocessors under its DPA. Our
+hosting provider Modal also processes order content (table below). **Today, books under permission 2026-10-14.1 are written
 by the GPT-6.1 Sol model in the OpenAI API.** Processing and access by
 authorized OpenAI staff or contractors may occur in several countries; we do not choose China (including Hong Kong and Macau), Cuba, Iran, North Korea, Russia or Venezuela — the countries of concern under the US Department of Justice Data Security Program (28 CFR 202.601, as of October 2026); the information OpenAI publishes names none of these countries, but it is not a complete list of processing locations (Privacy Policy, Section 6.3.2). Orders placed under permission 2026-10-13.1 are written by
 GPT-6.1 Sol or GPT-6 Luna on Microsoft Azure through OpenRouter; orders placed under the earlier
@@ -174,20 +177,22 @@ Narration and moderation run on our own models at Modal; that text is not
 sent to any AI provider. Under every permission version, processing by the
 AI providers, and access by their authorized staff or contractors, may take
 place outside the United States (Privacy Policy, Sections 6.3.2 and 6.3.3).
-OpenAI receives orders only directly, under permission 2026-10-14.1; the
+We send orders to OpenAI only directly, under permission 2026-10-14.1 (OpenAI
+may process them through its published affiliates and subprocessors); the
 route to OpenAI through OpenRouter is not used; Z.ai, the developer of GLM,
 receives no orders.
 
 **Contract limits.** For orders under permission 2026-10-14.1 we have a
 direct contract with OpenAI, including OpenAI's Data Processing Addendum,
-accepted on October 14, 2026. For orders under earlier permissions, our data
+accepted on October 14, 2026. OpenAI acts as our processor for Customer Data covered by our DPA, including sensitive data unexpectedly included in unstructured text. This contractual protection does not itself authorize collection or disclosure under consumer health data laws. We prohibit such submissions and apply the prevention
+and deletion procedures in A3 and A5. For orders under earlier permissions, our data
 processing addendum with OpenRouter is its standard one, which excludes
 sensitive data; Microsoft and the GLM hosting providers process those requests
 as OpenRouter's providers, and we have no contract of our own with them. Our
 own AWS Data Processing Addendum (incorporated into the AWS Service Terms)
 applies only to the direct Amazon Bedrock route, which is not enabled today.
-We do not rely on any of these contracts, including OpenAI's, to authorize the
-processing of sensitive or health data. We therefore prohibit sending health and
+For these earlier routes we do not rely on any of these contracts to authorize
+the processing of sensitive or health data. We therefore prohibit sending health and
 other sensitive data and filter for it before anything reaches an AI provider
 (A5). We do not claim contractual protection for sensitive data
 that we do not have.
@@ -201,9 +206,11 @@ AI recipients on the route used — under permission 2026-10-14.1, OpenAI
 directly; under an earlier permission, OpenRouter and the model provider it
 routes to (today Microsoft for permission 2026-10-13.1, or a GLM hosting
 provider for 2026-10-08 and 2026-10-10.2) — to write the book, and that provider may keep it for abuse,
-security or legal checks as described above. Because we do not rely on a contract
-with these providers that covers sensitive data, such a transmission may count
-as "sharing" under Washington law. Our rule and filters do not create an
+security or legal checks as described above. For the earlier routes, because
+we do not rely on a contract with these providers that covers sensitive data,
+such a transmission may count as "sharing" under Washington law. For OpenAI
+used directly, our DPA's protection does not itself authorize collection or
+disclosure under consumer health data laws. Our rule and filters do not create an
 exemption from consumer health data laws, and the AI-provider permission does
 not authorize processing consumer health data. We work to prevent such
 transmissions (A5); any unintended collection or disclosure is handled under
@@ -280,7 +287,8 @@ Wherever you live, you may:
 - **Delete** your consumer health data. We notify every recipient that
   received it — processors, contractors, and other third parties — to delete
   it: for orders under permission 2026-10-14.1, OpenAI directly, through its
-  published privacy request or support channel; for orders under earlier
+  published privacy request or support channel, asking it to propagate the
+  request to relevant subprocessors, and our hosting provider; for orders under earlier
   permissions, OpenRouter and, through it and directly, the model provider on
   the route. We record the request before deleting the order, keep it open until it
   is sent, and send it with the request identifiers we keep for 30 days after
@@ -328,7 +336,7 @@ data-protection assessment of the Service, including the assessment the
 Connecticut Data Privacy Act requires for processing sensitive data. Before
 enabling a new AI route or materially changing its processing — including the
 conditions-based permission 2026-10-13.1 and its Microsoft Azure routes, the
-permission 2026-10-14.1 with its single route to OpenAI used directly, and any
+permission 2026-10-14.1 with its direct route to OpenAI, and any
 later route to another AI provider — we update the
 assessment and resolve findings
 that require changes to our processing or safeguards. Updating the Privacy

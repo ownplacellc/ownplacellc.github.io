@@ -128,7 +128,9 @@ content before relying on it or sharing it.
   support, or comply with law (Privacy Policy, Section 6.3). Today, books
   under the current permission (2026-10-14.1) are written by the GPT-6.1 Sol
   model in the OpenAI API, used directly under our contract and data
-  processing agreement with OpenAI, with no OpenRouter in the route. OpenAI
+  processing agreement with OpenAI, with no OpenRouter or other AI gateway in
+  the route; OpenAI may process content through its published affiliates and
+  subprocessors under its DPA. OpenAI
   runs its own safety systems and abuse monitoring; it may keep API inputs
   and outputs for up to 30 days for abuse monitoring (longer only where the
   law requires or to protect against harm) and lets authorized staff review
