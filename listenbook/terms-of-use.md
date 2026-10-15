@@ -404,9 +404,9 @@ permission expressly covers it (permission 2026-10-14.1 does), this license
 includes allowing OpenRouter to use your requests in anonymized form solely
 to classify them by topic for its usage reporting and model rankings, as
 OpenRouter's terms (Section 6.5) describe; you confirm that you have the
-rights needed for that use (compare OpenRouter's terms, Section 6.6). We do
-not grant OpenRouter any other license to your content (Privacy Policy,
-Section 6.3). We do not use your content
+rights needed for that use (compare OpenRouter's terms, Section 6.6). Beyond what
+OpenRouter needs to provide the Service, we do not permit it to use your
+content for any other purpose (Privacy Policy, Section 6.3). We do not use your content
 to train models or for advertising.
 
 **5.9 Text you submit for narration.** You represent that you own the text or
