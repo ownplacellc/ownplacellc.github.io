@@ -61,28 +61,29 @@ residencia.
   servicio en Modal (EE. UU.). Nuestro servidor primero la revisa en busca de datos
   personales y sensibles y de contenido prohibido. Para escribir el libro, se envía
   después a proveedores de IA en las condiciones del permiso del proveedor de IA que
-  usted dio. Con el permiso vigente (versión 2026-10-14.1): solo proveedores de una lista
-  cerrada (sección 6.3.3), con la sola salvedad de la incertidumbre indicada sobre
-  el operador de la clasificación de temas de OpenRouter (sección 6.3.2(1)); sin entrenar modelos, sin venta y sin uso publicitario;
-  el contenido se usa solo para el servicio solicitado, el soporte, la seguridad,
-  la prevención de abusos y el cumplimiento legal —incluida la clasificación
-  anónima de temas de OpenRouter para informes y clasificaciones de modelos—; el
-  tratamiento y el acceso del personal o de los contratistas autorizados de los
-  proveedores pueden darse en varios países; no elegimos destinatarios ni rutas situados en China
-  (incluidas Hong Kong y Macao), Cuba, Irán, Corea del Norte, Rusia o Venezuela
-  —los países de preocupación según el Programa de Seguridad de Datos del
-  Departamento de Justicia de EE. UU. (28 CFR 202.601, a octubre de 2026)—; la información publicada que revisamos para las rutas seleccionadas no cita ninguno de estos países, pero los proveedores no divulgan una lista completa de lugares de tratamiento (sección 6.3.2); la
-  conservación varía según el proveedor y la finalidad, sin un único máximo, y
-  sigue los criterios de eliminación indicados para cada proveedor. **Hoy, los
-  pedidos con este permiso los escribe el modelo GPT-6.1 Sol** (desarrollado por
-  OpenAI), al que se accede a través de OpenRouter y que ejecuta OpenAI; cuando esa
-  vía no está disponible o está desactivada, el mismo modelo en Microsoft Azure
-  (punto de acceso en Estados Unidos) o en Amazon Bedrock (punto de acceso en
-  Estados Unidos que usa OpenRouter), o el modelo GPT-6 Luna en Microsoft Azure;
-  cada pedido conserva la vía asignada cuando se aceptó. Los pedidos hechos con
-  permisos anteriores conservan sus vías (sección 6.3.5). Todos los destinatarios,
-  con sus países, conservación, caché, acceso humano y excepciones, figuran en la
-  sección 6.3.
+  usted dio. Con el permiso vigente (versión 2026-10-14.1): **OpenAI (OpenAI
+  OpCo, LLC) es el único proveedor externo de modelos de IA que usamos
+  directamente para estos pedidos, a través de la API de OpenAI, con nuestro
+  propio contrato y anexo de tratamiento de datos con OpenAI**; no enviamos estos
+  pedidos a través de OpenRouter ni de otra pasarela de IA; OpenAI puede tratar el
+  contenido a través de sus filiales y subencargados publicados conforme a su DPA,
+  y nuestro proveedor de alojamiento Modal también trata el contenido del pedido
+  (sección 6.3.3); sin entrenar modelos, sin venta y sin uso publicitario; el
+  contenido se usa solo para el servicio solicitado, el soporte, la seguridad, la
+  prevención de abusos y el cumplimiento legal; el tratamiento y el acceso del
+  personal o de los contratistas autorizados de OpenAI pueden darse en varios
+  países; no elegimos China (incluidas Hong Kong y Macao), Cuba, Irán, Corea del
+  Norte, Rusia o Venezuela —los países de preocupación según el Programa de
+  Seguridad de Datos del Departamento de Justicia de EE. UU. (28 CFR 202.601, a
+  octubre de 2026)—; la información que publica OpenAI no cita ninguno de estos
+  países, pero no es una lista completa de lugares de tratamiento (sección
+  6.3.2); OpenAI puede conservar las solicitudes hasta 30 días para prestar el
+  servicio y detectar abusos, y más tiempo solo cuando la ley lo exija o para
+  proteger frente a daños, sin un único máximo. **Hoy, los pedidos con este
+  permiso los escribe el modelo GPT-6.1 Sol en la API de OpenAI.** Los pedidos
+  hechos con permisos anteriores conservan sus vías, que pasan por OpenRouter
+  (sección 6.3.5). Todos los destinatarios, con sus países, conservación, caché,
+  acceso humano y excepciones, figuran en la sección 6.3.
   La narración se ejecuta en nuestro propio modelo narrador en Modal, y cada capítulo se
   revisa con nuestro propio modelo de moderación en Modal; ninguno envía el texto a
   otra empresa.
@@ -182,7 +183,9 @@ usted las usa.
 Internet Archive: https://archive.org/about/terms · LibriVox:
 https://librivox.org/pages/privacy/ · Project Gutenberg:
 https://www.gutenberg.org/policy/privacy_policy.html · Modal:
-https://modal.com/legal/privacy-policy · OpenRouter:
+https://modal.com/legal/privacy-policy · Datos de la API de OpenAI:
+https://developers.openai.com/api/docs/guides/your-data · Privacidad empresarial de OpenAI:
+https://openai.com/enterprise-privacy/ · OpenRouter:
 https://openrouter.ai/privacy · Conservación cero de datos en OpenRouter:
 https://openrouter.ai/docs/guides/features/zdr · Microsoft:
 https://www.microsoft.com/en-us/privacy/privacystatement · Tratamiento de datos de
@@ -291,7 +294,7 @@ depende de la versión del permiso del proveedor de IA con la que se hizo el ped
 **2026-10-10.2** y **2026-10-13.1** conservan sin cambios las promesas de esas
 versiones (sección 6.3.5).
 
-**Estado actual.** Los pedidos con el permiso 2026-10-14.1 los escribe el modelo GPT-6.1 Sol (desarrollado por OpenAI), al que se accede a través de OpenRouter y que ejecuta OpenAI; cuando esa vía no está disponible o está desactivada, el mismo modelo en Microsoft Azure (punto de acceso en Estados Unidos) o en Amazon Bedrock (punto de acceso en Estados Unidos que usa OpenRouter), o el modelo GPT-6 Luna en Microsoft Azure; cada pedido conserva la vía asignada cuando se aceptó (filas del registro «OpenRouter», «OpenAI», «Microsoft» y «Amazon Web Services»). Los demás proveedores de la lista hoy no reciben nada; antes de que cualquiera de ellos reciba un pedido, incluimos su vía en el registro con propiedades verificadas. Los pedidos con permisos anteriores siguen en las vías que nombraban esos permisos (sección 6.3.5).
+**Estado actual.** Los pedidos con el permiso 2026-10-14.1 los escribe el modelo GPT-6.1 Sol (`gpt-6.1-sol`, desarrollado por OpenAI) en la API de OpenAI, que usamos directamente con nuestro propio contrato y anexo de tratamiento de datos con OpenAI (fila del registro «OpenAI OpCo, LLC — directamente»). OpenAI es el único proveedor externo de modelos de IA que usamos directamente para los pedidos con este permiso. No enviamos estos pedidos a través de OpenRouter ni de otra pasarela de IA. OpenAI puede tratar el contenido a través de sus filiales y subencargados publicados conforme a su DPA. Nuestro proveedor de alojamiento Modal también trata el contenido del pedido, como se describe abajo. Los pedidos con permisos anteriores siguen en las vías que nombraban esos permisos, que pasan por OpenRouter (sección 6.3.5).
 
 #### 6.3.1 La pantalla del permiso (versión 2026-10-14.1)
 
@@ -299,151 +302,136 @@ Las versiones actualizadas de la App muestran esta pantalla antes de su primer p
 
 Título: *«¿Permitir el procesamiento con IA de tus pedidos de libros?»*
 
-Texto: *«¿Enviar ideas, ajustes y textos a los proveedores de IA de abajo para tus libros? Sin entrenar modelos, sin venta ni publicidad. Solo para el servicio, soporte, seguridad, abusos y ley, además de la clasificación anónima de temas de OpenRouter para informes y rankings de modelos. OpenRouter no indica quién opera el clasificador; no podemos confirmar que sea uno de los proveedores de abajo. Tratamiento y acceso de personal o contratistas: posibles en varios países; no elegimos destinatarios ni rutas en China u otros países de preocupación según la ley de EE. UU.; la información revisada no los cita, aunque es incompleta. Conservación variable, sin máximo único. Solo ficción: sin datos personales ni médicos reales. Retíralo en Ajustes.»*
+Texto: *«¿Enviar ideas, ajustes y textos a OpenAI para escribir tus libros? Usamos la API de OpenAI directamente, según nuestro contrato y acuerdo de tratamiento de datos con OpenAI. OpenAI puede usar sus filiales y subencargados publicados. Sin entrenar modelos, sin venta ni publicidad. Solo para el servicio, soporte, seguridad, abusos y ley. OpenAI puede conservar las solicitudes hasta 30 días para prestar el servicio y detectar abusos, y más tiempo solo si la ley lo exige o para proteger contra daños; sin máximo único. Tratamiento y acceso de personal o contratistas: posibles en varios países; no elegimos China ni otros países de preocupación según la ley de EE. UU.; la información publicada por OpenAI no los cita, aunque es incompleta. Solo ficción: sin datos personales ni médicos reales. Retíralo en Ajustes.»*
 
-Bajo el encabezado *«Proveedores de IA»*, la pantalla enumera:
+Bajo el encabezado *«Proveedor de IA»*, la pantalla enumera:
 
-- *OpenRouter (enrutamiento de solicitudes de IA)*
-- *Amazon Web Services (Amazon Bedrock)*
-- *Microsoft (Azure, Foundry)*
-- *Google (Vertex AI, Gemini API)*
-- *OpenAI*
-- *Anthropic*
-- *Mistral AI*
-- *xAI*
-- *Alojadores independientes de modelos: Sail Research, Together AI, Fireworks AI, DeepInfra, Baseten*
+- *OpenAI (OpenAI OpCo, LLC), directamente*
 
-Enlace: «Proveedores de IA, países y conservación», que abre esta sección 6.3 y
+Enlace: «Proveedor de IA, países y conservación», que abre esta sección 6.3 y
 funciona antes de que usted decida. Botones: «Permitir procesamiento con IA» y
-«Ahora no». Debajo de los botones: *“«Ahora no» no envía el contenido del pedido a proveedores de IA. El reproductor y la narración en el servidor siguen disponibles.”*
+«Ahora no». Debajo de los botones: *“«Ahora no» no envía el contenido del pedido a OpenAI. El reproductor y la narración en el servidor siguen disponibles.”*
 
-En Ajustes, bajo el interruptor del permiso: *«Tus ideas, ajustes y textos de trabajo se envían a los proveedores de IA indicados en la Política de privacidad para escribir tus libros. Sin entrenar modelos. Puedes desactivar este permiso.»*
+En Ajustes, bajo el interruptor del permiso: *«Tus ideas, ajustes y textos de trabajo se envían a OpenAI para escribir tus libros. Sin entrenar modelos. Puedes desactivar este permiso.»*
 
 La App registra una huella criptográfica (SHA-256) del texto exacto que se le mostró junto con su decisión, y nuestro servidor acepta un «permitir» para esta versión únicamente con la huella de uno de los textos publicados en inglés, ruso o español.
 
-#### 6.3.2 Condiciones que debe cumplir cada vía con este permiso
+#### 6.3.2 Condiciones de este permiso
 
-Con el permiso 2026-10-14.1 solo enviamos el contenido de un pedido por una vía
-cuyas condiciones y documentación publicadas por el proveedor, enlazadas en el
-registro (sección 6.3.3), cumplan todas las condiciones siguientes:
+Con el permiso 2026-10-14.1 solo enviamos el contenido de un pedido en estas
+condiciones, tal como constan en las condiciones y la documentación publicadas por
+OpenAI, enlazadas en el registro (sección 6.3.3), y en nuestros ajustes descritos
+aquí:
 
-1. **Lista cerrada de destinatarios.** Cada empresa de la vía —la pasarela, la
-   plataforma y el alojador del modelo— es uno de los proveedores indicados en la
-   pantalla del permiso y en el registro, identificado allí por la entidad jurídica
-   contratante. «Cualquier proveedor al que OpenRouter dirija las solicitudes» no
-   es un destinatario con este permiso: una vía a través de OpenRouter se limita a
-   proveedores nombrados. No usamos los servicios directos de Z.ai, DeepSeek,
-   Moonshot AI ni Alibaba Cloud; los modelos desarrollados por ellas solo pueden
-   usarse si los ejecuta un alojador de la lista fuera de China. Un desarrollador
-   de modelos recibe contenido únicamente si opera la vía.
-   **Laguna indicada — clasificación de temas de OpenRouter.** OpenRouter realiza
-   la clasificación anónima de temas del punto 3 con un modelo alojado y no
-   indica quién lo opera. No hemos podido confirmar que el operador sea el propio
-   OpenRouter, un proveedor nombrado en el registro o uno de los subencargados
-   publicados de OpenRouter. Por ello, solo para esa clasificación, no podemos
-   verificar que la lista de destinatarios sea cerrada (registro, fila de
-   OpenRouter).
-2. **Sin entrenamiento, sin venta, sin publicidad.** Ni nosotros ni los
-   destinatarios usamos su contenido para entrenar ni mejorar modelos; toda vía
-   exige un compromiso documentado de no entrenar, y las opciones de entrenamiento
-   y de compartir datos que tenemos a nuestro alcance están desactivadas (en
-   OpenRouter: `data_collection: deny`, el registro opcional de solicitudes
-   desactivado y el uso por OpenRouter de las entradas y salidas desactivado). Su
-   contenido no se vende ni se usa para publicidad.
+1. **Un único proveedor de modelos de IA, usado directamente.** OpenAI OpCo, LLC
+   (EE. UU.) es el único proveedor externo de modelos de IA que usamos directamente
+   para los pedidos con este permiso, a través de la API de OpenAI
+   (`https://api.openai.com/v1/chat/completions`) desde nuestra propia organización
+   de OpenAI, conforme al Anexo de tratamiento de datos de OpenAI, que aceptamos el
+   14 de octubre de 2026. OpenAI trata las solicitudes como nuestro encargado del
+   tratamiento (proveedor de servicios) conforme a ese anexo. No enviamos estos
+   pedidos a través de OpenRouter ni de otra pasarela de IA, y no los enviamos a
+   Microsoft, Amazon Web Services, proveedores de alojamiento de GLM ni otros
+   proveedores de IA como vías propias. OpenAI puede tratar el contenido a través
+   de sus filiales y subencargados publicados conforme a su DPA, entre los que
+   pueden figurar proveedores de infraestructura (registro, fila de OpenAI). Nuestro
+   proveedor de alojamiento Modal también trata el contenido del pedido (registro,
+   «Otros destinatarios»).
+2. **Sin entrenamiento, sin venta, sin publicidad.** Ni nosotros ni OpenAI usamos su
+   contenido para entrenar ni mejorar modelos: OpenAI declara que los datos
+   enviados a su API no se usan para entrenar. En nuestra organización de OpenAI,
+   el uso compartido de entradas y salidas con OpenAI está desactivado y el
+   registro de llamadas a la API está desactivado. Su contenido no se vende ni se
+   usa para publicidad.
 3. **Finalidades.** El contenido se usa solo para prestar el servicio solicitado
    (escribir y entregar su libro), para el soporte, la seguridad, la prevención de
-   abusos y el cumplimiento legal —incluida la clasificación anónima de temas de
-   OpenRouter para informes y clasificación de modelos (registro, fila de
-   OpenRouter)—.
-4. **Conservación según criterios de eliminación documentados.** La conservación
-   varía según el proveedor, el servicio, la configuración y la finalidad; no hay
-   un único máximo para todos los proveedores. Una vía se usa solo si el registro
-   indica, a partir de los documentos del proveedor, qué se conserva, con qué
-   finalidad y cuándo se elimina. Por ejemplo, OpenAI puede conservar las entradas y
-   salidas de la API hasta 30 días para prestar sus servicios e identificar abusos,
-   y más tiempo solo cuando la ley lo exija o sea razonablemente necesario para
-   proteger sus servicios o a terceros de daños; Microsoft y Amazon
-   Web Services conservan para su revisión el contenido marcado por la supervisión de
-   abusos. Se aplica todo límite publicado; si un proveedor no publica un máximo, el registro
-   lo indica y nombra los criterios de eliminación. Los proveedores eliminan lo que conservan
-   conforme a sus propias reglas; no podemos verificar ni forzar esa eliminación
-   (sección 6.4). Nuestra propia copia de trabajo
-   se elimina como se describe en la sección 6.4.
-5. **Países.** El procesamiento, el almacenamiento y el acceso del personal o de
-   los contratistas autorizados del proveedor pueden darse en varios países —para
-   las vías enumeradas hoy, Estados Unidos y, según la configuración del proveedor,
-   países europeos, el Reino Unido, Suiza, Canadá, Japón, Singapur, Corea del Sur,
-   India, Australia y otros países nombrados en las listas de subencargados que los
-   proveedores publican—. No elegimos destinatarios ni rutas en un país de
-   preocupación según el Programa de Seguridad de Datos del Departamento de
-   Justicia de EE. UU. (28 CFR 202.601, a octubre de 2026: China, incluidas Hong Kong
-   y Macao; Cuba; Irán; Corea del Norte; Rusia; Venezuela): una vía se usa solo si
-   ni la entidad contratante de ninguna empresa de ella ni las regiones y
-   subencargados publicados para ella están en un país así. Esto es el resultado de comprobar información
-   publicada, no una garantía: los proveedores no divulgan una lista completa de
-   lugares de tratamiento. No se publica, para las vías usadas hoy: dónde trabaja el
-   personal de OpenRouter; quién opera el clasificador anónimo de temas de
-   OpenRouter y dónde; qué centro de datos de Cloudflare atiende las solicitudes a
-   OpenAI («el más cercano al usuario final»); y dónde trabajan los revisores de
-   OpenAI, Microsoft y Amazon Web Services. Nos basamos en los documentos
-   publicados de los proveedores; del tratamiento que un proveedor realice en contra
-   de ellos respondemos dentro de los límites de nuestra selección y supervisión de
-   ese proveedor y de las obligaciones que la ley aplicable nos impone, que esta
-   Política no limita. Las leyes de privacidad y las normas de acceso gubernamental
-   difieren entre países.
-6. **Acceso humano limitado.** Los proveedores pueden aplicar controles
-   automáticos. El personal o los contratistas autorizados del proveedor pueden
-   acceder al contenido solo para las finalidades del punto 3, con
-   confidencialidad y controles de acceso; OpenRouter también permite el acceso del
-   personal que presta su servicio de enrutamiento. Las restricciones de acceso
-   documentadas de cada destinatario figuran en la sección 6.3.3, y «no publicado»
-   nunca significa «ninguno» ni «solo Estados Unidos».
+   abusos y el cumplimiento legal.
+4. **Conservación.** OpenAI puede conservar las entradas y salidas de la API hasta
+   30 días para prestar sus servicios e identificar abusos, y más tiempo solo
+   cuando la ley lo exija o sea razonablemente necesario para proteger sus
+   servicios o a terceros de daños; OpenAI no publica ningún máximo para esa
+   conservación más larga. La conservación cero de datos (Zero Data Retention) no
+   está habilitada para nuestra organización, por lo que los ajustes del punto 2 no
+   acortan este plazo. Cada solicitud se envía con `store: false`, por lo que la API
+   Chat Completions no conserva estado de aplicación para ella, y con la caché de
+   solicitudes desactivada (`prompt_cache_options` en modo `explicit` sin puntos de
+   caché); nuestras solicitudes de prueba a `api.openai.com` del 14 de octubre de
+   2026 no leyeron ningún token en caché en una solicitud repetida con estos ajustes
+   (2615 tokens en caché con los ajustes por defecto). OpenAI elimina lo que
+   conserva conforme a sus propias reglas; no podemos verificar ni forzar esa
+   eliminación (sección 6.4). Nuestra propia copia de trabajo se elimina como se
+   describe en la sección 6.4.
+5. **Países.** El procesamiento, el almacenamiento y el acceso del personal o de los
+   contratistas autorizados de OpenAI pueden darse en varios países. OpenAI
+   publica sus subencargados y filiales con sus lugares de procesamiento: filiales
+   en Estados Unidos, Irlanda, Reino Unido y Japón; infraestructura en Estados
+   Unidos, Canadá, países europeos, Reino Unido, Suiza, Japón, Singapur, Corea del
+   Sur, India, Indonesia, Malasia, Australia, Nueva Zelanda, Brasil, México,
+   Sudáfrica y Emiratos Árabes Unidos; contratistas de moderación de contenido y
+   soporte en Estados Unidos, Canadá y Filipinas; y Cloudflare, en el centro de
+   datos más cercano a quien hace la solicitud (para nuestras solicitudes, nuestro
+   servicio en Estados Unidos). No hemos configurado la residencia de datos. No
+   elegimos un destinatario ni una ruta en un país de preocupación según el
+   Programa de Seguridad de Datos del Departamento de Justicia de EE. UU. (28 CFR
+   202.601, a octubre de 2026: China, incluidas Hong Kong y Macao; Cuba; Irán;
+   Corea del Norte; Rusia; Venezuela), y ninguno de los lugares que publica OpenAI
+   está en un país así. Esto es el resultado de comprobar información publicada, no
+   una garantía: la información publicada por OpenAI no es una lista completa de
+   lugares de tratamiento. No se publica: cuál de los lugares de infraestructura
+   enumerados procesa una solicitud concreta y dónde trabajan los revisores
+   individuales de OpenAI. Nos basamos en los documentos publicados de OpenAI; del
+   tratamiento que OpenAI realice en contra de ellos respondemos dentro de los
+   límites de nuestra selección y supervisión de OpenAI y de las obligaciones que la
+   ley aplicable nos impone, que esta Política no limita. Las leyes de privacidad y
+   las normas de acceso gubernamental difieren entre países.
+6. **Acceso humano limitado.** OpenAI puede aplicar controles automáticos. Los
+   empleados autorizados de OpenAI pueden acceder al contenido para soporte, para
+   investigar abusos y para cumplir la ley; los contratistas especializados solo
+   para revisar abusos y usos indebidos, bajo obligaciones de confidencialidad
+   (registro, fila de OpenAI). «No publicado» nunca significa «ninguno» ni «solo
+   Estados Unidos».
 
-**Cambios dentro de estas condiciones.** Los modelos, y la selección de los
-proveedores de la lista, pueden cambiar dentro de estas condiciones sin volver a
-preguntarle. Antes de un cambio así actualizamos el registro de la sección 6.3.3,
-incluida su fecha de verificación. Con la sola salvedad de la incertidumbre
-indicada sobre el operador de la clasificación de temas de OpenRouter (sección
-6.3.2(1)), antes de enviar contenido a un destinatario que
-no figure en la lista, o de ampliar las finalidades, el acceso humano o la
-conservación más allá de estas condiciones, actualizamos esta Política, se lo
-notificamos en la App y obtenemos un nuevo permiso; actualizar esta Política no
-amplía por sí solo un permiso que usted dio. Los cambios en las condiciones de un
-proveedor no amplían automáticamente su permiso: reevaluamos la vía y, antes de
-cualquier uso fuera de las garantías indicadas aquí, le pedimos un nuevo permiso.
+**Cambios dentro de estas condiciones.** El modelo de OpenAI utilizado puede cambiar
+dentro de estas condiciones sin volver a preguntarle; antes de un cambio así
+actualizamos el registro de la sección 6.3.3, incluida su fecha de verificación.
+Antes de enviar contenido de pedidos con este permiso a un proveedor de IA distinto
+de OpenAI como vía propia, o a través de OpenRouter o de otra pasarela de IA, o de
+ampliar las finalidades, el acceso humano o la conservación más allá de estas
+condiciones, actualizamos esta Política, se lo notificamos en la App y obtenemos un
+nuevo permiso; actualizar esta Política no amplía por sí solo un permiso que usted
+dio. Los cambios en las condiciones de OpenAI no amplían automáticamente su permiso:
+reevaluamos la vía y, antes de cualquier uso fuera de las garantías indicadas aquí,
+le pedimos un nuevo permiso.
 
-**Si ninguna vía cumple.** Si no hay abierta ninguna vía que cumpla estas
-condiciones, no aceptamos un pedido de libro con este permiso: la App indica que la
-escritura de libros no está disponible temporalmente, no se usan horas y el pedido
-no se envía en su lugar a ningún otro destinatario. Cada pedido aceptado registra
-su vía; antes de cada solicitud a un proveedor de IA, nuestro servidor comprueba que su
-decisión vigente la sigue cubriendo. Si la vía se cierra o usted retira el permiso,
-el pedido se detiene y sus horas se restituyen (Términos de uso, sección 4.2). Retirar
-el permiso no borra por sí solo las copias que los proveedores conservan
-legítimamente conforme al punto 4; usted puede solicitar la eliminación de
-nuestros registros como se describe en la sección 10.
+**Si ninguna vía cumple.** Si la API de OpenAI no puede usarse en estas condiciones,
+no aceptamos un pedido de libro con este permiso: la App indica que la escritura de
+libros no está disponible temporalmente, no se usan horas y el pedido no se envía en
+su lugar a ningún otro destinatario. Cada pedido aceptado registra su vía; antes de
+cada solicitud a OpenAI, nuestro servidor comprueba que su decisión vigente la sigue
+cubriendo. Si la vía se cierra o usted retira el permiso, el pedido se detiene y sus
+horas se restituyen (Términos de uso, sección 4.2). Retirar el permiso no borra por
+sí solo las copias que OpenAI conserva legítimamente conforme al punto 4; usted puede
+solicitar la eliminación de nuestros registros como se describe en la sección 10.
 
 Este permiso no es un consentimiento para tratar datos de salud del consumidor ni
 otros datos personales sensibles (sección 6.6).
 
 #### 6.3.3 Registro de destinatarios
 
-Contrastado con los documentos oficiales de los proveedores el **13 y 14 de octubre de 2026**. Las entidades y las condiciones de los proveedores de la lista del permiso 2026-10-14.1 se comprobaron el 14 de octubre de 2026. «No publicado» significa que no encontramos ninguna declaración publicada;
+Contrastado con los documentos oficiales de los proveedores el **13 y 14 de octubre de 2026**. La entidad, el contrato, los ajustes y las condiciones de OpenAI, el único proveedor externo de modelos de IA que usamos directamente con el permiso 2026-10-14.1 (puede tratar el contenido a través de sus filiales y subencargados publicados), se comprobaron el 14 de octubre de 2026. Cada una de las demás filas se aplica solo a los pedidos hechos con permisos anteriores, o a ningún permiso, como se indica en esa fila. «No publicado» significa que no encontramos ninguna declaración publicada;
 no es una afirmación de que esa práctica no exista.
 
 | Entidad | Función | Servicio y uso | Países: procesamiento / almacenamiento / acceso humano | Conservación y excepciones | Caché | Acceso humano | Fines distintos de escribir el libro y de los controles de seguridad o legales | Condiciones y documentación oficiales | Verificado |
 |---|---|---|---|---|---|---|---|---|---|
-| **OpenRouter, Inc.**, 169 Madison Avenue, New York, NY 10016, EE. UU. | Nuestro encargado del tratamiento conforme al anexo de tratamiento de datos de OpenRouter (firmado el 11 de septiembre de 2026) | Pasarela que reenvía las solicitudes de escritura de libros a los proveedores de modelos. **Se usa con todas las versiones del permiso.** Las solicitudes en las vías hacia Microsoft Azure (GPT-6 Luna y GPT-6.1 Sol, permisos 2026-10-13.1 y 2026-10-14.1) y hacia Amazon Bedrock (GPT-6.1 Sol, 2026-10-14.1) pasan por el dominio de OpenRouter para Estados Unidos (`us.openrouter.ai`, In-Region Routing); las solicitudes en la vía «Sol a través de OpenAI» (2026-10-14.1; OpenAI no tiene punto de acceso en el dominio para Estados Unidos) y las solicitudes GLM (permisos anteriores) pasan por su dirección general | En el dominio para Estados Unidos, OpenRouter declara que las solicitudes se descifran y procesan en esa región, se dirigen solo a puntos de acceso de esa región y fallan en lugar de pasar a un punto de acceso de fuera. Solicitudes a través de la dirección general: la política de privacidad de OpenRouter dice que los datos pueden transferirse a sus servidores en EE. UU. o a otros países fuera del EEE y del Reino Unido, sin nombrarlos. Ubicación de cualquier acceso humano: no publicada; puede estar fuera de Estados Unidos | Las solicitudes y respuestas no se almacenan (el registro opcional y el uso por OpenRouter de las entradas y salidas están desactivados; en los puntos de acceso regionales OpenRouter tampoco lleva su propio registro). OpenRouter conserva metadatos de las solicitudes sin contenido (por ejemplo, número de tokens y latencia) para informes, facturación, seguridad, prevención de abusos y cumplimiento legal; no se publica un plazo fijo; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7). No es entrenamiento de modelos | No publicado | El anexo de tratamiento de datos de OpenRouter limita el acceso a los datos personales al personal que presta el Servicio conforme al acuerdo. No restringe expresamente el acceso solo a la investigación de abusos, el soporte técnico y el cumplimiento legal. Los países de los revisores no se publican; el acceso puede darse fuera de Estados Unidos. | **Clasificación anónima de temas, como parte del funcionamiento de su servicio de enrutamiento.** OpenRouter declara que clasifica una pequeña muestra anónima de solicitudes mediante un modelo con política de conservación cero de datos, conserva solo la categoría anónima para sus informes y la clasificación de modelos, no almacena el texto y no lo vincula a ninguna cuenta, siempre que el uso por OpenRouter de las entradas y salidas esté desactivado, como lo está para nuestra cuenta (licencia de los Términos de OpenRouter, sección 6.5). OpenRouter es responsable de esta clasificación; dice que usa un «modelo alojado» («hosted model»), pero no indica quién opera ese modelo ni dónde se ejecuta. El anexo de tratamiento de datos de OpenRouter enumera los subencargados autorizados para el tratamiento de datos personales por cuenta nuestra. No hemos confirmado si su clasificación de temas para informes y clasificación de modelos entra en ese tratamiento, quién opera el clasificador ni si ese operador figura en la lista publicada de subencargados (https://trust.openrouter.ai). Por ello no podemos verificar que el clasificador esté dentro de la lista cerrada de la sección 6.3.2(1). OpenRouter no publica ninguna exclusión para el dominio para Estados Unidos ni para las solicitudes con conservación cero, por lo que consideramos que se aplica a todas las solicitudes a través de OpenRouter, con todas las versiones del permiso. Permitida por 2026-10-14.1 (sección 6.3.2, punto 3) y 2026-10-13.1 (sección 6.3.5); para los permisos anteriores, véase la sección 6.3.5 | [Política de privacidad](https://openrouter.ai/privacy) · [Términos](https://openrouter.ai/terms) · [Anexo de tratamiento de datos](https://openrouter.ai/data-processing-agreement) · [Recogida de datos](https://openrouter.ai/docs/guides/privacy/data-collection) · [Conservación cero](https://openrouter.ai/docs/guides/features/zdr) · [Registros de proveedores](https://openrouter.ai/docs/guides/privacy/provider-logging) · [In-Region Routing](https://openrouter.ai/docs/guides/features/in-region-routing) | 2026-10-13 |
-| **Microsoft Corporation** (Microsoft Azure, Foundry Models sold by Azure) | Proveedor de modelos al que dirige OpenRouter; trata las solicitudes como proveedor de OpenRouter. No tenemos contrato directo con Microsoft | Ejecuta los modelos GPT-6 Luna y, desde el 14 de octubre de 2026, GPT-6.1 Sol (ambos desarrollados por OpenAI; OpenAI no recibe pedidos por esta vía). **Se usa para los pedidos con 2026-10-13.1 y 2026-10-14.1**, que cumple con las excepciones indicadas en esta fila; ambos modelos usan el mismo punto de acceso y los mismos ajustes. Las solicitudes se limitan al punto de acceso de OpenRouter `azure/us`, sin paso a otros puntos de acceso, y se envían con `zdr: true`, `data_collection: deny` y la caché de solicitudes desactivada. Con 2026-10-10.2, solo si se activa, y actualmente no lo está (sección 6.3.5). No se usa con 2026-10-08 | Procesamiento: el punto de acceso de OpenRouter `azure/us`; en su dominio para Estados Unidos, OpenRouter solo admite puntos de acceso en Estados Unidos y excluye las implementaciones globales y entre regiones; OpenRouter no publica el tipo de implementación de Azure. Almacenamiento del contenido marcado: el almacén de supervisión de abusos de Microsoft en la geografía del recurso de Azure, que para este punto de acceso es Estados Unidos según la designación de OpenRouter. Revisores humanos: con el proceso estándar de supervisión de abusos de Microsoft, empleados autorizados de Microsoft pueden revisar las solicitudes y respuestas marcadas por sospecha de abuso o identificadas como parte de un patrón potencialmente abusivo. Microsoft no publica los países de los revisores para la vía de EE. UU. que usamos; el acceso puede darse fuera de Estados Unidos, incluso desde países donde Microsoft opera | Los modelos no guardan estado: las solicitudes y respuestas no se almacenan en el modelo ni se usan para entrenar modelos. La revisión automática de abusos no las almacena. Las solicitudes y respuestas marcadas por la supervisión de abusos, o que forman parte de un patrón de uso potencialmente abusivo, pueden almacenarse para revisión humana. **La documentación publicada de Microsoft no especifica un plazo máximo de conservación del contenido almacenado para esta revisión.** Conservación exigida por la ley: Microsoft no la describe; suponemos que puede aplicarse. OpenRouter indica este punto de acceso como de conservación cero de datos y nuestras solicitudes lo exigen, pero no hemos verificado si Microsoft le aplica la supervisión de abusos modificada, por lo que este registro describe el modo estándar | Desactivada para estas solicitudes: fijan `prompt_cache_options` en modo `explicit` sin puntos de caché, lo que Microsoft documenta como no usar la caché de solicitudes; nuestras solicitudes de prueba del 13 de octubre de 2026 confirmaron que no se escribió ni se leyó nada de la caché. Para los modelos GPT-5.6 y posteriores, Microsoft publica solo una duración mínima de la caché (30 minutos), no una máxima | Solo empleados autorizados de Microsoft, solo para datos ya marcados o que forman parte de un patrón potencialmente abusivo, mediante acceso «justo a tiempo» aprobado por responsables; y cuando lo exija la ley. Países de los revisores: no publicados (véase la columna de países) | No se encontró ninguno en la documentación de Microsoft aparte de la supervisión de abusos; la vía pasa también por OpenRouter (fila anterior) | [Data, privacy, and security](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy) · [Abuse monitoring](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring) · [Prompt caching](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/prompt-caching) · [Declaración de privacidad](https://www.microsoft.com/en-us/privacy/privacystatement) | 2026-10-13 |
-| **Amazon Web Services, Inc.** (Amazon Bedrock) | Nuestro encargado del tratamiento conforme al anexo de tratamiento de datos de AWS, incorporado a los AWS Service Terms | Ejecutaría modelos de nuestra lista permitida. **Hoy no se usa para ningún pedido.** Cumple las condiciones de 2026-10-13.1 y 2026-10-14.1 con las excepciones indicadas en esta fila (sin límite superior publicado para la caché de solicitudes de los modelos pertinentes; ubicación de los revisores humanos no publicada), pero no está habilitado: nuestra cuenta aún no tiene acceso al modelo. Antes de habilitarlo actualizamos este registro. Nombrado en 2026-10-10.2, pero solo si se habilita, y no lo está (sección 6.3.5) | Regiones de AWS en Estados Unidos: AWS declara que una solicitud hecha en EE. UU. se mantiene en regiones de AWS en EE. UU., y los datos de detección de abusos permanecen en la región de destino. Ubicación del acceso humano: no publicada; puede estar fuera de Estados Unidos | No se almacena por defecto. Para los modelos de OpenAI distintos de gpt-oss, el tráfico marcado por los clasificadores de AWS se conserva hasta 30 días, por AWS, y no se comparte con el proveedor del modelo; este límite publicado se aplica. Conservación exigida por la ley: no descrita; suponemos que puede aplicarse | «Al menos 30 minutos» para los modelos pertinentes; límite superior no publicado | El personal de AWS revisa contenido solo en un modo de conservación usado para modelos cuyo proveedor lo exige; esos modelos no están en nuestra lista permitida. Países de los revisores: no publicados | No se encontró ninguno en la documentación de AWS | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) · [AWS Privacy Notice](https://aws.amazon.com/privacy/) | 2026-10-13 |
-| **Amazon Web Services, Inc.** (Amazon Bedrock, a través de OpenRouter) | Proveedor de modelos al que dirige OpenRouter; trata las solicitudes como proveedor de OpenRouter en la propia cuenta de AWS de OpenRouter. No tenemos contrato directo con AWS para esta vía | Ejecuta el modelo GPT-6.1 Sol en el punto de acceso `amazon-bedrock/us-east-1`. **Se usa para los pedidos con 2026-10-14.1** en la vía «Sol en Amazon Bedrock», a través del dominio de OpenRouter para Estados Unidos, limitada a ese punto de acceso (`allow_fallbacks: false`, `data_collection: deny`). No se usa con permisos anteriores | Región de AWS us-east-1 (Estados Unidos); en su dominio para Estados Unidos, OpenRouter dirige las solicitudes solo a puntos de acceso en Estados Unidos. Ubicación del acceso humano: no publicada; puede estar fuera de Estados Unidos | No se almacena por defecto. Para los modelos de OpenAI, el tráfico marcado por los clasificadores de AWS se conserva hasta 30 días en la Región de destino y no se comparte con el proveedor del modelo. Conservación exigida por ley: no descrita; suponemos que puede aplicarse | Puede haber caché de solicitudes: AWS publica «al menos 30 minutos» y ningún máximo; nuestras solicitudes de prueba del 14 de octubre de 2026 mostraron que este punto de acceso lee su caché aunque se solicite desactivarla | El personal de AWS revisa el contenido solo en un modo de conservación usado para modelos cuyo proveedor lo exige; países de los revisores: no publicados | La clasificación anónima de temas de OpenRouter (primera fila) | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) | 2026-10-14 |
-| **Google LLC** (Google Cloud, Vertex AI) | Sería nuestro encargado del tratamiento conforme a las condiciones de tratamiento de datos de Google Cloud | Destinatario de la lista. **Hoy no hay vía; no recibe nada.** Antes de cualquier uso, la vía se incluiría en este registro con propiedades verificadas | En la región o multirregión elegida para el proyecto | Google no entrena con los datos sin permiso. Las solicitudes a modelos de Google marcadas por sus clasificadores de seguridad pueden registrarse hasta 90 días; en los modelos designados como «Advanced AI», todas las solicitudes y respuestas se registran hasta 30 días para la supervisión de abusos | La caché en memoria se elimina a más tardar 24 horas después de escribirse | Empleados autorizados de Google pueden evaluar las solicitudes marcadas | No verificado (no hay vía) | [Abuse monitoring](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring) · [Zero data retention](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention) · [Entidad de Google Cloud](https://cloud.google.com/terms/google-entity) | 2026-10-13 |
-| **Anthropic, PBC** | Sería nuestro encargado del tratamiento conforme a las condiciones comerciales de Anthropic | Destinatario de la lista. **Hoy no hay vía; no recibe nada** | Por defecto, Anthropic puede dirigir el tráfico a determinados países de EE. UU., Europa, Asia y Australia; los datos se almacenan en EE. UU.; los procesos internos (como la revisión de seguridad o el soporte) pueden realizarse donde operan Anthropic o sus afiliadas. Una vía se evaluaría conforme a la sección 6.3.2 y se incluiría en este registro antes de cualquier uso | Entradas y salidas eliminadas en 30 días; si se marcan por infringir las políticas, entradas y salidas conservadas hasta 2 años y puntuaciones de clasificación hasta 7 años; más tiempo si lo exige la ley | 5 minutos por defecto, 1 hora opcional | El contenido marcado puede revisarse en el proceso de confianza y seguridad de Anthropic | No verificado (no hay vía) | [Commercial terms](https://www.anthropic.com/legal/commercial-terms) · [Conservación](https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data) · [Ubicación de servidores](https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers) · [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | 2026-10-13 |
-| **OpenAI OpCo, LLC** | Proveedor de modelos al que dirige OpenRouter; trata las solicitudes como proveedor de OpenRouter. No tenemos contrato directo con OpenAI | Ejecuta el modelo GPT-6.1 Sol. **Se usa para los pedidos con 2026-10-14.1** en la vía «Sol a través de OpenAI»: las solicitudes pasan por la dirección general de OpenRouter (OpenAI no tiene punto de acceso en el dominio de OpenRouter para Estados Unidos), limitada únicamente a OpenAI (`only`/`order`: OpenAI; `allow_fallbacks: false`; `data_collection: deny`; caché de solicitudes desactivada). No se usa con permisos anteriores | Ubicación del procesamiento de una solicitud concreta: no publicada. OpenAI publica cada subencargado y afiliada con su lugar de procesamiento: afiliadas en Estados Unidos, Irlanda, Reino Unido y Japón; infraestructura en Estados Unidos, Canadá, países europeos, Reino Unido, Suiza, Japón, Singapur, Corea del Sur, India, Indonesia, Malasia, Australia, Nueva Zelanda, Brasil, México, Sudáfrica y Emiratos Árabes Unidos; contratistas de moderación de contenido y soporte en Estados Unidos, Canadá y Filipinas. Ninguno es un país de preocupación. Ubicación de cada revisor: no publicada | Las entradas y salidas de la API pueden conservarse hasta 30 días para prestar los servicios e identificar abusos y después se eliminan, salvo que la ley exija conservarlas más tiempo o sea razonablemente necesario para proteger los servicios de OpenAI o a terceros de daños (sin máximo publicado). Chat Completions no conserva estado de aplicación aparte de la caché de solicitudes; si OpenRouter usa la API Responses aguas arriba, su estado de aplicación por defecto se conserva 30 días | Desactivada para estas solicitudes (`prompt_cache_options` en modo `explicit` sin puntos de caché); nuestras solicitudes de prueba del 14 de octubre de 2026 confirmaron que no se escribió nada en la caché ni se leyó de ella. En los demás casos, OpenAI conserva los datos de la caché de solicitudes no más de 24 horas | Empleados autorizados de OpenAI para soporte de ingeniería, investigación de posibles abusos y cumplimiento legal; contratistas externos especializados, sujetos a obligaciones de confidencialidad, solo para revisar abusos y usos indebidos. Países de los revisores: no publicados | Clasificadores automáticos de seguridad (solo metadatos, según OpenAI). La vía también pasa por OpenRouter (primera fila) | [Your data](https://developers.openai.com/api/docs/guides/your-data) · [Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching) · [Enterprise privacy](https://openai.com/enterprise-privacy/) · [Subencargados](https://openai.com/policies/sub-processor-list/) | 2026-10-14 |
-| **Mistral AI SAS** (Francia) | Sería nuestro encargado del tratamiento conforme a las condiciones comerciales y al anexo de tratamiento de datos de Mistral | Proveedor de la lista. **Hoy no hay vía; no recibe nada.** Utilizable solo con la exclusión del entrenamiento (o la conservación cero de datos) confirmada para la cuenta | No verificado (no hay vía) | No verificado (no hay vía) | No verificado | No verificado | No verificado | [Condiciones comerciales](https://legal.mistral.ai/terms/commercial-terms-of-service) · [Anexo de tratamiento de datos](https://legal.mistral.ai/terms/data-processing-addendum) | 2026-10-14 |
-| **xAI** (entidad contratante indicada en las condiciones empresariales de xAI) | Sería nuestro encargado del tratamiento conforme a las condiciones empresariales de xAI | Proveedor de la lista. **Hoy no hay vía; no recibe nada** | No verificado (no hay vía) | Hasta 30 días por defecto, según las condiciones empresariales de xAI; no verificado para una vía | No verificado | No verificado | No verificado | [Condiciones empresariales](https://x.ai/legal/terms-of-service-enterprise) | 2026-10-14 |
-| **Alojadores independientes de modelos** accesibles a través de OpenRouter: Sail Research Co. (Delaware, EE. UU.); Together Computer, Inc. (EE. UU.); Fireworks.ai, Inc. (EE. UU.); Deep Infra Inc. (EE. UU.); Baseten Labs, Inc. (EE. UU.) | Tratarían las solicitudes como proveedores de OpenRouter | Proveedores de la lista. **Hoy no hay vía con 2026-10-14.1; no reciben nada con él.** Algunos atienden solicitudes GLM con permisos anteriores (última fila). Una vía se limitaría a alojadores nombrados, con conservación cero de datos o una regla de eliminación documentada y sin entrenamiento | No verificado para una vía con 2026-10-14.1; un alojador no debe procesar en un país de preocupación | Según las condiciones de cada alojador; se indicará antes del uso | No verificado | No verificado | No verificado | [Sail Research](https://www.sailresearch.com/terms) · [Together AI](https://www.together.ai/terms-of-service) · [Fireworks AI](https://fireworks.ai/privacy-policy) · [DeepInfra](https://deepinfra.com/terms) · [Baseten](https://www.baseten.co/terms-and-conditions) | 2026-10-14 |
-| **Proveedores de alojamiento del modelo GLM**, a los que dirige OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Tratan las solicitudes como proveedores de OpenRouter. No tenemos contrato directo con ellos | Ejecutan el modelo GLM-5.3 (desarrollado por Z.ai; Z.ai no recibe sus pedidos). **Se usan solo para pedidos con los permisos anteriores** 2026-10-08 y 2026-10-10.2 (sección 6.3.5). **No se usan con 2026-10-13.1**, porque los proveedores de alojamiento no publican límites sobre el acceso de su personal al contenido durante el procesamiento | Con sede en Estados Unidos según OpenRouter; ubicación de los servidores no publicada, por lo que el procesamiento puede darse fuera de Estados Unidos | Las solicitudes llevan `zdr: true` y van solo a puntos de acceso de la lista de conservación cero de OpenRouter; OpenRouter define la conservación cero como que el proveedor no almacena los datos durante ningún periodo. La conservación sigue esa definición y las propias condiciones de tratamiento de datos de los proveedores de alojamiento | Puede haber caché en memoria; plazo máximo no publicado | No publicado | La clasificación anónima de temas de OpenRouter (primera fila) se aplica como a cualquier solicitud a través de OpenRouter | [Conservación cero](https://openrouter.ai/docs/guides/features/zdr) · [Registros de proveedores](https://openrouter.ai/docs/guides/privacy/provider-logging) | 2026-10-13 |
+| **OpenAI OpCo, LLC** (EE. UU.) — **directamente (API de OpenAI)** | Nuestro encargado del tratamiento (proveedor de servicios) conforme al Anexo de tratamiento de datos de OpenAI, aceptado el 14 de octubre de 2026; nuestra propia organización de OpenAI. Contrato directo, sin intermediario | Ejecuta el modelo GPT-6.1 Sol (`gpt-6.1-sol`) a través del punto de acceso Chat Completions `https://api.openai.com/v1/chat/completions`. **Se usa para los pedidos con 2026-10-14.1 y es el único proveedor externo de modelos de IA que usamos directamente con él**; OpenAI puede tratar el contenido a través de sus filiales y subencargados publicados (columna de países). No se usa con permisos anteriores | Ubicación del procesamiento de una solicitud concreta: no publicada; no hemos configurado la residencia de datos. OpenAI publica cada subencargado y filial con su lugar de procesamiento: filiales en Estados Unidos, Irlanda, Reino Unido y Japón; infraestructura en Estados Unidos, Canadá, países europeos, Reino Unido, Suiza, Japón, Singapur, Corea del Sur, India, Indonesia, Malasia, Australia, Nueva Zelanda, Brasil, México, Sudáfrica y Emiratos Árabes Unidos; contratistas de moderación de contenido y soporte en Estados Unidos, Canadá y Filipinas; Cloudflare en el centro de datos más cercano a quien hace la solicitud (para nosotros, nuestro servicio en Estados Unidos). Ninguno es un país de preocupación. Ubicación de cada revisor: no publicada | Las entradas y salidas de la API pueden conservarse hasta 30 días para prestar los servicios e identificar abusos y después se eliminan, salvo que la ley exija conservarlas más tiempo o sea razonablemente necesario para proteger los servicios de OpenAI o a otros de daños (sin máximo publicado). La conservación cero de datos (Zero Data Retention) no está habilitada para nuestra organización. Las solicitudes se envían con `store: false`: Chat Completions no conserva estado de aplicación para ellas. En nuestra organización, el uso compartido de entradas y salidas con OpenAI y el registro de llamadas a la API están desactivados | Desactivada: cada solicitud fija `prompt_cache_options` en modo `explicit` sin puntos de caché; nuestras solicitudes de prueba a `api.openai.com` del 14 de octubre de 2026 leyeron 0 tokens en caché en una solicitud repetida (2615 con los ajustes por defecto). | Empleados autorizados de OpenAI para soporte, investigación de abusos y cumplimiento legal; contratistas externos especializados, sujetos a obligaciones de confidencialidad, solo para revisar abusos y usos indebidos. Países de los revisores: no publicados | Clasificadores automáticos de seguridad (solo metadatos, según OpenAI). Sin entrenamiento: los datos enviados a la API de OpenAI no se usan para entrenar modelos | [Your data](https://developers.openai.com/api/docs/guides/your-data) · [Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching) · [Enterprise privacy](https://openai.com/enterprise-privacy/) · [Subencargados](https://openai.com/policies/sub-processor-list/) | 2026-10-14 |
+| **OpenRouter, Inc.**, 169 Madison Avenue, New York, NY 10016, EE. UU. | Nuestro encargado del tratamiento conforme al anexo de tratamiento de datos de OpenRouter (firmado el 11 de septiembre de 2026) | Pasarela que reenvía las solicitudes de escritura de libros a los proveedores de modelos. **Se usa solo para los pedidos con los permisos anteriores 2026-10-08, 2026-10-10.2 y 2026-10-13.1; no se usa con 2026-10-14.1** (ningún pedido con él pasa por OpenRouter). Las solicitudes en la vía hacia Microsoft Azure (GPT-6 Luna y GPT-6.1 Sol, permiso 2026-10-13.1) pasan por el dominio de OpenRouter para Estados Unidos (`us.openrouter.ai`, In-Region Routing); las solicitudes GLM (2026-10-08 y 2026-10-10.2) pasan por su dirección general | En el dominio para Estados Unidos, OpenRouter declara que las solicitudes se descifran y procesan en esa región, se dirigen solo a puntos de acceso de esa región y fallan en lugar de pasar a un punto de acceso de fuera. Solicitudes a través de la dirección general: la política de privacidad de OpenRouter dice que los datos pueden transferirse a sus servidores en EE. UU. o a otros países fuera del EEE y del Reino Unido, sin nombrarlos. Ubicación de cualquier acceso humano: no publicada; puede estar fuera de Estados Unidos | Las solicitudes y respuestas no se almacenan (el registro opcional y el uso por OpenRouter de las entradas y salidas están desactivados; en los puntos de acceso regionales OpenRouter tampoco lleva su propio registro). OpenRouter conserva metadatos de las solicitudes sin contenido (por ejemplo, número de tokens y latencia) para informes, facturación, seguridad, prevención de abusos y cumplimiento legal; no se publica un plazo fijo; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7). No es entrenamiento de modelos | No publicado | El anexo de tratamiento de datos de OpenRouter limita el acceso a los datos personales al personal que presta el Servicio conforme al acuerdo. No restringe expresamente el acceso solo a la investigación de abusos, el soporte técnico y el cumplimiento legal. Los países de los revisores no se publican; el acceso puede darse fuera de Estados Unidos. | **Clasificación anónima de temas, como parte del funcionamiento de su servicio de enrutamiento.** OpenRouter declara que clasifica una pequeña muestra anónima de solicitudes mediante un modelo con política de conservación cero de datos, conserva solo la categoría anónima para sus informes y la clasificación de modelos, no almacena el texto y no lo vincula a ninguna cuenta, siempre que el uso por OpenRouter de las entradas y salidas esté desactivado, como lo está para nuestra cuenta (licencia de los Términos de OpenRouter, sección 6.5). OpenRouter es responsable de esta clasificación; dice que usa un «modelo alojado» («hosted model»), pero no indica quién opera ese modelo ni dónde se ejecuta. El anexo de tratamiento de datos de OpenRouter enumera los subencargados autorizados para el tratamiento de datos personales por cuenta nuestra. No hemos confirmado si su clasificación de temas para informes y clasificación de modelos entra en ese tratamiento, quién opera el clasificador ni si ese operador figura en la lista publicada de subencargados (https://trust.openrouter.ai). Por ello no podemos verificar quién recibe las solicitudes para esa clasificación. OpenRouter no publica ninguna exclusión para el dominio para Estados Unidos ni para las solicitudes con conservación cero, por lo que consideramos que se aplica a todas las solicitudes a través de OpenRouter, es decir, a los pedidos con los permisos anteriores. Nombrada en 2026-10-13.1 (sección 6.3.5); para 2026-10-08 y 2026-10-10.2, véase la sección 6.3.5. No se aplica a los pedidos con 2026-10-14.1, que no pasan por OpenRouter | [Política de privacidad](https://openrouter.ai/privacy) · [Términos](https://openrouter.ai/terms) · [Anexo de tratamiento de datos](https://openrouter.ai/data-processing-agreement) · [Recogida de datos](https://openrouter.ai/docs/guides/privacy/data-collection) · [Conservación cero](https://openrouter.ai/docs/guides/features/zdr) · [Registros de proveedores](https://openrouter.ai/docs/guides/privacy/provider-logging) · [In-Region Routing](https://openrouter.ai/docs/guides/features/in-region-routing) | 2026-10-13 |
+| **Microsoft Corporation** (Microsoft Azure, Foundry Models sold by Azure) | Proveedor de modelos al que dirige OpenRouter; trata las solicitudes como proveedor de OpenRouter. No tenemos contrato directo con Microsoft | Ejecuta los modelos GPT-6 Luna y, desde el 14 de octubre de 2026, GPT-6.1 Sol (ambos desarrollados por OpenAI; OpenAI no recibe pedidos por esta vía). **Se usa para los pedidos con 2026-10-13.1**, que cumple con las excepciones indicadas en esta fila; ambos modelos usan el mismo punto de acceso y los mismos ajustes. **No se usa con 2026-10-14.1.** Las solicitudes se limitan al punto de acceso de OpenRouter `azure/us`, sin paso a otros puntos de acceso, y se envían con `zdr: true`, `data_collection: deny` y la caché de solicitudes desactivada. Con 2026-10-10.2, solo si se activa, y actualmente no lo está (sección 6.3.5). No se usa con 2026-10-08 | Procesamiento: el punto de acceso de OpenRouter `azure/us`; en su dominio para Estados Unidos, OpenRouter solo admite puntos de acceso en Estados Unidos y excluye las implementaciones globales y entre regiones; OpenRouter no publica el tipo de implementación de Azure. Almacenamiento del contenido marcado: el almacén de supervisión de abusos de Microsoft en la geografía del recurso de Azure, que para este punto de acceso es Estados Unidos según la designación de OpenRouter. Revisores humanos: con el proceso estándar de supervisión de abusos de Microsoft, empleados autorizados de Microsoft pueden revisar las solicitudes y respuestas marcadas por sospecha de abuso o identificadas como parte de un patrón potencialmente abusivo. Microsoft no publica los países de los revisores para la vía de EE. UU. que usamos; el acceso puede darse fuera de Estados Unidos, incluso desde países donde Microsoft opera | Los modelos no guardan estado: las solicitudes y respuestas no se almacenan en el modelo ni se usan para entrenar modelos. La revisión automática de abusos no las almacena. Las solicitudes y respuestas marcadas por la supervisión de abusos, o que forman parte de un patrón de uso potencialmente abusivo, pueden almacenarse para revisión humana. **La documentación publicada de Microsoft no especifica un plazo máximo de conservación del contenido almacenado para esta revisión.** Conservación exigida por la ley: Microsoft no la describe; suponemos que puede aplicarse. OpenRouter indica este punto de acceso como de conservación cero de datos y nuestras solicitudes lo exigen, pero no hemos verificado si Microsoft le aplica la supervisión de abusos modificada, por lo que este registro describe el modo estándar | Desactivada para estas solicitudes: fijan `prompt_cache_options` en modo `explicit` sin puntos de caché, lo que Microsoft documenta como no usar la caché de solicitudes; nuestras solicitudes de prueba del 13 de octubre de 2026 confirmaron que no se escribió ni se leyó nada de la caché. Para los modelos GPT-5.6 y posteriores, Microsoft publica solo una duración mínima de la caché (30 minutos), no una máxima | Solo empleados autorizados de Microsoft, solo para datos ya marcados o que forman parte de un patrón potencialmente abusivo, mediante acceso «justo a tiempo» aprobado por responsables; y cuando lo exija la ley. Países de los revisores: no publicados (véase la columna de países) | No se encontró ninguno en la documentación de Microsoft aparte de la supervisión de abusos; la vía pasa también por OpenRouter (fila anterior) | [Data, privacy, and security](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy) · [Abuse monitoring](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring) · [Prompt caching](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/prompt-caching) · [Declaración de privacidad](https://www.microsoft.com/en-us/privacy/privacystatement) | 2026-10-13 |
+| **Amazon Web Services, Inc.** (Amazon Bedrock) | Nuestro encargado del tratamiento conforme al anexo de tratamiento de datos de AWS, incorporado a los AWS Service Terms | Ejecutaría modelos de nuestra lista permitida. **Hoy no se usa para ningún pedido.** Nombrado en 2026-10-13.1 y cumple sus condiciones con las excepciones indicadas en esta fila (sin límite superior publicado para la caché de solicitudes de los modelos pertinentes; ubicación de los revisores humanos no publicada), pero no está habilitado: nuestra cuenta aún no tiene acceso al modelo. Antes de habilitarlo actualizamos este registro. Nombrado en 2026-10-10.2, pero solo si se habilita, y no lo está (sección 6.3.5). **Nuestra vía directa a Amazon Bedrock no se usa con 2026-10-14.1.** | Regiones de AWS en Estados Unidos: AWS declara que una solicitud hecha en EE. UU. se mantiene en regiones de AWS en EE. UU., y los datos de detección de abusos permanecen en la región de destino. Ubicación del acceso humano: no publicada; puede estar fuera de Estados Unidos | No se almacena por defecto. Para los modelos de OpenAI distintos de gpt-oss, el tráfico marcado por los clasificadores de AWS se conserva hasta 30 días, por AWS, y no se comparte con el proveedor del modelo; este límite publicado se aplica. Conservación exigida por la ley: no descrita; suponemos que puede aplicarse | «Al menos 30 minutos» para los modelos pertinentes; límite superior no publicado | El personal de AWS revisa contenido solo en un modo de conservación usado para modelos cuyo proveedor lo exige; esos modelos no están en nuestra lista permitida. Países de los revisores: no publicados | No se encontró ninguno en la documentación de AWS | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) · [AWS Privacy Notice](https://aws.amazon.com/privacy/) | 2026-10-13 |
+| **Amazon Web Services, Inc.** (Amazon Bedrock, a través de OpenRouter) | Proveedor de modelos al que dirige OpenRouter; trata las solicitudes como proveedor de OpenRouter en la propia cuenta de AWS de OpenRouter. No tenemos contrato directo con AWS para esta vía | Ejecutaría el modelo GPT-6.1 Sol en el punto de acceso `amazon-bedrock/us-east-1`, a través del dominio de OpenRouter para Estados Unidos, limitado a ese punto de acceso (`allow_fallbacks: false`, `data_collection: deny`). **Ya no se usa con ninguna versión del permiso**: no se usa con 2026-10-14.1 (con el que usamos OpenAI directamente como nuestro proveedor de modelos de IA) ni con permisos anteriores | Región de AWS us-east-1 (Estados Unidos); en su dominio para Estados Unidos, OpenRouter dirige las solicitudes solo a puntos de acceso en Estados Unidos. Ubicación del acceso humano: no publicada; puede estar fuera de Estados Unidos | No se almacena por defecto. Para los modelos de OpenAI, el tráfico marcado por los clasificadores de AWS se conserva hasta 30 días en la Región de destino y no se comparte con el proveedor del modelo. Conservación exigida por ley: no descrita; suponemos que puede aplicarse | Puede haber caché de solicitudes: AWS publica «al menos 30 minutos» y ningún máximo; nuestras solicitudes de prueba del 14 de octubre de 2026 mostraron que este punto de acceso lee su caché aunque se solicite desactivarla | El personal de AWS revisa el contenido solo en un modo de conservación usado para modelos cuyo proveedor lo exige; países de los revisores: no publicados | La clasificación anónima de temas de OpenRouter (fila de OpenRouter) | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) | 2026-10-14 |
+| **Google LLC** (Google Cloud, Vertex AI) | Sería nuestro encargado del tratamiento conforme a las condiciones de tratamiento de datos de Google Cloud | Nombrado en la pantalla del permiso 2026-10-13.1 (sección 6.3.5); no nombrado en 2026-10-14.1. **No tenemos ninguna vía hacia Google como proveedor de modelos de IA. Google puede tratar el contenido como subencargado de OpenAI.** Antes de cualquier uso, la vía se incluiría en este registro con propiedades verificadas | En la región o multirregión elegida para el proyecto | Google no entrena con los datos sin permiso. Las solicitudes a modelos de Google marcadas por sus clasificadores de seguridad pueden registrarse hasta 90 días; en los modelos designados como «Advanced AI», todas las solicitudes y respuestas se registran hasta 30 días para la supervisión de abusos | La caché en memoria se elimina a más tardar 24 horas después de escribirse | Empleados autorizados de Google pueden evaluar las solicitudes marcadas | No verificado (no hay vía) | [Abuse monitoring](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/abuse-monitoring) · [Zero data retention](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention) · [Entidad de Google Cloud](https://cloud.google.com/terms/google-entity) | 2026-10-13 |
+| **Anthropic, PBC** | Sería nuestro encargado del tratamiento conforme a las condiciones comerciales de Anthropic | Nombrado en la pantalla del permiso 2026-10-13.1 (sección 6.3.5); no nombrado en 2026-10-14.1. **No tenemos ninguna vía hacia Anthropic como proveedor de modelos de IA** | Por defecto, Anthropic puede dirigir el tráfico a determinados países de EE. UU., Europa, Asia y Australia; los datos se almacenan en EE. UU.; los procesos internos (como la revisión de seguridad o el soporte) pueden realizarse donde operan Anthropic o sus afiliadas. Una vía se evaluaría conforme a la sección 6.3.2 y se incluiría en este registro antes de cualquier uso | Entradas y salidas eliminadas en 30 días; si se marcan por infringir las políticas, entradas y salidas conservadas hasta 2 años y puntuaciones de clasificación hasta 7 años; más tiempo si lo exige la ley | 5 minutos por defecto, 1 hora opcional | El contenido marcado puede revisarse en el proceso de confianza y seguridad de Anthropic | No verificado (no hay vía) | [Commercial terms](https://www.anthropic.com/legal/commercial-terms) · [Conservación](https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data) · [Ubicación de servidores](https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers) · [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | 2026-10-13 |
+| **OpenAI OpCo, LLC** — **a través de OpenRouter** | Proveedor de modelos al que dirige OpenRouter; trataría las solicitudes como proveedor de OpenRouter (para el uso directo de OpenAI con nuestro propio contrato, véase la primera fila) | Vía «Sol a través de OpenAI»: el modelo GPT-6.1 Sol a través de la dirección general de OpenRouter (OpenAI no tiene punto de acceso en el dominio de OpenRouter para Estados Unidos), limitada únicamente a OpenAI (`only`/`order`: OpenAI; `allow_fallbacks: false`; `data_collection: deny`; caché de solicitudes desactivada). **Ya no se usa con ninguna versión del permiso**: con 2026-10-14.1 se accede a OpenAI directamente (primera fila); los permisos anteriores no usaban esta vía | Ubicación del procesamiento de una solicitud concreta: no publicada. OpenAI publica cada subencargado y afiliada con su lugar de procesamiento: afiliadas en Estados Unidos, Irlanda, Reino Unido y Japón; infraestructura en Estados Unidos, Canadá, países europeos, Reino Unido, Suiza, Japón, Singapur, Corea del Sur, India, Indonesia, Malasia, Australia, Nueva Zelanda, Brasil, México, Sudáfrica y Emiratos Árabes Unidos; contratistas de moderación de contenido y soporte en Estados Unidos, Canadá y Filipinas. Ninguno es un país de preocupación. Ubicación de cada revisor: no publicada | Las entradas y salidas de la API pueden conservarse hasta 30 días para prestar los servicios e identificar abusos y después se eliminan, salvo que la ley exija conservarlas más tiempo o sea razonablemente necesario para proteger los servicios de OpenAI o a terceros de daños (sin máximo publicado). Chat Completions no conserva estado de aplicación aparte de la caché de solicitudes; si OpenRouter usa la API Responses aguas arriba, su estado de aplicación por defecto se conserva 30 días | Desactivada para estas solicitudes (`prompt_cache_options` en modo `explicit` sin puntos de caché); nuestras solicitudes de prueba del 14 de octubre de 2026 confirmaron que no se escribió nada en la caché ni se leyó de ella. | Empleados autorizados de OpenAI para soporte de ingeniería, investigación de posibles abusos y cumplimiento legal; contratistas externos especializados, sujetos a obligaciones de confidencialidad, solo para revisar abusos y usos indebidos. Países de los revisores: no publicados | Clasificadores automáticos de seguridad (solo metadatos, según OpenAI). La vía también pasaría por OpenRouter (fila de OpenRouter) | [Your data](https://developers.openai.com/api/docs/guides/your-data) · [Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching) · [Enterprise privacy](https://openai.com/enterprise-privacy/) · [Subencargados](https://openai.com/policies/sub-processor-list/) | 2026-10-14 |
+| **Proveedores de alojamiento del modelo GLM**, a los que dirige OpenRouter: Baseten, Crusoe, Decart, DeepInfra, Fireworks AI, Inference.net, Modal, Morph, Novita AI, Parasail, Phala, Sail Research, Together AI, Venice y Wafer | Tratan las solicitudes como proveedores de OpenRouter. No tenemos contrato directo con ellos | Ejecutan el modelo GLM-5.3 (desarrollado por Z.ai; Z.ai no recibe sus pedidos). **Se usan solo para pedidos con los permisos anteriores** 2026-10-08 y 2026-10-10.2 (sección 6.3.5). **No se usan con 2026-10-13.1**, porque los proveedores de alojamiento no publican límites sobre el acceso de su personal al contenido durante el procesamiento, **ni con 2026-10-14.1** | Con sede en Estados Unidos según OpenRouter; ubicación de los servidores no publicada, por lo que el procesamiento puede darse fuera de Estados Unidos | Las solicitudes llevan `zdr: true` y van solo a puntos de acceso de la lista de conservación cero de OpenRouter; OpenRouter define la conservación cero como que el proveedor no almacena los datos durante ningún periodo. La conservación sigue esa definición y las propias condiciones de tratamiento de datos de los proveedores de alojamiento | Puede haber caché en memoria; plazo máximo no publicado | No publicado | La clasificación anónima de temas de OpenRouter (fila de OpenRouter) se aplica como a cualquier solicitud a través de OpenRouter | [Conservación cero](https://openrouter.ai/docs/guides/features/zdr) · [Registros de proveedores](https://openrouter.ai/docs/guides/privacy/provider-logging) | 2026-10-13 |
 
 **Otros destinatarios** (no proveedores de IA):
 
@@ -458,7 +446,7 @@ no es una afirmación de que esa práctica no exista.
 
 | Versión del permiso | Quién la tiene | Vías que se usan hoy |
 |---|---|---|
-| **2026-10-14.1** (vigente) | Versiones de la App que muestran la pantalla de 6.3.1 | Solo vías que cumplen la sección 6.3.2. Hoy, por orden de preferencia: GPT-6.1 Sol a través de OpenRouter hasta OpenAI; GPT-6.1 Sol en Microsoft Azure (`azure/us`); GPT-6.1 Sol en Amazon Bedrock a través de OpenRouter (`amazon-bedrock/us-east-1`); GPT-6 Luna en Microsoft Azure (`azure/us`). Cumple las condiciones pero no está habilitado: Amazon Bedrock directamente. No se usa: la vía GLM |
+| **2026-10-14.1** (vigente) | Versiones de la App que muestran la pantalla de 6.3.1 | Solo OpenAI, directamente, en las condiciones de la sección 6.3.2. Hoy: GPT-6.1 Sol directamente en la API de OpenAI (`api.openai.com`). No se usa: OpenRouter ni ninguna vía a través de él, Microsoft Azure, Amazon Bedrock, la vía GLM |
 | **2026-10-13.1** | Versiones de prueba (TestFlight) de la App, 13 y 14 de octubre de 2026 | Según lo que prometía ese permiso (sección 6.3.5). Hoy: GPT-6.1 Sol y GPT-6 Luna en Microsoft Azure a través del dominio de OpenRouter para Estados Unidos (`azure/us`). No se usan: OpenAI, Sol en Amazon Bedrock |
 | **2026-10-10.2** | Versiones de prueba (TestFlight) anteriores de la App | Según lo que prometía ese permiso (sección 6.3.5). Hoy: el modelo GLM a través de OpenRouter en proveedores de alojamiento con conservación cero |
 | **2026-10-08** | Versión 1.3 de la App | Solo el modelo GLM a través de OpenRouter (sección 6.3.5) |
@@ -625,9 +613,7 @@ otros datos personales sensibles (sección 6.6).
 edición informamos de esta clasificación para todas las versiones del permiso. La
 clasificación anónima de
 temas descrita en la fila de OpenRouter del registro forma parte de cómo OpenRouter
-opera su servicio de enrutamiento y se aplica a las solicitudes a través de
-OpenRouter, incluidas las hechas con estos permisos anteriores; sus pantallas no la
-mencionaban. No es entrenamiento de modelos: OpenRouter declara que clasifica una
+opera su servicio de enrutamiento y se aplica a las solicitudes a través de OpenRouter, es decir, a las solicitudes hechas con estos permisos anteriores; las pantallas de 2026-10-08 y 2026-10-10.2 no la mencionaban. Los pedidos con el permiso vigente 2026-10-14.1 no pasan por OpenRouter, y esta clasificación no se les aplica. No es entrenamiento de modelos: OpenRouter declara que clasifica una
 pequeña muestra anónima de solicitudes mediante un modelo con conservación cero de
 datos, conserva solo la categoría anónima para sus informes y la clasificación de
 modelos, no almacena el texto y no lo vincula a ninguna cuenta, siempre que el uso
@@ -635,26 +621,35 @@ por OpenRouter de las entradas y salidas esté desactivado, como lo está para n
 cuenta. La informamos aquí para que usted pueda decidir: puede retirar el permiso en
 cualquier momento en Ajustes, lo que detiene nuevas llamadas de IA y restituye las
 horas de los pedidos sin terminar (Términos de uso, sección 4.2); y las versiones
-actualizadas de la App le piden que responda a la pantalla vigente, que menciona esta
-clasificación, antes de su próximo pedido de libro. Esta información describe la
+actualizadas de la App le piden que responda a la pantalla vigente antes de su próximo pedido de libro, tras lo cual sus nuevos pedidos van a OpenAI directamente, no a través de OpenRouter. Esta información describe la
 práctica de OpenRouter. Por sí sola no autoriza la clasificación de temas con un
 permiso anterior ni amplía ese permiso.
 
 #### 6.3.6 Contratos, comunicación de datos y acceso humano
 
-**Límites contractuales sobre datos sensibles.** Nuestro acuerdo con OpenRouter es su
-anexo estándar de tratamiento de datos, que excluye los datos sensibles; Microsoft y
-los proveedores de alojamiento de GLM tratan las solicitudes como proveedores de
-OpenRouter, y no tenemos contrato propio con ellos. Para Amazon Bedrock usado directamente
-(hoy no habilitado), nuestro acuerdo con Amazon Web Services es su acuerdo de cliente
-estándar con el anexo de tratamiento de datos de AWS; en la vía «Sol en Amazon
-Bedrock», Amazon Web Services trata las solicitudes como proveedor de OpenRouter en la
-propia cuenta de AWS de OpenRouter, y no tenemos contrato propio con él para esa vía. OpenAI trata las solicitudes de GPT-6.1 Sol como proveedor de OpenRouter (permiso 2026-10-14.1); no tenemos contrato propio con él. Google, Anthropic, Mistral AI, xAI y los alojadores independientes de la lista de 2026-10-14.1 no reciben nada con él hoy. No nos basamos en ninguno de
-estos acuerdos, ni en ningún otro contrato con un proveedor, para autorizar el
-tratamiento de datos sensibles. Por eso prohibimos enviar datos personales o
-sensibles en las solicitudes y los filtramos (sección 6.5); no afirmamos tener una
-protección contractual de datos sensibles que no tenemos. La narración y la
-moderación se ejecutan en nuestros propios modelos en Modal.
+**Contratos y datos sensibles.** Para los pedidos con el permiso 2026-10-14.1 tenemos un
+contrato directo con OpenAI: nuestra propia organización de OpenAI y el Anexo de
+tratamiento de datos de OpenAI, aceptado el 14 de octubre de 2026, conforme al cual
+OpenAI es nuestro encargado del tratamiento (proveedor de servicios). OpenAI actúa
+como nuestro encargado del tratamiento respecto de los Datos del cliente cubiertos
+por nuestro DPA, incluidos los datos sensibles incluidos de forma inesperada en
+texto no estructurado. Esta protección contractual no autoriza por sí sola la
+recogida ni la comunicación conforme a las leyes sobre datos de salud del
+consumidor. Prohibimos esos envíos y aplicamos los procedimientos de prevención y
+eliminación de las secciones 6.4 y 6.5 y de la Política de privacidad de datos de
+salud del consumidor (A3 y A5). Para los pedidos con permisos anteriores, nuestro
+acuerdo con OpenRouter es su anexo estándar de tratamiento de datos, que excluye los
+datos sensibles; Microsoft y los proveedores de alojamiento de GLM tratan esas
+solicitudes como proveedores de OpenRouter, y no tenemos contrato propio con ellos.
+Para Amazon Bedrock usado directamente (hoy no habilitado), nuestro acuerdo con
+Amazon Web Services es su acuerdo de cliente estándar con el anexo de tratamiento de
+datos de AWS. No enviamos pedidos a Google ni a Anthropic como proveedores de modelos
+de IA. Google puede tratar el contenido como subencargado de OpenAI. Para esas vías
+anteriores no nos basamos en ninguno de estos acuerdos, ni en ningún otro contrato con
+un proveedor, para autorizar el tratamiento de datos sensibles. Por eso prohibimos
+enviar datos personales o sensibles en las solicitudes y los filtramos (sección 6.5);
+no afirmamos tener una protección contractual de datos sensibles que no tenemos. La
+narración y la moderación se ejecutan en nuestros propios modelos en Modal.
 
 Nunca usamos sus solicitudes ni sus libros para entrenar modelos, nunca los vendemos
 y no los compartimos con nadie salvo los destinatarios anteriores, excepto cuando lo
@@ -721,8 +716,7 @@ el registro anterior.
   transacción y lo que se eliminó; sin contenido) se conservan dos años como
   prueba de que cumplimos.
 - **Copias que conservan los proveedores de servicios.** Modal puede conservar las entradas y salidas de las funciones hasta
-  siete días conforme a su política de retención de infraestructura. OpenRouter
-  conserva metadatos de las solicitudes sin contenido (por ejemplo, modelo,
+  siete días conforme a su política de retención de infraestructura. Para los pedidos con permisos anteriores, OpenRouter conserva metadatos de las solicitudes sin contenido (por ejemplo, modelo,
   número de tokens, coste y latencia) de nuestra cuenta. No añadimos ningún
   identificador suyo a las solicitudes de IA. Mientras conservamos los
   identificadores de solicitud del proveedor (30 días, arriba), nos permiten
@@ -734,28 +728,20 @@ el registro anterior.
   obligaciones legales, regulatorias y contables, y luego la elimina o la
   desidentifica (Política de privacidad de OpenRouter, sección 7). Los usa para
   informes, facturación, seguridad y cumplimiento legal. El proveedor de IA que procesó un pedido puede conservar
-  contenido solo como se indica para él en el registro de la sección 6.3.3; por
-  ejemplo, OpenAI hasta 30 días, y Microsoft y Amazon Web Services, el contenido
-  marcado por la supervisión de abusos. Los proveedores eliminan estas copias
+  contenido solo como se indica para él en el registro de la sección 6.3.3; por ejemplo, OpenAI (directamente, para los pedidos con 2026-10-14.1) hasta 30 días, y más tiempo solo cuando la ley lo exija o para proteger frente a daños, sin máximo publicado; para los permisos anteriores, Microsoft, el contenido marcado por la supervisión de abusos. Los proveedores eliminan estas copias
   conforme a sus propias reglas, sin perjuicio de los requisitos y plazos de la ley
   aplicable; no tenemos acceso directo a ellas y no podemos
   verificar su eliminación. Mientras un pedido está activo, una solicitud de
   eliminación lo cancela.
 
 **Cómo pedimos a los destinatarios que eliminen.** Conservamos los identificadores
-de solicitud de los proveedores de IA de cada pedido (por ejemplo, los
-identificadores de generación de OpenRouter; sin texto y sin identificador de
+de solicitud de los proveedores de IA de cada pedido (para los pedidos con 2026-10-14.1, los identificadores `chatcmpl-…` de OpenAI; para los permisos anteriores, los identificadores de generación de OpenRouter; sin texto y sin identificador de
 suscripción) durante 30 días tras la entrega o el fin del pedido, y luego los
 eliminamos. Cuando usted nos pide eliminar sus datos, o sabemos que un pedido
 contiene datos de salud del consumidor, primero registramos —antes de eliminar el
 pedido— una solicitud de eliminación para cada destinatario que lo recibió: el
 destinatario, la vía, las fechas del pedido y los identificadores de solicitud que
-aún conservemos, sin contenido y sin su identificador de suscripción. La enviamos
-por correo electrónico a la dirección de privacidad de OpenRouter, pidiéndole que
-elimine lo que conserve, incluido cualquier resultado de su clasificación de temas
-que aún pueda vincularse a la solicitud, y que transmita la solicitud al proveedor
-de modelos de la vía (OpenAI, Microsoft, Amazon Web Services o un proveedor de
-alojamiento de GLM); también la enviamos directamente a ese proveedor de modelos por
+aún conservemos, sin contenido y sin su identificador de suscripción. Para un pedido con el permiso 2026-10-14.1 la enviamos directamente a OpenAI, nuestro encargado del tratamiento conforme a su anexo de tratamiento de datos, por su canal publicado de solicitudes de privacidad o de soporte, con los identificadores de solicitud y el intervalo de tiempo, pidiéndole que elimine lo que conserve. También solicitamos la eliminación a nuestro proveedor de alojamiento y pedimos a OpenAI que transmita la solicitud a los subencargados pertinentes. Para un pedido con un permiso anterior la enviamos por correo electrónico a la dirección de privacidad de OpenRouter, pidiéndole que elimine lo que conserve, incluido cualquier resultado de su clasificación de temas que aún pueda vincularse a la solicitud, y que transmita la solicitud al proveedor de modelos de la vía (Microsoft o un proveedor de alojamiento de GLM); también la enviamos directamente a ese proveedor de modelos por
 su canal publicado de solicitudes de privacidad, y a cualquier otro destinatario con
 el que tengamos contrato. Si un destinatario no acusa recibo de la solicitud en diez
 días, la enviamos de nuevo y lo registramos. Si los identificadores ya se han
@@ -831,14 +817,9 @@ y lo que generó para ese pedido.
    pantalla —título, texto, lista de proveedores de IA, enlace, botones, la línea
    bajo los botones y el pie en Ajustes— se reproduce en la sección 6.3.1.
 
-   Este permiso se aplica a futuros pedidos de libros hasta que se retire. Los
-   proveedores y los modelos pueden cambiar dentro de las condiciones de la sección
-   6.3.2 sin un nuevo permiso. Antes de un cambio así, actualizamos el registro de la
+   Este permiso se aplica a futuros pedidos de libros hasta que se retire. Los modelos pueden cambiar dentro de las condiciones del permiso que usted dio (para 2026-10-14.1, la sección 6.3.2; el destinatario, OpenAI, no cambia) sin un nuevo permiso. Antes de un cambio así, actualizamos el registro de la
    sección 6.3.3. Le notificamos en la App antes de cambiar sustancialmente el
-   tratamiento. Con la sola salvedad de la incertidumbre indicada sobre el operador
-   de la clasificación de temas de OpenRouter (sección 6.3.2(1)), antes de enviar
-   contenido a un destinatario no indicado en la
-   pantalla, o de ampliar los fines, el acceso humano, la conservación o cualquier
+   tratamiento. Antes de enviar contenido a un destinatario no indicado en la pantalla, o de ampliar los fines, el acceso humano, la conservación o cualquier
    geografía que limite un permiso, le explicamos el cambio y obtenemos de nuevo un permiso explícito.
    Actualizar esta Política no amplía por sí solo un permiso anterior, y los
    cambios en las condiciones de un proveedor no amplían automáticamente su permiso
@@ -887,10 +868,7 @@ persona haya enviado los datos de otra. Cuando sabemos que un pedido contiene
 tales datos, detenemos todo tratamiento posterior, eliminamos las copias que controlamos
 (salvo que la ley nos obligue a preservarlas), restituimos todas las horas del pedido si algún capítulo no se entregó
 conforme a la sección 4.2 de los Términos de uso y notificamos a cada
-destinatario de IA que pueda haberlos recibido que los elimine —OpenRouter, al que pedimos
-que transmita la solicitud al proveedor de modelos que procesó el pedido (como Microsoft
-o un proveedor de alojamiento de GLM), y a cualquier otro destinatario de la sección
-6.3.3 que los haya recibido—, indicando las fechas y los identificadores que aún conservamos. Lo hacemos también tras la entrega. Podemos rechazar
+destinatario de IA que pueda haberlos recibido que los elimine —para un pedido con 2026-10-14.1, OpenAI directamente; para un pedido con un permiso anterior, OpenRouter, al que pedimos que transmita la solicitud al proveedor de modelos que procesó el pedido (como Microsoft o un proveedor de alojamiento de GLM); y a cualquier otro destinatario de la sección 6.3.3 que los haya recibido—, indicando las fechas y los identificadores que aún conservamos (sección 6.4). Lo hacemos también tras la entrega. Podemos rechazar
 pedidos posteriores. Consulte la Política de privacidad de datos de salud del consumidor.
 
 ### 6.7 Verificación de territorio y de sanciones
@@ -970,11 +948,7 @@ de solicitudes rechazadas por motivo, sin identificadores, durante 30 días.
   alternativo adecuado.
 - **Qué abarca la eliminación.** Eliminamos cualquier contenido de pedido restante, recibos,
   registros de permisos, denuncias vinculadas a usted y otros registros susceptibles de
-  eliminación, y notificamos a cada destinatario que recibió los datos (encargados del tratamiento,
-  contratistas y otros terceros: OpenRouter, al que pedimos que transmita la solicitud al
-  proveedor de modelos que procesó el pedido, como OpenAI, Microsoft, Amazon Web Services o un
-  proveedor de alojamiento de GLM, y cualquier otro destinatario de la sección 6.3.3 que los haya
-  recibido) que los eliminen, también tras la entrega, indicando las fechas y los
+  eliminación, y notificamos a cada destinatario que recibió los datos (encargados del tratamiento, contratistas y otros terceros: para los pedidos con 2026-10-14.1, OpenAI directamente; para los pedidos con permisos anteriores, OpenRouter, al que pedimos que transmita la solicitud al proveedor de modelos que procesó el pedido, como Microsoft o un proveedor de alojamiento de GLM; y cualquier otro destinatario de la sección 6.3.3 que los haya recibido) que los eliminen, también tras la entrega, indicando las fechas y los
   identificadores de solicitud que aún conservamos (se conservan 30 días tras la
   entrega; sección 6.4). No tenemos acceso directo a las copias que
   conservan los proveedores (sección 6.3.3), no podemos verificar su eliminación y
@@ -1178,7 +1152,7 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 | Fecha de inicio de la prueba | Llavero y almacén de clave-valor de iCloud | Persistente por diseño |
 | Contenido del pedido (idea o texto de narración, capítulos, título, audio) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que la App confirme que ha guardado todos los capítulos; si no, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
 | Identificadores de solicitud del proveedor de IA (sin texto) | Modal (EE. UU.) | 30 días tras la entrega o el fin del pedido. Una solicitud de eliminación a los destinatarios permanece abierta hasta que se envía; los identificadores que contiene se eliminan a los 30 días; el registro del envío (sin identificadores ni contenido) se conserva dos años |
-| Copias que conservan los proveedores de servicios | Modal; OpenRouter; el proveedor de IA que procesó el pedido | Modal hasta 7 días; OpenRouter: metadatos de las solicitudes sin contenido de nuestra cuenta (solo podemos vincularlos directamente a un pedido mientras conservamos los identificadores de solicitud), sin plazo fijo publicado; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7); proveedores de IA: según el registro de 6.3.3 (OpenAI: hasta 30 días, más tiempo si la ley lo exige o para proteger frente a daños; Microsoft y Amazon Web Services: contenido marcado por la supervisión de abusos, conservado para revisión: AWS hasta 30 días, Microsoft durante un plazo que no publica; proveedores de alojamiento de GLM para permisos anteriores: puntos de acceso con conservación cero de datos); los proveedores eliminan conforme a sus propias reglas, sin perjuicio de la ley aplicable |
+| Copias que conservan los proveedores de servicios | Modal; OpenAI (directamente, permiso 2026-10-14.1); para permisos anteriores, OpenRouter y el proveedor de IA que procesó el pedido | Modal hasta 7 días; OpenAI (directamente): entradas y salidas hasta 30 días, más tiempo solo cuando la ley lo exija o sea razonablemente necesario para proteger frente a daños, sin máximo publicado; sin estado de aplicación (`store: false`); caché de solicitudes desactivada; OpenRouter (solo permisos anteriores): metadatos de las solicitudes sin contenido de nuestra cuenta (solo podemos vincularlos directamente a un pedido mientras conservamos los identificadores de solicitud), sin plazo fijo publicado; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7); proveedores de modelos a los que dirige OpenRouter (permisos anteriores): según el registro de 6.3.3 (Microsoft: contenido marcado por la supervisión de abusos, conservado para revisión durante un plazo que no publica; proveedores de alojamiento de GLM: puntos de acceso con conservación cero de datos); los proveedores eliminan conforme a sus propias reglas, sin perjuicio de la ley aplicable |
 | Su libro entregado | Su dispositivo y su iCloud privado | Hasta que usted lo elimine |
 | Recibos, registros de permisos, saldo de horas, avisos de suscripción | Modal (EE. UU.) | 7 años después del último hecho financiero relacionado |
 | Registros de funcionamiento del servicio (sin contenido) | Modal (EE. UU.) | Transferencias de audio: hasta que termina el pedido; cierre del pedido y decisión sobre las horas: mientras se conserve el recibo del pedido, más aproximadamente 1 día; hora de recepción de permisos: hasta que sus datos se eliminen a petición suya; contadores de límites diarios: unos dos o tres días, más la espera hasta la limpieza programada; identificadores de notificaciones de App Store: 8 días; vínculos de compras de horas adicionales: mientras se conserve el saldo de horas |
@@ -1219,9 +1193,7 @@ conservamos un registro versionado de cada información sobre proveedores de IA 
 los usuarios dieron su conformidad. Antes de cambiar un proveedor o un modelo dentro de
 las condiciones de un permiso, actualizamos el registro de la sección 6.3.3. Le
 notificamos en la App antes de cambiar sustancialmente cómo se tratan los datos del
-Servicio. Con la sola salvedad de la incertidumbre indicada sobre el operador de la
-clasificación de temas de OpenRouter (sección 6.3.2(1)), antes de enviar contenido a
-un destinatario no indicado en su permiso, o de
+Servicio. Antes de enviar contenido a un destinatario no indicado en su permiso, o de
 ampliar su alcance (por ejemplo, nuevos datos, nuevos fines, una conservación o un
 acceso humano más amplios, entrenamiento o un país fuera de la geografía que limita
 un permiso), le explicamos el cambio y
@@ -1230,23 +1202,27 @@ amplía por sí solo un permiso anterior. Antes de habilitar una nueva vía de I
 cambiar sustancialmente su tratamiento, también actualizamos nuestra evaluación de
 protección de datos (Política de privacidad de datos de salud del consumidor, A9).
 
-**Cambio sustancial en esta edición (14 de octubre de 2026).** La versión del permiso 2026-10-14.1 sustituye el permiso basado en condiciones por una lista cerrada de proveedores (sección 6.3.3): sin entrenar modelos, sin venta y sin uso publicitario; conservación según los criterios de eliminación documentados de cada proveedor, sin un único máximo; procesamiento en varios países, pero sin elegir destinatarios ni rutas en China (incluidas Hong Kong y Macao) ni en otro país de preocupación según la ley de EE. UU. Con ella, los libros los escribe el modelo GPT-6.1 Sol a través de OpenRouter —ejecutado por OpenAI o, como alternativas, en Microsoft Azure o Amazon Bedrock en Estados Unidos— o el modelo GPT-6 Luna en Microsoft Azure. No elegimos destinatarios ni rutas en países de preocupación según 28 CFR 202.601; para saber dónde se realiza el tratamiento nos basamos en los documentos publicados de los proveedores. Estas condiciones se aplican solo a los pedidos hechos con ese permiso; los permisos anteriores conservan sus vías (sección 6.3.5). Las versiones actualizadas de la App obtienen el permiso 2026-10-14.1 antes del próximo pedido de libro y exigen la aceptación de la versión 2026-10-14.1 de los Términos.
+**Cambio sustancial en esta edición (14 de octubre de 2026).** Con la versión del permiso 2026-10-14.1, OpenAI (OpenAI OpCo, LLC) es el único proveedor externo de modelos de IA que usamos directamente, a través de la API de OpenAI con nuestro propio contrato y el anexo de tratamiento de datos de OpenAI; no enviamos estos pedidos a través de OpenRouter ni de otra pasarela de IA; OpenAI puede tratar el contenido a través de sus filiales y subencargados publicados conforme a su DPA, y nuestro proveedor de alojamiento Modal también trata el contenido del pedido (secciones 6.3.2 y 6.3.3): sin entrenar modelos, sin venta y sin uso publicitario; OpenAI puede conservar las solicitudes hasta 30 días, y más tiempo solo cuando la ley lo exija o para proteger frente a daños, sin un único máximo; procesamiento en varios países, pero sin elegir destinatarios ni rutas en China (incluidas Hong Kong y Macao) ni en otro país de preocupación según la ley de EE. UU. Con ella, los libros los escribe el modelo GPT-6.1 Sol en la API de OpenAI. La clasificación anónima de temas de OpenRouter no se aplica a los pedidos con este permiso. Para saber dónde se realiza el tratamiento nos basamos en los documentos publicados de OpenAI. Estas condiciones se aplican solo a los pedidos hechos con ese permiso; los permisos anteriores conservan sus vías a través de OpenRouter (sección 6.3.5). Las versiones actualizadas de la App obtienen el permiso 2026-10-14.1 antes del próximo pedido de libro y exigen la aceptación de la versión 2026-10-14.1 de los Términos.
 
 **Versiones del permiso en versiones de prueba de la App y edición publicada anterior.** El permiso 2026-10-13.1 solo se mostró en versiones de prueba (TestFlight) de la App los días 13 y 14 de octubre de 2026; sus condiciones, reproducidas en la sección 6.3.5, se aplican solo a los pedidos hechos con él. La edición publicada anterior de esta Política es del 9 de octubre de 2026. No describía la clasificación anónima de temas de OpenRouter; esta edición es la primera edición publicada que la comunica, para todas las versiones del permiso (sección 6.3.5). Esa comunicación no autoriza por sí sola la clasificación con un permiso anterior. Las versiones anteriores de la App pueden seguir haciendo pedidos por sus vías existentes. Usted puede retirar el permiso del proveedor de IA en Ajustes en cualquier momento, lo que detiene nuevas llamadas de IA y restituye las horas de los pedidos sin terminar conforme a la sección 4.2 de los Términos.
 
 **Registro de cambios.**
 
 - **14 de octubre de 2026** (versión del permiso y de los Términos 2026-10-14.1):
-  lista cerrada de proveedores de IA por entidad jurídica; exclusión de los países
-  de preocupación; conservación según criterios de eliminación documentados;
-  OpenAI añadido como destinatario de la vía GPT-6.1 Sol; huella del texto del
-  permiso aceptado; «18+» retirado de la pantalla del permiso (la edad se confirma
-  en la pantalla «Antes de crear»); el permiso del 13 de octubre pasa a la sección
-  6.3.5; primera comunicación publicada de la clasificación anónima de temas de
-  OpenRouter, para todas las versiones del permiso; identificadores de solicitud
-  conservados 30 días y procedimiento de solicitudes de eliminación a los
-  destinatarios (sección 6.4); filtro de narración para las versiones que usan el
-  permiso 2026-10-14.1.
+  un único proveedor externo de modelos de IA usado directamente para los pedidos
+  nuevos —OpenAI, a través de la API de OpenAI con nuestro contrato y anexo de
+  tratamiento de datos con OpenAI (OpenAI puede usar sus filiales y subencargados
+  publicados), sin OpenRouter (la clasificación de temas de OpenRouter no se aplica
+  a estos pedidos)—; exclusión de los países de preocupación; conservación de
+  OpenAI (hasta 30 días, más tiempo solo cuando la ley lo exija o para proteger
+  frente a daños), `store: false` y caché de solicitudes desactivada; huella del
+  texto del permiso aceptado; «18+» retirado de la pantalla del permiso (la edad se
+  confirma en la pantalla «Antes de crear»); el permiso del 13 de octubre pasa a la
+  sección 6.3.5; primera comunicación publicada de la clasificación anónima de
+  temas de OpenRouter, para todas las versiones del permiso; identificadores de
+  solicitud conservados 30 días y procedimiento de solicitudes de eliminación a los
+  destinatarios, enviadas para estos pedidos directamente a OpenAI (sección 6.4);
+  filtro de narración para las versiones que usan el permiso 2026-10-14.1.
 - **13 de octubre de 2026** (versión del permiso y de los Términos 2026-10-13.1,
   solo versiones de prueba de la App; este borrador no se publicó):
   permiso del proveedor de IA basado en condiciones, con una lista fija de
