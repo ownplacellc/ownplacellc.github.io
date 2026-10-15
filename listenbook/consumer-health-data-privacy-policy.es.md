@@ -66,10 +66,44 @@ pedido y todo tratamiento posterior, eliminamos las copias que controlamos (salv
 ley nos obligue a preservarlas), restituimos todas las horas del pedido si algún capítulo no se entregó
 conforme a la sección 4.2 de los Términos de uso y notificamos a cada destinatario de
 IA que pueda haberlos recibido que los elimine —OpenRouter, al que pedimos que transmita la
-solicitud al proveedor de modelos que procesó el pedido (como Microsoft o un proveedor
-de alojamiento de GLM), y a cualquier otro proveedor de IA de la sección 6.3.3 de la
-Política de privacidad que los haya recibido—, indicando
-las fechas y los identificadores que aún conservamos. Lo hacemos también tras la entrega.
+solicitud al proveedor de modelos que procesó el pedido (como OpenAI, Microsoft,
+Amazon Web Services o un proveedor de alojamiento de GLM), y a cualquier otro
+proveedor de IA de la sección 6.3.3 de la Política de privacidad que los haya
+recibido—, indicando las fechas y los identificadores de solicitud que aún
+conservamos (se conservan 30 días tras la entrega; Política de privacidad, sección
+6.4). Lo hacemos también tras la entrega.
+
+**Con qué fundamento y cómo lo limitamos.** No solicitamos consentimiento para los
+datos de salud del consumidor y no tratamos ninguna pulsación como consentimiento
+(A5). Nuestro tratamiento se basa en los siguientes fundamentos, cada uno limitado
+a lo necesario:
+
+- **Detectarlos y rechazarlos.** Nuestro servidor lee una idea de libro —y, en las
+  versiones de la App que usan el permiso del proveedor de IA 2026-10-14.1, un texto
+  enviado para narración— solo para decidir si lo rechaza. Un texto rechazado no se
+  almacena, no se envía a ningún proveedor de IA y no se narra; solo se registra la
+  categoría del rechazo. Consideramos este análisis como un tratamiento para prevenir,
+  detectar y responder a la recopilación y la comunicación ilícitas de datos de salud
+  del consumidor y para preservar la integridad de nuestros sistemas (RCW
+  19.373.100(3)); nos corresponde demostrar que cumple los requisitos (RCW
+  19.373.100(4)).
+- **Un servicio que el consumidor solicitó.** Cuando los datos de salud del consumidor
+  de la persona que hizo el pedido superan nuestras comprobaciones, se tratan solo en la
+  medida necesaria para escribir, moderar, narrar y entregar el libro que esa persona
+  solicitó (RCW 19.373.030(1)(a)(ii) y (1)(b)(ii)). Este fundamento nunca abarca datos
+  de otra persona, y no abarca la clasificación anónima de temas de OpenRouter para
+  informes y clasificación de modelos, que no es necesaria para escribir el libro; no
+  nos basamos en ningún fundamento para esa clasificación de datos de salud del
+  consumidor, y informar de ella no hace que ese tratamiento esté autorizado.
+- **Datos de otra persona, o cualquier cosa más allá de la solicitud.** No tenemos
+  ningún fundamento para tratarlos. Cuando lo sabemos, detenemos el pedido y todo
+  tratamiento posterior de inmediato, eliminamos las copias que controlamos y pedimos
+  a los destinatarios que eliminen las suyas como se describe arriba; el tratamiento
+  que ya se haya producido se rige por la ley aplicable, y esta política no lo
+  considera autorizado.
+- **Denuncias, solicitudes y obligaciones legales.** Tratamos lo que contiene una
+  denuncia, un mensaje de soporte o una solicitud de derechos para responderla, y lo
+  que la ley nos exige conservar.
 
 Aparte de ese tratamiento residual y no intencionado, usamos los datos de salud del consumidor
 solo:
@@ -100,7 +134,7 @@ OpenRouter enruta (incluidas OpenAI, Microsoft y Amazon Web Services) ni ningún
 protección es la prevención (A5) y la eliminación al descubrirlo (A3).
 
 Los libros los escriben proveedores de IA en las condiciones de la versión del permiso con la
-que se hizo el pedido (Política de privacidad, sección 6.3). El permiso vigente (versión 2026-10-14.1) usa únicamente proveedores de una lista cerrada: OpenRouter; Amazon Web Services (Amazon Bedrock); Microsoft (Azure, Foundry); Google (Vertex AI, Gemini API); OpenAI; Anthropic; Mistral AI; xAI; y los alojadores independientes de modelos Sail Research, Together AI, Fireworks AI, DeepInfra y Baseten. **Hoy, los libros con el permiso 2026-10-14.1 los escribe el modelo GPT-6.1 Sol (desarrollado por OpenAI), al que se accede a través de OpenRouter y que ejecuta OpenAI; cuando esa vía no está disponible o está desactivada, el mismo modelo en Microsoft Azure (punto de acceso en Estados Unidos) o en Amazon Bedrock (punto de acceso en Estados Unidos que usa OpenRouter), o el modelo GPT-6 Luna en Microsoft Azure; cada pedido conserva la vía asignada cuando se aceptó.** El tratamiento y el acceso del personal o de los contratistas autorizados de los proveedores pueden darse en varios países; no elegimos destinatarios ni rutas situados en China (incluidas Hong Kong y Macao), Cuba, Irán, Corea del Norte, Rusia o Venezuela —los países de preocupación según el Programa de Seguridad de Datos del Departamento de Justicia de EE. UU. (28 CFR 202.601, a octubre de 2026)—; la información publicada que revisamos para las rutas seleccionadas no cita ninguno de estos países, pero los proveedores no divulgan una lista completa de lugares de tratamiento (Política de privacidad, sección 6.3.2). Los pedidos hechos con el permiso 2026-10-13.1 los escribe GPT-6.1 Sol o GPT-6 Luna en Microsoft Azure; los pedidos hechos con los permisos anteriores 2026-10-08 y 2026-10-10.2 van solo por las vías que nombraban esos permisos; hoy es el modelo GLM-5.3,
+que se hizo el pedido (Política de privacidad, sección 6.3). El permiso vigente (versión 2026-10-14.1) usa únicamente proveedores de una lista cerrada, con la sola salvedad de la incertidumbre indicada sobre el operador de la clasificación de temas de OpenRouter (Política de privacidad, sección 6.3.2(1)): OpenRouter; Amazon Web Services (Amazon Bedrock); Microsoft (Azure, Foundry); Google (Vertex AI, Gemini API); OpenAI; Anthropic; Mistral AI; xAI; y los alojadores independientes de modelos Sail Research, Together AI, Fireworks AI, DeepInfra y Baseten. **Hoy, los libros con el permiso 2026-10-14.1 los escribe el modelo GPT-6.1 Sol (desarrollado por OpenAI), al que se accede a través de OpenRouter y que ejecuta OpenAI; cuando esa vía no está disponible o está desactivada, el mismo modelo en Microsoft Azure (punto de acceso en Estados Unidos) o en Amazon Bedrock (punto de acceso en Estados Unidos que usa OpenRouter), o el modelo GPT-6 Luna en Microsoft Azure; cada pedido conserva la vía asignada cuando se aceptó.** El tratamiento y el acceso del personal o de los contratistas autorizados de los proveedores pueden darse en varios países; no elegimos destinatarios ni rutas situados en China (incluidas Hong Kong y Macao), Cuba, Irán, Corea del Norte, Rusia o Venezuela —los países de preocupación según el Programa de Seguridad de Datos del Departamento de Justicia de EE. UU. (28 CFR 202.601, a octubre de 2026)—; la información publicada que revisamos para las rutas seleccionadas no cita ninguno de estos países, pero los proveedores no divulgan una lista completa de lugares de tratamiento (Política de privacidad, sección 6.3.2). Los pedidos hechos con el permiso 2026-10-13.1 los escribe GPT-6.1 Sol o GPT-6 Luna en Microsoft Azure; los pedidos hechos con los permisos anteriores 2026-10-08 y 2026-10-10.2 van solo por las vías que nombraban esos permisos; hoy es el modelo GLM-5.3,
 desarrollado por Z.ai, utilizado a través de OpenRouter y limitado a proveedores de
 alojamiento que OpenRouter indica con sede en Estados Unidos y como de conservación cero de
 datos (Política de privacidad, sección 6.3.5). Cada pedido conserva la vía asignada al
@@ -128,10 +162,11 @@ permiso 2026-10-14.1; Z.ai, el desarrollador de GLM, no recibe pedidos.
 **Límites contractuales.** Nuestro anexo de procesamiento de datos con OpenRouter es el
 estándar, que excluye los datos sensibles; OpenAI, Microsoft, Amazon Web Services (en la vía a través de
 OpenRouter) y los proveedores de alojamiento de GLM tratan las solicitudes como proveedores de
-OpenRouter, y no tenemos un contrato propio con ellos. Amazon Web Services trata el contenido
-conforme a su Anexo de Procesamiento de Datos de AWS estándar, incorporado a los
-Términos de servicio de AWS; no nos basamos en él para autorizar el tratamiento de datos
-sensibles. Por eso prohibimos enviar datos de salud y otros datos sensibles y los
+OpenRouter, y no tenemos un contrato propio con ellos. Nuestro propio Anexo de Procesamiento de
+Datos de AWS (incorporado a los Términos de servicio de AWS) se aplica solo a la vía
+directa de Amazon Bedrock, que hoy no está habilitada, y no a Amazon Web Services en
+la vía a través de OpenRouter; no nos basamos en él para autorizar el tratamiento de
+datos sensibles. Por eso prohibimos enviar datos de salud y otros datos sensibles y los
 filtramos antes de que nada llegue a un proveedor de IA (A5). No afirmamos tener protección contractual para datos sensibles
 que no tenemos.
 
@@ -162,14 +197,18 @@ ejemplo, una orden judicial válida).
 - **Confirmaciones.** Antes de cada pedido de libro: el interruptor *«Mi idea no contiene
   datos personales de personas reales»*, que cubre el texto exacto. Para un libro creado a partir de su idea, la App reutiliza la confirmación dada al realizar ese pedido para narrar el libro resultante; no le pide que confirme de nuevo. Para otro libro que no tenga esa confirmación, antes de su primera narración con la voz de Talefall usted confirma: «Este texto no contiene datos de una persona real». Con la voz de Apple en el dispositivo, el texto nunca sale de su dispositivo.
 - **Filtro de entrada en nuestro servidor para ideas de libro** (antes de enviar nada a un
-  proveedor de IA; en inglés, ruso y español): rechaza una idea que contenga,
+  proveedor de IA; en inglés, ruso y español; para las versiones de la App que usan el
+  permiso 2026-10-14.1, también para los textos enviados para narración): rechaza una idea que contenga,
   entre otros patrones, declaraciones sobre la salud, la orientación sexual, la identidad de género o los antecedentes penales del solicitante o de una persona cercana identificada, así como
   datos de contacto y números de identificación. Una solicitud rechazada no
   se envía, no usa horas y la App pide una reescritura. Nuestro registro anota
-  solo la categoría del rechazo, no el texto. El texto enviado para narración con
-  la voz de Talefall se comprueba con el mismo filtro antes de narrarse; un texto
-  rechazado no se narra y no usa horas. Se le aplican la confirmación por libro y la regla,
-  y va únicamente a nuestro propio modelo narrador.
+  solo la categoría del rechazo, no el texto. Para las versiones de la App que usan el
+  permiso 2026-10-14.1, el texto enviado para narración con la voz de Talefall se
+  comprueba con el mismo filtro antes de narrarse; un texto rechazado no se narra y
+  no usa horas. Las versiones anteriores de la App no cambian: para ellas, el texto
+  enviado para narración no se analiza. En todas las versiones se aplican la
+  confirmación por libro y la regla, y el texto va únicamente a nuestro propio modelo
+  narrador.
 - **Moderación de salida.** Cada capítulo generado es revisado por nuestro propio
   modelo de moderación en Modal en busca de datos personales sobre personas reales y otro contenido
   prohibido antes de la narración y la entrega; un capítulo que no pasa no se
@@ -190,11 +229,12 @@ ejemplo, una orden judicial válida).
 |---|---|
 | Contenido del pedido (idea o texto de narración, capítulos generados, audio) | Almacenamiento de trabajo temporal cifrado en Modal, eliminado en cuanto la App confirma que ha guardado todos los capítulos; si la App no ha confirmado que ha guardado todos los capítulos, el pedido caduca 7 días después de ser aceptado y se elimina en la siguiente limpieza programada, normalmente en 15 minutos (una limpieza fallida se reintenta). Se elimina antes cuando sabemos que contiene datos de salud del consumidor |
 | Una solicitud rechazada | No se almacena; solo se registra la categoría del rechazo |
+| Identificadores de solicitud del proveedor de IA (sin texto) | 30 días tras la entrega o el fin del pedido; luego se eliminan. Una solicitud de eliminación a los destinatarios permanece abierta hasta que se envía; los identificadores que contiene se eliminan a los 30 días; el registro del envío (sin identificadores ni contenido) se conserva dos años |
 | Recibo del pedido | Se conserva 7 años después del último hecho financiero relacionado; contiene una huella SHA-256 del texto de la idea, nunca el texto |
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Correo electrónico | Hasta 24 meses después del último mensaje; se elimina antes si se solicita |
-| Copias que conservan los proveedores de servicios | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; OpenRouter conserva metadatos de las solicitudes sin contenido; el proveedor de IA que procesó un pedido puede conservar contenido solo como indica el registro de la Política de privacidad (sección 6.3.3): en el de OpenAI, hasta 30 días (más tiempo si la ley lo exige o para proteger frente a daños); en el de Microsoft y Amazon Web Services, el contenido marcado por su supervisión de abusos, conservado para revisión (AWS hasta 30 días; Microsoft durante un plazo que no publica); los proveedores eliminan estas copias conforme a sus propias reglas, y no tenemos acceso directo a ellas ni podemos verificar su eliminación; en el de los proveedores de alojamiento de GLM usados para permisos anteriores, puntos de acceso con conservación cero de datos; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
+| Copias que conservan los proveedores de servicios | Modal puede conservar las entradas y salidas de las funciones hasta 7 días; OpenRouter conserva metadatos de las solicitudes sin contenido (no se publica un plazo fijo; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7)); el proveedor de IA que procesó un pedido puede conservar contenido solo como indica el registro de la Política de privacidad (sección 6.3.3): en el de OpenAI, hasta 30 días (más tiempo si la ley lo exige o para proteger frente a daños); en el de Microsoft y Amazon Web Services, el contenido marcado por su supervisión de abusos, conservado para revisión (AWS hasta 30 días; Microsoft durante un plazo que no publica); los proveedores eliminan estas copias conforme a sus propias reglas, sin perjuicio de la ley aplicable, y no tenemos acceso directo a ellas ni podemos verificar su eliminación; en el de los proveedores de alojamiento de GLM usados para permisos anteriores, puntos de acceso con conservación cero de datos; las copias de seguridad que mantenga un encargado del tratamiento se eliminan a más tardar 6 meses después de una solicitud autenticada de Washington |
 
 Conservamos datos de salud del consumidor más allá de un plazo de eliminación aplicable solo
 cuando lo exija una obligación legal específica o una excepción legal.
@@ -211,10 +251,13 @@ Dondequiera que viva, usted puede:
   IA de la lista si los recibió—
   con sus datos de contacto (A4). No tenemos entidades afiliadas;
 - **Eliminar** sus datos de salud del consumidor. Notificamos a cada destinatario que
-  los recibió —encargados del tratamiento, contratistas y otros terceros— que los elimine,
-  usando los identificadores que aún conservamos; los proveedores eliminan conforme a sus
-  propias reglas y, una vez eliminada nuestra copia de trabajo, puede que no conservemos ningún
-  identificador que les permita localizar una copia residual (Política de privacidad, sección 6.4);
+  los recibió —encargados del tratamiento, contratistas y otros terceros— que los elimine.
+  Registramos la solicitud antes de eliminar el pedido, la mantenemos abierta hasta que se
+  envía y la enviamos con los identificadores de solicitud que conservamos 30 días tras la
+  entrega o, después, con nuestra cuenta, la vía y las fechas. Los destinatarios eliminan
+  conforme a la ley aplicable (RCW 19.373.040(1)(c)) y, por lo demás, conforme a sus
+  propias reglas; no recibimos prueba de la eliminación (Política de privacidad,
+  sección 6.4);
 - **Retirar** el permiso del proveedor de IA en Ajustes, lo que detiene las transferencias
   posteriores a los proveedores de IA, incluso para pedidos en curso, y los nuevos pedidos
   de libros, y **pedirnos que dejemos de recopilar** sus datos de salud del consumidor, lo que
