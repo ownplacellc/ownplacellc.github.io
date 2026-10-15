@@ -686,8 +686,7 @@ by providers' staff is described in the registry above.
   working copy (Section 6.4); until then the metadata could be matched to the
   order, and after that we can no longer match it to you. OpenRouter publishes
   no retention period for this metadata and uses it for reporting, billing,
-  security and legal compliance; we have asked OpenRouter for its retention
-  period and will state it here once received. The AI provider that
+  security and legal compliance. The AI provider that
   processed an order may keep content only as stated for it in the registry
   in Section 6.3.3 — for example, OpenAI up to 30 days, Microsoft and Amazon
   Web Services content flagged by abuse monitoring. Providers delete these
