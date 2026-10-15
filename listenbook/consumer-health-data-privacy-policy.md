@@ -66,10 +66,37 @@ law requires us to preserve them), restore all hours for the order if any chapte
 Section 4.2 of the Terms of Use, and notify every AI
 recipient that may have received it to delete it — OpenRouter, which we ask
 to pass the request on to the model provider that processed the order (such
-as Microsoft or a GLM hosting provider), and any other AI provider listed in
-the Privacy Policy, Section 6.3.3, that received it — giving the dates and any
-identifiers we still hold. We
-do this also after delivery.
+as OpenAI, Microsoft, Amazon Web Services or a GLM hosting provider), and any
+other AI provider listed in the Privacy Policy, Section 6.3.3, that received
+it — giving the dates and the request identifiers we still hold (kept 30 days
+after delivery; Privacy Policy, Section 6.4). We do this also after delivery.
+
+**On what basis, and how we limit it.** We do not seek consent for consumer
+health data and do not treat any tap as consent (A5). Our handling rests on
+these grounds, each limited to what is necessary:
+
+- **Detecting and refusing it.** Our server reads a book idea — and, for
+  versions of the App using AI-provider permission 2026-10-14.1, a text sent
+  for narration — only to decide whether to refuse it. A refused text is not
+  stored, not sent to any AI provider and not narrated; only the refusal
+  category is logged. We treat this screening as processing to prevent,
+  detect and respond to the unlawful collection and sharing of consumer health
+  data and to preserve the integrity of our systems (RCW 19.373.100(3)); we
+  bear the burden of showing that it qualifies (RCW 19.373.100(4)).
+- **A service the consumer requested.** Where consumer health data of the
+  person who placed the order passes our checks, it is processed only as
+  necessary to write, moderate, narrate and deliver the book that person
+  requested (RCW 19.373.030(1)(a)(ii) and (1)(b)(ii)). This ground never
+  covers data about someone else.
+- **Data about someone else, or anything beyond the request.** We have no
+  basis to process it. When we learn of it, we stop the order and any further
+  processing at once, delete the copies we control, and ask the recipients to
+  delete theirs as described above; any processing that already happened is
+  handled under applicable law, and this policy does not treat it as
+  authorized.
+- **Reports, requests and legal duties.** We process what a report, support
+  message or rights request contains to answer it, and what the law requires
+  us to preserve.
 
 Apart from that residual, unintended processing, we use consumer health data
 only:
@@ -180,15 +207,19 @@ example, a valid court order).
 - **Confirmations.** Before every book order: the switch *"My idea contains no
   personal data about real people"*, which covers the exact text. For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." With the on-device Apple voice, the text never leaves your device.
 - **Input filter on our server for book ideas** (before anything is sent to an
-  AI provider; English, Russian, and Spanish): it refuses an idea containing,
+  AI provider; English, Russian, and Spanish; for versions of the App using
+  permission 2026-10-14.1, also for texts sent for narration): it refuses an idea containing,
   among other patterns, statements about the requester's own or a named close
   person's health, sexual orientation, gender identity, or criminal record, as
   well as contact details and identification numbers. A refused request is
   not sent on, uses no hours, and the App asks for a rewrite. Our log records
-  only the category of the refusal, not the text. Text sent for narration in
-  the Talefall voice is checked by the same filter before it is narrated; a
-  refused text is not narrated and uses no hours. The per-book confirmation
-  and the rule apply to it, and it goes only to our own narrator model.
+  only the category of the refusal, not the text. For versions of the App
+  using permission 2026-10-14.1, text sent for narration in the Talefall voice
+  is checked by the same filter before it is narrated; a refused text is not
+  narrated and uses no hours. Earlier versions of the App are not changed:
+  for them, text sent for narration is not scanned. In every version the
+  per-book confirmation and the rule apply, and the text goes only to our own
+  narrator model.
 - **Output moderation.** Each generated chapter is checked by our own
   moderation model at Modal for personal data about real people and other
   prohibited content before narration and delivery; a failing chapter is not
@@ -209,6 +240,7 @@ example, a valid court order).
 |---|---|
 | Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if the App has not confirmed saving every chapter, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
 | A refused request | Not stored; only the refusal category is logged |
+| AI-provider request identifiers (no text) | 30 days after the order's delivery or end; then deleted. A queued deletion request to recipients: until sent, at most 30 days |
 | Order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
@@ -231,9 +263,9 @@ Wherever you live, you may:
   with their contact details (A4). We have no affiliates;
 - **Delete** your consumer health data. We notify every recipient that
   received it — processors, contractors, and other third parties — to delete
-  it, using the identifiers we still hold; providers delete under their own
-  rules, and once our working copy is deleted we may hold no identifier that
-  lets them locate a residual copy (Privacy Policy, Section 6.4);
+  it, using the request identifiers we keep for 30 days after delivery and the
+  dates we hold; providers delete under their own rules, and we do not receive
+  proof of deletion (Privacy Policy, Section 6.4);
 - **Withdraw** the AI-provider permission in Settings, which stops further
   transfers to AI providers, including for orders in progress, and new book
   orders, and **ask us to stop collecting** your consumer health data, which

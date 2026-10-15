@@ -74,7 +74,7 @@ live.
   Narration runs on our own narrator model on Modal, and every chapter is
   checked by our own moderation model on Modal; neither sends the text to
   another company.
-- **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas and texts for narration in which it
+- **The rule: no personal data about real people, including you.** You confirm this before every book order. For narration of the resulting book, the App reuses that confirmation; for another book without it, the App asks for a separate confirmation before its first narration in the Talefall voice. Our server refuses book ideas (and, in versions using permission 2026-10-14.1, texts for narration) in which it
   detects personal or sensitive data (Section 6.5). We do not routinely read
   requests or books; limited human access is described in Section 6.3.
 - **Our server deletes its working copy of a book when the App confirms that
@@ -583,7 +583,9 @@ stopped and its hours are restored (Terms of Use, Section 4.2).
 This permission is not consent to process consumer health data or other
 sensitive personal data (Section 6.6).
 
-**OpenRouter's anonymous topic classification.** The anonymous topic
+**OpenRouter's anonymous topic classification.** From the publication of this
+edition we disclose this classification for every permission version. The
+anonymous topic
 classification described in the OpenRouter row of the registry is part of how
 OpenRouter operates its routing service and applies to requests through
 OpenRouter, including requests under these earlier permissions; their screens
@@ -634,8 +636,10 @@ by providers' staff is described in the registry above.
 ### 6.4 Retention and deletion of our working copy
 
 - **Working content** (idea or narration text, generated chapters, title,
-  audio, AI-provider request identifiers) is held only while the order is
-  produced and delivered.
+  audio) is held only while the order is produced and delivered.
+- **AI-provider request identifiers** (no text) are kept for 30 days after
+  the order's delivery or end, so that a deletion request can be passed on to
+  the recipients, and then deleted.
 - **Deletion after the App saves the book.** We delete our server copy of the
   text and audio immediately after the App confirms that it has saved every
   chapter on your device. We cannot restore or re-deliver the book after that.
@@ -682,20 +686,31 @@ by providers' staff is described in the registry above.
   seven days under its infrastructure retention policy. OpenRouter keeps
   request metadata without content (for example, model, token counts, cost and
   latency) for our account. We add no identifier of you to AI requests. The
-  provider request identifiers we keep with an order are deleted with our
-  working copy (Section 6.4); until then the metadata could be matched to the
-  order, and after that we can no longer match it to you. OpenRouter publishes
-  no retention period for this metadata and uses it for reporting, billing,
-  security and legal compliance. The AI provider that
+  provider request identifiers we keep for 30 days (above) let us match that
+  metadata to an order; after they are deleted we can no longer match it to
+  you. OpenRouter publishes no retention period for this metadata and uses it
+  for reporting, billing, security and legal compliance. The AI provider that
   processed an order may keep content only as stated for it in the registry
   in Section 6.3.3 — for example, OpenAI up to 30 days, Microsoft and Amazon
   Web Services content flagged by abuse monitoring. Providers delete these
   copies under their own rules; we cannot access them directly and cannot
   verify their deletion. While an order is active, a deletion request cancels
-  it and we forward the request; after our working copy has been deleted we no
-  longer hold identifiers that would let a provider locate a residual copy, so
-  we forward requests with the dates we still hold and the providers apply
-  their own retention rules.
+  it.
+
+**How we ask recipients to delete.** We keep the request identifiers of
+AI providers for each order (for example, OpenRouter's generation
+identifiers; no text and no subscription identifier) for 30 days after the
+order's delivery or end, then delete them. When you ask us to delete your
+data, or we learn that an order contains consumer health data, we queue those
+identifiers with the recipient, route and dates of the order, and send a
+deletion request to OpenRouter — asking it to pass the request on to the model
+provider on the route (OpenAI, Microsoft, Amazon Web Services or a GLM hosting
+provider) — and directly to any other recipient we have a contract with. The
+queue holds no content and is deleted after the request is sent, or after 30
+days. After the identifiers have been deleted, we send the request with the
+dates we still hold. Providers carry out deletion under their own terms; we
+do not receive proof of deletion and cannot guarantee it.
+
 - For Washington consumer health data, backup copies held by a processor are
   deleted no later than six months after an authenticated request.
 
@@ -715,9 +730,11 @@ and what it generated for that order.
   payment-card numbers, IBANs, passwords and API keys, and statements about
   your own or a named close person's health, sexual orientation, gender
   identity, or criminal record. A match is refused, nothing is sent on, no
-  hours are used, and the App asks you to rewrite the request. Text you send
-  for narration in the Talefall voice is checked by the same filter before it
-  is narrated; your per-book confirmation and the rule also apply to it.
+  hours are used, and the App asks you to rewrite the request. In versions of
+  the App using permission 2026-10-14.1, text you send for narration in the
+  Talefall voice is checked by the same filter before it is narrated; in
+  earlier versions it is not scanned. In every version your per-book
+  confirmation and the rule apply to it.
 - **Input check for prohibited content** (book ideas, narration text, and
   passages): clear requests for sexual content involving minors, weapons of
   mass destruction, or encouragement of suicide are refused the same way.
@@ -908,7 +925,8 @@ of refused requests by reason, without identifiers, for 30 days.
   OpenAI, Microsoft, Amazon Web Services or a GLM hosting provider, and any
   other recipient listed in
   Section 6.3.3 that received it) to delete it, also after delivery, giving
-  the dates and any identifiers we still hold. We cannot access directly
+  the dates and the request identifiers we still hold (kept 30 days after
+  delivery; Section 6.4). We cannot access directly
   copies that providers keep (Section 6.3.3), cannot verify their deletion,
   and providers delete them under their own rules (Section 6.4).
   A deletion request does not automatically remove the hours ledger and
@@ -1041,7 +1059,8 @@ websites you open from it follow their own policies.
 |---|---|---|
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
-| Order content (idea or narration text, chapters, title, audio, AI-provider request identifiers) | Modal (USA), encrypted working storage | Until the App confirms saving every chapter; otherwise the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
+| Order content (idea or narration text, chapters, title, audio) | Modal (USA), encrypted working storage | Until the App confirms saving every chapter; otherwise the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
+| AI-provider request identifiers (no text) | Modal (USA) | 30 days after the order's delivery or end; a queued deletion request to recipients: until sent, at most 30 days |
 | Copies kept by service providers | Modal; OpenRouter; the AI provider that processed the order | Modal up to 7 days; OpenRouter: request metadata without content for our account (we can match it to an order only until our working copy is deleted), period not published; AI providers: as stated in the registry in 6.3.3 (OpenAI: up to 30 days, longer where the law requires or to protect against harm; Microsoft and Amazon Web Services: content flagged by abuse monitoring, kept for review — AWS up to 30 days, Microsoft for a period it does not publish; GLM hosting providers for earlier permissions: zero-data-retention endpoints); deleted by the providers under their own rules |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |

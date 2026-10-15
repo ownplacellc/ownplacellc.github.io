@@ -340,10 +340,11 @@ miss.
   such as email addresses, phone numbers, government or payment-card numbers,
   passwords, or a statement about your own or a named close person's health,
   sexuality, gender identity, or criminal record. A match is refused, uses no
-  hours, and the App asks you to rewrite the idea. Text you send for
-  narration in the Talefall voice is checked by the same filter before it is
-  narrated; your per-book confirmation (Section 5.2) and the rule in Section
-  5.3 also apply to it.
+  hours, and the App asks you to rewrite the idea. In versions of the App
+  using permission 2026-10-14.1, text you send for narration in the Talefall
+  voice is checked by the same filter before it is narrated; in every version
+  your per-book confirmation (Section 5.2) and the rule in Section 5.3 apply
+  to it.
 - **Prohibited-content check (ideas and narration text).** Before anything is
   sent to an AI provider or the narrator, our server refuses requests that
   clearly seek sexual content involving minors, instructions for weapons of
