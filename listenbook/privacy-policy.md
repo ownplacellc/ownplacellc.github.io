@@ -208,7 +208,8 @@ server recognize a repeated request as the same order.
 While an order is in progress: your idea (or, for narration, the text you
 supplied), book type, language and length, the generated title and chapters,
 the audio, technical state and times, the original transaction identifier,
-and the request identifiers returned by the AI provider. Content is held in
+and the request identifiers returned by the AI provider (kept 30 days after
+the order's delivery or end; Section 6.4). Content is held in
 Modal's storage as **temporary, encrypted working storage** and is kept out of
 our application logs.
 
@@ -405,7 +406,7 @@ statement that the practice does not exist.
 
 | Entity | Role | Service and use | Countries: processing / storage / human access | Retention and exceptions | Caching | Human access | Purposes beyond writing and safety or legal checks | Official terms and documentation | Verified |
 |---|---|---|---|---|---|---|---|---|---|
-| **OpenRouter, Inc.**, 169 Madison Avenue, New York, NY 10016, USA | Our processor under OpenRouter's data processing addendum (signed September 11, 2026) | Gateway that forwards book-writing requests to model providers. **Used under every permission version.** Requests on the routes to Microsoft Azure (GPT-6 Luna and GPT-6.1 Sol, permissions 2026-10-13.1 and 2026-10-14.1) and to Amazon Bedrock (GPT-6.1 Sol, 2026-10-14.1) go through OpenRouter's United States domain (`us.openrouter.ai`, In-Region Routing); requests on the route "Sol through OpenAI" (2026-10-14.1; OpenAI has no endpoint on the United States domain) and GLM requests (earlier permissions) go through its general address | On the United States domain, OpenRouter states that requests are decrypted and processed in that region, are routed only to endpoints in that region, and fail rather than fall back to an endpoint outside it. Requests through the general address: OpenRouter's privacy policy says data may be transferred to its servers in the US or to other countries outside the EEA and the UK, without naming them. Location of any human access: not published; it may be outside the United States | Prompts and responses are not stored (optional logging and OpenRouter's use of inputs and outputs are off; OpenRouter also skips its own logging on regional endpoints). OpenRouter keeps request metadata without content (for example, token counts and latency) for reporting, billing, security, abuse prevention and legal compliance; period not published. This is not model training | Not published | OpenRouter's DPA limits access to personal data to personnel performing the Service in accordance with the agreement. It does not expressly restrict access to abuse investigation, technical support and legal compliance alone. Reviewer countries are not published; access may occur outside the United States. | **Anonymous topic classification, as part of operating its routing service.** OpenRouter states that it classifies a small anonymous sample of prompts with a model under a zero-data-retention policy, keeps only the anonymous category for its reporting and model rankings, does not store the text and does not link it to any account, provided that OpenRouter's use of inputs and outputs is off, as it is for our account (license in OpenRouter's Terms, Section 6.5). OpenRouter publishes no exclusion for the United States domain or for zero-data-retention requests, so we treat it as applying to every request through OpenRouter, under every permission version. Permitted by 2026-10-14.1 (Section 6.3.2, item 3) and 2026-10-13.1 (Section 6.3.5); for earlier permissions see Section 6.3.5 | [Privacy policy](https://openrouter.ai/privacy) · [Terms](https://openrouter.ai/terms) · [Data processing addendum](https://openrouter.ai/data-processing-agreement) · [Data collection](https://openrouter.ai/docs/guides/privacy/data-collection) · [Zero data retention](https://openrouter.ai/docs/guides/features/zdr) · [Provider logging](https://openrouter.ai/docs/guides/privacy/provider-logging) · [In-Region Routing](https://openrouter.ai/docs/guides/features/in-region-routing) | 2026-10-13 |
+| **OpenRouter, Inc.**, 169 Madison Avenue, New York, NY 10016, USA | Our processor under OpenRouter's data processing addendum (signed September 11, 2026) | Gateway that forwards book-writing requests to model providers. **Used under every permission version.** Requests on the routes to Microsoft Azure (GPT-6 Luna and GPT-6.1 Sol, permissions 2026-10-13.1 and 2026-10-14.1) and to Amazon Bedrock (GPT-6.1 Sol, 2026-10-14.1) go through OpenRouter's United States domain (`us.openrouter.ai`, In-Region Routing); requests on the route "Sol through OpenAI" (2026-10-14.1; OpenAI has no endpoint on the United States domain) and GLM requests (earlier permissions) go through its general address | On the United States domain, OpenRouter states that requests are decrypted and processed in that region, are routed only to endpoints in that region, and fail rather than fall back to an endpoint outside it. Requests through the general address: OpenRouter's privacy policy says data may be transferred to its servers in the US or to other countries outside the EEA and the UK, without naming them. Location of any human access: not published; it may be outside the United States | Prompts and responses are not stored (optional logging and OpenRouter's use of inputs and outputs are off; OpenRouter also skips its own logging on regional endpoints). OpenRouter keeps request metadata without content (for example, token counts and latency) for reporting, billing, security, abuse prevention and legal compliance; no fixed period published; OpenRouter keeps personal information as long as reasonably necessary for its business purposes and its legal, regulatory and accounting obligations, and then deletes or de-identifies it (OpenRouter Privacy Policy, Section 7). This is not model training | Not published | OpenRouter's DPA limits access to personal data to personnel performing the Service in accordance with the agreement. It does not expressly restrict access to abuse investigation, technical support and legal compliance alone. Reviewer countries are not published; access may occur outside the United States. | **Anonymous topic classification, as part of operating its routing service.** OpenRouter states that it classifies a small anonymous sample of prompts with a model under a zero-data-retention policy, keeps only the anonymous category for its reporting and model rankings, does not store the text and does not link it to any account, provided that OpenRouter's use of inputs and outputs is off, as it is for our account (license in OpenRouter's Terms, Section 6.5). OpenRouter publishes no exclusion for the United States domain or for zero-data-retention requests, so we treat it as applying to every request through OpenRouter, under every permission version. Permitted by 2026-10-14.1 (Section 6.3.2, item 3) and 2026-10-13.1 (Section 6.3.5); for earlier permissions see Section 6.3.5 | [Privacy policy](https://openrouter.ai/privacy) · [Terms](https://openrouter.ai/terms) · [Data processing addendum](https://openrouter.ai/data-processing-agreement) · [Data collection](https://openrouter.ai/docs/guides/privacy/data-collection) · [Zero data retention](https://openrouter.ai/docs/guides/features/zdr) · [Provider logging](https://openrouter.ai/docs/guides/privacy/provider-logging) · [In-Region Routing](https://openrouter.ai/docs/guides/features/in-region-routing) | 2026-10-13 |
 | **Microsoft Corporation** (Microsoft Azure, Foundry Models sold by Azure) | Model provider reached through OpenRouter; processes the requests as OpenRouter's provider. We have no direct contract with Microsoft | Runs the GPT-6 Luna model and, since October 14, 2026, the GPT-6.1 Sol model (both developed by OpenAI; OpenAI does not receive orders on this route). **Used for orders under 2026-10-13.1 and 2026-10-14.1**, which it meets with the exceptions disclosed in this row; both models use the same endpoint and settings. Requests are restricted to the OpenRouter endpoint `azure/us`, with no fallback to other endpoints, and sent with `zdr: true`, `data_collection: deny`, and prompt caching off. Under 2026-10-10.2 only if switched on, which it currently is not (Section 6.3.5). Not used under 2026-10-08 | Processing: the OpenRouter endpoint `azure/us`; on its United States domain OpenRouter allows only endpoints in the United States and excludes global and cross-region deployments; OpenRouter does not publish the Azure deployment type. Storage of flagged content: Microsoft's abuse-monitoring store in the geography of the Azure resource, which for this endpoint is the United States according to OpenRouter's designation. Human reviewers: Under Microsoft's standard abuse-monitoring process, authorized Microsoft employees may review prompts and responses flagged for suspected abuse or identified as part of a potentially abusive pattern. Microsoft does not publish the reviewer countries for the US route we use; access may occur outside the United States, including from countries where Microsoft operates | The models are stateless: prompts and completions are not stored in the model and are not used to train models. Automated abuse review does not store them. Prompts and completions flagged by abuse monitoring, or that are part of a potentially abusive pattern of use, may be stored for human review. **Microsoft's published documentation does not specify a maximum retention period for content stored for this review.** Retention required by law: not described by Microsoft; we assume it may apply. OpenRouter lists this endpoint as zero data retention and our requests require it, but we have not verified whether Microsoft applies modified abuse monitoring to it, so this registry describes the standard mode | Off for these requests: they set `prompt_cache_options` to mode `explicit` with no cache breakpoints, which Microsoft documents as not using prompt caching; our test requests on October 13, 2026 confirmed that nothing was written to or read from the cache. For GPT-5.6 and later models Microsoft publishes only a minimum cache lifetime (30 minutes), not a maximum | Only authorized Microsoft employees, only for data already flagged or part of a potentially abusive pattern, through just-in-time access approved by managers; and as required by law. Reviewer countries: not published (see the countries column) | None found in Microsoft's documentation beyond abuse monitoring; the route also passes through OpenRouter (row above) | [Data, privacy, and security](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy) · [Abuse monitoring](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/abuse-monitoring) · [Prompt caching](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/prompt-caching) · [Privacy statement](https://www.microsoft.com/en-us/privacy/privacystatement) | 2026-10-13 |
 | **Amazon Web Services, Inc.** (Amazon Bedrock) | Our processor under the AWS Data Processing Addendum, incorporated into the AWS Service Terms | Would run allowlisted models. **Not used today for any order.** Meets the conditions of 2026-10-13.1 and 2026-10-14.1 with the exceptions disclosed in this row (no published upper limit for prompt caching of the relevant models; location of human reviewers not published), but not enabled: our account has no access to the model yet. Before enabling it we update this registry. Named by 2026-10-10.2, but only if enabled, which it is not (Section 6.3.5) | AWS Regions in the United States: AWS states that a request made within the US is kept within AWS Regions in the US, and abuse-detection data stays in the destination Region. Location of human access: not published; it may be outside the United States | Not stored by default. For OpenAI models other than gpt-oss, traffic flagged by AWS's classifiers is kept for up to 30 days, by AWS, and is not shared with the model provider; this published limit applies. Retention required by law: not described; we assume it may apply | "At least 30 minutes" for the relevant models; upper limit not published | AWS staff review content only in a retention mode used for models whose provider requires it; such models are not on our allowlist. Reviewer countries: not published | None found in AWS's documentation | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) · [AWS Privacy Notice](https://aws.amazon.com/privacy/) | 2026-10-13 |
 | **Amazon Web Services, Inc.** (Amazon Bedrock, reached through OpenRouter) | Model provider reached through OpenRouter; processes the requests as OpenRouter's provider in OpenRouter's AWS account. We have no direct contract with AWS for this route | Runs the GPT-6.1 Sol model on the endpoint `amazon-bedrock/us-east-1`. **Used for orders under 2026-10-14.1** on the route "Sol on Amazon Bedrock", through OpenRouter's United States domain, restricted to that endpoint (`allow_fallbacks: false`, `data_collection: deny`). Not used under earlier permissions | AWS Region us-east-1 (United States); on its United States domain OpenRouter routes only to endpoints in the United States. Location of human access: not published; it may be outside the United States | Not stored by default. For OpenAI models, traffic flagged by AWS's classifiers is kept for up to 30 days in the destination Region and is not shared with the model provider. Retention required by law: not described; we assume it may apply | Prompt caching may occur: AWS publishes "at least 30 minutes" and no maximum; our test requests on October 14, 2026 showed that this endpoint reads its cache even when caching is requested off | AWS staff review content only in a retention mode used for models whose provider requires it; reviewer countries: not published | OpenRouter's anonymous topic classification (first row) | [Bedrock FAQs](https://aws.amazon.com/bedrock/faqs/) · [Abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html) · [Data retention](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Prompt caching](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html) | 2026-10-14 |
@@ -598,8 +599,9 @@ account. We disclose it here so that you can decide: you can withdraw the
 permission at any time in Settings, which stops further AI calls and
 restores the hours of unfinished orders (Terms of Use, Section 4.2); and
 updated versions of the App ask you to answer the current screen, which names
-this classification, before your next book order. This disclosure does not
-expand an earlier permission in any other way.
+this classification, before your next book order. This disclosure describes
+OpenRouter's practice. It does not itself authorize topic classification
+under an earlier permission or broaden that permission.
 
 #### 6.3.6 Contracts, sharing, and human access
 
@@ -685,31 +687,44 @@ by providers' staff is described in the registry above.
 - **Copies kept by service providers.** Modal may keep function inputs and outputs for up to
   seven days under its infrastructure retention policy. OpenRouter keeps
   request metadata without content (for example, model, token counts, cost and
-  latency) for our account. We add no identifier of you to AI requests. The
-  provider request identifiers we keep for 30 days (above) let us match that
-  metadata to an order; after they are deleted we can no longer match it to
-  you. OpenRouter publishes no retention period for this metadata and uses it
-  for reporting, billing, security and legal compliance. The AI provider that
+  latency) for our account. We add no identifier of you to AI requests. While
+  we keep the provider request identifiers (30 days, above), they let us match
+  that metadata to an order; after they are deleted we no longer hold a direct
+  link from it to you, although dates, receipts or the provider's own records
+  might still allow a match. For this metadata OpenRouter publishes no fixed
+  period; OpenRouter keeps personal information as long as reasonably necessary for its business purposes and its legal, regulatory and accounting obligations, and then deletes or de-identifies it (OpenRouter Privacy Policy, Section 7). It uses the metadata for reporting, billing, security and legal
+  compliance. The AI provider that
   processed an order may keep content only as stated for it in the registry
   in Section 6.3.3 — for example, OpenAI up to 30 days, Microsoft and Amazon
   Web Services content flagged by abuse monitoring. Providers delete these
-  copies under their own rules; we cannot access them directly and cannot
-  verify their deletion. While an order is active, a deletion request cancels
+  copies under their own rules, subject to the requirements and deadlines of
+  applicable law; we cannot access them directly and cannot verify their
+  deletion. While an order is active, a deletion request cancels
   it.
 
 **How we ask recipients to delete.** We keep the request identifiers of
 AI providers for each order (for example, OpenRouter's generation
 identifiers; no text and no subscription identifier) for 30 days after the
 order's delivery or end, then delete them. When you ask us to delete your
-data, or we learn that an order contains consumer health data, we queue those
-identifiers with the recipient, route and dates of the order, and send a
-deletion request to OpenRouter — asking it to pass the request on to the model
-provider on the route (OpenAI, Microsoft, Amazon Web Services or a GLM hosting
-provider) — and directly to any other recipient we have a contract with. The
-queue holds no content and is deleted after the request is sent, or after 30
-days. After the identifiers have been deleted, we send the request with the
-dates we still hold. Providers carry out deletion under their own terms; we
-do not receive proof of deletion and cannot guarantee it.
+data, or we learn that an order contains consumer health data, we first
+record — before we delete the order — a deletion request for each recipient
+that received it: the recipient, the route, the dates of the order and any
+request identifiers we still hold, without content and without your
+subscription identifier. We send it to OpenRouter, asking it to delete what it
+holds and to pass the request on to the model provider on the route (OpenAI,
+Microsoft, Amazon Web Services or a GLM hosting provider), and directly to any
+other recipient we have a contract with. If the identifiers have already been
+deleted, we send the request with our account, the route and the time window,
+which the recipient can use to look for remaining data; we cannot guarantee
+that it will find it. A request is not treated as handled because time
+passes: it stays open until we have sent it, and our systems flag any request
+not sent within three days. Identifiers in an open request are deleted after
+30 days; the request itself stays open. After sending, we keep a record of the
+recipient, the date and the outcome — without identifiers or content — for
+two years as evidence that we complied. Recipients delete under applicable
+law, including the deadlines of the Washington and Nevada consumer health data
+laws where they apply, and otherwise under their own terms. We do not receive
+proof of deletion and cannot guarantee it.
 
 - For Washington consumer health data, backup copies held by a processor are
   deleted no later than six months after an authenticated request.
@@ -928,7 +943,8 @@ of refused requests by reason, without identifiers, for 30 days.
   the dates and the request identifiers we still hold (kept 30 days after
   delivery; Section 6.4). We cannot access directly
   copies that providers keep (Section 6.3.3), cannot verify their deletion,
-  and providers delete them under their own rules (Section 6.4).
+  and providers delete them under their own rules, subject to applicable law
+  (Section 6.4).
   A deletion request does not automatically remove the hours ledger and
   financial transaction records, subscription-status records, block records,
   or the service operation and deletion-safeguard records described in Section 6.2, except as stated there. We also retain the deletion-request record described in
@@ -1060,8 +1076,8 @@ websites you open from it follow their own policies.
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
 | Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
 | Order content (idea or narration text, chapters, title, audio) | Modal (USA), encrypted working storage | Until the App confirms saving every chapter; otherwise the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
-| AI-provider request identifiers (no text) | Modal (USA) | 30 days after the order's delivery or end; a queued deletion request to recipients: until sent, at most 30 days |
-| Copies kept by service providers | Modal; OpenRouter; the AI provider that processed the order | Modal up to 7 days; OpenRouter: request metadata without content for our account (we can match it to an order only until our working copy is deleted), period not published; AI providers: as stated in the registry in 6.3.3 (OpenAI: up to 30 days, longer where the law requires or to protect against harm; Microsoft and Amazon Web Services: content flagged by abuse monitoring, kept for review — AWS up to 30 days, Microsoft for a period it does not publish; GLM hosting providers for earlier permissions: zero-data-retention endpoints); deleted by the providers under their own rules |
+| AI-provider request identifiers (no text) | Modal (USA) | 30 days after the order's delivery or end. A deletion request to recipients stays open until sent; identifiers in it are deleted after 30 days; the record of sending (no identifiers, no content) is kept two years |
+| Copies kept by service providers | Modal; OpenRouter; the AI provider that processed the order | Modal up to 7 days; OpenRouter: request metadata without content for our account (we can match it to an order directly only while we keep the request identifiers), no fixed period published; OpenRouter keeps personal information as long as reasonably necessary for its business purposes and its legal, regulatory and accounting obligations, and then deletes or de-identifies it (OpenRouter Privacy Policy, Section 7); AI providers: as stated in the registry in 6.3.3 (OpenAI: up to 30 days, longer where the law requires or to protect against harm; Microsoft and Amazon Web Services: content flagged by abuse monitoring, kept for review — AWS up to 30 days, Microsoft for a period it does not publish; GLM hosting providers for earlier permissions: zero-data-retention endpoints); deleted by the providers under their own rules, subject to applicable law |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
 | Service operation records (no content) | Modal (USA) | Audio-transfer records: until the order ends; order-closing and hours-decision records: as long as the order's receipt, plus about 1 day; permission timestamps: until your data is deleted at your request; daily-limit counters: about 2 to 3 days, plus scheduled cleanup; App Store notification identifiers: 8 days; extra-hours purchase links: as long as the hours balance |
@@ -1112,7 +1128,7 @@ our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
 **Material change in this edition (October 14, 2026).** Permission version 2026-10-14.1 replaces the conditions-based permission with a closed list of providers (Section 6.3.3): no model training, no sale and no advertising; retention by each provider's documented deletion criteria, without a single maximum; processing in several countries, but no recipient or route chosen in China (including Hong Kong and Macau) or another country of concern under US law. Under it, books are written by the GPT-6.1 Sol model through OpenRouter — run by OpenAI or, as fallbacks, on Microsoft Azure or Amazon Bedrock in the United States — or by the GPT-6 Luna model on Microsoft Azure. We do not choose recipients or routes in countries of concern under 28 CFR 202.601; we rely on the providers' published documents for where processing takes place. These conditions apply only to orders placed under that permission; earlier permissions keep their routes (Section 6.3.5). Updated versions of the App obtain permission 2026-10-14.1 before the next book order and require acceptance of Terms version 2026-10-14.1.
 
-**Previous material change (October 13, 2026).** Permission version 2026-10-13.1 introduced the conditions now quoted in Section 6.3.5, including the disclosed exceptions for provider caching, retention and reviewer countries. Those conditions apply only to orders placed under that permission. This edition also discloses OpenRouter's anonymous topic classification, which applies to requests under earlier permissions as described in Section 6.3.5; their permission screens did not mention it. Earlier app versions may continue placing orders on their existing routes. Updated versions of the App obtain permission 2026-10-13.1 before the next book order and require acceptance of Terms version 2026-10-13.1. You may withdraw AI-provider permission in Settings at any time, stopping further AI calls and restoring hours for unfinished orders under Terms Section 4.2.
+**Permission versions in test versions of the App, and the previous published edition.** Permission 2026-10-13.1 was shown only in test (TestFlight) versions of the App on October 13–14, 2026; its conditions, quoted in Section 6.3.5, apply only to orders placed under it. The previous published edition of this Policy is dated October 9, 2026. It did not describe OpenRouter's anonymous topic classification; this edition is the first published edition to disclose it, for every permission version (Section 6.3.5). That disclosure does not itself authorize the classification under an earlier permission. Earlier app versions may continue placing orders on their existing routes. You may withdraw AI-provider permission in Settings at any time, stopping further AI calls and restoring hours for unfinished orders under Terms Section 4.2.
 
 **Change log.**
 
@@ -1121,17 +1137,19 @@ our data-protection assessment (Consumer Health Data Privacy Policy, A9).
   retention by documented deletion criteria; OpenAI added as a recipient for
   the GPT-6.1 Sol route; fingerprint of the accepted permission text; "18+"
   removed from the permission screen (age is confirmed on the "Before You
-  Create" screen); the October 13 permission moved to Section 6.3.5.
-- **October 13, 2026** (permission and Terms version 2026-10-13.1):
+  Create" screen); the October 13 permission moved to Section 6.3.5; first
+  published disclosure of OpenRouter's anonymous topic classification, for
+  every permission version; provider request identifiers kept 30 days and the
+  procedure for deletion requests to recipients (Section 6.4); narration
+  filter for versions using permission 2026-10-14.1.
+- **October 13, 2026** (permission and Terms version 2026-10-13.1, test
+  versions of the App only; this draft was not published):
   conditions-based AI-provider permission with a static list of recipients;
   recipients registry with countries, retention, caching, human access and
-  disclosed exceptions (Section 6.3); disclosure of OpenRouter's anonymous
-  topic classification, also for earlier permissions, whose routes are
-  otherwise kept unchanged in Section 6.3.5; privacy notice for users in Mexico (Section 14A and the
-  Spanish version).
-- Earlier editions, including those of October 8, 2026 (permission
-  2026-10-08) and October 12, 2026 (permission 2026-10-10.2), are available on
-  request.
+  disclosed exceptions (Section 6.3); privacy notice for users in Mexico
+  (Section 14A and the Spanish version).
+- Earlier published editions, the latest dated October 9, 2026 (permissions
+  2026-10-08 and 2026-10-10.2), are available on request.
 
 ## 20. Contact
 

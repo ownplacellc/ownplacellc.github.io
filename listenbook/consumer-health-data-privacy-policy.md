@@ -87,7 +87,11 @@ these grounds, each limited to what is necessary:
   person who placed the order passes our checks, it is processed only as
   necessary to write, moderate, narrate and deliver the book that person
   requested (RCW 19.373.030(1)(a)(ii) and (1)(b)(ii)). This ground never
-  covers data about someone else.
+  covers data about someone else, and it does not cover OpenRouter's
+  anonymous topic classification for reporting and model rankings, which is
+  not necessary to write the book; we do not rely on any ground for that
+  classification of consumer health data, and disclosing it does not make
+  such processing authorized.
 - **Data about someone else, or anything beyond the request.** We have no
   basis to process it. When we learn of it, we stop the order and any further
   processing at once, delete the copies we control, and ask the recipients to
@@ -172,10 +176,10 @@ orders.
 standard one, which excludes sensitive data; OpenAI, Microsoft, Amazon Web
 Services (on the route through OpenRouter) and the GLM hosting providers
 process requests as OpenRouter's providers, and we have no contract of our own
-with them. Amazon Web Services processes
-content under its standard AWS Data Processing Addendum, which is
-incorporated into the AWS Service Terms; we do not rely on it to authorize
-the processing of sensitive data. We therefore prohibit sending health and
+with them. Our own AWS Data Processing Addendum (incorporated into the AWS
+Service Terms) applies only to the direct Amazon Bedrock route, which is not
+enabled today, not to Amazon Web Services on the route through OpenRouter; we
+do not rely on it to authorize the processing of sensitive data. We therefore prohibit sending health and
 other sensitive data and filter for it before anything reaches an AI provider
 (A5). We do not claim contractual protection for sensitive data
 that we do not have.
@@ -240,12 +244,12 @@ example, a valid court order).
 |---|---|
 | Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if the App has not confirmed saving every chapter, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
 | A refused request | Not stored; only the refusal category is logged |
-| AI-provider request identifiers (no text) | 30 days after the order's delivery or end; then deleted. A queued deletion request to recipients: until sent, at most 30 days |
+| AI-provider request identifiers (no text) | 30 days after the order's delivery or end; then deleted. A deletion request to recipients stays open until sent; identifiers in it are deleted after 30 days; the record of sending (no identifiers, no content) is kept two years |
 | Order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
 | Email | Up to 24 months after the last message, deleted earlier on request |
-| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter keeps request metadata without content; the AI provider that processed an order may keep content only as the Privacy Policy registry (Section 6.3.3) states — for OpenAI, up to 30 days (longer where the law requires or to protect against harm); for Microsoft and Amazon Web Services, content flagged by their abuse monitoring, kept for review (AWS up to 30 days; Microsoft for a period it does not publish); providers delete these copies under their own rules, and we cannot access them directly or verify their deletion; for the GLM hosting providers used for earlier permissions, zero-data-retention endpoints; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
+| Copies kept by service providers | Modal may keep function inputs and outputs up to 7 days; OpenRouter keeps request metadata without content (no fixed period published; OpenRouter keeps personal information as long as reasonably necessary for its business purposes and its legal, regulatory and accounting obligations, and then deletes or de-identifies it (OpenRouter Privacy Policy, Section 7)); the AI provider that processed an order may keep content only as the Privacy Policy registry (Section 6.3.3) states — for OpenAI, up to 30 days (longer where the law requires or to protect against harm); for Microsoft and Amazon Web Services, content flagged by their abuse monitoring, kept for review (AWS up to 30 days; Microsoft for a period it does not publish); providers delete these copies under their own rules, subject to applicable law, and we cannot access them directly or verify their deletion; for the GLM hosting providers used for earlier permissions, zero-data-retention endpoints; backup copies held by a processor are deleted no later than 6 months after an authenticated Washington request |
 
 We keep consumer health data beyond an applicable deletion deadline only
 where a specific legal obligation or statutory exception requires it.
@@ -263,9 +267,12 @@ Wherever you live, you may:
   with their contact details (A4). We have no affiliates;
 - **Delete** your consumer health data. We notify every recipient that
   received it — processors, contractors, and other third parties — to delete
-  it, using the request identifiers we keep for 30 days after delivery and the
-  dates we hold; providers delete under their own rules, and we do not receive
-  proof of deletion (Privacy Policy, Section 6.4);
+  it. We record the request before deleting the order, keep it open until it
+  is sent, and send it with the request identifiers we keep for 30 days after
+  delivery or, after that, with our account, the route and the dates.
+  Recipients delete under applicable law (RCW 19.373.040(1)(c)) and otherwise
+  under their own rules; we do not receive proof of deletion (Privacy Policy,
+  Section 6.4);
 - **Withdraw** the AI-provider permission in Settings, which stops further
   transfers to AI providers, including for orders in progress, and new book
   orders, and **ask us to stop collecting** your consumer health data, which
