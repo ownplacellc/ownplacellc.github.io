@@ -242,8 +242,8 @@ hosting providers that OpenRouter lists as headquartered in the United States
 classified as zero data retention), or Amazon Bedrock in AWS Regions in the
 United States with flagged content kept for no more than 30 days, if that
 route is enabled; under 2026-10-13.1, only routes that met that permission's
-conditions, today GPT-6 Luna on Microsoft Azure (Privacy Policy, Section
-6.3.5). The conditions of permission 2026-10-14.1 apply only if you accept
+conditions, today GPT-6.1 Sol and GPT-6 Luna on Microsoft Azure (Privacy
+Policy, Section 6.3.5). The conditions of permission 2026-10-14.1 apply only if you accept
 that permission in the App.
 
 Providers' own abuse-monitoring and acceptable-use rules apply to the
@@ -271,7 +271,7 @@ Section 6.3.
 2. *Permission to send book orders to the AI providers* — before your first
    book order, and again when renewed permission is required (Privacy Policy,
    Section 6.6). The screen asks **"Allow AI processing of your book
-   orders?"** and states: **"Send your ideas, settings and book text to the AI providers listed below to create your books? No model training, no sale, no advertising. Providers may use content only for the service, support, security, abuse prevention and legal compliance, including OpenRouter's anonymous topic classification for reports and rankings. Processing and authorized staff or contractor access may occur internationally, but not in China or other countries of concern under US law. Retention varies by provider; no single maximum. Fiction only: no real personal or health data. Withdraw in Settings."**
+   orders?"** and states: **"Send your ideas, settings and text to the AI providers below to create books? No model training, no sale, no advertising. Use is limited to the service, support, security, abuse prevention and legal compliance, including OpenRouter's anonymous topic classification. Processing and authorized staff or contractor access may occur in several countries; we don't choose recipients or routes in China or other countries of concern under US law, and providers' documents place no processing there. Retention varies; no single maximum. Fiction only: no real personal or health data. Withdraw in Settings."**
    Under the heading **"AI providers"** it lists: **"OpenRouter (AI request routing)"**, **"Amazon Web Services (Amazon Bedrock)"**, **"Microsoft (Azure, Foundry)"**, **"Google (Vertex AI, Gemini API)"**, **"OpenAI"**, **"Anthropic"**, **"Mistral AI"**, **"xAI"**, **"Independent model hosts: Sail Research, Together AI, Fireworks AI, DeepInfra, Baseten"**. The link **"AI providers, countries &
    retention"** opens the recipients registry in Privacy Policy Section 6.3
    before you decide. The buttons are **"Allow AI Processing"** and **"Not
@@ -341,8 +341,9 @@ miss.
   passwords, or a statement about your own or a named close person's health,
   sexuality, gender identity, or criminal record. A match is refused, uses no
   hours, and the App asks you to rewrite the idea. Text you send for
-  narration is not scanned for personal data; your per-book confirmation
-  (Section 5.2) and the rule in Section 5.3 apply to it.
+  narration in the Talefall voice is checked by the same filter before it is
+  narrated; your per-book confirmation (Section 5.2) and the rule in Section
+  5.3 also apply to it.
 - **Prohibited-content check (ideas and narration text).** Before anything is
   sent to an AI provider or the narrator, our server refuses requests that
   clearly seek sexual content involving minors, instructions for weapons of
@@ -507,7 +508,7 @@ accepted, no hours are used, and the order is not sent to another provider
 instead. If the route of an accepted order closes while the book is being
 written, or you withdraw the permission, the order is stopped and its hours
 are restored under Section 4.2. Narration and the player are not affected.
-Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model run only by OpenAI through OpenRouter; while that route is switched off, book writing under that permission is temporarily unavailable. The Microsoft Azure, Amazon Bedrock and GLM routes are not used under it. Earlier permissions continue on the routes they named.
+Today, books under permission 2026-10-14.1 are written by the GPT-6.1 Sol model (developed by OpenAI) reached through OpenRouter, run by OpenAI; when that route is unavailable or switched off, the same model on Microsoft Azure (United States endpoint) or on Amazon Bedrock (United States endpoint used by OpenRouter), or the GPT-6 Luna model on Microsoft Azure — each order keeps the route assigned when it was accepted. The GLM route is not used under it. Earlier permissions continue on the routes they named.
 
 **Changes and discontinuation.** We may change the Service — including the
 models, providers, narrator voice, length limits, and the hours included in
