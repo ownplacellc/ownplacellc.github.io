@@ -384,7 +384,9 @@ provider terms and documentation, as published and linked in the registry
 **Changes within these conditions.** Models, and the selection of listed
 providers, may change within these conditions without asking you again.
 Before such a change we update the registry in Section 6.3.3, including its
-verification date. Before sending content to an unlisted recipient, or
+verification date. Subject only to the disclosed uncertainty about the
+operator of OpenRouter's topic classification (Section 6.3.2(1)), before
+sending content to an unlisted recipient, or
 broadening the purposes, human access or retention beyond these conditions, we
 update this Policy, notify you in the App and obtain renewed permission;
 updating this Policy alone does not broaden a permission you gave. Changes to
