@@ -225,7 +225,7 @@ caching and human access are listed in the registry in Privacy Policy Section
 Under the current permission (version 2026-10-14.1), models, and the
 selection among the providers on its closed list, may change within the
 safeguards that permission states (Privacy Policy, Section 6.3.2) without
-asking you again. Sending content to an unlisted recipient, or broadening its
+asking you again. Subject only to the disclosed uncertainty about the operator of OpenRouter's topic classification (Privacy Policy, Section 6.3.2(1)), sending content to an unlisted recipient, or broadening its
 purposes, human access or retention, requires renewed explicit permission
 (Privacy Policy, Section 6.6). Changes to a provider's terms do not
 automatically expand your permission. Availability of a model in
@@ -610,7 +610,7 @@ request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
 version before your next use of the Service; this edition (version
 2026-10-14.1) is such a change. A new edition of these Terms does not by
-itself expand your AI-provider permission: a recipient not named in it, or a
+itself expand your AI-provider permission: subject only to the disclosed uncertainty about the operator of OpenRouter's topic classification (Privacy Policy, Section 6.3.2(1)), a recipient not named in it, or a
 wider scope of processing, requires renewed explicit permission (Section
 5.2; Privacy Policy, Section 6.6). The conditions of permission
 2026-10-14.1 apply only if you accept that permission in the App and only to

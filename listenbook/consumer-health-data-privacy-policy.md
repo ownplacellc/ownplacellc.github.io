@@ -137,7 +137,9 @@ OpenAI, Microsoft and Amazon Web Services), or any other AI provider;** for them
 
 Book writing goes to AI providers on the conditions of the permission version
 under which the order was placed (Privacy Policy, Section 6.3). The current
-permission (version 2026-10-14.1) uses only providers from a closed list:
+permission (version 2026-10-14.1) uses only providers from a closed list,
+subject only to the disclosed uncertainty about the operator of OpenRouter's
+topic classification (Privacy Policy, Section 6.3.2(1)):
 OpenRouter; Amazon Web Services (Amazon Bedrock); Microsoft (Azure, Foundry);
 Google (Vertex AI, Gemini API); OpenAI; Anthropic; Mistral AI; xAI; and the
 independent model hosts Sail Research, Together AI, Fireworks AI, DeepInfra

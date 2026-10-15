@@ -298,7 +298,7 @@ Las versiones actualizadas de la App muestran esta pantalla antes de su primer p
 
 Título: *«¿Permitir el procesamiento con IA de tus pedidos de libros?»*
 
-Texto: *«¿Enviar ideas, ajustes y textos a los proveedores de IA de abajo para tus libros? Sin entrenar modelos, sin venta ni publicidad. Solo para el servicio, soporte, seguridad, abusos y ley, incluida la clasificación anónima de temas de OpenRouter. Tratamiento y acceso de personal o contratistas: posibles en varios países; no elegimos destinatarios ni rutas en China u otros países de preocupación según la ley de EE. UU.; la información revisada no los cita, aunque es incompleta. Conservación variable, sin máximo único. Solo ficción: sin datos personales ni médicos reales. Retíralo en Ajustes.»*
+Texto: *«¿Enviar ideas, ajustes y textos a los proveedores de IA de abajo para tus libros? Sin entrenar modelos, sin venta ni publicidad. Solo para el servicio, soporte, seguridad, abusos y ley, además de la clasificación anónima de temas de OpenRouter para informes y rankings de modelos. OpenRouter no indica quién opera el clasificador; no podemos confirmar que sea uno de los proveedores de abajo. Tratamiento y acceso de personal o contratistas: posibles en varios países; no elegimos destinatarios ni rutas en China u otros países de preocupación según la ley de EE. UU.; la información revisada no los cita, aunque es incompleta. Conservación variable, sin máximo único. Solo ficción: sin datos personales ni médicos reales. Retíralo en Ajustes.»*
 
 Bajo el encabezado *«Proveedores de IA»*, la pantalla enumera:
 

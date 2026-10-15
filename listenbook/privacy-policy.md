@@ -60,7 +60,9 @@ live.
   sensitive data and for prohibited content. To write the book, it is then
   sent to AI providers on the conditions of the AI-provider permission you
   gave. Under the current permission (version 2026-10-14.1): only providers
-  from a closed list (Section 6.3.3); no model training, no sale and no
+  from a closed list (Section 6.3.3), subject only to the disclosed
+  uncertainty about the operator of OpenRouter's topic classification
+  (Section 6.3.2(1)); no model training, no sale and no
   advertising use; content is used only for the requested service, support,
   security, abuse prevention and legal compliance — including OpenRouter's
   anonymous topic classification for reporting and model rankings;
@@ -281,7 +283,7 @@ Updated versions of the App show this screen before your first book order, and b
 
 Title: *"Allow AI processing of your book orders?"*
 
-Text: *"Send your ideas, settings and text to the AI providers below to create books? No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law, including OpenRouter's anonymous topic classification. Processing and authorized staff or contractor access may occur in several countries; we don't choose recipients or routes in China or other countries of concern under US law; provider information we checked names none there but is incomplete. Retention varies; no single maximum. Fiction only: no real personal or health data. Withdraw in Settings."*
+Text: *"Send your ideas, settings and text to the AI providers below to create books? No model training, no sale, no advertising. Only for the service, support, security, abuse prevention and law, plus OpenRouter's anonymous topic classification for reporting and model rankings. OpenRouter does not name the classifier's operator; we cannot confirm that it is among the providers below. Processing and authorized staff or contractor access may occur in several countries; we don't choose recipients or routes in China or other countries of concern under US law; provider information we checked names none there but is incomplete. Retention varies; no single maximum. Fiction only: no real personal or health data. Withdraw in Settings."*
 
 Under the heading *"AI providers"* the screen lists:
 
@@ -804,7 +806,9 @@ and what it generated for that order.
    and models may change within the conditions in Section 6.3.2 without
    renewed permission. Before such a change, we update the registry in
    Section 6.3.3. We notify you in the App before materially changing
-   processing. Before sending content to a recipient not named on the screen,
+   processing. Subject only to the disclosed uncertainty about the operator of
+   OpenRouter's topic classification (Section 6.3.2(1)), before sending
+   content to a recipient not named on the screen,
    or broadening the purposes, human access, retention or any geography a
    permission limits, we
    explain the change and obtain renewed explicit permission. Updating this
@@ -1127,8 +1131,9 @@ address; earlier versions are available on request, and we keep a versioned
 record of each AI-provider disclosure to which users agreed. Before changing a
 provider or model within the conditions of a permission, we update the
 registry in Section 6.3.3. We notify you in the App before materially changing
-how Service data is processed. Before sending content to a recipient not named
-in your permission, or broadening its scope (for example, new data, new
+how Service data is processed. Subject only to the disclosed uncertainty about
+the operator of OpenRouter's topic classification (Section 6.3.2(1)), before
+sending content to a recipient not named in your permission, or broadening its scope (for example, new data, new
 purposes, broader retention or human access, training, or a country outside
 the geography a permission limits),
 we explain the change and obtain renewed explicit permission (Section 6.6);
