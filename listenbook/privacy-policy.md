@@ -2,8 +2,6 @@
 
 **Effective Date: October 16, 2026**
 
-<!-- ДАТА РЕДАКЦИИ: 16 октября 2026 — черновик; при публикации заменить на фактический день публикации (3 файла privacy-policy{,.ru,.es}.md: строка даты и запись в §19). -->
-
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
 Telephone: +1 (213) 524-8012.
