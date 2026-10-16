@@ -1,6 +1,8 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 14, 2026**
+**Effective Date: October 16, 2026**
+
+<!-- ДАТА РЕДАКЦИИ: 16 октября 2026 — черновик; при публикации заменить на фактический день публикации (3 файла privacy-policy{,.ru,.es}.md: строка даты и запись в §19). -->
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -90,6 +92,9 @@ live.
 - **Your subscription is identified by Apple's signed transaction, not by
   you** (Section 6.1).
 - **Usage counters only if you say yes**; the default is no (Section 8).
+- **"Book ready" notifications only if you allow notifications.** The App
+  then sends our service the device's push-notification token, and Apple
+  delivers the notification (Sections 5 and 6.2).
 - **No tracking, no ads, no advertising identifier, no third-party analytics
   SDKs.** We do not sell personal information or share it for cross-context
   behavioral advertising; we disclose it only to the recipients described in
@@ -99,7 +104,11 @@ live.
 
 Through the App we do not ask for, and the App does not send us, your name,
 email address, phone number, contacts, photos, precise location, browsing
-history, device identifiers, or advertising identifier. We do not collect
+history, or advertising identifier, and no device identifier other than the
+push-notification token described in Section 5, which the App sends only if
+you allow notifications for Talefall (and, if you turn them off, sends again
+only to ask us to delete it, repeating the request until our service confirms
+it). We do not collect
 your playback history, bookmarks, notes, or highlights, or titles or text from
 your library unless you deliberately send a text for narration in the
 Talefall voice. We do not request health information and do not infer
@@ -163,8 +172,9 @@ you use them.
 | **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
 | **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
 | **Collecting books** | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
+| **"Book ready" notifications** (only if you allow notifications for Talefall; the App asks when you place your first order, and if you already allowed them in an earlier version, the updated App uses that permission) | The device's push-notification token issued by Apple and whether it is a development or production token, with the signed subscription transaction and the shared service token. If you later turn notifications off for Talefall, the App sends the same token again only to ask our service to delete it, and repeats this request until our service confirms it | Our service on Modal (USA). The notification itself is delivered by Apple Push Notification service (APNs); we send Apple only the token and a notification made of fixed text keys of the App and its kind ("ready" or "could not be finished") — no subscription identifier and nothing from your book | To tell you that an ordered book is ready to download, or could not be finished, while the App is closed | Section 6.2 ("Notification tokens") |
 | **Report content** (only when you use it) | Book number, chapter, the passage shown on the report screen (up to 4,000 characters), the reason, your note, the signed transaction if you have a subscription | Our service on Modal (USA); if sending fails, an email you send to contact@ownplace.net (without the passage) | To review and act on a report | 12 months (Section 6.4) |
-| **Usage counters** (only if you said yes) | Step names with seconds since launch, file type of a failed import, App version, device language, a random per-session number | Our service on Modal (USA) | To learn where new users get stuck | 90 days |
+| **Usage counters** (only if you said yes) | Session counters: step names with seconds since launch, file type of a failed import, App version, device language, a random per-session number that the service does not store. Milestone counters: step name, App build number, distribution channel (App Store, TestFlight, or debug), primary App-interface language without a country, and a random number generated for that one milestone (repeated only if the same request is retried). The server adds the UTC date of receipt | Our service on Modal (USA) | To learn where new users get stuck | 90 days (Section 8) |
 | **App Store Server Notifications** (not from your device) | Apple's signed notice of a renewal, expiry, refund, or revocation | From Apple to our service | So the Service knows the subscription status | Section 6.4 |
 
 **Third-party policies.** Apple: https://www.apple.com/legal/privacy/ ·
@@ -263,6 +273,27 @@ content.
   after the last related financial event, Section 6.4); we review them at
   least once a year and delete those no longer needed. Requests to delete them
   earlier are assessed under applicable law.
+- *Notification tokens:* the push-notification token of each device on which
+  you allowed notifications, whether it is a development or production token,
+  and the time the App last sent it, linked to the subscription identifier.
+  We stop using a token 8 days after the App last sent it (the App sends it
+  again from time to time when you open the App, and when you place an
+  order), and it is deleted at the next scheduled cleanup (normally within 15
+  minutes; a cleanup that fails is retried). We stop using it at once, and
+  delete it at the next scheduled cleanup or sooner, when Apple reports it
+  invalid, when our service receives the App's request that follows your
+  turning notifications off (the App sends it the next time it is open and
+  repeats it until it succeeds; until then, iOS itself does not show Talefall
+  notifications), or on a data-deletion request. When you turn notifications
+  off, we keep a revocation record — a one-way fingerprint (hash) of the token
+  and the time, linked to the subscription identifier — for 8 days after
+  that, plus scheduled cleanup, so that a registration request sent before
+  you turned notifications off cannot reactivate the token; a data-deletion
+  request deletes it at once. We also keep, per order, a technical record
+  that a notification about it was attempted (book number, "ready" or "could
+  not be finished", and time — no token and no subscription identifier), so
+  the same notification is not sent twice; it is deleted after 8 days, plus
+  scheduled cleanup.
 
 <a id="ai-providers"></a>
 
@@ -422,7 +453,7 @@ statement that the practice does not exist.
 | **Modal Labs, Inc.** | Hosting: runs our service, our writer program, our narrator model, and our moderation model; stores working content, receipts, and logs | United States | Everything in 6.2 | Processor under Modal's Data Processing Addendum (modal.com/legal/dpa): processes on our instructions, lists its subprocessors, notifies breaches, does not train on customer data. Modal may keep function inputs and outputs for up to seven days under its infrastructure retention policy, independently of our deletion |
 | **Our narrator model** (VoxCPM2) | Reads text aloud | Our own container on Modal (USA) | The text to be narrated | Operated by us; nothing is sent to another company |
 | **Our moderation model** | Checks each generated chapter (Section 6.5) | Our own container on Modal (USA) | Each generated chapter | Operated by us; nothing is sent to another company |
-| **Apple** | Payments, subscription status, email delivery for contact@ownplace.net | Apple's infrastructure | Purchases; notices about renewals and refunds; your email if you write to us | Apple's policy |
+| **Apple** | Payments, subscription status, email delivery for contact@ownplace.net, and delivery of "book ready" notifications (Apple Push Notification service) | Apple's infrastructure | Purchases; notices about renewals and refunds; your email if you write to us; for notifications, the device's push-notification token and a notification made of fixed text keys of the App and its kind — no subscription identifier and no book content | Apple's policy, including for Apple's retention of notification data |
 
 #### 6.3.4 Which recipients each permission version uses
 
@@ -909,20 +940,56 @@ shown, playback started, an import failed), the seconds since launch, the file
 type of a failed import (never the file name), the App version, your device
 language, and a random number that groups one session's counters and is not
 stored. The counters never contain book titles, text, file names, or any
-identifier of you or your device. Our server accepts only these fields and
-deletes the counters after **90 days**. They are not shared with anyone and
-not used for tracking.
+identifier of you or your device.
+
+With the same permission, the App also sends separate milestone counters,
+normally once per installation: first launch and enabling counters (new
+installations only), opening the bundled sample, importing a book, starting
+playback, opening the AI order or a subscription purchase screen, viewing and
+answering the AI-provider permission screen, an accepted book order, and
+receiving a book. Each milestone request contains only its step name, the App
+build number, the distribution channel (App Store, TestFlight, or debug), the
+primary App-interface language without a country, and a random number
+generated for that one milestone so that a retried request is normally not
+counted twice. Our server adds the UTC date of receipt. It contains no
+elapsed time, session number, installation identifier, subscription
+identifier, or book identifier, and different milestones cannot be linked to
+each other. After about two days, the individual milestone records, with
+their random numbers, are combined into daily totals. These are approximate
+counts: a retried request is normally recognized and counted once, but may
+occasionally be counted twice.
+
+Our server accepts only the fields described in this section. Usage counters
+are deleted by a scheduled cleanup after **90 days**; cleanup runs every 15
+minutes, and a deletion that fails is retried at the next run. No usage
+events are collected or sent before you allow counters. Declining or
+withdrawing permission clears queued events and stops collection of new
+events. We do not send a counter recording refusal of usage counters.
+Requests already sent cannot be recalled. The counters are not shared with
+anyone and not used for tracking.
 
 ## 9. Server Logs
 
 Our service on Modal writes technical logs: request paths with book numbers,
 status codes, times, the original transaction identifier on hours and order
 events, character and duration counts, refusal and moderation categories, and
-the country code from the territory check. Our application does not write the
-IP address or any request or book text to these logs. Modal's infrastructure
+the country code from the territory check, and the result of notification
+sends (book number, kind, counts, and Apple's response code — no device
+token). Our application does not write the IP address or any request or book
+text to these logs. Modal's infrastructure
 processes IP addresses to route and secure traffic under its own policies.
-Our application logs are kept for about **one day**. We also keep daily counts
-of refused requests by reason, without identifiers, for 30 days.
+Our application logs are kept for about **one day**.
+
+For troubleshooting, reliability, and security, we also keep daily aggregate
+counts, without user identifiers or content, for **30 days**: on Modal, daily
+counts of refused requests by reason; and on an access-restricted Mac
+controlled by OWN PLACE LLC, daily counts of service requests (by method,
+route pattern, and status code), outcomes, refusals by reason, and errors. To
+produce the Mac counts, a program on that Mac reads our application logs from
+Modal and saves only the counts, not the log lines. Local deletion runs at
+the next scheduled cleanup, normally every six hours, and resumes when the
+Mac is available. Counts may distinguish the controller's own tests from
+other activity.
 
 ## 10. Your Choices, Rights, and How to Make a Request
 
@@ -936,6 +1003,9 @@ of refused requests by reason, without identifiers, for 30 days.
   the AI providers stop, including further AI calls for orders still in
   progress, and new book orders stop until you allow it again; processing
   already done is not undone.
+- **Turn off "book ready" notifications** in iOS Settings → Notifications →
+  Talefall. The next time the App is open, it asks our service to delete the
+  token (Section 6.2).
 - **Make a privacy request** — access, a copy, correction, deletion, or a
   request that we stop collecting, sharing, or selling your consumer health
   data: email contact@ownplace.net with the subject "Talefall: privacy
@@ -948,8 +1018,10 @@ of refused requests by reason, without identifiers, for 30 days.
   use Talefall may also make requests; we verify them by an appropriate
   alternative method.
 - **What deletion covers.** We delete any remaining order content, receipts,
-  permission records, reports linked to you, and other records eligible for
-  deletion, and notify every recipient that received the data (processors,
+  permission records, reports linked to you, notification tokens and
+  revocation records, and other records eligible for deletion (the per-order
+  notification records, which contain only a book number and no identifier of
+  you, are kept until their 8-day deletion), and notify every recipient that received the data (processors,
   contractors, and other third parties: for orders under 2026-10-14.1, OpenAI
   directly; for orders under earlier permissions, OpenRouter, which we ask to
   pass the request on to the model provider that processed the order, such as
@@ -1005,8 +1077,9 @@ To the extent the CCPA applies to us, California residents have the rights to
 require it. We do **not** sell or "share" personal information, do not use it
 for cross-context behavioral advertising, and do not use sensitive personal
 information for purposes that would require a right to limit. In the past 12
-months we collected: identifiers (the original transaction identifier and the
-country derived from IP); commercial information (subscription status and
+months we collected: identifiers (the original transaction identifier, the
+push-notification token if you allowed notifications, and the country derived
+from IP); commercial information (subscription status and
 hours); user-generated content (book ideas and narration text, held
 temporarily, and content reports); limited internet activity (optional
 anonymous counters); and contact details and correspondence if you wrote to
@@ -1101,18 +1174,19 @@ websites you open from it follow their own policies.
 | Block records | Modal (USA) | While the block lasts plus 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | Modal (USA) / our mailbox | 1 year after submission, or longer where the law requires |
 | Deletion-request record (no content) | Modal (USA) | 2 years |
-| Usage counters (anonymous) | Modal (USA) | 90 days |
+| Notification tokens; revocation and per-order notification records (no content) | Modal (USA) | Tokens: no longer used 8 days after the App last sent them and deleted at the next scheduled cleanup; sooner if Apple reports them invalid, if the App reports that notifications were turned off, or on a deletion request. Revocation records (token fingerprint, time): 8 days after revocation, plus scheduled cleanup, or at once on a deletion request. Per-order records (book number, kind, time): 8 days, plus scheduled cleanup |
+| Usage counters (anonymous) | Modal (USA) | 90 days, plus scheduled cleanup; individual milestone records combined into daily totals after about 2 days |
 | Application logs (no IP, no content) | Modal (USA) | About 1 day |
-| Refusal counts (numbers only) | Modal (USA) | 30 days |
+| Daily service-operation counts (numbers only; no user identifiers or content) | Modal (USA): refusal counts; an access-restricted Mac controlled by OWN PLACE LLC: request, outcome, refusal, and error counts | 30 days; local cleanup as described in Section 9 |
 | Email correspondence | Our mailbox | Up to 24 months after the last message |
 
 ## 18. App Privacy Label
 
-For version 1.3 our App Store privacy label and the privacy manifest in the
-App disclose:
+Our App Store privacy label and the privacy manifest in the App disclose:
 
 - **Data linked to you:** Identifiers — **User ID** (the subscription's
-  original transaction identifier); **Purchases — Purchase History**
+  original transaction identifier); Identifiers — **Device ID** (the
+  push-notification token, only if you allow notifications); **Purchases — Purchase History**
   (subscription status, extra hours, hours used); **User Content — Other User
   Content** (book ideas, narration text, content reports); **Location —
   Coarse Location** (the country derived from the IP address of a Service
@@ -1141,12 +1215,27 @@ updating this Policy alone does not expand an earlier permission. Before
 enabling a new AI route or materially changing its processing, we also update
 our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
-**Material change in this edition (October 14, 2026).** Under permission version 2026-10-14.1 OpenAI (OpenAI OpCo, LLC) is the only external AI model provider we use directly, through the OpenAI API under our own contract and OpenAI's data processing addendum; we do not route these orders through OpenRouter or another AI gateway; OpenAI may process content through its published affiliates and subprocessors under its DPA, and our hosting provider Modal also processes order content (Sections 6.3.2 and 6.3.3): no model training, no sale and no advertising; OpenAI may keep requests up to 30 days, and longer only where the law requires or to protect against harm, with no single maximum; processing in several countries, but no recipient or route chosen in China (including Hong Kong and Macau) or another country of concern under US law. Under it, books are written by the GPT-6.1 Sol model in the OpenAI API. OpenRouter's anonymous topic classification does not apply to orders under this permission. We rely on OpenAI's published documents for where processing takes place. These conditions apply only to orders placed under that permission; earlier permissions keep their routes through OpenRouter (Section 6.3.5). Updated versions of the App obtain permission 2026-10-14.1 before the next book order and require acceptance of Terms version 2026-10-14.1.
+**Changes in this edition (October 16, 2026).** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you allowed notifications for Talefall in an earlier version, the updated App uses that permission; you can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
 
-**Permission versions in test versions of the App, and the previous published edition.** Permission 2026-10-13.1 was shown only in test (TestFlight) versions of the App on October 13–14, 2026; its conditions, quoted in Section 6.3.5, apply only to orders placed under it. The previous published edition of this Policy is dated October 9, 2026. It did not describe OpenRouter's anonymous topic classification; this edition is the first published edition to disclose it, for every permission version (Section 6.3.5). That disclosure does not itself authorize the classification under an earlier permission. Earlier app versions may continue placing orders on their existing routes. You may withdraw AI-provider permission in Settings at any time, stopping further AI calls and restoring hours for unfinished orders under Terms Section 4.2.
+**Material change in the October 14, 2026 edition.** Under permission version 2026-10-14.1 OpenAI (OpenAI OpCo, LLC) is the only external AI model provider we use directly, through the OpenAI API under our own contract and OpenAI's data processing addendum; we do not route these orders through OpenRouter or another AI gateway; OpenAI may process content through its published affiliates and subprocessors under its DPA, and our hosting provider Modal also processes order content (Sections 6.3.2 and 6.3.3): no model training, no sale and no advertising; OpenAI may keep requests up to 30 days, and longer only where the law requires or to protect against harm, with no single maximum; processing in several countries, but no recipient or route chosen in China (including Hong Kong and Macau) or another country of concern under US law. Under it, books are written by the GPT-6.1 Sol model in the OpenAI API. OpenRouter's anonymous topic classification does not apply to orders under this permission. We rely on OpenAI's published documents for where processing takes place. These conditions apply only to orders placed under that permission; earlier permissions keep their routes through OpenRouter (Section 6.3.5). Updated versions of the App obtain permission 2026-10-14.1 before the next book order and require acceptance of Terms version 2026-10-14.1.
+
+**Permission versions in test versions of the App, and the October 9, 2026 edition.** Permission 2026-10-13.1 was shown only in test (TestFlight) versions of the App on October 13–14, 2026; its conditions, quoted in Section 6.3.5, apply only to orders placed under it. The published edition before the October 14, 2026 edition is dated October 9, 2026. It did not describe OpenRouter's anonymous topic classification; the October 14, 2026 edition was the first published edition to disclose it, for every permission version (Section 6.3.5). That disclosure does not itself authorize the classification under an earlier permission. Earlier app versions may continue placing orders on their existing routes. You may withdraw AI-provider permission in Settings at any time, stopping further AI calls and restoring hours for unfinished orders under Terms Section 4.2.
 
 **Change log.**
 
+- **October 16, 2026:** "book ready" notifications — the device's
+  push-notification token, its storage and deletion, and Apple Push
+  Notification service as a recipient (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10,
+  12, 17 and 18); separate anonymous milestone counters under the existing
+  usage-counters permission, disclosure of the distribution channel and the
+  per-milestone random number, daily totals, approximate counts, and
+  scheduled deletion of usage counters after 90 days (Sections 5, 8 and 17);
+  daily aggregate service-operation counts on an access-restricted Mac
+  controlled by OWN PLACE LLC for 30 days (Sections 9 and 17); the privacy
+  notice for Mexico (Section 14A of the Spanish version) updated to the
+  processors under permission 2026-10-14.1 and the push-notification token. The
+  AI-provider permission (version 2026-10-14.1) and the Terms of Use are
+  unchanged.
 - **October 14, 2026** (permission and Terms version 2026-10-14.1): a single
   external AI model provider used directly for new orders — OpenAI, through
   the OpenAI API under our contract and data processing addendum with OpenAI
