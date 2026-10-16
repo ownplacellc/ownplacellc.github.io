@@ -172,10 +172,17 @@ you use them.
 | **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
 | **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
 | **Collecting books** | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
-| **"Book ready" notifications** (only if you allow notifications for Talefall; the App asks when you place your first order, and if you already allowed them in an earlier version, the updated App uses that permission) | The device's push-notification token issued by Apple and whether it is a development or production token, with the signed subscription transaction and the shared service token. If you later turn notifications off for Talefall, the App sends the same token again only to ask our service to delete it, and repeats this request until our service confirms it | Our service on Modal (USA). The notification itself is delivered by Apple Push Notification service (APNs); we send Apple only the token and a notification made of fixed text keys of the App and its kind ("ready" or "could not be finished") — no subscription identifier and nothing from your book | To tell you that an ordered book is ready to download, or could not be finished, while the App is closed | Section 6.2 ("Notification tokens") |
+| **"Book ready" notifications** (only if you allow notifications for Talefall; the App asks when you place your first order; if you already allowed them, see the note below this table) | The device's push-notification token issued by Apple and whether it is a development or production token, with the signed subscription transaction and the shared service token. If you later turn notifications off for Talefall, the App sends the same token again only to ask our service to delete it, and repeats this request until our service confirms it | Our service on Modal (USA). The notification itself is delivered by Apple Push Notification service (APNs); we send Apple only the token and a notification made of fixed text keys of the App and its kind ("ready" or "could not be finished") — no subscription identifier and nothing from your book | To tell you that an ordered book is ready to download, or could not be finished, while the App is closed | Section 6.2 ("Notification tokens") |
 | **Report content** (only when you use it) | Book number, chapter, the passage shown on the report screen (up to 4,000 characters), the reason, your note, the signed transaction if you have a subscription | Our service on Modal (USA); if sending fails, an email you send to contact@ownplace.net (without the passage) | To review and act on a report | 12 months (Section 6.4) |
-| **Usage counters** (only if you said yes) | Session counters: step names with seconds since launch, file type of a failed import, App version, device language, a random per-session number that the service does not store. Milestone counters: step name, App build number, distribution channel (App Store, TestFlight, or debug), primary App-interface language without a country, and a random number generated for that one milestone (repeated only if the same request is retried). The server adds the UTC date of receipt | Our service on Modal (USA) | To learn where new users get stuck | 90 days (Section 8) |
+| **Usage counters** (only if you said yes) | Session counters: step names with seconds since launch, file type of a failed import, App version, device language, a random per-session number that the service does not store. Milestone counters: step name, App build number, distribution channel (App Store, TestFlight, or debug), primary App-interface language without a country, and a random number generated for that one milestone (repeated only if the same request is retried). The server adds the receipt time and UTC date to session counters, and the UTC receipt date to milestone counters. Counter requests also carry the App's shared service token, which is the same across installations | Our service on Modal (USA) | To learn where new users get stuck | 90 days (Section 8) |
 | **App Store Server Notifications** (not from your device) | Apple's signed notice of a renewal, expiry, refund, or revocation | From Apple to our service | So the Service knows the subscription status | Section 6.4 |
+
+**If you already allowed Talefall notifications.** If you previously allowed
+Talefall notifications, the updated App can automatically send the token when
+you first open it, without another notification-permission prompt and without
+waiting for a new book order. We store it with your subscription identifier to
+send book-status notifications through Apple. To prevent registration, turn
+off Talefall notifications in iOS Settings before opening the updated App.
 
 **Third-party policies.** Apple: https://www.apple.com/legal/privacy/ ·
 Internet Archive: https://archive.org/about/terms · LibriVox:
@@ -284,12 +291,19 @@ content.
   invalid, when our service receives the App's request that follows your
   turning notifications off (the App sends it the next time it is open and
   repeats it until it succeeds; until then, iOS itself does not show Talefall
-  notifications), or on a data-deletion request. When you turn notifications
-  off, we keep a revocation record — a one-way fingerprint (hash) of the token
-  and the time, linked to the subscription identifier — for 8 days after
-  that, plus scheduled cleanup, so that a registration request sent before
-  you turned notifications off cannot reactivate the token; a data-deletion
-  request deletes it at once. We also keep, per order, a technical record
+  notifications), or on a data-deletion request. When our service processes a
+  request to disable notifications, it records a one-way fingerprint (hash) of
+  the token and the server time of revocation, linked to the subscription
+  identifier. Each revocation record is kept for 8 days from that server time,
+  plus scheduled cleanup. It prevents registrations whose server-side
+  processing began no later than that revocation from reactivating the token;
+  a data-deletion request deletes it at once. We may retain earlier
+  registration records, including their server timestamps, for up to 8 days
+  each, plus scheduled cleanup. A subscription-level index contains token
+  fingerprints and references to registration records. It is refreshed on
+  registration and removed at cleanup after 8 days without a new registration
+  once its referenced records have been removed. A fulfilled data-deletion
+  request removes this index. We also keep, per order, a technical record
   that a notification about it was attempted (book number, "ready" or "could
   not be finished", and time — no token and no subscription identifier), so
   the same notification is not sent twice; it is deleted after 8 days, plus
@@ -595,7 +609,7 @@ provider terms and documentation, as published and linked in the registry
 these conditions without asking you again. Before such a change we update the
 registry in Section 6.3.3, including its verification date. Broadening the
 purposes, human access or retention beyond these conditions requires a new
-permission version and your new consent; updating this Policy alone does not
+permission version and your renewed explicit permission; updating this Policy alone does not
 broaden a permission you gave. Changes to a provider's terms do not
 automatically expand your permission: we reassess the route against these
 conditions, and before any use outside the safeguards disclosed here we ask
@@ -943,9 +957,9 @@ stored. The counters never contain book titles, text, file names, or any
 identifier of you or your device.
 
 With the same permission, the App also sends separate milestone counters,
-normally once per installation: first launch and enabling counters (new
-installations only), opening the bundled sample, importing a book, starting
-playback, opening the AI order or a subscription purchase screen, viewing and
+normally once per installation: first launch, enabling counters, opening the
+bundled sample, importing a book, and starting playback (these five for new
+installations only), opening the AI order or a subscription purchase screen, viewing and
 answering the AI-provider permission screen, an accepted book order, and
 receiving a book. Each milestone request contains only its step name, the App
 build number, the distribution channel (App Store, TestFlight, or debug), the
@@ -953,8 +967,9 @@ primary App-interface language without a country, and a random number
 generated for that one milestone so that a retried request is normally not
 counted twice. Our server adds the UTC date of receipt. It contains no
 elapsed time, session number, installation identifier, subscription
-identifier, or book identifier, and different milestones cannot be linked to
-each other. After about two days, the individual milestone records, with
+identifier, or book identifier. The per-milestone random number does not
+provide a common identifier across different milestones. We do not use the
+counters to identify you or combine them with subscription or order records. After about two days, the individual milestone records, with
 their random numbers, are combined into daily totals. These are approximate
 counts: a retried request is normally recognized and counted once, but may
 occasionally be counted twice.
@@ -965,8 +980,9 @@ minutes, and a deletion that fails is retried at the next run. No usage
 events are collected or sent before you allow counters. Declining or
 withdrawing permission clears queued events and stops collection of new
 events. We do not send a counter recording refusal of usage counters.
-Requests already sent cannot be recalled. The counters are not shared with
-anyone and not used for tracking.
+Requests already sent cannot be recalled. Counter requests also carry the
+App's shared service token, which is the same across installations. Modal
+processes the counters on our behalf; we do not use them for tracking.
 
 ## 9. Server Logs
 
@@ -984,9 +1000,14 @@ For troubleshooting, reliability, and security, we also keep daily aggregate
 counts, without user identifiers or content, for **30 days**: on Modal, daily
 counts of refused requests by reason; and on an access-restricted Mac
 controlled by OWN PLACE LLC, daily counts of service requests (by method,
-route pattern, and status code), outcomes, refusals by reason, and errors. To
+route pattern, and status code), outcomes, refusal-event categories, and
+errors. To
 produce the Mac counts, a program on that Mac reads our application logs from
-Modal and saves only the counts, not the log lines. Local deletion runs at
+Modal and saves only the counts, not the log lines. The Mac also keeps
+processing checkpoints, including second-level coverage times and boundary
+counts, pending aggregate totals, and collector-run summaries and error codes.
+These contain no user identifiers or book content and are overwritten or
+removed under the same 30-day cleanup policy. Local deletion runs at
 the next scheduled cleanup, normally every six hours, and resumes when the
 Mac is available. Counts may distinguish the controller's own tests from
 other activity.
@@ -1018,10 +1039,14 @@ other activity.
   use Talefall may also make requests; we verify them by an appropriate
   alternative method.
 - **What deletion covers.** We delete any remaining order content, receipts,
-  permission records, reports linked to you, notification tokens and
-  revocation records, and other records eligible for deletion (the per-order
-  notification records, which contain only a book number and no identifier of
-  you, are kept until their 8-day deletion), and notify every recipient that received the data (processors,
+  permission records, reports linked to you, notification tokens, registration
+  and revocation records and the notification index, and other records
+  eligible for deletion (per-order notification-attempt records contain the
+  book number, notification kind and time, but no push token or subscription
+  identifier in the record itself; they may remain linkable to your
+  subscription through retained order or hours records; they are normally
+  deleted eight days after the attempt at scheduled cleanup; applicable
+  deletion rights also apply to these records), and notify every recipient that received the data (processors,
   contractors, and other third parties: for orders under 2026-10-14.1, OpenAI
   directly; for orders under earlier permissions, OpenRouter, which we ask to
   pass the request on to the model provider that processed the order, such as
@@ -1174,10 +1199,10 @@ websites you open from it follow their own policies.
 | Block records | Modal (USA) | While the block lasts plus 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | Modal (USA) / our mailbox | 1 year after submission, or longer where the law requires |
 | Deletion-request record (no content) | Modal (USA) | 2 years |
-| Notification tokens; revocation and per-order notification records (no content) | Modal (USA) | Tokens: no longer used 8 days after the App last sent them and deleted at the next scheduled cleanup; sooner if Apple reports them invalid, if the App reports that notifications were turned off, or on a deletion request. Revocation records (token fingerprint, time): 8 days after revocation, plus scheduled cleanup, or at once on a deletion request. Per-order records (book number, kind, time): 8 days, plus scheduled cleanup |
+| Notification tokens and registration records; notification index; revocation and per-order notification records (no content) | Modal (USA) | Tokens and registration records: no longer used 8 days after the App last sent them and deleted at the next scheduled cleanup; sooner if Apple reports them invalid, if the App reports that notifications were turned off, or on a deletion request. Index (token fingerprints, references): removed at cleanup after 8 days without a new registration once its records are removed, or on a deletion request. Revocation records (token fingerprint, time): 8 days after the server-recorded revocation, plus scheduled cleanup, or at once on a deletion request. Per-order records (book number, kind, time): 8 days, plus scheduled cleanup (Section 6.2) |
 | Usage counters (anonymous) | Modal (USA) | 90 days, plus scheduled cleanup; individual milestone records combined into daily totals after about 2 days |
 | Application logs (no IP, no content) | Modal (USA) | About 1 day |
-| Daily service-operation counts (numbers only; no user identifiers or content) | Modal (USA): refusal counts; an access-restricted Mac controlled by OWN PLACE LLC: request, outcome, refusal, and error counts | 30 days; local cleanup as described in Section 9 |
+| Daily service-operation counts and the counting program's processing state (no user identifiers or content) | Modal (USA): refusal counts; an access-restricted Mac controlled by OWN PLACE LLC: request, outcome, refusal-event and error counts, processing checkpoints and run summaries | 30 days; local cleanup as described in Section 9 |
 | Email correspondence | Our mailbox | Up to 24 months after the last message |
 
 ## 18. App Privacy Label
@@ -1215,7 +1240,7 @@ updating this Policy alone does not expand an earlier permission. Before
 enabling a new AI route or materially changing its processing, we also update
 our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
-**Changes in this edition (October 16, 2026).** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you allowed notifications for Talefall in an earlier version, the updated App uses that permission; you can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
+**Changes in this edition (October 16, 2026).** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you previously allowed Talefall notifications, the updated App can automatically send the token when you first open it, without another notification-permission prompt and without waiting for a new book order; to prevent registration, turn off Talefall notifications in iOS Settings before opening the updated App (Section 5). You can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
 
 **Material change in the October 14, 2026 edition.** Under permission version 2026-10-14.1 OpenAI (OpenAI OpCo, LLC) is the only external AI model provider we use directly, through the OpenAI API under our own contract and OpenAI's data processing addendum; we do not route these orders through OpenRouter or another AI gateway; OpenAI may process content through its published affiliates and subprocessors under its DPA, and our hosting provider Modal also processes order content (Sections 6.3.2 and 6.3.3): no model training, no sale and no advertising; OpenAI may keep requests up to 30 days, and longer only where the law requires or to protect against harm, with no single maximum; processing in several countries, but no recipient or route chosen in China (including Hong Kong and Macau) or another country of concern under US law. Under it, books are written by the GPT-6.1 Sol model in the OpenAI API. OpenRouter's anonymous topic classification does not apply to orders under this permission. We rely on OpenAI's published documents for where processing takes place. These conditions apply only to orders placed under that permission; earlier permissions keep their routes through OpenRouter (Section 6.3.5). Updated versions of the App obtain permission 2026-10-14.1 before the next book order and require acceptance of Terms version 2026-10-14.1.
 

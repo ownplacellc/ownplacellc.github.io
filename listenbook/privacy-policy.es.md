@@ -182,10 +182,18 @@ usted las usa.
 | **Narración con la voz de Talefall** (solo para un libro que usted confirmó) | El título del libro, el idioma y el texto de los capítulos, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para narrar ese libro | Igual que arriba |
 | **Narración de pasajes** (voz de Talefall, mientras escucha un libro confirmado) | El texto del pasaje y el idioma, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para devolver el audio de ese pasaje | No lo almacena nuestra aplicación; solo se registran el número de caracteres y la duración del audio. Modal puede conservar las entradas y salidas de las funciones hasta 7 días |
 | **Recogida de libros** | Números de libro, confirmaciones de «guardado» por capítulo, solicitudes de eliminación o cancelación, la transacción firmada | Nuestro servicio en Modal (EE. UU.) | Para descargar sus libros y permitir que el servidor elimine su copia | Sección 6.4 |
-| **Notificaciones «libro listo»** (solo si usted permite las notificaciones de Talefall; la App lo pregunta al hacer su primer pedido y, si ya las permitió en una versión anterior, la App actualizada usa ese permiso) | El token de notificaciones push del dispositivo emitido por Apple y si es de desarrollo o de producción, con la transacción firmada de la suscripción y el token compartido del servicio. Si después desactiva las notificaciones de Talefall, la App vuelve a enviar ese token solo para pedir a nuestro servicio que lo elimine, y repite la solicitud hasta que el servicio la confirme | Nuestro servicio en Modal (EE. UU.). La notificación la entrega Apple Push Notification service (APNs); a Apple solo le enviamos el token y una notificación formada por claves de texto fijas de la App y su tipo («listo» o «no se pudo terminar»), sin identificador de suscripción ni nada de su libro | Avisarle de que un libro pedido está listo para descargar, o no se pudo terminar, mientras la App está cerrada | Sección 6.2 («Tokens de notificación») |
+| **Notificaciones «libro listo»** (solo si usted permite las notificaciones de Talefall; la App lo pregunta al hacer su primer pedido; si ya las permitió, vea la nota bajo esta tabla) | El token de notificaciones push del dispositivo emitido por Apple y si es de desarrollo o de producción, con la transacción firmada de la suscripción y el token compartido del servicio. Si después desactiva las notificaciones de Talefall, la App vuelve a enviar ese token solo para pedir a nuestro servicio que lo elimine, y repite la solicitud hasta que el servicio la confirme | Nuestro servicio en Modal (EE. UU.). La notificación la entrega Apple Push Notification service (APNs); a Apple solo le enviamos el token y una notificación formada por claves de texto fijas de la App y su tipo («listo» o «no se pudo terminar»), sin identificador de suscripción ni nada de su libro | Avisarle de que un libro pedido está listo para descargar, o no se pudo terminar, mientras la App está cerrada | Sección 6.2 («Tokens de notificación») |
 | **Denunciar contenido** (solo cuando lo usa) | Número de libro, capítulo, el pasaje mostrado en la pantalla de denuncia (hasta 4000 caracteres), el motivo, su nota, la transacción firmada si tiene suscripción | Nuestro servicio en Modal (EE. UU.); si el envío falla, un correo que usted envíe a contact@ownplace.net (sin el pasaje) | Para revisar una denuncia y actuar al respecto | 12 meses (sección 6.4) |
-| **Contadores de uso** (solo si usted dijo que sí) | Contadores de sesión: nombres de pasos con segundos desde el inicio, tipo de archivo de una importación fallida, versión de la App, idioma del dispositivo y un número aleatorio por sesión que el servicio no almacena. Contadores de hitos: nombre del paso, número de compilación de la App, canal de distribución (App Store, TestFlight o depuración), idioma principal de la interfaz de la App sin país y un número aleatorio generado para ese único hito (se repite solo si se reintenta la misma solicitud). El servidor añade la fecha de recepción en UTC | Nuestro servicio en Modal (EE. UU.) | Para saber dónde se atascan los usuarios nuevos | 90 días (sección 8) |
+| **Contadores de uso** (solo si usted dijo que sí) | Contadores de sesión: nombres de pasos con segundos desde el inicio, tipo de archivo de una importación fallida, versión de la App, idioma del dispositivo y un número aleatorio por sesión que el servicio no almacena. Contadores de hitos: nombre del paso, número de compilación de la App, canal de distribución (App Store, TestFlight o depuración), idioma principal de la interfaz de la App sin país y un número aleatorio generado para ese único hito (se repite solo si se reintenta la misma solicitud). El servidor añade la hora y fecha UTC de recepción a los contadores de sesión, y la fecha UTC de recepción a los hitos. Las solicitudes de contadores también incluyen el token compartido del servicio, idéntico en todas las instalaciones | Nuestro servicio en Modal (EE. UU.) | Para saber dónde se atascan los usuarios nuevos | 90 días (sección 8) |
 | **Notificaciones del servidor de App Store** (no provienen de su dispositivo) | El aviso firmado de Apple sobre una renovación, vencimiento, reembolso o revocación | De Apple a nuestro servicio | Para que el Servicio conozca el estado de la suscripción | Sección 6.4 |
+
+**Si ya permitió las notificaciones de Talefall.** Si ya permitió las
+notificaciones de Talefall, la App actualizada puede enviar automáticamente el
+token al abrirla por primera vez, sin otra solicitud de permiso de notificaciones
+y sin esperar un nuevo pedido de libro. Lo guardamos junto con el identificador de
+su suscripción para enviar avisos sobre el estado del libro mediante Apple. Para
+impedir el registro, desactive las notificaciones de Talefall en Ajustes de iOS
+antes de abrir la App actualizada.
 
 **Políticas de terceros.** Apple: https://www.apple.com/legal/privacy/ ·
 Internet Archive: https://archive.org/about/terms · LibriVox:
@@ -299,12 +307,21 @@ registros técnicos. No contienen contenido de libros.
   solicitud que la App envía tras desactivar usted las notificaciones (la
   envía la próxima vez que esté abierta y la repite hasta que tenga éxito;
   hasta entonces, iOS no muestra notificaciones de Talefall) o ante una
-  solicitud de eliminación de datos. Cuando desactiva las notificaciones,
-  guardamos un registro de revocación —una huella irreversible (hash) del
-  token y la hora, vinculadas al identificador de la suscripción— durante 8
-  días, más la espera hasta la limpieza programada, para que una solicitud de
-  registro enviada antes de desactivarlas no reactive el token; una solicitud
-  de eliminación de datos lo borra de inmediato. Además, por cada pedido
+  solicitud de eliminación de datos. Cuando nuestro servicio procesa una
+  solicitud para desactivar las notificaciones, registra una huella
+  irreversible (hash) del token y la hora del servidor de la revocación,
+  vinculadas al identificador de la suscripción. Cada registro de revocación
+  se conserva 8 días desde esa hora, más la espera hasta la limpieza
+  programada. Impide que los registros cuya tramitación en el servidor comenzó
+  antes o en el momento de esa revocación reactiven el token; una solicitud de
+  eliminación de datos lo borra de inmediato. Podemos conservar registros
+  anteriores de inscripción, incluidas sus horas del servidor, hasta 8 días
+  cada uno, más la espera hasta la limpieza programada. Un índice por
+  suscripción contiene huellas de tokens y referencias a los registros. Se
+  actualiza al registrar el dispositivo y se elimina durante la limpieza tras
+  8 días sin un nuevo registro, una vez eliminados los registros
+  referenciados. Al ejecutar una solicitud de eliminación de datos, eliminamos
+  este índice. Además, por cada pedido
   guardamos un registro técnico de que se intentó una notificación (número
   del libro, «listo» o «no se pudo terminar» y hora, sin token ni
   identificador de suscripción), para no enviar la misma notificación dos
@@ -621,8 +638,8 @@ condiciones siguientes:
 cambiar dentro de estas condiciones sin volver a preguntarle. Antes de un cambio
 así actualizamos el registro de la sección 6.3.3, incluida su fecha de
 verificación. Ampliar las finalidades, el acceso humano o la conservación más allá
-de estas condiciones requiere una nueva versión del permiso y su nuevo
-consentimiento; actualizar esta Política no amplía por sí solo un permiso que
+de estas condiciones requiere una nueva versión del permiso y que usted vuelva a
+otorgarlo expresamente; actualizar esta Política no amplía por sí solo un permiso que
 usted dio. Los cambios en las condiciones de un proveedor no amplían
 automáticamente su permiso: reevaluamos la vía conforme a estas condiciones y,
 antes de cualquier uso fuera de las garantías indicadas aquí, le pedimos un nuevo
@@ -942,9 +959,9 @@ almacena. Los contadores nunca contienen títulos de libros, texto, nombres de a
 identificador suyo o de su dispositivo.
 
 Con el mismo permiso, la App también envía contadores de hitos separados,
-normalmente una vez por instalación: primer inicio y activación de los
-contadores (solo instalaciones nuevas), apertura del ejemplo incluido,
-importación de un libro, inicio de la reproducción, apertura de la pantalla de
+normalmente una vez por instalación: primer inicio, activación de los
+contadores, apertura del ejemplo incluido, importación de un libro e inicio de la
+reproducción (estos cinco solo en instalaciones nuevas), apertura de la pantalla de
 pedido de IA o de una pantalla de compra de suscripción, visualización y
 respuesta de la pantalla de permiso del proveedor de IA, un pedido de libro
 aceptado y la recepción de un libro. Cada solicitud de hito contiene solo el
@@ -953,8 +970,10 @@ nombre del paso, el número de compilación de la App, el canal de distribución
 App sin país y un número aleatorio generado para ese único hito, para que una
 solicitud reintentada normalmente no se cuente dos veces. Nuestro servidor añade
 la fecha de recepción en UTC. No contiene tiempo transcurrido, número de sesión,
-identificador de instalación, de suscripción ni de libro, y los distintos hitos
-no pueden vincularse entre sí. Pasados unos dos días, los registros individuales
+identificador de instalación, de suscripción ni de libro. El número aleatorio de
+cada hito no proporciona un identificador común entre distintos hitos. No usamos
+los contadores para identificarle ni los combinamos con registros de suscripción
+o pedidos. Pasados unos dos días, los registros individuales
 de hitos, con sus números aleatorios, se agrupan en totales diarios. Son
 recuentos aproximados: una solicitud reintentada normalmente se reconoce y se
 cuenta una vez, pero en ocasiones puede contarse dos veces.
@@ -966,7 +985,9 @@ reintenta en la siguiente ejecución. No se recopilan ni envían eventos de uso
 antes de que usted los permita. Rechazar o retirar el permiso borra los eventos
 en cola y detiene la recopilación de nuevos eventos. No enviamos ningún contador
 que registre el rechazo de los contadores. Las solicitudes ya enviadas no pueden
-recuperarse. Los contadores no se comparten con nadie y no se usan para rastrear.
+recuperarse. Las solicitudes de contadores también incluyen el token compartido
+del servicio, idéntico en todas las instalaciones. Modal los trata por nuestra
+cuenta; no los usamos para rastrear.
 
 ## 9. Registros del servidor
 
@@ -984,10 +1005,15 @@ conservamos recuentos diarios agregados, sin identificadores de usuario ni
 contenido, durante **30 días**: en Modal, recuentos diarios de solicitudes
 rechazadas por motivo; y en un Mac de acceso restringido controlado por OWN
 PLACE LLC, recuentos diarios de solicitudes al servicio (por método, patrón de
-ruta y código de estado), sus resultados, rechazos por motivo y errores. Para
+ruta y código de estado), sus resultados, categorías de eventos de rechazo y
+errores. Para
 obtener los recuentos del Mac, un programa en ese Mac lee los registros de
 nuestra aplicación desde Modal y guarda solo los recuentos, no las líneas de los
-registros. La eliminación local se realiza en la siguiente limpieza programada,
+registros. El Mac también conserva puntos de control del procesamiento, incluidas
+horas de cobertura con precisión de segundos y recuentos de frontera, totales
+agregados pendientes, resúmenes de ejecución y códigos de error. No contienen
+identificadores de usuario ni contenido de libros y se sobrescriben o eliminan
+conforme a la misma política de limpieza de 30 días. La eliminación local se realiza en la siguiente limpieza programada,
 normalmente cada seis horas, y se reanuda cuando el Mac está disponible. Los
 recuentos pueden distinguir las pruebas propias del responsable del resto de la
 actividad.
@@ -1019,10 +1045,14 @@ actividad.
   usan Talefall también pueden presentar solicitudes; las verificamos por un método
   alternativo adecuado.
 - **Qué abarca la eliminación.** Eliminamos cualquier contenido de pedido restante, recibos,
-  registros de permisos, denuncias vinculadas a usted, los tokens de notificación y sus
-  registros de revocación y otros registros susceptibles de eliminación (los registros
-  de notificación por pedido, que solo contienen el número del libro y ningún
-  identificador suyo, se conservan hasta su eliminación a los 8 días), y notificamos a cada destinatario que recibió los datos (encargados del tratamiento, contratistas y otros terceros: para los pedidos con 2026-10-14.1, OpenAI directamente; para los pedidos con permisos anteriores, OpenRouter, al que pedimos que transmita la solicitud al proveedor de modelos que procesó el pedido, como Microsoft o un proveedor de alojamiento de GLM; y cualquier otro destinatario de la sección 6.3.3 que los haya recibido) que los eliminen, también tras la entrega, indicando las fechas y los
+  registros de permisos, denuncias vinculadas a usted, los tokens de notificación, los
+  registros de inscripción y de revocación, el índice de notificaciones y otros
+  registros susceptibles de eliminación (los registros de intentos de notificación por
+  pedido contienen el número del libro, el tipo de notificación y la hora, pero no el
+  token push ni el identificador de suscripción en el propio registro; pueden seguir
+  vinculados a su suscripción mediante los registros de pedidos u horas conservados;
+  normalmente se eliminan mediante la limpieza programada ocho días después del
+  intento; los derechos de supresión aplicables también abarcan estos registros), y notificamos a cada destinatario que recibió los datos (encargados del tratamiento, contratistas y otros terceros: para los pedidos con 2026-10-14.1, OpenAI directamente; para los pedidos con permisos anteriores, OpenRouter, al que pedimos que transmita la solicitud al proveedor de modelos que procesó el pedido, como Microsoft o un proveedor de alojamiento de GLM; y cualquier otro destinatario de la sección 6.3.3 que los haya recibido) que los eliminen, también tras la entrega, indicando las fechas y los
   identificadores de solicitud que aún conservamos (se conservan 30 días tras la
   entrega; sección 6.4). No tenemos acceso directo a las copias que
   conservan los proveedores (sección 6.3.3), no podemos verificar su eliminación y
@@ -1153,9 +1183,15 @@ directamente, para los pedidos con el permiso vigente 2026-10-14.1 (puede tratar
 contenido a través de sus filiales y subencargados publicados); OpenRouter, Inc. y
 los proveedores de modelos a los que dirige las solicitudes, solo para los pedidos
 con permisos anteriores (Microsoft Azure con 2026-10-13.1 y proveedores de
-alojamiento de GLM con 2026-10-08 y 2026-10-10.2); y Apple (pagos, correo y
-entrega de notificaciones push mediante Apple Push Notification service). La comunicación de datos a un encargado (remisión) no
-requiere su consentimiento. El permiso del proveedor de IA cubre solo los
+alojamiento de GLM con 2026-10-08 y 2026-10-10.2). Apple también recibe los datos
+descritos en la sección 6.3.3 para pagos, correo y entrega de notificaciones
+mediante APNs. La calificación jurídica depende del tratamiento concreto: una
+comunicación es una remisión únicamente cuando el destinatario trata los datos
+por nuestra cuenta como encargado, y la remisión no requiere su consentimiento.
+Cuando actúa para finalidades propias, no calificamos esa comunicación como
+remisión por el solo hecho de que preste un servicio. A las comunicaciones que
+constituyan transferencias se aplican los requisitos y las excepciones legales
+descritos a continuación. El permiso del proveedor de IA cubre solo los
 destinatarios, el contenido, los fines y las garantías informados para su versión;
 no autoriza el tratamiento de datos de salud ni de otros datos personales
 sensibles, ni constituye el consentimiento de otra persona, y usted puede negarlo
@@ -1183,11 +1219,11 @@ vez por un periodo igual cuando las circunstancias lo justifiquen. El ejercicio 
 estos derechos es gratuito. Una vez eliminada nuestra copia de trabajo de un
 pedido (sección 6.4), ya no podemos dar acceso a su contenido ni rectificarlo.
 
-**Revocación del consentimiento y limitación del uso.** Puede revocar el permiso
+**Retirada de permisos, revocación del consentimiento y limitación del uso.** Puede revocar el permiso
 del proveedor de IA en cualquier momento en Ajustes: dejamos de enviar contenido a
 los proveedores de IA, incluidos los pedidos en curso, sin efectos retroactivos
 sobre el tratamiento ya realizado. Puede desactivar los contadores de uso en
-Ajustes y las notificaciones en Ajustes de iOS. Para revocar otro consentimiento o limitar el uso o la divulgación de sus
+Ajustes y las notificaciones en Ajustes de iOS. Para revocar un consentimiento exigido por la ley o limitar el uso o la divulgación de sus
 datos, escríbanos a contact@ownplace.net.
 
 **Autoridad.** Si considera que su derecho a la protección de datos personales ha
@@ -1240,10 +1276,10 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 | Registros de bloqueo | Modal (EE. UU.) | Mientras dure el bloqueo más 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | Modal (EE. UU.) / nuestro buzón | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Registro de solicitud de eliminación (sin contenido) | Modal (EE. UU.) | 2 años |
-| Tokens de notificación; registros de revocación y de notificación por pedido (sin contenido) | Modal (EE. UU.) | Tokens: dejan de usarse 8 días después del último envío de la App y se eliminan en la siguiente limpieza programada; antes si Apple indica que no son válidos, si la App comunica que se desactivaron las notificaciones o ante una solicitud de eliminación. Registros de revocación (huella del token, hora): 8 días tras la revocación, más la espera hasta la limpieza programada, o de inmediato ante una solicitud de eliminación. Registros por pedido (número del libro, tipo, hora): 8 días, más la espera hasta la limpieza programada |
+| Tokens de notificación y registros de inscripción; índice de notificaciones; registros de revocación y de notificación por pedido (sin contenido) | Modal (EE. UU.) | Tokens y registros de inscripción: dejan de usarse 8 días después del último envío de la App y se eliminan en la siguiente limpieza programada; antes si Apple indica que no son válidos, si la App comunica que se desactivaron las notificaciones o ante una solicitud de eliminación. Índice (huellas de tokens, referencias): se elimina durante la limpieza tras 8 días sin un nuevo registro, una vez eliminados sus registros, o ante una solicitud de eliminación. Registros de revocación (huella del token, hora): 8 días tras la revocación registrada por el servidor, más la espera hasta la limpieza programada, o de inmediato ante una solicitud de eliminación. Registros por pedido (número del libro, tipo, hora): 8 días, más la espera hasta la limpieza programada (sección 6.2) |
 | Contadores de uso (anónimos) | Modal (EE. UU.) | 90 días, más la espera hasta la limpieza programada; los registros individuales de hitos se agrupan en totales diarios a los 2 días aproximadamente |
 | Registros de aplicación (sin IP, sin contenido) | Modal (EE. UU.) | Aproximadamente 1 día |
-| Recuentos diarios de funcionamiento del servicio (solo números; sin identificadores de usuario ni contenido) | Modal (EE. UU.): recuentos de rechazos; un Mac de acceso restringido controlado por OWN PLACE LLC: recuentos de solicitudes, resultados, rechazos y errores | 30 días; limpieza local según la sección 9 |
+| Recuentos diarios de funcionamiento del servicio y estado de procesamiento del programa de recuento (sin identificadores de usuario ni contenido) | Modal (EE. UU.): recuentos de rechazos; un Mac de acceso restringido controlado por OWN PLACE LLC: recuentos de solicitudes, resultados, eventos de rechazo y errores, puntos de control del procesamiento y resúmenes de ejecución | 30 días; limpieza local según la sección 9 |
 | Correspondencia por correo electrónico | Nuestro buzón | Hasta 24 meses después del último mensaje |
 
 ## 18. Etiqueta de privacidad de la App
@@ -1283,7 +1319,7 @@ amplía por sí solo un permiso anterior. Antes de habilitar una nueva vía de I
 cambiar sustancialmente su tratamiento, también actualizamos nuestra evaluación de
 protección de datos (Política de privacidad de datos de salud del consumidor, A9).
 
-**Cambios en esta edición (16 de octubre de 2026).** Notificaciones «libro listo»: si usted permite las notificaciones de Talefall, la App envía a nuestro servicio el token de notificaciones push del dispositivo, que conservamos vinculado al identificador de la suscripción durante los plazos de la sección 6.2, y Apple Push Notification service entrega la notificación (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 14A, 17 y 18). Si permitió las notificaciones de Talefall en una versión anterior, la App actualizada usa ese permiso; puede desactivar las notificaciones en Ajustes de iOS en cualquier momento, y entonces la App nos pide que eliminemos el token. Contadores de hitos anónimos separados, que se envían solo con el permiso de contadores de uso que usted ya haya dado (sección 8). Recuentos diarios agregados del funcionamiento del servicio, sin identificadores de usuario ni contenido, conservados también en un Mac de acceso restringido controlado por OWN PLACE LLC durante 30 días (sección 9). En el aviso de privacidad para México (sección 14A) se actualizó además la lista de encargados conforme al permiso vigente 2026-10-14.1. Esta edición no cambia el permiso del proveedor de IA, sus destinatarios ni sus condiciones.
+**Cambios en esta edición (16 de octubre de 2026).** Notificaciones «libro listo»: si usted permite las notificaciones de Talefall, la App envía a nuestro servicio el token de notificaciones push del dispositivo, que conservamos vinculado al identificador de la suscripción durante los plazos de la sección 6.2, y Apple Push Notification service entrega la notificación (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 14A, 17 y 18). Si ya permitió las notificaciones de Talefall, la App actualizada puede enviar automáticamente el token al abrirla por primera vez, sin otra solicitud de permiso de notificaciones y sin esperar un nuevo pedido de libro; para impedir el registro, desactive las notificaciones de Talefall en Ajustes de iOS antes de abrir la App actualizada (sección 5). Puede desactivar las notificaciones en Ajustes de iOS en cualquier momento, y entonces la App nos pide que eliminemos el token. Contadores de hitos anónimos separados, que se envían solo con el permiso de contadores de uso que usted ya haya dado (sección 8). Recuentos diarios agregados del funcionamiento del servicio, sin identificadores de usuario ni contenido, conservados también en un Mac de acceso restringido controlado por OWN PLACE LLC durante 30 días (sección 9). En el aviso de privacidad para México (sección 14A) se actualizó además la lista de encargados conforme al permiso vigente 2026-10-14.1. Esta edición no cambia el permiso del proveedor de IA, sus destinatarios ni sus condiciones.
 
 **Cambio sustancial en la edición del 14 de octubre de 2026.** Con la versión del permiso 2026-10-14.1, OpenAI (OpenAI OpCo, LLC) es el único proveedor externo de modelos de IA que usamos directamente, a través de la API de OpenAI con nuestro propio contrato y el anexo de tratamiento de datos de OpenAI; no enviamos estos pedidos a través de OpenRouter ni de otra pasarela de IA; OpenAI puede tratar el contenido a través de sus filiales y subencargados publicados conforme a su DPA, y nuestro proveedor de alojamiento Modal también trata el contenido del pedido (secciones 6.3.2 y 6.3.3): sin entrenar modelos, sin venta y sin uso publicitario; OpenAI puede conservar las solicitudes hasta 30 días, y más tiempo solo cuando la ley lo exija o para proteger frente a daños, sin un único máximo; procesamiento en varios países, pero sin elegir destinatarios ni rutas en China (incluidas Hong Kong y Macao) ni en otro país de preocupación según la ley de EE. UU. Con ella, los libros los escribe el modelo GPT-6.1 Sol en la API de OpenAI. La clasificación anónima de temas de OpenRouter no se aplica a los pedidos con este permiso. Para saber dónde se realiza el tratamiento nos basamos en los documentos publicados de OpenAI. Estas condiciones se aplican solo a los pedidos hechos con ese permiso; los permisos anteriores conservan sus vías a través de OpenRouter (sección 6.3.5). Las versiones actualizadas de la App obtienen el permiso 2026-10-14.1 antes del próximo pedido de libro y exigen la aceptación de la versión 2026-10-14.1 de los Términos.
 
