@@ -72,8 +72,8 @@ write to contact@ownplace.net.
    [Privacy Policy](privacy-policy.html).
 2. **Permission.** Before your first book order the App asks permission to
    send your ideas, book settings, and working text to an AI provider to
-   write your books. In plain words, the permission in the current version of
-   the App (version 2026-10-14.1) means:
+   write your books. In App version 1.3.1 and later, in plain words, the
+   AI-provider permission (permission version 2026-10-14.1) means:
    - your content goes to **OpenAI (OpenAI OpCo, LLC)**, which we use
      directly through the OpenAI API under our own contract and data
      processing addendum with OpenAI — not through OpenRouter or another AI
@@ -107,13 +107,15 @@ write to contact@ownplace.net.
    under Section 4.2 of the [Terms of Use](terms-of-use.html).
 
    **Earlier permissions and earlier versions of the App.** If you answered
-   an earlier version of this permission, the current version of the App asks
+   an earlier version of this permission, App version 1.3.1 and later asks
    again before your next book order. Orders placed under an earlier
    permission are processed only as that permission promised, on its routes
-   through OpenRouter; for example, App version 1.3 (permission 2026-10-08)
-   sends orders only to the GLM model through OpenRouter, on hosting
-   providers with zero data retention. See [Privacy
-   Policy](privacy-policy.html) Sections 6.3.4–6.3.5.
+   through OpenRouter. For example, App version 1.3 (permission 2026-10-08)
+   sends book-writing requests only to the GLM model through OpenRouter,
+   restricted to hosting providers that OpenRouter lists as zero data
+   retention. OpenRouter's separate processing and metadata-retention
+   practices are described in [Privacy Policy](privacy-policy.html) Sections
+   6.3.3–6.3.5.
 3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
    length. **Do not include personal data about real people, including
    yourself.** Turn on "My idea contains no personal data about real people";
@@ -129,8 +131,8 @@ write to contact@ownplace.net.
    audio. If the order ends with any chapter undelivered, all hours for the
    order are restored ([Terms of Use](terms-of-use.html), Section 4.2).
 
-**"Book ready" notifications (optional).** In the current version of the
-App, when you place your first book order, the App offers to notify you when
+**"Book ready" notifications (optional).** In App version 1.3.1 and later,
+when you place your first book order, the App offers to notify you when
 a book is ready or could not be finished, even while the App is closed, and
 explains what this involves before iOS asks for permission. Only if you allow
 notifications does the App send this iPhone's push-notification token, with
@@ -145,11 +147,14 @@ the App is open, it asks us to delete the token. Ordering, collecting, and
 listening to books work without notifications. See the [Privacy
 Policy](privacy-policy.html), Section 5.
 
-**Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." In the current version of the App, our server refuses texts for narration in which it detects personal or sensitive data. Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
+**Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." In App version 1.3.1 and later, our server refuses texts for narration in which it detects personal or sensitive data. Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
 works offline, never sends the text anywhere, and does not use hours.
 
 **Your copy and our server.** As soon as the App confirms that it has saved
-every chapter, we delete the book from our server and cannot send it again.
+every chapter, we delete our working server copy of the book and cannot
+deliver it again. Provider copies, content reports, and legally preserved
+materials follow the separate retention periods in [Privacy
+Policy](privacy-policy.html) Sections 6.3–6.4.
 The App keeps the book on your device and, if iCloud is available and the save
 succeeds, in your private iCloud. Use **Export to Files** for your own backup.
 An order without that confirmation within seven days expires and is deleted at
@@ -172,7 +177,9 @@ Settings → Privacy → **Request data deletion**, after you confirm, asks our
 service to delete the data it keeps for your subscription; books on your
 iPhone are not touched. If no subscription is found on the iPhone or the
 service does not respond, the App offers to prepare an email to
-contact@ownplace.net with your subscription identifier, if it has one. What
+contact@ownplace.net with your subscription identifier, if it has one. If
+the App shows "Almost done", tap "Request data deletion" again in a few
+minutes to finish. What
 deletion covers, and which records are kept, is described in Section 10 of
 the [Privacy Policy](privacy-policy.html). You can also ask for access,
 correction, or deletion by email ("Talefall: privacy request"). See also the
@@ -185,7 +192,9 @@ On first launch the App asks whether it may send a few anonymous counters
 (for example, that the App opened or that an import failed); the default is
 no. You can change your answer any time in Settings → Privacy → "Send
 anonymous counters". Counters contain no book titles, text, file names, or
-identifier of you or your device, and are deleted after 90 days. See the
+identifier of you or your device, and are deleted by scheduled cleanup after
+90 days; cleanup normally runs every 15 minutes and retries failed deletions.
+See the
 [Privacy Policy](privacy-policy.html), Section 8.
 
 ## Importing Audiobooks
@@ -205,9 +214,11 @@ Project Gutenberg identify as public-domain or lawfully available.
 
 ## Your Files and Backups
 
-Your library, bookmarks, and statistics stay on your device and in your own
-backups. We keep no copies and cannot restore deleted local content; keep
-backups of your original files.
+Your local library, bookmarks, and listening statistics stay on your device
+and in your own backups. We cannot restore deleted local content; keep
+backups of your original files. Content submitted to or generated by our
+service follows the retention rules described above and in the [Privacy
+Policy](privacy-policy.html).
 
 ## Copyright Complaints
 
