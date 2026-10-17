@@ -1,6 +1,6 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: 16 de octubre de 2026**
+**Fecha de entrada en vigor: 17 de octubre de 2026**
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -1030,9 +1030,14 @@ actividad.
 - **Presentar una solicitud de privacidad:** acceso, una copia, rectificación, eliminación, o una
   solicitud para que dejemos de recopilar, compartir o vender sus datos de salud del consumidor:
   escriba a contact@ownplace.net con el asunto «Talefall: privacy
-  request» (el botón «Solicitar eliminación de datos» en Ajustes de la App, en
-  Privacidad, prepara un correo de eliminación con el asunto «Talefall: data deletion
-  request» y el identificador de transacción original de su suscripción). Incluya
+  request». En las versiones 1.3 y posteriores de la App, el botón «Solicitar
+  eliminación de datos» (Ajustes → Privacidad) solicita la eliminación
+  directamente a nuestro servicio después de que usted lo confirme y, si no se
+  puede identificar su suscripción o la solicitud falla, ofrece como alternativa
+  un correo (asunto «Talefall: data deletion request», con el identificador de
+  transacción original de su suscripción si la App puede encontrarlo). Si la App
+  muestra «Casi listo», vuelva a tocar «Solicitar eliminación de datos» en unos
+  minutos para terminar. Incluya
   ese identificador si lo tiene; nos ayuda a encontrar sus registros. El identificador por sí solo no es prueba de legitimación, de modo que
   antes de divulgar o eliminar datos podemos pedir una prueba proporcionada a la
   solicitud, como un recibo de Apple de la suscripción. Las personas que no
@@ -1313,7 +1318,9 @@ amplía por sí solo un permiso anterior. Antes de habilitar una nueva vía de I
 cambiar sustancialmente su tratamiento, también actualizamos nuestra evaluación de
 protección de datos (Política de privacidad de datos de salud del consumidor, A9).
 
-**Cambios en esta edición (16 de octubre de 2026).** Notificaciones «libro listo»: si usted permite las notificaciones de Talefall, la App envía a nuestro servicio el token de notificaciones push del dispositivo, que conservamos vinculado al identificador de la suscripción durante los plazos de la sección 6.2, y Apple Push Notification service entrega la notificación (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 14A, 17 y 18). Si ya permitió las notificaciones de Talefall, la App actualizada aplaza el registro inicial del token hasta su próximo pedido de libro y espera a que pulse «OK» en un aviso dentro de la aplicación antes de enviar el token, siempre que las notificaciones sigan permitidas en iOS (sección 5). Puede desactivar las notificaciones en Ajustes de iOS en cualquier momento, y entonces la App nos pide que eliminemos el token. Contadores de hitos anónimos separados, que se envían solo con el permiso de contadores de uso que usted ya haya dado (sección 8). Recuentos diarios agregados del funcionamiento del servicio, sin identificadores de usuario ni contenido, conservados también en un Mac de acceso restringido controlado por OWN PLACE LLC durante 30 días (sección 9). En el aviso de privacidad para México (sección 14A) se actualizó además la lista de encargados conforme al permiso vigente 2026-10-14.1. Esta edición no cambia el permiso del proveedor de IA, sus destinatarios ni sus condiciones.
+**Cambios en esta edición (17 de octubre de 2026).** La sección 10 describe ahora cómo funciona el botón «Solicitar eliminación de datos» en las versiones 1.3 y posteriores de la App: después de que usted lo confirme, solicita la eliminación directamente a nuestro servicio; el correo es una alternativa si no se puede identificar su suscripción o la solicitud falla; y «Casi listo» significa que debe volver a tocar el botón en unos minutos. El texto anterior decía que el botón solo prepara un correo de eliminación. Nada más cambia en esta Política.
+
+**Cambios en la edición del 16 de octubre de 2026.** Notificaciones «libro listo»: si usted permite las notificaciones de Talefall, la App envía a nuestro servicio el token de notificaciones push del dispositivo, que conservamos vinculado al identificador de la suscripción durante los plazos de la sección 6.2, y Apple Push Notification service entrega la notificación (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 14A, 17 y 18). Si ya permitió las notificaciones de Talefall, la App actualizada aplaza el registro inicial del token hasta su próximo pedido de libro y espera a que pulse «OK» en un aviso dentro de la aplicación antes de enviar el token, siempre que las notificaciones sigan permitidas en iOS (sección 5). Puede desactivar las notificaciones en Ajustes de iOS en cualquier momento, y entonces la App nos pide que eliminemos el token. Contadores de hitos anónimos separados, que se envían solo con el permiso de contadores de uso que usted ya haya dado (sección 8). Recuentos diarios agregados del funcionamiento del servicio, sin identificadores de usuario ni contenido, conservados también en un Mac de acceso restringido controlado por OWN PLACE LLC durante 30 días (sección 9). En el aviso de privacidad para México (sección 14A) se actualizó además la lista de encargados conforme al permiso vigente 2026-10-14.1. Esta edición no cambia el permiso del proveedor de IA, sus destinatarios ni sus condiciones.
 
 **Cambio sustancial en la edición del 14 de octubre de 2026.** Con la versión del permiso 2026-10-14.1, OpenAI (OpenAI OpCo, LLC) es el único proveedor externo de modelos de IA que usamos directamente, a través de la API de OpenAI con nuestro propio contrato y el anexo de tratamiento de datos de OpenAI; no enviamos estos pedidos a través de OpenRouter ni de otra pasarela de IA; OpenAI puede tratar el contenido a través de sus filiales y subencargados publicados conforme a su DPA, y nuestro proveedor de alojamiento Modal también trata el contenido del pedido (secciones 6.3.2 y 6.3.3): sin entrenar modelos, sin venta y sin uso publicitario; OpenAI puede conservar las solicitudes hasta 30 días, y más tiempo solo cuando la ley lo exija o para proteger frente a daños, sin un único máximo; procesamiento en varios países, pero sin elegir destinatarios ni rutas en China (incluidas Hong Kong y Macao) ni en otro país de preocupación según la ley de EE. UU. Con ella, los libros los escribe el modelo GPT-6.1 Sol en la API de OpenAI. La clasificación anónima de temas de OpenRouter no se aplica a los pedidos con este permiso. Para saber dónde se realiza el tratamiento nos basamos en los documentos publicados de OpenAI. Estas condiciones se aplican solo a los pedidos hechos con ese permiso; los permisos anteriores conservan sus vías a través de OpenRouter (sección 6.3.5). Las versiones actualizadas de la App obtienen el permiso 2026-10-14.1 antes del próximo pedido de libro y exigen la aceptación de la versión 2026-10-14.1 de los Términos.
 
@@ -1321,6 +1328,10 @@ protección de datos (Política de privacidad de datos de salud del consumidor, 
 
 **Registro de cambios.**
 
+- **17 de octubre de 2026:** sección 10 corregida para describir la solicitud
+  de eliminación desde la App en las versiones 1.3 y posteriores (solicitud
+  directa a nuestro servicio tras la confirmación, alternativa por correo y
+  repetición de la solicitud tras «Casi listo»). Sin otros cambios.
 - **16 de octubre de 2026:** notificaciones «libro listo»: el token de
   notificaciones push del dispositivo, su conservación y eliminación, y Apple Push
   Notification service como destinatario (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10,

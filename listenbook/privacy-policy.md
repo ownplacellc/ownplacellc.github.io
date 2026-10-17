@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 16, 2026**
+**Effective Date: October 17, 2026**
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -1025,9 +1025,13 @@ other activity.
 - **Make a privacy request** — access, a copy, correction, deletion, or a
   request that we stop collecting, sharing, or selling your consumer health
   data: email contact@ownplace.net with the subject "Talefall: privacy
-  request" (the "Request data deletion" button in the App's Settings, under
-  Privacy, prepares a deletion email with the subject "Talefall: data deletion
-  request" and your subscription's original transaction identifier). Include
+  request". In App versions 1.3 and later, Settings → Privacy → "Request data
+  deletion" requests deletion directly from our service after you confirm, and
+  offers an email fallback (subject "Talefall: data deletion request", with your
+  subscription's original transaction identifier if the App can find it) if
+  your subscription cannot be identified or the request fails. If the App
+  shows "Almost done", tap "Request data deletion" again in a few minutes to
+  finish. Include
   that identifier if you have it; it helps us find your records. The identifier alone is not proof of authority, so
   before disclosing or deleting data we may ask for proof proportionate to the
   request, such as an Apple receipt for the subscription. People who do not
@@ -1235,7 +1239,9 @@ updating this Policy alone does not expand an earlier permission. Before
 enabling a new AI route or materially changing its processing, we also update
 our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
-**Changes in this edition (October 16, 2026).** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you previously allowed Talefall notifications, the updated App defers initial token registration until your next book order and waits for you to tap “OK” in an in-app notice before sending the token, provided notifications remain allowed in iOS (Section 5). You can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
+**Changes in this edition (October 17, 2026).** Section 10 now describes how the "Request data deletion" button works in App versions 1.3 and later: after you confirm, it requests deletion directly from our service; email is a fallback if your subscription cannot be identified or the request fails; and "Almost done" means you should tap the button again in a few minutes. The earlier text said that the button only prepares a deletion email. Nothing else in this Policy changes.
+
+**Changes in the October 16, 2026 edition.** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you previously allowed Talefall notifications, the updated App defers initial token registration until your next book order and waits for you to tap “OK” in an in-app notice before sending the token, provided notifications remain allowed in iOS (Section 5). You can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
 
 **Material change in the October 14, 2026 edition.** Under permission version 2026-10-14.1 OpenAI (OpenAI OpCo, LLC) is the only external AI model provider we use directly, through the OpenAI API under our own contract and OpenAI's data processing addendum; we do not route these orders through OpenRouter or another AI gateway; OpenAI may process content through its published affiliates and subprocessors under its DPA, and our hosting provider Modal also processes order content (Sections 6.3.2 and 6.3.3): no model training, no sale and no advertising; OpenAI may keep requests up to 30 days, and longer only where the law requires or to protect against harm, with no single maximum; processing in several countries, but no recipient or route chosen in China (including Hong Kong and Macau) or another country of concern under US law. Under it, books are written by the GPT-6.1 Sol model in the OpenAI API. OpenRouter's anonymous topic classification does not apply to orders under this permission. We rely on OpenAI's published documents for where processing takes place. These conditions apply only to orders placed under that permission; earlier permissions keep their routes through OpenRouter (Section 6.3.5). Updated versions of the App obtain permission 2026-10-14.1 before the next book order and require acceptance of Terms version 2026-10-14.1.
 
@@ -1243,6 +1249,10 @@ our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
 **Change log.**
 
+- **October 17, 2026:** Section 10 corrected to describe the in-app deletion
+  request in App versions 1.3 and later (a direct request to our service after
+  confirmation, an email fallback, and repeating the request after "Almost
+  done"). No other changes.
 - **October 16, 2026:** "book ready" notifications — the device's
   push-notification token, its storage and deletion, and Apple Push
   Notification service as a recipient (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10,
