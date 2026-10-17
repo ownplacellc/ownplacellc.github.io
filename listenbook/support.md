@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Support
 
-**Last updated: October 14, 2026**
+**Last updated: October 17, 2026**
 
 **Talefall — Audiobook Player** by OWN PLACE LLC, 7707 NE 141st St, Kirkland,
 WA 98034-5321, USA
@@ -71,38 +71,49 @@ write to contact@ownplace.net.
    are 18 or older and accept the [Terms of Use](terms-of-use.html) and
    [Privacy Policy](privacy-policy.html).
 2. **Permission.** Before your first book order the App asks permission to
-   send your ideas, book settings, and working text to AI providers to write
-   your books. In plain words, the current permission (version 2026-10-13.1)
-   means:
-   - your content is used only to write the book you ordered and for the
-     providers' service operations — including OpenRouter's anonymous topic
-     classification for reporting and model rankings — security, abuse
-     prevention and legal compliance; no one trains models on it;
-   - providers may cache it, and may keep it for abuse prevention, security
-     or legal requirements within their published limits; some maximum
-     periods and reviewer countries are not published;
-   - authorized provider staff may access content for the purposes and
-     within the recipient-specific restrictions described in Privacy Policy
-     Sections 6.3.2–6.3.3, including OpenRouter personnel performing its
-     routing service;
-   - processing and staff access may occur outside the United States;
-   - providers may change within these safeguards; anything broader needs
-     your new permission;
-   - fiction only, 18+: do not enter real personal or health information.
+   send your ideas, book settings, and working text to an AI provider to
+   write your books. In plain words, the permission in the current version of
+   the App (version 2026-10-14.1) means:
+   - your content goes to **OpenAI (OpenAI OpCo, LLC)**, which we use
+     directly through the OpenAI API under our own contract and data
+     processing addendum with OpenAI — not through OpenRouter or another AI
+     gateway; OpenAI may process it through its published affiliates and
+     subprocessors, and our hosting provider Modal also processes order
+     content;
+   - no model training, no sale, no advertising; it is used only for the
+     requested service, support, security, abuse prevention and legal
+     compliance;
+   - OpenAI may keep requests for up to 30 days to provide the service and
+     detect abuse, and longer only where the law requires or to protect
+     against harm; there is no single maximum;
+   - processing and access by authorized OpenAI staff or contractors may
+     occur in several countries; we do not choose China or another country of
+     concern under U.S. law; OpenAI's published information names none of
+     them, but it is not a complete list of processing locations;
+   - the OpenAI model may change within these conditions; another AI
+     provider, a gateway, or broader purposes, retention or human access
+     needs your new permission;
+   - fiction only: do not enter real personal or health information.
 
-   The screen lists the AI providers: OpenRouter and the model providers it
-   routes to, Amazon Web Services (Amazon Bedrock), Microsoft (Azure), Google
-   (Google Cloud, Vertex AI), Anthropic, and OpenAI. **Right now:** Today, books under permission 2026-10-13.1 are written by the GPT-6 Luna model on Microsoft Azure through OpenRouter's United States domain; Amazon Bedrock meets that permission's conditions but is not enabled, and the GLM route is not used under it. Earlier permissions continue on the routes they named.
-   The full list of recipients, with countries, retention, caching, human
-   access and disclosed exceptions, is in the [Privacy Policy](privacy-policy.html), Section 6.3
-   ("AI providers, countries & retention"), which also quotes the screen word
-   for word. "Not Now" sends no order content to AI providers. **To
-   withdraw**, turn the permission off in Settings; this also stops AI
-   processing of orders still in progress. If you allowed an earlier version
-   of this permission, an updated version of the App asks again before your
-   next book order; until then, orders from older versions go only to the
-   routes that earlier permission named — today the GLM model's hosts through
-   OpenRouter with zero data retention.
+   The screen names one AI provider: OpenAI (OpenAI OpCo, LLC), directly.
+   **Right now:** books under permission 2026-10-14.1 are written by the
+   GPT-6.1 Sol model in the OpenAI API. The details, with countries,
+   retention, caching, human access and disclosed exceptions, are in the
+   [Privacy Policy](privacy-policy.html), Section 6.3 ("AI providers,
+   countries & retention"), which also quotes the screen word for word.
+   "Not Now" sends no order content to OpenAI. **To withdraw**, turn off
+   "Sending ideas to create books" in Settings; this also stops AI processing
+   of orders still in progress, and hours for unfinished orders are restored
+   under Section 4.2 of the [Terms of Use](terms-of-use.html).
+
+   **Earlier permissions and earlier versions of the App.** If you answered
+   an earlier version of this permission, the current version of the App asks
+   again before your next book order. Orders placed under an earlier
+   permission are processed only as that permission promised, on its routes
+   through OpenRouter; for example, App version 1.3 (permission 2026-10-08)
+   sends orders only to the GLM model through OpenRouter, on hosting
+   providers with zero data retention. See [Privacy
+   Policy](privacy-policy.html) Sections 6.3.4–6.3.5.
 3. **Your idea.** Choose a type (Story, Explainer, How-to), language, and
    length. **Do not include personal data about real people, including
    yourself.** Turn on "My idea contains no personal data about real people";
@@ -118,7 +129,23 @@ write to contact@ownplace.net.
    audio. If the order ends with any chapter undelivered, all hours for the
    order are restored ([Terms of Use](terms-of-use.html), Section 4.2).
 
-**Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
+**"Book ready" notifications (optional).** In the current version of the
+App, when you place your first book order, the App offers to notify you when
+a book is ready or could not be finished, even while the App is closed, and
+explains what this involves before iOS asks for permission. Only if you allow
+notifications does the App send this iPhone's push-notification token, with
+your signed subscription transaction, to our service on Modal (USA), which
+stores it linked to your subscription identifier. Apple delivers the
+notification: we send Apple only the token and a standard book-status
+message, with no subscription identifier and nothing from your book. If you
+already allow Talefall notifications, the App shows this notice at your next
+book order and sends the token only after you tap "OK". To stop, turn
+notifications off in iOS Settings → Notifications → Talefall; the next time
+the App is open, it asks us to delete the token. Ordering, collecting, and
+listening to books work without notifications. See the [Privacy
+Policy](privacy-policy.html), Section 5.
+
+**Narrate your own text.** For a book created from your idea, the App reuses the confirmation given when you placed that order for narration of the resulting book; it does not ask you to confirm again. For another book without that confirmation, before its first narration in the Talefall voice you confirm "This text has no real person's information." In the current version of the App, our server refuses texts for narration in which it detects personal or sensitive data. Narration in the Talefall voice goes to our own narrator on our service and uses hours. The on-device Apple voice
 works offline, never sends the text anywhere, and does not use hours.
 
 **Your copy and our server.** As soon as the App confirms that it has saved
@@ -141,11 +168,25 @@ professional advice.
 
 ## Privacy Requests
 
-Settings → Privacy → **Request data deletion** prepares an email to
-contact@ownplace.net with your subscription identifier. You can also ask for
-access or correction by email. See the [Privacy Policy](privacy-policy.html)
-and the [Consumer Health Data Privacy
+Settings → Privacy → **Request data deletion**, after you confirm, asks our
+service to delete the data it keeps for your subscription; books on your
+iPhone are not touched. If no subscription is found on the iPhone or the
+service does not respond, the App offers to prepare an email to
+contact@ownplace.net with your subscription identifier, if it has one. What
+deletion covers, and which records are kept, is described in Section 10 of
+the [Privacy Policy](privacy-policy.html). You can also ask for access,
+correction, or deletion by email ("Talefall: privacy request"). See also the
+[Consumer Health Data Privacy
 Policy](consumer-health-data-privacy-policy.html).
+
+## Anonymous Usage Counters
+
+On first launch the App asks whether it may send a few anonymous counters
+(for example, that the App opened or that an import failed); the default is
+no. You can change your answer any time in Settings → Privacy → "Send
+anonymous counters". Counters contain no book titles, text, file names, or
+identifier of you or your device, and are deleted after 90 days. See the
+[Privacy Policy](privacy-policy.html), Section 8.
 
 ## Importing Audiobooks
 
