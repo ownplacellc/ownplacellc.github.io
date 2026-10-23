@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: [PUBLICATION DATE], 2026**
+**Effective Date: October 22, 2026**
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -1459,7 +1459,7 @@ updating this Policy alone does not expand an earlier permission. Before
 enabling a new AI route or materially changing its processing, we also update
 our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
-**Changes in this edition ([PUBLICATION DATE], 2026; App version 1.3.2).** First book on us: without a subscription you can order one AI book of about 15 minutes; the App sends the Apple-signed record of your download (AppTransaction), our server keeps the app transaction identifier with that order the way it keeps the subscription identifier, and keeps a keyed hash of it so the gift is given only once (Sections 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 15, 17 and 18, and the privacy notice for Mexico in Section 14A of the Spanish version). "Book ready" notifications: the token may also be linked to the app transaction identifier, and a silent background signal, containing only the kind "ready", lets the App collect a ready book in the background (Sections 2, 5, 6.2, 6.3.3, 9 and 17). Classics shelf: the App automatically requests the cover images of the suggested classics from the Internet Archive while the shelf is shown on the My Books page, U.S. storefront only (Sections 2, 4, 5, 10 and 17). Usage counters: new step names, the file type of successful imports, the distribution channel in session counters, the build and week of the first launch in milestone counters, and a clearer description of what the App holds before you answer (Sections 4, 5 and 8). The player needs no purchase: the trial and its date are no longer used, and the App no longer offers new player or extra-hours purchases (Sections 4, 5, 6.4, 7, 15 and 17). The AI-provider permission (version 2026-10-14.1), its recipients and its conditions are unchanged.
+**Changes in this edition (October 22, 2026; App version 1.3.2).** First book on us: without a subscription you can order one AI book of about 15 minutes; the App sends the Apple-signed record of your download (AppTransaction), our server keeps the app transaction identifier with that order the way it keeps the subscription identifier, and keeps a keyed hash of it so the gift is given only once (Sections 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 15, 17 and 18, and the privacy notice for Mexico in Section 14A of the Spanish version). "Book ready" notifications: the token may also be linked to the app transaction identifier, and a silent background signal, containing only the kind "ready", lets the App collect a ready book in the background (Sections 2, 5, 6.2, 6.3.3, 9 and 17). Classics shelf: the App automatically requests the cover images of the suggested classics from the Internet Archive while the shelf is shown on the My Books page, U.S. storefront only (Sections 2, 4, 5, 10 and 17). Usage counters: new step names, the file type of successful imports, the distribution channel in session counters, the build and week of the first launch in milestone counters, and a clearer description of what the App holds before you answer (Sections 4, 5 and 8). The player needs no purchase: the trial and its date are no longer used, and the App no longer offers new player or extra-hours purchases (Sections 4, 5, 6.4, 7, 15 and 17). The AI-provider permission (version 2026-10-14.1), its recipients and its conditions are unchanged.
 
 **Changes in the October 17, 2026 edition.** Section 10 now describes how the "Request data deletion" button works in App versions 1.3 and later: after you confirm, it requests deletion directly from our service; email is a fallback if your subscription cannot be identified or the request fails; and "Almost done" means you should tap the button again in a few minutes. The earlier text said that the button only prepares a deletion email. Nothing else in this Policy changes.
 
@@ -1471,7 +1471,7 @@ our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
 **Change log.**
 
-- **[PUBLICATION DATE], 2026** (App version 1.3.2): first book on us and the
+- **October 22, 2026** (App version 1.3.2): first book on us and the
   app transaction identifier (Section 6.1A and related sections); notification
   tokens linked to it and the silent "book ready" signal; automatic classics
   shelf cover requests to the Internet Archive; new usage-counter steps and

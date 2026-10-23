@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: [PUBLICATION DATE], 2026**
+**Effective Date: October 22, 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
@@ -369,7 +369,7 @@ Policy does not replace this assessment.
 
 We will update the Effective Date and post the new version here.
 
-**Changes in this edition ([PUBLICATION DATE], 2026; App version 1.3.2).**
+**Changes in this edition (October 22, 2026; App version 1.3.2).**
 The first book on us and its app transaction identifier (introduction, A2,
 A3, A6, A7); deletion requests from the App under both Apple-signed records,
 with email as a fallback (A8); retention of the first book on us records

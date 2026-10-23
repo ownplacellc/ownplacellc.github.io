@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Política de privacidad de datos de salud del consumidor
 
-**Fecha de entrada en vigor: [FECHA DE PUBLICACIÓN] de 2026**
+**Fecha de entrada en vigor: 22 de octubre de 2026**
 
 Esta es una traducción.
 
@@ -313,7 +313,7 @@ privacidad no sustituye esta evaluación.
 
 Actualizaremos la fecha de entrada en vigor y publicaremos aquí la nueva versión.
 
-**Cambios en esta edición ([FECHA DE PUBLICACIÓN] de 2026; versión 1.3.2 de la
+**Cambios en esta edición (22 de octubre de 2026; versión 1.3.2 de la
 App).** El primer libro de regalo y su identificador de transacción de la app
 (introducción, A2, A3, A6, A7); solicitudes de eliminación desde la App con
 los dos registros firmados por Apple, con el correo como alternativa (A8);

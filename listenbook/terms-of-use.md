@@ -1,6 +1,6 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: [PUBLICATION DATE], 2026**
+**Effective Date: October 22, 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
@@ -659,7 +659,7 @@ post the new version at its public address; earlier versions are available on
 request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
 version before your next use of the Service; the October 14, 2026 edition
-(version 2026-10-14.1) was such a change. The [PUBLICATION DATE], 2026
+(version 2026-10-14.1) was such a change. The October 22, 2026
 edition keeps version 2026-10-14.1 and the AI-provider permission
 unchanged, and the App does not ask you to accept it again: it adds the
 first book on us (Section 4.0), makes the player free of any purchase, and,

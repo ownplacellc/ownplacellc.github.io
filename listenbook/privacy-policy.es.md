@@ -1,6 +1,6 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: [FECHA DE PUBLICACIÓN] de 2026**
+**Fecha de entrada en vigor: 22 de octubre de 2026**
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -1573,7 +1573,7 @@ amplía por sí solo un permiso anterior. Antes de habilitar una nueva vía de I
 cambiar sustancialmente su tratamiento, también actualizamos nuestra evaluación de
 protección de datos (Política de privacidad de datos de salud del consumidor, A9).
 
-**Cambios en esta edición ([FECHA DE PUBLICACIÓN] de 2026; versión 1.3.2 de la App).** Primer libro de regalo: sin suscripción, puede pedir un libro con IA de unos 15 minutos; la App envía el registro de su descarga de la App firmado por Apple (AppTransaction), nuestro servidor conserva el identificador de transacción de la app con ese pedido como conserva el identificador de la suscripción, y conserva un hash con clave de él para que el regalo se dé una sola vez (secciones 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 14A, 15, 17 y 18). Notificaciones «libro listo»: el token puede quedar vinculado también al identificador de transacción de la app, y una señal silenciosa en segundo plano, que contiene solo el tipo «listo», permite a la App recoger un libro listo en segundo plano (secciones 2, 5, 6.2, 6.3.3, 9 y 17). Estantería de clásicos: la App solicita automáticamente a Internet Archive las imágenes de portada de los clásicos sugeridos mientras la estantería se muestra en la página Mis libros, solo en la tienda de EE. UU. (secciones 2, 4, 5, 10 y 17). Contadores de uso: nuevos nombres de pasos, el tipo de archivo de las importaciones correctas, el canal de distribución en los contadores de sesión, la compilación y la semana del primer inicio en los hitos, y una descripción más precisa de lo que la App guarda antes de que usted responda (secciones 4, 5 y 8). El reproductor no requiere compra: la prueba y su fecha ya no se usan, y la App ya no ofrece nuevas compras del reproductor ni de horas adicionales (secciones 4, 5, 6.4, 7, 15 y 17). El permiso del proveedor de IA (versión 2026-10-14.1), sus destinatarios y sus condiciones no cambian.
+**Cambios en esta edición (22 de octubre de 2026; versión 1.3.2 de la App).** Primer libro de regalo: sin suscripción, puede pedir un libro con IA de unos 15 minutos; la App envía el registro de su descarga de la App firmado por Apple (AppTransaction), nuestro servidor conserva el identificador de transacción de la app con ese pedido como conserva el identificador de la suscripción, y conserva un hash con clave de él para que el regalo se dé una sola vez (secciones 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 14A, 15, 17 y 18). Notificaciones «libro listo»: el token puede quedar vinculado también al identificador de transacción de la app, y una señal silenciosa en segundo plano, que contiene solo el tipo «listo», permite a la App recoger un libro listo en segundo plano (secciones 2, 5, 6.2, 6.3.3, 9 y 17). Estantería de clásicos: la App solicita automáticamente a Internet Archive las imágenes de portada de los clásicos sugeridos mientras la estantería se muestra en la página Mis libros, solo en la tienda de EE. UU. (secciones 2, 4, 5, 10 y 17). Contadores de uso: nuevos nombres de pasos, el tipo de archivo de las importaciones correctas, el canal de distribución en los contadores de sesión, la compilación y la semana del primer inicio en los hitos, y una descripción más precisa de lo que la App guarda antes de que usted responda (secciones 4, 5 y 8). El reproductor no requiere compra: la prueba y su fecha ya no se usan, y la App ya no ofrece nuevas compras del reproductor ni de horas adicionales (secciones 4, 5, 6.4, 7, 15 y 17). El permiso del proveedor de IA (versión 2026-10-14.1), sus destinatarios y sus condiciones no cambian.
 
 **Cambios en la edición del 17 de octubre de 2026.** La sección 10 describe ahora cómo funciona el botón «Solicitar eliminación de datos» en las versiones 1.3 y posteriores de la App: después de que usted lo confirme, solicita la eliminación directamente a nuestro servicio; el correo es una alternativa si no se puede identificar su suscripción o la solicitud falla; y «Casi listo» significa que debe volver a tocar el botón en unos minutos. El texto anterior decía que el botón solo prepara un correo de eliminación. Nada más cambia en esta Política.
 
@@ -1585,7 +1585,7 @@ protección de datos (Política de privacidad de datos de salud del consumidor, 
 
 **Registro de cambios.**
 
-- **[FECHA DE PUBLICACIÓN] de 2026** (versión 1.3.2 de la App): primer libro de
+- **22 de octubre de 2026** (versión 1.3.2 de la App): primer libro de
   regalo e identificador de transacción de la app (sección 6.1A y secciones
   relacionadas, incluido el aviso para México de la sección 14A); tokens de
   notificación vinculados a él y la señal silenciosa de «libro listo»;
