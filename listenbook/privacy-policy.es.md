@@ -1,6 +1,6 @@
 # Política de privacidad de Talefall — Audiobook Player
 
-**Fecha de entrada en vigor: 17 de octubre de 2026**
+**Fecha de entrada en vigor: [FECHA DE PUBLICACIÓN] de 2026**
 
 **Responsable del tratamiento:** OWN PLACE LLC, sociedad de responsabilidad limitada de Washington, 7707 NE
 141st St, Kirkland, WA 98034-5321, EE. UU. Correo electrónico: contact@ownplace.net.
@@ -19,6 +19,11 @@ funciones de servidor, ambas en la pestaña Crear de la App (en conjunto, el
   lo narra con nuestro propio modelo narrador.
 - **Narrar mi texto con la voz de Talefall:** nuestro modelo narrador lee en voz alta un
   libro en formato de texto que usted ya tiene.
+
+Desde la versión 1.3.2 de la App, el reproductor y el lector no requieren
+compra. Sin suscripción, también puede pedir un libro con IA de unos 15
+minutos de regalo (el «primer libro de regalo», sección 6.1A); usa el mismo
+Servicio.
 
 Esta Política explica qué sale de su dispositivo cuando usa esas funciones,
 adónde va, por qué, cuánto tiempo se conserva y qué nunca sale de su
@@ -53,8 +58,10 @@ residencia.
   marcadores, notas, estadísticas y ajustes permanecen en su dispositivo y en sus
   propias copias de seguridad de iCloud o del dispositivo.
 - **Si no usa el Servicio, no se nos envía ningún contenido de su
-  biblioteca.** La App sigue contactando con Apple y, cuando usted los abre, con los
-  proveedores de catálogos (sección 5).
+  biblioteca.** La App sigue contactando con Apple; con Internet Archive,
+  automáticamente, para obtener las imágenes de portada de los clásicos sugeridos
+  mientras esa estantería se muestra en la página Mis libros (solo en la tienda de
+  EE. UU.); y, cuando usted los abre, con los proveedores de catálogos (sección 5).
 - **El Servicio es opcional.** Cuando usted pide un libro, su idea va a nuestro
   servicio en Modal (EE. UU.). Nuestro servidor primero la revisa en busca de datos
   personales y sensibles y de contenido prohibido. Para escribir el libro, se envía
@@ -100,10 +107,18 @@ residencia.
   siguen los plazos propios de la sección 6.4.
 - **Su suscripción se identifica por la transacción firmada de Apple, no por
   usted** (sección 6.1).
-- **Contadores de uso solo si usted dice que sí**; por defecto es no (sección 8).
+- **Primer libro de regalo.** Sin suscripción, puede pedir un libro con IA de
+  unos 15 minutos. Para darlo una sola vez por cuenta de Apple, la App envía un
+  registro de su descarga de la App firmado por Apple, y nuestro servidor
+  conserva su identificador de transacción de la app con ese pedido y un hash
+  con clave de ese identificador para impedir que se pida de nuevo (sección 6.1A).
+- **Contadores de uso solo si usted dice que sí**; no se envía nada hasta que
+  usted los permita (sección 8).
 - **Notificaciones «libro listo» solo si usted permite las notificaciones.**
   En ese caso, la App envía a nuestro servicio el token de notificaciones push
-  del dispositivo, y Apple entrega la notificación (secciones 5 y 6.2).
+  del dispositivo, y Apple entrega la notificación y, cuando un libro está
+  listo, una señal silenciosa que permite a la App recoger el libro en segundo
+  plano (secciones 5 y 6.2).
 - **Sin rastreo, sin anuncios, sin identificador publicitario, sin SDK de analítica de terceros.**
   No vendemos información personal ni la compartimos para publicidad conductual
   entre contextos; solo la divulgamos a los destinatarios descritos en la sección 6.3.
@@ -112,11 +127,19 @@ residencia.
 
 A través de la App no solicitamos, y la App no nos envía, su nombre,
 dirección de correo electrónico, número de teléfono, contactos, fotos, ubicación precisa, historial de
-navegación ni identificador publicitario, y ningún identificador del dispositivo
-salvo el token de notificaciones push descrito en la sección 5, que la App envía
-solo si usted permite las notificaciones de Talefall (y, si las desactiva, lo
-vuelve a enviar solo para pedirnos que lo eliminemos, repitiendo la solicitud
-hasta que nuestro servicio la confirme). No recopilamos
+navegación ni identificador publicitario; no usamos el identificador
+publicitario. La App envía un token de notificaciones push solo como se describe
+en la sección 5 y solo si usted permite las notificaciones de Talefall (y, si
+las desactiva, lo vuelve a enviar solo para pedirnos que lo eliminemos,
+repitiendo la solicitud hasta que nuestro servicio la confirme). Para el primer
+libro de regalo, la App envía el registro completo de su descarga de la App
+firmado por Apple (AppTransaction), incluidos los valores de verificación del
+dispositivo que contenga, solo en las solicitudes descritas en la sección 6.1A;
+contiene el identificador de transacción de la app de Apple, que identifica la
+descarga de la App por su cuenta de Apple, y puede contener otra información
+aportada por Apple, como datos de adquisición y versión de la App y fechas de
+firma. De él solo conservamos el identificador de transacción de la app y el
+entorno. No recopilamos
 su historial de reproducción, marcadores, notas ni resaltados, ni títulos ni texto de
 su biblioteca, salvo que usted envíe deliberadamente un texto para narrarlo con la
 voz de Talefall. No solicitamos información de salud y no inferimos
@@ -153,11 +176,27 @@ y no se envía a ninguna parte.
   el dispositivo y no usa el Servicio.
 - **Conversión de formatos de audio en el dispositivo.**
 - El **audiolibro de muestra incluido**, que se reproduce sin conexión a la red.
-- La **fecha de inicio de la prueba**, almacenada en el llavero de iOS y en el almacén
-  de clave-valor de iCloud para que reinstalar no reinicie la prueba. Contiene
-  solo una fecha y puede sobrevivir a la eliminación de la App.
+- **Fecha de inicio de la prueba de versiones anteriores.** Las versiones
+  anteriores a la 1.3.2 almacenaban una fecha de inicio de la prueba en el llavero
+  de iOS y en el almacén de clave-valor de iCloud. Desde la versión 1.3.2 el
+  reproductor no requiere compra ni prueba, y la App ya no lee ni escribe esa
+  fecha. La App no elimina una fecha ya almacenada, que puede permanecer; contiene
+  solo una fecha y no se nos envía.
 - Su **respuesta sobre los contadores de uso**, y una copia local de su aceptación de los Términos
   y del permiso del proveedor de IA para que la App no vuelva a preguntar sin necesidad.
+- **Datos auxiliares de los contadores** (sección 8): si se trata de una
+  instalación nueva, la compilación de la App, el canal de distribución, la
+  semana del calendario y la hora del primer inicio, que la App guarda en el
+  dispositivo incluso antes de que usted responda a la pregunta sobre los
+  contadores; y, una vez que usted los permite, los hitos ya enviados o
+  pendientes de envío y el tiempo de escucha acumulado para el hito de cinco
+  minutos. Solo se envían como se describe en la sección 8, y solo si usted
+  permite los contadores. La hora del primer inicio nunca se envía.
+- **Estantería de clásicos:** las imágenes de portada de los clásicos sugeridos
+  guardadas en caché y si usted ocultó la estantería o algunos de sus libros.
+- La **hora en que pidió el primer libro de regalo**, para que durante 8 días la
+  App adjunte el registro de su descarga a las solicitudes indicadas en la
+  sección 6.1A.
 - Los libros entregados por el Servicio, en el dispositivo y, si iCloud está disponible
   y el guardado tiene éxito, en su almacenamiento privado de iCloud, al que no podemos
   acceder.
@@ -166,28 +205,45 @@ y no se envía a ninguna parte.
 
 Cada conexión expone necesariamente su dirección IP y los datos ordinarios de conexión
 al servicio que la recibe. Las funciones opcionales no envían nada hasta que
-usted las usa.
+usted las usa, salvo las portadas de la estantería de clásicos descritas en la
+tabla.
 
 | Función | Qué se envía | A quién | Por qué | Cuánto tiempo |
 |---|---|---|---|---|
 | **Búsqueda de portadas** (Ajustes → «Buscar portadas en línea», desactivada hasta que usted la active) | Título y autor de un libro sin portada | API de búsqueda de iTunes de Apple | Para encontrar una imagen de portada | No la recibimos nosotros |
-| **Catálogos** (solo cuando usted los abre) | Su texto de búsqueda y las solicitudes de descarga | LibriVox, Internet Archive, Project Gutenberg / Gutendex | Para explorar y descargar libros de dominio público | No lo recibimos nosotros |
+| **Portadas de la estantería de clásicos** (automático mientras se muestra la estantería de clásicos sugeridos «Empieza a escuchar» en la página Mis libros — para usuarios nuevos y existentes, también tras actualizar a la versión 1.3.2; solo en la tienda de App Store de EE. UU., que la App consulta a Apple en el dispositivo y no envía; no se solicitan si oculta la estantería o si la imagen ya está en la caché del dispositivo) | Una solicitud HTTPS simple de un archivo de imagen de portada de dominio público, en una sesión efímera separada que no usa cookies almacenadas previamente por la App. Talefall no le añade ningún identificador, tienda ni idioma; Internet Archive recibe necesariamente su dirección IP, los datos ordinarios de la conexión (como el agente de usuario del sistema y la hora) y qué archivo de portada se pidió | Internet Archive (archive.org, EE. UU.) | Para mostrar las portadas de LibriVox de los clásicos sugeridos; las imágenes se guardan en la caché de su dispositivo. No depende de «Buscar portadas en línea» | OWN PLACE LLC no lo recibe. Internet Archive trata los datos de conexión conforme a su propia política de privacidad; no controlamos cuánto los conserva |
+| **Catálogos** (solo cuando usted los abre, o cuando empieza un libro desde la estantería de clásicos) | Su texto de búsqueda y las solicitudes de descarga (para un libro de la estantería de clásicos, las solicitudes de sus archivos de audio) | LibriVox, Internet Archive, Project Gutenberg / Gutendex | Para explorar y descargar libros de dominio público | No lo recibimos nosotros |
 | **Subida por Wi‑Fi** (solo cuando usted la activa) | Los archivos que usted elige | Desde el navegador de su computadora a su iPhone por su red local | Para copiar archivos al teléfono | No lo recibimos nosotros |
-| **Compras** | Solicitudes de compra y de restauración | Apple (StoreKit) | Para comprar el reproductor, suscribirse o comprar horas adicionales | Política de Apple; sección 7 |
-| **Fecha de prueba** | La fecha de inicio de la prueba | Almacén de clave-valor de iCloud de Apple | Para que reinstalar no reinicie la prueba | Su cuenta de iCloud |
-| **Permiso del proveedor de IA** | Si lo permitió o lo retiró, su versión y la hora, con la transacción de suscripción firmada (su aceptación de los Términos permanece en el dispositivo) | Nuestro servicio en Modal (EE. UU.) | Para que el Servicio escriba libros solo con su permiso | Sección 6.4 |
-| **Libro a partir de una idea** | Su idea, tipo de libro, idioma, extensión, la transacción de suscripción firmada, el token de servicio compartido de la App, una clave de pedido aleatoria, y la versión y la hora de su confirmación por pedido | Nuestro servicio en Modal (EE. UU.); la idea y el texto de trabajo se envían además al proveedor de IA (sección 6.3) | Para escribir y narrar el libro que usted pidió | Contenido: hasta que la App confirme que ha guardado todos los capítulos; si no, hasta que el pedido caduque a los 7 días (sección 6.4). Recibo: sección 6.4 |
-| **Narración con la voz de Talefall** (solo para un libro que usted confirmó) | El título del libro, el idioma y el texto de los capítulos, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para narrar ese libro | Igual que arriba |
-| **Narración de pasajes** (voz de Talefall, mientras escucha un libro confirmado) | El texto del pasaje y el idioma, con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para devolver el audio de ese pasaje | No lo almacena nuestra aplicación; solo se registran el número de caracteres y la duración del audio. Modal puede conservar las entradas y salidas de las funciones hasta 7 días |
-| **Recogida de libros** | Números de libro, confirmaciones de «guardado» por capítulo, solicitudes de eliminación o cancelación, la transacción firmada | Nuestro servicio en Modal (EE. UU.) | Para descargar sus libros y permitir que el servidor elimine su copia | Sección 6.4 |
-| **Notificaciones «libro listo»** (solo si usted permite las notificaciones de Talefall; la App lo pregunta al hacer su primer pedido; si ya las permitió, vea la nota bajo esta tabla) | El token de notificaciones push del dispositivo emitido por Apple y si es de desarrollo o de producción, con la transacción firmada de la suscripción y el token compartido del servicio. Si después desactiva las notificaciones de Talefall, la App vuelve a enviar ese token solo para pedir a nuestro servicio que lo elimine, y repite la solicitud hasta que el servicio la confirme | Nuestro servicio en Modal (EE. UU.). La notificación la entrega Apple Push Notification service (APNs); a Apple solo le enviamos el token y una notificación formada por claves de texto fijas de la App y su tipo («listo» o «no se pudo terminar»), sin identificador de suscripción ni nada de su libro | Avisarle de que un libro pedido está listo para descargar, o no se pudo terminar, mientras la App está cerrada | Sección 6.2 («Tokens de notificación») |
-| **Denunciar contenido** (solo cuando lo usa) | Número de libro, capítulo, el pasaje mostrado en la pantalla de denuncia (hasta 4000 caracteres), el motivo, su nota, la transacción firmada si tiene suscripción | Nuestro servicio en Modal (EE. UU.); si el envío falla, un correo que usted envíe a contact@ownplace.net (sin el pasaje) | Para revisar una denuncia y actuar al respecto | 12 meses (sección 6.4) |
-| **Contadores de uso** (solo si usted dijo que sí) | Contadores de sesión: nombres de pasos con segundos desde el inicio, tipo de archivo de una importación fallida, versión de la App, idioma del dispositivo y un número aleatorio por sesión que el servicio no almacena. Contadores de hitos: nombre del paso, número de compilación de la App, canal de distribución (App Store, TestFlight o depuración), idioma principal de la interfaz de la App sin país y un número aleatorio generado para ese único hito (se repite solo si se reintenta la misma solicitud). El servidor añade la hora y fecha UTC de recepción a los contadores de sesión, y la fecha UTC de recepción a los hitos. Las solicitudes de contadores también incluyen el token compartido del servicio, idéntico en todas las instalaciones | Nuestro servicio en Modal (EE. UU.) | Para saber dónde se atascan los usuarios nuevos | 90 días (sección 8) |
+| **Compras** | Solicitudes de compra y de restauración | Apple (StoreKit) | Para suscribirse, y para restaurar o completar compras anteriores (la versión 1.3.2 de la App ya no ofrece nuevas compras del reproductor ni de horas adicionales) | Política de Apple; sección 7 |
+| **Primer libro de regalo: disponibilidad** (solo sin suscripción, cuando la App muestra la oferta) | El registro de su descarga de la App firmado por Apple y el token de servicio compartido | Nuestro servicio en Modal (EE. UU.) | Para comprobar si todavía se puede dar el primer libro de regalo | Sección 6.1A |
+| **Permiso del proveedor de IA** | Si lo permitió o lo retiró, su versión y la hora, con la transacción de suscripción firmada y/o el registro de su descarga firmado por Apple, según la sección 6.1A (su aceptación de los Términos permanece en el dispositivo) | Nuestro servicio en Modal (EE. UU.) | Para que el Servicio escriba libros solo con su permiso | Sección 6.4 |
+| **Libro a partir de una idea** | Su idea, tipo de libro, idioma, extensión, la transacción de suscripción firmada (para el primer libro de regalo, en su lugar, el registro de su descarga firmado por Apple; sección 6.1A), el token de servicio compartido de la App, una clave de pedido aleatoria, la versión y la hora de su confirmación por pedido y (desde la versión 1.3.2) una etiqueta de selección del narrador que solicita la voz actual para el idioma del libro | Nuestro servicio en Modal (EE. UU.); la idea y el texto de trabajo se envían además al proveedor de IA (sección 6.3) | Para escribir y narrar el libro que usted pidió | Contenido: hasta que la App confirme que ha guardado todos los capítulos; si no, hasta que el pedido caduque a los 7 días (sección 6.4). Recibo: sección 6.4 |
+| **Narración con la voz de Talefall** (solo para un libro que usted confirmó) | El título del libro, el idioma y el texto de los capítulos (desde la versión 1.3.2, también una etiqueta de selección del narrador que indica la voz actual para el idioma del libro o la voz ya usada para ese libro), con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para narrar ese libro | Igual que arriba |
+| **Narración de pasajes** (voz de Talefall, mientras escucha un libro confirmado) | El texto del pasaje y el idioma (desde la versión 1.3.2, también una etiqueta de selección del narrador que indica la voz actual para el idioma del libro o la voz ya usada para ese libro), con la transacción firmada y el token | Nuestro servicio en Modal (EE. UU.); solo nuestro propio modelo narrador | Para devolver el audio de ese pasaje | No lo almacena nuestra aplicación; solo se registran el número de caracteres y la duración del audio. Modal puede conservar las entradas y salidas de las funciones hasta 7 días |
+| **Recogida de libros** (cuando abre la App, y en segundo plano tras una señal silenciosa de «libro listo», más abajo) | Números de libro, confirmaciones de «guardado» por capítulo, solicitudes de eliminación o cancelación, la transacción firmada (durante 8 días después de pedir un libro de regalo, también el registro de su descarga; sección 6.1A) | Nuestro servicio en Modal (EE. UU.) | Para descargar sus libros y permitir que el servidor elimine su copia | Sección 6.4 |
+| **Notificaciones «libro listo»** (solo si usted permite las notificaciones de Talefall; la App lo pregunta al hacer su primer pedido; si ya las permitió, vea la nota bajo esta tabla) | El token de notificaciones push del dispositivo emitido por Apple, si es de desarrollo o de producción y si esta versión de la App puede recibir la señal silenciosa en segundo plano, con la transacción firmada de la suscripción (durante 8 días después de pedir un libro de regalo, también o en su lugar el registro de su descarga firmado por Apple; sección 6.1A) y el token compartido del servicio. Si después desactiva las notificaciones de Talefall, la App vuelve a enviar ese token, con los dos registros que pueda obtener, solo para pedir a nuestro servicio que lo elimine, y repite la solicitud hasta que el servicio la confirme | Nuestro servicio en Modal (EE. UU.). La notificación la entrega Apple Push Notification service (APNs); a Apple solo le enviamos el token y una notificación formada por claves de texto fijas de la App y su tipo («listo» o «no se pudo terminar») y, cuando un libro está listo, una señal silenciosa que contiene solo el tipo «listo», sin identificador de suscripción ni de transacción de la app ni nada de su libro | Avisarle de que un libro pedido está listo para descargar, o no se pudo terminar, mientras la App está cerrada, y permitir que la App recoja un libro listo en segundo plano | Sección 6.2 («Tokens de notificación») |
+| **Denunciar contenido** (solo cuando lo usa) | Número de libro, capítulo, el pasaje mostrado en la pantalla de denuncia (hasta 4000 caracteres), el motivo, su nota, la transacción firmada si tiene suscripción (sin suscripción, o durante 8 días después de pedir un libro de regalo, el registro de su descarga; sección 6.1A) | Nuestro servicio en Modal (EE. UU.); si el envío falla, un correo que usted envíe a contact@ownplace.net (sin el pasaje) | Para revisar una denuncia y actuar al respecto | 12 meses (sección 6.4) |
+| **Contadores de uso** (solo si usted dijo que sí) | Contadores de sesión: nombres de pasos con segundos desde el inicio, tipo de archivo (solo la extensión) de una importación correcta o fallida, versión de la App, idioma del dispositivo, canal de distribución (App Store, TestFlight o depuración) y un número aleatorio por sesión que el servicio no almacena. Contadores de hitos: nombre del paso, número de compilación de la App, canal de distribución, idioma principal de la interfaz de la App sin país, para instalaciones iniciadas por primera vez con la versión 1.3.2 o posterior la compilación y la semana del calendario (semana ISO, UTC) del primer inicio, y un número aleatorio generado para ese único hito (se repite solo si se reintenta la misma solicitud). El servidor añade la hora y fecha UTC de recepción a los contadores de sesión, y la fecha UTC de recepción a los hitos. Las solicitudes de contadores también incluyen el token compartido del servicio, idéntico en todas las instalaciones | Nuestro servicio en Modal (EE. UU.) | Para saber dónde se atascan los usuarios nuevos | 90 días (sección 8) |
 | **Notificaciones del servidor de App Store** (no provienen de su dispositivo) | El aviso firmado de Apple sobre una renovación, vencimiento, reembolso o revocación | De Apple a nuestro servicio | Para que el Servicio conozca el estado de la suscripción | Sección 6.4 |
 
 <a id="notifications"></a>
 
-**Antes del registro para notificaciones.** Si ya permitió las notificaciones de Talefall, abrir la App actualizada por sí solo no inicia el registro inicial de su token push en nuestro servicio. Al realizar su próximo pedido de libro, la App muestra un aviso dentro de la aplicación antes de enviar el token. Si no pulsa «OK», el aviso vuelve a mostrarse en los pedidos de libros posteriores mientras las notificaciones sigan permitidas en iOS. El registro espera hasta que pulse «OK» en ese aviso y las notificaciones sigan permitidas en iOS; no se requiere otra solicitud de permiso de notificaciones de iOS. También puede elegir «Desactivar en Ajustes»; abrir Ajustes o cerrar el aviso no autoriza el registro. La App envía el token y los datos de registro indicados en la tabla al servicio de OWN PLACE LLC en Modal (EE. UU.). Conservamos el token vinculado al identificador de su suscripción durante los plazos descritos en la sección 6.2. Para la entrega mediante APNs, enviamos a Apple el token y una notificación estándar sobre el estado del libro, sin su identificador de suscripción ni contenido del libro. Tras el registro inicial, la App puede actualizarlo cuando usted abre la App o realiza un pedido. Puede desactivar las notificaciones en Ajustes de iOS; la próxima vez que la App esté abierta, pedirá a nuestro servicio que elimine el token según la sección 6.2. Cuando la App le propone por primera vez permitir las notificaciones al pedir un libro, explica este tratamiento antes de la solicitud de permiso de iOS y registra el token solo si usted permite las notificaciones. Las notificaciones son opcionales; rechazarlas no impide pedir ni recibir libros.
+**Antes del registro para notificaciones.** Si ya permitió las notificaciones de Talefall, abrir la App actualizada por sí solo no inicia el registro inicial de su token push en nuestro servicio. Al realizar su próximo pedido de libro, la App muestra un aviso dentro de la aplicación antes de enviar el token. Si no pulsa «OK», el aviso vuelve a mostrarse en los pedidos de libros posteriores mientras las notificaciones sigan permitidas en iOS. El registro espera hasta que pulse «OK» en ese aviso y las notificaciones sigan permitidas en iOS; no se requiere otra solicitud de permiso de notificaciones de iOS. También puede elegir «Desactivar en Ajustes»; abrir Ajustes o cerrar el aviso no autoriza el registro. La App envía el token y los datos de registro indicados en la tabla al servicio de OWN PLACE LLC en Modal (EE. UU.). Conservamos el token vinculado al identificador de su suscripción y, para un libro de regalo, a su identificador de transacción de la app (sección 6.1A), durante los plazos descritos en la sección 6.2. Para la entrega mediante APNs, enviamos a Apple el token y una notificación estándar sobre el estado del libro, sin su identificador de suscripción ni de transacción de la app ni contenido del libro. Tras el registro inicial, la App puede actualizarlo cuando usted abre la App o realiza un pedido. Puede desactivar las notificaciones en Ajustes de iOS; la próxima vez que la App esté abierta, pedirá a nuestro servicio que elimine el token según la sección 6.2. Cuando la App le propone por primera vez permitir las notificaciones al pedir un libro, explica este tratamiento antes de la solicitud de permiso de iOS y registra el token solo si usted permite las notificaciones. Las notificaciones son opcionales; rechazarlas no impide pedir ni recibir libros.
+
+**Señal silenciosa de «libro listo».** Desde la versión 1.3.2, cuando un libro
+está listo, nuestro servicio también pide a Apple que entregue una señal
+silenciosa en segundo plano a cada dispositivo registrado cuya App pueda
+recibirla. La señal no muestra nada en pantalla y contiene solo el tipo «listo»,
+sin número, título ni contenido del libro. Permite que iOS active brevemente la
+App (iOS decide si lo hace y cuándo): la App hace entonces las mismas
+solicitudes que al abrirla para recoger libros —pide a nuestro servicio la lista
+de sus libros, importa el texto de un libro listo, pone su audio en cola de
+descarga y confirma lo que guardó— con los mismos registros firmados descritos
+en esta tabla. Si usted permitió los contadores de uso, importar un libro
+durante esta recogida en segundo plano también puede enviar el hito «libro
+recibido» descrito en la sección 8, que no contiene contenido del libro ni
+identificador de suscripción ni de transacción de la app. La App no envía nada
+más en respuesta a la señal.
 
 **Políticas de terceros.** Apple: https://www.apple.com/legal/privacy/ ·
 Internet Archive: https://archive.org/about/terms · LibriVox:
@@ -208,7 +264,11 @@ https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html.
 
 ## 6. Las funciones de servidor de la Suscripción a Talefall
 
-Esta sección se aplica solo si usted se suscribe y usa el Servicio.
+Esta sección se aplica si usted se suscribe y usa el Servicio, o si pide el
+primer libro de regalo sin suscripción (sección 6.1A). Todo lo dicho en las
+secciones 6.2–6.7 se aplica a ese libro de la misma manera, con el
+identificador de transacción de la app en lugar del identificador de la
+suscripción donde lo indica la sección 6.1A.
 
 ### 6.1 Sin cuenta: una transacción firmada por Apple en su lugar
 
@@ -226,14 +286,97 @@ que usted nos facilite en la correspondencia.
 
 La App también envía un **token de servicio compartido**, igual en todas las copias de
 la App; es una señal de control de abusos, no una autenticación. El acceso a sus libros
-depende de la transacción firmada por Apple. Una **clave de pedido aleatoria** permite que el
-servidor reconozca una solicitud repetida como el mismo pedido.
+depende de la transacción firmada por Apple (para el primer libro de regalo, del
+registro de su descarga firmado por Apple, sección 6.1A). Una **clave de pedido
+aleatoria** permite que el servidor reconozca una solicitud repetida como el
+mismo pedido.
+
+<a id="first-book"></a>
+
+### 6.1A Primer libro de regalo: un registro de su descarga firmado por Apple
+
+Si no tiene suscripción, puede pedir un libro con IA de unos 15 minutos de
+regalo. Se aplican todas las condiciones de un pedido de pago: los Términos
+de uso, la confirmación de mayoría de edad (18+), el permiso del proveedor de IA
+(sección 6.3), la confirmación de «solo ficción» y nuestros controles de
+seguridad (sección 6.5). El libro se escribe y se narra por las mismas rutas que
+un pedido de pago con el permiso vigente. No consume horas y no tiene valor
+monetario. Si el libro no le llega (falla, caduca, lo detienen nuestros
+controles o usted lo cancela antes de recibirlo), puede pedirlo de nuevo, hasta
+tres pedidos en total; una vez entregado un primer libro, la oferta queda usada.
+El número de primeros libros que damos al día es limitado para todos; cuando se
+alcanza el límite del día, no se cobra nada y puede intentarlo más tarde.
+
+Para ofrecerlo una sola vez por cuenta de Apple, la App adjunta la
+**AppTransaction** —un registro de su descarga de la App firmado por Apple— solo
+a estas solicitudes:
+
+- si no tiene suscripción: la comprobación de si el regalo está disponible, los
+  pedidos de libros, su respuesta «permitir» en la pantalla del permiso del
+  proveedor de IA y las denuncias de contenido;
+- durante 8 días después de que su dispositivo envió un pedido del primer libro
+  de regalo, aunque entretanto se suscriba: los pedidos de libros, su respuesta
+  «permitir», las denuncias de contenido, las solicitudes de lista, descarga,
+  confirmación, cancelación y eliminación de libros, y el registro de este
+  dispositivo para las notificaciones «libro listo», para que el libro de regalo
+  le llegue, un pedido repetido no se cree dos veces y retirar el permiso detenga
+  también el libro de regalo;
+- siempre: la retirada de su permiso del proveedor de IA y la petición a
+  nuestro servicio de eliminar el token de notificación de este dispositivo,
+  para que lleguen también a los datos de un libro de regalo pedido desde otro
+  dispositivo o antes de reinstalar la App (si el registro no está disponible,
+  la App lo reintenta más tarde);
+- una solicitud de eliminación de datos desde la App (sección 10), para eliminar
+  los datos guardados bajo él.
+
+La App envía el registro firmado por Apple completo para su verificación.
+Además del identificador de transacción de la app, puede contener otra
+información aportada por Apple, como datos de adquisición y versión de la App,
+fechas de firma y valores de verificación del dispositivo. Nuestro servidor
+verifica la firma de Apple, que el registro pertenece a Talefall (los
+identificadores del paquete de la App y de la App en el App Store) y su
+entorno, y nuestra aplicación conserva solo el **identificador de transacción
+de la app** (un
+número que Apple asigna a la descarga de la App por su cuenta de Apple; no
+cambia si reinstala la App) y el entorno (las copias de solicitudes en la
+infraestructura de Modal siguen la sección 6.4). Usamos ese identificador, con el
+prefijo `app:`, como la sección 6.1 describe para el identificador de la
+suscripción: con el pedido de regalo, su recibo, su registro de permiso, las
+denuncias, los tokens de notificación registrados para el libro de regalo, los
+registros de claves de pedido y en los registros de nuestra aplicación
+(aproximadamente un día). No contiene nombre, correo electrónico ni ID de Apple,
+pero es un identificador persistente, por lo que lo tratamos como información
+personal. No se lleva un saldo de horas para él.
+
+Para asegurarnos de que el regalo se da una sola vez, conservamos un registro
+de que se entregó (y, si el libro no se entregó, de que se devolvió), bajo un
+**hash con clave** (HMAC) del identificador y no bajo el identificador mismo,
+junto con el número del libro (un número aleatorio que también figura en el
+recibo del pedido) y la marca de tiempo, y un enlace del número del libro a ese
+hash. Antes de que nuestros controles de seguridad examinen un intento de
+pedido de regalo, también registramos una plaza de revisión bajo el mismo hash
+y el día UTC, para limitar los intentos repetidos; no contiene el texto enviado
+y puede permanecer aunque los controles rechacen el pedido y no se cree ningún
+libro. Estos registros son necesarios para que el regalo no pueda pedirse de
+nuevo y para limitar los abusos; no los usamos para nada más.
+
+Para respetar el límite diario, también conservamos registros del presupuesto
+diario de regalos y del procesamiento de cada libro de regalo: qué libros de
+regalo se aceptaron ese día, su costo reservado, estimado y real, y sus etapas
+de procesamiento (números de libro, importes, marcas de tiempo; sin
+contenido).
+
+Estos registros no contienen el identificador de transacción de la app en forma
+legible ni contenido de libros, pero pueden seguir vinculados a usted mediante
+el hash o el número del libro, por lo que los tratamos como información
+personal. Su conservación se describe en la sección 6.4.
 
 ### 6.2 Qué almacena nuestro servidor sobre un pedido
 
 Mientras un pedido está en curso: su idea (o, en el caso de la narración, el texto que usted
 aportó), tipo de libro, idioma y extensión, el título y los capítulos generados,
-el audio, el estado técnico y las horas, el identificador de transacción original,
+el audio, el estado técnico y las horas, el identificador de transacción original
+(para el primer libro de regalo, el identificador de transacción de la app),
 y los identificadores de solicitud devueltos por el proveedor de IA (se conservan 30 días tras la entrega o el fin del pedido; sección 6.4). El contenido se conserva en
 el almacenamiento de Modal como **almacenamiento de trabajo temporal y cifrado** y se mantiene fuera de
 nuestros registros de aplicación.
@@ -266,7 +409,8 @@ registros técnicos. No contienen contenido de libros.
   anterior no prevalezca sobre una más reciente. Se conserva hasta que sus
   datos se eliminen a petición suya.
 - *Límites diarios:* contadores de pedidos y de denuncias de contenido por
-  identificador de suscripción y día (Términos de uso, sección 4.4). Se eliminan en una limpieza programada cuando su fecha de calendario UTC tiene más de dos días de antigüedad, normalmente unos dos o tres días después de su creación.
+  identificador de suscripción (para el primer libro de regalo, por identificador
+  de transacción de la app) y día (Términos de uso, sección 4.4). Se eliminan en una limpieza programada cuando su fecha de calendario UTC tiene más de dos días de antigüedad, normalmente unos dos o tres días después de su creación.
 - *Notificaciones de App Store:* identificadores de las notificaciones de
   servidor de Apple que ya hemos procesado. Se conservan ocho días.
 - *Compras de horas adicionales:* el vínculo entre el identificador de una
@@ -285,14 +429,19 @@ registros técnicos. No contienen contenido de libros.
   eliminación se conservan mientras sean necesarios para impedir que se reanude el
   trabajo eliminado o cancelado y para responder a consultas sobre reembolsos y
   disputas relativas al pedido, y como máximo hasta que se elimine el recibo del
-  pedido (siete años después del último hecho financiero relacionado, sección 6.4);
+  pedido, según la regla de conservación de recibos de la sección 6.4 que se
+  aplique a ese pedido;
   los revisamos al menos una vez al año y eliminamos los que ya no son necesarios.
   Las solicitudes para eliminarlos antes se evalúan conforme a la legislación
   aplicable.
 - *Tokens de notificación:* el token de notificaciones push de cada
   dispositivo en el que permitió las notificaciones, si es de desarrollo o de
-  producción y la hora en que la App lo envió por última vez, vinculados al
-  identificador de la suscripción. Dejamos de usar un token 8 días después de
+  producción, si la App de ese dispositivo puede recibir la señal silenciosa de
+  «libro listo» y la hora en que la App lo envió por última vez, vinculados al
+  identificador de la suscripción y, para un libro de regalo, al identificador
+  de transacción de la app (si pide un libro de regalo y también tiene
+  suscripción, el token puede quedar vinculado a ambos, como dos registros
+  separados). Dejamos de usar un token 8 días después de
   su último envío (la App lo vuelve a enviar de vez en cuando al abrirla y al
   hacer un pedido) y se elimina en la siguiente limpieza programada
   (normalmente en 15 minutos; una limpieza fallida se reintenta). Dejamos de
@@ -304,7 +453,8 @@ registros técnicos. No contienen contenido de libros.
   solicitud de eliminación de datos. Cuando nuestro servicio procesa una
   solicitud para desactivar las notificaciones, registra una huella
   irreversible (hash) del token y la hora del servidor de la revocación,
-  vinculadas al identificador de la suscripción. Cada registro de revocación
+  vinculadas al identificador de la suscripción o de transacción de la app.
+  Cada registro de revocación
   se conserva 8 días desde esa hora, más la espera hasta la limpieza
   programada. Impide que los registros cuya tramitación en el servidor comenzó
   antes o en el momento de esa revocación reactiven el token; una solicitud de
@@ -317,8 +467,9 @@ registros técnicos. No contienen contenido de libros.
   referenciados. Al ejecutar una solicitud de eliminación de datos, eliminamos
   este índice. Además, por cada pedido
   guardamos un registro técnico de que se intentó una notificación (número
-  del libro, «listo» o «no se pudo terminar» y hora, sin token ni
-  identificador de suscripción), para no enviar la misma notificación dos
+  del libro, «listo» o «no se pudo terminar» —y, para la señal silenciosa,
+  «listo, en segundo plano»— y hora; sin token ni identificador de suscripción
+  ni de transacción de la app), para no enviar la misma notificación dos
   veces; se elimina a los 8 días, más la espera hasta la limpieza programada.
 
 <a id="ai-providers"></a>
@@ -737,14 +888,45 @@ el registro anterior.
   cancela el pedido ni restituye sus horas. Los nuevos pedidos y las nuevas
   solicitudes que consuman horas requieren una suscripción activa. Siguen
   vigentes el plazo de entrega de siete días y las reglas de eliminación y
-  restitución de horas; el vencimiento no reinicia ese plazo. La escucha y la
-  lectura en la App siguen sujetas a los requisitos de acceso al reproductor.
+  restitución de horas; el vencimiento no reinicia ese plazo. Desde la versión
+  1.3.2 de la App, la escucha y la lectura en la App no requieren compra.
 - **Eliminar o cancelar un libro en la App** envía una solicitud de eliminación al
   servicio (se reintenta más tarde si usted está sin conexión); un pedido en curso se detiene. Sus horas se restituyen si algún capítulo no se entregó (Términos de uso, sección 4.2).
 - **Los recibos, los registros de permisos y el saldo de horas** (secciones 6.2 y
   6.6) se conservan durante **siete años después del último hecho financiero relacionado**,
   porque documentan el trabajo pagado y los cobros; después se eliminan o se agregan de forma irreversible.
-  No contienen contenido de libros.
+  No contienen contenido de libros. Los recibos del primer libro de regalo, que
+  no implica pago, y sus registros de permisos se guardan bajo el identificador
+  de transacción de la app. Los conservamos para documentar la entrega y el
+  permiso aplicado al pedido y resolver disputas relacionadas, durante **siete
+  años después del fin del pedido** (un registro de permiso sin pedido aceptado
+  posterior: siete años después de la decisión registrada), y los eliminamos en
+  nuestra siguiente revisión anual de conservación tras ese plazo, salvo que se
+  aplique una excepción legal, como una disputa abierta o una retención por
+  obligación legal. Las solicitudes de eliminación anteriores se atienden según
+  la sección 10.
+- **Registros del primer libro de regalo** (sección 6.1A; sin contenido ni
+  identificador en forma legible, pero vinculables a usted mediante el hash o el
+  número del libro):
+  - los registros con hash de que el regalo se entregó o se devolvió, los
+    enlaces de los números de libro a ellos, el costo total de cada libro de
+    regalo (número del libro, costo, fecha) y la marca de que se agotó el
+    presupuesto de regalos de un día se conservan mientras ofrezcamos el primer
+    libro de regalo: los registros de entrega y devolución y sus enlaces
+    impiden que el regalo se pida de nuevo, y los costos totales y las marcas
+    de presupuesto agotado sirven para controlar y conciliar el presupuesto de
+    regalos. Cuando la oferta termine, los eliminamos dentro de los 12 meses
+    siguientes, salvo los de un libro de regalo que aún se esté produciendo o
+    entregando. Revisamos al menos una vez al año si cada una de estas
+    categorías sigue siendo necesaria y eliminamos antes los registros que ya no
+    lo sean;
+  - las plazas de revisión (hash, día UTC, marca de tiempo) y los registros
+    diarios detallados de presupuesto y procesamiento (números de libro,
+    importes, etapas, marcas de tiempo) no los mantenemos vigentes, y nuestro
+    almacenamiento los elimina automáticamente unos siete días después de la
+    última lectura o escritura; un diario de presupuesto diario se mantiene
+    vigente sus primeros diez días, por lo que normalmente se elimina unos
+    diecisiete días después de su día.
 - **Los registros de funcionamiento del servicio** (sección 6.2) se conservan
   durante los plazos indicados allí.
 - **Las denuncias de contenido** se conservan **12 meses** desde su envío, por separado
@@ -867,7 +1049,8 @@ y lo que generó para ese pedido.
    (sección 6.3.2).
 
    Registramos su decisión, la versión del permiso, la hora y, para la versión 2026-10-14.1, la huella del texto exacto mostrado, vinculadas al
-   identificador de la transacción original de su suscripción, y conservamos un
+   identificador de la transacción original de su suscripción (para el primer
+   libro de regalo, a su identificador de transacción de la app; sección 6.1A), y conservamos un
    registro versionado de la información a la que usted dio su conformidad. Retirar
    el permiso en Ajustes bloquea las transferencias posteriores con este permiso,
    incluidas las llamadas de IA posteriores para pedidos pendientes. No deshace el
@@ -931,8 +1114,16 @@ Todos los pagos los procesa Apple. Nunca recibimos los datos de su tarjeta,
 su dirección de facturación ni las credenciales de su cuenta de Apple. Apple nos entrega informes
 agregados de ventas.
 
-- **Compra única del reproductor:** se comprueba en el dispositivo con StoreKit; nada
-  al respecto se envía a nuestro servidor.
+- **Compra única del reproductor:** la versión 1.3.2 de la App ya no la
+  ofrece; el reproductor no requiere compra. Si la compró antes, la App la comprueba
+  en el dispositivo con StoreKit; nada al respecto se envía a nuestro servidor.
+- **Horas adicionales:** la versión 1.3.2 de la App ya no ofrece nuevas
+  compras de horas adicionales. Si
+  una compra anterior de horas adicionales aún no se ha abonado, la App sigue
+  enviando su transacción firmada a nuestro servidor para que las horas se abonen
+  una sola vez.
+- **Primer libro de regalo:** no implica ningún pago; la sección 6.1A describe
+  el registro de su descarga firmado por Apple que la App envía para él.
 - **Suscripción a Talefall y horas adicionales:** además de la transacción
   firmada (sección 6.1), las notificaciones del servidor de App Store de Apple informan a nuestro
   servidor cuando una suscripción se renueva, vence o se reembolsa o revoca. Almacenamos
@@ -943,13 +1134,25 @@ agregados de ventas.
 
 ## 8. Contadores de uso (opcionales, desactivados salvo que usted los permita)
 
-En el primer inicio, la App pregunta si puede enviar algunos contadores anónimos;
-por defecto es no, y usted puede cambiar su respuesta en Ajustes. Si lo permite,
-la App envía nombres de pasos (por ejemplo: se abrió la App, se mostró la biblioteca,
-comenzó la reproducción, falló una importación), los segundos desde el inicio, el tipo de archivo
-de una importación fallida (nunca el nombre del archivo), la versión de la App, el idioma de su
-dispositivo y un número aleatorio que agrupa los contadores de una sesión y no se
-almacena. Los contadores nunca contienen títulos de libros, texto, nombres de archivo ni ningún
+En el primer inicio (y, tras una actualización, si aún no ha respondido) la App
+pregunta si puede enviar algunos contadores anónimos, con dos opciones: «Ahora
+no» y «Permitir». Hasta que usted los permita, no se envía nada; una pregunta
+sin respuesta cuenta como un no; y puede cambiar su respuesta en Ajustes.
+Mientras la pregunta sigue abierta, la App puede guardar los eventos de la
+sesión actual solo en memoria: si permite los contadores, se envían; si los
+rechaza, se descartan; y se pierden al cerrarse la App. Para etiquetar los
+contadores si usted los permite, la App guarda en el dispositivo, sea cual sea
+su respuesta, los datos auxiliares descritos en la sección 4; permanecen en el
+dispositivo salvo que usted permita los contadores.
+
+Si lo permite, la App envía nombres de pasos (por ejemplo: se abrió la App, la
+biblioteca se mostró o estaba vacía, la primera elección en la página Mis libros
+—un clásico sugerido, un archivo propio o un libro con IA—, el primer sonido
+reproducido, comenzó la reproducción, una importación salió bien o falló), los
+segundos desde el inicio, el tipo de archivo importado (solo su extensión, como
+«mp3»; nunca el nombre del archivo), la versión de la App, el idioma de su
+dispositivo, el canal de distribución (App Store, TestFlight o depuración) y un
+número aleatorio que agrupa los contadores de una sesión y no se almacena. Los contadores nunca contienen títulos de libros, texto, nombres de archivo ni ningún
 identificador suyo o de su dispositivo.
 
 Con el mismo permiso, la App también envía contadores de hitos separados,
@@ -958,14 +1161,27 @@ contadores, apertura del ejemplo incluido, importación de un libro e inicio de 
 reproducción (estos cinco solo en instalaciones nuevas), apertura de la pantalla de
 pedido de IA o de una pantalla de compra de suscripción, visualización y
 respuesta de la pantalla de permiso del proveedor de IA, un pedido de libro
-aceptado y la recepción de un libro. Cada solicitud de hito contiene solo el
+aceptado y la recepción de un libro. Para instalaciones iniciadas por primera vez
+con la versión 1.3.2 o posterior, además: una primera acción útil (primer
+sonido, una importación o abrir el pedido de IA) en los 60 segundos siguientes al
+primer inicio, o salir de la primera sesión sin ella; 5 minutos de escucha en
+total; y volver a abrir la App entre los días 2 y 7 después del primer inicio
+(según el calendario del teléfono). Cada solicitud de hito contiene solo el
 nombre del paso, el número de compilación de la App, el canal de distribución
 (App Store, TestFlight o depuración), el idioma principal de la interfaz de la
-App sin país y un número aleatorio generado para ese único hito, para que una
-solicitud reintentada normalmente no se cuente dos veces. Nuestro servidor añade
-la fecha de recepción en UTC. No contiene tiempo transcurrido, número de sesión,
-identificador de instalación, de suscripción ni de libro. El número aleatorio de
-cada hito no proporciona un identificador común entre distintos hitos. No usamos
+App sin país, para instalaciones iniciadas por primera vez con la versión 1.3.2
+o posterior la compilación y la semana del calendario (semana ISO, UTC, por
+ejemplo «2026-W44») del primer inicio, y un número aleatorio generado para ese
+único hito, para que una solicitud reintentada normalmente no se cuente dos
+veces. Para esas instalaciones, el canal de distribución es el registrado en el
+primer inicio, que puede diferir del actual si la App se reinstala desde otro
+canal. Nuestro servidor añade la fecha de recepción en UTC. No contiene tiempo
+transcurrido, la hora exacta del primer inicio, número de sesión, identificador
+de instalación, de suscripción, de transacción de la app ni de libro. La
+compilación y la semana del primer inicio son las mismas para todas las
+instalaciones iniciadas por primera vez con esa compilación esa semana; agrupan
+instalaciones y no son un identificador suyo. El número aleatorio de cada hito
+no proporciona un identificador común entre distintos hitos. No usamos
 los contadores para identificarle ni los combinamos con registros de suscripción
 o pedidos. Pasados unos dos días, los registros individuales
 de hitos, con sus números aleatorios, se agrupan en totales diarios. Son
@@ -975,8 +1191,9 @@ cuenta una vez, pero en ocasiones puede contarse dos veces.
 Nuestro servidor acepta solo los campos descritos en esta sección. Los
 contadores de uso se eliminan mediante una limpieza programada a los **90
 días**; la limpieza se ejecuta cada 15 minutos y una eliminación fallida se
-reintenta en la siguiente ejecución. No se recopilan ni envían eventos de uso
-antes de que usted los permita. Rechazar o retirar el permiso borra los eventos
+reintenta en la siguiente ejecución. No se envían contadores de uso antes de que
+usted los permita; antes de que responda, los eventos de la sesión actual se
+guardan solo en memoria, como se describe arriba. Rechazar o retirar el permiso borra los eventos
 en cola y detiene la recopilación de nuevos eventos. No enviamos ningún contador
 que registre el rechazo de los contadores. Las solicitudes ya enviadas no pueden
 recuperarse. Las solicitudes de contadores también incluyen el token compartido
@@ -986,9 +1203,10 @@ cuenta; no los usamos para rastrear.
 ## 9. Registros del servidor
 
 Nuestro servicio en Modal escribe registros técnicos: rutas de solicitud con números de libro,
-códigos de estado, horas, el identificador de transacción original en los eventos de horas y de pedidos, recuentos de caracteres y duración, categorías de rechazo y moderación, el
+códigos de estado, horas, el identificador de transacción original (para el
+primer libro de regalo, el identificador de transacción de la app) en los eventos de horas y de pedidos, recuentos de caracteres y duración, categorías de rechazo y moderación, el
 código de país de la verificación de territorio y el resultado del envío de
-notificaciones (número del libro, tipo, recuentos y código de respuesta de Apple,
+notificaciones, incluida la señal silenciosa de «libro listo» (número del libro, tipo, recuentos y código de respuesta de Apple,
 sin token del dispositivo). Nuestra aplicación no escribe la
 dirección IP ni ningún texto de solicitudes o libros en estos registros. La infraestructura de Modal
 procesa las direcciones IP para enrutar y proteger el tráfico conforme a sus propias políticas.
@@ -1016,7 +1234,10 @@ actividad.
 
 - **Use solo el reproductor.** Si no usa el Servicio y no permite los
   contadores, no se nos envía ningún contenido de la biblioteca. La búsqueda de portadas y los contadores
-  están desactivados salvo que usted los active en Ajustes.
+  están desactivados salvo que usted los active en Ajustes. Para detener las
+  solicitudes automáticas de portadas de la estantería de clásicos a Internet
+  Archive, oculte la estantería en la página Mis libros; Ajustes → «Mostrar
+  selección de clásicos» la recupera.
 - **Eliminar un libro.** Eliminar un libro en la App elimina nuestra copia en el servidor si aún
   existe y detiene un pedido en curso; sus horas se restituyen si algún
   capítulo no se entregó (Términos de uso, sección 4.2).
@@ -1035,7 +1256,11 @@ actividad.
   directamente a nuestro servicio después de que usted lo confirme y, si no se
   puede identificar su suscripción o la solicitud falla, ofrece como alternativa
   un correo (asunto «Talefall: data deletion request», con el identificador de
-  transacción original de su suscripción si la App puede encontrarlo). Si la App
+  transacción original de su suscripción y, desde la versión 1.3.2, el
+  identificador de transacción de la app, si la App puede encontrarlos). Desde
+  la versión 1.3.2, la solicitud directa también incluye el registro de su
+  descarga firmado por Apple, para eliminar también los datos del primer libro
+  de regalo (sección 6.1A). Si la App
   muestra «Casi listo», vuelva a tocar «Solicitar eliminación de datos» en unos
   minutos para terminar. Incluya
   ese identificador si lo tiene; nos ayuda a encontrar sus registros. El identificador por sí solo no es prueba de legitimación, de modo que
@@ -1044,8 +1269,11 @@ actividad.
   usan Talefall también pueden presentar solicitudes; las verificamos por un método
   alternativo adecuado.
 - **Qué abarca la eliminación.** Eliminamos cualquier contenido de pedido restante, recibos,
-  registros de permisos, denuncias vinculadas a usted, los tokens de notificación, los
-  registros de inscripción y de revocación, el índice de notificaciones y otros
+  registros de permisos, denuncias vinculadas a usted, los registros de claves de
+  pedido, los tokens de notificación, los registros de inscripción y de
+  revocación y el índice de notificaciones —bajo el identificador de la
+  suscripción y, en una solicitud que incluya el registro de su descarga, bajo el
+  identificador de transacción de la app— y otros
   registros susceptibles de eliminación (los registros de intentos de notificación por
   pedido contienen el número del libro, el tipo de notificación y la hora, pero no el
   token push ni el identificador de suscripción en el propio registro; pueden seguir
@@ -1062,7 +1290,12 @@ actividad.
   suscripción, los registros de bloqueos ni los registros de funcionamiento y
   de protección de la eliminación descritos en la sección 6.2, salvo lo que allí se indica. También
   conservamos el registro de la solicitud de eliminación descrito en la
-  sección 6.4. Las solicitudes de eliminación de los registros conservados se
+  sección 6.4, y los registros del primer libro de regalo descritos en las
+  secciones 6.1A y 6.4 (hashes, números de libro, importes y marcas de tiempo;
+  sin contenido ni identificador en forma legible, pero vinculables a usted
+  mediante el hash o el número del libro), porque sin ellos el regalo podría
+  pedirse de nuevo o no podría liquidarse el costo de los libros en curso; se
+  eliminan en los plazos de la sección 6.4. Las solicitudes de eliminación de los registros conservados se
   evalúan conforme a la legislación aplicable; conservar un registro para el
   funcionamiento del servicio no significa por sí solo que la ley nos obligue
   a conservarlo. La eliminación no supone perder las horas adicionales
@@ -1105,14 +1338,24 @@ En la medida en que la CCPA se nos aplique, los residentes de California tienen 
 exigirlo. **No** vendemos ni «compartimos» información personal, no la usamos
 para publicidad conductual entre contextos y no usamos información personal sensible
 para fines que requieran un derecho a limitar. En los últimos 12
-meses recopilamos: identificadores (el identificador de transacción original, el
-token de notificaciones push si permitió las notificaciones y el país deducido de
-la IP); información comercial (estado de la suscripción y
-horas); contenido generado por el usuario (ideas de libros y texto de narración, conservados
+meses recopilamos: identificadores (el identificador de transacción original;
+el identificador de transacción de la app recibido en las solicitudes descritas
+en la sección 6.1A, incluida la comprobación de la oferta de regalo antes de un
+pedido, y sus hashes con clave usados para el derecho al regalo y la prevención
+de abusos; y el token de notificaciones push si permitió las notificaciones);
+geolocalización aproximada (el país deducido de la dirección IP de una solicitud
+al Servicio, sección 6.7); información comercial (estado de la suscripción,
+horas, y si el primer libro de regalo se entregó o se devolvió, con sus
+registros de costo); contenido generado por el usuario (ideas de libros y texto de narración, conservados
 temporalmente, y denuncias de contenido); actividad limitada en internet (contadores anónimos
-opcionales); y datos de contacto y correspondencia si usted nos escribió,
-para los fines de las secciones 5 a 9, divulgados únicamente a los destinatarios de la
-sección 6.3. Presente sus solicitudes como se describe en la sección 10; acusamos recibo
+opcionales); y datos de contacto y correspondencia si usted nos escribió. No
+solicitamos información personal sensible; si se envía en contra de nuestras
+reglas, los textos o las denuncias pueden contener información sobre la salud u
+otras características sensibles de una persona real, y las secciones 6.4–6.6 y
+la Política de privacidad de datos de salud del consumidor explican cómo la
+tratamos. Los fines, destinatarios y plazos de conservación de cada categoría
+figuran en las secciones 5 a 9 y 17; solo divulgamos información personal a los
+destinatarios de las secciones 5 y 6.3. Presente sus solicitudes como se describe en la sección 10; acusamos recibo
 dentro de 10 días hábiles.
 
 ## 13. Washington, Nevada, Connecticut y otros estados de EE. UU.; datos de salud del consumidor
@@ -1153,7 +1396,11 @@ Washington, con domicilio en 7707 NE 141st St, Kirkland, WA 98034-5321, EE. UU.
 Contacto: contact@ownplace.net; teléfono +1 (213) 524-8012.
 
 **Datos que tratamos.** Solo si usa el Servicio: el identificador de la
-transacción original de su suscripción (asignado por Apple); el país derivado de
+transacción original de su suscripción (asignado por Apple); el identificador de
+transacción de la app (asignado por Apple a la descarga de la App), recibido en
+las solicitudes descritas en la sección 6.1A —incluida la comprobación de la
+oferta del primer libro de regalo antes de un pedido—, y sus hashes con clave
+usados para el derecho al regalo y la prevención de abusos; el país derivado de
 la dirección IP de cada solicitud (la IP se usa solo para esa verificación); el
 contenido de sus pedidos (idea, ajustes, textos para narrar, capítulos generados y
 audio); los registros de permisos, recibos y horas; las denuncias de contenido; y
@@ -1167,7 +1414,7 @@ eliminamos (sección 6.6).
 
 **Finalidades primarias** (necesarias para el servicio que usted solicita):
 escribir, moderar, narrar y entregar los libros que pide; gestionar la
-suscripción, las horas y los límites; verificar el territorio y la seguridad;
+suscripción, las horas y los límites; dar el primer libro de regalo una sola vez; verificar el territorio y la seguridad;
 atender denuncias, soporte y solicitudes de derechos; avisarle, si permite las
 notificaciones, de que su libro está listo o no se pudo terminar; y cumplir
 obligaciones legales. **Finalidad secundaria:** los contadores de uso opcionales, para saber
@@ -1209,7 +1456,9 @@ Unidos; los países de cada proveedor de IA figuran en esa sección.
 la oposición escribiendo a contact@ownplace.net con el asunto «Talefall: solicitud
 ARCO». Indique un medio para responderle, describa con claridad los datos y el
 derecho que desea ejercer e incluya, si lo tiene, el identificador de la
-transacción original de su suscripción (Ajustes → Privacidad). Podemos pedirle una
+transacción original de su suscripción (Ajustes → Privacidad) o, si pidió el
+primer libro de regalo, el identificador de transacción de la app que incluye el
+correo de eliminación de la App. Podemos pedirle una
 prueba proporcional de que la suscripción es suya (por ejemplo, un recibo de
 Apple) o de su representación. Le comunicaremos nuestra respuesta en un plazo
 máximo de 20 días desde que recibamos la solicitud y, si procede, la haremos
@@ -1238,10 +1487,11 @@ antes de aplicarlo (sección 19).
 
 - Todas las conexiones entre la App y nuestro servicio, y entre nuestro servicio
   y sus encargados del tratamiento, usan TLS. El contenido de trabajo se almacena cifrado.
-- Las solicitudes al Servicio deben llevar una transacción firmada por Apple, que nuestro servidor
-  verifica antes de realizar trabajo de pago; los libros se muestran, cancelan y eliminan
-  solo para la suscripción que los pidió.
-- En su dispositivo, las claves y la fecha de la prueba se guardan en el llavero; los archivos
+- Las solicitudes al Servicio deben llevar una transacción firmada por Apple (para el
+  primer libro de regalo, el registro de su descarga firmado por Apple), que nuestro
+  servidor verifica antes de realizar el trabajo; los libros se muestran, cancelan y
+  eliminan solo para la suscripción o el registro de descarga con que se pidieron.
+- En su dispositivo, las claves se guardan en el llavero; los archivos
   locales tienen la protección que ofrece iOS, que un código del dispositivo mejora.
 - La subida por Wi‑Fi usa un token de sesión sobre HTTP simple en su red local;
   úsela solo en una red privada de confianza.
@@ -1263,19 +1513,23 @@ los sitios web que usted abra desde ella se rigen por sus propias políticas.
 | Datos | Dónde | Cuánto se conservan |
 |---|---|---|
 | Biblioteca, datos de lectura y reproducción, ajustes | Su dispositivo y copias de seguridad | Hasta que usted los elimine |
-| Fecha de inicio de la prueba | Llavero y almacén de clave-valor de iCloud | Persistente por diseño |
+| Fecha de inicio de la prueba (solo versiones anteriores a la 1.3.2) | Llavero y almacén de clave-valor de iCloud | Ya no se usa desde la versión 1.3.2; la App no la elimina |
+| Datos auxiliares de los contadores, elecciones de la estantería de clásicos y caché de portadas, hora del pedido de un primer libro de regalo | Su dispositivo | En el almacenamiento local de la App hasta que se eliminen o se elimine la App (iOS puede borrar antes la caché de portadas); las copias en las copias de seguridad del dispositivo siguen su configuración de copias de seguridad |
 | Contenido del pedido (idea o texto de narración, capítulos, título, audio) | Modal (EE. UU.), almacenamiento de trabajo cifrado | Hasta que la App confirme que ha guardado todos los capítulos; si no, el pedido caduca a los 7 días y se elimina en la siguiente limpieza programada (normalmente en 15 minutos); antes si usted elimina el libro o nos lo pide |
 | Identificadores de solicitud del proveedor de IA (sin texto) | Modal (EE. UU.) | 30 días tras la entrega o el fin del pedido. Una solicitud de eliminación a los destinatarios permanece abierta hasta que se envía; los identificadores que contiene se eliminan a los 30 días; el registro del envío (sin identificadores ni contenido) se conserva dos años |
 | Copias que conservan los proveedores de servicios | Modal; OpenAI (directamente, permiso 2026-10-14.1); para permisos anteriores, OpenRouter y el proveedor de IA que procesó el pedido | Modal hasta 7 días; OpenAI (directamente): entradas y salidas hasta 30 días, más tiempo solo cuando la ley lo exija o sea razonablemente necesario para proteger frente a daños, sin máximo publicado; sin estado de aplicación (`store: false`); caché de solicitudes desactivada; OpenRouter (solo permisos anteriores): metadatos de las solicitudes sin contenido de nuestra cuenta (solo podemos vincularlos directamente a un pedido mientras conservamos los identificadores de solicitud), sin plazo fijo publicado; OpenRouter conserva la información personal el tiempo razonablemente necesario para sus fines comerciales y sus obligaciones legales, regulatorias y contables, y luego la elimina o la desidentifica (Política de privacidad de OpenRouter, sección 7); proveedores de modelos a los que dirige OpenRouter (permisos anteriores): según el registro de 6.3.3 (Microsoft: contenido marcado por la supervisión de abusos, conservado para revisión durante un plazo que no publica; proveedores de alojamiento de GLM: puntos de acceso con conservación cero de datos); los proveedores eliminan conforme a sus propias reglas, sin perjuicio de la ley aplicable |
 | Su libro entregado | Su dispositivo y su iCloud privado | Hasta que usted lo elimine |
 | Recibos, registros de permisos, saldo de horas, avisos de suscripción | Modal (EE. UU.) | 7 años después del último hecho financiero relacionado |
+| Primer libro de regalo: recibos y registros de permisos (identificador de transacción de la app) | Modal (EE. UU.) | 7 años después del fin del pedido (un registro de permiso sin pedido aceptado: después de la decisión), y luego se eliminan en nuestra siguiente revisión anual de conservación salvo que se aplique una excepción legal; antes, ante una solicitud de eliminación (sección 10) |
+| Primer libro de regalo: registros de entrega o devolución del regalo, enlaces de los números de libro a ellos, costo total de cada libro de regalo, marcas de presupuesto diario agotado (hash con clave del identificador de transacción de la app, número del libro, importes, marca de tiempo; sin contenido) | Modal (EE. UU.) | Mientras ofrezcamos el primer libro de regalo, para que no pueda pedirse de nuevo y para controlar y conciliar el presupuesto de regalos; se eliminan dentro de los 12 meses siguientes al fin de la oferta, salvo los de un libro de regalo aún en curso; la necesidad de cada categoría se revisa al menos una vez al año. La solicitud de eliminación desde la App no los elimina automáticamente; las peticiones de eliminación anticipada se evalúan conforme a la ley aplicable, como se describe en la sección 10 |
+| Primer libro de regalo: plazas de revisión (hash, día UTC, marca de tiempo) y registros diarios detallados de presupuesto y procesamiento (números de libro, importes, etapas, marcas de tiempo; sin contenido) | Modal (EE. UU.) | Nuestro almacenamiento los elimina automáticamente unos 7 días después de la última lectura o escritura; un diario de presupuesto diario se mantiene vigente 10 días, por lo que normalmente unos 17 días después de su día. La solicitud de eliminación desde la App no los elimina automáticamente; las peticiones de eliminación anticipada se evalúan conforme a la ley aplicable, como se describe en la sección 10 |
 | Registros de funcionamiento del servicio (sin contenido) | Modal (EE. UU.) | Transferencias de audio: hasta que termina el pedido; cierre del pedido y decisión sobre las horas: mientras se conserve el recibo del pedido, más aproximadamente 1 día; hora de recepción de permisos: hasta que sus datos se eliminen a petición suya; contadores de límites diarios: unos dos o tres días, más la espera hasta la limpieza programada; identificadores de notificaciones de App Store: 8 días; vínculos de compras de horas adicionales: mientras se conserve el saldo de horas |
 | Protección de la eliminación (sin contenido) | Modal (EE. UU.) | Registros de liquidación: unos 8 días desde su creación, más la espera hasta la limpieza programada; registros del estado final del pedido y del momento de eliminación: mientras sean necesarios para impedir que se reanude el trabajo eliminado y para consultas sobre reembolsos y disputas, revisados al menos una vez al año, como máximo hasta que se elimine el recibo del pedido |
-| Denuncias de contenido (motivo, nota, pasaje, número de libro, capítulo, identificador de suscripción) | Modal (EE. UU.); nuestro buzón si se envían por correo | 12 meses |
+| Denuncias de contenido (motivo, nota, pasaje, número de libro, capítulo, identificador de suscripción o de transacción de la app, según la sección 6.1A) | Modal (EE. UU.); nuestro buzón si se envían por correo | 12 meses |
 | Registros de bloqueo | Modal (EE. UU.) | Mientras dure el bloqueo más 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | Modal (EE. UU.) / nuestro buzón | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Registro de solicitud de eliminación (sin contenido) | Modal (EE. UU.) | 2 años |
-| Tokens de notificación y registros de inscripción; índice de notificaciones; registros de revocación y de notificación por pedido (sin contenido) | Modal (EE. UU.) | Tokens y registros de inscripción: dejan de usarse 8 días después del último envío de la App y se eliminan en la siguiente limpieza programada; antes si Apple indica que no son válidos, si la App comunica que se desactivaron las notificaciones o ante una solicitud de eliminación. Índice (huellas de tokens, referencias): se elimina durante la limpieza tras 8 días sin un nuevo registro, una vez eliminados sus registros, o ante una solicitud de eliminación. Registros de revocación (huella del token, hora): 8 días tras la revocación registrada por el servidor, más la espera hasta la limpieza programada, o de inmediato ante una solicitud de eliminación. Registros por pedido (número del libro, tipo, hora): 8 días, más la espera hasta la limpieza programada (sección 6.2) |
+| Tokens de notificación y registros de inscripción (bajo el identificador de la suscripción o de transacción de la app); índice de notificaciones; registros de revocación y de notificación por pedido (sin contenido) | Modal (EE. UU.) | Tokens y registros de inscripción: dejan de usarse 8 días después del último envío de la App y se eliminan en la siguiente limpieza programada; antes si Apple indica que no son válidos, si la App comunica que se desactivaron las notificaciones o ante una solicitud de eliminación. Índice (huellas de tokens, referencias): se elimina durante la limpieza tras 8 días sin un nuevo registro, una vez eliminados sus registros, o ante una solicitud de eliminación. Registros de revocación (huella del token, hora): 8 días tras la revocación registrada por el servidor, más la espera hasta la limpieza programada, o de inmediato ante una solicitud de eliminación. Registros por pedido (número del libro, tipo, hora): 8 días, más la espera hasta la limpieza programada (sección 6.2) |
 | Contadores de uso (anónimos) | Modal (EE. UU.) | 90 días, más la espera hasta la limpieza programada; los registros individuales de hitos se agrupan en totales diarios a los 2 días aproximadamente |
 | Registros de aplicación (sin IP, sin contenido) | Modal (EE. UU.) | Aproximadamente 1 día |
 | Recuentos diarios de funcionamiento del servicio y estado de procesamiento del programa de recuento (sin identificadores de usuario ni contenido) | Modal (EE. UU.): recuentos de rechazos; un Mac de acceso restringido controlado por OWN PLACE LLC: recuentos de solicitudes, resultados, eventos de rechazo y errores, puntos de control del procesamiento y resúmenes de ejecución | 30 días; limpieza local según la sección 9 |
@@ -1287,7 +1541,8 @@ Nuestra etiqueta de privacidad del App Store y el manifiesto de privacidad de la
 App declaran:
 
 - **Datos vinculados a usted:** Identificadores — **ID de usuario** (el identificador de transacción
-  original de la suscripción); Identificadores — **ID del dispositivo** (el token de
+  original de la suscripción y, para el primer libro de regalo, el identificador de
+  transacción de la app); Identificadores — **ID del dispositivo** (el token de
   notificaciones push, solo si permite las notificaciones); **Compras — Historial de compras**
   (estado de la suscripción, horas adicionales, horas usadas); **Contenido del usuario — Otro contenido
   del usuario** (ideas de libros, texto de narración, denuncias de contenido); **Ubicación —
@@ -1318,7 +1573,9 @@ amplía por sí solo un permiso anterior. Antes de habilitar una nueva vía de I
 cambiar sustancialmente su tratamiento, también actualizamos nuestra evaluación de
 protección de datos (Política de privacidad de datos de salud del consumidor, A9).
 
-**Cambios en esta edición (17 de octubre de 2026).** La sección 10 describe ahora cómo funciona el botón «Solicitar eliminación de datos» en las versiones 1.3 y posteriores de la App: después de que usted lo confirme, solicita la eliminación directamente a nuestro servicio; el correo es una alternativa si no se puede identificar su suscripción o la solicitud falla; y «Casi listo» significa que debe volver a tocar el botón en unos minutos. El texto anterior decía que el botón solo prepara un correo de eliminación. Nada más cambia en esta Política.
+**Cambios en esta edición ([FECHA DE PUBLICACIÓN] de 2026; versión 1.3.2 de la App).** Primer libro de regalo: sin suscripción, puede pedir un libro con IA de unos 15 minutos; la App envía el registro de su descarga de la App firmado por Apple (AppTransaction), nuestro servidor conserva el identificador de transacción de la app con ese pedido como conserva el identificador de la suscripción, y conserva un hash con clave de él para que el regalo se dé una sola vez (secciones 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 14A, 15, 17 y 18). Notificaciones «libro listo»: el token puede quedar vinculado también al identificador de transacción de la app, y una señal silenciosa en segundo plano, que contiene solo el tipo «listo», permite a la App recoger un libro listo en segundo plano (secciones 2, 5, 6.2, 6.3.3, 9 y 17). Estantería de clásicos: la App solicita automáticamente a Internet Archive las imágenes de portada de los clásicos sugeridos mientras la estantería se muestra en la página Mis libros, solo en la tienda de EE. UU. (secciones 2, 4, 5, 10 y 17). Contadores de uso: nuevos nombres de pasos, el tipo de archivo de las importaciones correctas, el canal de distribución en los contadores de sesión, la compilación y la semana del primer inicio en los hitos, y una descripción más precisa de lo que la App guarda antes de que usted responda (secciones 4, 5 y 8). El reproductor no requiere compra: la prueba y su fecha ya no se usan, y la App ya no ofrece nuevas compras del reproductor ni de horas adicionales (secciones 4, 5, 6.4, 7, 15 y 17). El permiso del proveedor de IA (versión 2026-10-14.1), sus destinatarios y sus condiciones no cambian.
+
+**Cambios en la edición del 17 de octubre de 2026.** La sección 10 describe ahora cómo funciona el botón «Solicitar eliminación de datos» en las versiones 1.3 y posteriores de la App: después de que usted lo confirme, solicita la eliminación directamente a nuestro servicio; el correo es una alternativa si no se puede identificar su suscripción o la solicitud falla; y «Casi listo» significa que debe volver a tocar el botón en unos minutos. El texto anterior decía que el botón solo prepara un correo de eliminación. Nada más cambia en esta Política.
 
 **Cambios en la edición del 16 de octubre de 2026.** Notificaciones «libro listo»: si usted permite las notificaciones de Talefall, la App envía a nuestro servicio el token de notificaciones push del dispositivo, que conservamos vinculado al identificador de la suscripción durante los plazos de la sección 6.2, y Apple Push Notification service entrega la notificación (secciones 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 14A, 17 y 18). Si ya permitió las notificaciones de Talefall, la App actualizada aplaza el registro inicial del token hasta su próximo pedido de libro y espera a que pulse «OK» en un aviso dentro de la aplicación antes de enviar el token, siempre que las notificaciones sigan permitidas en iOS (sección 5). Puede desactivar las notificaciones en Ajustes de iOS en cualquier momento, y entonces la App nos pide que eliminemos el token. Contadores de hitos anónimos separados, que se envían solo con el permiso de contadores de uso que usted ya haya dado (sección 8). Recuentos diarios agregados del funcionamiento del servicio, sin identificadores de usuario ni contenido, conservados también en un Mac de acceso restringido controlado por OWN PLACE LLC durante 30 días (sección 9). En el aviso de privacidad para México (sección 14A) se actualizó además la lista de encargados conforme al permiso vigente 2026-10-14.1. Esta edición no cambia el permiso del proveedor de IA, sus destinatarios ni sus condiciones.
 
@@ -1328,6 +1585,16 @@ protección de datos (Política de privacidad de datos de salud del consumidor, 
 
 **Registro de cambios.**
 
+- **[FECHA DE PUBLICACIÓN] de 2026** (versión 1.3.2 de la App): primer libro de
+  regalo e identificador de transacción de la app (sección 6.1A y secciones
+  relacionadas, incluido el aviso para México de la sección 14A); tokens de
+  notificación vinculados a él y la señal silenciosa de «libro listo»;
+  solicitudes automáticas de portadas de la estantería de clásicos a Internet
+  Archive; nuevos pasos y campos de los contadores (tipo de archivo de las
+  importaciones correctas, canal de distribución, compilación y semana del primer
+  inicio); la fecha de prueba ya no se usa, y la App ya no ofrece nuevas compras
+  del reproductor ni de horas adicionales. El permiso del proveedor de IA (versión
+  2026-10-14.1) no cambia.
 - **17 de octubre de 2026:** sección 10 corregida para describir la solicitud
   de eliminación desde la App en las versiones 1.3 y posteriores (solicitud
   directa a nuestro servicio tras la confirmación, alternativa por correo y

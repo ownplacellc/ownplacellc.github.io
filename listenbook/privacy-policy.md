@@ -1,6 +1,6 @@
 # Privacy Policy for Talefall — Audiobook Player
 
-**Effective Date: October 17, 2026**
+**Effective Date: [PUBLICATION DATE], 2026**
 
 **Controller:** OWN PLACE LLC, a Washington limited liability company, 7707 NE
 141st St, Kirkland, WA 98034-5321, USA. Email: contact@ownplace.net.
@@ -18,6 +18,10 @@ App's Create tab (together, the "Service"):
   narrates it with our own narrator model.
 - **Narrate My Text in the Talefall voice:** our narrator model reads aloud a
   text book you already have.
+
+Since App version 1.3.2 the player and reader need no purchase. Without a
+subscription you can also order one AI book of about 15 minutes on us (the
+"first book on us", Section 6.1A); it uses the same Service.
 
 This Policy explains what leaves your device when you use those features,
 where it goes, why, and how long it is kept, and what never leaves your
@@ -51,7 +55,9 @@ live.
   bookmarks, notes, statistics, and settings stay on your device and in your
   own iCloud or device backups.
 - **If you do not use the Service, none of your library content is sent to
-  us.** The App still contacts Apple and, when you open them, the catalog
+  us.** The App still contacts Apple; the Internet Archive, automatically, for
+  the cover images of the suggested classics while that shelf is shown on the
+  My Books page (U.S. storefront only); and, when you open them, the catalog
   providers (Section 5).
 - **The Service is optional.** When you order a book, your idea goes to our
   service on Modal (USA). Our server first checks it for personal and
@@ -89,10 +95,17 @@ live.
   separate periods in Section 6.4.
 - **Your subscription is identified by Apple's signed transaction, not by
   you** (Section 6.1).
-- **Usage counters only if you say yes**; the default is no (Section 8).
+- **First book on us.** Without a subscription you can order one AI book of
+  about 15 minutes. To give it once per Apple Account, the App sends an
+  Apple-signed record of your download of the App, and our server keeps its
+  app transaction identifier with that order and a keyed hash of it to
+  prevent repeat claims (Section 6.1A).
+- **Usage counters only if you say yes**; nothing is sent until you allow
+  them (Section 8).
 - **"Book ready" notifications only if you allow notifications.** The App
   then sends our service the device's push-notification token, and Apple
-  delivers the notification (Sections 5 and 6.2).
+  delivers the notification and, when a book is ready, a silent signal that
+  lets the App collect the book in the background (Sections 5 and 6.2).
 - **No tracking, no ads, no advertising identifier, no third-party analytics
   SDKs.** We do not sell personal information or share it for cross-context
   behavioral advertising; we disclose it only to the recipients described in
@@ -102,11 +115,18 @@ live.
 
 Through the App we do not ask for, and the App does not send us, your name,
 email address, phone number, contacts, photos, precise location, browsing
-history, or advertising identifier, and no device identifier other than the
-push-notification token described in Section 5, which the App sends only if
-you allow notifications for Talefall (and, if you turn them off, sends again
-only to ask us to delete it, repeating the request until our service confirms
-it). We do not collect
+history, or advertising identifier; we do not use the advertising identifier.
+The App sends a push-notification token only as described in Section 5, only
+if you allow notifications for Talefall (and, if you turn them off, sends it
+again only to ask us to delete it, repeating the request until our service
+confirms it). For the first book on us, the App sends the complete
+Apple-signed record of your download of the App (AppTransaction), including
+any device-verification values it contains, only for the requests described in
+Section 6.1A; it contains Apple's app transaction identifier, which identifies
+the App's download on your Apple Account, and may also contain other
+information supplied by Apple, such as app acquisition and version information
+and signing dates. We keep only the app transaction identifier and the
+environment from it. We do not collect
 your playback history, bookmarks, notes, or highlights, or titles or text from
 your library unless you deliberately send a text for narration in the
 Talefall voice. We do not request health information and do not infer
@@ -143,11 +163,25 @@ and is not sent anywhere.
   the device and does not use the Service.
 - **On-device format conversion** of audio formats.
 - The **bundled sample audiobook**, which plays without a network connection.
-- The **trial start date**, stored in the iOS Keychain and the iCloud
-  Key-Value Store so that reinstalling does not restart the trial. It contains
-  only a date and may survive deleting the App.
+- **Trial start date from earlier versions.** Versions before 1.3.2 stored a
+  trial start date in the iOS Keychain and the iCloud Key-Value Store. Since
+  version 1.3.2 the player needs no purchase or trial, and the App no longer
+  reads or writes that date. A date already stored is not deleted by the App
+  and may remain; it contains only a date and is not sent to us.
 - Your **usage-counters answer**, and a local copy of your Terms acceptance
   and AI-provider permission so the App does not ask again unnecessarily.
+- **Usage-counter bookkeeping** (Section 8): whether this is a new
+  installation, the App build, distribution channel and calendar week of the
+  first launch, and the time of the first launch, which the App stores on the
+  device even before you answer the counters question; and, once you allow
+  counters, the milestones already sent or waiting to be sent and the
+  listening time accumulated toward the five-minute milestone. It is sent only
+  as described in Section 8, and only if you allow counters. The first-launch
+  time is never sent.
+- **Classics shelf:** the cached cover images of the suggested classics and
+  whether you hid the shelf or some of its books.
+- The **time you ordered the first book on us**, so that for 8 days the App
+  attaches the record of your download to the requests listed in Section 6.1A.
 - Books delivered by the Service, on the device and, if iCloud is available
   and the save succeeds, in your private iCloud storage, which we cannot
   access.
@@ -156,28 +190,43 @@ and is not sent anywhere.
 
 Each connection necessarily exposes your IP address and ordinary connection
 data to the service that receives it. Optional features send nothing until
-you use them.
+you use them, except the classics shelf covers described in the table.
 
 | Feature | What is sent | To whom | Why | How long |
 |---|---|---|---|---|
 | **Cover lookup** (Settings → "Find covers online", off until you turn it on) | Title and author of a book without a cover | Apple iTunes Search API | To find a cover image | Not received by us |
-| **Catalogs** (only when you open them) | Your search text and download requests | LibriVox, the Internet Archive, Project Gutenberg / Gutendex | To browse and download public-domain books | Not received by us |
+| **Classics shelf covers** (automatic while the "Start Listening" shelf of suggested classics is shown on the My Books page — for new and existing users, including after updating to version 1.3.2; U.S. App Store storefront only, which the App reads from Apple on the device and does not send; not requested once you hide the shelf or once an image is cached on the device) | A plain HTTPS request for a public-domain cover image file, in a separate ephemeral session that does not use cookies previously stored by the App. Talefall adds no identifier, storefront, or language to it; the Internet Archive necessarily receives your IP address, ordinary connection data (such as the system's user agent and time), and which cover file was requested | The Internet Archive (archive.org, USA) | To show the LibriVox cover art of the suggested classics; the images are cached on your device. This does not depend on "Find covers online" | Not received by OWN PLACE LLC. The Internet Archive handles the connection data under its own privacy policy; we do not control its retention |
+| **Catalogs** (only when you open them, or when you start a book from the classics shelf) | Your search text and download requests (for a book from the classics shelf, requests for its audio files) | LibriVox, the Internet Archive, Project Gutenberg / Gutendex | To browse and download public-domain books | Not received by us |
 | **Wi-Fi Upload** (only when you turn it on) | The files you choose | From your computer's browser to your iPhone over your local network | To copy files to the phone | Not received by us |
-| **Purchases** | Purchase and restore requests | Apple (StoreKit) | To buy the player, subscribe, or buy extra hours | Apple's policy; Section 7 |
-| **Trial date** | The trial start date | Apple iCloud Key-Value Store | So reinstalling does not restart the trial | Your iCloud account |
-| **AI-provider permission** | Whether you allowed or withdrew it, its version, and the time, with the signed subscription transaction (your Terms acceptance stays on the device) | Our service on Modal (USA) | So the Service writes books only with your permission | Section 6.4 |
-| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction, the App's shared service token, a random order key, and the version and time of your per-order confirmation | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until the App confirms saving every chapter, otherwise until the order expires after 7 days (Section 6.4). Receipt: Section 6.4 |
-| **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
-| **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language, with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
-| **Collecting books** | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
-| **"Book ready" notifications** (only if you allow notifications for Talefall; the App asks when you place your first order; if you already allowed them, see the note below this table) | The device's push-notification token issued by Apple and whether it is a development or production token, with the signed subscription transaction and the shared service token. If you later turn notifications off for Talefall, the App sends the same token again only to ask our service to delete it, and repeats this request until our service confirms it | Our service on Modal (USA). The notification itself is delivered by Apple Push Notification service (APNs); we send Apple only the token and a notification made of fixed text keys of the App and its kind ("ready" or "could not be finished") — no subscription identifier and nothing from your book | To tell you that an ordered book is ready to download, or could not be finished, while the App is closed | Section 6.2 ("Notification tokens") |
-| **Report content** (only when you use it) | Book number, chapter, the passage shown on the report screen (up to 4,000 characters), the reason, your note, the signed transaction if you have a subscription | Our service on Modal (USA); if sending fails, an email you send to contact@ownplace.net (without the passage) | To review and act on a report | 12 months (Section 6.4) |
-| **Usage counters** (only if you said yes) | Session counters: step names with seconds since launch, file type of a failed import, App version, device language, a random per-session number that the service does not store. Milestone counters: step name, App build number, distribution channel (App Store, TestFlight, or debug), primary App-interface language without a country, and a random number generated for that one milestone (repeated only if the same request is retried). The server adds the receipt time and UTC date to session counters, and the UTC receipt date to milestone counters. Counter requests also carry the App's shared service token, which is the same across installations | Our service on Modal (USA) | To learn where new users get stuck | 90 days (Section 8) |
+| **Purchases** | Purchase and restore requests | Apple (StoreKit) | To subscribe, and to restore or complete earlier purchases (App version 1.3.2 no longer offers new player or extra-hours purchases) | Apple's policy; Section 7 |
+| **First book on us — availability** (only without a subscription, when the App shows the offer) | The Apple-signed record of your download of the App and the shared service token | Our service on Modal (USA) | To check whether the first book on us can still be given | Section 6.1A |
+| **AI-provider permission** | Whether you allowed or withdrew it, its version, and the time, with the signed subscription transaction and/or the Apple-signed record of your download as described in Section 6.1A (your Terms acceptance stays on the device) | Our service on Modal (USA) | So the Service writes books only with your permission | Section 6.4 |
+| **Book from an Idea** | Your idea, book type, language, length, the signed subscription transaction (for the first book on us, the Apple-signed record of your download instead; Section 6.1A), the App's shared service token, a random order key, the version and time of your per-order confirmation, and (from version 1.3.2) a narrator-selection label requesting the current voice for the book's language | Our service on Modal (USA); the idea and the working text are sent on to the AI provider (Section 6.3) | To write and narrate the book you ordered | Content: until the App confirms saving every chapter, otherwise until the order expires after 7 days (Section 6.4). Receipt: Section 6.4 |
+| **Narration in the Talefall voice** (only for a book you confirmed) | The book's title, language, and chapter text (from version 1.3.2, also a narrator-selection label indicating either the current voice for the book's language or the voice previously used for that book), with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To narrate that book | As above |
+| **Passage narration** (Talefall voice, while you listen to a confirmed book) | The passage text and language (from version 1.3.2, also a narrator-selection label indicating either the current voice for the book's language or the voice previously used for that book), with the signed transaction and token | Our service on Modal (USA); our own narrator model only | To return audio of that passage | Not stored by our application; only the character count and audio length are logged. Modal may keep function inputs and outputs up to 7 days |
+| **Collecting books** (when you open the App, and in the background after a silent "book ready" signal, below) | Book numbers, per-chapter "saved" confirmations, delete or cancel requests, the signed transaction (within 8 days after you ordered a book on us, also the record of your download; Section 6.1A) | Our service on Modal (USA) | To download your books and let the server delete its copy | Section 6.4 |
+| **"Book ready" notifications** (only if you allow notifications for Talefall; the App asks when you place your first order; if you already allowed them, see the note below this table) | The device's push-notification token issued by Apple, whether it is a development or production token, and whether this version of the App can receive the silent background signal, with the signed subscription transaction (within 8 days after you ordered a book on us, also or instead the Apple-signed record of your download; Section 6.1A) and the shared service token. If you later turn notifications off for Talefall, the App sends the same token again, with both records it can obtain, only to ask our service to delete it, and repeats this request until our service confirms it | Our service on Modal (USA). The notification itself is delivered by Apple Push Notification service (APNs); we send Apple only the token and a notification made of fixed text keys of the App and its kind ("ready" or "could not be finished"), and, when a book is ready, a silent signal containing only the kind "ready" — no subscription or app transaction identifier and nothing from your book | To tell you that an ordered book is ready to download, or could not be finished, while the App is closed, and to let the App collect a ready book in the background | Section 6.2 ("Notification tokens") |
+| **Report content** (only when you use it) | Book number, chapter, the passage shown on the report screen (up to 4,000 characters), the reason, your note, the signed transaction if you have a subscription (without a subscription, or within 8 days after you ordered a book on us, the record of your download; Section 6.1A) | Our service on Modal (USA); if sending fails, an email you send to contact@ownplace.net (without the passage) | To review and act on a report | 12 months (Section 6.4) |
+| **Usage counters** (only if you said yes) | Session counters: step names with seconds since launch, file type (extension only) of an import that succeeded or failed, App version, device language, distribution channel (App Store, TestFlight, or debug), a random per-session number that the service does not store. Milestone counters: step name, App build number, distribution channel, primary App-interface language without a country, for installations first launched with version 1.3.2 or later the App build and calendar week (ISO week, UTC) of the first launch, and a random number generated for that one milestone (repeated only if the same request is retried). The server adds the receipt time and UTC date to session counters, and the UTC receipt date to milestone counters. Counter requests also carry the App's shared service token, which is the same across installations | Our service on Modal (USA) | To learn where new users get stuck | 90 days (Section 8) |
 | **App Store Server Notifications** (not from your device) | Apple's signed notice of a renewal, expiry, refund, or revocation | From Apple to our service | So the Service knows the subscription status | Section 6.4 |
 
 <a id="notifications"></a>
 
-**Before registering for notifications.** If you previously allowed Talefall notifications, opening the updated App alone does not trigger initial registration of your push token with our service. At your next book order, the App shows an in-app notice before sending the token. If you do not tap “OK”, the notice appears again at subsequent book orders while notifications remain allowed in iOS. Registration waits until you tap “OK” in that notice and notifications remain allowed in iOS; no repeat iOS notification-permission prompt is required. You can instead choose “Turn off in Settings”; opening Settings or closing the notice does not authorize registration. The App sends the token and the registration data listed in the table to OWN PLACE LLC’s service on Modal (USA). We store the token linked to your subscription identifier for the periods described in Section 6.2. For delivery through APNs, we send Apple the token and a standard book-status notification, without your subscription identifier or book content. After initial registration, the App may refresh it when you open the App or place an order. You can turn notifications off in iOS Settings; the next time the App is open, it asks our service to delete the token as described in Section 6.2. When the App first asks you to allow notifications at a book order, it explains this processing before the iOS permission request and registers the token only if you allow notifications. Notifications are optional; declining does not prevent ordering or receiving books.
+**Before registering for notifications.** If you previously allowed Talefall notifications, opening the updated App alone does not trigger initial registration of your push token with our service. At your next book order, the App shows an in-app notice before sending the token. If you do not tap “OK”, the notice appears again at subsequent book orders while notifications remain allowed in iOS. Registration waits until you tap “OK” in that notice and notifications remain allowed in iOS; no repeat iOS notification-permission prompt is required. You can instead choose “Turn off in Settings”; opening Settings or closing the notice does not authorize registration. The App sends the token and the registration data listed in the table to OWN PLACE LLC’s service on Modal (USA). We store the token linked to your subscription identifier and, for a book on us, to your app transaction identifier (Section 6.1A), for the periods described in Section 6.2. For delivery through APNs, we send Apple the token and a standard book-status notification, without your subscription or app transaction identifier or book content. After initial registration, the App may refresh it when you open the App or place an order. You can turn notifications off in iOS Settings; the next time the App is open, it asks our service to delete the token as described in Section 6.2. When the App first asks you to allow notifications at a book order, it explains this processing before the iOS permission request and registers the token only if you allow notifications. Notifications are optional; declining does not prevent ordering or receiving books.
+
+**Silent "book ready" signal.** From version 1.3.2, when a book is ready, our
+service also asks Apple to deliver a silent background signal to each
+registered device whose App can receive it. The signal shows nothing on the
+screen and contains only the kind "ready" — no book number, title, or content.
+It lets iOS wake the App briefly (iOS decides whether and when): the App then
+makes the same requests as when you open it to collect books — it asks our
+service for your book list, imports the text of a ready book, queues its
+audio for download, and confirms what it saved — with the same signed records
+described in this table. If you have allowed usage counters, importing a book
+during this background collection may also send the "book received" milestone
+described in Section 8, which contains no book content and no subscription or
+app transaction identifier. The App sends nothing else in response to the
+signal.
 
 **Third-party policies.** Apple: https://www.apple.com/legal/privacy/ ·
 Internet Archive: https://archive.org/about/terms · LibriVox:
@@ -198,7 +247,10 @@ https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html.
 
 ## 6. The Talefall Subscription's Server Features
 
-This section applies only if you subscribe and use the Service.
+This section applies if you subscribe and use the Service, or if you order
+the first book on us without a subscription (Section 6.1A). Everything in
+Sections 6.2–6.7 applies to that book the same way, with the app transaction
+identifier in place of the subscription identifier where Section 6.1A says so.
 
 ### 6.1 No account — an Apple-signed transaction instead
 
@@ -216,14 +268,90 @@ you give us in correspondence.
 
 The App also sends a **shared service token**, the same in every copy of the
 App; it is an abuse-control signal, not authentication. Access to your books
-depends on the Apple-signed transaction. A **random order key** lets the
-server recognize a repeated request as the same order.
+depends on the Apple-signed transaction (for the first book on us, on the
+Apple-signed record of your download, Section 6.1A). A **random order key**
+lets the server recognize a repeated request as the same order.
+
+<a id="first-book"></a>
+
+### 6.1A First book on us — an Apple-signed record of your download
+
+If you do not have a subscription, you can order one AI book of about 15
+minutes on us. All the conditions of a paid order apply: the Terms of Use, the
+18+ confirmation, the AI-provider permission (Section 6.3), the fiction-only
+confirmation, and our safety checks (Section 6.5). The book is written and
+narrated on the same routes as a paid order under the current permission. It
+uses no hours and has no cash value. If the book is not delivered to you (it
+fails, expires, is stopped by our checks, or you cancel it before you receive
+it), you may order it again, up to three orders in total; once a first book
+has been delivered, the offer is used. The number of first books we give each
+day is limited for everyone; when the day's limit is reached, nothing is
+charged and you can try again later.
+
+To offer it once per Apple Account, the App attaches the **AppTransaction** —
+a record of your download of the App, signed by Apple — to these requests
+only:
+
+- when you have no subscription: the check whether the gift is available,
+  book orders, your answer "allow" on the AI-provider permission screen, and
+  content reports;
+- for 8 days after your device sent an order for the first book on us, even
+  if you subscribe meanwhile: book orders, your answer "allow", content
+  reports, the requests that list, download, confirm, cancel, or delete books,
+  and registration of this device for "book ready" notifications — so the
+  gift book still reaches you, a repeated order is not created twice, and
+  withdrawing your permission also stops the gift book;
+- always: withdrawing your AI-provider permission, and asking our service to
+  delete this device's notification token — so that these reach data kept
+  for a gift book ordered from another device or before you reinstalled the
+  App (if the record is unavailable, the App retries later);
+- a data deletion request from the App (Section 10), so that data kept under
+  it can be deleted.
+
+The App sends the complete Apple-signed record for verification. Besides the
+app transaction identifier it may contain other information supplied by Apple,
+such as app acquisition and version information, signing dates, and
+device-verification values. Our server verifies Apple's signature, that the
+record belongs to Talefall (the App's bundle and App Store identifiers), and
+its environment, and our application keeps only the **app transaction
+identifier** (a number Apple assigns to your Apple
+Account's download of the App; it stays the same after you reinstall) and the
+environment (Modal's infrastructure copies of requests follow Section 6.4). We
+use that identifier, prefixed `app:`, the way Section 6.1
+describes for the subscription identifier: with the gift order, its receipt,
+your permission record, reports, notification tokens registered for the gift
+book, the order key records, and our application logs (about one day). It
+contains no name, email, or Apple ID, but it is a persistent identifier, so we
+treat it as personal information. No hours balance is kept for it.
+
+To make sure the gift is given only once, we keep a record that it was given
+(and, if the book was not delivered, that it was given back), keyed by a
+**keyed hash** (HMAC) of the identifier rather than the identifier itself,
+with the book number (a random number that also appears on the order's
+receipt) and the time, and a link from the book number to that keyed hash.
+Before our safety checks screen an attempted gift order, we also record a
+screening slot under the same keyed hash and the UTC day, to limit repeated
+attempts; it contains no submitted text and may remain even if the checks
+reject the order and no book is created. These records are necessary to
+prevent the gift from being claimed again and to limit abuse; we use them for
+nothing else.
+
+To keep the daily limit, we also keep records of the day's gift budget and of
+the processing of each gift book: which gift books were accepted that day,
+their reserved, estimated and actual cost, and their processing stages (book
+numbers, amounts, times; no content).
+
+These records contain no app transaction identifier in readable form and no
+book content, but they may remain linkable to you through the keyed hash or
+the book number, so we treat them as personal information. Their retention is
+described in Section 6.4.
 
 ### 6.2 What our server stores about an order
 
 While an order is in progress: your idea (or, for narration, the text you
 supplied), book type, language and length, the generated title and chapters,
-the audio, technical state and times, the original transaction identifier,
+the audio, technical state and times, the original transaction identifier
+(for the first book on us, the app transaction identifier),
 and the request identifiers returned by the AI provider (kept 30 days after
 the order's delivery or end; Section 6.4). Content is held in
 Modal's storage as **temporary, encrypted working storage** and is kept out of
@@ -255,7 +383,7 @@ content.
   copy of an older answer cannot override a newer one. Kept until your data is
   deleted at your request.
 - *Daily limits:* counters of orders and content reports per subscription
-  identifier and day (Terms of Use, Section 4.4). Deleted at scheduled cleanup once their UTC calendar date is more than two days old, normally about two to three days after creation.
+  identifier (for the first book on us, per app transaction identifier) and day (Terms of Use, Section 4.4). Deleted at scheduled cleanup once their UTC calendar date is more than two days old, normally about two to three days after creation.
 - *App Store notifications:* identifiers of Apple's server notifications that
   we have already processed. Kept for eight days.
 - *Extra-hours purchases:* the link between an extra-hours transaction
@@ -271,13 +399,17 @@ content.
   identifier, so that deleted work cannot resume. These final-status and
   deletion-time records are kept while needed to stop deleted or cancelled
   work from resuming and to answer refund and dispute questions about the
-  order, and at the latest until the order's receipt is deleted (seven years
-  after the last related financial event, Section 6.4); we review them at
+  order, and at the latest until the order's receipt is deleted, under the
+  receipt-retention rule in Section 6.4 that applies to that order; we review them at
   least once a year and delete those no longer needed. Requests to delete them
   earlier are assessed under applicable law.
 - *Notification tokens:* the push-notification token of each device on which
   you allowed notifications, whether it is a development or production token,
-  and the time the App last sent it, linked to the subscription identifier.
+  whether that device's App can receive the silent "book ready" signal, and
+  the time the App last sent it, linked to the subscription identifier and,
+  for a book on us, to the app transaction identifier (if you order a book on
+  us and also have a subscription, the token may be linked to both, as two
+  separate registrations).
   We stop using a token 8 days after the App last sent it (the App sends it
   again from time to time when you open the App, and when you place an
   order), and it is deleted at the next scheduled cleanup (normally within 15
@@ -288,8 +420,8 @@ content.
   repeats it until it succeeds; until then, iOS itself does not show Talefall
   notifications), or on a data-deletion request. When our service processes a
   request to disable notifications, it records a one-way fingerprint (hash) of
-  the token and the server time of revocation, linked to the subscription
-  identifier. Each revocation record is kept for 8 days from that server time,
+  the token and the server time of revocation, linked to the subscription or
+  app transaction identifier. Each revocation record is kept for 8 days from that server time,
   plus scheduled cleanup. It prevents registrations whose server-side
   processing began no later than that revocation from reactivating the token;
   a data-deletion request deletes it at once. We may retain earlier
@@ -300,8 +432,9 @@ content.
   once its referenced records have been removed. A fulfilled data-deletion
   request removes this index. We also keep, per order, a technical record
   that a notification about it was attempted (book number, "ready" or "could
-  not be finished", and time — no token and no subscription identifier), so
-  the same notification is not sent twice; it is deleted after 8 days, plus
+  not be finished" — and, for the silent signal, "ready, background" — and
+  time; no token and no subscription or app transaction identifier), so the
+  same notification is not sent twice; it is deleted after 8 days, plus
   scheduled cleanup.
 
 <a id="ai-providers"></a>
@@ -462,7 +595,7 @@ statement that the practice does not exist.
 | **Modal Labs, Inc.** | Hosting: runs our service, our writer program, our narrator model, and our moderation model; stores working content, receipts, and logs | United States | Everything in 6.2 | Processor under Modal's Data Processing Addendum (modal.com/legal/dpa): processes on our instructions, lists its subprocessors, notifies breaches, does not train on customer data. Modal may keep function inputs and outputs for up to seven days under its infrastructure retention policy, independently of our deletion |
 | **Our narrator model** (VoxCPM2) | Reads text aloud | Our own container on Modal (USA) | The text to be narrated | Operated by us; nothing is sent to another company |
 | **Our moderation model** | Checks each generated chapter (Section 6.5) | Our own container on Modal (USA) | Each generated chapter | Operated by us; nothing is sent to another company |
-| **Apple** | Payments, subscription status, email delivery for contact@ownplace.net, and delivery of "book ready" notifications (Apple Push Notification service) | Apple's infrastructure | Purchases; notices about renewals and refunds; your email if you write to us; for notifications, the device's push-notification token and a notification made of fixed text keys of the App and its kind — no subscription identifier and no book content | Apple's policy, including for Apple's retention of notification data |
+| **Apple** | Payments, subscription status, email delivery for contact@ownplace.net, and delivery of "book ready" notifications and the silent "book ready" signal (Apple Push Notification service) | Apple's infrastructure | Purchases; notices about renewals and refunds; your email if you write to us; for notifications, the device's push-notification token and a notification made of fixed text keys of the App and its kind, or a silent signal with only the kind "ready" — no subscription or app transaction identifier and no book content | Apple's policy, including for Apple's retention of notification data |
 
 #### 6.3.4 Which recipients each permission version uses
 
@@ -703,14 +836,41 @@ by providers' staff is described in the registry above.
   New orders and new requests that use hours require an active subscription.
   The existing seven-day delivery deadline and the rules for deletion and
   restoration of hours continue to apply; expiry does not restart that
-  deadline. Listening and reading in the App remain subject to the player
-  access requirements.
+  deadline. Since App version 1.3.2, listening and reading in the App require
+  no purchase.
 - **Deleting or cancelling a book in the App** sends a delete request to the
   service (retried later if you are offline); a running order is stopped. Its hours are restored if any chapter was not delivered (Terms of Use, Section 4.2).
 - **Receipts, permission records, and the hours balance** (Sections 6.2 and
   6.6) are kept for **seven years after the last related financial event**,
   because they document paid work and charges, then deleted or irreversibly
-  aggregated. They contain no book content.
+  aggregated. They contain no book content. Receipts of the first book on us,
+  which involves no payment, and its permission records are keyed by the app
+  transaction identifier. We keep them to document delivery and the
+  permission applied to the order and to resolve related disputes, for
+  **seven years after the order ends** (a permission record not followed by an
+  accepted order: seven years after the recorded decision), and delete them at
+  our next annual retention review after that period, unless a lawful
+  exception such as an open dispute or a legal hold applies. Earlier deletion
+  requests are handled under Section 10.
+- **First book on us records** (Section 6.1A; no content and no identifier
+  in readable form, but linkable to you through the keyed hash or book
+  number):
+  - the keyed-hash records that the gift was given or given back, the links
+    from book numbers to them, per-book gift cost totals (book number, cost,
+    date), and the record that a day's gift budget was used up are kept while
+    we offer the first book on us: the gift-grant and return records and
+    their links prevent repeat claims, and the cost totals and budget-stop
+    records support gift-budget control and reconciliation. After the offer
+    ends we delete them within 12 months, except records of a gift book still
+    being produced or delivered. We review the continued need for each of
+    these categories at least once a year and delete records no longer needed
+    earlier;
+  - screening slots (keyed hash, UTC day, time) and the detailed daily budget
+    and processing records (book numbers, amounts, stages, times) are not
+    kept current by us and are removed automatically by our storage about
+    seven days after they were last read or written; a daily budget journal
+    is kept current for its first ten days, so it is normally removed about
+    seventeen days after its day.
 - **Service operation records** (Section 6.2) are kept for the periods stated
   there.
 - **Content reports** are kept for **12 months** after submission, separately
@@ -858,7 +1018,8 @@ and what it generated for that order.
 
    We record your decision, permission version, time and, for version
    2026-10-14.1, the fingerprint of the exact text shown, linked to your
-   original subscription transaction identifier, and retain a versioned record
+   original subscription transaction identifier (for the first book on us,
+   your app transaction identifier; Section 6.1A), and retain a versioned record
    of the disclosure to which you agreed. Withdrawal in Settings blocks further
    transfers under this permission, including further AI calls for pending
    orders. It does not undo completed processing; deletion rights and
@@ -930,8 +1091,15 @@ All payments are processed by Apple. We never receive your card details,
 billing address, or Apple Account credentials. Apple gives us aggregated
 sales reports.
 
-- **One-time player purchase:** checked on the device with StoreKit; nothing
-  about it is sent to our server.
+- **One-time player purchase:** App version 1.3.2 no longer offers it; the
+  player needs no purchase. If you bought it earlier, the App checks it on the
+  device with StoreKit; nothing about it is sent to our server.
+- **Extra hours:** App version 1.3.2 no longer offers new extra-hours
+  purchases. If an earlier
+  extra-hours purchase has not yet been credited, the App still sends its
+  signed transaction to our server so that its hours are credited once.
+- **First book on us:** involves no payment; Section 6.1A describes the
+  Apple-signed record of your download that the App sends for it.
 - **Talefall Subscription and extra hours:** in addition to the signed
   transaction (Section 6.1), Apple's App Store Server Notifications tell our
   server when a subscription renews, expires, or is refunded or revoked. We
@@ -942,28 +1110,52 @@ sales reports.
 
 ## 8. Usage Counters (optional, off unless you allow them)
 
-On first launch the App asks whether it may send a few anonymous counters;
-the default is no, and you can change your answer in Settings. If you allow
-it, the App sends step names (for example: the App opened, the library was
-shown, playback started, an import failed), the seconds since launch, the file
-type of a failed import (never the file name), the App version, your device
-language, and a random number that groups one session's counters and is not
-stored. The counters never contain book titles, text, file names, or any
-identifier of you or your device.
+On first launch (and, after an update, if you have not answered yet) the App
+asks whether it may send a few anonymous counters, with two choices, "Not
+Now" and "Allow". Until you allow them, nothing is sent; an unanswered
+question counts as no; and you can change your answer in Settings. While the
+question is still open, the App may keep the current session's events in
+memory only: if you allow counters, they are sent; if you decline, they are
+discarded; and they are lost when the App closes. To label counters if you
+allow them, the App stores on the device, whatever you answer, the bookkeeping
+described in Section 4; it stays on the device unless you allow counters.
+
+If you allow it, the App sends step names (for example: the App opened, the
+library was shown or was empty, the first choice made on the My Books page —
+a suggested classic, your own file, or an AI book — the first sound played,
+playback started, an import succeeded or failed), the seconds since launch,
+the file type of an imported file (its extension only, such as "mp3"; never
+the file name), the App version, your device language, the distribution
+channel (App Store, TestFlight, or debug), and a random number that groups
+one session's counters and is not stored. The counters never contain book
+titles, text, file names, or any identifier of you or your device.
 
 With the same permission, the App also sends separate milestone counters,
 normally once per installation: first launch, enabling counters, opening the
 bundled sample, importing a book, and starting playback (these five for new
 installations only), opening the AI order or a subscription purchase screen, viewing and
 answering the AI-provider permission screen, an accepted book order, and
-receiving a book. Each milestone request contains only its step name, the App
-build number, the distribution channel (App Store, TestFlight, or debug), the
-primary App-interface language without a country, and a random number
-generated for that one milestone so that a retried request is normally not
-counted twice. Our server adds the UTC date of receipt. It contains no
-elapsed time, session number, installation identifier, subscription
-identifier, or book identifier. The per-milestone random number does not
-provide a common identifier across different milestones. We do not use the
+receiving a book. For installations first launched with version 1.3.2 or
+later, also: a useful first action (first sound, an import, or opening the AI
+order) within 60 seconds of the first launch, or leaving the first session
+without one; 5 minutes of listening in total; and opening the App again on
+days 2 to 7 after the first launch (by the phone's calendar). Each milestone
+request contains only its step name, the App build number, the distribution
+channel (App Store, TestFlight, or debug), the primary App-interface language
+without a country, for installations first launched with version 1.3.2 or
+later the App build and the calendar week (ISO week, UTC, for example
+"2026-W44") of the first launch, and a random number generated for that one
+milestone so that a retried request is normally not counted twice. For these
+installations the distribution channel is the one recorded at the first
+launch, which may differ from the current one after the App is reinstalled
+from another channel. Our server
+adds the UTC date of receipt. It contains no elapsed time, exact first-launch
+time, session number, installation identifier, subscription or app
+transaction identifier, or book identifier. The build and week of the first
+launch are the same for every installation first launched with that build in
+that week; they group installations and are not an identifier of you. The
+per-milestone random number does not provide a common identifier across
+different milestones. We do not use the
 counters to identify you or combine them with subscription or order records. After about two days, the individual milestone records, with
 their random numbers, are combined into daily totals. These are approximate
 counts: a retried request is normally recognized and counted once, but may
@@ -972,7 +1164,8 @@ occasionally be counted twice.
 Our server accepts only the fields described in this section. Usage counters
 are deleted by a scheduled cleanup after **90 days**; cleanup runs every 15
 minutes, and a deletion that fails is retried at the next run. No usage
-events are collected or sent before you allow counters. Declining or
+counters are sent before you allow them; before you answer, the current
+session's events are held only in memory, as described above. Declining or
 withdrawing permission clears queued events and stops collection of new
 events. We do not send a counter recording refusal of usage counters.
 Requests already sent cannot be recalled. Counter requests also carry the
@@ -982,11 +1175,11 @@ processes the counters on our behalf; we do not use them for tracking.
 ## 9. Server Logs
 
 Our service on Modal writes technical logs: request paths with book numbers,
-status codes, times, the original transaction identifier on hours and order
-events, character and duration counts, refusal and moderation categories, and
+status codes, times, the original transaction identifier (for the first book
+on us, the app transaction identifier) on hours and order events, character and duration counts, refusal and moderation categories, and
 the country code from the territory check, and the result of notification
-sends (book number, kind, counts, and Apple's response code — no device
-token). Our application does not write the IP address or any request or book
+sends, including the silent "book ready" signal (book number, kind, counts,
+and Apple's response code — no device token). Our application does not write the IP address or any request or book
 text to these logs. Modal's infrastructure
 processes IP addresses to route and secure traffic under its own policies.
 Our application logs are kept for about **one day**.
@@ -1011,7 +1204,9 @@ other activity.
 
 - **Use the player only.** If you do not use the Service and do not allow
   counters, no library content is sent to us. Cover lookup and the counters
-  are off unless you turn them on in Settings.
+  are off unless you turn them on in Settings. To stop the automatic requests
+  for classics shelf covers to the Internet Archive, hide the shelf on the My
+  Books page; Settings → "Show classics picks" brings it back.
 - **Delete a book.** Deleting a book in the App deletes our server copy if one
   still exists and stops a running order; its hours are restored if any
   chapter was not delivered (Terms of Use, Section 4.2).
@@ -1028,8 +1223,11 @@ other activity.
   request". In App versions 1.3 and later, Settings → Privacy → "Request data
   deletion" requests deletion directly from our service after you confirm, and
   offers an email fallback (subject "Talefall: data deletion request", with your
-  subscription's original transaction identifier if the App can find it) if
-  your subscription cannot be identified or the request fails. If the App
+  subscription's original transaction identifier and, from version 1.3.2, the
+  app transaction identifier, if the App can find them) if your subscription
+  cannot be identified or the request fails. From version 1.3.2 the direct
+  request also carries the Apple-signed record of your download, so that data
+  kept for the first book on us (Section 6.1A) is deleted too. If the App
   shows "Almost done", tap "Request data deletion" again in a few minutes to
   finish. Include
   that identifier if you have it; it helps us find your records. The identifier alone is not proof of authority, so
@@ -1038,8 +1236,10 @@ other activity.
   use Talefall may also make requests; we verify them by an appropriate
   alternative method.
 - **What deletion covers.** We delete any remaining order content, receipts,
-  permission records, reports linked to you, notification tokens, registration
-  and revocation records and the notification index, and other records
+  permission records, reports linked to you, order key records, notification
+  tokens, registration and revocation records and the notification index —
+  under the subscription identifier and, for a request that carries the
+  record of your download, under the app transaction identifier — and other records
   eligible for deletion (per-order notification-attempt records contain the
   book number, notification kind and time, but no push token or subscription
   identifier in the record itself; they may remain linkable to your
@@ -1059,7 +1259,12 @@ other activity.
   A deletion request does not automatically remove the hours ledger and
   financial transaction records, subscription-status records, block records,
   or the service operation and deletion-safeguard records described in Section 6.2, except as stated there. We also retain the deletion-request record described in
-  Section 6.4. Requests to delete retained records are assessed under
+  Section 6.4, and the first book on us records described in Sections 6.1A and
+  6.4 (keyed hashes, book numbers, amounts and times; no content and no
+  identifier in readable form, but linkable to you through the keyed hash or
+  book number), because without them the gift could be claimed again or the
+  cost of books in progress could not be settled; they are deleted on the
+  schedule in Section 6.4. Requests to delete retained records are assessed under
   applicable law; retaining a record for operational purposes does not mean
   that the law requires us to keep it. Deletion does not forfeit unused
   purchased extra hours without your confirmation. Where
@@ -1101,14 +1306,23 @@ To the extent the CCPA applies to us, California residents have the rights to
 require it. We do **not** sell or "share" personal information, do not use it
 for cross-context behavioral advertising, and do not use sensitive personal
 information for purposes that would require a right to limit. In the past 12
-months we collected: identifiers (the original transaction identifier, the
-push-notification token if you allowed notifications, and the country derived
-from IP); commercial information (subscription status and
-hours); user-generated content (book ideas and narration text, held
-temporarily, and content reports); limited internet activity (optional
-anonymous counters); and contact details and correspondence if you wrote to
-us — for the purposes in Sections 5–9, disclosed only to the recipients in
-Section 6.3. Make requests as described in Section 10; we acknowledge them
+months we collected: identifiers (the original transaction identifier; the
+app transaction identifier received for the requests described in Section
+6.1A, including checking the gift offer before an order is placed, and its
+keyed hashes used for gift eligibility and abuse prevention; and the
+push-notification token if you allowed notifications); approximate
+geolocation (the country derived from the IP address of a Service request,
+Section 6.7); commercial information (subscription status, hours, and whether
+the first book on us was given or given back, with its cost records);
+user-generated content (book ideas and narration text, held temporarily, and
+content reports); limited internet activity (optional anonymous counters); and
+contact details and correspondence if you wrote to us. We do not solicit
+sensitive personal information; if submitted contrary to our rules, text or
+reports may contain information about a real person's health or other
+sensitive characteristics, and Sections 6.4–6.6 and the Consumer Health Data
+Privacy Policy explain how we handle it. The purposes, recipients and
+retention periods for each category are in Sections 5–9 and 17; we disclose
+personal information only to the recipients in Sections 5 and 6.3. Make requests as described in Section 10; we acknowledge them
 within 10 business days.
 
 ## 13. Washington, Nevada, Connecticut, and Other U.S. States; Consumer Health Data
@@ -1161,10 +1375,11 @@ contact@ownplace.net; and changes are notified as described in Section 19.
 
 - All connections between the App and our service, and between our service
   and its processors, use TLS. Working content is stored encrypted.
-- Service requests must carry an Apple-signed transaction, which our server
-  verifies before doing paid work; books are shown, cancelled, and deleted
-  only for the subscription that ordered them.
-- On your device, keys and the trial date are kept in the Keychain; local
+- Service requests must carry an Apple-signed transaction (for the first book
+  on us, the Apple-signed record of your download), which our server verifies
+  before doing work; books are shown, cancelled, and deleted only for the
+  subscription or download record that ordered them.
+- On your device, keys are kept in the Keychain; local
   files have the protection iOS provides, which a device passcode improves.
 - Wi-Fi Upload uses a session token over plain HTTP on your local network;
   use it only on a trusted private network.
@@ -1186,19 +1401,23 @@ websites you open from it follow their own policies.
 | Data | Where | Kept |
 |---|---|---|
 | Library, reading and playback data, settings | Your device and backups | Until you delete it |
-| Trial start date | Keychain and iCloud Key-Value Store | Persistent by design |
+| Trial start date (versions before 1.3.2 only) | Keychain and iCloud Key-Value Store | No longer used since version 1.3.2; not deleted by the App |
+| Usage-counter bookkeeping, classics shelf choices and cover cache, time of a first-book order | Your device | In the App's local storage until removed or the App is deleted (iOS may clear cached covers earlier); copies in your device backups follow your backup settings |
 | Order content (idea or narration text, chapters, title, audio) | Modal (USA), encrypted working storage | Until the App confirms saving every chapter; otherwise the order expires after 7 days and is deleted at the next scheduled cleanup (normally within 15 minutes); sooner if you delete the book or ask us |
 | AI-provider request identifiers (no text) | Modal (USA) | 30 days after the order's delivery or end. A deletion request to recipients stays open until sent; identifiers in it are deleted after 30 days; the record of sending (no identifiers, no content) is kept two years |
 | Copies kept by service providers | Modal; OpenAI (directly, permission 2026-10-14.1); for earlier permissions, OpenRouter and the AI provider that processed the order | Modal up to 7 days; OpenAI (directly): inputs and outputs up to 30 days, longer only where the law requires or reasonably necessary to protect against harm, no published maximum; no application state (`store: false`); prompt caching off; OpenRouter (earlier permissions only): request metadata without content for our account (we can match it to an order directly only while we keep the request identifiers), no fixed period published; OpenRouter keeps personal information as long as reasonably necessary for its business purposes and its legal, regulatory and accounting obligations, and then deletes or de-identifies it (OpenRouter Privacy Policy, Section 7); model providers reached through OpenRouter (earlier permissions): as stated in the registry in 6.3.3 (Microsoft: content flagged by abuse monitoring, kept for review for a period it does not publish; GLM hosting providers: zero-data-retention endpoints); deleted by the providers under their own rules, subject to applicable law |
 | Your delivered book | Your device and private iCloud | Until you delete it |
 | Receipts, permission records, hours balance, subscription notices | Modal (USA) | 7 years after the last related financial event |
+| First book on us: receipts and permission records (app transaction identifier) | Modal (USA) | 7 years after the order ends (a permission record without an accepted order: after the decision), then deleted at our next annual retention review unless a lawful exception applies; sooner on a deletion request (Section 10) |
+| First book on us: records that the gift was given or given back, links from book numbers to them, per-book gift cost totals, day-budget-used-up records (keyed hash of the app transaction identifier, book number, amounts, time; no content) | Modal (USA) | While we offer the first book on us, to prevent repeat claims and to control and reconcile the gift budget; deleted within 12 months after the offer ends, except records of a gift book still in progress; need for each category reviewed at least yearly. Not automatically removed by the in-app deletion request; requests for earlier deletion are assessed under applicable law as described in Section 10 |
+| First book on us: screening slots (keyed hash, UTC day, time) and detailed daily budget and processing records (book numbers, amounts, stages, times; no content) | Modal (USA) | Removed automatically by our storage about 7 days after last being read or written; a daily budget journal is kept current for 10 days, so normally about 17 days after its day. Not automatically removed by the in-app deletion request; requests for earlier deletion are assessed under applicable law as described in Section 10 |
 | Service operation records (no content) | Modal (USA) | Audio-transfer records: until the order ends; order-closing and hours-decision records: as long as the order's receipt, plus about 1 day; permission timestamps: until your data is deleted at your request; daily-limit counters: about 2 to 3 days, plus scheduled cleanup; App Store notification identifiers: 8 days; extra-hours purchase links: as long as the hours balance |
 | Deletion safeguards (no content) | Modal (USA) | Settlement records: about 8 days after creation, plus scheduled cleanup; order final-status and deletion-time records: while needed to stop deleted work from resuming and for refund and dispute questions, reviewed at least yearly, at the latest until the order's receipt is deleted |
-| Content reports (reason, note, passage, book number, chapter, subscription identifier) | Modal (USA); our mailbox if emailed | 12 months |
+| Content reports (reason, note, passage, book number, chapter, subscription identifier or app transaction identifier, as described in Section 6.1A) | Modal (USA); our mailbox if emailed | 12 months |
 | Block records | Modal (USA) | While the block lasts plus 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | Modal (USA) / our mailbox | 1 year after submission, or longer where the law requires |
 | Deletion-request record (no content) | Modal (USA) | 2 years |
-| Notification tokens and registration records; notification index; revocation and per-order notification records (no content) | Modal (USA) | Tokens and registration records: no longer used 8 days after the App last sent them and deleted at the next scheduled cleanup; sooner if Apple reports them invalid, if the App reports that notifications were turned off, or on a deletion request. Index (token fingerprints, references): removed at cleanup after 8 days without a new registration once its records are removed, or on a deletion request. Revocation records (token fingerprint, time): 8 days after the server-recorded revocation, plus scheduled cleanup, or at once on a deletion request. Per-order records (book number, kind, time): 8 days, plus scheduled cleanup (Section 6.2) |
+| Notification tokens and registration records (linked to the subscription or app transaction identifier); notification index; revocation and per-order notification records (no content) | Modal (USA) | Tokens and registration records: no longer used 8 days after the App last sent them and deleted at the next scheduled cleanup; sooner if Apple reports them invalid, if the App reports that notifications were turned off, or on a deletion request. Index (token fingerprints, references): removed at cleanup after 8 days without a new registration once its records are removed, or on a deletion request. Revocation records (token fingerprint, time): 8 days after the server-recorded revocation, plus scheduled cleanup, or at once on a deletion request. Per-order records (book number, kind, time): 8 days, plus scheduled cleanup (Section 6.2) |
 | Usage counters (anonymous) | Modal (USA) | 90 days, plus scheduled cleanup; individual milestone records combined into daily totals after about 2 days |
 | Application logs (no IP, no content) | Modal (USA) | About 1 day |
 | Daily service-operation counts and the counting program's processing state (no user identifiers or content) | Modal (USA): refusal counts; an access-restricted Mac controlled by OWN PLACE LLC: request, outcome, refusal-event and error counts, processing checkpoints and run summaries | 30 days; local cleanup as described in Section 9 |
@@ -1209,7 +1428,8 @@ websites you open from it follow their own policies.
 Our App Store privacy label and the privacy manifest in the App disclose:
 
 - **Data linked to you:** Identifiers — **User ID** (the subscription's
-  original transaction identifier); Identifiers — **Device ID** (the
+  original transaction identifier and, for the first book on us, the app
+  transaction identifier); Identifiers — **Device ID** (the
   push-notification token, only if you allow notifications); **Purchases — Purchase History**
   (subscription status, extra hours, hours used); **User Content — Other User
   Content** (book ideas, narration text, content reports); **Location —
@@ -1239,7 +1459,9 @@ updating this Policy alone does not expand an earlier permission. Before
 enabling a new AI route or materially changing its processing, we also update
 our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
-**Changes in this edition (October 17, 2026).** Section 10 now describes how the "Request data deletion" button works in App versions 1.3 and later: after you confirm, it requests deletion directly from our service; email is a fallback if your subscription cannot be identified or the request fails; and "Almost done" means you should tap the button again in a few minutes. The earlier text said that the button only prepares a deletion email. Nothing else in this Policy changes.
+**Changes in this edition ([PUBLICATION DATE], 2026; App version 1.3.2).** First book on us: without a subscription you can order one AI book of about 15 minutes; the App sends the Apple-signed record of your download (AppTransaction), our server keeps the app transaction identifier with that order the way it keeps the subscription identifier, and keeps a keyed hash of it so the gift is given only once (Sections 2, 3, 5, 6, 6.1A, 6.2, 6.4, 6.6, 7, 9, 10, 12, 15, 17 and 18, and the privacy notice for Mexico in Section 14A of the Spanish version). "Book ready" notifications: the token may also be linked to the app transaction identifier, and a silent background signal, containing only the kind "ready", lets the App collect a ready book in the background (Sections 2, 5, 6.2, 6.3.3, 9 and 17). Classics shelf: the App automatically requests the cover images of the suggested classics from the Internet Archive while the shelf is shown on the My Books page, U.S. storefront only (Sections 2, 4, 5, 10 and 17). Usage counters: new step names, the file type of successful imports, the distribution channel in session counters, the build and week of the first launch in milestone counters, and a clearer description of what the App holds before you answer (Sections 4, 5 and 8). The player needs no purchase: the trial and its date are no longer used, and the App no longer offers new player or extra-hours purchases (Sections 4, 5, 6.4, 7, 15 and 17). The AI-provider permission (version 2026-10-14.1), its recipients and its conditions are unchanged.
+
+**Changes in the October 17, 2026 edition.** Section 10 now describes how the "Request data deletion" button works in App versions 1.3 and later: after you confirm, it requests deletion directly from our service; email is a fallback if your subscription cannot be identified or the request fails; and "Almost done" means you should tap the button again in a few minutes. The earlier text said that the button only prepares a deletion email. Nothing else in this Policy changes.
 
 **Changes in the October 16, 2026 edition.** "Book ready" notifications: if you allow notifications for Talefall, the App sends our service the device's push-notification token, which we store linked to the subscription identifier for the periods in Section 6.2, and Apple Push Notification service delivers the notification (Sections 2, 3, 5, 6.2, 6.3.3, 9, 10, 12, 17 and 18). If you previously allowed Talefall notifications, the updated App defers initial token registration until your next book order and waits for you to tap “OK” in an in-app notice before sending the token, provided notifications remain allowed in iOS (Section 5). You can turn notifications off in iOS Settings at any time, and the App then asks us to delete the token. Separate anonymous milestone counters, sent only under your existing usage-counters permission (Section 8). Daily aggregate counts of service operation, without user identifiers or content, also kept on an access-restricted Mac controlled by OWN PLACE LLC for 30 days (Section 9). The privacy notice for Mexico (Section 14A of the Spanish version) also now lists the processors under the current permission 2026-10-14.1 and the push-notification token. This edition does not change the AI-provider permission, its recipients or its conditions.
 
@@ -1249,6 +1471,14 @@ our data-protection assessment (Consumer Health Data Privacy Policy, A9).
 
 **Change log.**
 
+- **[PUBLICATION DATE], 2026** (App version 1.3.2): first book on us and the
+  app transaction identifier (Section 6.1A and related sections); notification
+  tokens linked to it and the silent "book ready" signal; automatic classics
+  shelf cover requests to the Internet Archive; new usage-counter steps and
+  fields (file type of successful imports, distribution channel, build and
+  week of the first launch); trial date no longer used, no new player or
+  extra-hours purchases offered in the App. The AI-provider permission (version
+  2026-10-14.1) is unchanged.
 - **October 17, 2026:** Section 10 corrected to describe the in-app deletion
   request in App versions 1.3 and later (a direct request to our service after
   confirmation, an email fallback, and repeating the request after "Almost
