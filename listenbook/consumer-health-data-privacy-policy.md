@@ -1,13 +1,16 @@
 # Talefall — Audiobook Player: Consumer Health Data Privacy Policy
 
-**Effective Date: October 14, 2026**
+**Effective Date: [PUBLICATION DATE], 2026**
 
 OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, USA
 (contact@ownplace.net; telephone +1 (213) 524-8012) — developer of Talefall —
 Audiobook Player (the "App"; bundle identifier com.anisimov.audiobooks) and
 operator of the server features that come with the Talefall Subscription (the
 "Service"): **Book from an Idea** and **narration of your own text in the
-Talefall voice**.
+Talefall voice**. Since App version 1.3.2, the Service also writes one Book
+from an Idea of about 15 minutes without a subscription (the "first book on
+us"; Privacy Policy, Section 6.1A); everything in this policy applies to it in
+the same way.
 
 This is our **Consumer Health Data Privacy Policy** under Washington's My
 Health My Data Act (Chapter 19.373 RCW), Nevada SB 370 (NRS 603A.400 et
@@ -37,10 +40,17 @@ Service, or into a message sent to us.
 
 | Category | How it could arise | Source | Linked to |
 |---|---|---|---|
-| Health information in a **book idea** | Typed into the idea, against the rule | The person placing the order | The order and the subscription's Apple original transaction identifier |
-| Health information in a **text sent for narration** | Contained in a text book you chose to narrate in the Talefall voice | The person placing the order | The same |
-| Health information in a **generated chapter** | Written by the AI model while producing the book | Generated from the order | The same |
-| Health information in a **content report or email** | Written in a report, support message, or request | The reporter or sender, who may write about someone else | The report or your email address |
+| Health information in a **book idea** | Typed into the idea, against the rule | The person placing the order | The order and the subscription's Apple original transaction identifier; for the first book on us, the order and the app transaction identifier (a number Apple assigns to your Apple Account's download of the App, stored with the prefix `app:`) instead of a subscription identifier (Privacy Policy, Section 6.1A) |
+| Health information in a **text sent for narration** | Contained in a text book you chose to narrate in the Talefall voice (requires a subscription) | The person placing the order | The order and the subscription's Apple original transaction identifier |
+| Health information in a **generated chapter** | Written by the AI model while producing the book | Generated from the order | The same identifier as the book idea of that order |
+| Health information in a **content report or email** | Written in a report, support message, or request | The reporter or sender, who may write about someone else | The report (with the subscription identifier or, for the first book on us, the app transaction identifier, when sent from the App) or your email address |
+
+The app transaction identifier and the keyed hash we keep so that the first
+book on us is given only once contain no content and on their own reveal
+nothing about health; but because they link an order to a download of the
+App, we treat them, like the subscription identifier, as part of the data
+covered by this policy whenever the linked order contains consumer health
+data.
 
 We do not collect health data from other apps or devices (including
 HealthKit), do not collect precise location, do not use geofences, and do not
@@ -61,7 +71,8 @@ person the data is about — never because someone submitted another person's
 data. When we learn that an order contains consumer health data, we stop the
 order and any further processing, delete the copies we control (unless the
 law requires us to preserve them), restore all hours for the order if any chapter was not delivered under
-Section 4.2 of the Terms of Use, and notify every AI
+Section 4.2 of the Terms of Use (for the first book on us, give the offer back
+under the same rule; Terms of Use, Section 4.0), and notify every AI
 recipient that may have received it to delete it — for an order under
 AI-provider permission 2026-10-14.1, OpenAI directly; for an order under an
 earlier permission, OpenRouter, which we ask to pass the request on to the
@@ -257,7 +268,9 @@ example, a valid court order).
 | Order content (idea or narration text, generated chapters, audio) | Encrypted temporary working storage on Modal, deleted as soon as the App confirms it has saved every chapter; if the App has not confirmed saving every chapter, the order expires 7 days after it was accepted and is deleted at the next scheduled cleanup, normally within 15 minutes (a failed cleanup is retried). Deleted sooner when we learn it contains consumer health data |
 | A refused request | Not stored; only the refusal category is logged |
 | AI-provider request identifiers (no text) | 30 days after the order's delivery or end; then deleted. A deletion request to recipients stays open until sent; identifiers in it are deleted after 30 days; the record of sending (no identifiers, no content) is kept two years |
-| Order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
+| Paid-order receipt | Kept 7 years after the last related financial event; contains a SHA-256 fingerprint of the idea text, never the text |
+| Receipt and permission records of the first book on us (app transaction identifier; no content) | Kept 7 years after the order ends (a permission record without an accepted order: after the recorded decision), then deleted at our next annual retention review unless a lawful exception applies; sooner on a deletion request (A8). The receipt contains a SHA-256 fingerprint of the idea text, never the text |
+| Records of the first book on us (keyed hash of the app transaction identifier, book number, amounts, timestamps; no content) | Gift-grant and return records, related book links, per-book cost totals and budget-stop records are kept while the offer runs and deleted within 12 months after it ends, except records needed for a gift book still in progress; we review their continued necessity at least annually. Screening and detailed daily budget records normally expire about seven days after last access; a daily budget journal is normally removed about seventeen days after its day. These records are not automatically removed by the in-app deletion request; requests for earlier deletion are assessed under applicable law (Privacy Policy, Sections 6.4, 10 and 17) |
 | Content reports (may include a passage) | 12 months |
 | Materials preserved under 18 U.S.C. § 2258A | 1 year after submission, or longer where the law requires |
 | Email | Up to 24 months after the last message, deleted earlier on request |
@@ -295,7 +308,8 @@ Wherever you live, you may:
   transfers to AI providers, including for orders in progress, and new book
   orders, and **ask us to stop collecting** your consumer health data, which
   we treat as a deletion request plus a block on further processing for your
-  subscription if you ask;
+  subscription or, for the first book on us, your app transaction identifier
+  if you ask;
 - **Correct** inaccurate data we still hold;
 - **Appeal** a refusal (A8); and
 - **Not be discriminated against** for exercising these rights.
@@ -308,13 +322,27 @@ the Privacy Policy; we can provide or delete only content we still hold.
 
 - **Email** contact@ownplace.net with the subject "Talefall: consumer health
   data request," or **call** +1 (213) 524-8012. Include your subscription's
-  original transaction identifier if you have it; the "Request data deletion"
-  button in the App's Settings prepares an email with it. People without a subscription should give
-  information that helps us find the data.
+  original transaction identifier and, if you ordered the first book on us,
+  the app transaction identifier, if you have them. People without a
+  subscription or the App should give information that helps us find the
+  data.
+- **Deletion from the App.** In App versions 1.3 and later, Settings →
+  Privacy → "Request data deletion" asks our service directly, after you
+  confirm, to delete your data. From version 1.3.2 the request carries both
+  Apple-signed records the App can find — your subscription's signed
+  transaction and the signed record of your download — so data kept under the
+  subscription identifier and under the app transaction identifier (including
+  the first book on us) is deleted. If neither can be identified or the
+  request fails, the App offers an email to contact@ownplace.net (subject
+  "Talefall: data deletion request") containing the identifiers it can find.
+  If the App shows "Almost done", tap the button again in a few minutes to
+  finish. What the deletion covers and what we retain is described in
+  Section 10 of the Privacy Policy and in A6.
 - **Verification.** We use commercially reasonable, proportionate
-  verification (for example, an Apple receipt for the subscription). The
-  identifier alone is not proof of authority. Authorized agents may act with
-  your written permission.
+  verification (for example, an Apple receipt for the subscription, or the
+  Apple-signed record of your download that the App sends). An identifier
+  alone is not proof of authority. Authorized agents may act with your
+  written permission.
 - **Timing.** We respond within **45 days** of receiving the request, extended
   once by up to 45 more days where reasonably necessary, with notice and the
   reason within the first period. Where Nevada law applies, we delete covered
@@ -339,7 +367,15 @@ Policy does not replace this assessment.
 
 ## A10. Changes
 
-We will update the Effective Date and post the new version here. Our current
+We will update the Effective Date and post the new version here.
+
+**Changes in this edition ([PUBLICATION DATE], 2026; App version 1.3.2).**
+The first book on us and its app transaction identifier (introduction, A2,
+A3, A6, A7); deletion requests from the App under both Apple-signed records,
+with email as a fallback (A8); retention of the first book on us records
+(A6). Nothing else changes.
+
+Our current
 Service does not offer a sensitive-data consent option; any change that would
 permit such processing will require updated disclosures, the consent the law
 requires, and suitable processor contracts before it takes effect.

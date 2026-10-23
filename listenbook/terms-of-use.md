@@ -1,14 +1,14 @@
 # Terms of Use for Talefall — Audiobook Player
 
-**Effective Date: October 14, 2026**
+**Effective Date: [PUBLICATION DATE], 2026**
 
 These Terms of Use ("Terms") form a legal agreement between you ("you") and
 OWN PLACE LLC ("we," "us," or "our"), a Washington limited liability company,
 7707 NE 141st St, Kirkland, WA 98034-5321, USA (contact@ownplace.net;
 telephone +1 (213) 524-8012). They govern your use of the Talefall — Audiobook
 Player application (the "App"; bundle identifier com.anisimov.audiobooks) and
-of the server features that come with the **Talefall Subscription** (the
-"Service"), described in Section 1.
+of the server features that come with the **Talefall Subscription** or with
+the **first book on us** (together, the "Service"), described in Section 1.
 
 **How you accept these Terms.** By downloading, installing, or using the App
 you agree to these Terms as they apply to the player. Before you first use the
@@ -36,7 +36,7 @@ no user accounts and does not upload your library. A short sample audiobook
 is bundled with the App and plays without a network connection; its text was
 written with the help of an AI model.
 
-**The Service** requires an active Talefall Subscription for new orders and new requests that use hours. Expiry does not prevent delivery or management of an existing paid order, as described in Section 8. The territorial restrictions in Section 4.9 continue to apply. It has two server features,
+**The Service** requires an active Talefall Subscription for new orders and new requests that use hours, except the first book on us (Section 4.0), which needs no subscription and uses no hours. Expiry does not prevent delivery or management of an existing paid order, as described in Section 8. The territorial restrictions in Section 4.9 continue to apply. It has two server features,
 reached from the App's **Create** tab:
 
 - **Book from an Idea** — you describe an idea and choose a book type (Story,
@@ -48,7 +48,9 @@ reached from the App's **Create** tab:
   while you listen.
 
 The finished book is delivered to the App. Narrating with the on-device Apple
-voice and on-device transcription do not use the Service.
+voice and on-device transcription do not use the Service. The first book on us
+is a Book from an Idea, narrated in the Talefall voice; narrating your own text
+in the Talefall voice requires a subscription.
 
 ## 2. License; Age Requirement
 
@@ -69,34 +71,51 @@ screen asks you to state that you are 18 or older; this is a self-declaration,
 not age verification, and we do not collect proof of age. If you are under
 that age, do not use the App.
 
-## 3. The Player: Trial, One-Time Purchase, or Subscription
+## 3. The Player
 
-- The App is free to download and includes a **3-day free trial** of the
-  player. You are **not charged automatically** when the trial ends. Earlier
-  versions of the App offered a 14-day trial; from version 1.3, a trial in
-  progress ends 3 days after it started. This does not limit any right you
-  have under applicable law.
-- After the trial, listening and reading in the player require either the
-  **one-time player purchase** (non-consumable, product
-  `com.anisimov.audiobooks.pro`) or an **active Talefall Subscription**,
-  which includes the player while it is active. Without either, your
-  library, your book orders, and Export to Files remain available, and the
-  App offers the purchase when you start listening or reading.
-- The one-time purchase is not a subscription and has no recurring charge.
-  If you bought it, the player stays available to you whether or not you
-  subscribe, subject to technical compatibility, the Apple Standard EULA, and
-  applicable law.
-- The trial start date is stored in the iOS Keychain and the iCloud
-  Key-Value Store so that reinstalling does not restart the trial.
+- The App is free to download. **Since App version 1.3.2, the player and
+  reader — listening, reading, and the other features that run on your
+  device — need no purchase, trial, or subscription.** The App no longer
+  offers a trial or a player purchase.
+- **Earlier purchases are honoured.** If you bought the one-time player
+  purchase (non-consumable, product `com.anisimov.audiobooks.pro`) in an
+  earlier version, it stays yours: it is not a subscription, has no recurring
+  charge, and is not taken away; the App shows it as an earlier purchase.
+  Earlier versions of the App work as they did until you update: they may
+  still show the trial and the player purchase until we withdraw that
+  purchase from sale, and a purchase made there stays yours under this
+  Section. To use the player without any purchase, update the App to version
+  1.3.2 or later.
+- Earlier versions of the App kept the trial start date in the iOS Keychain
+  and the iCloud Key-Value Store; version 1.3.2 no longer uses it.
 - Prices are the localized prices Apple shows immediately before purchase;
   any price on our website is an example and may be out of date.
 
-## 4. The Talefall Subscription: Hours, Extra Hours, and Cancellation
+## 4. The First Book on Us and the Talefall Subscription
 
-**4.1 Subscription.** Placing new orders and making new requests that use hours requires an **auto-renewable monthly
+**4.0 First book on us.** If you have no active subscription, you may order
+one AI-generated Book from an Idea of about 15 minutes at no charge (the
+"first book on us"), once per Apple Account, subject to these Terms
+(including Sections 5 and 7), the "Before You Create" screen, and the
+AI-provider permission. Its length is fixed. To give it once per Apple
+Account, the App sends an Apple-signed record of your download of the App
+(Privacy Policy, Section 6.1A). The number of first books we give each day is
+limited for everyone; when the day's limit is reached, nothing is charged and
+you can try again later. If the book is not delivered to you under the
+delivery rule in Section 4.2 (it fails, expires, is stopped by our checks, or
+you cancel or delete it before every chapter is delivered), you may order it
+again, up to three orders in total; once a first book has been delivered, the
+offer is used. It has no cash value, is not transferable, uses no hours, and
+we may change or end the offer for orders not yet placed. Ordering the first
+book on us does not start a subscription or authorize any future charge; a
+subscription requires a separate purchase through Apple. Sections 5, 6, 7
+and 8 apply to it as to a paid order, except the rules on hours.
+
+**4.1 Subscription.** Except for the first book on us (Section 4.0), placing new orders and making new requests that use hours requires an **auto-renewable monthly
 subscription** bought through Apple (product
 `com.anisimov.audiobooks.generation.monthly`, shown in the App as "Talefall
-Subscription"). Payment is charged to your Apple Account when you confirm the
+Subscription"). In App version 1.3.2 and later, the subscription is the only
+purchase offered. Payment is charged to your Apple Account when you confirm the
 purchase. The subscription **renews automatically** each month at the same
 price unless you turn off auto-renewal at least 24 hours before the end of the
 current period; renewal is charged within 24 hours before the period ends.
@@ -120,7 +139,8 @@ and do not carry over. The month follows your subscription's renewal date.
 confirms to our server that it has saved the chapter, or when our server has
 sent the chapter's complete audio file (every byte of the size our server
 declared for that file) in response to a request made with the subscription
-that placed the order. If any chapter of an order has not been delivered when
+that placed the order (for the first book on us, with the Apple-signed record
+of your download that placed it). If any chapter of an order has not been delivered when
 the order ends — whether it failed, was stopped (for example, by our output
 moderation, Section 5.4), was cancelled or deleted by you, or expired (Section
 8) — all hours reserved or charged for the order are restored automatically,
@@ -131,22 +151,31 @@ under this rule; a complete transfer or a saved confirmation does not by
 itself show that the file is playable or materially what you ordered. If a
 delivered file cannot be played or is materially not what you ordered, write
 to contact@ownplace.net with the book number shown in the App, and we will
-restore the hours after checking. Hours restored after the month from which
-they were taken has ended are credited to your extra-hours balance (Section
-4.3). Restoring hours is a credit to your hours balance, not a refund of money
+restore the hours (for the first book on us, the offer) after checking. Hours
+restored after the month from which they were taken has ended are credited to
+your extra-hours balance (Section 4.3). For the first book on us, the same
+rule decides whether the offer is given back instead of hours (Section 4.0). Restoring hours is a credit to your hours balance, not a refund of money
 by Apple, and it does not limit any refund or remedy you may have under
 Section 4.5 or applicable law.
 
-**4.3 Extra hours.** With an active subscription you may buy an **extra-hours
-pack** (consumable product `com.anisimov.audiobooks.hours5`, **5 hours**).
-Extra hours are used after the monthly hours and **do not expire at renewal**.
-Apple may charge your Apple Account when it approves the purchase; we credit
-the hours after our server verifies the signed Apple transaction, never twice
-for the same transaction. If verification is temporarily unavailable, the App
-retries automatically. If the hours are not credited within 24 hours, contact
+**4.3 Extra hours bought earlier.** App version 1.3.2 and later no longer
+offers extra-hours packs. Earlier versions may continue to offer them until
+we withdraw the product from sale; all valid purchases made in those
+versions remain eligible for credit under this Section, including purchases
+made after this edition is published. If you bought an **extra-hours pack**
+(consumable product `com.anisimov.audiobooks.hours5`, **5 hours**), or
+receive restored hours credited to that balance (Section 4.2), these rules
+continue to apply. Extra hours are used after the monthly hours and **do not
+expire at renewal**. We credit purchased hours after our server verifies the
+signed Apple transaction, never twice for the same transaction. A purchase
+not yet credited remains eligible for credit. The App retries verification at
+launch and when StoreKit provides the unfinished transaction. Crediting
+requires an active subscription; if yours has expired, the purchase remains
+pending until it is active again. If the hours are not credited within 24
+hours after the App reaches our server with an active subscription, contact
 contact@ownplace.net and we will restore the credit or help you request a
-refund from Apple. If your subscription lapses, unused extra hours become
-unavailable but stay recorded and return if the same subscription is
+refund from Apple. If your subscription lapses, unused extra hours
+become unavailable but stay recorded and return if the same subscription is
 reactivated. Extra hours cannot be transferred to another subscription or
 Apple Account. If we permanently discontinue the Service, Section 8 applies.
 Deleting your content or data does not forfeit unused purchased extra hours
@@ -183,10 +212,10 @@ are for testing only and give no rights to the production Service.
 
 **4.9 Where the Service is available.** The App is not distributed on App
 Store storefronts in the European Economic Area, the United Kingdom, or
-Switzerland. The Service, its subscription, and extra-hours purchases are
+Switzerland. The Service, its subscription, and the first book on us are
 offered only to persons physically located in a country or region listed at
 https://ownplace.net/talefall/ai-studio-territories (a "Supported
-Territory"). Our server checks the country of each Service request from the
+Territory"). This also applies to the first book on us. Our server checks the country of each Service request from the
 request's IP address and refuses requests from outside the Supported
 Territories, from countries and regions subject to comprehensive U.S.
 sanctions, and when the country cannot be determined. Purchases also depend
@@ -269,9 +298,12 @@ Section 6.3.
 1. *Terms and age* — once, before your first book order or server narration:
    the "Before You Create" screen described above. The App records on your
    device the version of the Terms you accepted (currently 2026-10-14.1,
-   this edition of October 14, 2026), the time, and your 18+ statement.
-   Updated versions of the App ask you to accept this edition before your
-   next use of the Service. Older versions that hold the acceptance of an
+   first published in the edition of October 14, 2026 and kept by this
+   edition; Section 15), the time, and your 18+ statement.
+   Before your next use of the Service, an updated App asks you to accept
+   Terms version 2026-10-14.1 if you have not already accepted that version.
+   If you have, this edition does not require you to accept again (Section
+   15). Older versions that hold the acceptance of an
    earlier edition and an earlier permission send book orders only on the
    routes that permission named (Privacy Policy, Section 6.3.5); this edition
    does not change them.
@@ -362,7 +394,8 @@ miss.
   infrastructure at Modal (it does not send the text to anyone else), for
   sexual content (especially involving minors), hate, dangerous instructions,
   and personal data about real people. A chapter that fails is not narrated or
-  delivered; the order is stopped and the hours for it are restored.
+  delivered; the order is stopped and the hours for it are restored (for the
+  first book on us, the offer is given back; Section 4.0).
 - **No human pre-review.** Nobody at OWN PLACE LLC reads orders or books before
   they reach you. Specific content may be read only when you contact support,
   report content, or submit a legal complaint, or when reasonably necessary to
@@ -375,10 +408,11 @@ instead. Anyone, including non-users, may report by email. We review reports
 promptly and give priority to child safety, credible threats, and imminent
 harm. When we obtain actual knowledge of apparent child sexual exploitation
 that triggers 18 U.S.C. § 2258A, we report it to NCMEC as required. For
-serious or repeated violations we may refuse orders and **block the
-subscription** from the Service. A blocked subscriber may ask for review by
-emailing contact@ownplace.net within 30 days; a person will review the
-decision and answer within 30 days. A block affects only the Service, not the
+serious or repeated violations we may refuse orders, including the first
+book on us, or restrict your access to the Service, for example by **blocking
+the subscription**. An affected user may ask for review by emailing
+contact@ownplace.net within 30 days; a person will review the decision and
+answer within 30 days. A block affects only the Service, not the
 player or books already on your device. A block for a violation does not
 entitle you to a refund from us for hours already used, without prejudice to
 a refund Apple grants or the law requires. This does not affect restoration of
@@ -502,18 +536,19 @@ hours while your subscription was active remains available for delivery after
 the subscription expires, provided the subscription has not been refunded or
 revoked. You can still view the order list, download the book, confirm
 delivery, and delete or cancel the order using the same subscription. Expiry
-alone does not cancel the order or restore its hours. New orders and new
-requests that use hours require an active subscription. The existing seven-day
+alone does not cancel the order or restore its hours. Except for the first
+book on us under Section 4.0, new orders and new requests that use hours
+require an active subscription. The existing seven-day
 delivery deadline and the rules for deletion and restoration of hours continue
-to apply; expiry does not restart that deadline. Listening and reading in the
-App remain subject to the player access requirements.
+to apply; expiry does not restart that deadline. Since App version 1.3.2,
+listening and reading in the App require no purchase (Section 3).
 
 **Your copy.** As chapters arrive, the App saves them on your device and, if
 iCloud is available and the save succeeds, also in your private iCloud storage,
 which we cannot access. If iCloud is unavailable or full, use Export to Files
 before deleting the App. Your saved copy and Export to Files do not depend on
-an active subscription; listening to or reading it in the App requires the
-player purchase or an active subscription (Section 3).
+an active subscription; since App version 1.3.2, listening to or reading it
+in the App requires no purchase (Section 3).
 
 **Availability of book writing.** Under permission 2026-10-14.1 we write
 books only through the OpenAI API, used directly, on that permission's
@@ -536,13 +571,18 @@ appropriate refund through Apple. Books already on your device stay there
 
 **Suspension and termination.** We may suspend or end your access to the
 Service if we reasonably believe you violated Sections 4.9, 5, 6, or 7. This
-does not end your separately purchased player license. Sections 4.2–4.3 (as to
+does not end your license to use the App (Section 2) or a player purchase you
+made earlier (Section 3). Sections 4.2–4.3 (as to
 recorded hours), 5.6–5.8, 6, and 10–15 survive termination.
 
 ## 9. Third-Party Services
 
-The App connects to third-party services you choose to use (Apple, LibriVox,
-the Internet Archive, Project Gutenberg). The Service relies on Modal Labs,
+The App connects to Apple and to catalog services (LibriVox, the Internet
+Archive, Project Gutenberg) as described in Privacy Policy Section 5. While
+the suggested classics shelf is shown on the My Books page in the U.S.
+storefront, the App automatically requests its cover images from the
+Internet Archive. Other catalog connections occur when you use the relevant
+features. The Service relies on Modal Labs,
 Inc. (hosting) and the AI providers named in your AI-provider permission:
 for the current permission, OpenAI OpCo, LLC, used directly through the
 OpenAI API (OpenAI may use its published affiliates and subprocessors); for earlier permissions, OpenRouter, Inc. and the model providers
@@ -618,8 +658,16 @@ the App.
 post the new version at its public address; earlier versions are available on
 request. Where a change materially expands data processing or your
 obligations, or where the law requires it, the App asks you to accept the new
-version before your next use of the Service; this edition (version
-2026-10-14.1) is such a change. A new edition of these Terms does not by
+version before your next use of the Service; the October 14, 2026 edition
+(version 2026-10-14.1) was such a change. The [PUBLICATION DATE], 2026
+edition keeps version 2026-10-14.1 and the AI-provider permission
+unchanged, and the App does not ask you to accept it again: it adds the
+first book on us (Section 4.0), makes the player free of any purchase, and,
+in App version 1.3.2 and later, stops offering the trial, the player
+purchase and extra-hours packs, while
+earlier purchases are honoured (Sections 3 and 4.3). It does not add
+obligations for you; how we process the record of your download for the
+first book on us is described in the Privacy Policy (Section 6.1A). A new edition of these Terms does not by
 itself expand your AI-provider permission: a recipient not named in it, or a
 wider scope of processing, requires renewed explicit permission (Section
 5.2; Privacy Policy, Section 6.6). The conditions of permission

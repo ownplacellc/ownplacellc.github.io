@@ -1,6 +1,6 @@
 # Talefall — Audiobook Player: Política de privacidad de datos de salud del consumidor
 
-**Fecha de entrada en vigor: 14 de octubre de 2026**
+**Fecha de entrada en vigor: [FECHA DE PUBLICACIÓN] de 2026**
 
 Esta es una traducción.
 
@@ -9,7 +9,10 @@ OWN PLACE LLC, 7707 NE 141st St, Kirkland, WA 98034-5321, EE. UU.
 Audiobook Player (la «App»; identificador de paquete com.anisimov.audiobooks) y
 operadora de las funciones de servidor que acompañan a la Suscripción a Talefall (el
 «Servicio»): **Libro a partir de una idea** y **narración de su propio texto con la
-voz de Talefall**.
+voz de Talefall**. Desde la versión 1.3.2 de la App, el Servicio también escribe
+un Libro a partir de una idea de unos 15 minutos sin suscripción (el «primer
+libro de regalo»; Política de privacidad, sección 6.1A); todo lo que dice esta
+política se aplica a él de la misma manera.
 
 Esta es nuestra **Política de privacidad de datos de salud del consumidor** conforme a la Ley My
 Health My Data de Washington (Capítulo 19.373 RCW), la SB 370 de Nevada (NRS 603A.400 y
@@ -38,10 +41,18 @@ Servicio o en un mensaje que se nos envía.
 
 | Categoría | Cómo podría surgir | Fuente | Vinculado a |
 |---|---|---|---|
-| Información de salud en una **idea de libro** | Escrita en la idea, en contra de la regla | La persona que hace el pedido | El pedido y el identificador de transacción original de Apple de la suscripción |
-| Información de salud en un **texto enviado para narración** | Contenida en un libro en formato de texto que usted eligió narrar con la voz de Talefall | La persona que hace el pedido | Lo mismo |
-| Información de salud en un **capítulo generado** | Escrita por el modelo de IA al producir el libro | Generada a partir del pedido | Lo mismo |
-| Información de salud en una **denuncia de contenido o correo electrónico** | Escrita en una denuncia, un mensaje de soporte o una solicitud | La persona que denuncia o envía el mensaje, que puede escribir sobre otra persona | La denuncia o su dirección de correo electrónico |
+| Información de salud en una **idea de libro** | Escrita en la idea, en contra de la regla | La persona que hace el pedido | El pedido y el identificador de transacción original de Apple de la suscripción; para el primer libro de regalo, el pedido y el identificador de transacción de la app (un número que Apple asigna a la descarga de la App por su cuenta de Apple, guardado con el prefijo `app:`) en lugar de un identificador de suscripción (Política de privacidad, sección 6.1A) |
+| Información de salud en un **texto enviado para narración** | Contenida en un libro en formato de texto que usted eligió narrar con la voz de Talefall (requiere suscripción) | La persona que hace el pedido | El pedido y el identificador de transacción original de Apple de la suscripción |
+| Información de salud en un **capítulo generado** | Escrita por el modelo de IA al producir el libro | Generada a partir del pedido | El mismo identificador que la idea de libro de ese pedido |
+| Información de salud en una **denuncia de contenido o correo electrónico** | Escrita en una denuncia, un mensaje de soporte o una solicitud | La persona que denuncia o envía el mensaje, que puede escribir sobre otra persona | La denuncia (con el identificador de suscripción o, para el primer libro de regalo, el identificador de transacción de la app, si se envía desde la App) o su dirección de correo electrónico |
+
+El identificador de transacción de la app y el hash con clave que conservamos
+para que el primer libro de regalo se entregue una sola vez no contienen
+contenido y por sí solos no revelan nada sobre la salud; pero, como vinculan
+un pedido con una descarga de la App, los tratamos, igual que el
+identificador de la suscripción, como parte de los datos a los que se aplica
+esta política cuando el pedido vinculado contiene datos de salud del
+consumidor.
 
 No recopilamos datos de salud de otras apps ni dispositivos (incluido
 HealthKit), no recopilamos ubicación precisa, no usamos geovallas y no
@@ -62,7 +73,9 @@ persona a quien se refieren los datos, y nunca porque alguien haya enviado los d
 otra persona. Cuando sabemos que un pedido contiene datos de salud del consumidor, detenemos el
 pedido y todo tratamiento posterior, eliminamos las copias que controlamos (salvo que la
 ley nos obligue a preservarlas), restituimos todas las horas del pedido si algún capítulo no se entregó
-conforme a la sección 4.2 de los Términos de uso y notificamos a cada destinatario de
+conforme a la sección 4.2 de los Términos de uso (para el primer libro de
+regalo, devolvemos el derecho al regalo según la misma regla; Términos de uso,
+sección 4.0) y notificamos a cada destinatario de
 IA que pueda haberlos recibido que los elimine —para un pedido con el permiso del proveedor de IA 2026-10-14.1, OpenAI directamente; para un pedido con un permiso anterior, OpenRouter, al que pedimos que transmita la solicitud al proveedor de modelos que procesó el pedido (como Microsoft o un proveedor de alojamiento de GLM); y a cualquier otro proveedor de IA de la sección 6.3.3 de la Política de privacidad que los haya recibido—, indicando las fechas y los identificadores de solicitud que aún
 conservamos (se conservan 30 días tras la entrega; Política de privacidad, sección
 6.4). Lo hacemos también tras la entrega.
@@ -210,7 +223,9 @@ ejemplo, una orden judicial válida).
 | Contenido del pedido (idea o texto de narración, capítulos generados, audio) | Almacenamiento de trabajo temporal cifrado en Modal, eliminado en cuanto la App confirma que ha guardado todos los capítulos; si la App no ha confirmado que ha guardado todos los capítulos, el pedido caduca 7 días después de ser aceptado y se elimina en la siguiente limpieza programada, normalmente en 15 minutos (una limpieza fallida se reintenta). Se elimina antes cuando sabemos que contiene datos de salud del consumidor |
 | Una solicitud rechazada | No se almacena; solo se registra la categoría del rechazo |
 | Identificadores de solicitud del proveedor de IA (sin texto) | 30 días tras la entrega o el fin del pedido; luego se eliminan. Una solicitud de eliminación a los destinatarios permanece abierta hasta que se envía; los identificadores que contiene se eliminan a los 30 días; el registro del envío (sin identificadores ni contenido) se conserva dos años |
-| Recibo del pedido | Se conserva 7 años después del último hecho financiero relacionado; contiene una huella SHA-256 del texto de la idea, nunca el texto |
+| Recibo de un pedido de pago | Se conserva 7 años después del último hecho financiero relacionado; contiene una huella SHA-256 del texto de la idea, nunca el texto |
+| Recibos y registros de permiso del primer libro de regalo (identificador de transacción de la app; sin contenido) | Se conservan 7 años después de que termine el pedido (un registro de permiso sin pedido aceptado: después de la decisión registrada) y se eliminan en nuestra siguiente revisión anual de conservación, salvo que se aplique una excepción legal; antes, ante una solicitud de eliminación (A8). El recibo contiene una huella SHA-256 del texto de la idea, nunca el texto |
+| Registros del primer libro de regalo (hash con clave del identificador de transacción de la app, número del libro, importes, fechas y horas; sin contenido) | Los registros de entrega y devolución del regalo, los vínculos con los libros, los totales de coste por libro y los registros de presupuesto agotado se conservan mientras dure la oferta y se eliminan dentro de los 12 meses siguientes a su fin, salvo los registros necesarios para un libro de regalo que aún esté en curso; revisamos su necesidad al menos una vez al año. Los registros de control y los registros detallados del presupuesto diario normalmente caducan unos siete días después del último acceso; un diario del presupuesto diario normalmente se elimina unos diecisiete días después de su día. La solicitud de eliminación desde la App no elimina automáticamente estos registros; las solicitudes de eliminación anticipada se evalúan conforme a la ley aplicable (Política de privacidad, secciones 6.4, 10 y 17) |
 | Denuncias de contenido (pueden incluir un pasaje) | 12 meses |
 | Materiales conservados conforme a 18 U.S.C. § 2258A | 1 año desde el envío, o más tiempo cuando la ley lo exija |
 | Correo electrónico | Hasta 24 meses después del último mensaje; se elimina antes si se solicita |
@@ -239,7 +254,8 @@ Dondequiera que viva, usted puede:
   posteriores a los proveedores de IA, incluso para pedidos en curso, y los nuevos pedidos
   de libros, y **pedirnos que dejemos de recopilar** sus datos de salud del consumidor, lo que
   tratamos como una solicitud de eliminación más un bloqueo de todo tratamiento posterior para su
-  suscripción si usted lo pide;
+  suscripción o, para el primer libro de regalo, su identificador de
+  transacción de la app, si usted lo pide;
 - **Rectificar** los datos inexactos que aún conservemos;
 - **Apelar** una denegación (A8); y
 - **No ser discriminado** por ejercer estos derechos.
@@ -251,13 +267,30 @@ contenido que aún conservamos.
 ## A8. Cómo presentar una solicitud, verificación y plazos
 
 - **Escriba** a contact@ownplace.net con el asunto «Talefall: consumer health
-  data request», o **llame** al +1 (213) 524-8012. Incluya el identificador de transacción
-  original de su suscripción si lo tiene; el botón «Solicitar eliminación de datos» en Ajustes de la App prepara un correo con él. Las personas sin suscripción deben facilitar
-  información que nos ayude a encontrar los datos.
-- **Verificación.** Usamos una verificación comercialmente razonable y proporcionada
-  (por ejemplo, un recibo de Apple de la suscripción). El
-  identificador por sí solo no es prueba de legitimación. Los agentes autorizados pueden actuar con
-  su permiso por escrito.
+  data request», o **llame** al +1 (213) 524-8012. Incluya el identificador de
+  transacción original de su suscripción y, si pidió el primer libro de
+  regalo, el identificador de transacción de la app, si los tiene. Las
+  personas sin suscripción o sin la App deben facilitar información que nos
+  ayude a encontrar los datos.
+- **Eliminación desde la App.** En las versiones 1.3 y posteriores de la App,
+  el botón Ajustes → Privacidad → «Solicitar eliminación de datos» pide
+  directamente a nuestro servicio, después de que usted lo confirme, que
+  elimine sus datos. Desde la versión 1.3.2, la solicitud incluye los dos
+  registros firmados por Apple que la App pueda encontrar —la transacción
+  firmada de su suscripción y el registro firmado de su descarga—, de modo que
+  se eliminan los datos guardados bajo el identificador de la suscripción y
+  bajo el identificador de transacción de la app (incluido el primer libro de
+  regalo). Si no se puede identificar ninguno de los dos o la solicitud falla,
+  la App ofrece un correo a contact@ownplace.net (asunto «Talefall: data
+  deletion request») con los identificadores que pueda encontrar. Si la App
+  muestra «Casi listo», vuelva a tocar el botón en unos minutos para terminar.
+  Lo que abarca la eliminación y lo que conservamos se describe en la sección
+  10 de la Política de privacidad y en A6.
+- **Verificación.** Usamos una verificación comercialmente razonable y
+  proporcionada (por ejemplo, un recibo de Apple de la suscripción o el
+  registro de su descarga firmado por Apple que envía la App). Un
+  identificador por sí solo no es prueba de legitimación. Los agentes
+  autorizados pueden actuar con su permiso por escrito.
 - **Plazos.** Respondemos dentro de los **45 días** siguientes a la recepción de la solicitud, prorrogables
   una vez hasta 45 días más cuando sea razonablemente necesario, con aviso y el
   motivo dentro del primer plazo. Cuando se aplique la ley de Nevada, eliminamos los datos
@@ -278,7 +311,16 @@ privacidad no sustituye esta evaluación.
 
 ## A10. Cambios
 
-Actualizaremos la fecha de entrada en vigor y publicaremos aquí la nueva versión. Nuestro Servicio
+Actualizaremos la fecha de entrada en vigor y publicaremos aquí la nueva versión.
+
+**Cambios en esta edición ([FECHA DE PUBLICACIÓN] de 2026; versión 1.3.2 de la
+App).** El primer libro de regalo y su identificador de transacción de la app
+(introducción, A2, A3, A6, A7); solicitudes de eliminación desde la App con
+los dos registros firmados por Apple, con el correo como alternativa (A8);
+plazos de conservación de los registros del primer libro de regalo (A6). No
+cambia nada más.
+
+Nuestro Servicio
 actual no ofrece una opción de consentimiento para datos sensibles; cualquier cambio que
 permita tal tratamiento requerirá divulgaciones actualizadas, el consentimiento que exige la ley
 y contratos adecuados con los encargados del tratamiento antes de que entre en vigor.
